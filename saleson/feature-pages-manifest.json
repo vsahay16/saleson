@@ -28,11 +28,12 @@
     "extracted_action_handlers": 1
   },
   "field-sales": {
-    "source": "all/SalesOn_FINAL_LIVE_READY/feature-pages/field-sales/field-sales-final.html",
+    "source": "Approved refined design, 27 October 2026",
     "css": "/css/field-sales-page.css",
     "javascript": "/assets/js/field-sales-page.js",
-    "extracted_style_attributes": 80,
-    "extracted_action_handlers": 1
+    "extracted_style_attributes": 0,
+    "extracted_action_handlers": 0,
+    "faq": "native-details"
   },
   "payment-collection": {
     "source": "all/SalesOn_FINAL_LIVE_READY/feature-pages/payment-collection/payment-collection.html",
@@ -42,11 +43,12 @@
     "extracted_action_handlers": 1
   },
   "distribution-management-system": {
-    "source": "all/SalesOn_FINAL_LIVE_READY/feature-pages/dms/distribution-management-system.html",
+    "source": "Approved refined design, 27 October 2026",
     "css": "/css/distribution-management-system-page.css",
     "javascript": "/assets/js/distribution-management-system-page.js",
-    "extracted_style_attributes": 71,
-    "extracted_action_handlers": 1
+    "extracted_style_attributes": 0,
+    "extracted_action_handlers": 0,
+    "faq": "native-details"
   },
   "tally-integration": {
     "source": "all/SalesOn_FINAL_LIVE_READY/feature-pages/tally-integration/tally-integration.html",

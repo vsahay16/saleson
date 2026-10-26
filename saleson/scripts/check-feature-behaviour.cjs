@@ -20,6 +20,26 @@ class Element {
 let count=0;
 for(const [slug,info] of Object.entries(JSON.parse(fs.readFileSync(path.join(root,'feature-pages-manifest.json'))))){
   const html=fs.readFileSync(path.join(root,slug+'.html'),'utf8');
+  if(info.faq==='native-details'){
+    const faq=html.match(/<section[^>]*id="se-faq"[\s\S]*?<\/section>/)?.[0];
+    assert.ok(faq?.includes('<details>') && faq.includes('<summary>'),slug+' native FAQ markup missing');
+    const views=['overview','summary'].map(view=>{const e=new Element();e.dataset.seView=view;return e;});
+    const panels=['overview','summary'].map(view=>{const e=new Element();e.dataset.screen=view;e.querySelectorAll=()=>[];return e;});
+    const status=new Element();
+    const rootElement={querySelectorAll:s=>s==='[data-se-view]'?views:s==='[data-screen]'?panels:[],querySelector:()=>status};
+    const cpTabs=['cp-overview','cp-activity'].map(id=>{const e=new Element();e.attrs['aria-controls']=id;return e;});
+    const cpPanels={'cp-overview':new Element(),'cp-activity':new Element()};
+    const document={getElementById:id=>id==='saleson-editorial'?rootElement:cpPanels[id],querySelectorAll:s=>s==='.cp-tabs [role="tab"]'?cpTabs:[]};
+    vm.runInNewContext(fs.readFileSync(path.join(root,info.javascript),'utf8'),{document});
+    views[1].click();assert.equal(panels[0].hidden,true);assert.equal(panels[1].hidden,false);assert.equal(views[1].attrs['aria-pressed'],'true');
+    views[0].click();assert.equal(panels[0].hidden,false);assert.equal(panels[1].hidden,true);
+    if(slug==='field-sales'){
+      cpTabs[1].click();assert.equal(cpPanels['cp-overview'].hidden,true);assert.equal(cpPanels['cp-activity'].hidden,false);
+      cpTabs[0].click();assert.equal(cpPanels['cp-overview'].hidden,false);assert.equal(cpPanels['cp-activity'].hidden,true);
+      assert.ok(html.includes('requires an internet connection and does not support offline use'));
+    }
+    count++;continue;
+  }
   const faqAction=html.match(/<button\b(?=[^>]*class="(?:faq-q|fqb)(?:\s|"))[^>]*data-page-action="([^"]+)"/)[1];
   const techAction=slug==='tally-integration'?html.match(/<button\b(?=[^>]*id="techBtn")[^>]*data-page-action="([^"]+)"/)[1]:null;
   const buttons=[new Element(),new Element()];

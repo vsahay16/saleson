@@ -1,3 +1,13 @@
+## Field Sales and DMS refresh — 27 October 2026
+
+The approved refined Field Sales and DMS designs now replace their existing page bodies. Their standalone headers and footers are removed; existing shared site components and analytics remain. CSS and JavaScript use the established page source paths. WebP assets are extracted under `assets/img/field-sales/` and `assets/img/distribution-management-system/`, reusing identical files across both pages. Preview `noindex` directives are not carried into production.
+
+DMS uses six management capability cards. Field Sales includes a compact customer preview with Overview/Activity tabs. Both pages use native HTML details for FAQs and preserve the dashboard view switch and image-enlargement dialog. Narrow dashboard regions scroll locally instead of overflowing the page. The Field Sales FAQ and JSON-LD explicitly state that SalesOn requires internet and does not support offline use.
+
+`npm run check` validates these implementations along with the existing site. Local browser rendering remains unverified because the browser download failed. GitHub publication does not by itself verify the external hosting rollout.
+
+---
+
 # Feature page integration — 26 October 2026
 
 Subsequent template, tool and comparison work is documented in REPOSITORY_COMPLETION.md. The validation counts below describe the feature-integration stage.

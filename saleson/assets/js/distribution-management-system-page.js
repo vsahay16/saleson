@@ -1,17 +1,1 @@
-/* distribution-management-system — page behaviour. */
-function tFaq(btn) {
-    const isOpen = btn.classList.contains('open');
-    document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('open'); b.setAttribute('aria-expanded','false'); });
-    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
-    if (!isOpen) { btn.classList.add('open'); btn.setAttribute('aria-expanded','true'); btn.nextElementSibling.classList.add('open'); }
-  }
-
-  const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); }), { threshold: 0.07 });
-  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
-
-document.querySelectorAll('[data-page-action="action-001"]').forEach(element => {
-  element.addEventListener("click", function(event) {
-    const result = (function(event) { tFaq(this) }).call(this, event);
-    if (result === false) { event.preventDefault(); event.stopPropagation(); }
-  });
-});
+(()=>{const root=document.getElementById('saleson-editorial');root.querySelectorAll('[data-se-view]').forEach(button=>button.addEventListener('click',()=>{root.querySelectorAll('[data-se-view]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));root.querySelectorAll('[data-screen]').forEach(panel=>{panel.hidden=panel.dataset.screen!==button.dataset.seView;if(!panel.hidden)panel.querySelectorAll('img').forEach(i=>i.loading='eager')});root.querySelector('#se-screen-status').textContent=button.dataset.seView==='overview'?'Recorded sales and customer transactions, together':'Product availability by godown, with batch and expiry context'}));const tabs=[...root.querySelectorAll('.se-team-tabs [role="tab"]')];function select(tab){tabs.forEach(t=>{let active=t===tab;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;root.querySelector('#'+t.getAttribute('aria-controls')).hidden=!active})}tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>select(tab));tab.addEventListener('keydown',e=>{let n;if(e.key==='ArrowRight')n=(i+1)%tabs.length;else if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;else return;e.preventDefault();select(tabs[n]);tabs[n].focus()})})})();

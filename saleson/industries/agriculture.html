@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <!--meta-->
+    <meta name="description" content="Manage dealer coverage, seasonal orders and collections with SalesOn. Explore the daily workflow and book a demo for your team.">
+
+    <meta name="keywords"
+        content="sales force fsl,fmcg field sales automation software, mobile field sales, distributor software, salesman tracking software, salesman software,payment collection software for salesman, live location tracking, on field sales, field sales management solution">
+    <meta property="og:url" content="https://saleson.co.in/industries/agriculture">
+    <meta property="og:title" content="Agricultural distribution Software | Sales &amp; Distribution | SalesOn">
+    <meta property="og:description" content="Manage dealer coverage, seasonal orders and collections with SalesOn. Explore the daily workflow and book a demo for your team.">
+    <meta property="og:image" content="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-arrow-logo-blue.png">
+    <meta property="og:image:alt" content="SalesOn logo">
+    <meta name="twitter:title" content="Agricultural distribution Software | Sales &amp; Distribution | SalesOn">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="Manage dealer coverage, seasonal orders and collections with SalesOn. Explore the daily workflow and book a demo for your team.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta property="og:locale" content="en_US">
+    <!--favicon icon-->
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/img/salesOn.svg" type="image/svg+xml">
+
+    <!--title-->
+    <title>Agricultural distribution Software | Sales & Distribution | SalesOn</title>
+
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"></noscript>
+      <link rel="preload" href="/css/min/common.min.5d8e1c1559db.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/min/common.min.5d8e1c1559db.css"></noscript>
+    <style>
+        .sticky-header {
+            padding: 20px 0;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            -webkit-box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+            box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+        }
+
+        /* line 1008, src/assets/scss/custom/_style.scss */
+        .affix {
+            top: 0;
+            left: 0;
+            margin: auto;
+            position: fixed;
+            width: 100%;
+            z-index: 9999;
+            -webkit-animation: 300ms ease-in-out fadeInDown;
+            animation: 300ms ease-in-out fadeInDown;
+            background: var(--bs-dark);
+            padding: 10px 0;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* line 1060, src/assets/scss/custom/_style.scss */
+        .main-menu li.nav-item {
+            position: relative;
+        }
+
+        /* line 1063, src/assets/scss/custom/_style.scss */
+        .dropdown-menu {
+            right: auto;
+            left: 50% !important;
+            -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+        }
+
+        /* line 1068, src/assets/scss/custom/_style.scss */
+        .main-menu li.nav-item .dropdown-menu:before {
+            content: '';
+            position: absolute;
+            top: -9px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            -webkit-transform: translate(-50%, 0) rotate(-315deg);
+            transform: translate(-50%, 0) rotate(-315deg);
+            border-radius: 3px;
+            background-color: var(--bs-white);
+            opacity: 0;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        /* line 1081, src/assets/scss/custom/_style.scss */
+        .main-menu li.nav-item:hover .dropdown-menu:before {
+            opacity: 1;
+        }
+
+        /* line 1085, src/assets/scss/custom/_style.scss */
+        .main-menu li a.nav-link {
+            padding: 0.85rem 1rem;
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+            font-family: var(--bs-font-monospace);
+        }
+
+        /* line 1092, src/assets/scss/custom/_style.scss */
+        .navbar-dark .main-menu li a.nav-link {
+            color: var(--bs-secondary-dark);
+        }
+
+        /* line 1095, src/assets/scss/custom/_style.scss */
+        .navbar-dark .action-btns a.btn-link {
+            color: var(--bs-secondary-dark);
+        }
+
+        /*navbar-light*/
+        /* line 1100, src/assets/scss/custom/_style.scss */
+        .navbar-light .main-menu li a.nav-link,
+        .navbar-light .action-btns a.btn-link,
+        .navbar-dark.sticky-header.affix .main-menu li a.nav-link,
+        .navbar-dark.sticky-header.affix .action-btns a.btn-link {
+            color: var(--body-color);
+        }
+
+        /* line 1106, src/assets/scss/custom/_style.scss */
+        .navbar-light.sticky-header.affix,
+        .navbar-dark.sticky-header.affix {
+            background: var(--bs-white);
+        }
+
+        /* line 1110, src/assets/scss/custom/_style.scss */
+        .navbar-light.sticky-header.affix .btn,
+        .navbar-dark.sticky-header.affix .btn,
+        .bg-dark .btn,
+        .coming-soon-section .btn,
+        .bg-gradient .btn,
+        .coming-soon-section .btn,
+        .navbar-dark .btn-primary {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        /* line 1119, src/assets/scss/custom/_style.scss */
+        .navbar-light .navbar-brand img.logo-white,
+        .navbar-dark .navbar-brand img.logo-color,
+        .navbar-dark.sticky-header.affix .navbar-brand img.logo-white {
+            display: none;
+        }
+
+        /* line 1124, src/assets/scss/custom/_style.scss */
+        .navbar-dark.sticky-header.affix .navbar-toggler span {
+            color: var(--body-color);
+        }
+
+        /* line 1127, src/assets/scss/custom/_style.scss */
+        .navbar-dark.sticky-header.affix .navbar-brand img.logo-color {
+            display: block;
+        }
+
+        /* line 1131, src/assets/scss/custom/_style.scss */
+        .main-menu li a.nav-link:hover,
+        .action-btns a.btn-link:hover,
+        .navbar-dark.sticky-header.affix .main-menu li a.nav-link:hover,
+        .navbar-dark.sticky-header.affix .action-btns a.btn-link:hover {
+            color: var(--bs-primary);
+        }
+
+        /* line 1183, src/assets/scss/custom/_style.scss */
+        .offcanvas-header button.close-btn {
+            background: var(--bs-danger-soft);
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            outline: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: none;
+            border-radius: 20px;
+        }
+
+        /* line 1193, src/assets/scss/custom/_style.scss */
+        .offcanvas-header button.close-btn i {
+            line-height: 29px;
+        }
+
+        /* line 1196, src/assets/scss/custom/_style.scss */
+        /* .offcanvas-body .dropdown-toggle::after {
+            content: '\f067';
+            font-family: 'Font Awesome 6 Pro';
+            font-weight: 400;
+            position: absolute;
+            right: 0;
+            border: none;
+            } */
+
+        /* line 1204, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .main-menu li a.nav-link {
+            color: var(--body-color);
+            padding: 0.5rem 1rem;
+        }
+
+        /* line 1208, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .main-menu li a.nav-link:hover {
+            color: var(--bs-primary);
+        }
+
+        /* line 1211, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .radius-right-side {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+
+        /* line 1216, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .dropdown-menu {
+            position: relative;
+        }
+
+        /* line 1219, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .dropdown-grid {
+            display: block;
+            width: auto;
+        }
+
+        /* line 1223, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .dropdown-grid-item {
+            width: 100%;
+        }
+
+        /* line 1226, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .dropdown-grid-item.last-item {
+            display: none;
+        }
+
+        @media (max-width: 1199px) {
+
+            /* line 1230, src/assets/scss/custom/_style.scss */
+            .nav.main-menu {
+                display: block !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            /* line 1236, src/assets/scss/custom/_style.scss */
+            .nav.main-menu {
+                display: block;
+            }
+        }
+
+        .dropdown-toggle::after {
+            vertical-align: middle;
+        }
+
+        /* line 1253, src/assets/scss/custom/_style.scss */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--bs-light);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            z-index: 999999;
+        }
+
+        /* line 1266, src/assets/scss/custom/_style.scss */
+        .preloader-icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* line 1270, src/assets/scss/custom/_style.scss */
+        .loading-bar {
+            width: 120px;
+            height: 3px;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+            background: var(--bs-white);
+        }
+
+        /* line 1279, src/assets/scss/custom/_style.scss */
+        .loading-bar::before {
+            content: '';
+            width: 35px;
+            height: 3px;
+            background: var(--bs-primary);
+            position: absolute;
+            left: -34px;
+            -webkit-animation: bluebar 1.5s infinite ease;
+            animation: bluebar 1.5s infinite ease;
+        }
+
+        #contactus {
+
+            background: #F9F9F9;
+            padding: 25px;
+            margin: 150px 0;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)
+        }
+        #midd-ctrl{
+            
+            max-width: 1000px;
+            margin: -130px auto 0;
+            background: #f8f3e7;
+            padding: 60px 50px 60px;
+            color: #222;
+            border-radius: 32px;
+            transform: translateY(210px);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+           
+        }
+        @-webkit-keyframes bluebar {
+            50% {
+                left: 96px;
+            }
+        }
+
+        @keyframes bluebar {
+            50% {
+                left: 96px;
+            }
+        }
+
+        /* line 1294, src/assets/scss/custom/_style.scss */
+        .section-heading {
+            margin-bottom: 50px;
+        }
+
+        @media (min-width: 991px) and (max-width: 1199px) {
+
+            /* line 1298, src/assets/scss/custom/_style.scss */
+            .action-btns.me-lg-0 {
+                margin-right: 3rem !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            /* line 1303, src/assets/scss/custom/_style.scss */
+            .section-heading {
+                margin-bottom: 30px;
+            }
+        }
+
+        .hero-subscribe-form-wrap {
+            max-width: 460px;
+        }
+
+        .hero-bg-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+        .form-container {
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+
+        @media (min-width: 320px) and (max-width: 414px) {
+            .hero-subscribe-form input.btn {
+                position: relative;
+                right: 0;
+                top: 10px;
+                margin-bottom: 15px;
+                -webkit-transition: all 0.3s ease-in;
+                transition: all 0.3s ease-in;
+            }
+
+            /* line 1672, src/assets/scss/custom/_style.scss */
+            .hero-subscribe-form input.form-control {
+                padding: 0.75rem 1rem;
+            }
+        }
+
+        /*hero-3*/
+        /* line 1745, src/assets/scss/custom/_style.scss */
+        .hero-screen-wrap {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: end;
+            -ms-flex-align: end;
+            align-items: flex-end;
+            margin-right: -120px;
+        }
+
+        @media (min-width: 1480px) and (max-width: 1836px) {
+
+            /* line 1764, src/assets/scss/custom/_style.scss */
+            .hero-screen-wrap {
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 1479px) {
+
+            /* line 1776, src/assets/scss/custom/_style.scss */
+            .hero-screen-wrap {
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 767px) {
+
+            /* line 1789, src/assets/scss/custom/_style.scss */
+            .hero-screen-wrap {
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <!--google fonts-->
+     <link rel="preload" href="/css/min/bootstrap-icons.min.df82b4cfba30.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/min/bootstrap-icons.min.df82b4cfba30.css"></noscript>
+    <link rel="preload" href="/css/min/field-sales.min.82aaa6816d83.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/css/min/field-sales.min.82aaa6816d83.css">
+    </noscript>
+    <script src="/assets/js/vendors/bootstrap.bundle.min.7700f7deec3d.js"></script>
+    
+    <link rel="canonical" href="https://saleson.co.in/industries/agriculture">
+    <link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css">
+<link rel="stylesheet" href="/css/workflow-guides.43835e9cd66d.css">
+</head>
+
+<body>
+
+    <!--preloader start-->
+    <div id="preloader">
+        <div class="preloader-wrap">
+            <img src="/assets/img/salesOn.svg" alt="logo" class="img-fluid preloader-icon" />
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+    <!--preloader end-->
+    <!--main content wrapper start-->
+    <div class="main-wrapper">
+
+        <!--header section start-->
+       <site-header><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header>
+        <!--header section end-->
+
+        <!--hero section start-->
+        <section class="hero-section ptb-70 bg-white" id="page-intro">
+            <div class="container">
+                <div class="row">
+                </div>
+                <div class="row align-items-center justify-content-lg-between">
+                    <div class="col-xl-5 col-lg-5">
+                        <div class="hero-content-wrap text-center text-xl-start text-lg-start">
+                            <h1>Agricultural distribution sales and distribution software</h1>
+                            <p class="lead mt-4"> <b class="text-primary">SalesOn</b> platforms connect distributors, and agriculture businesses directly with input suppliers, equipment manufacturers, and buyers.They enable real-time inventory, pricing updates, across the agricultural value chain.</p>
+                            <div 
+                                class="hero-subscribe-form-wrap pt-4 position-relative m-auto m-xl-0 d-md-block d-lg-block       d-xl-block">
+                                <a href="https://app.saleson.co.in/" target="_blank"  class="btn btn-primary mt-3 mt-lg-0 mt-md-0">Start free 7 days trial</a><span class="subscription-terms-link"><a href="/terms">Trial and subscription terms</a> · <a href="/refund">Refund policy</a></span>
+                                <!--  <form id="subscribe-form" name="email-form" class="hero-subscribe-form d-block d-lg-flex d-md-flex"> -->
+                                <!-- <input type="number" class="form-control me-2" name="Email" data-name="Email" placeholder="Enter mobile number" id="email-address" required=""> -->
+                                <!-- <input type="submit" value="Start free 7 days trial" data-wait="Please wait..." class="btn btn-primary mt-3 mt-lg-0 mt-md-0"> -->
+                                <!-- <div id="contactFormRow" class="form-wrapper">
+                                    <div class="email-text-box pb-4" id="email-text-box">
+                                        <label for="email" class="text-dark-grey fw-medium text-poppins">Request callback</label>
+                                        <input type="text" class="form-control " id="email"
+                                            placeholder="Enter mobile or email">
+                                    </div>
+                                    <div class="otp-text-box pb-4" id="otp-text-box" hidden>
+                                        <label for="pwd">Enter OTP</label>
+                                        <input type="password" class="form-control" id="pwd" placeholder="OTP"
+                                            name="pwd">
+                                    </div>
+                                    <div id="timerdiv" hidden>
+                                        <p>Time left: <span id="timer">30</span> seconds</p>
+                                    </div>
+                                    <div id="messagediv" hidden>
+                                        <p id="message" class="text-danger">message</p>
+                                    </div>
+                                    <button type="submit" id="requestotp" class="btn btn-primary mt-3 mt-lg-0 mt-md-0"
+                                        onclick="requestOtp()">Request OTP</button>
+                                    <button type="submit" id="verifyotp" class="btn btn-primary mt-3 mt-lg-0 mt-md-0"
+                                        onclick="verifyotp()" hidden>Verify OTP</button>
+                                    <button type="submit" id="resendotp" class="btn btn-primary mt-3 mt-lg-0 mt-md-0"
+                                        onclick="requestOtp()" hidden>Resend OTP</button>
+                                </div> 
+                                <div id="reponseMsgRow" hidden>
+                                    <div id="responseMessage" style="display: none; margin-top: 10px; color: green;">
+                                        <h3 class="text-secondary-lp">Thank you for contacting us!</h>
+                                    </div>  
+                                </div> -->
+                               
+                                <!-- </form> -->
+                                <!-- <ul class="nav subscribe-feature-list mt-3">
+                                    <li class="nav-item">
+                                        <span class="ms-0"><i class="far fa-check-circle text-primary me-2"></i>Free 7-day trial</span>
+                                    </li> -->
+                                <!--  <li class="nav-item">
+                                        <span><i
+                                                class="far fa-check-circle text-primary me-2"></i>No credit card required</span>
+                                    </li> -->
+                                <!-- </ul> -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--<div class="col-xl-6 col-lg-6 mt-4 mt-xl-0">
+                        
+                        <div className="justify-content-center">
+                           
+                            <div class="container form-container">
+                                <div id="contactLabelRow">
+                                    <h4 class="mb-4 fw-medium">Connect with us</h4>
+                                </div>
+                                <div id="contactFormRow">
+                                    <div class="email-text-box pb-4" id="email-text-box">
+                                        <label for="email">Enter your mobile number or email</label>
+                                        <input type="text" class="form-control" id="email"
+                                            placeholder="Mobile or email">
+                                    </div>
+                                    <div class="otp-text-box pb-4" id="otp-text-box" hidden>
+                                        <label for="pwd">Enter OTP</label>
+                                        <input type="password" class="form-control" id="pwd" placeholder="OTP"
+                                            name="pwd">
+                                    </div>
+                                    <div id="timerdiv" hidden>
+                                        <p>Time left: <span id="timer">30</span> seconds</p>
+                                    </div>
+                                    <div id="messagediv" hidden>
+                                        <p id="message">message</p>
+                                    </div>
+                                    <button type="submit" id="requestotp" class="btn btn-primary mt-3 mt-lg-0 mt-md-0"
+                                        onclick="requestOtp()">Request OTP</button>
+                                    <button type="submit" id="verifyotp" class="btn btn-primary mt-3 mt-lg-0 mt-md-0"
+                                        onclick="verifyotp()" hidden>Verify OTP</button>
+                                    <button type="submit" id="resendotp" class="btn btn-primary mt-3 mt-lg-0 mt-md-0"
+                                        onclick="requestOtp()" hidden>Resend OTP</button>
+                                </div>
+                                <div id="reponseMsgRow" hidden>
+                                    <div id="responseMessage" style="display: none; margin-top: 10px; color: green;">
+                                        <h3 class="text-secondary-lp">Thank you for contacting us!</h>
+                                    </div>  
+                                </div>     
+                            </div>
+                            
+                        
+                        </div>
+                        
+                        
+                    </div>-->
+                    <div class="col-xl-6 col-lg-6 mt-4 mt-xl-0">
+                        <div class="hero-img-wrap position-relative">
+                            <div class="hero-img-wrap position-relative">
+                                <div class="hero-screen-wrap">
+                                    <!-- <div class="phone-screen">
+                                        <img src="/industries/assets/img/screen/phone-screen.png" alt="hero image" class="position-relative img-fluid">
+                                    </div> -->
+                                    <!-- <div class="mac-screen"> -->
+                                        <img src="/assets/img/industry/agriculture.jpg" alt="small manufacturing in India" title="agriculture industry" class="position-relative img-fluid rounded-custom">
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--hero section end--><section class="workflow-guide" aria-labelledby="industry-workflow"><h2 id="industry-workflow">A daily workflow for agricultural distribution</h2><p>Keep dealer coverage, seasonal orders and collections in one daily review.</p><div class="workflow-guide-grid"><article><h3>Plan dealer coverage</h3><p>Prioritise the dealers and territories that need attention this season.</p></article><article><h3>Capture demand</h3><p>Record the products and quantities requested during each visit.</p></article><article><h3>Review fulfilment and dues</h3><p>Check stock, invoices and payment follow-ups with the office.</p></article></div><nav aria-label="Related product workflows"><a href="/field-sales">Field sales</a> · <a href="/inventory-management">Inventory management</a> · <a href="/payment-collection">Payment collection</a></nav><p><a class="workflow-guide-cta" href="/request-demo">See your workflow in a demo</a></p></section>
+        <section class="bg-primary ptb-120 position-relative">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-md-10">
+                         <div class="section-heading mb-0 text-white">
+                                <h2 class="mb-4 text-white text-center">Connecting Suppliers Through Agri-Commerce Networks</h2>
+                                    <p class="lead">Agri-commerce networks digitally link input suppliers distributors, and retailers, creating a more transparent and efficient agricultural supply chain. These platforms streamline order management, improve communication, ensure timely delivery and tools—enhancing productivity and reducing operational delays.</p>
+                         </div>
+                    </div>
+                </div>        
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-md-10">
+                        <div class=" mb-2 bg-light text-dark" id="midd-ctrl">
+                           <h2 class=" mb-4 text-center">Automated Invoicing: Simplifying Farm to Market Transactions</h2>
+                                <p class="text-dark lead">Automatic invoicing simplifies billing for suppliers, and agri-businesses by generating error-free invoices instantly after transactions. It reduces manual paperwork, speeds up payment cycles, ensures transparency, and improves record keeping things, leading to better cash flow and stronger business relationships across the agricultural supply chain. </p>
+                        </div>
+                     </div>
+                </div>
+            </div>    
+             <div class="container pt-350">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-md-10 ">
+                        <div class="section-heading mb-0 text-white">
+                            <h2 class="mb-4 text-white  text-center">Efficient Farm Input Delivery with Digital Distribution Management </h2>
+                                 <p class="lead ">Distributor management systems help agricultural businesses track product flow, manage dealer networks, and optimize inventory distribution. By ensuring timely delivery of equipment.These type of tools reduce stockouts, improve supply chain visibility, and strengthen relationships between manufacturers,and dealers.</p>
+                         </div>
+                    </div>
+                 </div>
+               
+             </div>
+        </section>
+        <!--middle section end--->
+         <!-- How Saleson help --> 
+         <section class="promo-section ptb-70 bg-sec-light position-relative pt-120" id="promo">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8">
+                        <div class="section-heading text-center">
+                            <h2>How will<span class="text-primary"> SalesOn </span>help your <span class="text-secondary-lp">business </span>?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-lg-8 promo-bg text-center mb-5 mb-lg-0">
+                        <!-- <div class="row">
+                            <div class="col-md-12"> -->
+                                <img src="/assets/img/van-feature-img.png" loading="lazy" class="van-phone-img img-fluid" alt="mobile-app-image">
+                           <!--  </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="row text-md-left promo-content-wrap">
+                    <div class="content-left">
+                        <div class="mb-5">
+                            <div class="promo-text-wrap">
+                                <h6>Mark Customer Visit</h6>
+                                <span>Track geo tagged and time tagged customer visits  </span> 
+                            </div>
+                            <span class="icon-wrap"><i class="bi bi-geo-alt"></i></span>
+                        </div>
+                        <div class="mb-5">
+                            <div class="promo-text-wrap">
+                                <h6>Collect Payments</h6>
+                                <span>Get past unsettled invoices to take partial or complete payments</span> 
+                            </div>
+                            <span class="icon-wrap"><i class="bi bi-credit-card"></i></span>
+                        </div>
+                        <div class="mb-5">
+                            <div class="promo-text-wrap">
+                                <h6>Digital catalog</h6>
+                                <span>List of all items with image and real-time stock</span> 
+                            </div>
+                            <span class="icon-wrap"><i class="bi bi-list-task"></i></span>
+                        </div>
+                   </div>
+                    <div class="content-right">
+                        <div class="mb-5">
+                            <span class="icon-wrap"><i class="bi bi-cart-check"></i></span>
+                            <div class="promo-text-wrap">
+                                <h6>Sale Orders & Return</h6>
+                                <span>Take orders or replacements or returns on the go</span> 
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <span class="icon-wrap"><i class="bi bi-receipt"></i></span>
+                            <div class="promo-text-wrap">
+                                <h6>View Past Transactions</h6>
+                                <span>View customer wise past transactions with their updated status</span> 
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <span class="icon-wrap"><i class="bi bi-camera"></i></span>
+                            <div class="promo-text-wrap">
+                                <h6>Merchandising</h6>
+                                <span>Ensure visual merchandising execution quality at every store </span> 
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+        <section class="promo-section ptb-70 position-relative pt-120" id="promo">
+            <div class="container container-small">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8">
+                        <div class="section-heading text-center">
+                            <h2><span class="text-primary">SalesOn - </span>The  <span class="text-secondary-lp">All In One</span> solution</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mb-5">
+                        <a href="/production" class="text-decoration-none" target="_blank">
+                            <div class="key-point-wrap">
+                                <h4 class="mb-4 fw-medium">
+                                    Production
+                                </h4>
+                                <img src="/assets/img/key-points/production.png" loading="lazy" class="key-point-img"
+                                    alt="manufacturing industry" title="production management">
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Automate operations with Multilevel Bill of Material, Finished Good testing
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Inventory management on raw materials, finished goods, scrap items
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Get costs of each Bill of Material through consumed raw materials, scrap, other
+                                    charges
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Track work orders, production orders along with their costs
+                                </p>
+
+                                <p class="read-more pt-3 text-primary">
+                                    Know More <i class="bi bi-chevron-right"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <a href="/target-meter" class="text-decoration-none" target="_blank">
+                            <div class="key-point-wrap">
+                                <h4 class="mb-4 fw-medium">
+                                    Target meter
+                                </h4>
+                                <img src="/assets/img/key-points/target-meter.png" loading="lazy" class="key-point-img"
+                                    alt="target meter" title="achieve sales target">
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Breakdown company’s larger goals into individual goals with KPI’s
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Leaderboard for company and team wise recognition
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Gamification data to reward best performers with appraisals/incentives
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Discover strengths of team and areas of improvement.
+                                </p>
+
+                                <p class="read-more pt-3 text-primary">
+                                    Know More <i class="bi bi-chevron-right"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <a href="/salesman-tracking#live-location" class="text-decoration-none" target="_blank">
+                            <div class="key-point-wrap">
+                                <h4 class="mb-4 fw-medium">
+                                    Live location tracking
+                                </h4> 
+                                <img src="/assets/img/key-points/live-loc.png" loading="lazy" class="key-point-img" alt="Current location on map" alt="Sale team live location on map">
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Real time location of on-field team on Google maps
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Route, distance travelled by sales rep date wise
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Working hour duration during travel 
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Integrated with Google Maps
+                                </p>
+                                <p class="read-more pt-3 text-primary">
+                                    Know More <i class="bi bi-chevron-right"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <a href="/invoicing" class="text-decoration-none" target="_blank">
+                            <div class="key-point-wrap">
+                                <h4 class="mb-4 fw-medium">
+                                    Automatic Invoicing
+                                </h4>
+                                <img src="/assets/img/key-points/inv.png" loading="lazy" class="key-point-img"
+                                    alt="Auto generated invoice thermal print"
+                                    title="Auto generated invoice thermal print">
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Create Invoices, Estimates, Delivery Challan
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Sale, Purchase, Expense, Inventory Management
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Multiple templates for Invoices, Estimates, DC
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    A5 & A4 prints, Thermal printing
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Tally, Excel, Whatsapp integrated
+                                </p>
+                                <p class="read-more pt-3 text-primary">
+                                    Know More <i class="bi bi-chevron-right"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <a href="/salesman-tracking#activity-log" class="text-decoration-none" target="_blank">
+                            <div class="key-point-wrap">
+                                <h4 class="mb-4 fw-medium">
+                                    Activity Log
+                                </h4>
+                                <img src="/assets/img/key-points/activity.png" loading="lazy" class="key-point-img activity-log" alt="tracking details and activities of employee" title="daily activity log software">
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Monitor employee productivity while on the go
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Get user wise summary of all activities performed date wise 
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Track start, end time and daily activities in a timeline
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    User wise summary report to give performance overview on each day
+                                </p>
+                                
+                                <p class="read-more pt-3 text-primary">
+                                    Know More <i class="bi bi-chevron-right"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                   
+                    <div class="col-md-4 mb-5">
+                        <a href="#" class="text-decoration-none" target="_blank">
+                            <div class="key-point-wrap">
+                                <h4 class="mb-4 fw-medium">
+                                    Distributor Mgmt System
+                                </h4>
+                                <img src="/assets/img/key-points/dms.png" loading="lazy" class="key-point-img dist-mgmt"
+                                    alt="distributor management system software fmcg"
+                                    title="distributor management solution">
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Visibility of secondary sales execution
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Maintain master data, add new SKU’s and control price for distributors
+                                </p>
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Track distributor sales reps performance
+                                </p>
+                                <!-- <p><i class="bi bi-check2-circle"></i>
+                                Sync secondary sales data with Tally, Excel
+                            </p> -->
+                                <p><i class="bi bi-check2-circle"></i>
+                                    Data Analytics to help you take insightful decisions for business growth
+                                </p>
+
+                                <p class="read-more pt-3 text-primary">
+                                    Know More <i class="bi bi-chevron-right"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+          <!--promo section start-->
+          <section class="feature-section ptb-70" id="features">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-10">
+                        <div class="section-heading text-center">
+                            <h2><span class="text-primary"> SalesOn </span>makes your <span class="text-secondary-lp">critical </span>functions easy</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="position-relative">
+                            <div class="p-3 bg-white mt-4 mt-lg-0 mt-md-0 z-2 feature-content">
+                                <div class="feature-icon bg-hand">
+                                </div>
+                                <div class="d-flex justify-content-start align-items-center feature-heading pt-3">
+                                    <h3 class="h5">Ensure customer visits</h3>
+                                    <img src="/assets/img/salesOn.svg" loading="lazy" alt="logo"/>
+                                </div>
+                                <p class="mb-0">Make sure that sales team is actually visiting customers in their outlets verified on google maps.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="position-relative">
+                            <div class="p-3 bg-white mt-4 mt-lg-0 mt-md-0 z-2 feature-content">
+                                <div class="feature-icon bg-route">
+                                    <!-- <img src="/industries/assets/img/feature-icons/route.png" loading="lazy" alt="Route Management" title="Route Management"> -->
+                                </div>
+                                <div class="d-flex justify-content-start align-items-center feature-heading pt-3">
+                                    <h3 class="h5">Route Management</h3>
+                                    <img src="/assets/img/salesOn.svg" loading="lazy" alt="logo"/>
+                                </div>
+                                <p class="mb-0">Create and manage routes for your sales team based on your day-to-day business needs. Provide route based access control for sales team with SalesOn.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="position-relative">
+                            <div class="p-3 bg-white mt-4 mt-lg-0 mt-md-0 z-2 feature-content">
+                                <div class="feature-icon bg-retail">
+                                    <!-- <img src="/industries/assets/img/feature-icons/retail.png" alt="Retail outlet" title="Add new retail outlets on the go"> -->
+                                </div>
+                                <div class="d-flex justify-content-start align-items-center feature-heading pt-3">
+                                    <h3 class="h5">Add new outlets</h3>
+                                    <img src="/assets/img/salesOn.svg" alt=""/>
+                                </div>
+                                <p class="mb-0">Add new customers and retail outlets with their map location for easy navigation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="position-relative">
+                            <div class="p-3 bg-white mt-4 mt-lg-0 mt-md-0 z-2 feature-content">
+                                <div class="feature-icon bg-list">
+                                    <!-- <img src="/industries/assets/img/feature-icons/list.png" loading="lazy" alt="items list on mobile" title="Digital catalog to take orders and payments"> -->
+                                </div>
+                                <div class="d-flex justify-content-start align-items-center feature-heading pt-3">
+                                    <h3 class="h5">Digital catalog</h3>
+                                    <img src="/assets/img/salesOn.svg" loading="lazy" alt=""/>
+                                </div>
+                                <p class="mb-0">Fully digitalized items catalog along with real time updatable stocks and sell price which makes on field team job easy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="position-relative">
+                            <div class="p-3 bg-white mt-4 mt-lg-0 mt-md-0 z-2 feature-content">
+                                <div class="feature-icon bg-camera">
+                                    <!-- <img src="/industries/assets/img/feature-icons/camera.png" loading="lazy" alt="camera" title="Take pictures and collect info about competing brands"> -->
+                                </div>
+                                <div class="d-flex justify-content-start align-items-center feature-heading pt-3">
+                                    <h3 class="h5">Merchandising</h3>
+                                    <img src="/assets/img/salesOn.svg" loading="lazy" alt=""/>
+                                </div>
+                                <p class="mb-0">Track information about similar products and brands by taking pictures and customized forms </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="position-relative">
+                            <div class="p-3 bg-white mt-4 mt-lg-0 mt-md-0 z-2 feature-content">
+                                <div class="feature-icon bg-report">
+                                    <!-- <img src="/industries/assets/img/feature-icons/report.png" loading="lazy" alt="report" title="Analyse reports"> -->
+                                </div>
+                                <div class="d-flex justify-content-start align-items-center feature-heading pt-3">
+                                    <h3 class="h5">Analyse business reports</h3>
+                                    <img src="/assets/img/salesOn.svg" loading="lazy" alt=""/>
+                                </div>
+                                <p class="mb-0">Have access to accounting reports that help get a business overview and make strategic business decisions for business growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--footer section start-->
+        <site-footer><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
+        <!--footer section end-->
+
+    </div>
+
+
+
+    <!--build:js-->
+    <script src="/assets/js/vendors/jquery-3.6.0.min.ce9d07500ad9.js"></script>
+    
+    <script src="/assets/js/min/app.min.c3a6e62360af.js"></script>
+    
+   
+    <!--endbuild-->
+    <script defer src="/assets/js/site-repairs.29824dd6d35a.js"></script>
+<script defer src="/components/site-header.cd8aaee89ecb.js"></script>
+<script defer src="/components/site-footer.0ffd3829fc3f.js"></script>
+<script defer src="/components/whatsapp-float.0e773436a8ab.js"></script>
+<whatsapp-float msg="Hi%20SalesOn%2C%20I%27d%20like%20to%20know%20more%20about%20SalesOn"></whatsapp-float>
+</body>
+
+</html>
+
+

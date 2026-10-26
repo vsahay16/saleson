@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tally Integration for Distribution Workflows | SalesOn</title>
+<meta content="Connect SalesOn field sales with your Tally accounting workflow. Review master mapping, invoice and receipt sync, and exception handling in a demo." name="description"/>
+<meta content="tally integration software india, tally prime integration, tally ERP 9 sync, tally API integration india, tally automation software, tally sync software, tally integration for distributors, real-time tally sync" name="keywords"/>
+
+<link href="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-favicon.png" rel="icon" type="image/png"/>
+<link href="https://saleson.co.in/tally-integration" hreflang="en-IN" rel="alternate"/>
+<link href="https://saleson.co.in/tally-integration" hreflang="x-default" rel="alternate"/>
+<meta content="Tally Integration for Distribution Workflows | SalesOn" property="og:title"/>
+<meta content="Connect SalesOn field sales with your Tally accounting workflow. Review master mapping, invoice and receipt sync, and exception handling in a demo." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://saleson.co.in/tally-integration" property="og:url"/>
+<meta content="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-arrow-logo-blue.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Tally Integration Software India | Real-Time Tally Prime Sync" property="og:image:alt"/>
+<meta content="index, follow" name="robots"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SalesOn Tally Integration",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Android, iOS, Web",
+  "url": "https://saleson.co.in/tally-integration",
+  "description": "Real-time Tally API integration software for Indian distributors and manufacturers.",
+  "featureList": [
+    "Tally Prime sync",
+    "Tally ERP 9 sync",
+    "Ledger and master sync",
+    "Sales voucher posting",
+    "Receipt voucher posting",
+    "Stock journal sync",
+    "Sync error logs",
+    "Accountant approval workflow"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "description": "Free 7-day trial. No setup fee. No minimum users."
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "SalesOn",
+      "item": "https://saleson.co.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Distribution Management",
+      "item": "https://saleson.co.in/distribution-management-system"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Tally Integration",
+      "item": "https://saleson.co.in/tally-integration"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Tally integration software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tally integration software connects a field sales app to Tally Prime or ERP 9 using Tally's native XML/HTTP API. When a rep confirms an invoice or payment in the field, the voucher posts to Tally automatically — with correct ledger, GST rate, and HSN code. No imports, no WhatsApp forwards, no manual re-entry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SalesOn replace Tally?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. SalesOn complements Tally — it does not replace it. Your accountant continues working in Tally exactly as before. SalesOn uses the configured Tally integration in append-only mode to post new field transactions. No existing vouchers, ledgers, balances, or configurations are ever modified or deleted."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What syncs between SalesOn and Tally — and in which direction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Field to Tally: Sales vouchers, payment receipts, new customer ledgers (GSTIN validated). Tally to Field: Item masters, current prices, HSN codes, outstanding balances. All sync is bidirectional, event-based, and real-time. Nothing is batched or scheduled."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Tally versions does SalesOn support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SalesOn supports Tally Prime (version 2.x and above) and Tally ERP 9 (version 6.x and above). Both have full, identical sync capability. No Tally upgrade is required — your existing company, ledgers, voucher types, and cost centres stay exactly as they are."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does setup take, and do I need an IT team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Setup takes 30 minutes. Install the connector on the Tally machine, map ledgers once, and the first invoice syncs — no IT team, no Tally consultant. A dedicated onboarding manager handles it over WhatsApp. Confirm the rollout schedule after reviewing your masters, transactions and connection requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this replace the need for a separate order taking app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — this handles the accounting side. For field reps booking orders at retailer counters (SKU search, scheme calculation, WhatsApp confirmation), see the Order Taking App. Both work together: orders confirmed in the field flow into Tally automatically via this integration."
+      }
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet"/>
+
+
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@salesonsoftware" name="twitter:site"/>
+<meta content="Tally Integration for Distribution Workflows | SalesOn" name="twitter:title"/>
+<meta content="Connect SalesOn field sales with your Tally accounting workflow. Review master mapping, invoice and receipt sync, and exception handling in a demo." name="twitter:description"/>
+<meta content="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-arrow-logo-blue.png" name="twitter:image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebPage"
+}
+</script>
+<!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+<!-- Meta Pixel Code -->
+
+<noscript><img alt="" aria-hidden="true" loading="lazy" decoding="async" class="page-style-001" height="1" src="https://www.facebook.com/tr?id=24368712786163410&ev=PageView&noscript=1" width="1"/></noscript>
+<!-- End Meta Pixel Code -->
+<!-- Microsoft Clarity -->
+
+<!-- End Microsoft Clarity -->
+<!-- LinkedIn Insight Tag -->
+
+
+<noscript>
+<img loading="lazy" decoding="async" class="page-style-002" alt="" height="1" src="https://px.ads.linkedin.com/collect/?pid=10538113&fmt=gif" width="1"/>
+</noscript>
+<!-- End LinkedIn Insight Tag -->
+<link rel="canonical" href="https://saleson.co.in/tally-integration">
+<link rel="stylesheet" href="/css/tally-integration-page.c351f4dd1af5.css">
+<link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css">
+<link rel="stylesheet" href="/css/feature-pages.6c050eb3adb7.css">
+<link rel="stylesheet" href="/css/feature-media.32f3debf111c.css">
+<script defer src="/assets/js/site-tag-manager.b493701a8c03.js"></script>
+<script defer src="/assets/js/feature-analytics.c14c6335c0a8.js"></script>
+</head>
+<body class="feature-page feature-page-tally-integration">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe title="Embedded SalesOn content" class="page-style-003" height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WQNBHFQS" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="topbar">⚡ Connect field invoices and Tally vouchers. No IT team. <a href="https://app.saleson.co.in/" target="_blank">Start free →</a><span class="subscription-terms-link"><a href="/terms">Trial and subscription terms</a> · <a href="/refund">Refund policy</a></span></div>
+<site-header active="tally-integration"><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header><main id="main-content">
+<!-- HERO -->
+<section aria-label="Tally Integration Software for Distributors" class="hero">
+<div class="container">
+<div class="hero-grid">
+<div>
+<div class="pain-pill">⚠️ Nightly manual re-entry is costing you hours</div>
+<h1 class="display reveal">Tally Integration Software for <em>Distributors &amp; Manufacturers</em></h1>
+<p class="hero-sub reveal d1">SalesOn posts vouchers, payment receipts, and ledgers to Tally Prime or ERP 9 the instant a field transaction is confirmed — your accountant keeps working exactly as before.</p>
+<div class="hero-actions reveal d2">
+<a class="btn btn-primary" href="https://app.saleson.co.in/" target="_blank">Start free — live in 30 min →</a>
+<a class="btn btn-secondary" href="#how-it-works">See how it works</a>
+</div>
+<div class="hero-trust reveal d3">
+<div class="trust-chip"><div class="dot"></div>1,100+ distributors</div>
+<div class="trust-chip"><div class="dot"></div>Tally Prime &amp; ERP 9</div>
+<div class="trust-chip"><div class="dot"></div>GST-ready</div>
+<div class="trust-chip"><div class="dot"></div>30-min setup</div>
+</div>
+</div>
+<div class="hero-visual-wrap reveal d1"><figure class="product-visual-card hero-product-visual"><div class="visual-label"><span>Actual SalesOn workflow</span><strong>SalesOn to Tally sync</strong></div><img decoding="async" alt="SalesOn to Tally integration hero visual showing synced invoices, receipts, ledgers, GST or HSN mapping, and voucher posting" fetchpriority="high" height="494" src="/assets/img/tally-integration-hero.webp" width="1200"/><figcaption>SalesOn syncs invoices, receipts, ledgers, GST or HSN mappings, and vouchers to Tally automatically.</figcaption></figure></div>
+</div>
+</div>
+</section>
+<!-- PROOF STRIP -->
+<div aria-label="Key metrics" class="proof-strip">
+<div class="container">
+<div class="proof-strip-inner">
+<div class="ps-item"><div class="ps-val">1,100+</div><div class="ps-lbl">Indian distributors</div></div>
+
+
+<div class="ps-item"><div class="ps-val">30 min</div><div class="ps-lbl">Setup · no IT team</div></div>
+</div>
+</div>
+</div>
+<!-- LOGO TICKER -->
+<div aria-label="Customers using SalesOn Tally integration" class="trust-strip">
+<div class="logo-ticker" role="list">
+<div class="logo-item" role="listitem"><div class="logo-pill"><div class="lp-ico page-style-004">🛒</div><div><div class="lp-name">Aggarwal Agencies</div><div class="lp-type">FMCG · Delhi</div></div></div></div>
+<div class="logo-item" role="listitem"><div class="logo-pill"><div class="lp-ico page-style-005">💊</div><div><div class="lp-name">MedSupply Corp</div><div class="lp-type">Pharma · Mumbai</div></div></div></div>
+<div class="logo-item" role="listitem"><div class="logo-pill"><div class="lp-ico page-style-006">🌾</div><div><div class="lp-name">Patel Agri Dist.</div><div class="lp-type">Agri · Gujarat</div></div></div></div>
+<div class="logo-item" role="listitem"><div class="logo-pill"><div class="lp-ico page-style-007">🧴</div><div><div class="lp-name">Kumar FMCG Hub</div><div class="lp-type">FMCG · Hyderabad</div></div></div></div>
+<div class="logo-item" role="listitem"><div class="logo-pill"><div class="lp-ico page-style-008">🏭</div><div><div class="lp-name">Singh Distributors</div><div class="lp-type">CG · Punjab</div></div></div></div>
+<div class="logo-item" role="listitem"><div class="logo-pill"><div class="lp-ico page-style-009">🔌</div><div><div class="lp-name">Verma Electronics</div><div class="lp-type">Elec · Bangalore</div></div></div></div>
+<div class="logo-item" role="listitem"><div class="logo-pill"><div class="lp-ico page-style-004">🛒</div><div><div class="lp-name">Aggarwal Agencies</div><div class="lp-type">FMCG · Delhi</div></div></div></div>
+<div class="logo-item" role="listitem"><div class="logo-pill"><div class="lp-ico page-style-005">💊</div><div><div class="lp-name">MedSupply Corp</div><div class="lp-type">Pharma · Mumbai</div></div></div></div>
+<div class="logo-item" role="listitem"><div class="logo-pill"><div class="lp-ico page-style-006">🌾</div><div><div class="lp-name">Patel Agri Dist.</div><div class="lp-type">Agri · Gujarat</div></div></div></div>
+<div class="logo-item" role="listitem"><div class="logo-pill"><div class="lp-ico page-style-007">🧴</div><div><div class="lp-name">Kumar FMCG Hub</div><div class="lp-type">FMCG · Hyderabad</div></div></div></div>
+<div class="logo-item" role="listitem"><div class="logo-pill"><div class="lp-ico page-style-008">🏭</div><div><div class="lp-name">Singh Distributors</div><div class="lp-type">CG · Punjab</div></div></div></div>
+<div class="logo-item" role="listitem"><div class="logo-pill"><div class="lp-ico page-style-009">🔌</div><div><div class="lp-name">Verma Electronics</div><div class="lp-type">Elec · Bangalore</div></div></div></div>
+</div>
+</div>
+<!-- AEO DIRECT ANSWER BLOCKS -->
+<section aria-label="Direct answers about Tally integration software" class="section section-alt">
+<div class="container">
+<div class="center">
+<div class="eyebrow">Quick Answers</div>
+<h2 class="h2">Tally Integration — <em>Plainly Explained</em></h2>
+<p class="body-md page-style-010">Connect field sales and office accounting. Use the walkthrough to review how your customer masters, items and sales transactions should move between SalesOn and Tally.</p>
+</div>
+<div class="answer-grid reveal">
+<div class="answer-card">
+<div class="answer-card-label">What is Tally integration software?</div>
+<p>Software that connects a distributor's field app to Tally Prime or ERP 9 via Tally's native XML/HTTP API. When a rep confirms an invoice in the field, the voucher posts automatically — correct ledger, GST rate, and HSN included. No imports, no WhatsApp, no re-entry.</p>
+</div>
+<div class="answer-card">
+<div class="answer-card-label">What syncs between SalesOn and Tally?</div>
+<p><strong class="page-style-011">Field → Tally:</strong> Sales vouchers, payment receipts, new customer ledgers.<br/><strong class="page-style-011">Tally → Field:</strong> Item masters, prices, HSN codes, outstanding balances.<br/>All sync is event-based and real-time — not batch, not scheduled.</p>
+</div>
+<div class="answer-card answer-card-full">
+<div class="answer-card-label">Does SalesOn replace Tally?</div>
+<p>No. Your accountant keeps working in Tally exactly as before. SalesOn only appends new field transactions via the configured Tally integration — no existing vouchers, ledgers, or configurations are touched.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- THE PROBLEM -->
+<section aria-label="The problem with manual WhatsApp-based accounting workflows" class="wa-chaos">
+<div class="container">
+<div class="center page-style-012">
+<div class="eyebrow page-style-013">The Problem</div>
+<h2 class="h2 page-style-014">WhatsApp Is Not<br/><em class="page-style-013">an Accounting Workflow</em></h2>
+<p class="page-style-015">4 accounting consequences of forwarding invoice photos instead of Tally-connected software:</p>
+</div>
+<div class="wa-grid">
+<div>
+<div class="wa-chat-frame">
+<div class="wa-chat-bar">
+<div class="wa-avatar">💬</div>
+<div><div class="wa-contact-name">Sales Team (14)</div><div class="wa-contact-sub">Rep Ravi, Rep Suresh, Rep Mohan…</div></div>
+</div>
+<div class="wa-messages">
+<div class="wa-msg wa-msg-img"><div class="wa-img-placeholder">🧾</div><div class="wa-img-caption">invoice sharma agencies.jpg</div><div class="wa-time">6:43 PM</div></div>
+<div class="wa-msg wa-msg-in">bhai ye sharma ka invoice tally mein daalna hai<div class="wa-time">6:44 PM</div></div>
+<div class="wa-msg wa-msg-out">amount kya hai? photo blur hai<div class="wa-time">6:46 PM</div></div>
+<div class="wa-msg wa-msg-in">18450 hai. GST 12%. Ledger Sales-FMCG<div class="wa-time">6:48 PM</div></div>
+<div class="wa-msg wa-msg-img"><div class="wa-img-placeholder">🧾</div><div class="wa-img-caption">gupta payment receipt.jpg</div><div class="wa-time">7:02 PM</div></div>
+<div class="wa-msg wa-msg-out page-style-016">❌ Kaunsa invoice version sahi hai? 3 forward aaye hain sharma ke<div class="wa-time">8:14 PM</div></div>
+</div>
+</div>
+<div class="page-style-017">
+<div class="page-style-018">🌙</div>
+<div class="page-style-019"><strong class="page-style-020">9:47 PM.</strong> Accountant still at desk. 14 reps. 14 threads. Every night.</div>
+</div>
+</div>
+<div>
+<div class="page-style-021">Accounting consequences:</div>
+<div class="wa-chaos-tags">
+<div class="wa-tag"><div class="wt-ico">📄</div><div><div class="wt-title">Wrong Invoice Versions in Tally</div><div class="wt-desc">Revised invoices arrive after the original was keyed in. Wrong amount, wrong GST — already posted and hard to reverse.</div></div></div>
+<div class="wa-tag"><div class="wt-ico">👥</div><div><div class="wt-title">Duplicate Ledgers Pile Up</div><div class="wt-desc">"Sharma Agencies", "Sharma Agency", "M/s Sharma" — three manual entries create three ledgers. Quarter-end reconciliation nightmare.</div></div></div>
+<div class="wa-tag"><div class="wt-ico">🧾</div><div><div class="wt-title">GST Mismatches at Filing</div><div class="wt-desc">Typo in HSN code or wrong tax slab. GSTR-1 doesn't reconcile. CA gets involved. Correction bills follow.</div></div></div>
+<div class="wa-tag"><div class="wt-ico">📊</div><div><div class="wt-title">Outstanding Records Out of Step</div><div class="wt-desc">Reps visit already-paid retailers. Collection decisions rely on separate records. Overdue balances stay open longer.</div></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS -->
+<section aria-label="How Tally integration works — three steps" class="section" id="how-it-works">
+<div class="container">
+<div class="center">
+<div class="eyebrow">How It Works</div>
+<h2 class="h2">Real-Time Tally API Sync —<br/><em>Three Steps. Zero Manual Work.</em></h2>
+</div>
+<div class="reveal page-style-022">
+<div class="page-style-023"><div class="page-style-024"></div><div class="page-style-025">LIVE</div></div>
+<div class="page-style-026">Field transaction → Tally voucher in <span class="page-style-027">a connected workflow.</span></div>
+</div>
+<div class="flow-diagram-wrap reveal page-style-028"><figure class="product-visual-card section-product-visual"><div class="visual-label"><span>Actual SalesOn workflow</span><strong>Sync + voucher posting</strong></div><img decoding="async" alt="SalesOn and Tally side-by-side integration flow showing data sync and voucher posting" height="493" loading="lazy" src="/assets/img/tally-integration-flow.webp" width="1200"/><figcaption>Field events, invoice sync, ledger mapping, and voucher posting are connected in one real-time workflow between SalesOn and Tally.</figcaption></figure></div>
+<div class="how-flow reveal page-style-029">
+<div class="how-card"><div class="how-num">1</div><div class="how-icon">📲</div><div class="h3 page-style-030">Rep confirms in field</div><p class="body-sm">Invoice, payment, or new customer — tapped on the mobile app at the shop. No paper. No WhatsApp.</p></div>
+<div class="how-arrow">→</div>
+<div class="how-card"><div class="how-num">2</div><div class="how-icon">⚡</div><div class="h3 page-style-030">Voucher posts to Tally</div><p class="body-sm">SalesOn fires Tally's native XML API — ledger, HSN, GST all mapped automatically. Nothing to import or fix.</p></div>
+<div class="how-arrow">→</div>
+<div class="how-card"><div class="how-num">3</div><div class="how-icon">📊</div><div class="h3 page-style-030">Everyone works from truth</div><p class="body-sm">Accountant opens Tally — already done. Owner sees live numbers. Reps see live outstanding before every visit.</p></div>
+</div>
+<button aria-expanded="false" class="tech-toggle-btn reveal" id="techBtn" data-page-action="action-001">
+<span>⚙️</span><span>Technical details — how the Tally API integration works</span>
+<span class="tt-badge">For accountants &amp; IT</span><span class="tt-arrow">▼</span>
+</button>
+<div aria-hidden="true" class="tech-details" id="techDetails">
+<div class="tech-inner">
+<div class="tech-visual">
+<div class="tv-header"><div class="tv-dots"><div class="tv-dot page-style-031"></div><div class="tv-dot page-style-032"></div><div class="tv-dot page-style-033"></div></div><div class="tv-title">SalesOn → Tally XML API</div></div>
+<div class="page-style-034">// Fires when rep confirms invoice</div>
+<div class="tv-line"><span class="tv-tag">&lt;ENVELOPE&gt;</span></div>
+<div class="tv-line tv-indent"><span class="tv-key">TALLYREQUEST</span>: <span class="tv-val">"Import Data"</span></div>
+<div class="tv-line tv-indent"><span class="tv-key">VOUCHERTYPENAME</span>: <span class="tv-val">"Sales"</span></div>
+<div class="tv-line tv-indent"><span class="tv-key">PARTYNAME</span>: <span class="tv-val">"Sharma Agencies"</span></div>
+<div class="tv-line tv-indent"><span class="tv-key">LEDGER</span>: <span class="tv-val">"Sales-FMCG"</span></div>
+<div class="tv-line tv-indent"><span class="tv-key">AMOUNT</span>: <span class="tv-val">18450</span></div>
+<div class="tv-line tv-indent"><span class="tv-key">GSTRATE</span>: <span class="tv-val">"IGST_12"</span></div>
+<div class="tv-line tv-indent"><span class="tv-key">HSNCODE</span>: <span class="tv-val">"34012010"</span></div>
+<div class="tv-line"><span class="tv-tag">&lt;/ENVELOPE&gt;</span></div>
+<div class="tv-result"><div class="tv-result-ok">✓ Illustration: voucher posted to Tally</div><div class="tv-result-note">Event-based · No polling · No batch · No cloud migration</div></div>
+</div>
+<div class="tech-specs">
+<div class="ts-item"><div class="ts-ico">🔗</div><div class="ts-info"><strong>Tally XML/HTTP API (native)</strong>No middleware, no CSV, no third-party connectors. Officially supported by Tally Solutions.</div></div>
+<div class="ts-item"><div class="ts-ico">⚡</div><div class="ts-info"><strong>Event-based (not batch)</strong>Fires the instant a transaction confirms. Posting time depends on configuration, connectivity and Tally availability.</div></div>
+<div class="ts-item"><div class="ts-ico">↕️</div><div class="ts-info"><strong>Bidirectional sync</strong>Field → Tally: invoices, payments, new customers. Tally → Field: prices, item masters, outstanding balances.</div></div>
+<div class="ts-item"><div class="ts-ico">🗃️</div><div class="ts-info"><strong>Tally Prime 2.x+ &amp; ERP 9 (6.x+)</strong>Full parity. No Tally upgrade required.</div></div>
+<div class="data-safety"><div class="page-style-035">🛡️</div><div class="ds-text"><strong>Your Tally data is never at risk.</strong>SalesOn only appends new transactions. No existing vouchers or ledgers are modified.</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WHAT SYNCS — BOTH WAYS -->
+<section aria-label="Bidirectional sync between SalesOn and Tally" class="section section-alt">
+<div class="container">
+<div class="center">
+<div class="eyebrow">Bidirectional Sync</div>
+<h2 class="h2">What Syncs — <em>Both Ways</em></h2>
+<p class="body-md page-style-036">Tally stays your accounting system of record. SalesOn closes the manual gap.</p>
+</div>
+<div class="sync-grid reveal">
+<div class="sync-card"><div class="sync-card-icon">📄</div><div class="sync-tag tag-from">Field → Tally</div><div class="h3">Sales Vouchers</div><p>Ledger, GST rate, HSN auto-mapped. Every invoice, every time.</p></div>
+<div class="sync-card"><div class="sync-card-icon">💰</div><div class="sync-tag tag-from">Field → Tally</div><div class="h3">Payment Receipts</div><p>Cash &amp; bank collections posted the moment they're confirmed. No batch.</p></div>
+<div class="sync-card"><div class="sync-card-icon">👤</div><div class="sync-tag tag-from">Field → Tally</div><div class="h3">Customer Ledgers</div><p>New customers auto-created in Tally. GSTIN validated, address mapped.</p></div>
+<div class="sync-card"><div class="sync-card-icon">📦</div><div class="sync-tag tag-to">Tally → Field</div><div class="h3">Item Masters &amp; Prices</div><p>Latest prices, HSN codes, and stock pulled from Tally to the app.</p></div>
+<div class="sync-card"><div class="sync-card-icon">📊</div><div class="sync-tag tag-to">Tally → Field</div><div class="h3">Outstanding Balances</div><p>Reps see live outstanding before every retailer visit. Collections improve.</p></div>
+<div class="sync-card"><div class="sync-card-icon">🧾</div><div class="sync-tag tag-both">Both Ways</div><div class="h3">GST Ledger Mapping</div><p>Tax rates, HSN codes, GSTINs stay consistent field-to-Tally. Zero mismatch at <a class="page-style-037" href="/invoicing">GSTR-1 filing</a>.</p></div>
+</div>
+<div class="reveal page-style-038">
+<div class="ui-frame">
+<div class="ui-titlebar">
+<div class="ui-dot page-style-031"></div>
+<div class="ui-dot page-style-032"></div>
+<div class="ui-dot page-style-033"></div>
+<div class="ui-title-label">SalesOn — Live Sync Dashboard</div>
+</div>
+<div class="page-style-039">
+<div class="page-style-040">
+<div class="page-style-041"><div class="page-style-042">247</div><div class="page-style-043">Vouchers Today</div></div>
+<div class="page-style-041"><div class="page-style-044">0</div><div class="page-style-043">Manual Entries</div></div>
+<div class="page-style-041"><div class="page-style-045">₹2.1L</div><div class="page-style-043">Outstanding</div></div>
+<div class="page-style-041"><div class="page-style-044">0</div><div class="page-style-043">GST Errors</div></div>
+</div>
+<div class="page-style-046">
+<div class="page-style-047"><span>Recent Sync Events</span><span class="page-style-048"><div class="page-style-049"></div>Live</span></div>
+<div class="page-style-050">
+<div class="page-style-051"><div class="page-style-052">📄</div><div class="page-style-053"><div class="page-style-054">Sales Voucher → Sharma Agencies</div><div class="page-style-055">₹18,450 · IGST 12% · Ledger: Sales-FMCG</div></div><div class="page-style-056">✓ Posted</div><div class="page-style-057">0.38s</div></div>
+<div class="page-style-051"><div class="page-style-058">💰</div><div class="page-style-053"><div class="page-style-054">Payment Receipt → Gupta Traders</div><div class="page-style-055">₹12,000 · Bank receipt</div></div><div class="page-style-056">✓ Posted</div><div class="page-style-057">Example</div></div>
+<div class="page-style-059"><div class="page-style-060">📦</div><div class="page-style-053"><div class="page-style-054">Price Pull ← Tally Item Master</div><div class="page-style-055">142 items updated · HSN mapped</div></div><div class="page-style-061">↕ Synced</div><div class="page-style-057">1.2s</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TALLY VERSION SUPPORT -->
+<section aria-label="Tally Prime and ERP 9 version support" class="section">
+<div class="container">
+<div class="center">
+<div class="eyebrow">Version Support</div>
+<h2 class="h2">Tally Prime &amp; ERP 9 —<br/><em>Both Supported. No Upgrade Needed.</em></h2>
+<p class="body-md page-style-062">Tally Prime or ERP 9 — SalesOn connects with identical real-time sync capability.</p>
+</div>
+<div class="version-grid reveal">
+<div class="version-card version-card-prime">
+<div class="version-card-head"><div class="version-card-label">Tally Prime 2.x+</div><div class="version-card-title">Recommended for new setups</div></div>
+<div class="version-card-body">
+<ul class="version-list">
+<li><span class="check">✓</span>Multi-SKU vouchers with per-item HSN mapping</li>
+<li><span class="check">✓</span>FMCG ledger mapping — Sales, Trade Discount, Scheme</li>
+<li><span class="check">✓</span>Batch &amp; expiry tracking synced to Tally stock</li>
+<li><span class="check">✓</span>GSTR-1 accuracy — zero manual GST mapping</li>
+<li><span class="check">✓</span>No Tally upgrade required</li>
+</ul>
+</div>
+</div>
+<div class="version-card version-card-erp">
+<div class="version-card-head"><div class="version-card-label">Tally ERP 9 (6.x+)</div><div class="version-card-title">No migration required</div></div>
+<div class="version-card-body">
+<ul class="version-list">
+<li><span class="check">✓</span>Full support — identical real-time sync capability</li>
+<li><span class="check">✓</span>Ledger auto-creation with GSTIN validation</li>
+<li><span class="check">✓</span>No duplicate party names — deduplication enforced</li>
+<li><span class="check">✓</span>Same event-based real-time sync — not batch</li>
+<li><span class="check">✓</span>Your Tally config, groups, cost centres untouched</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="page-style-063">
+<a class="btn btn-primary page-style-064" href="https://app.saleson.co.in/" target="_blank">Start your Tally sync free — 30 minutes →</a>
+</div>
+</div>
+</section>
+<!-- COMPARISON TABLE -->
+<section aria-label="SalesOn vs alternatives comparison" class="section section-alt">
+<div class="container">
+<div class="center">
+<div class="eyebrow">How We Compare</div>
+<h2 class="h2">SalesOn vs <em>Everything Else</em></h2>
+</div>
+<div class="reveal page-style-065">
+<table aria-label="Comparison of Tally integration options" class="diff-table">
+<thead><tr><th>Capability</th><th>Excel + WhatsApp + Tally</th><th>Generic Tally Connectors</th><th class="col-s">SalesOn</th></tr></thead>
+<tbody>
+<tr><td>Sync type</td><td class="c-no">Manual · end of day</td><td class="c-par">Scheduled batch</td><td class="c-yes col-s">⚡ Event-based real-time</td></tr>
+<tr><td>Direction</td><td class="c-no">❌ No sync</td><td class="c-par">One-way only</td><td class="c-yes col-s">✓ Bidirectional · live</td></tr>
+<tr><td>GST accuracy</td><td class="c-no">3–5% error rate</td><td class="c-par">Partial · needs checking</td><td class="c-yes col-s">✓ 0 mismatches</td></tr>
+<tr><td>Outstanding visibility</td><td class="c-no">Always stale</td><td class="c-par">Delayed</td><td class="c-yes col-s">✓ Live for reps &amp; owner</td></tr>
+<tr><td>Audit trail</td><td class="c-no">❌ WhatsApp / paper</td><td class="c-par">Partial</td><td class="c-yes col-s">✓ Full transaction log</td></tr>
+<tr><td>Setup time</td><td class="c-no">Daily manual work</td><td class="c-par">3–7 day IT project</td><td class="c-yes col-s">✓ 30 min · no IT team</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- MSME REASSURANCE -->
+<section aria-label="Setup and pricing details for Indian MSMEs" class="section">
+<div class="container">
+<div class="page-style-066">
+<div class="center page-style-067">
+<div class="eyebrow">Built for Indian MSMEs</div>
+<h2 class="h2">Start with 2 Users. <em>₹0 Setup. No Commitment.</em></h2>
+<p class="body-md page-style-068">Dedicated onboarding manager. Rep training. Refund policy applies.</p>
+</div>
+<div class="msme-grid reveal">
+<div class="msme-card"><div class="msme-val">₹0</div><div class="msme-title">No setup fee</div><div class="msme-sub">Refund policy applies</div></div>
+<div class="msme-card"><div class="msme-val">2–2000</div><div class="msme-title">Any team size</div><div class="msme-sub">No minimum user count</div></div>
+<div class="msme-card"><div class="msme-val">30 min</div><div class="msme-title">Setup time</div><div class="msme-sub">No IT team or Tally consultant</div></div>
+<div class="msme-card"><div class="msme-val">📱</div><div class="msme-title">Lightweight Android app</div><div class="msme-sub">Works on ₹8,000 phones</div></div>
+<div class="msme-card"><div class="msme-val">💬</div><div class="msme-title">WhatsApp support</div><div class="msme-sub">Dedicated onboarding manager</div></div>
+<div class="msme-card"><div class="msme-val">🎓</div><div class="msme-title">Rep training included</div><div class="msme-sub">Plan your rollout</div></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CASE STUDY -->
+<section class="section section-alt" id="results"><div class="container"><h2 class="h2">Validate your accounting workflow before rollout</h2><p>Bring a sample invoice, receipt and item master to the demo. Walk through the record in SalesOn and the corresponding entry expected in Tally.</p><ul><li>Confirm the supported Tally version and connection requirements.</li><li>Check master mapping, tax ledgers and which transaction types move in each direction.</li><li>Ask how failed syncs, retries and duplicate entries are identified and resolved.</li><li>Agree who reviews exceptions and reconciles totals before production use.</li></ul><a class="btn-p" href="/request-demo">Review your Tally workflow</a></div></section>
+<!-- TESTIMONIALS -->
+<section aria-label="Customer testimonials" class="section">
+<div class="container">
+<div class="center">
+<div class="eyebrow">What They Say</div>
+<h2 class="h2">What Accountants &amp; Owners <em>Actually Say</em></h2>
+</div>
+<div class="testi-grid reveal">
+<div class="testi-card">
+<div class="testi-stars">★★★★★</div>
+<div class="testi-quote">"Our accountant spent 3 hours every evening re-entering from WhatsApp. That stopped in week one. Tally is always current now — no backlog, no errors."</div>
+<div class="testi-meta">Ramesh Gupta</div>
+<div class="testi-role">FMCG Distributor, Delhi · 180 invoices/day</div>
+</div>
+<div class="testi-card">
+<div class="testi-stars">★★★★★</div>
+<div class="testi-quote">"GSTR-1 used to be a nightmare — wrong HSN codes, mismatched party names. SalesOn eliminated all of it. Our CA stopped billing us for corrections every quarter."</div>
+<div class="testi-meta">Priya Sharma</div>
+<div class="testi-role">Pharma Distributor, Mumbai · Tally Prime</div>
+</div>
+</div>
+</div>
+</section>
+<!-- NOT FOR EVERYONE -->
+<section aria-label="Who SalesOn Tally integration is for" class="section section-alt">
+<div class="container">
+<div class="center">
+<div class="eyebrow">Honest Filter</div>
+<h2 class="h2">This Is <em>Not for Everyone</em></h2>
+</div>
+<div class="page-style-073">
+<div class="nfy-grid reveal">
+<div class="nfy-card nfy-no">
+<div class="nfy-head">❌ Skip this if</div>
+<ul class="nfy-list">
+<li>All billing happens inside the office</li>
+<li>Accountant already has Tally in real time</li>
+<li>Fewer than 2–3 field reps</li>
+<li>You don't use Tally Prime or ERP 9</li>
+</ul>
+</div>
+<div class="nfy-card nfy-yes">
+<div class="nfy-head">✅ Built for you if</div>
+<ul class="nfy-list">
+<li>Reps raise invoices or collect outside office</li>
+<li>Accountant re-enters from WhatsApp or paper</li>
+<li>You use Tally Prime or ERP 9</li>
+<li>You want live books without calling anyone</li>
+</ul>
+</div>
+</div>
+<div class="nfy-conclusion">If your team is in the field every day — this is <strong>mission-critical accounting infrastructure.</strong> Also see: <a class="page-style-037" href="/order-taking-app">Order Taking App</a>, <a class="page-style-037" href="/distribution-management-system">Distribution Management System</a>, and <a class="page-style-037" href="/invoicing">GST Invoicing Software</a>.</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section aria-label="Frequently asked questions about Tally integration software" class="section">
+<div class="container">
+<div class="center">
+<div class="eyebrow">Common Questions</div>
+<h2 class="h2">Tally Integration — <em>Answered Directly</em></h2>
+</div>
+<div class="faq-list reveal">
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q" data-page-action="action-002">What is Tally integration software? <span class="faq-icon">+</span></button>
+<div class="faq-a" role="region">Tally integration software connects a field sales app to Tally Prime or ERP 9 using Tally's native XML/HTTP API. When a rep confirms an invoice or payment in the field, the voucher posts to Tally automatically — with correct ledger, GST rate, and HSN code. No imports, no WhatsApp forwards, no manual re-entry.</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q" data-page-action="action-002">Does SalesOn replace Tally? <span class="faq-icon">+</span></button>
+<div class="faq-a" role="region">No. SalesOn complements Tally — it does not replace it. Your accountant continues working in Tally exactly as before. SalesOn uses the configured Tally integration in append-only mode to post new field transactions. No existing vouchers, ledgers, balances, or configurations are ever modified or deleted.</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q" data-page-action="action-002">What syncs between SalesOn and Tally — and in which direction? <span class="faq-icon">+</span></button>
+<div class="faq-a" role="region"><strong>Field → Tally:</strong> Sales vouchers, payment receipts, new customer ledgers (GSTIN validated).<br/><br/><strong>Tally → Field:</strong> Item masters, current prices, HSN codes, outstanding balances.<br/><br/>All sync is bidirectional, event-based, and real-time. Nothing is batched or scheduled.</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q" data-page-action="action-002">Which Tally versions does SalesOn support? <span class="faq-icon">+</span></button>
+<div class="faq-a" role="region">SalesOn supports Tally Prime (version 2.x and above) and Tally ERP 9 (version 6.x and above). Both have full, identical sync capability. No Tally upgrade is required — your existing company, ledgers, voucher types, and cost centres stay exactly as they are.</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q" data-page-action="action-002">How long does setup take, and do I need an IT team? <span class="faq-icon">+</span></button>
+<div class="faq-a" role="region">Setup takes 30 minutes. Install the connector on the Tally machine, map ledgers once, and the first invoice syncs — no IT team, no Tally consultant. A dedicated onboarding manager handles it over WhatsApp. Confirm the rollout schedule after reviewing your masters, transactions and connection requirements.</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q" data-page-action="action-002">Does this replace the need for a separate order taking app? <span class="faq-icon">+</span></button>
+<div class="faq-a" role="region">No — this handles the accounting side. For field reps booking orders at retailer counters (SKU search, scheme calculation, WhatsApp confirmation), see the <a class="page-style-037" href="/order-taking-app">Order Taking App →</a>. Both work together: orders confirmed in the field flow into Tally automatically via this integration.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RELATED GUIDES -->
+<div class="page-style-074" aria-label="Related SalesOn pages">
+<div class="container center">
+<div class="eyebrow">Related</div>
+<div class="guide-pills">
+<a class="guide-pill guide-pill-hub" href="/distribution-management-system">← Distribution Management System</a>
+<a class="guide-pill" href="/order-taking-app">→ Order Taking App</a>
+<a class="guide-pill" href="/invoicing">→ GST Invoicing Software</a>
+<a class="guide-pill" href="/van-sales">→ Van Sales App</a>
+<a class="guide-pill" href="/production">→ Production Management</a>
+<a class="guide-pill" href="/tally-integration#faq">→ Tally Integration Questions</a>
+</div>
+</div>
+</div>
+<!-- FINAL CTA -->
+<section aria-label="Start free trial" class="final-cta">
+<div class="container page-style-075">
+<div class="final-cta-badge">Tally Integration Software for Indian Distributors</div>
+<h2>Your Accountant Shouldn't<br/>Work Till <em>9pm.</em></h2>
+<p>1,100+ Indian distributors. Their accountant changes nothing in Tally — until they notice the evening catch-up quietly stopped.</p>
+<div class="final-cta-actions">
+<div class="page-style-076">
+<a class="btn btn-white" href="https://app.saleson.co.in/" target="_blank">Go live in 30 minutes →</a>
+<span class="page-style-077">No setup fee · No impact on Tally data · Refund policy applies</span>
+</div>
+<a class="btn btn-ghost" href="https://wa.me/918092856577" target="_blank">💬 Talk to Our Team</a>
+</div>
+</div>
+</section>
+</main><site-footer><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
+
+
+<whatsapp-float msg="Hi%20SalesOn%2C%20I%27d%20like%20to%20know%20more%20about%20SalesOn"></whatsapp-float>
+<script defer src="/components/site-header.cd8aaee89ecb.js"></script>
+<script defer src="/components/site-footer.0ffd3829fc3f.js"></script>
+<script defer src="/components/whatsapp-float.0e773436a8ab.js"></script>
+<script defer src="/assets/js/tally-integration-page.5d44e4813b4c.js"></script>
+<script defer src="/assets/js/feature-media.c36ef7c1cc82.js"></script>
+<script defer src="/assets/js/site-repairs.29824dd6d35a.js"></script>
+</body>
+</html>

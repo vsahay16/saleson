@@ -1,0 +1,98 @@
+.hero-content-wrap h3{
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.who-section img{
+  width: 280px;
+  border-radius: 12px;
+}
+
+.cta-subscribe h2{
+  color: var(--white);
+}
+
+.support-section{
+  padding: 30px 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.support-section img{
+   height: 30px;
+}
+
+.support-section i {
+  font-size: 24px;
+  vertical-align: middle;
+  padding: 10px 
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .hero-content-wrap h3{
+    font-size: 1.5rem;
+    padding-top: 20px;
+  }
+  .brand-section img{
+    width: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .payment-img{
+    margin-top: -80px;
+  }
+  
+}
+@media (min-width: 768px) {
+  /* line 5889, src/assets/scss/vendors/bootstrap.min.css */
+  .subscribe-feature-list .nav-item{
+    padding: 10px;
+  }
+  
+}
+
+/*about */
+.team-bg img{
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+/* salesman tracking */
+.hero-text {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.hero-text span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.hero-text span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+/*index */
+@media (min-width: 320px) and (max-width: 767px) {
+  .terms-content{
+    margin: 0px;
+  }
+  .pt-sm-0{
+    padding-top: 0 !important;
+  }
+}

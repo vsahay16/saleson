@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Free Stock Reorder Level Calculator | SalesOn</title>
+<meta content="Calculate reorder level, reorder quantity, safety stock, days of stock remaining and stock-out risk for SKUs. Free inventory tool by SalesOn." name="description"/>
+
+<link rel="icon" type="image/png" href="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-favicon.png"/>
+<link rel="alternate" hreflang="en-IN" href="https://saleson.co.in/tools/stock-reorder-level-calculator"/>
+<link rel="alternate" hreflang="x-default" href="https://saleson.co.in/tools/stock-reorder-level-calculator"/>
+<meta content="Free Stock Reorder Level Calculator | SalesOn" property="og:title"/>
+<meta content="Calculate reorder level, reorder quantity, safety stock, days of stock remaining and stock-out risk for SKUs. Free inventory tool by SalesOn." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta property="og:url" content="https://saleson.co.in/tools/stock-reorder-level-calculator">
+<meta content="https://saleson.co.in/tools/assets/saleson-free-tools-og.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="SalesOn Free Business Tools" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@salesonsoftware" name="twitter:site"/>
+<meta content="https://saleson.co.in/tools/assets/saleson-free-tools-og.jpg" name="twitter:image"/>
+<meta content="index, follow" name="robots"/>
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this stock reorder calculator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This stock reorder level calculator is completely free. No account or subscription required. You can calculate reorder levels for unlimited SKUs at no cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is reorder level?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reorder level is the stock quantity at which you should place a new purchase order to avoid running out of stock before the next delivery arrives. Formula: Reorder Level = Average Daily Sales × Lead Time + Safety Stock."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is safety stock calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Safety Stock = (Maximum Daily Sales × Maximum Lead Time) − (Average Daily Sales × Average Lead Time). Safety stock protects against unexpected spikes in demand or supplier delays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know when to reorder stock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reorder when your current stock reaches or falls below the reorder level. This calculator shows your reorder level, days of stock remaining and stock-out date so you know exactly when to act."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can distributors and wholesalers use this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This tool is built specifically for Indian distributors, wholesalers, manufacturers, FMCG companies and pharma distributors who manage multiple SKUs and need to plan purchases efficiently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use SalesOn instead of this free calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When you have 20+ SKUs, multiple godowns, daily inward and outward stock movements, van sales, purchase order workflows and need real-time stock visibility — you need SalesOn. A spreadsheet or calculator cannot replace a connected inventory system."
+      }
+    }
+  ]
+}
+</script>
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "SalesOn",
+      "item": "https://saleson.co.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Free Business Tools",
+      "item": "https://saleson.co.in/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Stock Reorder Level Calculator",
+      "item": "https://saleson.co.in/tools/stock-reorder-level-calculator"
+    }
+  ]
+}
+</script>
+<script src="/assets/js/min/common.min.5c2663c0cd10.js"></script>
+<script src="/assets/js/min/tool-handoff.min.312be650f7d3.js"></script>
+<link href="/css/min/common-new.min.f637cbb1ad10.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&amp;display=swap" rel="stylesheet"/>
+<style>
+ /* ── HERO ── */
+ .hero {
+      padding: 72px 0 64px;
+      background: radial-gradient(circle at 20% 20%, #eef2fc 0%, #ffffff 45%, #dde6f9 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 760px; }
+    .hero-eyebrow {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 5px 12px; border-radius: 100px;
+      font-size: 11.5px; font-weight: 700; letter-spacing: .03em;
+    }
+    .badge-green  { background: rgba(5,150,105,.2);  color: #489f7d; border: 1px solid rgba(5,150,105,.3); }
+    .badge-blue   { background: rgba(26,86,219,.25); color: #3f73ae; border: 1px solid rgba(26,86,219,.4); }
+    .badge-amber  { background: rgba(217,119,6,.2);  color: #bc971b; border: 1px solid rgba(217,119,6,.3); }
+    .badge-white  { background: rgba(255,255,255,.1); color: rgb(106 101 101 / 100%); border: 1px solid rgb(106 101 101 / 100%); }
+
+    .hero-h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.17; margin-bottom: 18px;
+    }
+    .hero-h1 em { font-style: italic; color: var(--brand); }
+    .hero-sub {
+      font-size: 16px; line-height: 1.78;
+      max-width: 600px; margin-bottom: 36px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* ════ TOOL LAYOUT ════ */
+    .tool-wrap { display: grid; grid-template-columns: 420px 1fr; gap: 24px; align-items: start; padding: 24px 0 48px; }
+
+    /* ════ FORM PANEL ════ */
+    .form-panel { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .form-panel-header { background: var(--brand); padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; }
+    .fph-title { font-family: 'DM Serif Display', serif; font-size: 16px; color: white; }
+    .fph-actions { display: flex; gap: 6px; }
+    .fph-btn { background: rgba(255,255,255,.2); color: white; border: 1px solid rgba(255,255,255,.3); border-radius: 6px; padding: 4px 10px; font-size: 11.5px; font-weight: 700; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background .15s; }
+    .fph-btn:hover { background: rgba(255,255,255,.35); }
+
+    /* Collapsible sections */
+    .form-section { border-bottom: 1px solid var(--border); }
+    .form-section:last-child { border-bottom: none; }
+    .form-section-head { width: 100%; background: none; border: none; padding: 12px 18px; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 13px; font-weight: 700; color: var(--ink); font-family: 'DM Sans', sans-serif; transition: background .15s; }
+    .form-section-head:hover { background: var(--surface); }
+    .form-section-head .sec-icon { font-size: 14px; margin-right: 7px; }
+    .form-section-head .sec-label { flex: 1; display: flex; align-items: center; }
+    .form-section-head .chevron { font-size: 10px; color: var(--ink-mute); transition: transform .2s; }
+    .form-section-head.open .chevron { transform: rotate(180deg); }
+    .form-section-body { display: none; padding: 0 18px 16px; }
+    .form-section-body.open { display: block; }
+
+    /* Inputs */
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+    .form-row.full { grid-template-columns: 1fr; }
+    label { font-size: 10.5px; font-weight: 700; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .06em; display: block; margin-bottom: 4px; }
+    .fi { border: 1.5px solid var(--border) !important; border-radius: var(--radius-sm); padding: 8px 11px; font-size: 13px; font-family: 'DM Sans', sans-serif; color: var(--ink); outline: none; width: 100%; transition: border-color .15s; background: var(--white); }
+    .fi:focus { border-color: var(--brand); }
+    select.fi { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237a8898' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 9px center; padding-right: 26px; cursor: pointer; }
+
+    /* Method pills */
+    .method-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+    .method-pill { padding: 5px 12px; border-radius: 100px; border: 1.5px solid var(--border); font-size: 11.5px; font-weight: 700; color: var(--ink-soft); cursor: pointer; background: var(--white); transition: all .15s; font-family: 'DM Sans', sans-serif; }
+    .method-pill:hover { border-color: var(--brand); color: var(--brand); }
+    .method-pill.active { background: var(--brand); border-color: var(--brand); color: white; }
+
+    /* Form buttons */
+    .form-actions { padding: 14px 18px; border-top: 1px solid var(--border); display: flex; gap: 7px; flex-wrap: wrap; }
+    .btn-primary { background: var(--brand); color: white; border: none; border-radius: var(--radius-sm); padding: 10px 16px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all .15s; }
+    .btn-primary:hover { background: var(--brand-dark); }
+    .btn-secondary { background: var(--surface); color: var(--ink-soft); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all .15s; }
+    .btn-secondary:hover { border-color: var(--brand); color: var(--brand); }
+    .btn-green  { background: var(--green-light); color: var(--green); border: 1px solid rgba(5,150,105,.2); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all .15s; }
+    .btn-green:hover { background: var(--green); color: white; }
+    .btn-amber  { background: var(--amber-light); color: var(--amber); border: 1px solid rgba(217,119,6,.2); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all .15s; }
+    .btn-amber:hover { background: var(--amber); color: white; }
+    .btn-sm { padding: 5px 10px; border-radius: 6px; font-size: 11.5px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; transition: all .15s; }
+    .btn-sm-blue   { background: var(--brand-light); color: var(--brand); }
+    .btn-sm-blue:hover { background: var(--brand); color: white; }
+    .btn-sm-green  { background: var(--green-light); color: var(--green); }
+    .btn-sm-green:hover { background: var(--green); color: white; }
+    .btn-sm-amber  { background: var(--amber-light); color: var(--amber); }
+    .btn-sm-amber:hover { background: var(--amber); color: white; }
+    .btn-sm-red    { background: var(--red-light); color: var(--red); }
+    .btn-sm-red:hover { background: var(--red); color: white; }
+    .btn-sm-gray   { background: var(--surface); color: var(--ink-mute); border: 1px solid var(--border); }
+    .btn-sm-gray:hover { border-color: var(--brand); color: var(--brand); }
+
+    /* Upload button */
+    .upload-btn { border: 1.5px dashed var(--border); border-radius: var(--radius-sm); padding: 8px 12px; font-size: 12.5px; font-family: 'DM Sans', sans-serif; color: var(--ink-mute); cursor: pointer; text-align: center; width: 100%; background: var(--surface); transition: all .15s; display: flex; align-items: center; justify-content: center; gap: 5px; }
+    .upload-btn:hover { border-color: var(--brand); color: var(--brand); background: var(--brand-light); }
+    .logo-preview { height: 36px; max-width: 90px; object-fit: contain; border-radius: 4px; margin-top: 5px; display: none; }
+
+    /* ════ RIGHT PANEL ════ */
+    .right-panel { display: flex; flex-direction: column; gap: 18px; }
+
+    /* Single SKU result card */
+    .result-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .rc-header { background: linear-gradient(135deg,#0f2050,#1a56db); padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; }
+    .rc-title  { font-family: 'DM Serif Display', serif; font-size: 15px; color: white; }
+    .rc-body   { padding: 16px 18px; }
+
+    /* Risk badge */
+    .risk-badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 800; }
+    .risk-critical  { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+    .risk-high      { background: var(--red-light); color: var(--red); border: 1px solid #fca5a5; }
+    .risk-medium    { background: var(--amber-light); color: var(--amber); border: 1px solid #fde68a; }
+    .risk-healthy   { background: var(--green-light); color: var(--green); border: 1px solid #a7f3d0; }
+    .risk-overstock { background: var(--brand-light); color: var(--brand); border: 1px solid #bfdbfe; }
+
+    /* Metric rows */
+    .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+    .metric-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; }
+    .metric-label { font-size: 10.5px; font-weight: 700; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
+    .metric-value { font-size: 20px; font-weight: 800; color: var(--ink); line-height: 1.1; }
+    .metric-sub   { font-size: 11px; color: var(--ink-mute); margin-top: 2px; }
+    .metric-card.highlight { border-color: var(--brand); background: var(--brand-light); }
+    .metric-card.highlight .metric-value { color: var(--brand); }
+    .metric-card.danger    { border-color: var(--red); background: var(--red-light); }
+    .metric-card.danger .metric-value { color: var(--red); }
+    .metric-card.warning   { border-color: var(--amber); background: var(--amber-light); }
+    .metric-card.warning .metric-value { color: var(--amber); }
+    .metric-card.success   { border-color: var(--green); background: var(--green-light); }
+    .metric-card.success .metric-value { color: var(--green); }
+
+    /* Recommendation box */
+    .recommend-box { border-radius: var(--radius-sm); padding: 12px 14px; font-size: 13px; line-height: 1.7; margin-bottom: 12px; }
+    .recommend-critical  { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; }
+    .recommend-high      { background: var(--red-light); border: 1px solid #fca5a5; color: var(--red); }
+    .recommend-medium    { background: var(--amber-light); border: 1px solid #fde68a; color: #92400e; }
+    .recommend-healthy   { background: var(--green-light); border: 1px solid #a7f3d0; color: #065f46; }
+    .recommend-overstock { background: var(--brand-light); border: 1px solid #bfdbfe; color: var(--brand-dark); }
+
+    /* Formula box */
+    .formula-box { background: #f8f8ff; border: 1px solid #e0e0ff; border-radius: var(--radius-sm); padding: 10px 13px; font-size: 11.5px; color: var(--ink-soft); line-height: 1.85; }
+    .formula-box code { color: var(--brand); font-weight: 700; font-family: monospace; }
+
+    /* ════ DASHBOARD KPIs ════ */
+    .dashboard-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .dc-header { background: var(--surface); padding: 13px 18px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .dc-title  { font-size: 14px; font-weight: 700; color: var(--ink); }
+    .kpi-grid  { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .kpi-cell  { padding: 14px 16px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .kpi-cell:nth-child(4n) { border-right: none; }
+    .kpi-label { font-size: 10.5px; font-weight: 700; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 5px; }
+    .kpi-value { font-size: 22px; font-weight: 800; color: var(--ink); }
+    .kpi-value.red   { color: var(--red); }
+    .kpi-value.amber { color: var(--amber); }
+    .kpi-value.green { color: var(--green); }
+    .kpi-value.blue  { color: var(--brand); }
+
+    /* ════ FILTERS BAR ════ */
+    .filters-bar { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 14px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .filter-search { flex: 1; min-width: 160px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 7px 11px; font-size: 13px; font-family: 'DM Sans', sans-serif; color: var(--ink); outline: none; background: white; }
+    .filter-search:focus { border-color: var(--brand); }
+    .filter-select { border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 7px 26px 7px 10px; font-size: 12.5px; font-family: 'DM Sans', sans-serif; color: var(--ink); outline: none; background: white; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%237a8898' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 8px center; cursor: pointer; }
+    .filter-select:focus { border-color: var(--brand); }
+    .bulk-actions { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+
+    /* ════ SKU TABLE ════ */
+    .sku-table-wrap { overflow-x: auto; }
+    .sku-table { width: 100%; border-collapse: collapse; font-size: 12.5px; white-space: nowrap; }
+    .sku-table th { background: var(--ink); color: white; padding: 9px 11px; text-align: left; font-size: 10.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; cursor: pointer; user-select: none; white-space: nowrap; }
+    .sku-table th:hover { background: var(--ink-soft); }
+    .sku-table td { padding: 9px 11px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    .sku-table tr:hover td { background: var(--surface); }
+    .sku-table tr.selected td { background: var(--brand-light); }
+    .sku-name-cell { font-weight: 700; color: var(--ink); max-width: 140px; white-space: normal; }
+    .sku-code-cell { color: var(--ink-mute); font-size: 11px; }
+    .empty-table-msg { padding: 32px; text-align: center; color: var(--ink-mute); font-size: 13.5px; }
+
+    /* Handoff banner */
+    .handoff-banner { display: none; background: var(--green-light); border: 1px solid rgba(5,150,105,.2); border-radius: var(--radius-sm); padding: 12px 16px; font-size: 13px; color: var(--green); line-height: 1.6; }
+    .handoff-banner.show { display: block; }
+    .handoff-banner a { display: inline-block; margin-top: 5px; color: var(--brand); font-weight: 700; text-decoration: none; }
+    .handoff-banner a:hover { text-decoration: underline; }
+
+    /* ════ IMPORT CSV AREA ════ */
+    .csv-import-area { display: none; padding: 14px; border-top: 1px solid var(--border); }
+    .csv-import-area.open { display: block; }
+    .csv-textarea { width: 100%; height: 120px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 8px 11px; font-size: 12px; font-family: monospace; color: var(--ink); outline: none; resize: vertical; }
+    .csv-textarea:focus { border-color: var(--brand); }
+
+    /* ════ DISCLAIMER ════ */
+    .disclaimer-box { background: var(--amber-light); border: 1px solid rgba(217,119,6,.2); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 12px; color: var(--amber); line-height: 1.7; }
+
+    /* ════ SEO SECTIONS ════ */
+    .section-label { font-size: 11.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--brand); display: block; margin-bottom: 10px; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(22px,3vw,34px); color: var(--ink); line-height: 1.22; margin-bottom: 14px; }
+    .section-title em { font-style: italic; color: var(--brand); }
+    .section-sub { font-size: 15px; color: var(--ink-mute); line-height: 1.7; max-width: 600px; }
+    .check-dot { width: 18px; height: 18px; border-radius: 50%; background: var(--green-light); color: var(--green); font-size: 10px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 20px 0 24px; }
+    .feature-list li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink-soft); }
+    .btn-demo { display: inline-flex; align-items: center; gap: 8px; background: var(--brand); color: var(--white); padding: 13px 28px; border-radius: 10px; font-size: 15px; font-weight: 700; text-decoration: none; transition: background .18s, transform .1s; }
+    .btn-demo:hover { background: var(--brand-dark); transform: translateY(-1px); }
+    .btn-demo-sec { display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--brand); padding: 13px 28px; border-radius: 10px; font-size: 15px; font-weight: 700; text-decoration: none; border: 2px solid var(--brand); transition: all .1s; margin-left: 12px; }
+    .btn-demo-sec:hover { background: var(--brand-light); }
+    .seo-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(250px,1fr)); gap: 18px; margin-top: 36px; }
+    .seo-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 18px; border-top: 3px solid var(--brand); }
+    .seo-card h3 { font-size: 13.5px; font-weight: 700; color: var(--ink); margin-bottom: 7px; }
+    .seo-card p  { font-size: 12.5px; color: var(--ink-mute); line-height: 1.7; }
+    .faq-list { max-width: 720px; margin: 36px auto 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 9px; }
+    .faq-q { width: 100%; background: var(--white); border: none; padding: 16px 20px; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 14px; font-size: 14.5px; font-weight: 600; color: var(--ink); font-family: 'DM Sans', sans-serif; transition: background .15s; }
+    .faq-q:hover { background: var(--brand-light); }
+    .faq-q.open  { background: var(--brand-light); color: var(--brand); }
+    .faq-chevron { width: 18px; height: 18px; flex-shrink: 0; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: 11px; transition: transform .2s, background .15s; }
+    .faq-q.open .faq-chevron { transform: rotate(180deg); background: var(--brand); color: white; }
+    .faq-a { display: none; padding: 0 20px 18px; font-size: 13.5px; color: var(--ink-soft); line-height: 1.75; background: var(--brand-light); }
+    .faq-a.open { display: block; }
+    .tools-row { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 18px; }
+    .tool-chip { background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; padding: 6px 15px; font-size: 12.5px; font-weight: 600; color: var(--brand); text-decoration: none; transition: all .15s; }
+    .tool-chip:hover { background: var(--brand-light); border-color: var(--brand); }
+
+    /* ════ FOOTER ════ */
+    .site-footer { background: var(--ink); padding: 36px 24px; text-align: center; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 22px; color: white; margin-bottom: 7px; }
+    .footer-tagline { font-size: 13px; color: rgba(255,255,255,.45); margin-bottom: 18px; }
+    .footer-links { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { font-size: 12px; color: rgba(255,255,255,.55); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: white; }
+
+    /* ════ TOAST ════ */
+    .toast { position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%); background: var(--ink); color: white; padding: 10px 20px; border-radius: 100px; font-size: 13.5px; font-weight: 600; box-shadow: var(--shadow-lg); z-index: 600; opacity: 0; transition: opacity .3s; pointer-events: none; white-space: nowrap; }
+    .toast.show { opacity: 1; }
+
+    /* ════ MOBILE STICKY ════ */
+/* ════ PRINT STYLES ════ */
+    @media print {
+      body > *:not(#printArea) { display: none !important; }
+      #printArea { display: block !important; }
+      #printArea { position: static; width: auto; margin: 0; padding: 0; background: white; box-sizing: border-box; }
+      @page { margin: 10mm; size: A4; }
+      .no-print { display: none !important; }
+    }
+
+    /* ════ RESPONSIVE ════ */
+    @media (max-width: 1100px) {
+      .tool-wrap { grid-template-columns: 1fr; }
+
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+      .hero { padding: 40px 0 28px; }
+      .section { padding: 52px 0; }
+      .metric-grid { grid-template-columns: 1fr 1fr; }
+      .kpi-grid { grid-template-columns: 1fr 1fr; }
+      .btn-demo-sec { margin-left: 0; margin-top: 10px; }
+    }
+  
+
+/* SalesOn accessibility focus states */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #1a56db;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+
+.footer-social{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.footer-social a{font-size:12px;font-weight:700;color:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:5px 10px;transition:color .2s,border-color .2s}
+.footer-social a:hover{color:#fff;border-color:rgba(255,255,255,.35)}
+
+</style>
+<meta content="Free Stock Reorder Level Calculator | SalesOn" name="twitter:title"/>
+<meta content="Calculate reorder level, reorder quantity, safety stock, days of stock remaining and stock-out risk for SKUs. Free inventory tool by SalesOn." name="twitter:description"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Free Stock Reorder Level Calculator",
+  "url": "https://saleson.co.in/tools/stock-reorder-level-calculator",
+  "description": "Calculate reorder level, reorder quantity, safety stock, and days of stock remaining for SKUs. Free inventory tool by SalesOn.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "SalesOn",
+    "url": "https://saleson.co.in/"
+  },
+  "featureList": "No account required, PDF download, Works on mobile"
+}
+</script>
+
+  
+    <link rel="canonical" href="https://saleson.co.in/tools/stock-reorder-level-calculator">
+    <link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css">
+</head>
+<body>
+  <site-header source="tools"><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header>
+<aside class="tool-storage-note" role="note">Drafts and saved tool data are stored in this browser. Keep an exported copy before clearing browser data. <a href="/privacy-policy">Privacy policy</a> · <a href="mailto:support@saleson.co.in">Contact support</a></aside>
+<!-- ── HERO ── -->
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<div class="hero-eyebrow">
+<span class="badge badge-green">✓ Free · No Signup Required</span>
+<span class="badge badge-blue">📦 Inventory Planning</span>
+<span class="badge badge-amber">🚨 Stock-Out Risk</span>
+<span class="badge badge-white">📊 CSV + PDF Export</span>
+</div>
+<h1 class="hero-h1">Free <em>Stock Reorder Level</em><br/>Calculator</h1>
+<p class="hero-sub">Calculate when to reorder stock, how much to reorder, safety stock, days of stock remaining and stock-out risk for your products and SKUs. Built for Indian distributors, wholesalers and manufacturers.</p>
+</div>
+</div>
+</section>
+<!-- ── TOOL LAYOUT ── -->
+<div class="container">
+<div class="tool-wrap">
+<!-- ══════════ FORM PANEL ══════════ -->
+<div class="form-panel" id="formPanel">
+<div class="form-panel-header">
+<span class="fph-title">📦 SKU Reorder Calculator</span>
+<div class="fph-actions">
+<button class="fph-btn" onclick="savePlan()">💾 Save</button>
+<button class="fph-btn" onclick="loadPlan()">📂 Load</button>
+<button class="fph-btn" onclick="resetAll()" style="background:rgba(220,38,38,.3);border-color:rgba(220,38,38,.4);">↺ Reset</button>
+</div>
+</div>
+<!-- A. BUSINESS DETAILS -->
+<div class="form-section">
+<button class="form-section-head open" onclick="toggleSec(this)">
+<span class="sec-label"><span class="sec-icon">🏢</span> Business Details</span>
+<span class="chevron">▾</span>
+</button>
+<div class="form-section-body open">
+<div class="form-row">
+<div>
+<label>Business Name</label>
+<input class="fi" id="bizName" placeholder="Shree Balaji Distributors" type="text"/>
+</div>
+<div>
+<label>Business Type</label>
+<select class="fi" id="bizType">
+<option>Distributor</option><option>Wholesaler</option>
+<option>Manufacturer</option><option>FMCG</option>
+<option>Pharma</option><option>Retailer</option><option>Other</option>
+</select>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>City (Optional)</label>
+<input class="fi" id="bizCity" placeholder="Patna, Bihar" type="text"/>
+</div>
+<div>
+<label>Report Date</label>
+<input class="fi" id="reportDate" type="date"/>
+</div>
+</div>
+<div class="form-row full">
+<div>
+<label>Logo (Optional)</label>
+<div class="upload-btn" onclick="document.getElementById('logoUpload').click()">📷 Upload Logo</div>
+<input accept="image/*" id="logoUpload" onchange="handleLogoUpload(this)" style="display:none" type="file"/>
+<img alt="Logo" class="logo-preview" id="logoPreview"/>
+</div>
+</div>
+</div>
+</div>
+<!-- B. CALCULATION METHOD -->
+<div class="form-section">
+<button class="form-section-head open" onclick="toggleSec(this)">
+<span class="sec-label"><span class="sec-icon">⚙️</span> Calculation Method</span>
+<span class="chevron">▾</span>
+</button>
+<div class="form-section-body open">
+<div class="method-pills" id="methodPills">
+<button class="method-pill active" onclick="setMethod('simple',this)" title="Avg Sales × Lead Time + Safety Stock">Simple</button>
+<button class="method-pill" onclick="setMethod('safety',this)" title="Uses max sales and max lead time">Safety Stock</button>
+<button class="method-pill" onclick="setMethod('maxusage',this)" title="Max Daily Sales × Max Lead Time">Max Usage</button>
+<button class="method-pill" onclick="setMethod('target',this)" title="Based on target stock cover days">Target Cover</button>
+</div>
+<div class="formula-box" id="methodFormula" style="font-size:11px;"></div>
+</div>
+</div>
+<!-- C. PRODUCT / SKU INPUT -->
+<div class="form-section">
+<button class="form-section-head open" onclick="toggleSec(this)">
+<span class="sec-label"><span class="sec-icon">📋</span> Product / SKU Details</span>
+<span class="chevron">▾</span>
+</button>
+<div class="form-section-body open">
+<div class="form-row">
+<div>
+<label>Product / SKU Name *</label>
+<input class="fi" id="skuName" oninput="liveCalc()" placeholder="FMCG Product Box" type="text"/>
+</div>
+<div>
+<label>SKU Code (Optional)</label>
+<input class="fi" id="skuCode" oninput="liveCalc()" placeholder="FMCG-001" type="text"/>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>Category (Optional)</label>
+<input class="fi" id="skuCat" oninput="liveCalc()" placeholder="FMCG" type="text"/>
+</div>
+<div>
+<label>Supplier Name (Optional)</label>
+<input class="fi" id="skuSupplier" oninput="liveCalc()" placeholder="Mohan FMCG Suppliers" type="text"/>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>Current Stock (Units) *</label>
+<input class="fi" id="currentStock" min="0" oninput="liveCalc()" placeholder="120" type="number"/>
+</div>
+<div>
+<label>Avg Daily Sales (Units) *</label>
+<input class="fi" id="avgDailySales" min="0.1" oninput="liveCalc()" placeholder="25" step="any" type="number"/>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>Max Daily Sales (Optional)</label>
+<input class="fi" id="maxDailySales" min="0" oninput="liveCalc()" placeholder="40" step="any" type="number"/>
+</div>
+<div>
+<label>Lead Time (Days) *</label>
+<input class="fi" id="leadTime" min="1" oninput="liveCalc()" placeholder="5" step="any" type="number"/>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>Max Lead Time (Days)</label>
+<input class="fi" id="maxLeadTime" min="0" oninput="liveCalc()" placeholder="8" step="any" type="number"/>
+</div>
+<div>
+<label>Safety Stock (Override)</label>
+<input class="fi" id="safetyStockOverride" min="0" oninput="liveCalc()" placeholder="Auto-calculated" type="number"/>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>MOQ (Min Order Qty)</label><small class="input-assumption">The minimum order is applied first, then the quantity rounds up to a whole supplier pack.</small>
+<input class="fi" id="moq" min="0" oninput="liveCalc()" placeholder="50" type="number"/>
+</div>
+<div>
+<label>Supplier Pack Size</label>
+<input class="fi" id="packSize" min="0" oninput="liveCalc()" placeholder="12" type="number"/>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>Cost Per Unit (₹)</label>
+<input class="fi" id="costPerUnit" min="0" oninput="liveCalc()" placeholder="450" step="any" type="number"/>
+</div>
+<div>
+<label>Selling Price (₹)</label>
+<input class="fi" id="sellingPrice" min="0" oninput="liveCalc()" placeholder="500" step="any" type="number"/>
+</div>
+</div>
+<div class="form-row full">
+<div>
+<label>Target Stock Cover (Days)</label>
+<input class="fi" id="targetCoverDays" min="1" oninput="liveCalc()" placeholder="15" type="number"/>
+</div>
+</div>
+</div>
+</div>
+<!-- FORM ACTION BUTTONS -->
+<div class="form-actions">
+<button class="btn-primary" onclick="addSkuToPlan()" title="Add to stock plan table">➕ Add to Plan</button>
+<button class="btn-green" id="updateSkuBtn" onclick="updateSelectedSku()" style="display:none;">✏️ Update SKU</button>
+<button class="btn-secondary" onclick="clearSkuForm()">↺ Clear</button>
+<button class="btn-amber" onclick="triggerAction('po_single')" title="Create purchase order for this SKU">🛒 Create PO</button>
+</div>
+<!-- CSV IMPORT -->
+<div style="padding:10px 18px;border-top:1px solid var(--border);">
+<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+<button class="btn-sm btn-sm-blue" onclick="toggleCsvImport()">📥 Import CSV</button>
+<button class="btn-sm btn-sm-gray" onclick="downloadSampleCSV()">📄 Sample CSV</button>
+</div>
+<div class="csv-import-area" id="csvImportArea">
+<div style="font-size:11.5px;color:var(--ink-mute);margin-bottom:7px;">Paste CSV rows below (SKU Name, SKU Code, Category, Supplier, Current Stock, Avg Daily Sales, Max Daily Sales, Lead Time, Max Lead Time, Safety Stock Override, MOQ, Pack Size, Cost, Selling Price, Target Cover Days):</div>
+<textarea class="csv-textarea" id="csvPasteArea" placeholder="FMCG Product Box,FMCG-001,FMCG,Supplier A,120,25,40,5,8,50,50,12,450,500,15
+Detergent Pack,FMCG-002,Household,Supplier B,35,12,20,7,10,30,,,80,100,20"></textarea>
+<div style="display:flex;gap:7px;margin-top:7px;">
+<button class="btn-sm btn-sm-green" onclick="importCSV()">✓ Import</button>
+<button class="btn-sm btn-sm-gray" onclick="toggleCsvImport()">Cancel</button>
+</div>
+</div>
+</div>
+</div><!-- /form-panel -->
+<!-- ══════════ RIGHT PANEL ══════════ -->
+<div class="right-panel">
+<!-- SINGLE SKU RESULT CARD -->
+<div class="result-card" id="skuResultCard">
+<div class="rc-header">
+<span class="rc-title" id="rcSkuName">SKU: FMCG Product Box</span>
+<span class="risk-badge risk-healthy" id="rcRiskBadge">Healthy</span>
+</div>
+<div class="rc-body">
+<div class="metric-grid" id="metricGrid">
+<!-- Rendered by JS -->
+</div>
+<div class="recommend-box recommend-healthy" id="recommendBox"></div>
+<div class="formula-box" id="resultFormulaBox"></div>
+<div id="skuTimestamp" style="font-size:12px;color:var(--ink-mute);margin-top:10px;"></div>
+</div>
+</div>
+<!-- DASHBOARD KPIs -->
+<div class="dashboard-card" id="dashboardCard">
+<div class="dc-header">
+<span class="dc-title">📊 Stock Plan Dashboard</span>
+<div style="display:flex;gap:8px;">
+<button class="btn-sm btn-sm-blue" onclick="triggerAction('csv')">📊 Export CSV</button>
+<button class="btn-sm btn-sm-blue" onclick="triggerAction('print')">🖨 Print Report</button>
+</div>
+</div>
+<div class="kpi-grid" id="kpiGrid">
+<div class="kpi-cell"><div class="kpi-label">Total SKUs</div><div class="kpi-value blue" id="kpiTotal">0</div></div>
+<div class="kpi-cell"><div class="kpi-label">Need Reorder</div><div class="kpi-value amber" id="kpiNeedReorder">0</div></div>
+<div class="kpi-cell"><div class="kpi-label">Critical SKUs</div><div class="kpi-value red" id="kpiCritical">0</div></div>
+<div class="kpi-cell"><div class="kpi-label">Overstock SKUs</div><div class="kpi-value blue" id="kpiOverstock">0</div></div>
+<div class="kpi-cell"><div class="kpi-label">High Risk</div><div class="kpi-value red" id="kpiHighRisk">0</div></div>
+<div class="kpi-cell"><div class="kpi-label">Healthy SKUs</div><div class="kpi-value green" id="kpiHealthy">0</div></div>
+<div class="kpi-cell"><div class="kpi-label">Est. Reorder Value</div><div class="kpi-value blue" id="kpiReorderValue">₹0</div></div>
+<div class="kpi-cell"><div class="kpi-label">Top Supplier</div><div class="kpi-value" id="kpiTopSupplier" style="font-size:13px;">—</div></div>
+</div>
+</div>
+<!-- FILTERS + SORTING -->
+<div class="filters-bar">
+<input class="filter-search" id="filterSearch" oninput="renderTable()" placeholder="🔍 Search SKU / supplier…" type="text"/>
+<select class="filter-select" id="filterRisk" onchange="renderTable()">
+<option value="">All Risk</option>
+<option value="Critical">🔴 Critical</option>
+<option value="High Risk">🟠 High Risk</option>
+<option value="Medium Risk">🟡 Medium Risk</option>
+<option value="Healthy">🟢 Healthy</option>
+<option value="Overstock">🔵 Overstock</option>
+</select>
+<select class="filter-select" id="filterCategory" onchange="renderTable()">
+<option value="">All Categories</option>
+</select>
+<select class="filter-select" id="filterSupplier" onchange="renderTable()">
+<option value="">All Suppliers</option>
+</select>
+<select class="filter-select" id="sortBy" onchange="renderTable()">
+<option value="risk">Critical First</option>
+<option value="days">Lowest Days First</option>
+<option value="value">Highest Value First</option>
+<option value="name">Name A–Z</option>
+<option value="supplier">Supplier Wise</option>
+</select>
+</div>
+<!-- BULK ACTIONS -->
+<div class="bulk-actions" id="bulkActionsBar" style="display:none;background:var(--brand-light);border:1px solid rgba(26,86,219,.2);border-radius:var(--radius-sm);padding:9px 14px;flex-wrap:wrap;gap:8px;align-items:center;">
+<span id="selectedCountLabel" style="font-size:13px;font-weight:700;color:var(--brand);">0 SKUs selected</span>
+<button class="btn-sm btn-sm-green" onclick="bulkCreatePO()">🛒 Create PO for Selected</button>
+<button class="btn-sm btn-sm-gray" onclick="clearSelection()">✕ Clear Selection</button>
+</div>
+<!-- SKU TABLE -->
+<div class="dashboard-card">
+<div class="dc-header">
+<span class="dc-title">📋 Stock Reorder Plan</span>
+<span id="tableCount" style="font-size:12px;color:var(--ink-mute);">0 SKUs</span>
+</div>
+<div class="sku-table-wrap">
+<table class="sku-table" id="skuTable">
+<thead>
+<tr>
+<th style="width:30px;"><input id="selectAll" onchange="toggleSelectAll(this)" title="Select all" type="checkbox"/></th>
+<th onclick="setSortBy('name')">SKU ↕</th>
+<th onclick="setSortBy('supplier')">Supplier ↕</th>
+<th>Stock</th>
+<th>Avg/Day</th>
+<th>Lead</th>
+<th>Safety</th>
+<th>Reorder Lvl</th>
+<th>Order Qty</th>
+<th onclick="setSortBy('days')">Days Left ↕</th>
+<th>Risk</th>
+<th onclick="setSortBy('value')">PO Value ↕</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody id="skuTableBody">
+<tr><td class="empty-table-msg" colspan="13">Add SKUs using the form to see reorder recommendations here.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- PURCHASE ORDER HANDOFF BANNER -->
+<div class="handoff-banner" id="poBanner">
+        ✅ Stock reorder data saved! Open the Purchase Order Generator to create a PO.
+        <br/><a href="/tools/purchase-order-generator">→ Open Purchase Order Generator</a>
+</div>
+<!-- DISCLAIMER -->
+<div class="disclaimer-box">
+        ⚠️ <strong>Disclaimer:</strong> SalesOn Free Tools provide planning estimates based on the numbers you enter. Actual reorder decisions should also consider seasonality, schemes, supplier availability, credit terms, expiry, damaged stock and business judgment.
+      </div>
+</div><!-- /right-panel -->
+</div><!-- /tool-wrap -->
+</div><!-- /container -->
+<!-- ════ PRINTABLE AREA (hidden on screen) ════ -->
+<div id="printArea" style="display:none;">
+<div style="border-bottom:2px solid #1a56db;padding-bottom:12px;margin-bottom:16px;display:flex;align-items:center;gap:16px;">
+<img alt="Logo" id="printLogo" style="height:48px;object-fit:contain;display:none;"/>
+<div>
+<div id="printBizName" style="font-family:'DM Serif Display',serif;font-size:20px;color:#0f1623;"></div>
+<div id="printBizMeta" style="font-size:12px;color:#7a8898;"></div>
+</div>
+<div style="margin-left:auto;text-align:right;">
+<div style="font-size:18px;font-weight:800;color:#1a56db;">Stock Reorder Level Report</div>
+<div id="printDate" style="font-size:12px;color:#7a8898;"></div>
+</div>
+</div>
+<div id="printKpis" style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px;"></div>
+<table id="printTable" style="width:100%;border-collapse:collapse;font-size:11px;margin-bottom:16px;">
+<thead><tr id="printTableHead" style="background:#0f1623;color:white;"></tr></thead>
+<tbody id="printTableBody"></tbody>
+</table>
+<div style="text-align:center;font-size:10px;color:#7a8898;padding-top:12px;border-top:1px solid #e2e8f0;">Created using SalesOn Free Business Tools · saleson.co.in/tools · saleson.co.in</div>
+</div>
+<!-- ══════════════════════
+     UPSELL SECTION
+     ══════════════════════ -->
+<section class="section section-alt">
+<div class="container">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+<div>
+<span class="section-label">SalesOn Platform</span>
+<h2 class="section-title">Stock reorder planning should not depend only on <em>guesswork.</em></h2>
+<p class="section-sub">A reorder calculator helps you estimate when and how much to purchase. But growing businesses need real-time stock, sales orders, van stock, purchase planning, GST billing, payment collection and field sales visibility. SalesOn connects everything.</p>
+<ul class="feature-list">
+<li><span class="check-dot">✓</span> Real-time stock tracking</li>
+<li><span class="check-dot">✓</span> Reorder planning alerts</li>
+<li><span class="check-dot">✓</span> Purchase order workflow</li>
+<li><span class="check-dot">✓</span> GST billing &amp; invoicing</li>
+<li><span class="check-dot">✓</span> Order taking from field</li>
+<li><span class="check-dot">✓</span> Van stock management</li>
+<li><span class="check-dot">✓</span> Field sales app</li>
+<li><span class="check-dot">✓</span> Sales &amp; inventory reports</li>
+</ul>
+<a class="btn-demo" href="/inventory-management">Manage Inventory with SalesOn →</a>
+<a class="btn-demo-sec" href="/request-demo">Book a Free Demo</a>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+<div class="seo-card" style="margin:0;border-top-color:var(--brand);"><h3>📦 Live Stock Tracking</h3><p>Real-time stock levels across godowns and van. Reduces automatically on every sale.</p></div>
+<div class="seo-card" style="margin:0;border-top-color:var(--green);"><h3>🔔 Reorder Alerts</h3><p>Auto alerts when any SKU crosses reorder level. Never miss a stock-out again.</p></div>
+<div class="seo-card" style="margin:0;border-top-color:var(--amber);"><h3>📋 Purchase Orders</h3><p>Generate POs from low-stock reports. Supplier-wise PO tracking built in.</p></div>
+<div class="seo-card" style="margin:0;border-top-color:var(--brand-dark);"><h3>📊 Sales + Stock Reports</h3><p>See fast-moving, slow-moving and dead stock reports every day.</p></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ── SEO CONTENT ── -->
+<section class="section">
+<div class="container">
+<h2 class="section-title">How to use this <em>Stock Reorder Level Calculator</em></h2>
+<div class="seo-grid">
+<div class="seo-card"><h3>Step 1 — Enter Business Details</h3><p>Fill your business name, type and city. Upload logo for the printed report.</p></div>
+<div class="seo-card"><h3>Step 2 — Choose Calculation Method</h3><p>Select Simple (basic), Safety Stock (max scenario), Max Usage, or Target Cover method.</p></div>
+<div class="seo-card"><h3>Step 3 — Enter SKU Details</h3><p>Enter current stock, average daily sales, lead time and optional fields. The calculator updates live.</p></div>
+<div class="seo-card"><h3>Step 4 — See Reorder Recommendation</h3><p>View reorder level, suggested order quantity, days remaining, stock-out date and risk badge.</p></div>
+<div class="seo-card"><h3>Step 5 — Add SKUs to Stock Plan</h3><p>Click Add to Plan to build a multi-SKU stock reorder table. Filter and sort by risk level.</p></div>
+<div class="seo-card"><h3>Step 6 — Export or Create PO</h3><p>Export CSV, print the report or click Create PO to carry data into the Purchase Order Generator.</p></div>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container" style="max-width:800px;">
+<h2 class="section-title">What is <em>reorder level?</em></h2>
+<p class="section-sub" style="margin-bottom:20px;">Reorder level is the stock quantity at which you must place a new purchase order to avoid a stock-out before new stock arrives from the supplier.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+<div class="seo-card" style="margin:0;border-top-color:var(--green);"><h3>Simple Reorder Level</h3><p>Reorder Level = Average Daily Sales × Lead Time + Safety Stock</p></div>
+<div class="seo-card" style="margin:0;border-top-color:var(--amber);"><h3>Safety Stock Formula</h3><p>Safety Stock = (Max Daily Sales × Max Lead Time) − (Avg Daily Sales × Lead Time)</p></div>
+<div class="seo-card" style="margin:0;border-top-color:var(--red);"><h3>Max Usage Method</h3><p>Reorder Level = Maximum Daily Sales × Maximum Lead Time</p></div>
+<div class="seo-card" style="margin:0;border-top-color:var(--brand);"><h3>Days of Stock Remaining</h3><p>Days Remaining = Current Stock ÷ Average Daily Sales</p></div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container" style="max-width:720px;">
+<h2 class="section-title">When should you move from Excel stock tracking to <em>SalesOn?</em></h2>
+<ul class="feature-list" style="margin-bottom:28px;">
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> You have 50+ SKUs across multiple categories</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> Stock-outs are happening despite manual tracking</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> Multiple godowns or van stock that cannot be tracked on spreadsheet</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> Purchase orders, sales orders, billing and stock are disconnected</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> Daily inward and outward entries take hours in Excel</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> No way to see which SKUs are fast-moving vs dead stock</li>
+</ul>
+<a class="btn-demo" href="/request-demo">Book a Free SalesOn Demo →</a>
+</div>
+</section>
+<!-- ── RELATED TOOLS ── -->
+<section class="section section-alt">
+<div class="container">
+<span class="section-label">Free Business Tools</span>
+<h2 class="section-title">Related <em>SalesOn</em> Free Tools</h2>
+<div class="tools-row">
+<a class="tool-chip" href="/tools">🛠️ All Free Tools</a>
+<a class="tool-chip" href="/tools/gst-invoice-generator">🧾 GST Invoice</a>
+<a class="tool-chip" href="/tools/quotation-generator">📋 Quotation Generator</a>
+<a class="tool-chip" href="/tools/purchase-order-generator">📦 Purchase Order</a>
+<a class="tool-chip" href="/tools/delivery-challan-generator">🚚 Delivery Challan</a>
+<a class="tool-chip" href="/tools/payment-receipt-generator">💰 Payment Receipt</a>
+<a class="tool-chip" href="/tools/whatsapp-payment-reminder-generator">💬 WhatsApp Reminder</a>
+<a class="tool-chip" href="/tools/gst-calculator">🧮 GST Calculator</a>
+<a class="tool-chip" href="/tools/outstanding-payment-tracker">💳 Payment Tracker</a>
+<a class="tool-chip" href="/tools/van-loading-sheet-generator">🚛 Van Loading Sheet</a>
+</div>
+<div style="margin-top:20px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+<a href="https://saleson.co.in" style="font-size:13px;color:var(--brand);">Inventory Management →</a>
+<a href="/distribution-management-system" style="font-size:13px;color:var(--brand);">Distribution Management →</a>
+<a href="/van-sales" style="font-size:13px;color:var(--brand);">Van Sales →</a>
+<a href="/request-demo" style="font-size:13px;color:var(--brand);">Book Demo →</a>
+</div>
+</div>
+</section>
+<!-- ── FAQ ── -->
+<section class="section">
+<div class="container">
+<span class="section-label">FAQs</span>
+<h2 class="section-title" style="text-align:center;">Frequently Asked <em>Questions</em></h2>
+<div class="faq-list">
+<div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is this stock reorder calculator free? <span class="faq-chevron">▾</span></button><div class="faq-a">Yes. This stock reorder level calculator is completely free. No account or subscription required. You can calculate reorder levels for unlimited SKUs and export to CSV at no cost.</div></div>
+<div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is reorder level? <span class="faq-chevron">▾</span></button><div class="faq-a">Reorder level is the stock quantity at which you should place a new purchase order so that new stock arrives before you run out. Formula: Reorder Level = Average Daily Sales × Lead Time + Safety Stock.</div></div>
+<div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How is safety stock calculated? <span class="faq-chevron">▾</span></button><div class="faq-a">Safety Stock = (Maximum Daily Sales × Maximum Lead Time) − (Average Daily Sales × Average Lead Time). Safety stock protects against unexpected demand spikes or supplier delays.</div></div>
+<div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do I know when to reorder stock? <span class="faq-chevron">▾</span></button><div class="faq-a">When your current stock falls to or below the reorder level, it's time to order. This calculator shows days remaining, stock-out date and risk level so you know exactly when to act.</div></div>
+<div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can distributors and wholesalers use this tool? <span class="faq-chevron">▾</span></button><div class="faq-a">Yes. This tool is built for Indian distributors, wholesalers, manufacturers, FMCG companies and pharma distributors managing multiple SKUs. Add up to unlimited SKUs and export a complete CSV reorder report.</div></div>
+<div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">When should I use SalesOn instead of this free calculator? <span class="faq-chevron">▾</span></button><div class="faq-a">When you have 20+ SKUs, multiple godowns, daily stock movement, van sales, purchase order workflows and need real-time inventory visibility — you need SalesOn. A spreadsheet or free calculator cannot replace a connected inventory management system.</div></div>
+</div>
+</div>
+</section>
+
+<site-footer source="tools"><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
+<whatsapp-float msg="Hi%20SalesOn%2C%20I%27d%20like%20to%20know%20more%20about%20SalesOn"></whatsapp-float>
+<script src="/components/site-header.cd8aaee89ecb.js" defer></script>
+<script src="/components/site-footer.0ffd3829fc3f.js" defer></script>
+<script src="/components/whatsapp-float.0e773436a8ab.js" defer></script>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+<!-- LEAD MODAL -->
+<div id="leadModal" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(15,22,35,.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px;">
+<div style="background:var(--white);border-radius:20px;max-width:520px;width:100%;box-shadow:var(--shadow-lg);overflow:hidden;max-height:90vh;overflow-y:auto;">
+<div style="background:var(--brand);padding:20px 22px;">
+<div style="font-family:'DM Serif Display',serif;font-size:19px;color:white;margin-bottom:4px;">Still calculating stock reorder manually?</div>
+<div style="font-size:13px;color:rgba(255,255,255,.72);line-height:1.6;">SalesOn helps businesses manage inventory, stock reorder, purchase planning, sales orders, GST billing, van stock, field sales and reports in one connected platform.</div>
+</div>
+<div style="padding:20px 22px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+<div><label>Your Name *</label><input id="leadName" placeholder="Ramesh Gupta" style="border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:9px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;width:100%;" type="text"/></div>
+<div><label>Mobile / WhatsApp *</label><input id="leadPhone" placeholder="+91 80928 56577" style="border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:9px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;width:100%;" type="tel"/></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+<div><label>Business Name *</label><input id="leadBiz" placeholder="Shree Balaji Distributors" style="border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:9px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;width:100%;" type="text"/></div>
+<div><label>City</label><input id="leadCity" placeholder="Patna" style="border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:9px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;width:100%;" type="text"/></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+<div><label>Business Type</label><select id="leadBizType" style="border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:9px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;width:100%;appearance:none;"><option value="">Select</option><option>Distributor</option><option>Wholesaler</option><option>Manufacturer</option><option>FMCG</option><option>Pharma</option><option>Retailer</option><option>Service Business</option><option>Other</option></select></div>
+<div><label>Number of SKUs</label><select id="leadSkuCount" style="border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:9px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;width:100%;appearance:none;"><option value="">Select</option><option>1–50</option><option>51–200</option><option>201–1000</option><option>1000+</option></select></div>
+</div>
+<div style="margin-bottom:10px;"><label>Current Stock Tracking Method</label><select id="leadMethod" style="border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:9px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;width:100%;appearance:none;"><option value="">Select</option><option>Excel</option><option>Tally</option><option>Busy</option><option>Manual register</option><option>WhatsApp</option><option>Other software</option></select></div>
+<div style="display:flex;gap:9px;margin-top:14px;">
+<button onclick="submitLead('continue')" style="flex:1;background:var(--brand);color:white;border:none;border-radius:10px;padding:12px;font-size:14px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;">✓ Continue Free</button>
+<button onclick="submitLead('demo')" style="flex:1;background:var(--green);color:white;border:none;border-radius:10px;padding:12px;font-size:14px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;">📅 Book SalesOn Demo</button>
+</div>
+<div style="text-align:center;margin-top:9px;"><a onclick="skipLead()" style="font-size:12px;color:var(--ink-mute);cursor:pointer;text-decoration:underline;">Skip — continue without sharing details</a></div>
+</div>
+</div>
+</div>
+<!-- ══════════════════════════════════════════
+     JAVASCRIPT
+     ══════════════════════════════════════════ -->
+<script>
+/* ─────────────────────────
+   STATE
+───────────────────────── */
+let skuPlan       = [];          // array of all added SKUs with computed values
+let currentMethod = 'simple';   // calculation method
+let editingId     = null;        // id of SKU being edited
+let selectedIds   = new Set();  // selected row ids for bulk actions
+let logoDataURL   = null;        // uploaded logo
+let calcCount     = 0;           // track calculation count
+let skuCount      = 0;           // track added SKU count
+let pendingAction = null;        // pending action after lead
+let usedPO        = false;
+let usedCSV       = false;
+let criticalCount = 0;
+
+/* ─────────────────────────
+   DATE HELPERS
+───────────────────────── */
+function todayStr() {
+  const d = new Date();
+  return d.toISOString().split('T')[0];
+}
+function addDays(n) {
+  const d = new Date();
+  d.setDate(d.getDate() + Math.round(n));
+  return d.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
+}
+function fmtDate(str) {
+  if (!str) return '—';
+  const [y, m, d] = str.split('-');
+  return `${d}/${m}/${y}`;
+}
+function fmtINR(n) {
+  if (!n && n !== 0) return '—';
+  return '₹' + Number(n.toFixed(0)).toLocaleString('en-IN');
+}
+
+/* ─────────────────────────
+   METHOD DISPLAY
+───────────────────────── */
+const methodFormulas = {
+  simple:   `<strong>Simple:</strong> Reorder Level = Avg Daily Sales × Lead Time + Safety Stock`,
+  safety:   `<strong>Safety Stock:</strong> Safety Stock = (Max Daily Sales × Max Lead Time) − (Avg Daily Sales × Lead Time)<br>Reorder Level = Avg Daily Sales × Lead Time + Safety Stock`,
+  maxusage: `<strong>Max Usage:</strong> Reorder Level = Max Daily Sales × Max Lead Time`,
+  target:   `<strong>Target Cover:</strong> Target Stock = Avg Daily Sales × Target Cover Days<br>Reorder Qty = Target Stock − Current Stock`,
+};
+
+function setMethod(m, el) {
+  currentMethod = m;
+  document.querySelectorAll('.method-pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('methodFormula').innerHTML = methodFormulas[m] || '';
+  liveCalc();
+}
+
+/* ─────────────────────────
+   CORE CALCULATION ENGINE
+───────────────────────── */
+function calcSku(data) {
+  const avg     = parseFloat(data.avgDailySales)  || 0;
+  const maxD    = parseFloat(data.maxDailySales)   || avg * 1.3;
+  const lead    = parseFloat(data.leadTime)        || 0;
+  const maxLead = parseFloat(data.maxLeadTime)     || lead * 1.5;
+  const cur     = parseFloat(data.currentStock)    || 0;
+  const moq     = parseFloat(data.moq)             || 0;
+  const pack    = parseFloat(data.packSize)        || 0;
+  const cost    = parseFloat(data.costPerUnit)     || 0;
+  const sell    = parseFloat(data.sellingPrice)    || 0;
+  const target  = parseFloat(data.targetCoverDays) || 30;
+  const ssOverride = parseFloat(data.safetyStockOverride);
+
+  const method = data.method || currentMethod;
+
+  // Safety stock
+  let safetyStock;
+  if (!isNaN(ssOverride) && ssOverride >= 0) {
+    safetyStock = ssOverride;
+  } else {
+    safetyStock = Math.max(0, (maxD * maxLead) - (avg * lead));
+  }
+
+  // Reorder level
+  let reorderLevel;
+  switch (method) {
+    case 'maxusage':
+      reorderLevel = maxD * maxLead;
+      break;
+    case 'target':
+      reorderLevel = avg * target;
+      break;
+    case 'safety':
+    case 'simple':
+    default:
+      reorderLevel = (avg * lead) + safetyStock;
+  }
+
+  // Days remaining
+  const daysRemaining = cur < 0 ? 0 : (avg > 0 ? cur / avg : 9999);
+  const stockoutDate  = avg > 0 ? addDays(daysRemaining) : '—';
+
+  // Suggested reorder quantity
+  // For 'safety'/'simple'/default: reorderLevel already includes safetyStock (avg*lead + safetyStock),
+  // so qty = reorderLevel - cur. For 'maxusage': reorderLevel = maxD*maxLead (no safetyStock inside),
+  // so add it once. 'target' is overridden below.
+  let suggestedQty = (method === 'maxusage')
+    ? Math.max(0, reorderLevel + safetyStock - cur)
+    : Math.max(0, reorderLevel - cur);
+  // Target cover override
+  if (method === 'target') {
+    suggestedQty = Math.max(0, (avg * target) - cur);
+  }
+  // MOQ is a minimum order, while pack size is the ordering increment.
+  if (moq > 0 && suggestedQty > 0) suggestedQty = Math.max(suggestedQty, moq);
+  // Round to pack size
+  if (pack > 0 && suggestedQty > 0) suggestedQty = Math.ceil(suggestedQty / pack) * pack;
+
+  // Risk assessment
+  let risk;
+  const targetStock = avg * target;
+  if (cur < 0) {
+    risk = 'Critical';
+  } else if (avg === 0) {
+    risk = 'Healthy';
+  } else if (daysRemaining <= lead) {
+    risk = 'Critical';
+  } else if (daysRemaining <= lead + 3) {
+    risk = 'High Risk';
+  } else if (daysRemaining <= lead + 7) {
+    risk = 'Medium Risk';
+  } else if (target > 0 && cur > targetStock * 1.5) {
+    risk = 'Overstock';
+  } else {
+    risk = 'Healthy';
+  }
+
+  const reorderValue = suggestedQty * cost;
+  const salesValue   = suggestedQty * sell;
+
+  return { safetyStock, reorderLevel, daysRemaining, stockoutDate, suggestedQty, risk, reorderValue, salesValue, avg, lead, method };
+}
+
+/* ─────────────────────────
+   LIVE CALCULATION (form changes)
+───────────────────────── */
+function liveCalc() {
+  calcCount++;
+  const data = getFormData();
+  if (!data.avgDailySales || !data.leadTime) {
+    // Show placeholder
+    document.getElementById('metricGrid').innerHTML = `<div class="metric-card" style="grid-column:1/-1;text-align:center;color:var(--ink-mute);font-size:13px;padding:24px;">Enter Average Daily Sales and Lead Time to see reorder calculation.</div>`;
+    return;
+  }
+  const r = calcSku(data);
+  renderSkuResult(data, r);
+
+  // Lead trigger after 5 calcs
+  if (calcCount > 5 && !localStorage.getItem('saleson_lead_captured')) {
+    showLeadModal();
+  }
+}
+
+function getFormData() {
+  return {
+    name:             v('skuName'),
+    code:             v('skuCode'),
+    category:         v('skuCat'),
+    supplier:         v('skuSupplier'),
+    currentStock:     v('currentStock'),
+    avgDailySales:    v('avgDailySales'),
+    maxDailySales:    v('maxDailySales'),
+    leadTime:         v('leadTime'),
+    maxLeadTime:      v('maxLeadTime'),
+    safetyStockOverride: v('safetyStockOverride'),
+    moq:              v('moq'),
+    packSize:         v('packSize'),
+    costPerUnit:      v('costPerUnit'),
+    sellingPrice:     v('sellingPrice'),
+    targetCoverDays:  v('targetCoverDays'),
+    method:           currentMethod,
+  };
+}
+
+/* ─────────────────────────
+   RENDER SINGLE SKU RESULT
+───────────────────────── */
+const riskClasses = { 'Critical':'risk-critical','High Risk':'risk-high','Medium Risk':'risk-medium','Healthy':'risk-healthy','Overstock':'risk-overstock' };
+const recClasses  = { 'Critical':'recommend-critical','High Risk':'recommend-high','Medium Risk':'recommend-medium','Healthy':'recommend-healthy','Overstock':'recommend-overstock' };
+const recMsgs = {
+  'Critical': '🚨 <strong>Reorder immediately.</strong> Your current stock may finish before new stock arrives from the supplier.',
+  'High Risk':'⚠️ <strong>Place order soon.</strong> Your stock cover is close to your supplier lead time. Risk of stock-out is high.',
+  'Medium Risk':'📊 <strong>Monitor closely.</strong> Plan your purchase this week to avoid running out of stock.',
+  'Healthy':  '✅ <strong>Stock level looks healthy.</strong> Monitor and reorder before stock reaches reorder level.',
+  'Overstock':'📦 <strong>Possible excess stock.</strong> You may be carrying more stock than needed. Avoid fresh purchase unless demand increases.',
+};
+
+function renderSkuResult(data, r) {
+  const name = data.name || 'SKU';
+  document.getElementById('rcSkuName').textContent = `SKU: ${name}`;
+
+  // Risk badge
+  const badge = document.getElementById('rcRiskBadge');
+  badge.className = 'risk-badge ' + (riskClasses[r.risk] || 'risk-healthy');
+  badge.textContent = r.risk;
+
+  // Metric cards
+  const dayClass = r.risk === 'Critical' ? 'danger' : r.risk === 'High Risk' ? 'danger' : r.risk === 'Medium Risk' ? 'warning' : r.risk === 'Overstock' ? '' : 'success';
+  const reorderClass = r.suggestedQty > 0 ? 'highlight' : 'success';
+
+  document.getElementById('metricGrid').innerHTML = `
+    <div class="metric-card ${dayClass}">
+      <div class="metric-label">Days of Stock Left</div>
+      <div class="metric-value">${r.daysRemaining >= 9999 ? '∞' : Math.floor(r.daysRemaining)}</div>
+      <div class="metric-sub">Stock-out: ${r.stockoutDate}</div>
+    </div>
+    <div class="metric-card highlight">
+      <div class="metric-label">Reorder Level</div>
+      <div class="metric-value">${Math.ceil(r.reorderLevel)}</div>
+      <div class="metric-sub">units</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Safety Stock</div>
+      <div class="metric-value">${Math.ceil(r.safetyStock)}</div>
+      <div class="metric-sub">buffer units</div>
+    </div>
+    <div class="metric-card ${reorderClass}">
+      <div class="metric-label">Suggested Order Qty</div>
+      <div class="metric-value">${r.suggestedQty}</div>
+      <div class="metric-sub">units to order now</div>
+    </div>
+    ${r.reorderValue > 0 ? `<div class="metric-card"><div class="metric-label">Est. PO Value</div><div class="metric-value" style="font-size:16px;">${fmtINR(r.reorderValue)}</div><div class="metric-sub">@ cost price</div></div>` : ''}
+    ${r.salesValue > 0 ? `<div class="metric-card success"><div class="metric-label">Est. Sales Value</div><div class="metric-value" style="font-size:16px;">${fmtINR(r.salesValue)}</div><div class="metric-sub">@ selling price</div></div>` : ''}
+  `;
+
+  // Recommendation
+  const recBox = document.getElementById('recommendBox');
+  recBox.className = 'recommend-box ' + (recClasses[r.risk] || 'recommend-healthy');
+  recBox.innerHTML = recMsgs[r.risk] || '';
+  if (r.avg > 0) {
+    recBox.innerHTML += `<br><small>At ${r.avg} units/day, stock may last ~${Math.floor(r.daysRemaining)} days. Supplier lead time is ${r.lead} days. Reorder at ${Math.ceil(r.reorderLevel)} units.</small>`;
+  }
+
+  // Formula
+  const methodLabel = { simple:'Simple', safety:'Safety Stock', maxusage:'Max Usage', target:'Target Cover' };
+  document.getElementById('resultFormulaBox').innerHTML = `
+    <strong>Method: ${methodLabel[r.method] || r.method}</strong><br>
+    ${r.method === 'maxusage'
+      ? `Reorder Level = Max Daily Sales × Max Lead Time = <code>${Math.ceil(r.reorderLevel)}</code>`
+      : r.method === 'target'
+      ? `Target Stock = Avg Daily Sales × ${data.targetCoverDays || 30} days = <code>${Math.ceil(r.reorderLevel)}</code>`
+      : `Safety Stock = (Max Daily Sales × Max Lead Time) − (Avg Daily Sales × Lead Time) = <code>${Math.ceil(r.safetyStock)}</code><br>
+         Reorder Level = Avg Daily Sales × Lead Time + Safety Stock = <code>${Math.ceil(r.reorderLevel)}</code>`
+    }<br>
+    Days Remaining = Current Stock ÷ Avg Daily Sales = <code>${r.daysRemaining >= 9999 ? '∞' : Math.floor(r.daysRemaining)} days</code>
+  `;
+
+  document.getElementById('skuTimestamp').textContent = 'Calculated: ' + new Date().toLocaleTimeString('en-IN');
+}
+
+/* ─────────────────────────
+   ADD / EDIT / DELETE SKU
+───────────────────────── */
+function addSkuToPlan() {
+  const data = getFormData();
+  if (!data.name) { showToast('Please enter a Product / SKU Name'); return; }
+  if (!data.avgDailySales || parseFloat(data.avgDailySales) <= 0) { showToast('Please enter Average Daily Sales'); return; }
+  if (!data.leadTime || parseFloat(data.leadTime) <= 0) { showToast('Please enter Lead Time in Days'); return; }
+
+  const r = calcSku(data);
+  const sku = { id: Date.now(), ...data, ...r, addedAt: new Date().toLocaleString('en-IN') };
+  skuPlan.push(sku);
+  skuCount++;
+
+  updateFilterOptions();
+  renderTable();
+  updateDashboard();
+  showToast(`${data.name} added to stock plan ✓`);
+
+  // Lead modal trigger after 5 SKUs
+  if (skuCount >= 5 && !localStorage.getItem('saleson_lead_captured')) {
+    pendingAction = null;
+    setTimeout(showLeadModal, 600);
+  }
+}
+
+function editSku(id) {
+  const sku = skuPlan.find(s => s.id === id);
+  if (!sku) return;
+  editingId = id;
+
+  // Fill form
+  sv('skuName',    sku.name);
+  sv('skuCode',    sku.code);
+  sv('skuCat',     sku.category);
+  sv('skuSupplier',sku.supplier);
+  sv('currentStock',   sku.currentStock);
+  sv('avgDailySales',  sku.avgDailySales);
+  sv('maxDailySales',  sku.maxDailySales);
+  sv('leadTime',       sku.leadTime);
+  sv('maxLeadTime',    sku.maxLeadTime);
+  sv('safetyStockOverride', sku.safetyStockOverride);
+  sv('moq',         sku.moq);
+  sv('packSize',    sku.packSize);
+  sv('costPerUnit', sku.costPerUnit);
+  sv('sellingPrice',sku.sellingPrice);
+  sv('targetCoverDays', sku.targetCoverDays);
+
+  document.getElementById('updateSkuBtn').style.display = '';
+  document.getElementById('formPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  liveCalc();
+  showToast('Edit mode — update fields and click Update SKU');
+}
+
+function updateSelectedSku() {
+  if (!editingId) return;
+  const data = getFormData();
+  const r = calcSku(data);
+  const idx = skuPlan.findIndex(s => s.id === editingId);
+  if (idx >= 0) {
+    skuPlan[idx] = { ...skuPlan[idx], ...data, ...r };
+  }
+  editingId = null;
+  document.getElementById('updateSkuBtn').style.display = 'none';
+  clearSkuForm();
+  renderTable();
+  updateDashboard();
+  showToast('SKU updated ✓');
+}
+
+function deleteSku(id) {
+  skuPlan = skuPlan.filter(s => s.id !== id);
+  selectedIds.delete(id);
+  updateFilterOptions();
+  renderTable();
+  updateDashboard();
+  showToast('SKU removed');
+}
+
+function markOrdered(id) {
+  const sku = skuPlan.find(s => s.id === id);
+  if (sku) {
+    sku.ordered = !sku.ordered;
+    renderTable();
+    showToast(sku.ordered ? 'Marked as ordered ✓' : 'Mark removed');
+  }
+}
+
+function clearSkuForm() {
+  ['skuName','skuCode','skuCat','skuSupplier','currentStock','avgDailySales',
+   'maxDailySales','leadTime','maxLeadTime','safetyStockOverride','moq','packSize',
+   'costPerUnit','sellingPrice','targetCoverDays'].forEach(id => sv(id, ''));
+  editingId = null;
+  document.getElementById('updateSkuBtn').style.display = 'none';
+  document.getElementById('metricGrid').innerHTML = '';
+  document.getElementById('recommendBox').innerHTML = '';
+  document.getElementById('resultFormulaBox').innerHTML = '';
+  document.getElementById('rcRiskBadge').textContent = '';
+  document.getElementById('rcSkuName').textContent = 'SKU Result';
+}
+
+/* ─────────────────────────
+   RENDER TABLE
+───────────────────────── */
+function getFilteredSorted() {
+  const q    = (document.getElementById('filterSearch')?.value || '').toLowerCase();
+  const risk = document.getElementById('filterRisk')?.value || '';
+  const cat  = document.getElementById('filterCategory')?.value || '';
+  const sup  = document.getElementById('filterSupplier')?.value || '';
+  const sort = document.getElementById('sortBy')?.value || 'risk';
+
+  const riskOrder = { 'Critical':0,'High Risk':1,'Medium Risk':2,'Healthy':3,'Overstock':4 };
+
+  let list = skuPlan.filter(s =>
+    (!q || s.name?.toLowerCase().includes(q) || s.supplier?.toLowerCase().includes(q) || s.code?.toLowerCase().includes(q)) &&
+    (!risk || s.risk === risk) &&
+    (!cat  || s.category === cat) &&
+    (!sup  || s.supplier === sup)
+  );
+
+  list.sort((a, b) => {
+    if (sort === 'risk')     return (riskOrder[a.risk] ?? 9) - (riskOrder[b.risk] ?? 9);
+    if (sort === 'days')     return (a.daysRemaining || 9999) - (b.daysRemaining || 9999);
+    if (sort === 'value')    return (b.reorderValue || 0) - (a.reorderValue || 0);
+    if (sort === 'name')     return (a.name || '').localeCompare(b.name || '');
+    if (sort === 'supplier') return (a.supplier || '').localeCompare(b.supplier || '');
+    return 0;
+  });
+  return list;
+}
+
+function renderTable() {
+  const list = getFilteredSorted();
+  const tbody = document.getElementById('skuTableBody');
+  document.getElementById('tableCount').textContent = `${list.length} of ${skuPlan.length} SKUs`;
+
+  if (list.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="13" class="empty-table-msg">${skuPlan.length === 0 ? 'Add SKUs using the form to see reorder recommendations here.' : 'No SKUs match the current filter.'}</td></tr>`;
+    updateBulkBar();
+    return;
+  }
+
+  tbody.innerHTML = list.map(s => {
+    const riskCls = (riskClasses[s.risk] || 'risk-healthy');
+    const orderedStyle = s.ordered ? 'opacity:.5;text-decoration:line-through;' : '';
+    const sel = selectedIds.has(s.id);
+    return `
+      <tr class="${sel ? 'selected' : ''}" id="row_${s.id}" style="${orderedStyle}">
+        <td><input type="checkbox" ${sel ? 'checked' : ''} onchange="toggleSelect(${s.id}, this.checked)" onclick="event.stopPropagation()"></td>
+        <td>
+          <div class="sku-name-cell" title="${escH(s.name)}">${escH(s.name)}</div>
+          <div class="sku-code-cell">${escH(s.code || '')}</div>
+        </td>
+        <td style="color:var(--ink-soft);font-size:12px;">${escH(s.supplier || '—')}</td>
+        <td style="font-weight:700;">${Number(s.currentStock).toLocaleString('en-IN')}</td>
+        <td>${Number(s.avgDailySales).toLocaleString('en-IN')}/day</td>
+        <td>${s.leadTime}d</td>
+        <td>${Math.ceil(s.safetyStock)}</td>
+        <td style="font-weight:700;color:var(--brand);">${Math.ceil(s.reorderLevel)}</td>
+        <td style="font-weight:800;color:${s.suggestedQty > 0 ? 'var(--red)' : 'var(--green)'};">${s.suggestedQty}</td>
+        <td style="font-weight:700;color:${s.daysRemaining <= s.leadTime ? 'var(--red)' : 'var(--ink)'};">${s.daysRemaining >= 9999 ? '∞' : Math.floor(s.daysRemaining)}d</td>
+        <td><span class="risk-badge ${riskCls}" style="font-size:10.5px;padding:3px 9px;">${s.risk}</span></td>
+        <td style="font-weight:600;">${s.reorderValue > 0 ? fmtINR(s.reorderValue) : '—'}</td>
+        <td>
+          <div style="display:flex;gap:4px;flex-wrap:nowrap;">
+            <button class="btn-sm btn-sm-blue" onclick="editSku(${s.id})" title="Edit">✏️</button>
+            <button class="btn-sm btn-sm-green" onclick="createPOForSku(${s.id})" title="Create PO">🛒</button>
+            <button class="btn-sm btn-sm-amber" onclick="markOrdered(${s.id})" title="Mark ordered">${s.ordered ? '↩️' : '✅'}</button>
+            <button class="btn-sm btn-sm-red" onclick="deleteSku(${s.id})" title="Delete">🗑</button>
+          </div>
+        </td>
+      </tr>`;
+  }).join('');
+
+  updateBulkBar();
+}
+
+/* ─────────────────────────
+   SELECTION (bulk)
+───────────────────────── */
+function toggleSelect(id, checked) {
+  if (checked) selectedIds.add(id); else selectedIds.delete(id);
+  const row = document.getElementById('row_' + id);
+  if (row) row.classList.toggle('selected', checked);
+  updateBulkBar();
+}
+
+function toggleSelectAll(cb) {
+  const list = getFilteredSorted();
+  if (cb.checked) { list.forEach(s => selectedIds.add(s.id)); }
+  else { list.forEach(s => selectedIds.delete(s.id)); }
+  renderTable();
+}
+
+function clearSelection() {
+  selectedIds.clear();
+  document.getElementById('selectAll').checked = false;
+  renderTable();
+}
+
+function updateBulkBar() {
+  const bar = document.getElementById('bulkActionsBar');
+  if (selectedIds.size > 0) {
+    bar.style.display = 'flex';
+    document.getElementById('selectedCountLabel').textContent = `${selectedIds.size} SKU${selectedIds.size > 1 ? 's' : ''} selected`;
+  } else {
+    bar.style.display = 'none';
+  }
+}
+
+/* ─────────────────────────
+   DASHBOARD KPIs
+───────────────────────── */
+function updateDashboard() {
+  if (!skuPlan.length) {
+    ['kpiTotal','kpiNeedReorder','kpiCritical','kpiHighRisk','kpiOverstock','kpiHealthy'].forEach(id => { document.getElementById(id).textContent = '0'; });
+    document.getElementById('kpiReorderValue').textContent = '₹0';
+    document.getElementById('kpiTopSupplier').textContent  = '—';
+    return;
+  }
+  const total       = skuPlan.length;
+  const needReorder = skuPlan.filter(s => s.suggestedQty > 0).length;
+  const critical    = skuPlan.filter(s => s.risk === 'Critical').length;
+  const highRisk    = skuPlan.filter(s => s.risk === 'High Risk').length;
+  const overstock   = skuPlan.filter(s => s.risk === 'Overstock').length;
+  const healthy     = skuPlan.filter(s => s.risk === 'Healthy').length;
+  const totalValue  = skuPlan.reduce((a, s) => a + (s.reorderValue || 0), 0);
+  criticalCount     = critical;
+
+  // Top supplier by reorder value
+  const supplierMap = {};
+  skuPlan.forEach(s => { if (s.supplier) supplierMap[s.supplier] = (supplierMap[s.supplier] || 0) + (s.reorderValue || 0); });
+  const topSup = Object.entries(supplierMap).sort((a, b) => b[1] - a[1])[0];
+
+  document.getElementById('kpiTotal').textContent       = total;
+  document.getElementById('kpiNeedReorder').textContent = needReorder;
+  document.getElementById('kpiCritical').textContent    = critical;
+  document.getElementById('kpiHighRisk').textContent    = highRisk;
+  document.getElementById('kpiOverstock').textContent   = overstock;
+  document.getElementById('kpiHealthy').textContent     = healthy;
+  document.getElementById('kpiReorderValue').textContent= fmtINR(totalValue);
+  document.getElementById('kpiTopSupplier').textContent = topSup ? topSup[0] : '—';
+}
+
+/* ─────────────────────────
+   FILTER DROPDOWN OPTIONS
+───────────────────────── */
+function updateFilterOptions() {
+  const cats = [...new Set(skuPlan.map(s => s.category).filter(Boolean))];
+  const sups = [...new Set(skuPlan.map(s => s.supplier).filter(Boolean))];
+
+  const catSel = document.getElementById('filterCategory');
+  const supSel = document.getElementById('filterSupplier');
+  const catVal = catSel.value, supVal = supSel.value;
+
+  catSel.innerHTML = `<option value="">All Categories</option>` + cats.map(c => `<option value="${escH(c)}" ${c===catVal?'selected':''}>${escH(c)}</option>`).join('');
+  supSel.innerHTML = `<option value="">All Suppliers</option>` + sups.map(s => `<option value="${escH(s)}" ${s===supVal?'selected':''}>${escH(s)}</option>`).join('');
+}
+
+function setSortBy(val) {
+  document.getElementById('sortBy').value = val;
+  renderTable();
+}
+
+/* ─────────────────────────
+   PURCHASE ORDER HANDOFF
+───────────────────────── */
+function createPOForSku(id) {
+  pendingAction = 'po_id_' + id;
+  triggerAction('po_single_id', id);
+}
+
+function doCreatePOForSku(id) {
+  const sku = skuPlan.find(s => s.id === id);
+  if (!sku) return;
+  const payload = {
+    productName: sku.name, skuCode: sku.code, category: sku.category,
+    supplierName: sku.supplier, currentStock: sku.currentStock,
+    averageDailySales: sku.avgDailySales, leadTime: sku.leadTime,
+    safetyStock: Math.ceil(sku.safetyStock), reorderLevel: Math.ceil(sku.reorderLevel),
+    suggestedReorderQuantity: sku.suggestedQty,
+    estimatedReorderValue: sku.reorderValue, risk: sku.risk,
+    selectedAt: new Date().toISOString(),
+    costPerUnit: sku.costPerUnit,
+    packSize: sku.packSize,
+  };
+  localStorage.setItem('saleson_reorder_to_purchase_order', JSON.stringify(payload));
+  usedPO = true;
+  document.getElementById('poBanner').classList.add('show');
+  showToast('PO data saved ✓ Open Purchase Order Generator');
+  document.getElementById('poBanner').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function bulkCreatePO() {
+  if (!selectedIds.size) { showToast('Select at least one SKU first'); return; }
+  pendingAction = 'bulk_po';
+  if (!localStorage.getItem('saleson_lead_captured')) { showLeadModal(); return; }
+  executeBulkPO();
+}
+
+function executeBulkPO() {
+  const selected = skuPlan.filter(s => selectedIds.has(s.id));
+  const payload = selected.map(s => ({
+    productName: s.name, skuCode: s.code, category: s.category,
+    supplierName: s.supplier, currentStock: s.currentStock,
+    averageDailySales: s.avgDailySales, leadTime: s.leadTime,
+    safetyStock: Math.ceil(s.safetyStock), reorderLevel: Math.ceil(s.reorderLevel),
+    suggestedReorderQuantity: s.suggestedQty,
+    estimatedReorderValue: s.reorderValue, risk: s.risk,
+    selectedAt: new Date().toISOString(),
+    costPerUnit: s.costPerUnit,
+    packSize: s.packSize,
+  }));
+  localStorage.setItem('saleson_bulk_reorder_to_purchase_order', JSON.stringify(payload));
+  usedPO = true;
+  document.getElementById('poBanner').classList.add('show');
+  clearSelection();
+  showToast(`${payload.length} SKUs saved for PO ✓`);
+  document.getElementById('poBanner').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ─────────────────────────
+   CSV EXPORT
+───────────────────────── */
+function exportCSV() {
+  if (!skuPlan.length) { showToast('Add SKUs to export'); return; }
+  const headers = ['SKU Name','SKU Code','Category','Supplier','Current Stock','Avg Daily Sales','Lead Time (Days)','Safety Stock','Reorder Level','Suggested Reorder Qty','Days Remaining','Stock-out Date','Risk','Est. Reorder Value (₹)'];
+  const rows = getFilteredSorted().map(s => [
+    s.name, s.code, s.category, s.supplier,
+    s.currentStock, s.avgDailySales, s.leadTime,
+    Math.ceil(s.safetyStock), Math.ceil(s.reorderLevel), s.suggestedQty,
+    s.daysRemaining >= 9999 ? '∞' : Math.floor(s.daysRemaining),
+    s.stockoutDate, s.risk,
+    s.reorderValue > 0 ? s.reorderValue.toFixed(0) : '',
+  ].map(c => `"${String(c || '').replace(/"/g, '""')}"`));
+
+  const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url;
+  a.download = `stock-reorder-plan-${new Date().toISOString().split('T')[0]}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+  usedCSV = true;
+  showToast('CSV exported ✓');
+}
+
+function downloadSampleCSV() {
+  const sample = `SKU Name,SKU Code,Category,Supplier,Current Stock,Avg Daily Sales,Max Daily Sales,Lead Time,Max Lead Time,Safety Stock Override,MOQ,Pack Size,Cost Per Unit,Selling Price,Target Cover Days
+FMCG Product Box,FMCG-001,FMCG,Mohan Suppliers,120,25,40,5,8,50,50,12,450,500,15
+Detergent Pack,FMCG-002,Household,Clean India,35,12,20,7,10,30,,,80,100,20`;
+  const blob = new Blob([sample], { type: 'text/csv' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a'); a.href = url;
+  a.download = 'stock-reorder-sample.csv'; a.click();
+  URL.revokeObjectURL(url);
+}
+
+/* ─────────────────────────
+   CSV IMPORT
+───────────────────────── */
+function toggleCsvImport() {
+  const area = document.getElementById('csvImportArea');
+  area.classList.toggle('open');
+}
+
+function importCSV() {
+  const text = document.getElementById('csvPasteArea').value.trim();
+  if (!text) { showToast('Paste CSV rows first'); return; }
+  const lines = text.split('\n').filter(l => l.trim());
+  let added = 0;
+  lines.forEach(line => {
+    const cols = line.split(',').map(c => c.trim().replace(/^"|"$/g, ''));
+    if (cols.length < 4) return;
+    const data = {
+      name: cols[0], code: cols[1], category: cols[2], supplier: cols[3],
+      currentStock: cols[4], avgDailySales: cols[5], maxDailySales: cols[6],
+      leadTime: cols[7], maxLeadTime: cols[8], safetyStockOverride: cols[9],
+      moq: cols[10], packSize: cols[11], costPerUnit: cols[12],
+      sellingPrice: cols[13], targetCoverDays: cols[14], method: currentMethod,
+    };
+    if (!data.name || !parseFloat(data.avgDailySales) || !parseFloat(data.leadTime)) return;
+    const r = calcSku(data);
+    skuPlan.push({ id: Date.now() + added, ...data, ...r });
+    added++;
+  });
+  if (added) {
+    updateFilterOptions(); renderTable(); updateDashboard();
+    showToast(`${added} SKUs imported ✓`);
+    document.getElementById('csvPasteArea').value = '';
+    toggleCsvImport();
+  } else {
+    showToast('No valid rows found. Check format.');
+  }
+}
+
+/* ─────────────────────────
+   PRINT REPORT
+───────────────────────── */
+function printReport() {
+  // Build print area
+  document.getElementById('printBizName').textContent = v('bizName') || 'Stock Reorder Report';
+  document.getElementById('printBizMeta').textContent = [v('bizType'), v('bizCity')].filter(Boolean).join(' · ');
+  document.getElementById('printDate').textContent = 'Report Date: ' + fmtDate(v('reportDate') || todayStr());
+
+  const logo = document.getElementById('printLogo');
+  if (logoDataURL) { logo.src = logoDataURL; logo.style.display = 'block'; }
+
+  // KPIs
+  const critical = skuPlan.filter(s => s.risk === 'Critical').length;
+  const totalVal = skuPlan.reduce((a, s) => a + (s.reorderValue || 0), 0);
+  document.getElementById('printKpis').innerHTML = `
+    <div style="background:#f7f9fc;border:1px solid #e2e8f0;border-radius:8px;padding:10px 14px;"><div style="font-size:10px;font-weight:700;color:#7a8898;text-transform:uppercase;">Total SKUs</div><div style="font-size:20px;font-weight:800;color:#1a56db;">${skuPlan.length}</div></div>
+    <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:10px 14px;"><div style="font-size:10px;font-weight:700;color:#7a8898;text-transform:uppercase;">Critical SKUs</div><div style="font-size:20px;font-weight:800;color:#991b1b;">${critical}</div></div>
+    <div style="background:#fff7ed;border:1px solid #fde68a;border-radius:8px;padding:10px 14px;"><div style="font-size:10px;font-weight:700;color:#7a8898;text-transform:uppercase;">Need Reorder</div><div style="font-size:20px;font-weight:800;color:#d97706;">${skuPlan.filter(s=>s.suggestedQty>0).length}</div></div>
+    <div style="background:#d1fae5;border:1px solid #a7f3d0;border-radius:8px;padding:10px 14px;"><div style="font-size:10px;font-weight:700;color:#7a8898;text-transform:uppercase;">Est. Reorder Value</div><div style="font-size:18px;font-weight:800;color:#059669;">${fmtINR(totalVal)}</div></div>
+  `;
+
+  // Table
+  const head = document.getElementById('printTableHead');
+  head.innerHTML = ['SKU','Code','Supplier','Stock','Avg/Day','Lead','Safety','Reorder Lvl','Order Qty','Days Left','Risk','PO Value'].map(h=>`<th style="padding:7px 8px;text-align:left;font-size:10px;">${h}</th>`).join('');
+
+  const list = getFilteredSorted();
+  document.getElementById('printTableBody').innerHTML = list.map((s, i) => `
+    <tr style="background:${i%2===0?'#f7f9fc':'white'};">
+      <td style="padding:6px 8px;font-size:10.5px;font-weight:600;">${escH(s.name)}</td>
+      <td style="padding:6px 8px;font-size:10px;color:#7a8898;">${escH(s.code||'')}</td>
+      <td style="padding:6px 8px;font-size:10.5px;">${escH(s.supplier||'')}</td>
+      <td style="padding:6px 8px;font-size:10.5px;">${s.currentStock}</td>
+      <td style="padding:6px 8px;font-size:10.5px;">${s.avgDailySales}</td>
+      <td style="padding:6px 8px;font-size:10.5px;">${s.leadTime}d</td>
+      <td style="padding:6px 8px;font-size:10.5px;">${Math.ceil(s.safetyStock)}</td>
+      <td style="padding:6px 8px;font-size:10.5px;font-weight:700;color:#1a56db;">${Math.ceil(s.reorderLevel)}</td>
+      <td style="padding:6px 8px;font-size:10.5px;font-weight:800;color:${s.suggestedQty>0?'#dc2626':'#059669'};">${s.suggestedQty}</td>
+      <td style="padding:6px 8px;font-size:10.5px;font-weight:700;color:${s.daysRemaining<=s.leadTime?'#dc2626':'#0f1623'};">${s.daysRemaining>=9999?'∞':Math.floor(s.daysRemaining)}d</td>
+      <td style="padding:6px 8px;font-size:10px;">${s.risk}</td>
+      <td style="padding:6px 8px;font-size:10.5px;font-weight:600;">${s.reorderValue>0?fmtINR(s.reorderValue):'—'}</td>
+    </tr>`).join('');
+
+  document.getElementById('printArea').style.display = 'block';
+  usedCSV = true;
+  setTimeout(() => {
+    window.print();
+    setTimeout(() => { document.getElementById('printArea').style.display = 'none'; }, 1500);
+  }, 100);
+}
+
+/* ─────────────────────────
+   SAVE / LOAD PLAN
+───────────────────────── */
+function savePlan() {
+  const plan = {
+    bizName: v('bizName'), bizType: v('bizType'), bizCity: v('bizCity'),
+    reportDate: v('reportDate'), logoDataURL, skuPlan,
+    savedAt: new Date().toISOString(),
+  };
+  localStorage.setItem('saleson_stock_reorder_plan_data', JSON.stringify(plan));
+  showToast('Stock plan saved ✓');
+}
+
+function loadPlan() {
+  const raw = localStorage.getItem('saleson_stock_reorder_plan_data');
+  if (!raw) { showToast('No saved plan found'); return; }
+  const plan = JSON.parse(raw);
+  sv('bizName',   plan.bizName   || '');
+  sv('bizType',   plan.bizType   || '');
+  sv('bizCity',   plan.bizCity   || '');
+  sv('reportDate',plan.reportDate|| '');
+  if (plan.logoDataURL) {
+    logoDataURL = plan.logoDataURL;
+    const img = document.getElementById('logoPreview'); img.src = logoDataURL; img.style.display = 'block';
+  }
+  skuPlan = plan.skuPlan || [];
+  updateFilterOptions(); renderTable(); updateDashboard();
+  showToast('Stock plan loaded ✓');
+}
+
+function resetAll() {
+  if (!confirm('Reset all SKUs and form data?')) return;
+  skuPlan = []; selectedIds.clear(); editingId = null;
+  clearSkuForm();
+  sv('bizName',''); sv('bizCity',''); sv('reportDate','');
+  document.getElementById('logoPreview').style.display = 'none'; logoDataURL = null;
+  document.getElementById('poBanner').classList.remove('show');
+  updateFilterOptions(); renderTable(); updateDashboard();
+  loadSampleData();
+  applyVanReorderHandoff();
+  showToast('Reset complete ✓');
+}
+
+
+
+/* ─────────────────────────
+   SAMPLE DATA
+───────────────────────── */
+function loadSampleData() {
+  sv('bizName',  'Shree Balaji Distributors');
+  sv('bizType',  'Distributor');
+  sv('bizCity',  'Patna, Bihar');
+  sv('reportDate', todayStr());
+
+  const samples = [
+    { name:'FMCG Product Box', code:'FMCG-001', category:'FMCG', supplier:'Mohan FMCG Suppliers', currentStock:'120', avgDailySales:'25', maxDailySales:'40', leadTime:'5', maxLeadTime:'8', safetyStockOverride:'50', moq:'50', packSize:'12', costPerUnit:'450', sellingPrice:'500', targetCoverDays:'15' },
+    { name:'Detergent Pack', code:'FMCG-002', category:'Household', supplier:'Clean India Suppliers', currentStock:'35', avgDailySales:'12', maxDailySales:'20', leadTime:'7', maxLeadTime:'10', safetyStockOverride:'30', moq:'', packSize:'', costPerUnit:'80', sellingPrice:'100', targetCoverDays:'20' },
+    { name:'Tea Packet', code:'FMCG-003', category:'Beverages', supplier:'Assam Tea Agency', currentStock:'600', avgDailySales:'20', maxDailySales:'30', leadTime:'5', maxLeadTime:'7', safetyStockOverride:'50', moq:'', packSize:'', costPerUnit:'90', sellingPrice:'120', targetCoverDays:'15' },
+  ];
+
+  samples.forEach(d => {
+    const r = calcSku({ ...d, method: currentMethod });
+    skuPlan.push({ id: Date.now() + Math.random(), ...d, ...r });
+  });
+
+  // Pre-fill form with first sample
+  Object.keys(samples[0]).forEach(k => {
+    const map = { name:'skuName', code:'skuCode', category:'skuCat', supplier:'skuSupplier', currentStock:'currentStock', avgDailySales:'avgDailySales', maxDailySales:'maxDailySales', leadTime:'leadTime', maxLeadTime:'maxLeadTime', safetyStockOverride:'safetyStockOverride', moq:'moq', packSize:'packSize', costPerUnit:'costPerUnit', sellingPrice:'sellingPrice', targetCoverDays:'targetCoverDays' };
+    if (map[k]) sv(map[k], samples[0][k]);
+  });
+
+  updateFilterOptions(); renderTable(); updateDashboard(); liveCalc();
+}
+
+function applyVanReorderHandoff() {
+  const key = "saleson_van_loading_to_stock_reorder";
+  const data = SalesOnHandoff.take(key);
+
+  if (!data || !Array.isArray(data.items)) return;
+
+  const leadTime = Number(
+    window.prompt(
+      "Enter supplier lead time in days for the imported van SKUs:",
+      "7"
+    )
+  );
+
+  if (!Number.isFinite(leadTime) || leadTime <= 0) {
+    // Keep the payload available for the next attempt.
+    SalesOnHandoff.put(key, data);
+    showToast("Import paused because lead time is required.");
+    return;
+  }
+
+  skuPlan = [];
+  selectedIds.clear();
+
+  SalesOnHandoff.set("bizName", data.businessName);
+
+  data.items.forEach((item, index) => {
+    const skuData = {
+      name: item.productName || item.name,
+      code: item.skuCode || item.code,
+      category: item.category || item.cat || "",
+      supplier: "",
+      currentStock:
+        item.currentStock ?? item.closing ?? 0,
+      avgDailySales:
+        item.averageDailySales ?? item.sold ?? 0,
+      maxDailySales:
+        item.averageDailySales ?? item.sold ?? 0,
+      leadTime: String(leadTime),
+      maxLeadTime: String(leadTime),
+      safetyStockOverride: "",
+      moq: "",
+      packSize: "",
+      costPerUnit: item.costPerUnit ?? item.rate ?? 0,
+      sellingPrice: item.costPerUnit ?? item.rate ?? 0,
+      targetCoverDays: "30",
+      method: currentMethod
+    };
+
+    const calculated = calcSku(skuData);
+
+    skuPlan.push({
+      id: Date.now() + index,
+      ...skuData,
+      ...calculated,
+      addedAt: new Date().toLocaleString("en-IN")
+    });
+  });
+
+  updateFilterOptions();
+  renderTable();
+  updateDashboard();
+  showToast(`${skuPlan.length} van SKU(s) imported.`);
+}
+
+
+/* ─────────────────────────
+   LOGO UPLOAD
+───────────────────────── */
+function handleLogoUpload(input) {
+  const file = input.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    logoDataURL = e.target.result;
+    const img = document.getElementById('logoPreview'); img.src = logoDataURL; img.style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+}
+
+/* ─────────────────────────
+   ACTION TRIGGER
+───────────────────────── */
+function triggerAction(action, payload) {
+  pendingAction = action;
+  if (!localStorage.getItem('saleson_lead_captured')) {
+    showLeadModal();
+    return;
+  }
+  executeAction(action, payload);
+}
+
+function executeAction(action, payload) {
+  if (action === 'csv')     exportCSV();
+  if (action === 'print')   printReport();
+  if (action === 'save')    savePlan();
+  if (action === 'po_single') {
+    const data = getFormData();
+    const r = calcSku(data);
+    const tempSku = { id: 0, ...data, ...r };
+    // Store immediately
+    const p = { productName:data.name, skuCode:data.code, category:data.category, supplierName:data.supplier, currentStock:data.currentStock, averageDailySales:data.avgDailySales, leadTime:data.leadTime, safetyStock:Math.ceil(r.safetyStock), reorderLevel:Math.ceil(r.reorderLevel), suggestedReorderQuantity:r.suggestedQty, estimatedReorderValue:r.reorderValue, risk:r.risk, selectedAt:new Date().toISOString() };
+    localStorage.setItem('saleson_reorder_to_purchase_order', JSON.stringify(p));
+    usedPO = true;
+    document.getElementById('poBanner').classList.add('show');
+    showToast('PO data saved ✓');
+    document.getElementById('poBanner').scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+  if (action && action.startsWith('po_single_id')) {
+    const id = parseInt(action.split('_').pop());
+    doCreatePOForSku(id);
+  }
+  if (action === 'bulk_po') executeBulkPO();
+}
+
+/* ─────────────────────────
+   LEAD MODAL
+───────────────────────── */
+function showLeadModal() {
+  document.getElementById('leadModal').style.display = 'flex';
+}
+
+function submitLead(type) {
+  const name  = document.getElementById('leadName').value.trim();
+  const phone = document.getElementById('leadPhone').value.trim();
+  const biz   = document.getElementById('leadBiz').value.trim();
+  if (!name || !phone || !biz) { showToast('Please fill Name, Phone and Business Name'); return; }
+
+  const bizType   = document.getElementById('leadBizType').value;
+  const city      = document.getElementById('leadCity').value.trim();
+  const skuCount  = document.getElementById('leadSkuCount').value;
+  const method    = document.getElementById('leadMethod').value;
+
+  let score = 25; // base: Stock Reorder tool
+  if (skuCount === '51–200')    score += 20;
+  if (skuCount === '201–1000')  score += 30;
+  if (skuCount === '1000+')     score += 40;
+  if (['Distributor','Wholesaler','Manufacturer','FMCG','Pharma'].includes(bizType)) score += 20;
+  if (['Excel','Manual register','WhatsApp'].includes(method)) score += 25;
+  if (criticalCount > 0) score += 20;
+  if (skuPlan.reduce((a,s)=>a+(s.reorderValue||0),0) > 50000) score += 15;
+  if (usedPO)  score += 10;
+  if (usedCSV) score += 10;
+
+  const lead = { name, phone, businessName: biz, businessType: bizType, city, skuCount, currentMethod: method, toolUsed: 'Stock Reorder Level Calculator', leadScore: score, createdAt: new Date().toISOString() };
+  const existing = JSON.parse(localStorage.getItem('saleson_free_tool_leads') || '[]');
+  existing.push(lead);
+  localStorage.setItem('saleson_free_tool_leads', JSON.stringify(existing));
+  if (window.salesonSubmitLeadToBackend) window.salesonSubmitLeadToBackend(lead);
+  if (window.salesonTrack) window.salesonTrack('lead_saved_locally', { toolUsed: lead.toolUsed || '' });
+  localStorage.setItem('saleson_lead_captured', '1');
+  console.log('[SalesOn Lead]', lead);
+
+  document.getElementById('leadModal').style.display = 'none';
+
+  if (type === 'demo') {
+    window.open('https://saleson.co.in/request-demo', '_blank');
+  } else if (pendingAction) {
+    executeAction(pendingAction);
+  }
+}
+
+function skipLead() {
+  document.getElementById('leadModal').style.display = 'none';
+  localStorage.setItem('saleson_lead_captured', '1');
+  if (pendingAction) executeAction(pendingAction);
+}
+
+/* ─────────────────────────
+   COLLAPSIBLE SECTIONS
+───────────────────────── */
+function toggleSec(btn) {
+  const body = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  btn.classList.toggle('open', !isOpen);
+  body.classList.toggle('open', !isOpen);
+}
+
+/* ─────────────────────────
+   FAQ
+───────────────────────── */
+function toggleFaq(btn) {
+  const a = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('open'); b.nextElementSibling.classList.remove('open'); });
+  if (!isOpen) { btn.classList.add('open'); a.classList.add('open'); }
+}
+
+/* ─────────────────────────
+   TOAST
+───────────────────────── */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+/* ─────────────────────────
+   HELPERS
+───────────────────────── */
+function v(id)       { const el = document.getElementById(id); return el ? el.value.trim() : ''; }
+function sv(id, val) { const el = document.getElementById(id); if (el) el.value = val; }
+function escH(str)   { return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* ─────────────────────────
+   INIT
+───────────────────────── */
+document.getElementById('methodFormula').innerHTML = methodFormulas.simple;
+document.getElementById('reportDate').value = todayStr();
+loadSampleData();
+applyVanReorderHandoff();
+</script>
+<script>
+/* SalesOn launch helpers: analytics placeholder + lead backend hook.
+   Set window.salesonLeadEndpoint = 'YOUR_ENDPOINT_URL' before lead submission
+   or replace the empty endpoint below when connecting WordPress/Supabase/CRM. */
+(function() {
+  window.salesonTrack = window.salesonTrack || function(eventName, data) {
+    const allowed = new Set(['tool_opened', 'lead_saved_locally', 'lead_submission_accepted']);
+    if (!allowed.has(eventName)) return;
+    const safe = {};
+    for (const key of ['page', 'toolUsed']) {
+      if (typeof data?.[key] === 'string' && /^[a-zA-Z0-9_-]{1,80}$/.test(data[key])) safe[key] = data[key];
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({event: eventName, ...safe});
+  };
+  window.salesonLeadEndpoint = window.salesonLeadEndpoint || '';
+  window.salesonSubmitLeadToBackend = window.salesonSubmitLeadToBackend || async function(lead) {
+    if (!window.salesonLeadEndpoint || !lead) return;
+    try {
+      const response = await fetch(window.salesonLeadEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lead)
+      });
+      if (!response.ok) throw new Error('Lead submission was not accepted');
+      window.salesonTrack('lead_submission_accepted', { toolUsed: lead.toolUsed || '' });
+    } catch (err) {
+      console.warn('SalesOn lead backend submission failed:', err);
+    }
+  };
+})();
+</script>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  if (window.salesonTrack) window.salesonTrack('tool_opened', { page: 'stock-reorder-level-calculator' });
+});
+</script>
+    <script defer src="/assets/js/site-repairs.29824dd6d35a.js"></script>
+</body>
+</html>

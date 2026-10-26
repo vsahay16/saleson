@@ -1,0 +1,18 @@
+/* Shared integration rules for the eight product pages. */
+.feature-page main { min-width: 0; }
+.feature-page .hero-grid > *, .feature-page .af-grid > * { min-width: 0; }
+.feature-page #sub-nav { top: 68px; z-index: 900; }
+.feature-page [id] { scroll-margin-top: 140px; }
+.feature-page site-header { position: sticky; top: 0; z-index: 1000; display: block; }
+.feature-page site-footer { display: block; }
+.feature-page .hero img { max-width: 100%; height: auto; }
+.feature-page .hero-product-media, .feature-page .hero-visual-wrap { min-width: 0; }
+@media (max-width: 768px) {
+  .feature-page .hero-grid, .feature-page .af-grid { grid-template-columns: minmax(0, 1fr); }
+  .feature-page .hero-product-visual { margin-inline: 0; }
+  .feature-page .sub-nav-inner { max-width: 100%; overflow-x: auto; }
+  .feature-page #sub-nav .sub-nav-cta { flex-shrink: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .feature-page .rev, .feature-page .reveal, .feature-page .animate-in { opacity: 1; transform: none; }
+}

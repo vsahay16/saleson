@@ -1,0 +1,37 @@
+/* Product screenshots stay unchanged; responsive viewports expose their detail. */
+.feature-delivery-hero { margin: 0; padding: 16px; background: #fff; border: 1px solid #e5e9f0; border-radius: 20px; box-shadow: 0 18px 45px rgb(15 27 45 / 8%); }
+.delivery-desktop-view img { display: block; width: 100%; height: auto; }
+.delivery-phone-crop { display: none; }
+.feature-delivery-hero figcaption { margin: 14px 0; color: #596b80; font-size: 13px; line-height: 1.6; }
+.feature-image-open { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 16px; margin-top: 12px; background: #edf4ff; color: #1143b6; border: 1px solid #c6d8f5; border-radius: 8px; font: 600 14px/1.4 system-ui, sans-serif; cursor: pointer; }
+.feature-image-open::after { content: '↗'; }
+.feature-image-open:hover { background: #dae8ff; }
+.dms-dashboard-viewport { max-width: 100%; overflow: auto; border-radius: 14px; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.dms-dashboard-viewport img { display: block; width: 100%; height: auto; }
+.feature-media-hint { display: none; font-size: 13px; color: #596b80; margin: 12px 0 0; line-height: 1.6; }
+.feature-media-dialog { width: min(1200px, 96vw); max-width: 96vw; max-height: 92dvh; padding: 0; border: 1px solid #d9e3f2; border-radius: 14px; background: #fff; color: #17263d; box-shadow: 0 20px 90px rgb(0 0 0 / 25%); }
+.feature-media-dialog::backdrop { background: rgb(8 17 30 / 78%); }
+.feature-media-dialog-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #e5e9f0; }
+.feature-media-dialog-title { font: 600 17px/1.4 system-ui, sans-serif; margin: 0; }
+.feature-media-dialog-actions { display: flex; gap: 10px; }
+.feature-media-dialog button { min-height: 44px; padding: 8px 14px; background: #edf4ff; color: #1143b6; border: 1px solid #c6d8f5; border-radius: 8px; cursor: pointer; font: 600 14px system-ui, sans-serif; }
+.feature-media-dialog-viewport { overflow: auto; max-height: 74dvh; padding: 12px; overscroll-behavior: contain; }
+.feature-media-dialog-image { display: block; width: 100%; max-width: 100%; height: auto; }
+.feature-media-dialog.is-zoomed .feature-media-dialog-image { width: 1376px; max-width: none; }
+@media (max-width: 600px) {
+  .feature-delivery-hero { padding: 20px 16px; }
+  .delivery-desktop-view { display: none; }
+  /* The supplied 1376×768 screenshot includes a 211×435 phone at (985,244).
+     A CSS viewport shows that actual device without editing/recreating the UI. */
+  .delivery-phone-crop { display: block; position: relative; width: min(211px, 72%); aspect-ratio: 211 / 435; overflow: hidden; margin-inline: auto; border-radius: 30px; background: #111; }
+  .delivery-phone-crop img { position: absolute; width: 652.1327% !important; max-width: none !important; height: auto !important; left: -466.8246%; top: -56.092%; }
+  .feature-delivery-hero .feature-image-open { display: flex; width: 100%; }
+  .dms-dashboard-viewport { height: 370px; max-height: 65dvh; border: 1px solid #dce5f2; scrollbar-width: thin; }
+  .dms-dashboard-viewport img { width: 960px !important; max-width: none !important; height: auto !important; }
+  .feature-media-hint { display: block; }
+  .feature-page-distribution-management-system .hero-product-visual { padding: 12px; width: 100%; }
+  .feature-page-distribution-management-system .hero-product-visual .feature-image-open { width: 100%; }
+  .feature-media-dialog { width: 96vw; }
+  .feature-media-dialog-header { padding: 12px; }
+  .feature-media-dialog-title { font-size: 16px; }
+}

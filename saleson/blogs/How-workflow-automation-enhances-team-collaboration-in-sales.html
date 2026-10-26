@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <!--meta-->
+    <meta name="description" content="How Workflow Automation Enhances Team Collaboration in Sales">
+
+    <meta name="keywords" content="online accounting software, distributor software,payment collection software for salesman, gst invoicing, free accounting software, gst, without gst invoices">
+    <meta property="og:url" content="https://saleson.co.in/blogs/How-workflow-automation-enhances-team-collaboration-in-sales">
+    <meta property="og:title" content="How Workflow Automation Enhances Team Collaboration in Sales">
+    <meta property="og:description" content="How Workflow Automation Enhances Team Collaboration in Sales">
+    <meta property="og:image" content="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-arrow-logo-blue.png"> 
+    <meta property="og:image:alt" content="SalesOn logo">    
+    <meta name="twitter:title" content="How Workflow Automation Enhances Team Collaboration in Sales">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="How Workflow Automation Enhances Team Collaboration in Sales">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta property="og:locale" content="en_US">
+    <!--favicon icon-->
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/img/salesOn.svg" type="image/svg+xml">
+
+    <!--title-->
+    <title> How Workflow Automation Enhances Team Collaboration in Sales</title>
+   
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"></noscript>
+      <link rel="preload" href="/css/min/common.min.5d8e1c1559db.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/min/common.min.5d8e1c1559db.css"></noscript>
+    <style>
+        .sticky-header {
+            padding: 20px 0;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            -webkit-box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+            box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+        }
+
+        /* line 1008, src/assets/scss/custom/_style.scss */
+        .affix {
+            top: 0;
+            left: 0;
+            margin: auto;
+            position: fixed;
+            width: 100%;
+            z-index: 9999;
+            -webkit-animation: 300ms ease-in-out fadeInDown;
+            animation: 300ms ease-in-out fadeInDown;
+            background: var(--bs-dark);
+            padding: 10px 0;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* line 1060, src/assets/scss/custom/_style.scss */
+        .main-menu li.nav-item {
+            position: relative;
+        }
+
+        /* line 1063, src/assets/scss/custom/_style.scss */
+        .dropdown-menu {
+            right: auto;
+            left: 50% !important;
+            -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+        }
+
+        /* line 1068, src/assets/scss/custom/_style.scss */
+        .main-menu li.nav-item .dropdown-menu:before {
+            content: '';
+            position: absolute;
+            top: -9px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            -webkit-transform: translate(-50%, 0) rotate(-315deg);
+            transform: translate(-50%, 0) rotate(-315deg);
+            border-radius: 3px;
+            background-color: var(--bs-white);
+            opacity: 0;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        /* line 1081, src/assets/scss/custom/_style.scss */
+        .main-menu li.nav-item:hover .dropdown-menu:before {
+            opacity: 1;
+        }
+
+        /* line 1085, src/assets/scss/custom/_style.scss */
+        .main-menu li a.nav-link {
+            padding: 0.85rem 1rem;
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+            font-family: var(--bs-font-monospace);
+        }
+
+        /* line 1092, src/assets/scss/custom/_style.scss */
+        .navbar-dark .main-menu li a.nav-link {
+            color: var(--bs-secondary-dark);
+        }
+
+        /* line 1095, src/assets/scss/custom/_style.scss */
+        .navbar-dark .action-btns a.btn-link {
+            color: var(--bs-secondary-dark);
+        }
+
+        /*navbar-light*/
+        /* line 1100, src/assets/scss/custom/_style.scss */
+        .navbar-light .main-menu li a.nav-link,
+        .navbar-light .action-btns a.btn-link,
+        .navbar-dark.sticky-header.affix .main-menu li a.nav-link,
+        .navbar-dark.sticky-header.affix .action-btns a.btn-link {
+            color: var(--body-color);
+        }
+
+        /* line 1106, src/assets/scss/custom/_style.scss */
+        .navbar-light.sticky-header.affix,
+        .navbar-dark.sticky-header.affix {
+            background: var(--bs-white);
+        }
+
+        /* line 1110, src/assets/scss/custom/_style.scss */
+        .navbar-light.sticky-header.affix .btn,
+        .navbar-dark.sticky-header.affix .btn,
+        .bg-dark .btn,
+        .coming-soon-section .btn,
+        .bg-gradient .btn,
+        .coming-soon-section .btn,
+        .navbar-dark .btn-primary {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        /* line 1119, src/assets/scss/custom/_style.scss */
+        .navbar-light .navbar-brand img.logo-white,
+        .navbar-dark .navbar-brand img.logo-color,
+        .navbar-dark.sticky-header.affix .navbar-brand img.logo-white {
+            display: none;
+        }
+
+        /* line 1124, src/assets/scss/custom/_style.scss */
+        .navbar-dark.sticky-header.affix .navbar-toggler span {
+            color: var(--body-color);
+        }
+
+        /* line 1127, src/assets/scss/custom/_style.scss */
+        .navbar-dark.sticky-header.affix .navbar-brand img.logo-color {
+            display: block;
+        }
+
+        /* line 1131, src/assets/scss/custom/_style.scss */
+        .main-menu li a.nav-link:hover,
+        .action-btns a.btn-link:hover,
+        .navbar-dark.sticky-header.affix .main-menu li a.nav-link:hover,
+        .navbar-dark.sticky-header.affix .action-btns a.btn-link:hover {
+            color: var(--bs-primary);
+        }
+
+        /* line 1183, src/assets/scss/custom/_style.scss */
+        .offcanvas-header button.close-btn {
+            background: var(--bs-danger-soft);
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            outline: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: none;
+            border-radius: 20px;
+        }
+
+        /* line 1193, src/assets/scss/custom/_style.scss */
+        .offcanvas-header button.close-btn i {
+            line-height: 29px;
+        }
+
+        /* line 1196, src/assets/scss/custom/_style.scss */
+        /* .offcanvas-body .dropdown-toggle::after {
+            content: '\f067';
+            font-family: 'Font Awesome 6 Pro';
+            font-weight: 400;
+            position: absolute;
+            right: 0;
+            border: none;
+            } */
+
+        /* line 1204, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .main-menu li a.nav-link {
+            color: var(--body-color);
+            padding: 0.5rem 1rem;
+        }
+
+        /* line 1208, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .main-menu li a.nav-link:hover {
+            color: var(--bs-primary);
+        }
+
+        /* line 1211, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .radius-right-side {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+
+        /* line 1216, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .dropdown-menu {
+            position: relative;
+        }
+
+        /* line 1219, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .dropdown-grid {
+            display: block;
+            width: auto;
+        }
+
+        /* line 1223, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .dropdown-grid-item {
+            width: 100%;
+        }
+
+        /* line 1226, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .dropdown-grid-item.last-item {
+            display: none;
+        }
+
+        @media (max-width: 1199px) {
+
+            /* line 1230, src/assets/scss/custom/_style.scss */
+            .nav.main-menu {
+                display: block !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            /* line 1236, src/assets/scss/custom/_style.scss */
+            .nav.main-menu {
+                display: block;
+            }
+        }
+
+        /* @media (min-width: 320px) and (max-width: 767px) { */
+        /* line 1241, src/assets/scss/custom/_style.scss */
+        /*.sticky-header.affix {
+                padding: 15px 0 !important;
+            }*/
+        /* line 1244, src/assets/scss/custom/_style.scss */
+        /* .action-btns a:first-of-type {
+                margin-bottom: 15px;
+            }
+            } */
+
+        /* line 1249, src/assets/scss/custom/_style.scss */
+        .dropdown-toggle::after {
+            vertical-align: middle;
+        }
+
+        /* line 1253, src/assets/scss/custom/_style.scss */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--bs-light);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            z-index: 999999;
+        }
+
+        /* line 1266, src/assets/scss/custom/_style.scss */
+        .preloader-icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* line 1270, src/assets/scss/custom/_style.scss */
+        .loading-bar {
+            width: 120px;
+            height: 3px;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+            background: var(--bs-white);
+        }
+
+        /* line 1279, src/assets/scss/custom/_style.scss */
+        .loading-bar::before {
+            content: '';
+            width: 35px;
+            height: 3px;
+            background: var(--bs-primary);
+            position: absolute;
+            left: -34px;
+            -webkit-animation: bluebar 1.5s infinite ease;
+            animation: bluebar 1.5s infinite ease;
+        }
+
+        @-webkit-keyframes bluebar {
+            50% {
+                left: 96px;
+            }
+        }
+
+        @keyframes bluebar {
+            50% {
+                left: 96px;
+            }
+        }
+
+        /* line 1294, src/assets/scss/custom/_style.scss */
+        .section-heading {
+            margin-bottom: 50px;
+        }
+
+        @media (min-width: 991px) and (max-width: 1199px) {
+
+            /* line 1298, src/assets/scss/custom/_style.scss */
+            .action-btns.me-lg-0 {
+                margin-right: 3rem !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            /* line 1303, src/assets/scss/custom/_style.scss */
+            .section-heading {
+                margin-bottom: 30px;
+            }
+        }
+
+        /**/
+        /*======================
+            05. HERO SECTION CSS
+            =======================*/
+        /* line 1631, src/assets/scss/custom/_style.scss */
+        .hero-subscribe-form-wrap {
+            max-width: 460px;
+        }
+
+        /* line 1652, src/assets/scss/custom/_style.scss */
+        .hero-bg-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+        @media (min-width: 320px) and (max-width: 414px) {
+
+            /* line 1665, src/assets/scss/custom/_style.scss */
+            .hero-subscribe-form input.btn {
+                position: relative;
+                right: 0;
+                top: 10px;
+                margin-bottom: 15px;
+                -webkit-transition: all 0.3s ease-in;
+                transition: all 0.3s ease-in;
+            }
+
+            /* line 1672, src/assets/scss/custom/_style.scss */
+            .hero-subscribe-form input.form-control {
+                padding: 0.75rem 1rem;
+            }
+        }
+
+        /*hero-3*/
+        /* line 1745, src/assets/scss/custom/_style.scss */
+        .hero-screen-wrap {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: end;
+            -ms-flex-align: end;
+            align-items: flex-end;
+            margin-right: -120px;
+        }
+
+        @media (min-width: 1480px) and (max-width: 1836px) {
+
+            /* line 1764, src/assets/scss/custom/_style.scss */
+            .hero-screen-wrap {
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 1479px) {
+
+            /* line 1776, src/assets/scss/custom/_style.scss */
+            .hero-screen-wrap {
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 767px) {
+
+            /* line 1789, src/assets/scss/custom/_style.scss */
+            .hero-screen-wrap {
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+        }
+    </style>
+    
+     <link rel="preload" href="/css/min/bootstrap-icons.min.df82b4cfba30.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/min/bootstrap-icons.min.df82b4cfba30.css"></noscript>
+    <link rel="canonical" href="https://saleson.co.in/blogs/How-workflow-automation-enhances-team-collaboration-in-sales">
+    <link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css">
+<link rel="stylesheet" href="/css/workflow-guides.43835e9cd66d.css">
+</head>
+
+<body>
+
+    <!--preloader start-->
+    <div id="preloader">
+        <div class="preloader-wrap">
+            <img src="/assets/img/salesOn.svg" alt="logo" class="img-fluid preloader-icon" />
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+    <!--preloader end-->
+    <!--main content wrapper start-->
+    <div class="main-wrapper">
+
+        <!--header section start-->
+       <site-header><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header>
+        <!--header section end-->
+
+        <!--hero section start-->
+        <section class="hero-section ptb-70 abstract-bg pt-100 blog-bg" id="page-intro">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <!-- <div class="col-xl-1 col-lg-1"></div> -->
+                    <div class="col-xl-6 col-lg-7">
+                        <div class="hero-content-wrap text-center text-xl-center text-lg-start" >
+                            <h1>How Workflow Automation Enhances Team Collaboration in Sales</h1>
+                            <!-- <p class="lead">Accounting made error free with seamless bookkeeping features for invoice, payment, inventory management. GST Returns filing made convenient. Sync data with Tally in few clicks.</p> -->
+                            <div class="hero-subscribe-form-wrap pt-4 position-relative m-auto m-xl-0 d-md-block d-lg-block d-xl-block">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <!-- <div class="col-xl-2 col-md-2">
+                         Published on August 1, 2020
+                    </div> -->
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="hero-img-wrap position-relative">
+                            <div class="hero-img-wrap position-relative">
+                                <div class="hero-screen-wrap">
+                                    <img src="/assets/img/blog/How-workflow-Automation-Enhance-Team-Collabration-in-sales.jpg" alt="laptop and mobile app showcasing sales dashboard" title="sales report synced with mobile app" class="position-relative img-fluid rounded-custom">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--hero section end-->
+
+        <section class="blog-section ptb-70">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8">
+                        <div class="section-heading text-center">
+                            <h2>How Workflow Automation Enhances Team Collaboration in Sales</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                   <div class="col-md-2"></div>
+                   <div class="col-md-2 text-center">
+                    <span class="fw-medium">Published on July 2, 2024</span>
+                    <ul class="list-unstyled list-inline footer-social-list mt-4">
+                        <li class="list-inline-item"><button type="button" aria-label="Share on Facebook" onclick="fbShare()"><i class="bi bi-facebook"></i></button></li>
+                        <li class="list-inline-item"><button type="button" aria-label="Share on LinkedIn" onclick="linkedInShare()"><i class="bi bi-linkedin"></i></button></li>
+                        <li class="list-inline-item"><button type="button" aria-label="Share on X" onclick="twitterShare()"><i class="bi bi-twitter"></i></button></li>
+                    </ul>
+                   </div>
+                   <div class="col-md-6">
+                    In today’s fast-paced sales environment, seamless collaboration among team members is critical for success. Disjointed processes, missed communications, and inefficiencies can hinder team productivity and result in lost opportunities. Workflow automation offers a powerful solution to these challenges, enabling teams to work together more effectively while focusing on high-value activities. Here’s how workflow automation enhances team collaboration in sales.
+                    <br/>
+                    <br/>
+                    <strong>1. Streamlined Task Management    : </strong>
+                    <br/>
+                    Sales teams often juggle multiple tasks, from following up with leads to updating CRM systems. Manually managing these activities can lead to oversight and inefficiencies:
+                    <br/>
+                    <ul>
+                        <li>
+                            <strong>Task Assignment:</strong>  Automation tools assign tasks to the appropriate team members based on predefined rules, ensuring responsibilities are clear and deadlines are met.
+                        </li>
+                        <li>
+                            <strong>Progress Tracking:</strong> Automated systems provide real-time updates on task status, helping teams stay aligned and avoid duplication of efforts.
+                        </li>
+                    </ul>
+                    <strong>2. Improved Communication  </strong>
+                    <br/>
+                    Poor communication between sales team members and other departments, such as marketing and customer support, can result in inconsistent messaging and delayed responses:
+                    <br/>
+                    <ul>
+                        <li>
+                            <strong>Centralized Platforms: </strong> Tools like automated CRMs (Customer Relationship Management) consolidate communication into a single, unified platform where team members can access and share information. This eliminates the need to toggle between multiple tools or rely on fragmented email threads, ensuring everyone is on the same page.
+                        </li>
+                        <li>
+                            <strong>Notifications and Alerts:  </strong>Automated notifications keep team members informed about important updates, such as new leads, changes in customer status, or approaching deadlines. These alerts reduce the risk of missed opportunities and improve response times.
+
+
+                        </li>
+                    </ul>
+                    <strong>3. Enhanced Data Sharing</strong>
+                    <br/>
+                    Fragmented data stored in siloed systems can create barriers to effective collaboration and decision-making:
+                    <br/>
+                    <ul>
+                        <li>
+                            <strong>Integration with CRM Systems:  </strong> Automation enables seamless sharing of customer data across teams, ensuring everyone has a complete view of the sales pipeline.
+                        </li>
+                        <li>
+                            <strong>Real-Time Updates:  </strong>Automated workflows ensure that data is consistently updated, reducing errors and improving the quality of insights available to the team.
+                        </li>
+                    </ul>   
+                    <strong>4. Faster Onboarding for New Team Members</strong>
+                    <br/>
+                    Training new sales team members can be a resource-intensive process, often plagued by inconsistencies in delivery and effectiveness, particularly in larger organizations:
+                    <br/>
+                    <ul>
+                        <li>
+                            <strong> Standardized Processes: </strong>Automated workflows provide clear, step-by-step guides for new hires, ensuring they understand processes and expectations.
+                        </li>
+                        <li>
+                            <strong> Access to Resources:</strong> Automation systems can instantly provide new employees with access to training materials, customer data, and tools.
+                        </li>
+                    </ul>
+                    <strong>5.Increased Accountability</strong>
+                    <br/>
+                    Lack of accountability can lead to missed opportunities and reduced team performance :
+                    <ul>
+                        <li>
+                            <strong> Audit Trails: </strong>  Automated systems track actions taken by team members, providing transparency and accountability.
+                        </li>
+                        <li>
+                            <strong>Performance Metrics: </strong> Workflow automation tools generate reports that highlight individual and team performance, identifying areas for improvement.
+                        </li>
+                    </ul>
+                    <strong>6. Focus on High-Value Activities</strong>
+                    <br/>
+                    Sales teams often spend significant time on repetitive administrative tasks, leaving less time for strategic activities like nurturing relationships and closing deals:
+                    <br/>
+                    <ul>
+                        <li>
+                            <strong>Task Automation:  </strong> By automating routine activities such as data entry, follow-up reminders, and report generation, sales professionals can focus on what they do best—selling.
+                        </li>
+                        <li>
+                            <strong> Pipeline Optimization: </strong> Automation tools help prioritize leads and opportunities, ensuring that team efforts are directed toward the most promising prospects.
+                        </li>
+                    </ul>
+                    <br/>
+                    Workflow automation is a game-changer for sales teams, fostering collaboration, enhancing efficiency, and driving better results. By streamlining tasks, improving communication, and ensuring accountability, automation empowers sales professionals to focus on strategic initiatives that boost revenue and strengthen customer relationships. Investing in the right workflow automation tools is an essential step for any sales team aiming to stay competitive in today’s dynamic market.
+                   </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--footer section start-->
+        <aside class="workflow-guide blog-next-step" aria-label="Related SalesOn workflow"><h2>Put the workflow into practice</h2><p><a href="/field-sales">See the field sales workflow</a> or <a href="/request-demo">book a demo using your own business example</a>.</p><p><a href="/blogs">More SalesOn articles</a> · <a href="/about">About SalesOn</a></p></aside><site-footer><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
+        <!--footer section end-->
+
+    </div>
+
+
+
+    <!--build:js-->
+    <script src="/assets/js/vendors/jquery-3.6.0.min.ce9d07500ad9.js"></script>
+    
+    
+    <script src="/assets/js/min/app.min.c3a6e62360af.js"></script>
+    
+    <!--endbuild-->
+    <script defer src="/assets/js/site-repairs.29824dd6d35a.js"></script>
+<script defer src="/components/site-header.cd8aaee89ecb.js"></script>
+<script defer src="/components/site-footer.0ffd3829fc3f.js"></script>
+<script defer src="/components/whatsapp-float.0e773436a8ab.js"></script>
+<whatsapp-float msg="Hi%20SalesOn%2C%20I%27d%20like%20to%20know%20more%20about%20SalesOn"></whatsapp-float>
+</body>
+</html>

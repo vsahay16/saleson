@@ -1,0 +1,773 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       <!--meta-->
+    <meta name="description"
+    content="Calculate your sales efficiency, ROI, and revenue leakage instantly. Discover hidden sales losses and see how SalesOn’s sales automation improves productivity, tracking, and profitability.">
+
+   <meta name="keywords"
+       content="sales force fsl, order taking app for salesman,simple inventory tracking software ,best salesman management software, app for salesman tracking, best app for salesman tracking, best mobile field sales app ,distributor software, salesman software,payment collection software for salesman, automatic billing software, automatic billing, gst billing, bill software, automatic invoice software, primary sales, secondary sales, mobile billing, gst software, billing book">
+   <meta property="og:url" content="https://saleson.co.in/calculators/sales-leakage-calculator">
+   <meta property="og:title" content="Sales Efficiency & ROI Calculator | Identify Sales Leakage | SalesOn">
+   <meta property="og:description"
+       content="Calculate your sales efficiency, ROI, and revenue leakage instantly. Discover hidden sales losses and see how SalesOn’s sales automation improves productivity, tracking, and profitability.">
+   <meta property="og:image" content="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-arrow-logo-blue.png">
+   <meta property="og:image:alt" content="SalesOn logo">
+   <meta name="twitter:title" content="Sales Efficiency & ROI Calculator | Identify Sales Leakage | SalesOn">
+   <meta name="twitter:card" content="summary">
+   <meta name="twitter:description"
+       content="Calculate your sales efficiency, ROI, and revenue leakage instantly. Discover hidden sales losses and see how SalesOn’s sales automation improves productivity, tracking, and profitability.">
+   <meta name="robots" content="index, follow">
+   <meta property="og:type" content="website">
+   <meta name="googlebot" content="index, follow">
+   <meta name="bingbot" content="index, follow">
+   <meta property="og:locale" content="en_US">
+   
+
+   <!--favicon icon-->
+   <link rel="icon" href="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-favicon.png" type="image/png">
+
+   <!--title-->
+   <title>Sales Efficiency & ROI Calculator | Identify Sales Leakage | SalesOn</title>
+   
+   <!-- DNS Prefetch & Preconnect -->
+   <link rel="preconnect" href="https://cdn.jsdelivr.net">
+   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <script src="/assets/js/vendors/bootstrap.bundle.min.7700f7deec3d.js"></script>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"></noscript>
+    <link rel="preload" href="/css/min/common.min.5d8e1c1559db.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/min/common.min.5d8e1c1559db.css"></noscript>
+    <link rel="preload" href="/css/min/bootstrap-icons.min.df82b4cfba30.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/min/bootstrap-icons.min.df82b4cfba30.css"></noscript>
+    <link rel="preload" href="/css/min/calculator.min.c644262348fa.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/min/calculator.min.c644262348fa.css"></noscript>
+    
+    <style>
+        /*======================
+            03. HEADER SECTION CSS
+            =======================*/
+        .sticky-header {
+            padding: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+        }
+
+        .affix {
+            top: 0;
+            left: 0;
+            margin: auto;
+            position: fixed;
+            width: 100%;
+            z-index: 9999;
+            animation: 300ms ease-in-out fadeInDown;
+            background: var(--bs-dark);
+            padding: 10px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-menu li.nav-item {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            right: auto;
+            left: 50% !important;
+            transform: translate(-50%, 0);
+        }
+
+        .main-menu li.nav-item .dropdown-menu:before {
+            content: '';
+            position: absolute;
+            top: -9px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            transform: translate(-50%, 0) rotate(-315deg);
+            border-radius: 3px;
+            background-color: var(--bs-white);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .main-menu li.nav-item:hover .dropdown-menu:before {
+            opacity: 1;
+        }
+
+        .main-menu li a.nav-link {
+            padding: 0.85rem 1rem;
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+            font-family: var(--bs-font-monospace);
+        }
+
+        .navbar-dark .main-menu li a.nav-link {
+            color: var(--bs-secondary-dark);
+        }
+
+        .navbar-dark .action-btns a.btn-link {
+            color: var(--bs-secondary-dark);
+        }
+
+        .navbar-light .main-menu li a.nav-link,
+        .navbar-light .action-btns a.btn-link,
+        .navbar-dark.sticky-header.affix .main-menu li a.nav-link,
+        .navbar-dark.sticky-header.affix .action-btns a.btn-link {
+            color: var(--body-color);
+        }
+
+        .navbar-light.sticky-header.affix,
+        .navbar-dark.sticky-header.affix {
+            background: var(--bs-white);
+        }
+
+        .navbar-light.sticky-header.affix .btn,
+        .navbar-dark.sticky-header.affix .btn,
+        .bg-dark .btn,
+        .coming-soon-section .btn,
+        .bg-gradient .btn,
+        .coming-soon-section .btn,
+        .navbar-dark .btn-primary {
+            box-shadow: none;
+        }
+
+        .navbar-light .navbar-brand img.logo-white,
+        .navbar-dark .navbar-brand img.logo-color,
+        .navbar-dark.sticky-header.affix .navbar-brand img.logo-white {
+            display: none;
+        }
+
+        .navbar-dark.sticky-header.affix .navbar-toggler span {
+            color: var(--body-color);
+        }
+
+        .navbar-dark.sticky-header.affix .navbar-brand img.logo-color {
+            display: block;
+        }
+
+        .main-menu li a.nav-link:hover,
+        .action-btns a.btn-link:hover,
+        .navbar-dark.sticky-header.affix .main-menu li a.nav-link:hover,
+        .navbar-dark.sticky-header.affix .action-btns a.btn-link:hover {
+            color: var(--bs-primary);
+        }
+
+        .offcanvas-header button.close-btn {
+            background: var(--bs-danger-soft);
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            outline: none;
+            box-shadow: none;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .offcanvas-header button.close-btn i {
+            line-height: 29px;
+        }
+
+        .offcanvas-body .main-menu li a.nav-link {
+            color: var(--body-color);
+            padding: 0.5rem 1rem;
+        }
+
+        .offcanvas-body .main-menu li a.nav-link:hover {
+            color: var(--bs-primary);
+        }
+
+        .offcanvas-body .radius-right-side {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+
+        .offcanvas-body .dropdown-menu {
+            position: relative;
+        }
+
+        .offcanvas-body .dropdown-grid {
+            display: block;
+            width: auto;
+        }
+
+        .offcanvas-body .dropdown-grid-item {
+            width: 100%;
+        }
+
+        .offcanvas-body .dropdown-grid-item.last-item {
+            display: none;
+        }
+
+        @media (max-width: 1199px) {
+            .nav.main-menu {
+                display: block !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .nav.main-menu {
+                display: block;
+            }
+        }
+
+        .dropdown-toggle::after {
+            vertical-align: middle;
+        }
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--bs-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            z-index: 999999;
+        }
+
+        .preloader-icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        .loading-bar {
+            width: 120px;
+            height: 3px;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+            background: var(--bs-white);
+        }
+
+        .loading-bar::before {
+            content: '';
+            width: 35px;
+            height: 3px;
+            background: var(--bs-primary);
+            position: absolute;
+            left: -34px;
+            animation: bluebar 1.5s infinite ease;
+        }
+
+        @keyframes bluebar {
+            50% {
+                left: 96px;
+            }
+        }
+
+        .section-heading {
+            margin-bottom: 50px;
+        }
+
+        @media (min-width: 991px) and (max-width: 1199px) {
+            .action-btns.me-lg-0 {
+                margin-right: 3rem !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .section-heading {
+                margin-bottom: 30px;
+            }
+        }
+
+        /*======================
+            05. HERO SECTION CSS
+            =======================*/
+        .hero-subscribe-form-wrap {
+            max-width: 460px;
+        }
+
+        .hero-bg-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (min-width: 320px) and (max-width: 414px) {
+            .hero-subscribe-form input.btn {
+                position: relative;
+                right: 0;
+                top: 10px;
+                margin-bottom: 15px;
+                transition: all 0.3s ease-in;
+            }
+
+            .hero-subscribe-form input.form-control {
+                padding: 0.75rem 1rem;
+            }
+        }
+
+        .hero-screen-wrap {
+            display: flex;
+            align-items: flex-end;
+            margin-right: -120px;
+        }
+
+        @media (min-width: 1480px) and (max-width: 1836px) {
+            .hero-screen-wrap {
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 1479px) {
+            .hero-screen-wrap {
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            .hero-screen-wrap {
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    </style>
+    <link rel="canonical" href="https://saleson.co.in/calculators/sales-leakage-calculator">
+    <link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css">
+</head>
+<body>
+     <!--preloader start-->
+    <div id="preloader" style="min-height: 100vh;">
+        <div class="preloader-wrap">
+            <img src="/assets/img/salesOn.svg" alt="logo" class="img-fluid preloader-icon" width="60" height="60" />
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+    <!--preloader end-->
+    <div class="main-wrapper">
+        <site-header><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header>
+        <section class="ptb-70">
+            <div class="row page-header">
+                <h1>Sales Efficiency, ROI & Sales Leakage Calculator for Businesses </h1>
+                <p>Identify and quantify revenue loss opportunities</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <div class="progress-indicator">
+                            <span class="progress-dot active" id="dot1"></span>
+                            <span class="progress-dot" id="dot2"></span>
+                        </div>
+
+                        <!-- Screen 1: Basic Information -->
+                        <div id="screen1" class="screen active">
+                            <div class="calculator-card">
+                                <h3 class="section-title">Basic Information</h3>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Monthly Revenue/Sales (INR)</label>
+                                        <input type="number" class="form-control" id="MR" placeholder="e.g. 100000">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Gross Margin (%)</label>
+                                        <input type="number" class="form-control" id="GM" placeholder="e.g. 30" min="0" max="100" step="0.1">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Number of Sales Reps</label>
+                                        <input type="number" class="form-control" id="REPS" placeholder="e.g. 5" min="1">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Average Order Value (INR)</label>
+                                        <input type="number" class="form-control" id="AOV" placeholder="e.g. 500">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Working Days per Month</label>
+                                        <input type="number" class="form-control" id="WRK_DAYS" value="22" min="1">
+                                    </div>
+                                </div>
+                                <div class="text-end mt-4">
+                                    <button class="btn btn-primary" id="nextBtn">Next →</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Screen 2: Leakage Factors -->
+                        <div id="screen2" class="screen">
+                            <div class="calculator-card">
+                                <h3 class="section-title">Leakage Factors</h3>
+                                
+                                <!-- Assumptions Section -->
+                                <div class="category-section">
+                                    <!-- <div class="category-title">Assumptions (Modifiable)</div> -->
+                                    <div class="assumptions-badge">
+                                        <strong>Note:</strong> These assumptions are used in calculations. Adjust them based on your business context.
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="slider-container">
+                                                <div class="slider-label">
+                                                    <label class="form-label">Avg Time per Visit (hrs)</label>
+                                                    <span class="slider-value" id="AVG_TIME_PER_VISIT_display">0.5</span>
+                                                </div>
+                                                <input type="number" class="form-control" id="AVG_TIME_PER_VISIT" value="0.5" step="0.1" min="0.1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="slider-container">
+                                                <div class="slider-label">
+                                                    <label class="form-label">Order Conversion (%)</label>
+                                                    <span class="slider-value" id="ORDER_CONVERSION_display">60%</span>
+                                                </div>
+                                                <input type="range" id="ORDER_CONVERSION" min="10" max="100" value="60" step="1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="slider-container">
+                                                <div class="slider-label">
+                                                    <label class="form-label">Stockout Loss Factor (%)</label>
+                                                    <span class="slider-value" id="STOCKOUT_LOSS_FACTOR_display">40%</span>
+                                                </div>
+                                                <input type="range" id="STOCKOUT_LOSS_FACTOR" min="10" max="100" value="40" step="1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Field Discipline -->
+                                <div class="category-section">
+                                    <div class="category-title">📍 Field Discipline</div>
+                                    <div class="slider-container">
+                                        <div class="slider-label">
+                                            <label class="form-label">Average Visits per Day</label>
+                                            <span class="slider-value" id="AVG_VISITS_PER_DAY_display">8</span>
+                                        </div>
+                                        <input type="number" class="form-control" id="AVG_VISITS_PER_DAY" value="8" min="1">
+                                    </div>
+                                    <div class="slider-container">
+                                        <div class="slider-label">
+                                            <label class="form-label">Missed Visits (%)</label>
+                                            <span class="slider-value" id="MISSED_VISIT_display">10%</span>
+                                        </div>
+                                        <input type="range" id="MISSED_VISIT" min="0" max="50" value="10" step="0.1">
+                                    </div>
+                                    <div class="slider-container">
+                                        <div class="slider-label">
+                                            <label class="form-label">Delayed Orders (%)</label>
+                                            <span class="slider-value" id="DELAYED_ORDER_display">15%</span>
+                                        </div>
+                                        <input type="range" id="DELAYED_ORDER" min="0" max="50" value="15" step="0.1">
+                                    </div>
+                                </div>
+
+                                <!-- Follow-ups -->
+                                <div class="category-section">
+                                    <div class="category-title">📞 Follow-ups</div>
+                                    <div class="slider-container">
+                                        <div class="slider-label">
+                                            <label class="form-label">Missed Follow-ups (%)</label>
+                                            <span class="slider-value" id="MISSED_FOLLOWUP_display">20%</span>
+                                        </div>
+                                        <input type="range" id="MISSED_FOLLOWUP" min="0" max="50" value="20" step="0.1">
+                                    </div>
+                                    <div class="slider-container">
+                                        <div class="slider-label">
+                                            <label class="form-label">Lost Accounts per Month</label>
+                                            <span class="slider-value" id="LOST_ACCOUNTS_PER_MONTH_display">5</span>
+                                        </div>
+                                        <input type="number" class="form-control" id="LOST_ACCOUNTS_PER_MONTH" value="5" min="0">
+                                    </div>
+                                </div>
+
+                                <!-- Operations -->
+                                <div class="category-section">
+                                    <div class="category-title">⚙️ Operations</div>
+                                    <div class="slider-container">
+                                        <div class="slider-label">
+                                            <label class="form-label">Order Error Rate (%)</label>
+                                            <span class="slider-value" id="ORDER_ERROR_display">5%</span>
+                                        </div>
+                                        <input type="range" id="ORDER_ERROR" min="0" max="30" value="5" step="0.1">
+                                    </div>
+                                    <div class="slider-container">
+                                        <div class="slider-label">
+                                            <label class="form-label">Returns (%)</label>
+                                            <span class="slider-value" id="RETURN_display">8%</span>
+                                        </div>
+                                        <input type="range" id="RETURN" min="0" max="30" value="8" step="0.1">
+                                    </div>
+                                    <div class="slider-container">
+                                        <div class="slider-label">
+                                            <label class="form-label">Stock-out Rate (%)</label>
+                                            <span class="slider-value" id="STOCKOUT_display">12%</span>
+                                        </div>
+                                        <input type="range" id="STOCKOUT" min="0" max="50" value="12" step="0.1">
+                                    </div>
+                                    <div class="slider-container">
+                                        <div class="slider-label">
+                                            <label class="form-label">Non-Productive Hours per Day</label>
+                                            <span class="slider-value" id="NON_PRODUCTIVE_HRS_PER_DAY_display">2</span>
+                                        </div>
+                                        <input type="number" class="form-control" id="NON_PRODUCTIVE_HRS_PER_DAY" value="2" min="0" max="8" step="0.1">
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button class="btn btn-secondary" id="backBtn">← Back</button>
+                                    <button class="btn btn-primary" id="calculateBtn">Calculate Leakage</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dashboard -->
+                        <div id="dashboard" class="dashboard">
+                            <div class="dashboard-header">
+                                <h2 class="text-white">Revenue Leakage Analysis</h2>
+                                <p class="mb-0">Based on your current operational metrics</p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="metric-card revenue">
+                                        <div class="metric-icon">📉</div>
+                                        <div class="metric-label">Monthly Revenue Leakage</div>
+                                        <div class="metric-value" id="dash_monthly_revenue">$0</div>
+                                        <div class="metric-subtext">Lost sales opportunity per month</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="metric-card profit">
+                                        <div class="metric-icon">💰</div>
+                                        <div class="metric-label">Monthly Profit Leakage</div>
+                                        <div class="metric-value" id="dash_monthly_profit">$0</div>
+                                        <div class="metric-subtext">Lost profit after margins</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="metric-card time">
+                                        <div class="metric-icon">⏱️</div>
+                                        <div class="metric-label">Selling Hours Wasted</div>
+                                        <div class="metric-value" id="dash_hours_wasted">0 hrs</div>
+                                        <div class="metric-subtext">Unproductive time per month</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="metric-card yearly">
+                                        <div class="metric-icon">📅</div>
+                                        <div class="metric-label">Annual Impact</div>
+                                        <div class="metric-value" id="dash_yearly">$0</div>
+                                        <div class="metric-subtext">Total yearly revenue leakage</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="breakdown-section">
+                                <div class="breakdown-title"> Leakage Breakdown</div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">A. Visit & Beat Discipline Loss</span>
+                                    <span class="breakdown-value" id="break_visit">$0</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">B. Follow-up Failure Loss</span>
+                                    <span class="breakdown-value" id="break_followup">$0</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">C. Delayed Order Loss</span>
+                                    <span class="breakdown-value" id="break_delayed">$0</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">D. Account Churn Loss</span>
+                                    <span class="breakdown-value" id="break_churn">$0</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">E. Wrong Order & Return Leakage</span>
+                                    <span class="breakdown-value" id="break_error">$0</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">F. Time Wastage Loss</span>
+                                    <span class="breakdown-value" id="break_time">$0</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">G. Stock-out Loss</span>
+                                    <span class="breakdown-value" id="break_stockout">$0</span>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button class="btn btn-secondary" id="recalculateBtn">← Recalculate</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+            </div>
+        </section>
+        <section class="ptb-35">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-md-10">
+                         <div class="section-heading mb-0">
+                                <h2 class="mb-4 text-center">What is Sales Efficiency and why does it matter ?</h2>
+                                <p class="fs-6">
+                                    Sales efficiency means how effectively your field sales team converts time, visits, and leads into real orders and revenue. Higher sales efficiency reduces sales leakage, cuts follow-up losses, and helps distributors and manufacturers close more business with the same resources. With field sales automation software, businesses gain real-time visibility, faster execution, and measurable growth in B2B sales performance.
+                                </p>
+                         </div>
+                    </div>
+                </div>        
+            </div>
+        </section>
+        <section class="ptb-35">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-md-10">
+                         <div class="section-heading mb-0">
+                                <h2 class="mb-4 text-center">How does field sales automation power efficiency?</h2>
+                                <p class="fs-6">
+                                    <ul>
+                                        <li><b><a href="/salesman-tracking" target="_blank">Real-time field visibility :</a></b> Track visits, orders, and team activity live to eliminate blind spots and reduce sales leakage.</li>
+                                        <li><b><a href="/order-taking-app" target="_blank">Faster order processing : </a></b> Digital order booking cuts delays, errors, and missed sales opportunities.</li> 
+                                        <li><b><a href="/field-sales" target="_blank">Stronger follow-ups : </a></b> Automated reminders and customer history ensure no lead or retailer is forgotten.</li>
+                                        <li><b><a href="/target-meter" target="_blank">Higher field productivity : </a></b> Route planning, beat management, and performance tracking help reps sell more in the same time.</li>
+                                        <li><b><a href="/distribution-management-system" target="_blank">Better distributor control : </a></b> Monitor secondary sales, stock movement, and market execution from one dashboard.</li>
+                                        <li><b><a href="/" target="_blank">Data-driven decisions : </a></b> Accurate reports reveal exactly where revenue is lost and where efficiency can be improved.</li>
+                                    </ul>
+                                </p>
+                         </div>
+                    </div>
+                </div>        
+            </div>
+        </section>
+        <section class="ptb-35">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-md-10">
+                         <div class="section-heading mb-0">
+                                <h2 class="mb-4 text-center">How does poor sales management impact revenue ?</h2>
+                                <p class="fs-6">
+                                    Poor sales management leads to missed follow-ups, untracked field activity, and zero visibility into what’s really happening on the ground — directly causing revenue leakage. For distributors and manufacturers, this means lost orders, slower cash flow, and low sales productivity. A field sales automation system fixes these gaps by bringing structure, accountability, and real-time control to B2B sales operations.
+                                </p>
+                         </div>
+                    </div>
+                </div>        
+            </div>
+        </section>
+        <section class="ptb-35">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-md-10">
+                         <div class="section-heading mb-0">
+                                <h2 class="mb-4 text-center">How to identify sales leakage hidden in your business ?</h2>
+                                <p class="fs-6">
+                                    Sales leakage hides in places like missed follow-ups, unreported market visits, delayed orders, and unmanaged distributors. If you don’t have real-time data on field activity, orders, and conversions, revenue is silently slipping away. A field sales automation platform helps identify these gaps clearly and shows exactly where your B2B sales efficiency is being lost.
+                                </p>
+                         </div>
+                    </div>
+                </div>        
+            </div>
+        </section>
+
+        <section class="ptb-35">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-md-10">
+                         <div class="section-heading mb-0">
+                                <h2 class="mb-4 text-center">Calculate your sales ROI instantly</h2>
+                                <p class="fs-6">
+                                    Use our sales leakage calculator to instantly estimate how much revenue your business can recover by improving sales efficiency. See the direct ROI of field sales automation in reducing losses, boosting order conversion, and increasing B2B sales productivity. Built for distributors and manufacturers who want clear numbers, not guesswork.
+                                </p>
+                         </div>
+                    </div>
+                </div>        
+            </div>
+        </section>
+
+        <section class="ptb-35">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-md-10">
+                         <div class="section-heading mb-0">
+                                <h2 class="mb-4 text-center">How SalesOn helps reduce sales leakage ?</h2>
+                                <p class="fs-6">
+                                    SalesOn plugs the gaps in your sales process by replacing manual errors and forgotten follow-ups with rock-solid field sales automation. For distributors and manufacturers, "sales leakage" often happens through lost order sheets or inefficient route planning; our platform ensures every lead is captured and every customer visit is maximized. By providing <a href="/salesman-tracking" target="_blank">real-time visibility</a> and <a href="/" target="_blank">automated workflows</a>, SalesOn boosts your sales efficiency, turning missed opportunities into consistent, predictable revenue.
+                                </p>
+                         </div>
+                    </div>
+                </div>        
+            </div>
+        </section>
+
+        
+        <section class="ptb-35">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-md-10">
+                        <div class="faq-container">
+                            <div class="faq-header">
+                                <h2>Frequently Asked Questions</h1>
+                                <p> Find answers to common questions below</p>
+                            </div>
+                    
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h3>What services do you offer?</h3>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>We provide a comprehensive range of professional services tailored to meet your business needs. Our offerings include consulting, project management, strategic planning, and custom solutions designed to help you achieve your goals efficiently and effectively.</p>
+                                </div>
+                            </div>
+                    
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h3>How long does the typical project take?</h3>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Project timelines vary depending on scope and complexity. A typical project takes between 4 to 12 weeks from initial consultation to completion. We'll provide you with a detailed timeline during our discovery phase and keep you updated throughout the entire process.</p>
+                                </div>
+                            </div>
+                    
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h3>What are your pricing options?</h3>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>We offer flexible pricing structures to accommodate different needs and budgets. Options include hourly rates, fixed-price projects, and monthly retainer packages. Contact us for a personalized quote based on your specific requirements and project scope.</p>
+                                </div>
+                            </div>
+                    
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h3>How do I get started?</h3>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Getting started is simple! Reach out to us through our contact form, email, or phone. We'll schedule an initial consultation to discuss your needs, answer your questions, and determine the best approach for your project. From there, we'll create a customized proposal for your review.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+     <!--footer section start-->
+     <site-footer><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
+     <!--footer section end-->
+    </div>
+    <script src="/assets/js/vendors/jquery-3.6.0.min.ce9d07500ad9.js"></script>
+    <script src="/assets/js/min/app.min.c3a6e62360af.js" async></script>
+    
+    <script src="/assets/js/sales-leakage-calculator.min.72b676868912.js" defer></script>
+    <script defer src="/assets/js/site-repairs.29824dd6d35a.js"></script>
+<script defer src="/components/site-header.cd8aaee89ecb.js"></script>
+<script defer src="/components/site-footer.0ffd3829fc3f.js"></script>
+<script defer src="/components/whatsapp-float.0e773436a8ab.js"></script>
+<whatsapp-float msg="Hi%20SalesOn%2C%20I%27d%20like%20to%20know%20more%20about%20SalesOn"></whatsapp-float>
+</body>
+</html>
+

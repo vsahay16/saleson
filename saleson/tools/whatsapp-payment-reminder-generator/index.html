@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Free WhatsApp Payment Reminder Generator | SalesOn</title>
+<meta content="Generate polite WhatsApp payment reminders for pending invoices, overdue payments, partial payments and credit customers. Free tool by SalesOn." name="description"/>
+
+<link rel="icon" type="image/png" href="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-favicon.png"/>
+<link rel="alternate" hreflang="en-IN" href="https://saleson.co.in/tools/whatsapp-payment-reminder-generator"/>
+<link rel="alternate" hreflang="x-default" href="https://saleson.co.in/tools/whatsapp-payment-reminder-generator"/>
+<meta content="Free WhatsApp Payment Reminder Generator | SalesOn" property="og:title"/>
+<meta content="Generate polite WhatsApp payment reminders for pending invoices, overdue payments, partial payments and credit customers. Free tool by SalesOn." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta property="og:url" content="https://saleson.co.in/tools/whatsapp-payment-reminder-generator">
+<meta content="https://saleson.co.in/tools/assets/saleson-free-tools-og.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="SalesOn Free Business Tools" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@salesonsoftware" name="twitter:site"/>
+<meta content="https://saleson.co.in/tools/assets/saleson-free-tools-og.jpg" name="twitter:image"/>
+<meta content="index, follow" name="robots"/>
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this WhatsApp payment reminder generator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This WhatsApp payment reminder generator is completely free to use. No account, no subscription, no credit card required. You can generate and copy professional payment reminders at no cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I generate payment reminders in Hindi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can generate payment reminders in English, Hindi, Hinglish, or a combined English + Hindi format. Select your preferred language from the Message Settings section."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I send the message directly on WhatsApp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Enter the customer's WhatsApp number and click Open WhatsApp. The tool will open WhatsApp with the pre-filled message. The message opens in WhatsApp for you to review and send — it is never sent automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I create reminders for overdue invoices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Enter the due date and the tool automatically calculates how many days overdue the payment is. The tone of the message adjusts automatically — polite for early reminders, firm for overdue payments, and urgent for long-pending dues."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I generate polite and firm payment reminders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can choose from 5 tones: Polite, Friendly, Firm, Urgent, and Final Reminder. The tool also suggests the appropriate tone based on how many days overdue the payment is."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can distributors and wholesalers use this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This WhatsApp payment reminder tool is built specifically for Indian distributors, wholesalers, manufacturers, FMCG companies, pharma distributors and MSMEs who manage credit sales and outstanding payments from retailers and dealers."
+      }
+    }
+  ]
+}
+</script>
+<script src="/assets/js/min/common.min.5c2663c0cd10.js"></script>
+<script src="/assets/js/min/tool-handoff.min.312be650f7d3.js"></script>
+<link href="/css/min/common-new.min.f637cbb1ad10.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+      --wa-green: #25d366;
+      --wa-dark: #128c7e;
+      --wa-bg: #e5ddd5;
+      --wa-bubble: #dcf8c6;
+  }
+     /* ── HERO ── */
+ .hero {
+      padding: 72px 0 64px;
+      background: radial-gradient(circle at 20% 20%, #eef2fc 0%, #ffffff 45%, #dde6f9 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 760px; }
+    .hero-eyebrow {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 5px 12px; border-radius: 100px;
+      font-size: 11.5px; font-weight: 700; letter-spacing: .03em;
+    }
+    .badge-green  { background: rgba(5,150,105,.2);  color: #489f7d; border: 1px solid rgba(5,150,105,.3); }
+    .badge-blue   { background: rgba(26,86,219,.25); color: #3f73ae; border: 1px solid rgba(26,86,219,.4); }
+    .badge-amber  { background: rgba(217,119,6,.2);  color: #bc971b; border: 1px solid rgba(217,119,6,.3); }
+    .badge-white  { background: rgba(255,255,255,.1); color: rgb(106 101 101 / 100%); border: 1px solid rgb(106 101 101 / 100%); }
+
+    .hero-h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.17; margin-bottom: 18px;
+    }
+    .hero-h1 em { font-style: italic; color: var(--brand); }
+    .hero-sub {
+      font-size: 16px; line-height: 1.78;
+      max-width: 600px; margin-bottom: 36px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    /* ══════════════════════════════
+       TOOL LAYOUT: FORM + PREVIEW
+       ══════════════════════════════ */
+    .tool-wrap {
+      display: grid;
+      grid-template-columns: 460px 1fr;
+      gap: 28px;
+      align-items: start;
+      padding: 28px 0 48px;
+    }
+
+    /* ── FORM PANEL ── */
+    .form-panel {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .form-panel-header {
+      background: var(--wa-dark);
+      padding: 16px 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .fph-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 17px; color: var(--white);
+    }
+    .fph-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .fph-btn {
+      background: rgba(255,255,255,.2); color: var(--white);
+      border: 1px solid rgba(255,255,255,.3); border-radius: 6px;
+      padding: 5px 12px; font-size: 12px; font-weight: 700;
+      cursor: pointer; transition: background .15s; font-family: 'DM Sans', sans-serif;
+    }
+    .fph-btn:hover { background: rgba(255,255,255,.35); }
+
+    /* Collapsible form sections */
+    .form-section { border-bottom: 1px solid var(--border); }
+    .form-section:last-child { border-bottom: none; }
+    .form-section-head {
+      width: 100%; background: none; border: none;
+      padding: 14px 20px; text-align: left; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 13.5px; font-weight: 700; color: var(--ink);
+      font-family: 'DM Sans', sans-serif; transition: background .15s;
+    }
+    .form-section-head:hover { background: var(--surface); }
+    .form-section-head .sec-icon { font-size: 15px; margin-right: 8px; }
+    .form-section-head .sec-label { flex: 1; display: flex; align-items: center; }
+    .form-section-head .chevron { font-size: 10px; color: var(--ink-mute); transition: transform .2s; }
+    .form-section-head.open .chevron { transform: rotate(180deg); }
+    .form-section-body { display: none; padding: 0 20px 20px; }
+    .form-section-body.open { display: block; }
+
+    /* Form inputs */
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+    .form-row.full { grid-template-columns: 1fr; }
+    label {
+      font-size: 11px; font-weight: 700; color: var(--ink-mute);
+      text-transform: uppercase; letter-spacing: .06em;
+      display: block; margin-bottom: 5px;
+    }
+    .fi {
+      border: 1.5px solid var(--border) !important; border-radius: var(--radius-sm);
+      padding: 9px 12px; font-size: 13.5px; font-family: 'DM Sans', sans-serif;
+      color: var(--ink); outline: none; width: 100%; transition: border-color .15s;
+      background: var(--white);
+    }
+    .fi:focus { border-color: var(--brand); }
+    select.fi {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237a8898' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 10px center;
+      padding-right: 28px; cursor: pointer;
+    }
+
+    /* Status pill */
+    .status-pill {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 700;
+      margin-top: 6px;
+    }
+    .status-soon    { background: var(--brand-light); color: var(--brand); }
+    .status-today   { background: var(--amber-light); color: var(--amber); }
+    .status-overdue { background: #fff7ed; color: #c2410c; }
+    .status-long    { background: #fef2f2; color: #b91c1c; }
+    .status-critical{ background: #fef2f2; color: #7f1d1d; font-size: 11.5px; }
+
+    /* Toggle */
+    .toggle-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .toggle-label { font-size: 13px; font-weight: 600; color: var(--ink-soft); }
+    .toggle { position: relative; width: 40px; height: 22px; }
+    .toggle input { opacity: 0; width: 0; height: 0; }
+    .toggle-slider {
+      position: absolute; inset: 0; background: var(--border);
+      border-radius: 100px; cursor: pointer; transition: background .2s;
+    }
+    .toggle-slider::after {
+      content: ''; position: absolute; width: 16px; height: 16px;
+      border-radius: 50%; background: white; top: 3px; left: 3px; transition: transform .2s;
+    }
+    .toggle input:checked + .toggle-slider { background: var(--wa-green); }
+    .toggle input:checked + .toggle-slider::after { transform: translateX(18px); }
+
+    /* Form action buttons */
+    .form-actions { padding: 16px 20px; border-top: 1px solid var(--border); display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn-action {
+      flex: 1; min-width: 90px; padding: 11px 12px;
+      border-radius: var(--radius-sm); font-size: 13px; font-weight: 700;
+      cursor: pointer; transition: all .15s; border: none;
+      font-family: 'DM Sans', sans-serif; text-align: center;
+    }
+    .btn-copy  { background: var(--wa-green); color: white; }
+    .btn-copy:hover  { background: var(--wa-dark); }
+    .btn-wa    { background: var(--brand); color: white; }
+    .btn-wa:hover    { background: var(--brand-dark); }
+    .btn-seq   { background: var(--amber-light); color: var(--amber); border: 1px solid rgba(217,119,6,.2); }
+    .btn-seq:hover   { background: var(--amber); color: white; }
+    .btn-reset { background: var(--surface); color: var(--ink-mute); border: 1.5px solid var(--border); }
+    .btn-reset:hover { border-color: #dc2626; color: #dc2626; }
+
+    /* Small utility buttons */
+    .btn-sm {
+      padding: 6px 12px; border-radius: var(--radius-sm);
+      font-size: 12px; font-weight: 700; font-family: 'DM Sans', sans-serif;
+      cursor: pointer; border: none; transition: all .15s;
+    }
+    .btn-sm-green { background: var(--green-light); color: var(--green); }
+    .btn-sm-green:hover { background: var(--green); color: white; }
+    .btn-sm-blue  { background: var(--brand-light); color: var(--brand); }
+    .btn-sm-blue:hover  { background: var(--brand); color: white; }
+    .btn-sm-wa    { background: var(--wa-green); color: white; }
+    .btn-sm-wa:hover    { background: var(--wa-dark); }
+    .btn-sm-amber { background: var(--amber-light); color: var(--amber); }
+    .btn-sm-amber:hover { background: var(--amber); color: white; }
+
+    /* ═══════════════════════════════════════
+       PREVIEW PANEL — WhatsApp-style
+       ═══════════════════════════════════════ */
+    .preview-panel { position: sticky; top: 80px; }
+    .preview-panel-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .pp-title { font-size: 13px; font-weight: 700; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .06em; }
+
+    /* WhatsApp phone frame */
+    .wa-phone-frame {
+      background: var(--wa-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+    }
+    .wa-phone-bar {
+      background: var(--wa-dark);
+      padding: 12px 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .wa-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,.25);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; flex-shrink: 0;
+    }
+    .wa-contact-info { flex: 1; }
+    .wa-contact-name { font-size: 14px; font-weight: 700; color: white; }
+    .wa-contact-status { font-size: 11px; color: rgba(255,255,255,.65); }
+    .wa-phone-body { padding: 16px; min-height: 200px; }
+    .wa-bubble {
+      background: var(--wa-bubble);
+      border-radius: 8px 8px 0 8px;
+      padding: 12px 14px;
+      margin-bottom: 4px;
+      box-shadow: 0 1px 2px rgba(0,0,0,.12);
+      font-size: 14px; line-height: 1.7; color: #111;
+      max-width: 95%; margin-left: auto;
+      white-space: pre-wrap; word-break: break-word;
+      position: relative;
+    }
+    .wa-bubble::after {
+      content: '';
+      position: absolute; right: -7px; bottom: 0;
+      border: 8px solid transparent;
+      border-bottom-color: var(--wa-bubble);
+      border-right: none; border-top: none;
+    }
+    .wa-bubble-meta {
+      text-align: right; font-size: 11px; color: var(--ink-mute);
+      margin-top: 4px; margin-right: 2px;
+    }
+    .wa-tick { color: #53bdeb; font-size: 12px; }
+
+    /* Variation selector */
+    .variation-tabs {
+      display: flex; gap: 6px; flex-wrap: wrap;
+      padding: 12px 16px; background: rgba(0,0,0,.04);
+      border-bottom: 1px solid rgba(0,0,0,.08);
+    }
+    .var-tab {
+      padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600;
+      cursor: pointer; border: 1.5px solid rgba(0,0,0,.15);
+      background: white; color: var(--ink-soft); transition: all .15s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .var-tab.active { background: var(--wa-dark); border-color: var(--wa-dark); color: white; }
+    .var-tab:hover:not(.active) { border-color: var(--wa-dark); color: var(--wa-dark); }
+
+    /* Preview action row */
+    .wa-actions {
+      padding: 12px 16px; background: rgba(0,0,0,.04);
+      border-top: 1px solid rgba(0,0,0,.08);
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+
+    /* Extra output cards */
+    .output-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius); margin-top: 16px; overflow: hidden;
+    }
+    .output-card-header {
+      background: var(--surface); padding: 12px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+    .output-card-title { font-size: 13px; font-weight: 700; color: var(--ink); }
+    .output-card-body { padding: 16px; }
+
+    /* Follow-up sequence card */
+    .seq-item {
+      padding: 12px 0; border-bottom: 1px solid var(--border);
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .seq-item:last-child { border-bottom: none; }
+    .seq-badge {
+      flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
+      background: var(--brand-light); color: var(--brand);
+      font-size: 12px; font-weight: 800; display: flex;
+      align-items: center; justify-content: center;
+    }
+    .seq-label { font-size: 11.5px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+    .seq-msg { font-size: 12.5px; color: var(--ink-soft); line-height: 1.65; margin-bottom: 6px; white-space: pre-wrap; }
+    .seq-actions { display: flex; gap: 6px; }
+
+    /* Call script */
+    .call-step {
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+      font-size: 13px; color: var(--ink-soft); line-height: 1.7;
+    }
+    .call-step:last-child { border-bottom: none; }
+    .call-step-label { font-size: 11px; font-weight: 700; color: var(--brand); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 3px; }
+
+    /* Disclaimer banner */
+    .disclaimer-banner {
+      background: var(--amber-light); border: 1px solid rgba(217,119,6,.2);
+      border-radius: var(--radius-sm); padding: 10px 16px;
+      font-size: 12.5px; color: var(--amber); line-height: 1.6;
+      margin-top: 12px;
+    }
+
+    /* ══════════
+       LEAD MODAL
+       ══════════ */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 500;
+      background: rgba(15,22,35,.6); backdrop-filter: blur(4px);
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-card {
+      background: var(--white); border-radius: 20px;
+      max-width: 540px; width: 100%;
+      box-shadow: 0 24px 80px rgba(0,0,0,.3);
+      overflow: hidden; max-height: 90vh; overflow-y: auto;
+    }
+    .modal-header { background: var(--wa-dark); padding: 22px 24px; }
+    .modal-title { font-family: 'DM Serif Display', serif; font-size: 20px; color: white; margin-bottom: 4px; }
+    .modal-sub { font-size: 13px; color: rgba(255,255,255,.72); line-height: 1.6; }
+    .modal-body { padding: 24px; }
+    .modal-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .modal-row.full { grid-template-columns: 1fr; }
+    .modal-input {
+      border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+      padding: 10px 14px; font-size: 13.5px; font-family: 'DM Sans', sans-serif;
+      color: var(--ink); outline: none; width: 100%; transition: border-color .15s;
+    }
+    .modal-input:focus { border-color: var(--brand); }
+    .modal-actions { display: flex; gap: 10px; margin-top: 16px; }
+    .btn-modal-primary {
+      flex: 1; background: var(--wa-green); color: white; border: none;
+      border-radius: 10px; padding: 13px 16px;
+      font-size: 14px; font-weight: 700; cursor: pointer;
+      font-family: 'DM Sans', sans-serif; transition: background .18s;
+    }
+    .btn-modal-primary:hover { background: var(--wa-dark); }
+    .btn-modal-demo {
+      flex: 1; background: var(--brand); color: white; border: none;
+      border-radius: 10px; padding: 13px 16px;
+      font-size: 14px; font-weight: 700; cursor: pointer;
+      font-family: 'DM Sans', sans-serif; transition: background .18s;
+    }
+    .btn-modal-demo:hover { background: var(--brand-dark); }
+    .modal-skip { text-align: center; margin-top: 10px; }
+    .modal-skip a { font-size: 12.5px; color: var(--ink-mute); cursor: pointer; text-decoration: underline; }
+
+    /* ══════════════════
+       UPSELL + SEO
+       ══════════════════ */
+    .section-label { font-size: 11.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--brand); display: block; margin-bottom: 10px; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(22px, 3vw, 34px); color: var(--ink); line-height: 1.22; margin-bottom: 14px; }
+    .section-title em { font-style: italic; color: var(--brand); }
+    .section-sub { font-size: 15px; color: var(--ink-mute); line-height: 1.7; max-width: 600px; }
+    .check-dot {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--green-light); color: var(--green);
+      font-size: 10px; font-weight: 800;
+      display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 20px 0 24px; }
+    .feature-list li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink-soft); }
+    .btn-demo {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--brand); color: var(--white);
+      padding: 13px 28px; border-radius: 10px;
+      font-size: 15px; font-weight: 700; text-decoration: none;
+      transition: background .18s, transform .1s;
+    }
+    .btn-demo:hover { background: var(--brand-dark); transform: translateY(-1px); }
+    .seo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; margin-top: 40px; }
+    .seo-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px 20px;
+      border-top: 3px solid var(--brand);
+    }
+    .seo-card h3 { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+    .seo-card p  { font-size: 13px; color: var(--ink-mute); line-height: 1.7; }
+    .faq-list { max-width: 720px; margin: 40px auto 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 10px; }
+    .faq-q {
+      width: 100%; background: var(--white); border: none; padding: 18px 20px;
+      text-align: left; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      font-size: 15px; font-weight: 600; color: var(--ink);
+      font-family: 'DM Sans', sans-serif; transition: background .15s;
+    }
+    .faq-q:hover { background: var(--brand-light); }
+    .faq-q.open  { background: var(--brand-light); color: var(--brand); }
+    .faq-chevron {
+      width: 18px; height: 18px; flex-shrink: 0; border-radius: 50%;
+      background: var(--border); display: flex; align-items: center; justify-content: center;
+      font-size: 11px; transition: transform .2s, background .15s;
+    }
+    .faq-q.open .faq-chevron { transform: rotate(180deg); background: var(--brand); color: white; }
+    .faq-a { display: none; padding: 0 20px 20px; font-size: 14px; color: var(--ink-soft); line-height: 1.75; background: var(--brand-light); }
+    .faq-a.open { display: block; }
+    .tools-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .tool-chip {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 100px; padding: 8px 18px;
+      font-size: 13px; font-weight: 600; color: var(--brand);
+      text-decoration: none; transition: all .15s;
+    }
+    .tool-chip:hover { background: var(--brand-light); border-color: var(--brand); }
+
+    /* Footer */
+    .site-footer { background: var(--ink); padding: 40px 24px; text-align: center; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 22px; color: white; margin-bottom: 8px; }
+    .footer-tagline { font-size: 13px; color: rgba(255,255,255,.45); margin-bottom: 20px; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { font-size: 13px; color: rgba(255,255,255,.55); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: white; }
+
+    /* Toast */
+    .toast {
+      position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
+      background: var(--ink); color: white; padding: 10px 20px;
+      border-radius: 100px; font-size: 13.5px; font-weight: 600;
+      box-shadow: var(--shadow-lg); z-index: 600; opacity: 0;
+      transition: opacity .3s; pointer-events: none; white-space: nowrap;
+    }
+    .toast.show { opacity: 1; }
+
+    /* Mobile sticky bar */
+/* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      .tool-wrap { grid-template-columns: 1fr; }
+      .preview-panel { position: static; }
+
+    }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+      .form-actions { flex-direction: column; }
+      .modal-row { grid-template-columns: 1fr; }
+      .modal-actions { flex-direction: column; }
+      .hero { padding: 44px 0 32px; }
+      .section { padding: 56px 0; }
+      .wa-actions { flex-direction: column; }
+    }
+  
+
+/* SalesOn accessibility focus states */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #1a56db;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+
+.footer-social{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.footer-social a{font-size:12px;font-weight:700;color:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:5px 10px;transition:color .2s,border-color .2s}
+.footer-social a:hover{color:#fff;border-color:rgba(255,255,255,.35)}
+
+</style>
+<meta content="Free WhatsApp Payment Reminder Generator | SalesOn" name="twitter:title"/>
+<meta content="Generate polite WhatsApp payment reminders for pending invoices, overdue payments, partial payments and credit customers. Free tool by SalesOn." name="twitter:description"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Free WhatsApp Payment Reminder Generator",
+  "url": "https://saleson.co.in/tools/whatsapp-payment-reminder-generator",
+  "description": "Generate polite WhatsApp payment reminders for pending invoices, overdue and partial payments. Free collection tool by SalesOn.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "SalesOn",
+    "url": "https://saleson.co.in/"
+  },
+  "featureList": "No account required, PDF download, Works on mobile"
+}
+</script>
+    <link rel="canonical" href="https://saleson.co.in/tools/whatsapp-payment-reminder-generator">
+    <link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css">
+</head>
+<body>
+  <site-header source="tools"><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header>
+<aside class="tool-storage-note" role="note">Drafts and saved tool data are stored in this browser. Keep an exported copy before clearing browser data. <a href="/privacy-policy">Privacy policy</a> · <a href="mailto:support@saleson.co.in">Contact support</a></aside>
+<!-- ── HERO ── -->
+<section aria-label="WhatsApp Payment Reminder Generator" class="hero">
+<div class="container">
+<div class="hero-content">
+<div class="hero-eyebrow">
+<span class="badge badge-green">✓ Free · No Signup Required</span>
+<span class="badge badge-blue">💬 WhatsApp Ready</span>
+<span class="badge badge-amber">🇮🇳 Hindi + English</span>
+<span class="badge badge-white">💰 Payment Follow-Up</span>
+</div>
+<h1 class="hero-h1">Free <em>WhatsApp Payment</em><br/>Reminder Generator</h1>
+<p class="hero-sub">Create polite, professional WhatsApp payment reminder messages for pending invoices, overdue bills, partial payments and credit customers. Built for Indian distributors, wholesalers, manufacturers and sales teams.</p>
+</div>
+</div>
+</section>
+<!-- ── TOOL: FORM + PREVIEW ── -->
+<div class="container">
+<div class="tool-wrap" id="toolWrap">
+<!-- ══════════ FORM PANEL ══════════ -->
+<div class="form-panel" id="formPanel">
+<div class="form-panel-header">
+<span class="fph-title">💬 Reminder Details</span>
+<div class="fph-actions">
+<button class="fph-btn" onclick="saveDraft()">💾 Save</button>
+<button class="fph-btn" onclick="loadDraft()">📂 Load</button>
+<button class="fph-btn" onclick="resetForm()" style="background:rgba(220,38,38,.3);border-color:rgba(220,38,38,.4);">↺ Reset</button>
+</div>
+</div>
+<!-- A. BUSINESS DETAILS -->
+<div class="form-section">
+<button class="form-section-head open" onclick="toggleSection(this)">
+<span class="sec-label"><span class="sec-icon">🏢</span> Your Business</span>
+<span class="chevron">▾</span>
+</button>
+<div class="form-section-body open">
+<div class="form-row">
+<div>
+<label>Business Name *</label>
+<input class="fi" id="bizName" oninput="generateMessage()" placeholder="Shree Balaji Distributors" type="text"/>
+</div>
+<div>
+<label>Sender / Collector Name</label>
+<input class="fi" id="senderName" oninput="generateMessage()" placeholder="Ramesh" type="text"/>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>Business Phone (Optional)</label>
+<input class="fi" id="bizPhone" oninput="generateMessage()" placeholder="+91-9876543210" type="tel"/>
+</div>
+<div>
+<label>UPI ID (Optional)</label>
+<input class="fi" id="upiId" oninput="generateMessage()" placeholder="saleson@exampleupi" type="text"/>
+</div>
+</div>
+<div class="form-row full">
+<div>
+<label>Payment Link (Optional)</label>
+<input class="fi" id="paymentLink" oninput="generateMessage()" placeholder="https://razorpay.me/yourbusiness" type="text"/>
+</div>
+</div>
+<div class="form-row full">
+<div>
+<label>Bank Account Details (Optional)</label>
+<input class="fi" id="bankDetails" oninput="generateMessage()" placeholder="A/C: 1234567890 IFSC: SBIN0001234 SBI Patna" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- B. CUSTOMER DETAILS -->
+<div class="form-section">
+<button class="form-section-head open" onclick="toggleSection(this)">
+<span class="sec-label"><span class="sec-icon">🧑‍💼</span> Customer Details</span>
+<span class="chevron">▾</span>
+</button>
+<div class="form-section-body open">
+<div class="form-row">
+<div>
+<label>Customer Name *</label>
+<input class="fi" id="custName" oninput="generateMessage()" placeholder="Mohan" type="text"/>
+</div>
+<div>
+<label>Shop / Company (Optional)</label>
+<input class="fi" id="custShop" oninput="generateMessage()" placeholder="Mohan Retail Store" type="text"/>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>WhatsApp / Mobile *</label>
+<input class="fi" id="custPhone" oninput="generateMessage()" placeholder="9876543210" type="tel"/>
+</div>
+<div>
+<label>City (Optional)</label>
+<input class="fi" id="custCity" oninput="generateMessage()" placeholder="Patna" type="text"/>
+</div>
+</div>
+<div class="form-row full">
+<div>
+<label>Customer Type</label>
+<select class="fi" id="custType" onchange="generateMessage()">
+<option value="Retailer">Retailer</option>
+<option value="Distributor">Distributor</option>
+<option value="Wholesaler">Wholesaler</option>
+<option value="Dealer">Dealer</option>
+<option value="Vendor">Vendor</option>
+<option value="Service Client">Service Client</option>
+<option value="Other">Other</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- C. PAYMENT DETAILS -->
+<div class="form-section">
+<button class="form-section-head open" onclick="toggleSection(this)">
+<span class="sec-label"><span class="sec-icon">💰</span> Payment Details</span>
+<span class="chevron">▾</span>
+</button>
+<div class="form-section-body open">
+<div class="form-row">
+<div>
+<label>Payment Against</label>
+<select class="fi" id="paymentAgainst" onchange="generateMessage()">
+<option value="GST Invoice">GST Invoice</option>
+<option value="Sales Order">Sales Order</option>
+<option value="Delivery">Delivery</option>
+<option value="Credit Sale">Credit Sale</option>
+<option value="Partial Payment">Partial Payment</option>
+<option value="Advance Pending">Advance Pending</option>
+<option value="Old Outstanding">Old Outstanding</option>
+<option value="Multiple Invoices">Multiple Invoices</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<div>
+<label>Invoice / Order Number</label>
+<input class="fi" id="invNumber" oninput="generateMessage()" placeholder="INV-2026-001" type="text"/>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>Invoice Date</label>
+<input class="fi" id="invDate" oninput="generateMessage()" type="date"/>
+</div>
+<div>
+<label>Due Date *</label>
+<input class="fi" id="dueDate" oninput="updateDaysOverdue();generateMessage()" type="date"/>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>Pending Amount (₹) *</label>
+<input class="fi" id="pendingAmount" min="0" oninput="generateMessage()" placeholder="12500" type="number"/>
+</div>
+<div>
+<label>Total Invoice Amount (₹)</label>
+<input class="fi" id="totalAmount" min="0" oninput="generateMessage()" placeholder="25000" type="number"/>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>Already Paid (₹)</label>
+<input class="fi" id="paidAmount" min="0" oninput="generateMessage()" placeholder="12500" type="number"/>
+</div>
+<div>
+<label>Payment Mode Accepted</label>
+<select class="fi" id="paymentMode" onchange="generateMessage()">
+<option value="Any Mode">Any Mode</option>
+<option value="UPI">UPI</option>
+<option value="Bank Transfer">Bank Transfer</option>
+<option value="Cash">Cash</option>
+<option value="Cheque">Cheque</option>
+</select>
+</div>
+</div>
+<!-- Auto-calculated status -->
+<div id="statusRow" style="margin-top:6px;"></div>
+</div>
+</div>
+<!-- D. MESSAGE SETTINGS -->
+<div class="form-section">
+<button class="form-section-head open" onclick="toggleSection(this)">
+<span class="sec-label"><span class="sec-icon">⚙️</span> Message Settings</span>
+<span class="chevron">▾</span>
+</button>
+<div class="form-section-body open">
+<div class="form-row">
+<div>
+<label>Language</label>
+<select class="fi" id="language" onchange="generateMessage()">
+<option value="english">English</option>
+<option value="hindi">Hindi</option>
+<option value="hinglish">Hinglish</option>
+<option value="both">English + Hindi</option>
+</select>
+</div>
+<div>
+<label>Tone</label>
+<select class="fi" id="tone" onchange="generateMessage()">
+<option value="polite">Polite</option>
+<option value="friendly">Friendly</option>
+<option value="firm">Firm</option>
+<option value="urgent">Urgent</option>
+<option value="final">Final Reminder</option>
+</select>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>Reminder Stage</label>
+<select class="fi" id="reminderStage" onchange="syncStageToTone();generateMessage()">
+<option value="before">Before Due Date</option>
+<option value="today">Due Today</option>
+<option value="1to7">1–7 Days Overdue</option>
+<option value="8to15">8–15 Days Overdue</option>
+<option value="16to30">16–30 Days Overdue</option>
+<option value="30plus">30+ Days Overdue</option>
+</select>
+</div>
+<div>
+<label>Relationship</label>
+<select class="fi" id="relationship" onchange="generateMessage()">
+<option value="regular">Regular Customer</option>
+<option value="new">New Customer</option>
+<option value="important">Important Customer</option>
+<option value="longpending">Long Pending Customer</option>
+</select>
+</div>
+</div>
+<div style="margin-top:12px;">
+<div class="toggle-row">
+<span class="toggle-label">Include UPI ID in message</span>
+<label class="toggle"><input checked="" id="inclUPI" onchange="generateMessage()" type="checkbox"/><span class="toggle-slider"></span></label>
+</div>
+<div class="toggle-row">
+<span class="toggle-label">Include payment link</span>
+<label class="toggle"><input id="inclPayLink" onchange="generateMessage()" type="checkbox"/><span class="toggle-slider"></span></label>
+</div>
+<div class="toggle-row">
+<span class="toggle-label">Include bank details</span>
+<label class="toggle"><input id="inclBank" onchange="generateMessage()" type="checkbox"/><span class="toggle-slider"></span></label>
+</div>
+<div class="toggle-row">
+<span class="toggle-label">Include thank-you line</span>
+<label class="toggle"><input checked="" id="inclThankYou" onchange="generateMessage()" type="checkbox"/><span class="toggle-slider"></span></label>
+</div>
+<div class="toggle-row" style="margin-bottom:0;">
+<span class="toggle-label">Include SalesOn footer</span>
+<label class="toggle"><input id="inclFooter" onchange="generateMessage()" type="checkbox"/><span class="toggle-slider"></span></label>
+</div>
+</div>
+</div>
+</div>
+<!-- ACTION BUTTONS -->
+<div class="form-actions">
+<button class="btn-action btn-copy" onclick="triggerAction('copy')">📋 Copy Message</button>
+<button class="btn-action btn-wa" onclick="triggerAction('wa')">📲 Open WhatsApp</button>
+<button class="btn-action btn-seq" onclick="triggerAction('sequence')">📅 Follow-Up Sequence</button>
+<button class="btn-action btn-reset" onclick="resetForm()">↺ Reset</button>
+</div>
+</div><!-- /form-panel -->
+<!-- ══════════ PREVIEW PANEL ══════════ -->
+<div class="preview-panel" id="previewPanel">
+<div class="preview-panel-header">
+<span class="pp-title">WhatsApp Preview</span>
+<span style="font-size:12px;color:var(--ink-mute);">Updates as you type</span>
+</div>
+<!-- WhatsApp phone frame -->
+<div class="wa-phone-frame">
+<!-- Mock WhatsApp chat bar -->
+<div class="wa-phone-bar">
+<div class="wa-avatar">🛒</div>
+<div class="wa-contact-info">
+<div class="wa-contact-name" id="waContactName">Mohan Retail Store</div>
+<div class="wa-contact-status">+91 80928 56577</div>
+</div>
+<div style="color:rgba(255,255,255,.7);font-size:18px;">📞   ⋮</div>
+</div>
+<!-- Variation tabs -->
+<div class="variation-tabs" id="variationTabs">
+<button class="var-tab active" onclick="switchVariation(0,this)">V1</button>
+<button class="var-tab" onclick="switchVariation(1,this)">V2</button>
+<button class="var-tab" onclick="switchVariation(2,this)">V3</button>
+<button class="var-tab" onclick="switchVariation(3,this)">V4</button>
+<button class="var-tab" onclick="switchVariation(4,this)">V5</button>
+</div>
+<!-- Chat body -->
+<div class="wa-phone-body" id="waChatBody">
+<div class="wa-bubble" id="waBubble">Generating message...</div>
+<div class="wa-bubble-meta">
+<span id="waTime"></span>  
+            <span class="wa-tick">✓✓</span>
+</div>
+</div>
+<!-- Action row inside preview -->
+<div class="wa-actions">
+<button class="btn-sm btn-sm-wa" onclick="triggerAction('copy')">📋 Copy</button>
+<button class="btn-sm btn-sm-blue" onclick="triggerAction('wa')">📲 Open WhatsApp</button>
+<button class="btn-sm btn-sm-amber" onclick="triggerAction('callscript')">📞 Call Script</button>
+<button class="btn-sm btn-sm-green" onclick="generateSMSVersion()">💬 SMS Version</button>
+<button class="btn-sm btn-sm-green" onclick="generateThankYou()">🙏 Thank-You Msg</button>
+</div>
+</div>
+<!-- Disclaimer -->
+<div class="disclaimer-banner">
+        ⚠️ This tool generates suggested payment reminder messages. Please review the message before sending and use respectful communication with your customers.
+      </div>
+<!-- Follow-up sequence output -->
+<div class="output-card" id="seqCard" style="display:none;">
+<div class="output-card-header">
+<span class="output-card-title">📅 Follow-Up Sequence (5 reminders)</span>
+<button class="btn-sm btn-sm-blue" onclick="document.getElementById('seqCard').style.display='none'">✕ Close</button>
+</div>
+<div class="output-card-body" id="seqBody"></div>
+</div>
+<!-- Call script output -->
+<div class="output-card" id="callCard" style="display:none;">
+<div class="output-card-header">
+<span class="output-card-title">📞 Call Script</span>
+<button class="btn-sm btn-sm-blue" onclick="document.getElementById('callCard').style.display='none'">✕ Close</button>
+</div>
+<div class="output-card-body" id="callBody"></div>
+</div>
+<!-- SMS version output -->
+<div class="output-card" id="smsCard" style="display:none;">
+<div class="output-card-header">
+<span class="output-card-title">💬 SMS Version (Short)</span>
+<button class="btn-sm btn-sm-blue" onclick="document.getElementById('smsCard').style.display='none'">✕ Close</button>
+</div>
+<div class="output-card-body" id="smsBody"></div>
+</div>
+<!-- Thank-you message output -->
+<div class="output-card" id="thankCard" style="display:none;">
+<div class="output-card-header">
+<span class="output-card-title">🙏 Thank-You Message (After Payment)</span>
+<button class="btn-sm btn-sm-blue" onclick="document.getElementById('thankCard').style.display='none'">✕ Close</button>
+</div>
+<div class="output-card-body" id="thankBody"></div>
+</div>
+</div><!-- /preview-panel -->
+</div><!-- /tool-wrap -->
+</div><!-- /container -->
+<!-- ── UPSELL SECTION ── -->
+<section class="section section-alt">
+<div class="container">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+<div>
+<span class="section-label">SalesOn Platform</span>
+<h2 class="section-title">Still sending payment reminders <em>manually on WhatsApp?</em></h2>
+<p class="section-sub">Manual WhatsApp follow-ups work when you have a few customers. But when your business has daily collections, credit sales, salesman-wise payments, overdue invoices and multiple retailers — it becomes impossible to track who has paid and who has not. SalesOn manages everything in one platform.</p>
+<ul class="feature-list">
+<li><span class="check-dot">✓</span> Party-wise outstanding dues</li>
+<li><span class="check-dot">✓</span> Payment collection tracking</li>
+<li><span class="check-dot">✓</span> Salesman-wise collections</li>
+<li><span class="check-dot">✓</span> GST billing &amp; invoicing</li>
+<li><span class="check-dot">✓</span> Order taking from field</li>
+<li><span class="check-dot">✓</span> Field sales app</li>
+<li><span class="check-dot">✓</span> Van sales &amp; delivery tracking</li>
+<li><span class="check-dot">✓</span> Outstanding &amp; collection reports</li>
+</ul>
+<a class="btn-demo" href="/request-demo">Automate Payment Follow-Ups with SalesOn →</a>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+<div class="seo-card" style="margin-top:0;border-top-color:var(--wa-green);">
+<h3>📊 Outstanding Dashboard</h3>
+<p>See all pending payments party-wise, ageing-wise and salesman-wise in one screen.</p>
+</div>
+<div class="seo-card" style="margin-top:0;border-top-color:var(--brand);">
+<h3>💬 Auto Follow-Up</h3>
+<p>Set reminder rules and SalesOn sends follow-up alerts to your team automatically.</p>
+</div>
+<div class="seo-card" style="margin-top:0;border-top-color:var(--amber);">
+<h3>🧾 GST Billing</h3>
+<p>Generate GST invoices, credit notes, and collection receipts from one platform.</p>
+</div>
+<div class="seo-card" style="margin-top:0;border-top-color:var(--green);">
+<h3>📱 Field Collection App</h3>
+<p>Collectors mark payments received from the field. Updates instantly in reports.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ── SEO CONTENT ── -->
+<section class="section">
+<div class="container">
+<h2 class="section-title">How to use this <em>WhatsApp Payment Reminder Generator</em></h2>
+<div class="seo-grid">
+<div class="seo-card"><h3>Step 1 — Enter Business Details</h3><p>Fill your business name, sender name, UPI ID and bank details. These appear in the generated reminder message.</p></div>
+<div class="seo-card"><h3>Step 2 — Add Customer Details</h3><p>Enter the customer's name, shop/company and WhatsApp number. The number is used to open WhatsApp directly.</p></div>
+<div class="seo-card"><h3>Step 3 — Fill Payment Details</h3><p>Enter the invoice number, due date and pending amount. Days overdue and payment status are calculated automatically.</p></div>
+<div class="seo-card"><h3>Step 4 — Choose Language and Tone</h3><p>Select English, Hindi, Hinglish or both. Choose from Polite, Friendly, Firm, Urgent or Final Reminder tone.</p></div>
+<div class="seo-card"><h3>Step 5 — Copy or Open WhatsApp</h3><p>Click Copy Message to copy, or Open WhatsApp to open WhatsApp chat with the message pre-filled.</p></div>
+<div class="seo-card"><h3>Step 6 — Generate Follow-Up Sequence</h3><p>Generate 5 reminder messages for different stages — before due, on due date, 3 days, 7 days and 15+ days overdue.</p></div>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container">
+<h2 class="section-title">Payment reminder message <em>examples</em></h2>
+<div class="seo-grid">
+<div class="seo-card" style="border-top-color:var(--green);">
+<h3>📗 Polite Reminder (Before Due)</h3>
+<p>Hi Mohan ji, hope all is well. A gentle reminder that ₹12,500 is due against INV-2026-001 from Shree Balaji Distributors on 25/01/2026. Kindly arrange payment when convenient.</p>
+</div>
+<div class="seo-card" style="border-top-color:var(--amber);">
+<h3>📙 Firm Reminder (1 Week Overdue)</h3>
+<p>Dear Mohan, payment of ₹12,500 against INV-2026-001 is overdue by 7 days. Request you to please clear the payment at the earliest or confirm expected payment date. Thank you.</p>
+</div>
+<div class="seo-card" style="border-top-color:#dc2626;">
+<h3>📕 Urgent Reminder (2 Weeks Overdue)</h3>
+<p>Dear Mohan, ₹12,500 against INV-2026-001 is now overdue by 15 days. Please arrange the payment immediately or contact us to discuss settlement. This is impacting our business.</p>
+</div>
+<div class="seo-card" style="border-top-color:var(--ink);">
+<h3>📘 Hindi Reminder</h3>
+<p>नमस्ते Mohan जी, Shree Balaji Distributors की तरफ से विनम्र निवेदन है कि INV-2026-001 के विरुद्ध ₹12,500 की राशि अभी बाकी है। कृपया जल्द भुगतान करें। धन्यवाद।</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container" style="max-width:720px;">
+<h2 class="section-title">How to write a <em>polite payment reminder</em> message</h2>
+<p class="section-sub" style="margin-bottom:24px;">A good payment reminder is professional, clear and easy to act on. Follow these principles:</p>
+<ul class="feature-list">
+<li><span class="check-dot">✓</span> Address the customer by name — makes it personal, not generic</li>
+<li><span class="check-dot">✓</span> Mention the specific invoice number and amount — no ambiguity</li>
+<li><span class="check-dot">✓</span> Include your payment details — UPI, bank or payment link</li>
+<li><span class="check-dot">✓</span> Keep first reminders polite and short — escalate gradually</li>
+<li><span class="check-dot">✓</span> Always ask for a confirmed payment date if not paying immediately</li>
+<li><span class="check-dot">✓</span> End with a thank-you or appreciation line for good relationship</li>
+<li><span class="check-dot">✓</span> For long overdue, be firm but never rude or threatening</li>
+</ul>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container" style="max-width:720px;">
+<h2 class="section-title">When should you move from manual <em>WhatsApp reminders to SalesOn?</em></h2>
+<p class="section-sub" style="margin-bottom:24px;">Manual reminders work for a small number of customers. You need a platform when:</p>
+<ul class="feature-list" style="margin-bottom:28px;">
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> You have 20+ credit customers whose dues you need to track</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> Different salesmen are collecting payments and you lose track</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> You need to see ageing reports — 0-30, 30-60, 60-90 days outstanding</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> You are spending hours every week on payment follow-up calls and messages</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> Customers say they paid but you have no record to verify</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> Your outstanding is growing month on month and you don't know why</li>
+</ul>
+<a class="btn-demo" href="/request-demo">See SalesOn Collection Management →</a>
+</div>
+</section>
+<!-- ── RELATED TOOLS ── -->
+<section class="section">
+<div class="container">
+<span class="section-label">Free Business Tools</span>
+<h2 class="section-title">Related <em>SalesOn</em> Free Tools</h2>
+<div class="tools-row">
+<a class="tool-chip" href="/tools">🛠️ All Free Tools</a>
+<a class="tool-chip" href="/tools/gst-invoice-generator">🧾 GST Invoice Generator</a>
+<a class="tool-chip" href="/tools/quotation-generator">📋 Quotation Generator</a>
+<a class="tool-chip" href="/tools/payment-receipt-generator">💰 Payment Receipt</a>
+<a class="tool-chip" href="/tools/delivery-challan-generator">🚚 Delivery Challan</a>
+<a class="tool-chip" href="/tools/purchase-order-generator">📦 Purchase Order</a>
+</div>
+<div style="margin-top:24px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+<a href="https://saleson.co.in" style="font-size:13px;color:var(--brand);">Payment Collection Software →</a>
+<a href="/invoicing" style="font-size:13px;color:var(--brand);">GST Invoicing Software →</a>
+<a href="/field-sales" style="font-size:13px;color:var(--brand);">Field Sales →</a>
+<a href="/request-demo" style="font-size:13px;color:var(--brand);">Book Demo →</a>
+</div>
+</div>
+</section>
+<!-- ── FAQ ── -->
+<section class="section section-alt">
+<div class="container">
+<span class="section-label">FAQs</span>
+<h2 class="section-title" style="text-align:center;">Frequently Asked <em>Questions</em></h2>
+<div class="faq-list">
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Is this WhatsApp payment reminder generator free? <span class="faq-chevron">▾</span></button>
+<div class="faq-a">Yes. This WhatsApp payment reminder generator is completely free. No account, no subscription required. You can generate unlimited reminders at no cost.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Can I generate payment reminders in Hindi? <span class="faq-chevron">▾</span></button>
+<div class="faq-a">Yes. Select Hindi, Hinglish, or English + Hindi from the Language dropdown. The tool generates natural-sounding reminders in your chosen language.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Can I send the message directly on WhatsApp? <span class="faq-chevron">▾</span></button>
+<div class="faq-a">Yes. Enter the customer's WhatsApp number and click Open WhatsApp. WhatsApp opens with the message pre-filled in the chat. You review and send — messages are never sent automatically.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Can I create reminders for overdue invoices? <span class="faq-chevron">▾</span></button>
+<div class="faq-a">Yes. Enter the due date and the tool calculates days overdue automatically. The reminder stage and tone adjust accordingly — polite for recent dues, urgent for long overdue payments.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Can I generate polite and firm payment reminders? <span class="faq-chevron">▾</span></button>
+<div class="faq-a">Yes. Choose from 5 tones: Polite, Friendly, Firm, Urgent, and Final Reminder. The tool also generates 5 message variations and a full follow-up sequence for different stages.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Can distributors and wholesalers use this tool? <span class="faq-chevron">▾</span></button>
+<div class="faq-a">Yes. This tool is built for Indian distributors, wholesalers, manufacturers and FMCG companies who manage credit sales and payment collection from retailers and dealers.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ── FOOTER ── -->
+<site-footer source="tools"><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
+<whatsapp-float msg="Hi%20SalesOn%2C%20I%27d%20like%20to%20know%20more%20about%20SalesOn"></whatsapp-float>
+<script src="/components/site-header.cd8aaee89ecb.js" defer></script>
+<script src="/components/site-footer.0ffd3829fc3f.js" defer></script>
+<script src="/components/whatsapp-float.0e773436a8ab.js" defer></script>
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
+<!-- ══════════════════════
+     LEAD CAPTURE MODAL
+     ══════════════════════ -->
+<div class="modal-overlay" id="leadModal">
+<div class="modal-card">
+<div class="modal-header">
+<div class="modal-title">Want to automate payment follow-ups instead of sending reminders manually?</div>
+<div class="modal-sub">SalesOn tracks outstanding payments, salesman-wise collections, payment follow-ups, GST billing, orders and field sales in one platform. Tell us about your business.</div>
+</div>
+<div class="modal-body">
+<div class="modal-row">
+<div>
+<label>Your Name *</label>
+<input class="modal-input" id="leadName" placeholder="Ramesh Gupta" type="text"/>
+</div>
+<div>
+<label>Mobile / WhatsApp *</label>
+<input class="modal-input" id="leadPhone" placeholder="+91 80928 56577" type="tel"/>
+</div>
+</div>
+<div class="modal-row">
+<div>
+<label>Business Name *</label>
+<input class="modal-input" id="leadBiz" placeholder="Shree Balaji Distributors" type="text"/>
+</div>
+<div>
+<label>City</label>
+<input class="modal-input" id="leadCity" placeholder="Patna" type="text"/>
+</div>
+</div>
+<div class="modal-row">
+<div>
+<label>Business Type</label>
+<select class="modal-input" id="leadBizType" style="appearance:none;cursor:pointer;">
+<option value="">Select</option>
+<option>Distributor</option>
+<option>Wholesaler</option>
+<option>Manufacturer</option>
+<option>FMCG</option>
+<option>Pharma</option>
+<option>Retailer</option>
+<option>Service Business</option>
+<option>Other</option>
+</select>
+</div>
+<div>
+<label>Monthly Collections / Invoices</label>
+<select class="modal-input" id="leadVolume" style="appearance:none;cursor:pointer;">
+<option value="">Select</option>
+<option>1–20</option>
+<option>21–100</option>
+<option>101–500</option>
+<option>500+</option>
+</select>
+</div>
+</div>
+<div class="modal-row full">
+<div>
+<label>Current Payment Follow-Up Method</label>
+<select class="modal-input" id="leadMethod" style="appearance:none;cursor:pointer;">
+<option value="">Select</option>
+<option>WhatsApp manually</option>
+<option>Phone calls</option>
+<option>Excel</option>
+<option>Tally</option>
+<option>Busy</option>
+<option>Manual diary</option>
+<option>Other software</option>
+</select>
+</div>
+</div>
+<div class="modal-actions">
+<button class="btn-modal-primary" onclick="submitLead('continue')">✓ Continue Free</button>
+<button class="btn-modal-demo" onclick="submitLead('demo')">📅 Book SalesOn Demo</button>
+</div>
+<div class="modal-skip">
+<a onclick="skipLead()">Skip — continue without sharing details</a>
+</div>
+</div>
+</div>
+</div>
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+     ══════════════════════════════════════ -->
+<script>
+/* ─────────────────────────
+   STATE
+───────────────────────── */
+let currentVariation  = 0;   // 0–4 → V1–V5
+let generatedMessages = [];  // array of 5 variations
+let pendingAction     = null; // 'copy' | 'wa' | 'sequence' | 'callscript'
+let generatedSequence = false;
+let generatedCallScript = false;
+
+/* ─────────────────────────
+   INIT DEFAULTS
+───────────────────────── */
+function initDefaults() {
+  sv('bizName',       'Shree Balaji Distributors');
+  sv('senderName',    'Ramesh');
+  sv('upiId',         'saleson@exampleupi');
+  sv('custName',      'Mohan');
+  sv('custShop',      'Mohan Retail Store');
+  sv('custPhone',     '9876543210');
+  sv('paymentAgainst','GST Invoice');
+  sv('invNumber',     'INV-2026-001');
+  sv('pendingAmount', '12500');
+  sv('totalAmount',   '25000');
+  sv('paidAmount',    '12500');
+  sv('paymentMode',   'UPI');
+
+  // Invoice date: today
+  const today = new Date();
+  sv('invDate', fmtDateInput(today));
+
+  // Due date: 7 days before today (so it's overdue)
+  const due = new Date(today);
+  due.setDate(due.getDate() - 7);
+  sv('dueDate', fmtDateInput(due));
+
+  document.getElementById('inclUPI').checked      = true;
+  document.getElementById('inclThankYou').checked = true;
+
+  updateDaysOverdue();
+  generateMessage();
+}
+
+function fmtDateInput(d) {
+  const y  = d.getFullYear();
+  const m  = String(d.getMonth() + 1).padStart(2, '0');
+  const dy = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${dy}`;
+}
+
+function formatDisplayDate(dateStr) {
+  if (!dateStr) return '';
+  const [y, m, d] = dateStr.split('-');
+  return `${d}/${m}/${y}`;
+}
+
+/* ─────────────────────────
+   DAYS OVERDUE CALCULATION
+───────────────────────── */
+function updateDaysOverdue() {
+  const dueDateStr = v('dueDate');
+  if (!dueDateStr) { document.getElementById('statusRow').innerHTML = ''; return; }
+
+  const dueDate = new Date(dueDateStr);
+  const today   = new Date();
+  today.setHours(0, 0, 0, 0);
+  dueDate.setHours(0, 0, 0, 0);
+
+  const diff = Math.floor((today - dueDate) / (1000 * 60 * 60 * 24));
+
+  let stage, cls, label, toneDefault;
+  if (diff < 0) {
+    stage = 'before';
+    cls   = 'status-soon';
+    label = `Due in ${Math.abs(diff)} day${Math.abs(diff) !== 1 ? 's' : ''} 📅`;
+    toneDefault = 'polite';
+  } else if (diff === 0) {
+    stage = 'today';
+    cls   = 'status-today';
+    label = 'Due Today ⚠️';
+    toneDefault = 'friendly';
+  } else if (diff <= 7) {
+    stage = '1to7';
+    cls   = 'status-overdue';
+    label = `${diff} day${diff !== 1 ? 's' : ''} overdue 🔴`;
+    toneDefault = 'polite';
+  } else if (diff <= 15) {
+    stage = '8to15';
+    cls   = 'status-overdue';
+    label = `${diff} days overdue 🔴`;
+    toneDefault = 'firm';
+  } else if (diff <= 30) {
+    stage = '16to30';
+    cls   = 'status-long';
+    label = `${diff} days overdue — Long Pending 🚨`;
+    toneDefault = 'urgent';
+  } else {
+    stage = '30plus';
+    cls   = 'status-critical';
+    label = `${diff} days overdue — Critical 🆘`;
+    toneDefault = 'final';
+  }
+
+  document.getElementById('statusRow').innerHTML =
+    `<span class="status-pill ${cls}">${label}</span>`;
+
+  sv('reminderStage', stage);
+  sv('tone', toneDefault);
+}
+
+function syncStageToTone() {
+  const stageToTone = { before: 'polite', today: 'friendly', '1to7': 'polite', '8to15': 'firm', '16to30': 'urgent', '30plus': 'final' };
+  const stage = v('reminderStage');
+  if (stageToTone[stage]) sv('tone', stageToTone[stage]);
+}
+
+/* ─────────────────────────
+   MESSAGE GENERATION
+───────────────────────── */
+function getData() {
+  return {
+    biz:       v('bizName')        || 'Your Business',
+    sender:    v('senderName')     || '',
+    upi:       v('upiId')          || '',
+    payLink:   v('paymentLink')    || '',
+    bank:      v('bankDetails')    || '',
+    bizPhone:  v('bizPhone')       || '',
+    cust:      v('custName')       || 'Customer',
+    custShop:  v('custShop')       || '',
+    custPhone: v('custPhone')      || '',
+    against:   v('paymentAgainst') || 'Invoice',
+    invNum:    v('invNumber')      || '—',
+    invDate:   formatDisplayDate(v('invDate')),
+    dueDate:   formatDisplayDate(v('dueDate')),
+    pending:   parseFloat(v('pendingAmount')) || 0,
+    total:     parseFloat(v('totalAmount'))   || 0,
+    paid:      parseFloat(v('paidAmount'))    || 0,
+    mode:      v('paymentMode')    || 'Any Mode',
+    lang:      v('language')       || 'english',
+    tone:      v('tone')           || 'polite',
+    stage:     v('reminderStage')  || 'before',
+    rel:       v('relationship')   || 'regular',
+    inclUPI:   document.getElementById('inclUPI').checked,
+    inclPayLink: document.getElementById('inclPayLink').checked,
+    inclBank:  document.getElementById('inclBank').checked,
+    inclTY:    document.getElementById('inclThankYou').checked,
+    inclFooter: document.getElementById('inclFooter').checked,
+  };
+}
+
+function fmtAmt(n) {
+  return '₹' + n.toLocaleString('en-IN');
+}
+
+function buildPaymentBlock(d) {
+  const lines = [];
+  if (d.mode !== 'Any Mode') lines.push(`💳 Payment Mode: ${d.mode}`);
+  if (d.inclUPI && d.upi)      lines.push(`📲 UPI: ${d.upi}`);
+  if (d.inclPayLink && d.payLink) lines.push(`🔗 Pay here: ${d.payLink}`);
+  if (d.inclBank && d.bank)    lines.push(`🏦 ${d.bank}`);
+  if (d.bizPhone)              lines.push(`📞 ${d.bizPhone}`);
+  return lines.length ? '\n\n' + lines.join('\n') : '';
+}
+
+function buildPaymentBlockHindi(d) {
+  const lines = [];
+  if (d.inclUPI && d.upi)      lines.push(`📲 UPI: ${d.upi}`);
+  if (d.inclPayLink && d.payLink) lines.push(`🔗 भुगतान लिंक: ${d.payLink}`);
+  if (d.inclBank && d.bank)    lines.push(`🏦 ${d.bank}`);
+  if (d.bizPhone)              lines.push(`📞 ${d.bizPhone}`);
+  return lines.length ? '\n\n' + lines.join('\n') : '';
+}
+
+/* Generate English messages by tone */
+function englishMessage(d, toneOverride, variation) {
+  const tone   = toneOverride || d.tone;
+  const amt    = fmtAmt(d.pending);
+  const ref    = `${d.against} ${d.invNum}`.trim();
+  const dueStr = d.dueDate ? ` due on ${d.dueDate}` : '';
+  const ty     = d.inclTY ? '\n\nThank you.' : '';
+  const footer = d.inclFooter ? '\n\n_Generated via SalesOn Free Tools — saleson.co.in_' : '';
+  const pay    = buildPaymentBlock(d);
+
+  const greeting = d.rel === 'important' ? `Respected ${d.cust} ji` :
+                   d.rel === 'new'       ? `Dear ${d.cust}` :
+                   variation % 2 === 0   ? `Hi ${d.cust} ji` : `Dear ${d.cust}`;
+
+  const bizFrom = d.sender ? `${d.sender} from ${d.biz}` : d.biz;
+
+  const variants = {
+    polite: [
+      `${greeting}, hope you are doing well.\n\nThis is a gentle reminder from ${bizFrom} that ${amt} is pending against ${ref}${dueStr}. Kindly clear the payment at your earliest convenience.${pay}${ty}${footer}`,
+      `${greeting}, greetings from ${d.biz}.\n\nA quick reminder that ${amt} is outstanding against ${ref}${dueStr}. Request you to kindly process the payment when convenient.${pay}${ty}${footer}`,
+      `${greeting}, this is ${bizFrom}.\n\nHope business is going well. Just a gentle reminder about the pending amount of ${amt} against ${ref}${dueStr}. Kindly look into it.${pay}${ty}${footer}`,
+    ],
+    friendly: [
+      `Hi ${d.cust}, just a quick reminder from ${bizFrom}! 😊\n\n${amt} is pending against ${ref}${dueStr}. Please share the payment update when convenient.${pay}${ty}${footer}`,
+      `Hi ${d.cust}! Hope you're well. ${bizFrom} here — a small reminder that ${amt} is due against ${ref}. Please arrange payment when possible.${pay}${ty}${footer}`,
+      `Hey ${d.cust}, ${d.biz} reminder 👋 — ${amt} is pending for ${ref}${dueStr}. Do share a payment update whenever possible!${pay}${ty}${footer}`,
+    ],
+    firm: [
+      `Dear ${d.cust}, payment of ${amt} against ${ref} is still pending${dueStr}. Kindly clear the dues at the earliest or share a confirmed payment date.${pay}${ty}${footer}`,
+      `Dear ${d.cust}, this is a reminder from ${d.biz}. ${amt} against ${ref} remains unpaid${dueStr}. Please clear the payment or let us know the expected date.${pay}${ty}${footer}`,
+      `Dear ${d.cust}, ${d.biz} here. ${amt} is overdue against ${ref}. Request you to please clear or confirm payment date by return message.${pay}${ty}${footer}`,
+    ],
+    urgent: [
+      `Dear ${d.cust}, ${amt} is overdue against ${ref}. Please arrange the payment urgently or confirm the expected payment date today. This is affecting our business operations.${pay}${ty}${footer}`,
+      `Dear ${d.cust}, urgent reminder from ${d.biz}: ${amt} against ${ref} has been pending for several days. Kindly clear immediately or contact us with a definite payment date.${pay}${ty}${footer}`,
+      `Dear ${d.cust}, ${d.biz} requires immediate payment of ${amt} against ${ref}. Kindly arrange payment today and share confirmation. Please treat this as priority.${pay}${ty}${footer}`,
+    ],
+    final: [
+      `Dear ${d.cust}, this is a final reminder from ${d.biz} for pending payment of ${amt} against ${ref}. Kindly clear the payment immediately or contact us today with a confirmed settlement date. Further delay may require us to take appropriate steps.${pay}${footer}`,
+      `Dear ${d.cust}, despite repeated follow-ups, ${amt} against ${ref} from ${d.biz} remains unpaid. This is our final reminder. Please settle immediately or call us today.${pay}${footer}`,
+      `Dear ${d.cust}, ${d.biz} final notice: ${amt} against ${ref} is long overdue. If payment is not received, we may need to put your account on hold. Please respond today.${pay}${footer}`,
+    ],
+  };
+
+  const msgs = variants[tone] || variants.polite;
+  return msgs[variation % msgs.length];
+}
+
+/* Generate Hindi messages */
+function hindiMessage(d, toneOverride, variation) {
+  const tone = toneOverride || d.tone;
+  const amt  = fmtAmt(d.pending);
+  const ref  = `${d.against} ${d.invNum}`.trim();
+  const pay  = buildPaymentBlockHindi(d);
+  const ty   = d.inclTY ? '\n\nधन्यवाद।' : '';
+  const footer = d.inclFooter ? '\n\n_SalesOn Free Tools — saleson.co.in_' : '';
+
+  const msgs = {
+    polite: [
+      `नमस्ते ${d.cust} जी,\n\n${d.biz} की ओर से विनम्र निवेदन है कि ${ref} के विरुद्ध ${amt} की राशि अभी बाकी है। कृपया जल्द भुगतान करने की कृपा करें।${pay}${ty}${footer}`,
+      `${d.cust} जी, नमस्ते।\n\n${d.biz} से याद दिला रहे हैं कि ${ref} की ${amt} राशि अभी pending है। सुविधानुसार भुगतान कर दें।${pay}${ty}${footer}`,
+    ],
+    friendly: [
+      `हाय ${d.cust} जी! 😊\n\n${d.biz} से एक छोटा reminder — ${ref} के ${amt} अभी बाकी हैं। जब भी convenient हो, payment करके बताएं।${pay}${ty}${footer}`,
+      `${d.cust} जी, ${d.biz} यहाँ से। ${ref} के ${amt} pending हैं। Payment का update दें जब हो सके।${pay}${ty}${footer}`,
+    ],
+    firm: [
+      `${d.cust} जी, ${d.biz} की ओर से सूचित किया जाता है कि ${ref} के विरुद्ध ${amt} की राशि अभी तक प्राप्त नहीं हुई है। कृपया शीघ्र भुगतान करें या payment date बताएं।${pay}${ty}${footer}`,
+      `प्रिय ${d.cust}, ${ref} का ${amt} बाकी है। कृपया जल्द से जल्द payment करें या निश्चित date बताएं।${pay}${ty}${footer}`,
+    ],
+    urgent: [
+      `${d.cust} जी, ${d.biz} से urgent reminder। ${ref} का ${amt} काफी समय से outstanding है। कृपया आज ही payment करें या हमसे संपर्क करें।${pay}${footer}`,
+      `प्रिय ${d.cust}, ${ref} के ${amt} का भुगतान अत्यंत आवश्यक है। कृपया तत्काल payment करें या आज ही date confirm करें।${pay}${footer}`,
+    ],
+    final: [
+      `${d.cust} जी, यह ${d.biz} की अंतिम सूचना है। ${ref} के ${amt} का भुगतान तुरंत करें अन्यथा हमें उचित कदम उठाने पड़ेंगे।${pay}${footer}`,
+      `प्रिय ${d.cust}, ${ref} का ${amt} बहुत समय से outstanding है। यह final reminder है। आज ही payment करें।${pay}${footer}`,
+    ],
+  };
+
+  const arr = msgs[tone] || msgs.polite;
+  return arr[variation % arr.length];
+}
+
+/* Hinglish message */
+function hinglishMessage(d, toneOverride, variation) {
+  const tone = toneOverride || d.tone;
+  const amt  = fmtAmt(d.pending);
+  const ref  = `${d.against} ${d.invNum}`.trim();
+  const pay  = buildPaymentBlock(d);
+  const ty   = d.inclTY ? '\n\nThanks!' : '';
+  const footer = d.inclFooter ? '\n\n_SalesOn Free Tools — saleson.co.in_' : '';
+
+  const msgs = {
+    polite: [
+      `Hi ${d.cust} bhai, ${d.biz} se Ramesh bol raha hoon.\n\n${ref} ka ${amt} abhi bhi pending hai. Jab bhi time mile, clear kar dena.${pay}${ty}${footer}`,
+      `${d.cust} ji, ek chota sa reminder — ${d.biz} ki taraf se. ${ref} ke ${amt} baki hain. Convenient ho tab payment kar dena.${pay}${ty}${footer}`,
+    ],
+    friendly: [
+      `${d.cust} bhai! ${d.biz} yaad dila raha hai 😊 — ${ref} ka ${amt} pending hai. Payment update dena jab ho sake!${pay}${ty}${footer}`,
+      `Hi ${d.cust}! ${d.biz} se reminder — ${ref} ke ${amt} abhi baki hain. Please update karo jab bhi convenient ho.${pay}${ty}${footer}`,
+    ],
+    firm: [
+      `${d.cust} ji, ${d.biz} se ek zaroori reminder. ${ref} ka ${amt} kaafi time se pending hai. Jald se jald clear karo ya payment date batao.${pay}${ty}${footer}`,
+      `${d.cust} bhai, ${ref} ka ${amt} abhi tak nahi aaya. Please jaldi payment karo ya pakki date do.${pay}${ty}${footer}`,
+    ],
+    urgent: [
+      `${d.cust} ji, ${d.biz} se urgent baat — ${ref} ka ${amt} bahut time se pending hai. Aaj hi payment karo ya humse baat karo.${pay}${footer}`,
+      `${d.cust} bhai, please urgent — ${ref} ka ${amt} bahut overdue ho gaya hai. Aaj pakki date de do ya payment kar do.${pay}${footer}`,
+    ],
+    final: [
+      `${d.cust} ji, ${d.biz} ka yeh final reminder hai. ${ref} ka ${amt} turant clear karo warna hume aage step lena padega.${pay}${footer}`,
+      `${d.cust} bhai last chance — ${ref} ka ${amt} aaj clear karo. Agla step formal hoga.${pay}${footer}`,
+    ],
+  };
+
+  const arr = msgs[tone] || msgs.polite;
+  return arr[variation % arr.length];
+}
+
+/* Build message by language */
+function buildMessage(d, toneOverride, variation) {
+  const lang = d.lang;
+  if (lang === 'hindi') return hindiMessage(d, toneOverride, variation);
+  if (lang === 'hinglish') return hinglishMessage(d, toneOverride, variation);
+  if (lang === 'both') {
+    return englishMessage(d, toneOverride, variation) + '\n\n---\n\n' + hindiMessage(d, toneOverride, variation);
+  }
+  return englishMessage(d, toneOverride, variation);
+}
+
+/* ─────────────────────────
+   MAIN GENERATE FUNCTION
+───────────────────────── */
+function generateMessage() {
+  const d = getData();
+
+  // Update WA contact name
+  const contactName = d.custShop || d.cust;
+  document.getElementById('waContactName').textContent = contactName;
+  document.querySelector('.wa-contact-status').textContent =
+    d.custPhone ? '+91 ' + d.custPhone.replace(/\D/g,'').slice(-10) : 'WhatsApp';
+
+  // Generate 5 variations
+  generatedMessages = [0, 1, 2, 3, 4].map(i => buildMessage(d, null, i));
+
+  // Show current variation
+  showVariation(currentVariation);
+
+  // Update time
+  const now = new Date();
+  document.getElementById('waTime').textContent =
+    now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true });
+}
+
+function showVariation(idx) {
+  currentVariation = idx;
+  const msg = generatedMessages[idx] || 'Generating...';
+  document.getElementById('waBubble').textContent = msg;
+}
+
+function switchVariation(idx, el) {
+  document.querySelectorAll('.var-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  showVariation(idx);
+}
+
+/* ─────────────────────────
+   FOLLOW-UP SEQUENCE
+───────────────────────── */
+function generateSequence() {
+  const d    = getData();
+  const card = document.getElementById('seqCard');
+  const body = document.getElementById('seqBody');
+  generatedSequence = true;
+
+  const stages = [
+    { label: 'Day 0 — Before Due Date',    tone: 'polite',   stage: 'before' },
+    { label: 'Due Date',                   tone: 'friendly', stage: 'today' },
+    { label: '3 Days Overdue',             tone: 'firm',     stage: '1to7'  },
+    { label: '7 Days Overdue',             tone: 'firm',     stage: '1to7'  },
+    { label: '15+ Days Overdue',           tone: 'urgent',   stage: '16to30'},
+  ];
+
+  body.innerHTML = stages.map((s, i) => {
+    const msg = buildMessage({ ...d, stage: s.stage }, s.tone, i);
+    const safeMsg = msg.replace(/'/g, '&#39;').replace(/"/g, '&quot;');
+    return `
+      <div class="seq-item">
+        <div class="seq-badge">${i + 1}</div>
+        <div style="flex:1;">
+          <div class="seq-label">${s.label}</div>
+          <div class="seq-msg">${escHtml(msg)}</div>
+          <div class="seq-actions">
+            <button class="btn-sm btn-sm-green" onclick="copyText('${safeMsg}')">📋 Copy</button>
+            <button class="btn-sm btn-sm-wa"    onclick="openWA('${safeMsg}', '${d.custPhone}')">📲 WhatsApp</button>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+
+  card.style.display = 'block';
+  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ─────────────────────────
+   CALL SCRIPT
+───────────────────────── */
+function generateCallScript() {
+  const d    = getData();
+  const card = document.getElementById('callCard');
+  const body = document.getElementById('callBody');
+  generatedCallScript = true;
+
+  body.innerHTML = `
+    <div class="call-step">
+      <div class="call-step-label">Opening</div>
+      Namaste, ${d.cust} ji. Main ${d.sender || d.biz} se bol raha/rahi hoon — ${d.biz} se. Kya aap abhi baat kar sakte hain?
+    </div>
+    <div class="call-step">
+      <div class="call-step-label">Payment Reminder</div>
+      Ji, main ${d.against} number ${d.invNum} ke baare mein baat karna chahta/ti tha/ti. ${fmtAmt(d.pending)} ki outstanding amount hai jo abhi pending hai${d.dueDate ? ' — due date ' + d.dueDate + ' thi' : ''}. Kya aap is baare mein update kar sakte hain?
+    </div>
+    <div class="call-step">
+      <div class="call-step-label">Ask for Payment Date</div>
+      ${d.cust} ji, kab tak payment ho sakti hai? Kya aap ek pakki date de sakte hain? Hum us date ko note kar lete hain — yeh sab record ke liye hai.
+    </div>
+    <div class="call-step">
+      <div class="call-step-label">Payment Details (if needed)</div>
+      ${d.upi ? 'Payment ke liye UPI: ' + d.upi : ''}${d.bank ? (d.upi ? ' ya ' : '') + 'Bank: ' + d.bank : ''}${!d.upi && !d.bank ? 'UPI ya bank transfer se payment kijiye, details WhatsApp par bhej deta/deti hoon.' : ''}
+    </div>
+    <div class="call-step">
+      <div class="call-step-label">Polite Close</div>
+      Bahut shukriya ${d.cust} ji. Aapke saath kaam karna accha lagta hai. Agar koi issue ho toh seedha bata dijiye — hum mil ke resolve karte hain. Payment hone ke baad WhatsApp par confirmation zaroor bhejein. Dhanyawad!
+    </div>
+  `;
+
+  const scriptText = `CALL SCRIPT — ${d.biz}
+
+Opening: Namaste ${d.cust} ji, main ${d.sender || d.biz} se bol raha hoon.
+Reminder: ${d.against} ${d.invNum} — ${fmtAmt(d.pending)} pending${d.dueDate ? ', due ' + d.dueDate : ''}.
+Ask: Kab tak payment ho sakti hai? Pakki date dijiye.
+Payment: ${d.upi ? 'UPI: ' + d.upi : 'Details WhatsApp par bhejta hoon.'} 
+Close: Dhanyawad, payment ke baad WhatsApp confirmation zaroor bhejein.`;
+
+  body.innerHTML += `
+    <div style="margin-top:12px;border-top:1px solid var(--border);padding-top:12px;">
+      <button class="btn-sm btn-sm-green" onclick="copyText(${JSON.stringify(scriptText)})">📋 Copy Full Script</button>
+    </div>`;
+
+  card.style.display = 'block';
+  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ─────────────────────────
+   SMS VERSION
+───────────────────────── */
+function generateSMSVersion() {
+  const d    = getData();
+  const card = document.getElementById('smsCard');
+  const body = document.getElementById('smsBody');
+
+  const sms = `${d.biz}: ${fmtAmt(d.pending)} pending vs ${d.invNum}. Pls pay ${d.upi ? 'UPI:'+d.upi+' ' : ''}or call ${d.bizPhone || 'us'}. Ignore if paid.`.substring(0, 160);
+
+  body.innerHTML = `
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px;font-size:13.5px;color:var(--ink-soft);line-height:1.7;white-space:pre-wrap;margin-bottom:10px;">${escHtml(sms)}</div>
+    <div style="font-size:12px;color:var(--ink-mute);margin-bottom:10px;">${sms.length} / 160 characters</div>
+    <button class="btn-sm btn-sm-green" onclick="copyText(${JSON.stringify(sms)})">📋 Copy SMS</button>
+  `;
+
+  card.style.display = 'block';
+  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ─────────────────────────
+   THANK-YOU MESSAGE
+───────────────────────── */
+function generateThankYou() {
+  const d    = getData();
+  const card = document.getElementById('thankCard');
+  const body = document.getElementById('thankBody');
+
+  const amt = fmtAmt(d.pending);
+  const engMsg = `Hi ${d.cust} ji, thank you for your payment of ${amt}! We have received it successfully against ${d.against} ${d.invNum}. We truly appreciate your business with ${d.biz}. Looking forward to continued association. 🙏`;
+  const hinMsg = `${d.cust} जी, ${amt} का भुगतान प्राप्त हो गया है। ${d.biz} की ओर से आपका बहुत-बहुत धन्यवाद! आपसे व्यापार करके प्रसन्नता होती है। 🙏`;
+
+  body.innerHTML = `
+    <div style="margin-bottom:14px;">
+      <div style="font-size:12px;font-weight:700;color:var(--ink-mute);margin-bottom:6px;">English</div>
+      <div style="background:var(--green-light);border:1px solid rgba(5,150,105,.2);border-radius:8px;padding:14px;font-size:13.5px;color:var(--ink);line-height:1.7;white-space:pre-wrap;margin-bottom:8px;">${escHtml(engMsg)}</div>
+      <button class="btn-sm btn-sm-wa" onclick="openWA(${JSON.stringify(engMsg)}, '${d.custPhone}')">📲 WhatsApp</button>
+      <button class="btn-sm btn-sm-green" style="margin-left:6px;" onclick="copyText(${JSON.stringify(engMsg)})">📋 Copy</button>
+    </div>
+    <div>
+      <div style="font-size:12px;font-weight:700;color:var(--ink-mute);margin-bottom:6px;">Hindi</div>
+      <div style="background:var(--green-light);border:1px solid rgba(5,150,105,.2);border-radius:8px;padding:14px;font-size:13.5px;color:var(--ink);line-height:1.7;white-space:pre-wrap;margin-bottom:8px;">${escHtml(hinMsg)}</div>
+      <button class="btn-sm btn-sm-wa" onclick="openWA(${JSON.stringify(hinMsg)}, '${d.custPhone}')">📲 WhatsApp</button>
+      <button class="btn-sm btn-sm-green" style="margin-left:6px;" onclick="copyText(${JSON.stringify(hinMsg)})">📋 Copy</button>
+    </div>
+  `;
+
+  card.style.display = 'block';
+  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ─────────────────────────
+   WHATSAPP OPEN
+───────────────────────── */
+function openWA(msg, phone) {
+  const encoded = encodeURIComponent(msg);
+  const cleaned = (phone || '').replace(/[\s+\-()]/g, '');
+  const num = cleaned.length === 10 ? '91' + cleaned : cleaned;
+  const url = num ? `https://wa.me/${num}?text=${encoded}` : `https://wa.me/?text=${encoded}`;
+  window.open(url, '_blank');
+}
+
+function copyText(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    showToast('Message copied. Paste it on WhatsApp.');
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+    showToast('Message copied. Paste it on WhatsApp.');
+  });
+}
+
+function escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* ─────────────────────────
+   ACTION TRIGGER — checks lead first
+───────────────────────── */
+function triggerAction(action) {
+  pendingAction = action;
+  const leadCaptured = localStorage.getItem('saleson_lead_captured');
+  if (leadCaptured) {
+    executeAction(action);
+  } else {
+    document.getElementById('leadModal').classList.add('open');
+  }
+}
+
+function executeAction(action) {
+  const d   = getData();
+  const msg = generatedMessages[currentVariation] || '';
+
+  if (action === 'copy') {
+    copyText(msg);
+  } else if (action === 'wa') {
+    openWA(msg, d.custPhone);
+  } else if (action === 'sequence') {
+    generateSequence();
+  } else if (action === 'callscript') {
+    generateCallScript();
+  }
+}
+
+/* ─────────────────────────
+   LEAD MODAL
+───────────────────────── */
+function submitLead(type) {
+  const name  = document.getElementById('leadName').value.trim();
+  const phone = document.getElementById('leadPhone').value.trim();
+  const biz   = document.getElementById('leadBiz').value.trim();
+
+  if (!name || !phone || !biz) {
+    showToast('Please fill Name, Phone and Business Name');
+    return;
+  }
+
+  const bizType = document.getElementById('leadBizType').value;
+  const city    = document.getElementById('leadCity').value.trim();
+  const volume  = document.getElementById('leadVolume').value;
+  const method  = document.getElementById('leadMethod').value;
+
+  const pending = parseFloat(v('pendingAmount')) || 0;
+  const dueDateStr = v('dueDate');
+  let daysOverdue = 0;
+  if (dueDateStr) {
+    const due   = new Date(dueDateStr);
+    const today = new Date();
+    today.setHours(0,0,0,0); due.setHours(0,0,0,0);
+    daysOverdue = Math.floor((today - due) / (1000*60*60*24));
+  }
+
+  // Lead scoring
+  let score = 20; // base: WhatsApp Reminder tool
+  if (volume === '101–500')   score += 20;
+  if (volume === '500+')      score += 30;
+  if (['Distributor','Wholesaler','Manufacturer','FMCG','Pharma'].includes(bizType)) score += 20;
+  if (['WhatsApp manually','Phone calls','Excel','Manual diary'].includes(method)) score += 25;
+  if (pending > 25000)        score += 15;
+  if (daysOverdue > 15)       score += 20;
+  if (generatedSequence)      score += 10;
+  if (generatedCallScript)    score += 10;
+
+  const lead = {
+    name, phone,
+    businessName:  biz,
+    businessType:  bizType,
+    city, monthlyVolume: volume,
+    currentMethod: method,
+    toolUsed:      'WhatsApp Payment Reminder Generator',
+    leadScore:     score,
+    createdAt:     new Date().toISOString()
+  };
+
+  const existing = JSON.parse(localStorage.getItem('saleson_free_tool_leads') || '[]');
+  existing.push(lead);
+  localStorage.setItem('saleson_free_tool_leads', JSON.stringify(existing));
+  if (window.salesonSubmitLeadToBackend) window.salesonSubmitLeadToBackend(lead);
+  if (window.salesonTrack) window.salesonTrack('lead_saved_locally', { toolUsed: lead.toolUsed || '' });
+  localStorage.setItem('saleson_lead_captured', '1');
+
+  // Log for Supabase / API integration
+  console.log('[SalesOn Lead]', lead);
+
+  document.getElementById('leadModal').classList.remove('open');
+
+  if (type === 'demo') {
+    window.open('https://saleson.co.in/request-demo', '_blank');
+  } else {
+    executeAction(pendingAction);
+  }
+}
+
+function skipLead() {
+  document.getElementById('leadModal').classList.remove('open');
+  localStorage.setItem('saleson_lead_captured', '1');
+  executeAction(pendingAction);
+}
+
+/* ─────────────────────────
+   DRAFT SAVE / LOAD
+───────────────────────── */
+function saveDraft() {
+  const draft = {
+    bizName: v('bizName'), senderName: v('senderName'),
+    bizPhone: v('bizPhone'), upiId: v('upiId'),
+    paymentLink: v('paymentLink'), bankDetails: v('bankDetails'),
+    custName: v('custName'), custShop: v('custShop'),
+    custPhone: v('custPhone'), custCity: v('custCity'),
+    custType: v('custType'), paymentAgainst: v('paymentAgainst'),
+    invNumber: v('invNumber'), invDate: v('invDate'),
+    dueDate: v('dueDate'), pendingAmount: v('pendingAmount'),
+    totalAmount: v('totalAmount'), paidAmount: v('paidAmount'),
+    paymentMode: v('paymentMode'), language: v('language'),
+    tone: v('tone'), reminderStage: v('reminderStage'),
+    relationship: v('relationship'),
+    inclUPI: document.getElementById('inclUPI').checked,
+    inclPayLink: document.getElementById('inclPayLink').checked,
+    inclBank: document.getElementById('inclBank').checked,
+    inclTY: document.getElementById('inclThankYou').checked,
+    inclFooter: document.getElementById('inclFooter').checked,
+    savedAt: new Date().toISOString()
+  };
+  localStorage.setItem('saleson_whatsapp_payment_reminder_draft', JSON.stringify(draft));
+  showToast('Draft saved ✓');
+}
+
+function loadDraft() {
+  const raw = localStorage.getItem('saleson_whatsapp_payment_reminder_draft');
+  if (!raw) { showToast('No saved draft found'); return; }
+  const d = JSON.parse(raw);
+
+  ['bizName','senderName','bizPhone','upiId','paymentLink','bankDetails',
+   'custName','custShop','custPhone','custCity','custType','paymentAgainst',
+   'invNumber','invDate','dueDate','pendingAmount','totalAmount','paidAmount',
+   'paymentMode','language','tone','reminderStage','relationship'
+  ].forEach(id => { if (d[id] !== undefined) sv(id, d[id]); });
+
+  if (d.inclUPI      !== undefined) document.getElementById('inclUPI').checked      = !!d.inclUPI;
+  if (d.inclPayLink  !== undefined) document.getElementById('inclPayLink').checked  = !!d.inclPayLink;
+  if (d.inclBank     !== undefined) document.getElementById('inclBank').checked     = !!d.inclBank;
+  if (d.inclTY       !== undefined) document.getElementById('inclThankYou').checked = !!d.inclTY;
+  if (d.inclFooter   !== undefined) document.getElementById('inclFooter').checked   = !!d.inclFooter;
+
+  updateDaysOverdue();
+  generateMessage();
+  showToast('Draft loaded ✓');
+}
+
+/* ─────────────────────────
+   RESET
+───────────────────────── */
+function resetForm() {
+  if (!confirm('Reset all fields to sample data?')) return;
+  generatedSequence   = false;
+  generatedCallScript = false;
+  currentVariation    = 0;
+  document.querySelectorAll('.var-tab').forEach((t, i) => t.classList.toggle('active', i === 0));
+  ['seqCard','callCard','smsCard','thankCard'].forEach(id => {
+    document.getElementById(id).style.display = 'none';
+  });
+  initDefaults();
+  showToast('Form reset ✓');
+}
+
+/* ─────────────────────────
+   COLLAPSIBLE SECTIONS
+───────────────────────── */
+function toggleSection(btn) {
+  const body = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  btn.classList.toggle('open', !isOpen);
+  body.classList.toggle('open', !isOpen);
+}
+
+/* ─────────────────────────
+   FAQ
+───────────────────────── */
+function toggleFaq(btn) {
+  const a = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(b => {
+    b.classList.remove('open'); b.nextElementSibling.classList.remove('open');
+  });
+  if (!isOpen) { btn.classList.add('open'); a.classList.add('open'); }
+}
+
+/* ─────────────────────────
+   TOAST
+───────────────────────── */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+/* ─────────────────────────
+   HELPERS
+───────────────────────── */
+function v(id)       { const el = document.getElementById(id); return el ? el.value : ''; }
+function sv(id, val) { const el = document.getElementById(id); if (el) el.value = val; }
+
+/* ─────────────────────────
+   INIT
+───────────────────────── */
+initDefaults();
+</script>
+<script>
+/* SalesOn launch helpers: analytics placeholder + lead backend hook.
+   Set window.salesonLeadEndpoint = 'YOUR_ENDPOINT_URL' before lead submission
+   or replace the empty endpoint below when connecting WordPress/Supabase/CRM. */
+(function() {
+  window.salesonTrack = window.salesonTrack || function(eventName, data) {
+    const allowed = new Set(['tool_opened', 'lead_saved_locally', 'lead_submission_accepted']);
+    if (!allowed.has(eventName)) return;
+    const safe = {};
+    for (const key of ['page', 'toolUsed']) {
+      if (typeof data?.[key] === 'string' && /^[a-zA-Z0-9_-]{1,80}$/.test(data[key])) safe[key] = data[key];
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({event: eventName, ...safe});
+  };
+  window.salesonLeadEndpoint = window.salesonLeadEndpoint || '';
+  window.salesonSubmitLeadToBackend = window.salesonSubmitLeadToBackend || async function(lead) {
+    if (!window.salesonLeadEndpoint || !lead) return;
+    try {
+      const response = await fetch(window.salesonLeadEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lead)
+      });
+      if (!response.ok) throw new Error('Lead submission was not accepted');
+      window.salesonTrack('lead_submission_accepted', { toolUsed: lead.toolUsed || '' });
+    } catch (err) {
+      console.warn('SalesOn lead backend submission failed:', err);
+    }
+  };
+})();
+</script>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  if (window.salesonTrack) window.salesonTrack('tool_opened', { page: 'whatsapp-payment-reminder-generator' });
+});
+</script>
+    <script defer src="/assets/js/site-repairs.29824dd6d35a.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "name": "saleson-website",
+  "version": "1.0.0",
+  "description": "SalesOn website build scripts",
+  "scripts": {
+    "minify:css": "node -p \"require('glob').sync('css/*.css').filter(f=>!f.includes('/min/')&&!/[.][a-f0-9]{12}[.]/.test(f)).forEach(f=>{const csso=require('csso'),fs=require('fs'),path=require('path');fs.mkdirSync('css/min',{recursive:true});const o='css/min/'+path.basename(f).replace('.css','.min.css');fs.writeFileSync(o,csso.minify(fs.readFileSync(f,'utf8')).css);console.log('\u2713',f,'\u2192',o)})\"",
+    "minify:js": "node -p \"(async()=>{const glob=require('glob'),{minify}=require('terser'),fs=require('fs'),path=require('path');fs.mkdirSync('assets/js/min',{recursive:true});for(const f of glob.sync('assets/js/*.js').filter(f=>!f.includes('/min/')&&!/[.][a-f0-9]{12}[.]/.test(f))){const o='assets/js/min/'+path.basename(f).replace('.js','.min.js'),r=await minify(fs.readFileSync(f,'utf8'));fs.writeFileSync(o,r.code);console.log('\u2713',f,'\u2192',o)}})()\"",
+    "minify": "npm run minify:css && npm run minify:js",
+    "watch": "npm-watch",
+    "clean": "rimraf css/min assets/js/min",
+    "build": "npm run clean && npm run minify && npm run prepare:assets",
+    "prepare:assets": "python3 scripts/prepare-assets.py",
+    "check": "python3 scripts/check-website.py && node scripts/check-pricing.cjs && python3 scripts/check-feature-pages.py && node scripts/check-feature-behaviour.cjs && python3 scripts/check-completion.py && node scripts/check-tools-core.cjs && node scripts/check-demo-role.cjs && node scripts/check-planning-and-totals.cjs && python3 scripts/check-alternates.py && node scripts/check-navigation.cjs"
+  },
+  "watch": {
+    "minify:css": {
+      "patterns": [
+        "css"
+      ],
+      "extensions": "css",
+      "ignore": "css/min/*"
+    },
+    "minify:js": {
+      "patterns": [
+        "assets/js"
+      ],
+      "extensions": "js",
+      "ignore": "assets/js/min/*"
+    }
+  },
+  "devDependencies": {
+    "csso": "^5.0.5",
+    "terser": "^5.26.0",
+    "glob": "^10.3.10",
+    "npm-watch": "^0.11.0",
+    "rimraf": "^5.0.5"
+  }
+}

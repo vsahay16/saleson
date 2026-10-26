@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Free GST, Billing, Inventory &amp; Business Tools | SalesOn</title>
+<meta content="Create GST invoices, quotations, challans, receipts, purchase orders, GST calculators, stock trackers and van loading sheets. Free tools by SalesOn." name="description"/>
+
+<link rel="icon" type="image/png" href="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-favicon.png"/>
+<link rel="alternate" hreflang="en-IN" href="https://saleson.co.in/tools"/>
+<link rel="alternate" hreflang="x-default" href="https://saleson.co.in/tools"/>
+<meta content="index, follow" name="robots"/>
+<!-- Open Graph -->
+<meta content="Free GST, Billing, Inventory &amp; Business Tools | SalesOn" property="og:title"/>
+<meta content="Create GST invoices, quotations, challans, receipts, purchase orders, GST calculators, stock trackers and van loading sheets. Free tools by SalesOn." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta property="og:url" content="https://saleson.co.in/tools">
+<!-- <meta content="https://tools.saleson.co.in/assets/saleson-free-tools-og.jpg" property="og:image"/> -->
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="SalesOn Free Business Tools for Indian MSMEs" property="og:image:alt"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@salesonsoftware" name="twitter:site"/>
+<!-- <meta content="https://tools.saleson.co.in/assets/saleson-free-tools-og.jpg" name="twitter:image"/> -->
+<meta content="Free GST, Billing, Inventory &amp; Business Tools | SalesOn" name="twitter:title"/>
+<meta content="Create GST invoices, quotations, challans, receipts, purchase orders, GST calculators, stock trackers and van loading sheets. Free tools by SalesOn." name="twitter:description"/>
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are SalesOn Free Business Tools really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All 12 SalesOn Free Business Tools are 100% free to use. You can create GST invoices, quotations, delivery challans, payment receipts, purchase orders, payment reminders, stock reorder plans, e-way bill checks and van loading sheets without paying anything. No subscription, no credit card required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to sign up to use these tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No signup is required. Open any tool, fill in your business and buyer details, and download your document immediately. Your data is saved locally in your browser using localStorage so your drafts are available the next time you return."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I download PDF or CSV from these tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All SalesOn free tools support PDF download. You can include your business logo, GSTIN, HSN/SAC codes, GST split (CGST/SGST/IGST), item table, amount in words and other standard fields. Some tools also support WhatsApp sharing and CSV export."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are these tools suitable for GST billing in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. SalesOn Free Tools are built specifically for Indian GST compliance. The GST Invoice Generator calculates CGST, SGST and IGST automatically based on the seller and buyer state codes. It supports HSN/SAC codes, reverse charge, Bill of Supply and all standard GST invoice fields required by Indian tax law. Always verify final compliance with your accountant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can distributors and wholesalers use these tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. These tools are built specifically for Indian distributors, wholesalers, manufacturers, FMCG businesses, pharma distributors, retailers, service businesses, field sales teams and van sales teams. Every tool is designed for the document workflows common in Indian B2B trade."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I move from free tools to SalesOn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free tools are useful when you create a few documents manually each week. When your business starts managing daily orders, GST billing for many buyers, inventory tracking, multiple field salesmen, van sales routes, payment collection and Tally reconciliation — manual document tools become a bottleneck. SalesOn connects all of these into one platform built for Indian distributors, wholesalers and manufacturers."
+      }
+    }
+  ]
+}
+</script>
+<script src="/assets/js/min/common.min.5c2663c0cd10.js"></script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&amp;display=swap" rel="stylesheet"/>
+<link href="/css/min/common-new.min.f637cbb1ad10.css" rel="stylesheet" />
+<style>
+    /* ── HERO ── */
+    .hero {
+      padding: 72px 0 64px;
+      background: radial-gradient(circle at 20% 20%, #eef2fc 0%, #ffffff 45%, #dde6f9 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 760px; }
+    .hero-eyebrow {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 5px 12px; border-radius: 100px;
+      font-size: 11.5px; font-weight: 700; letter-spacing: .03em;
+    }
+    .badge-green  { background: rgba(5,150,105,.2);  color: #489f7d; border: 1px solid rgba(5,150,105,.3); }
+    .badge-blue   { background: rgba(26,86,219,.25); color: #3f73ae; border: 1px solid rgba(26,86,219,.4); }
+    .badge-amber  { background: rgba(217,119,6,.2);  color: #bc971b; border: 1px solid rgba(217,119,6,.3); }
+    .badge-white  { background: rgba(255,255,255,.1); color: rgb(106 101 101 / 100%); border: 1px solid rgb(106 101 101 / 100%); }
+
+    .hero-h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.17; margin-bottom: 18px;
+    }
+    .hero-h1 em { font-style: italic; color: var(--brand); }
+    .hero-sub {
+      font-size: 16px; line-height: 1.78;
+      max-width: 600px; margin-bottom: 36px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .btn-hero-secondary {
+      background: transparent; color: rgba(255,255,255,.85);
+      padding: 14px 30px; border-radius: 10px;
+      font-size: 15px; font-weight: 600;
+      text-decoration: none; transition: all .18s;
+      border: 1.5px solid rgba(255,255,255,.25);
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .btn-hero-secondary:hover { color: var(--white); border-color: rgba(255,255,255,.55); }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip {
+      background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+    .trust-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    }
+    .trust-label {
+      font-size: 11.5px; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--ink-mute); flex-shrink: 0;
+    }
+    .trust-pills {
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+    .trust-pill {
+      font-size: 12.5px; font-weight: 600; color: var(--ink-soft);
+      background: var(--white); border: 1px solid var(--border);
+      padding: 5px 14px; border-radius: 100px;
+    }
+
+    /* ── SECTION LABELS ── */
+    .section-label {
+      font-size: 11.5px; font-weight: 700; letter-spacing: .09em;
+      text-transform: uppercase; color: var(--brand); display: block; margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(24px, 3.5vw, 36px);
+      color: var(--ink); line-height: 1.22; margin-bottom: 14px;
+    }
+    .section-title em { font-style: italic; color: var(--brand); }
+    .section-sub {
+      font-size: 15px; color: var(--ink-mute); line-height: 1.72;
+      max-width: 580px;
+    }
+
+    /* ── SEARCH + FILTER ── */
+    .filter-bar {
+      margin-top: 36px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+    }
+    .search-wrap {
+      position: relative; flex: 1; min-width: 200px; max-width: 340px;
+    }
+    .search-wrap::before {
+      content: '🔍'; position: absolute; left: 14px; top: 50%;
+      transform: translateY(-50%); font-size: 14px; pointer-events: none;
+    }
+    .tool-search {
+      width: 100%; padding: 10px 14px 10px 40px;
+      border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+      font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--ink);
+      background: var(--white); outline: none; transition: border-color .15s;
+    }
+    .tool-search:focus { border-color: var(--brand); }
+    .tool-search::placeholder { color: var(--ink-mute); }
+
+    .filter-tabs {
+      display: flex; gap: 6px; flex-wrap: wrap; overflow-x: auto;
+      scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-bottom: 2px;
+    }
+    .filter-tabs::-webkit-scrollbar { display: none; }
+    .filter-tab {
+      padding: 8px 16px; border-radius: 100px; font-size: 13px; font-weight: 600;
+      border: 1.5px solid var(--border); background: var(--white); color: var(--ink-soft);
+      cursor: pointer; white-space: nowrap; transition: all .15s; font-family: 'DM Sans', sans-serif;
+    }
+    .filter-tab:hover { border-color: var(--brand); color: var(--brand); }
+    .filter-tab.active {
+      background: var(--brand); color: var(--white); border-color: var(--brand);
+    }
+
+    /* ── TOOL CARDS ── */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px; margin-top: 28px;
+    }
+    .tool-card {
+      border: 1.5px solid var(--border); border-radius: var(--radius);
+      background: var(--white); padding: 26px 24px 24px;
+      display: flex; flex-direction: column;
+      transition: all .2s; position: relative;
+    }
+    .tool-card:hover {
+      box-shadow: var(--shadow-md); transform: translateY(-2px); border-color: var(--brand);
+    }
+    .tool-card.hidden { display: none; }
+    .card-top {
+      display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px;
+    }
+    .tool-icon {
+      width: 46px; height: 46px; border-radius: 12px;
+      background: var(--brand-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+    .card-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+    .cat-badge {
+      font-size: 10.5px; font-weight: 700; letter-spacing: .04em;
+      text-transform: uppercase; padding: 3px 9px; border-radius: 100px;
+      background: var(--brand-light); color: var(--brand); border: 1px solid rgba(26,86,219,.15);
+    }
+    .free-badge {
+      font-size: 10px; font-weight: 800; letter-spacing: .04em;
+      text-transform: uppercase; padding: 3px 9px; border-radius: 100px;
+      background: var(--green-light); color: var(--green); border: 1px solid rgba(5,150,105,.2);
+    }
+    .tool-name {
+      font-size: 16px; font-weight: 700; color: var(--ink);
+      margin-bottom: 8px; line-height: 1.3;
+    }
+    .tool-desc {
+      font-size: 13.5px; color: var(--ink-mute); line-height: 1.72;
+      flex: 1; margin-bottom: 20px;
+    }
+    .btn-tool {
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      background: var(--brand); color: var(--white);
+      border: none; border-radius: var(--radius-sm);
+      padding: 11px 20px; font-size: 13.5px; font-weight: 700;
+      font-family: 'DM Sans', sans-serif;
+      text-decoration: none; cursor: pointer;
+      transition: background .18s, transform .1s;
+    }
+    .btn-tool:hover { background: var(--brand-dark); transform: translateY(-1px); }
+
+    /* ── CATEGORY SECTIONS ── */
+    .cat-section { padding: 64px 0; }
+    .cat-section + .cat-section { padding-top: 0; }
+    .cat-header {
+      display: flex; align-items: center; gap: 16px; margin-bottom: 28px;
+    }
+    .cat-icon-lg {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--brand-light);
+      display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0;
+    }
+    .cat-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(20px, 3vw, 28px); color: var(--ink); line-height: 1.2;
+    }
+    .cat-title em { font-style: italic; color: var(--brand); }
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    /* ── WORKFLOW ── */
+    .workflow-wrap {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+    }
+    .workflow-chain {
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .wf-step {
+      display: flex; align-items: center; gap: 14px;
+    }
+    .wf-node {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: var(--brand-light); border: 1.5px solid rgba(26,86,219,.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; flex-shrink: 0;
+    }
+    .wf-label {
+      font-size: 14px; font-weight: 600; color: var(--ink-soft);
+    }
+    .wf-arrow {
+      height: 22px; display: flex; align-items: center;
+      padding-left: 18px; color: var(--ink-mute); font-size: 18px; line-height: 1;
+    }
+    .workflow-copy { display: flex; flex-direction: column; gap: 20px; }
+    .workflow-intro {
+      font-size: 15px; color: var(--ink-soft); line-height: 1.75;
+    }
+    .workflow-pitch {
+      font-size: 14px; color: var(--ink-mute); line-height: 1.75;
+      padding: 16px 20px; background: var(--surface); border-radius: var(--radius-sm);
+      border-left: 3px solid var(--brand);
+    }
+
+    /* ── UPSELL ── */
+    .upsell-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;
+    }
+    .upsell-list {
+      list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 20px 0 28px;
+    }
+    .upsell-list li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 14px; color: var(--ink-soft); line-height: 1.5;
+    }
+    .check-dot {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--green-light); color: var(--green);
+      font-size: 10px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .upsell-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-demo {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--brand); color: var(--white);
+      padding: 13px 26px; border-radius: 10px;
+      font-size: 15px; font-weight: 700; text-decoration: none;
+      transition: background .18s, transform .1s;
+    }
+    .btn-demo:hover { background: var(--brand-dark); transform: translateY(-1px); }
+    .btn-secondary-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--brand); font-size: 15px; font-weight: 600; text-decoration: none;
+      padding: 13px 4px; transition: color .15s;
+    }
+    .btn-secondary-link:hover { color: var(--brand-dark); }
+    .upsell-visual {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px 24px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .uv-title {
+      font-size: 11.5px; font-weight: 700; color: var(--ink-mute);
+      text-transform: uppercase; letter-spacing: .07em; margin-bottom: 6px;
+    }
+    .uv-item {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 12px 16px;
+    }
+    .uv-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .uv-label { font-size: 13.5px; font-weight: 600; color: var(--ink-soft); }
+    .uv-sub { font-size: 12px; color: var(--ink-mute); margin-top: 1px; }
+    .uv-stat {
+      margin-top: 4px; padding: 14px 16px;
+      background: var(--brand-light); border: 1px solid rgba(26,86,219,.18);
+      border-radius: var(--radius-sm); text-align: center;
+    }
+    .uv-stat-n { font-size: 13px; font-weight: 700; color: var(--brand); }
+    .uv-stat-s { font-size: 12px; color: var(--ink-mute); margin-top: 2px; }
+
+    /* ── SEO PROSE ── */
+    .seo-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+    }
+    .seo-block { }
+    .seo-block h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px; color: var(--ink); margin-bottom: 10px;
+    }
+    .seo-block p {
+      font-size: 14px; color: var(--ink-mute); line-height: 1.75;
+    }
+    .seo-block ul {
+      list-style: none; display: flex; flex-direction: column; gap: 6px; margin-top: 10px;
+    }
+    .seo-block ul li {
+      font-size: 14px; color: var(--ink-mute); line-height: 1.65;
+      padding-left: 16px; position: relative;
+    }
+    .seo-block ul li::before {
+      content: '·'; position: absolute; left: 0; color: var(--brand); font-weight: 700;
+    }
+    .seo-links { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+    .seo-links a {
+      font-size: 14px; color: var(--brand); text-decoration: none; font-weight: 600;
+    }
+    .seo-links a:hover { text-decoration: underline; }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 740px; margin: 40px auto 0; }
+    .faq-item {
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+      overflow: hidden; margin-bottom: 10px;
+    }
+    .faq-q {
+      width: 100%; background: var(--white); border: none;
+      padding: 18px 20px; text-align: left; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      font-size: 15px; font-weight: 600; color: var(--ink);
+      font-family: 'DM Sans', sans-serif; transition: background .15s;
+    }
+    .faq-q:hover { background: var(--brand-light); }
+    .faq-q.open { background: var(--brand-light); color: var(--brand); }
+    .faq-chevron {
+      width: 22px; height: 22px; flex-shrink: 0; border-radius: 50%;
+      background: var(--border); display: flex; align-items: center; justify-content: center;
+      font-size: 12px; transition: transform .2s, background .15s;
+    }
+    .faq-q.open .faq-chevron { transform: rotate(180deg); background: var(--brand); color: var(--white); }
+    .faq-a {
+      display: none; padding: 0 20px 20px; border-top: 1px solid rgba(26,86,219,.1);
+      font-size: 14px; color: var(--ink-soft); line-height: 1.78;
+      background: var(--brand-light);
+    }
+    .faq-a.open { display: block; }
+    /* ── MISC ── */
+    .text-center { text-align: center; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .no-results {
+      text-align: center; padding: 48px 24px; color: var(--ink-mute); font-size: 15px;
+      display: none; grid-column: 1/-1;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .nav-links   { display: none; }
+      .nav-phone   { display: none; }
+      .nav-hamburger { display: flex; }
+      .footer-top  { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .upsell-grid { grid-template-columns: 1fr; gap: 32px; }
+      .workflow-wrap { grid-template-columns: 1fr; gap: 40px; }
+      .seo-grid    { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 640px) {
+      .tools-grid  { grid-template-columns: 1fr; }
+      .cat-grid    { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .btn-hero-primary, .btn-hero-secondary { text-align: center; justify-content: center; }
+      .section { padding: 56px 0; }
+      .cat-section { padding: 48px 0; }
+      .footer-top  { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .trust-inner { flex-direction: column; align-items: flex-start; }
+      .upsell-btns { flex-direction: column; }
+    }
+    @media (max-width: 420px) {
+      .filter-tabs { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; }
+    }
+
+</style>
+
+<link rel="canonical" href="https://saleson.co.in/tools"><link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css"></head>
+<body>
+<site-header source="tools-index"><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header>
+<aside class="tool-storage-note" role="note">Drafts and saved tool data are stored in this browser. Keep an exported copy before clearing browser data. <a href="/privacy-policy">Privacy policy</a> · <a href="mailto:support@saleson.co.in">Contact support</a></aside>
+<!-- ── HERO ── -->
+<section aria-label="SalesOn Free Business Tools" class="hero">
+<div class="container">
+<div class="hero-content">
+<div class="hero-eyebrow">
+<span class="badge badge-green">✓ Free · No Signup Required</span>
+<span class="badge badge-blue">🇮🇳 Built for Indian MSMEs</span>
+<span class="badge badge-amber">📊 GST + Billing + Inventory</span>
+<span class="badge badge-white">📄 PDF, CSV &amp; WhatsApp Ready</span>
+</div>
+<h1 class="hero-h1">Free GST, Billing, Inventory<br/>&amp; Business Tools for <em>Indian MSMEs</em></h1>
+<p class="hero-sub">Create GST invoices, quotations, delivery challans, payment receipts, purchase orders, payment reminders, stock reorder plans, e-way bill checks and van loading sheets — free tools built by SalesOn for Indian distributors, wholesalers, manufacturers and growing businesses.</p>
+<div class="hero-actions">
+<a class="btn-s" href="#tools" onclick="trackCTA('hero-explore-tools')">Explore Free Tools ↓</a>
+<a class="btn-p" href="/request-demo" onclick="trackCTA('hero-book-demo')">📅 Book SalesOn Demo</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ── TRUST STRIP ── -->
+<div aria-label="Who uses SalesOn Free Tools" class="trust-strip">
+<div class="trust-inner">
+<span class="trust-label">Built for</span>
+<div class="trust-pills" role="list">
+<span class="trust-pill" role="listitem">Distributors</span>
+<span class="trust-pill" role="listitem">Wholesalers</span>
+<span class="trust-pill" role="listitem">Manufacturers</span>
+<span class="trust-pill" role="listitem">FMCG Businesses</span>
+<span class="trust-pill" role="listitem">Pharma Distributors</span>
+<span class="trust-pill" role="listitem">Field Sales Teams</span>
+<span class="trust-pill" role="listitem">Van Sales Teams</span>
+<span class="trust-pill" role="listitem">MSMEs</span>
+</div>
+</div>
+</div>
+<!-- ── ALL 12 TOOLS ── -->
+<section aria-label="All SalesOn free business tools" class="section" id="tools">
+<div class="container">
+<div class="text-center" style="max-width:640px; margin:0 auto;">
+<span class="section-label">12 Free Tools</span>
+<h2 class="section-title">Professional Documents &amp; Calculators —<br/><em>Free for Every Indian Business</em></h2>
+<p class="section-sub" style="margin:0 auto;">No account needed. No subscription. Open any tool, fill your details, and download. Your data stays in your browser.</p>
+</div>
+<div class="filter-bar">
+<div class="search-wrap">
+<input aria-label="Search tools by name or use case" autocomplete="off" class="tool-search" id="toolSearch" placeholder="Search tools…" type="text"/>
+</div>
+<div aria-label="Filter tools by category" class="filter-tabs" role="tablist">
+<button aria-selected="true" class="filter-tab active" data-cat="all" role="tab">All (12)</button>
+<button aria-selected="false" class="filter-tab" data-cat="gst" role="tab">GST &amp; Billing</button>
+<button aria-selected="false" class="filter-tab" data-cat="dispatch" role="tab">Dispatch</button>
+<button aria-selected="false" class="filter-tab" data-cat="payments" role="tab">Payments</button>
+<button aria-selected="false" class="filter-tab" data-cat="inventory" role="tab">Inventory</button>
+<button aria-selected="false" class="filter-tab" data-cat="van" role="tab">Van Sales</button>
+</div>
+</div>
+<div class="tools-grid" id="toolsGrid">
+<!-- 1. GST Invoice Generator -->
+<div class="tool-card" data-cat="gst" data-name="gst invoice generator gstin hsn sac cgst sgst igst billing pdf">
+<div class="card-top">
+<div class="tool-icon">🧾</div>
+<div class="card-badges">
+<span class="cat-badge">GST Billing</span>
+<span class="free-badge">Free</span>
+</div>
+</div>
+<div class="tool-name">GST Invoice Generator</div>
+<p class="tool-desc">Create professional GST invoices with GSTIN, HSN/SAC, CGST/SGST/IGST, logo, item table, payment status and PDF download. Intra-state and inter-state tax logic handled automatically.</p>
+<a class="btn-tool" href="/tools/gst-invoice-generator" onclick="trackCTA('tool-gst-invoice')">📄 Create GST Invoice →</a>
+</div>
+<!-- 2. Quotation Generator -->
+<div class="tool-card" data-cat="gst" data-name="quotation generator estimate gst validity payment terms pdf sales">
+<div class="card-top">
+<div class="tool-icon">📋</div>
+<div class="card-badges">
+<span class="cat-badge">Sales Documents</span>
+<span class="free-badge">Free</span>
+</div>
+</div>
+<div class="tool-name">Quotation Generator</div>
+<p class="tool-desc">Create professional quotations and estimates with GST, validity date, item pricing, payment terms and PDF download. Perfect for distributors and manufacturers quoting to retailers and buyers.</p>
+<a class="btn-tool" href="/tools/quotation-generator" onclick="trackCTA('tool-quotation')">📋 Create Quotation →</a>
+</div>
+<!-- 3. Delivery Challan Generator -->
+<div class="tool-card" data-cat="dispatch" data-name="delivery challan dispatch stock transfer job work van loading gst goods movement">
+<div class="card-top">
+<div class="tool-icon">🚚</div>
+<div class="card-badges">
+<span class="cat-badge">Dispatch</span>
+<span class="free-badge">Free</span>
+</div>
+</div>
+<div class="tool-name">Delivery Challan Generator</div>
+<p class="tool-desc">Create delivery challans for stock transfer, job work, van loading, dispatch and GST goods movement with triplicate copies. Covers all challan types required under Indian GST rules.</p>
+<a class="btn-tool" href="/tools/delivery-challan-generator" onclick="trackCTA('tool-delivery-challan')">🚚 Create Delivery Challan →</a>
+</div>
+<!-- 4. Payment Receipt Generator -->
+<div class="tool-card" data-cat="payments" data-name="payment receipt cash upi bank transfer cheque advance partial outstanding pdf">
+<div class="card-top">
+<div class="tool-icon">💳</div>
+<div class="card-badges">
+<span class="cat-badge">Payments</span>
+<span class="free-badge">Free</span>
+</div>
+</div>
+<div class="tool-name">Payment Receipt Generator</div>
+<p class="tool-desc">Create payment receipts for cash, UPI, bank transfer, cheque, advance, partial payment and balance due. Include payment reference, outstanding balance and business stamp in PDF format.</p>
+<a class="btn-tool" href="/tools/payment-receipt-generator" onclick="trackCTA('tool-payment-receipt')">💳 Create Receipt →</a>
+</div>
+<!-- 5. Purchase Order Generator -->
+<div class="tool-card" data-cat="inventory" data-name="purchase order vendor supplier gst delivery terms approval pdf po">
+<div class="card-top">
+<div class="tool-icon">📦</div>
+<div class="card-badges">
+<span class="cat-badge">Purchase</span>
+<span class="free-badge">Free</span>
+</div>
+</div>
+<div class="tool-name">Purchase Order Generator</div>
+<p class="tool-desc">Create professional purchase orders with vendor details, item list, GST, delivery terms, payment terms and approval section. Send POs to your suppliers instantly as a professional PDF.</p>
+<a class="btn-tool" href="/tools/purchase-order-generator" onclick="trackCTA('tool-purchase-order')">📦 Create Purchase Order →</a>
+</div>
+<!-- 6. WhatsApp Payment Reminder -->
+<div class="tool-card" data-cat="payments" data-name="whatsapp payment reminder english hindi hinglish overdue collection">
+<div class="card-top">
+<div class="tool-icon">💬</div>
+<div class="card-badges">
+<span class="cat-badge">Payments</span>
+<span class="free-badge">Free</span>
+</div>
+</div>
+<div class="tool-name">WhatsApp Payment Reminder Generator</div>
+<p class="tool-desc">Generate polite, firm and professional WhatsApp payment reminders in English, Hindi and Hinglish. Copy-paste ready messages for overdue invoices, advance reminders and follow-ups.</p>
+<a class="btn-tool" href="/tools/whatsapp-payment-reminder-generator" onclick="trackCTA('tool-whatsapp-reminder')">💬 Generate Reminder →</a>
+</div>
+<!-- 7. HSN/SAC GST Rate Finder -->
+<div class="tool-card" data-cat="gst" data-name="hsn sac gst rate finder search code tax rate invoice reference">
+<div class="card-top">
+<div class="tool-icon">🔍</div>
+<div class="card-badges">
+<span class="cat-badge">GST Reference</span>
+<span class="free-badge">Free</span>
+</div>
+</div>
+<div class="tool-name">HSN/SAC GST Rate Finder</div>
+<p class="tool-desc">Search common HSN/SAC codes and GST rate references for invoices, quotations and business documents. Find the correct tax rate for your goods and services quickly.</p>
+<a class="btn-tool" href="/tools/hsn-sac-gst-rate-finder" onclick="trackCTA('tool-hsn-sac')">🔍 Find HSN/SAC →</a>
+</div>
+<!-- 8. GST Calculator -->
+<div class="tool-card" data-cat="gst" data-name="gst calculator inclusive exclusive cgst sgst igst taxable total amount invoice">
+<div class="card-top">
+<div class="tool-icon">🧮</div>
+<div class="card-badges">
+<span class="cat-badge">GST Calculator</span>
+<span class="free-badge">Free</span>
+</div>
+</div>
+<div class="tool-name">GST Calculator</div>
+<p class="tool-desc">Calculate GST inclusive/exclusive amounts, CGST, SGST, IGST, taxable value and total invoice amount. Supports all GST slabs: 5%, 12%, 18%, 28%, 40% (de-merit) and more.</p>
+<a class="btn-tool" href="/tools/gst-calculator" onclick="trackCTA('tool-gst-calculator')">🧮 Calculate GST →</a>
+</div>
+<!-- 9. E-Way Bill Checker -->
+<div class="tool-card" data-cat="dispatch" data-name="e-way bill eway bill requirement checker value state goods movement dispatch">
+<div class="card-top">
+<div class="tool-icon">🛡️</div>
+<div class="card-badges">
+<span class="cat-badge">Dispatch</span>
+<span class="free-badge">Free</span>
+</div>
+</div>
+<div class="tool-name">E-Way Bill Requirement Checker</div>
+<p class="tool-desc">Check whether an e-way bill may be required for GST goods movement based on value, state, document type and reason for transport. Quick reference for dispatch teams.</p>
+<a class="btn-tool" href="/tools/e-way-bill-checker" onclick="trackCTA('tool-eway-bill')">🛡️ Check E-Way Bill →</a>
+</div>
+<!-- 10. Outstanding Payment Tracker -->
+<div class="tool-card" data-cat="payments" data-name="outstanding payment tracker overdue invoices ageing buckets party wise whatsapp reminder">
+<div class="card-top">
+<div class="tool-icon">📊</div>
+<div class="card-badges">
+<span class="cat-badge">Collections</span>
+<span class="free-badge">Free</span>
+</div>
+</div>
+<div class="tool-name">Outstanding Payment Tracker</div>
+<p class="tool-desc">Track pending payments, overdue invoices, ageing buckets, party-wise outstanding and WhatsApp reminders. Manage your collections without spreadsheets or manual follow-up.</p>
+<a class="btn-tool" href="/tools/outstanding-payment-tracker" onclick="trackCTA('tool-outstanding-tracker')">📊 Track Outstanding →</a>
+</div>
+<!-- 11. Stock Reorder Level Calculator -->
+<div class="tool-card" data-cat="inventory" data-name="stock reorder level calculator safety stock days remaining stockout sku inventory">
+<div class="card-top">
+<div class="tool-icon">📦</div>
+<div class="card-badges">
+<span class="cat-badge">Inventory</span>
+<span class="free-badge">Free</span>
+</div>
+</div>
+<div class="tool-name">Stock Reorder Level Calculator</div>
+<p class="tool-desc">Calculate reorder level, reorder quantity, safety stock, days of stock remaining and stock-out risk for each SKU. Stop running out of fast-moving items with proper reorder planning.</p>
+<a class="btn-tool" href="/tools/stock-reorder-level-calculator" onclick="trackCTA('tool-stock-reorder')">📦 Calculate Reorder Level →</a>
+</div>
+<!-- 12. Van Loading Sheet Generator -->
+<div class="tool-card" data-cat="van dispatch inventory" data-name="van loading sheet route stock eod reconciliation returns collection van sales">
+<div class="card-top">
+<div class="tool-icon">🚛</div>
+<div class="card-badges">
+<span class="cat-badge">Van Sales</span>
+<span class="free-badge">Free</span>
+</div>
+</div>
+<div class="tool-name">Van Loading Sheet Generator</div>
+<p class="tool-desc">Create van loading sheets, route stock records, EOD reconciliation, returns summary and collection summary. Manage your van sales team's daily load-in and load-out professionally.</p>
+<a class="btn-tool" href="/tools/van-loading-sheet-generator" onclick="trackCTA('tool-van-loading')">🚛 Create Van Loading Sheet →</a>
+</div>
+<div class="no-results" id="noResults" role="alert">
+        No tools found for "<span id="noResultsQuery"></span>". Try a different search or filter.
+      </div>
+</div>
+</div>
+</section>
+<!-- ── CATEGORY: GST & BILLING ── -->
+<section aria-label="GST and billing tools" class="section section-alt" id="gstandbilling">
+<div class="container">
+<div class="cat-header">
+<div class="cat-icon-lg">🧾</div>
+<div>
+<span class="section-label">Category</span>
+<h2 class="cat-title">GST &amp; <em>Billing Tools</em></h2>
+</div>
+</div>
+<p style="font-size:15px;color:var(--ink-mute);line-height:1.75;max-width:600px;margin-bottom:28px;">Create GST-compliant invoices, find HSN/SAC codes, calculate GST splits and generate professional quotations and payment receipts for your Indian business.</p>
+<div class="cat-grid">
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">🧾</div><span class="cat-badge">GST Billing</span></div>
+<div class="tool-name">GST Invoice Generator</div>
+<p class="tool-desc">GSTIN, HSN/SAC, CGST/SGST/IGST, logo upload, item table, discount, due date, amount in words — full GST invoice PDF in minutes.</p>
+<a class="btn-tool" href="/tools/gst-invoice-generator">📄 Create GST Invoice →</a>
+</div>
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">🧮</div><span class="cat-badge">GST Calculator</span></div>
+<div class="tool-name">GST Calculator</div>
+<p class="tool-desc">Calculate tax-inclusive, tax-exclusive amounts and CGST/SGST/IGST breakdown for any GST slab instantly.</p>
+<a class="btn-tool" href="/tools/gst-calculator">🧮 Calculate GST →</a>
+</div>
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">🔍</div><span class="cat-badge">GST Reference</span></div>
+<div class="tool-name">HSN/SAC GST Rate Finder</div>
+<p class="tool-desc">Search HSN/SAC codes and find the correct GST rate for your goods and services before creating any document.</p>
+<a class="btn-tool" href="/tools/hsn-sac-gst-rate-finder">🔍 Find HSN/SAC →</a>
+</div>
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">📋</div><span class="cat-badge">Sales Documents</span></div>
+<div class="tool-name">Quotation Generator</div>
+<p class="tool-desc">Professional quotations with item pricing, GST, validity date, payment terms and PDF download for distributors and manufacturers.</p>
+<a class="btn-tool" href="/tools/quotation-generator">📋 Create Quotation →</a>
+</div>
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">💳</div><span class="cat-badge">Payments</span></div>
+<div class="tool-name">Payment Receipt Generator</div>
+<p class="tool-desc">Receipts for cash, UPI, cheque, bank transfer, advance and partial payment — with outstanding balance and payment reference.</p>
+<a class="btn-tool" href="/tools/payment-receipt-generator">💳 Create Receipt →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ── CATEGORY: DISPATCH & DELIVERY ── -->
+<section aria-label="Dispatch and delivery tools" class="section" id="dispatchtools">
+<div class="container">
+<div class="cat-header">
+<div class="cat-icon-lg">🚚</div>
+<div>
+<span class="section-label">Category</span>
+<h2 class="cat-title">Dispatch &amp; <em>Delivery Tools</em></h2>
+</div>
+</div>
+<p style="font-size:15px;color:var(--ink-mute);line-height:1.75;max-width:600px;margin-bottom:28px;">Manage goods movement, e-way bill compliance and van loading with tools built for Indian dispatch teams and field sales operations.</p>
+<div class="cat-grid">
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">🚚</div><span class="cat-badge">Dispatch</span></div>
+<div class="tool-name">Delivery Challan Generator</div>
+<p class="tool-desc">Delivery challans for stock transfer, job work, van loading and dispatch. Triplicate format with all GST-required fields.</p>
+<a class="btn-tool" href="/tools/delivery-challan-generator">🚚 Create Delivery Challan →</a>
+</div>
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">🛡️</div><span class="cat-badge">Dispatch</span></div>
+<div class="tool-name">E-Way Bill Requirement Checker</div>
+<p class="tool-desc">Check if an e-way bill is required based on consignment value, origin, destination state and reason for transport.</p>
+<a class="btn-tool" href="/tools/e-way-bill-checker">🛡️ Check E-Way Bill →</a>
+</div>
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">🚛</div><span class="cat-badge">Van Sales</span></div>
+<div class="tool-name">Van Loading Sheet Generator</div>
+<p class="tool-desc">Van loading sheets, route stock records, EOD reconciliation, returns and collection summary for van sales operations.</p>
+<a class="btn-tool" href="/tools/van-loading-sheet-generator">🚛 Create Van Loading Sheet →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ── CATEGORY: PAYMENT & COLLECTION ── -->
+<section aria-label="Payment and collection tools" class="section section-alt" id="paymenttools">
+<div class="container">
+<div class="cat-header">
+<div class="cat-icon-lg">💳</div>
+<div>
+<span class="section-label">Category</span>
+<h2 class="cat-title">Payment &amp; <em>Collection Tools</em></h2>
+</div>
+</div>
+<p style="font-size:15px;color:var(--ink-mute);line-height:1.75;max-width:600px;margin-bottom:28px;">Track outstanding, generate professional receipts and send WhatsApp reminders to collect payments faster from your distributors, retailers and buyers.</p>
+<div class="cat-grid">
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">💳</div><span class="cat-badge">Payments</span></div>
+<div class="tool-name">Payment Receipt Generator</div>
+<p class="tool-desc">Professional receipts for any payment mode — cash, UPI, cheque, bank transfer, advance or partial payment with outstanding balance.</p>
+<a class="btn-tool" href="/tools/payment-receipt-generator">💳 Create Receipt →</a>
+</div>
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">💬</div><span class="cat-badge">Payments</span></div>
+<div class="tool-name">WhatsApp Payment Reminder Generator</div>
+<p class="tool-desc">Ready-to-send WhatsApp messages for payment reminders in English, Hindi and Hinglish — polite, firm or urgent.</p>
+<a class="btn-tool" href="/tools/whatsapp-payment-reminder-generator">💬 Generate Reminder →</a>
+</div>
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">📊</div><span class="cat-badge">Collections</span></div>
+<div class="tool-name">Outstanding Payment Tracker</div>
+<p class="tool-desc">Party-wise outstanding ledger with ageing buckets and WhatsApp reminder integration. Know exactly who owes you and for how long.</p>
+<a class="btn-tool" href="/tools/outstanding-payment-tracker">📊 Track Outstanding →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ── CATEGORY: INVENTORY & PURCHASE ── -->
+<section aria-label="Inventory and purchase tools" class="section" id="inventorytools">
+<div class="container">
+<div class="cat-header">
+<div class="cat-icon-lg">📦</div>
+<div>
+<span class="section-label">Category</span>
+<h2 class="cat-title">Inventory &amp; <em>Purchase Tools</em></h2>
+</div>
+</div>
+<p style="font-size:15px;color:var(--ink-mute);line-height:1.75;max-width:600px;margin-bottom:28px;">Manage stock reorder planning, supplier purchase orders and van loading to keep your inventory healthy and your supply chain moving without manual spreadsheets.</p>
+<div class="cat-grid">
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">📦</div><span class="cat-badge">Purchase</span></div>
+<div class="tool-name">Purchase Order Generator</div>
+<p class="tool-desc">Professional purchase orders with vendor details, GST, delivery terms and approval section. Send POs to suppliers as a PDF instantly.</p>
+<a class="btn-tool" href="/tools/purchase-order-generator">📦 Create Purchase Order →</a>
+</div>
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">📦</div><span class="cat-badge">Inventory</span></div>
+<div class="tool-name">Stock Reorder Level Calculator</div>
+<p class="tool-desc">Calculate safety stock, reorder level and reorder quantity for each SKU based on lead time and daily demand. Never run out of fast-moving items.</p>
+<a class="btn-tool" href="/tools/stock-reorder-level-calculator">📦 Calculate Reorder Level →</a>
+</div>
+<div class="tool-card">
+<div class="card-top"><div class="tool-icon">🚛</div><span class="cat-badge">Van Sales</span></div>
+<div class="tool-name">Van Loading Sheet Generator</div>
+<p class="tool-desc">Load-in, route delivery, EOD reconciliation, returns and collections — all in one van loading sheet PDF for your van sales team.</p>
+<a class="btn-tool" href="/tools/van-loading-sheet-generator">🚛 Create Van Loading Sheet →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ── WORKFLOW ── -->
+<section aria-label="Business workflow using SalesOn tools" class="section section-alt">
+<div class="container">
+<div class="text-center" style="max-width:620px;margin:0 auto 48px;">
+<span class="section-label">Connected Workflow</span>
+<h2 class="section-title">From GST billing to stock, dispatch<br/>and payment collection — <em>all connected.</em></h2>
+</div>
+<div class="workflow-wrap">
+<div aria-label="Tool workflow steps" class="workflow-chain">
+<div class="wf-step"><div class="wf-node">🔍</div><div class="wf-label">HSN/SAC Search</div></div>
+<div class="wf-arrow">↓</div>
+<div class="wf-step"><div class="wf-node">🧮</div><div class="wf-label">GST Calculator</div></div>
+<div class="wf-arrow">↓</div>
+<div class="wf-step"><div class="wf-node">📋</div><div class="wf-label">Quotation</div></div>
+<div class="wf-arrow">↓</div>
+<div class="wf-step"><div class="wf-node">🧾</div><div class="wf-label">GST Invoice</div></div>
+<div class="wf-arrow">↓</div>
+<div class="wf-step"><div class="wf-node">🚚</div><div class="wf-label">Delivery Challan</div></div>
+<div class="wf-arrow">↓</div>
+<div class="wf-step"><div class="wf-node">🛡️</div><div class="wf-label">E-Way Bill Check</div></div>
+<div class="wf-arrow">↓</div>
+<div class="wf-step"><div class="wf-node">💳</div><div class="wf-label">Payment Receipt</div></div>
+<div class="wf-arrow">↓</div>
+<div class="wf-step"><div class="wf-node">💬</div><div class="wf-label">WhatsApp Reminder</div></div>
+<div class="wf-arrow">↓</div>
+<div class="wf-step"><div class="wf-node">📊</div><div class="wf-label">Outstanding Tracker</div></div>
+<div class="wf-arrow">↓</div>
+<div class="wf-step"><div class="wf-node">📦</div><div class="wf-label">Stock Reorder</div></div>
+<div class="wf-arrow">↓</div>
+<div class="wf-step"><div class="wf-node">📦</div><div class="wf-label">Purchase Order</div></div>
+<div class="wf-arrow">↓</div>
+<div class="wf-step"><div class="wf-node">🚛</div><div class="wf-label">Van Loading Sheet</div></div>
+</div>
+<div class="workflow-copy">
+<p class="workflow-intro">Each SalesOn free tool handles one step in your business workflow. You can use any tool independently or follow the complete sequence — from finding the right HSN code before invoicing, to tracking outstanding payments after delivery.</p>
+<div class="workflow-pitch">
+          Free tools are useful for creating one document at a time. SalesOn connects these workflows into one operating system for growing distributors and MSMEs — where orders create bills, bills create inventory movements, and collections are tracked automatically.
+        </div>
+<a class="btn-demo" href="/request-demo" onclick="trackCTA('workflow-book-demo')" style="align-self:flex-start;">📅 See SalesOn in Action</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ── UPSELL ── -->
+<section aria-label="SalesOn platform for growing businesses" class="section">
+<div class="container">
+<div class="upsell-grid">
+<div>
+<span class="section-label">For Growing Businesses</span>
+<h2 class="section-title">Free tools are useful.<br/><em>A connected system is better.</em></h2>
+<p style="font-size:15px;color:var(--ink-soft);line-height:1.75;margin-bottom:8px;">
+          When your business has daily orders, salesmen, van sales, stock movement, GST billing, payment collection, dispatch, returns and reports — using separate tools becomes difficult. SalesOn brings order taking, billing, inventory, payment collection, field sales, van sales and reports into one platform.
+        </p>
+<p style="font-size:14px;color:var(--ink-mute);line-height:1.75;margin-bottom:4px;margin-top:16px;">Signs you need SalesOn instead of free tools:</p>
+<ul style="list-style:none;margin:8px 0 24px;display:flex;flex-direction:column;gap:8px;">
+<li style="font-size:14px;color:var(--ink-mute);padding-left:18px;position:relative;"><span style="position:absolute;left:0;color:var(--amber);font-weight:700;">▸</span> Too many invoices to create manually each day</li>
+<li style="font-size:14px;color:var(--ink-mute);padding-left:18px;position:relative;"><span style="position:absolute;left:0;color:var(--amber);font-weight:700;">▸</span> Manual WhatsApp follow-up for every payment</li>
+<li style="font-size:14px;color:var(--ink-mute);padding-left:18px;position:relative;"><span style="position:absolute;left:0;color:var(--amber);font-weight:700;">▸</span> Stock mismatches between warehouse and van</li>
+<li style="font-size:14px;color:var(--ink-mute);padding-left:18px;position:relative;"><span style="position:absolute;left:0;color:var(--amber);font-weight:700;">▸</span> No live visibility of salesman location or orders</li>
+<li style="font-size:14px;color:var(--ink-mute);padding-left:18px;position:relative;"><span style="position:absolute;left:0;color:var(--amber);font-weight:700;">▸</span> Payment collection delays from field team</li>
+<li style="font-size:14px;color:var(--ink-mute);padding-left:18px;position:relative;"><span style="position:absolute;left:0;color:var(--amber);font-weight:700;">▸</span> Tally/Busy double-entry slowing you down</li>
+<li style="font-size:14px;color:var(--ink-mute);padding-left:18px;position:relative;"><span style="position:absolute;left:0;color:var(--amber);font-weight:700;">▸</span> No consolidated daily or weekly business reports</li>
+</ul>
+<ul class="upsell-list">
+<li><span class="check-dot">✓</span> <a href="/invoicing" style="color:var(--brand);font-weight:600;text-decoration:none;">GST billing</a> connected to orders and inventory</li>
+<li><span class="check-dot">✓</span> Order taking via mobile app for field salesmen</li>
+<li><span class="check-dot">✓</span> <a href="/field-sales" style="color:var(--brand);font-weight:600;text-decoration:none;">Field sales tracking</a> with live location and reports</li>
+<li><span class="check-dot">✓</span> <a href="/van-sales" style="color:var(--brand);font-weight:600;text-decoration:none;">Van sales</a> with load-in, load-out and collection tracking</li>
+<li><span class="check-dot">✓</span> <a href="/inventory-management" style="color:var(--brand);font-weight:600;text-decoration:none;">Inventory management</a> with real-time stock movement</li>
+<li><span class="check-dot">✓</span> <a href="/payment-collection" style="color:var(--brand);font-weight:600;text-decoration:none;">Payment collection</a> from retailers and buyers in the field</li>
+<li><span class="check-dot">✓</span> <a href="/distribution-management-system" style="color:var(--brand);font-weight:600;text-decoration:none;">Distribution management</a> for multi-route and multi-team</li>
+<li><span class="check-dot">✓</span> <a href="/tally-integration" style="color:var(--brand);font-weight:600;text-decoration:none;">Tally/Busy integration</a> — remove double entry permanently</li>
+</ul>
+<div class="upsell-btns">
+<a class="btn-demo" href="/request-demo" onclick="trackCTA('upsell-book-demo')">📅 Book a Free SalesOn Demo</a>
+<a class="btn-secondary-link" href="https://saleson.co.in" onclick="trackCTA('upsell-visit-website')">Visit SalesOn Website →</a>
+</div>
+</div>
+<div class="upsell-visual">
+<div class="uv-title">What SalesOn Connects</div>
+<div class="uv-item">
+<div class="uv-dot" style="background:var(--brand);"></div>
+<div>
+<div class="uv-label">GST Billing + Orders</div>
+<div class="uv-sub">Create bills from confirmed orders automatically</div>
+</div>
+</div>
+<div class="uv-item">
+<div class="uv-dot" style="background:var(--green);"></div>
+<div>
+<div class="uv-label">Field Sales + Inventory</div>
+<div class="uv-sub">Orders reduce stock in real time</div>
+</div>
+</div>
+<div class="uv-item">
+<div class="uv-dot" style="background:var(--amber);"></div>
+<div>
+<div class="uv-label">Payments + Outstanding</div>
+<div class="uv-sub">Collect and reconcile payments from the field</div>
+</div>
+</div>
+<div class="uv-item">
+<div class="uv-dot" style="background:#7c3aed;"></div>
+<div>
+<div class="uv-label">Tally / Busy Sync</div>
+<div class="uv-sub">Export bills without double data entry</div>
+</div>
+</div>
+<div class="uv-item">
+<div class="uv-dot" style="background:#0891b2;"></div>
+<div>
+<div class="uv-label">Van Sales + Delivery</div>
+<div class="uv-sub">Load-in, delivery and collection on one app</div>
+</div>
+</div>
+<div class="uv-item">
+<div class="uv-dot" style="background:#be185d;"></div>
+<div>
+<div class="uv-label">Reports + Analytics</div>
+<div class="uv-sub">Daily, weekly and monthly business summaries</div>
+</div>
+</div>
+<div class="uv-stat">
+<div class="uv-stat-n">1,100+ Indian businesses use SalesOn</div>
+<div class="uv-stat-s">Distributors · Wholesalers · Manufacturers · FMCG · Pharma</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ── SEO CONTENT ── -->
+<section aria-label="About SalesOn Free Business Tools" class="section section-alt">
+<div class="container">
+<div class="text-center" style="max-width:580px;margin:0 auto 48px;">
+<span class="section-label">About These Tools</span>
+<h2 class="section-title">Free tools built for<br/><em>Indian business reality</em></h2>
+</div>
+<div class="seo-grid">
+<div class="seo-block">
+<h3>What are SalesOn Free Business Tools?</h3>
+<p>SalesOn Free Business Tools are a set of 12 free, browser-based tools for Indian distributors, wholesalers, manufacturers and MSMEs. Each tool is designed for a specific document or calculation task in the daily operations of an Indian trading or distribution business. You can create GST invoices, quotations, delivery challans, payment receipts, purchase orders, payment reminders, stock reorder plans, e-way bill checks and van loading sheets — all for free, with no signup required.</p>
+</div>
+<div class="seo-block">
+<h3>Who can use these free tools?</h3>
+<ul>
+<li>Distributors managing daily orders, billing and van sales</li>
+<li>Wholesalers creating invoices and quotations for retail buyers</li>
+<li>Manufacturers generating POs and delivery challans for dispatches</li>
+<li>FMCG businesses managing route-level van sales and stock</li>
+<li>Pharma distributors creating GST invoices with HSN codes</li>
+<li>Retailers billing customers with payment receipts</li>
+<li>Service businesses using GST SAC codes for invoicing</li>
+<li>Field sales teams tracking payments and outstanding dues</li>
+<li>Van sales teams managing load-in, delivery and EOD reconciliation</li>
+</ul>
+</div>
+<div class="seo-block">
+<h3>Why use free tools before software?</h3>
+<p>When you are just starting out or running a small operation, free tools are a practical starting point. They let you create professional documents without investing in software, learning a new system or training staff. SalesOn Free Tools are designed with the same logic and field-tested document formats that larger businesses use — so when your volume grows and you move to SalesOn, the transition feels natural.</p>
+</div>
+<div class="seo-block">
+<h3>When should you move to SalesOn?</h3>
+<p>Move from free tools to SalesOn when you start experiencing: too many invoices to handle manually, manual WhatsApp payment follow-up consuming your time, stock mismatches between warehouse and van, no visibility of salesman or delivery status, payment collection delays from field teams, Tally or Busy double-entry slowing your accounts, and no consolidated business reports. SalesOn solves all of these in one connected platform.</p>
+</div>
+<div class="seo-block" style="grid-column: 1 / -1;">
+<h3>Related SalesOn Features</h3>
+<div class="seo-links" style="display:flex;flex-wrap:wrap;gap:8px 32px;">
+<a href="/invoicing">GST Invoicing Software</a>
+<a href="/field-sales">Field Sales App</a>
+<a href="/van-sales">Van Sales Management</a>
+<a href="https://saleson.co.in">Inventory Management</a>
+<a href="https://saleson.co.in">Payment Collection</a>
+<a href="https://saleson.co.in">Tally Integration</a>
+<a href="/distribution-management-system">Distribution Management System</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ── FAQ ── -->
+<section aria-label="Frequently asked questions about SalesOn free tools" class="section">
+<div class="container">
+<div class="text-center" style="max-width:560px;margin:0 auto;">
+<span class="section-label">FAQ</span>
+<h2 class="section-title">Questions About<br/><em>SalesOn Free Tools</em></h2>
+</div>
+<div class="faq-list">
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">
+          Are SalesOn Free Business Tools really free?
+          <span aria-hidden="true" class="faq-chevron">▾</span>
+</button>
+<div class="faq-a" role="region">
+          Yes. All 12 SalesOn Free Business Tools are 100% free to use. You can create GST invoices, quotations, delivery challans, payment receipts, purchase orders, payment reminders, stock reorder plans, e-way bill checks and van loading sheets without paying anything, creating an account or entering a credit card. These tools are built by SalesOn and offered free to help Indian MSMEs manage their business paperwork.
+        </div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">
+          Do I need to sign up to use these tools?
+          <span aria-hidden="true" class="faq-chevron">▾</span>
+</button>
+<div class="faq-a" role="region">
+          No signup is required. You can open any tool, fill in your business and buyer details, and download your document immediately. Your invoice data is saved locally in your browser using localStorage so your drafts are available the next time you return to that tool.
+        </div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">
+          Can I download PDF or CSV from these tools?
+          <span aria-hidden="true" class="faq-chevron">▾</span>
+</button>
+<div class="faq-a" role="region">
+          Yes. All SalesOn free tools support PDF download. You can include your business logo, GSTIN, HSN/SAC codes, GST split (CGST/SGST/IGST), item table, amount in words and other standard fields. Some tools also support WhatsApp sharing and CSV export for records.
+        </div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">
+          Are these tools suitable for GST billing in India?
+          <span aria-hidden="true" class="faq-chevron">▾</span>
+</button>
+<div class="faq-a" role="region">
+          Yes. SalesOn Free Tools are built specifically for Indian GST compliance. The GST Invoice Generator automatically calculates CGST, SGST and IGST based on seller and buyer state codes. It supports HSN/SAC codes, reverse charge, Bill of Supply for composition dealers and all standard fields required on a GST tax invoice. Always verify final compliance with your accountant or CA.
+        </div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">
+          Can distributors and wholesalers use these tools?
+          <span aria-hidden="true" class="faq-chevron">▾</span>
+</button>
+<div class="faq-a" role="region">
+          Yes. These tools are built specifically for Indian distributors, wholesalers, manufacturers, FMCG businesses, pharma distributors, retailers, service businesses, field sales teams and van sales teams. Every tool is designed for the document workflows that are most common in Indian B2B trade and distribution operations.
+        </div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">
+          When should I move from free tools to SalesOn?
+          <span aria-hidden="true" class="faq-chevron">▾</span>
+</button>
+<div class="faq-a" role="region">
+          Free tools work well when you create a few documents manually each week. When your business starts managing daily orders, GST billing for many buyers, inventory tracking, multiple field salesmen, van sales routes, payment collection and Tally or Busy reconciliation — manual document tools become a bottleneck. SalesOn connects all of these into one platform built for Indian distributors, wholesalers and manufacturers. <a href="/request-demo" style="color:var(--brand);font-weight:600;">Book a free demo</a> to see how it works.
+        </div>
+</div>
+</div>
+</div>
+</section>
+<site-footer source="tools-index"><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
+<whatsapp-float msg="Hi%20SalesOn%2C%20I%27d%20like%20to%20know%20more%20about%20SalesOn"></whatsapp-float>
+<script src="/components/site-header.cd8aaee89ecb.js" defer></script>
+<script src="/components/site-footer.0ffd3829fc3f.js" defer></script>
+<script src="/components/whatsapp-float.0e773436a8ab.js" defer></script>
+<!-- ── JAVASCRIPT ── -->
+<script>
+// ── Mobile Nav ──
+const mobileMenu  = document.getElementById('mobileMenu');
+
+// ── Tool Cards data ──
+const allCards = Array.from(document.querySelectorAll('#toolsGrid .tool-card'));
+
+// ── Category Filter ──
+const filterTabs = document.querySelectorAll('.filter-tab');
+let activeFilter = 'all';
+let activeSearch = '';
+
+function applyFilters() {
+  let visibleCount = 0;
+  allCards.forEach(function (card) {
+    const cats   = card.getAttribute('data-cat') || '';
+    const name   = card.getAttribute('data-name') || '';
+    const catOk  = (activeFilter === 'all') || cats.includes(activeFilter);
+    const searchOk = activeSearch === '' ||
+      name.includes(activeSearch) ||
+      (card.querySelector('.tool-name') || {}).textContent?.toLowerCase().includes(activeSearch);
+    if (catOk && searchOk) {
+      card.classList.remove('hidden');
+      visibleCount++;
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+  const noResults = document.getElementById('noResults');
+  if (visibleCount === 0) {
+    document.getElementById('noResultsQuery').textContent = activeSearch || activeFilter;
+    noResults.style.display = 'block';
+  } else {
+    noResults.style.display = 'none';
+  }
+}
+
+filterTabs.forEach(function (tab) {
+  tab.addEventListener('click', function () {
+    filterTabs.forEach(function (t) {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    activeFilter = tab.getAttribute('data-cat');
+    applyFilters();
+    trackCTA('filter-' + activeFilter);
+  });
+});
+
+// ── Search ──
+const searchInput = document.getElementById('toolSearch');
+searchInput.addEventListener('input', function () {
+  activeSearch = this.value.trim().toLowerCase();
+  applyFilters();
+});
+
+// ── FAQ Accordion ──
+function toggleFaq(btn) {
+  const answer  = btn.nextElementSibling;
+  const isOpen  = btn.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-q').forEach(function (b) {
+    b.classList.remove('open');
+    b.setAttribute('aria-expanded', 'false');
+    b.nextElementSibling.classList.remove('open');
+  });
+  // Open if was closed
+  if (!isOpen) {
+    btn.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    answer.classList.add('open');
+  }
+}
+
+// ── CTA Tracking (placeholder) ──
+function trackCTA(name) {
+  console.log('[SalesOn CTA]', name, new Date().toISOString());
+  // gtag('event', 'cta_click', { cta_name: name });
+}
+
+// ── Smooth Scroll for anchor links (supplement CSS) ──
+document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = 70; // sticky nav height
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+<script>
+/* SalesOn launch helpers: analytics placeholder + lead backend hook.
+   Set window.salesonLeadEndpoint = 'YOUR_ENDPOINT_URL' before lead submission
+   or replace the empty endpoint below when connecting WordPress/Supabase/CRM. */
+(function() {
+  window.salesonTrack = window.salesonTrack || function(eventName, data) {
+    const allowed = new Set(['tool_opened', 'lead_saved_locally', 'lead_submission_accepted']);
+    if (!allowed.has(eventName)) return;
+    const safe = {};
+    for (const key of ['page', 'toolUsed']) {
+      if (typeof data?.[key] === 'string' && /^[a-zA-Z0-9_-]{1,80}$/.test(data[key])) safe[key] = data[key];
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({event: eventName, ...safe});
+  };
+  window.salesonLeadEndpoint = window.salesonLeadEndpoint || '';
+  window.salesonSubmitLeadToBackend = window.salesonSubmitLeadToBackend || async function(lead) {
+    if (!window.salesonLeadEndpoint || !lead) return;
+    try {
+      const response = await fetch(window.salesonLeadEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lead)
+      });
+      if (!response.ok) throw new Error('Lead submission was not accepted');
+      window.salesonTrack('lead_submission_accepted', { toolUsed: lead.toolUsed || '' });
+    } catch (err) {
+      console.warn('SalesOn lead backend submission failed:', err);
+    }
+  };
+})();
+</script>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  if (window.salesonTrack) window.salesonTrack('tool_opened', { page: 'tools_homepage' });
+});
+</script>
+    <script defer src="/assets/js/site-repairs.29824dd6d35a.js"></script>
+</body>
+</html>

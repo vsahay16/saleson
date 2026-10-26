@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Free E-Way Bill Requirement Checker | SalesOn</title>
+<meta content="Check whether an e-way bill may be required for GST goods movement based on value, state, document type and dispatch reason. Free tool by SalesOn." name="description"/>
+
+<link rel="icon" type="image/png" href="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-favicon.png"/>
+<link rel="alternate" hreflang="en-IN" href="https://saleson.co.in/tools/e-way-bill-checker"/>
+<link rel="alternate" hreflang="x-default" href="https://saleson.co.in/tools/e-way-bill-checker"/>
+<meta content="Free E-Way Bill Requirement Checker | SalesOn" property="og:title"/>
+<meta content="Check whether an e-way bill may be required for GST goods movement based on value, state, document type and dispatch reason. Free tool by SalesOn." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta property="og:url" content="https://saleson.co.in/tools/e-way-bill-checker">
+<!-- <meta content="https://tools.saleson.co.in/assets/saleson-free-tools-og.jpg" property="og:image"/> -->
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="SalesOn Free Business Tools" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@salesonsoftware" name="twitter:site"/>
+<!-- <meta content="https://tools.saleson.co.in/assets/saleson-free-tools-og.jpg" name="twitter:image"/> -->
+<meta content="index, follow" name="robots"/>
+<!-- ── FAQ Schema ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this e-way bill checker free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This e-way bill requirement checker is completely free. No account, no signup required. Enter your goods movement details and get an instant indication of whether an e-way bill may be required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is e-way bill required above ₹50,000?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under GST rules, an e-way bill is generally required when the consignment value exceeds ₹50,000. However, certain goods, states, and movement types have different thresholds or exemptions. Always verify with the official e-way bill portal or your accountant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is e-way bill required for delivery challan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An e-way bill may be required even when goods are moved under a delivery challan (for job work, stock transfer, van loading, exhibition, etc.), if the consignment value exceeds the applicable threshold. The document type does not by itself exempt you from e-way bill requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is e-way bill required for stock transfer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stock transfer between branches or warehouses — even without a sale — may require an e-way bill if the consignment value exceeds ₹50,000. Some states have different rules for intra-state stock transfers. Verify with your GST consultant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this tool for van loading or dispatch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This tool covers van loading, stock transfer, job work, delivery before invoice and other common dispatch scenarios. It gives a basic indication of e-way bill requirement. For van loading and beat-based dispatch, SalesOn provides a dedicated van sales and delivery challan tool."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the result legally final?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This tool gives a basic indication based on common GST rules. It is not legal or tax advice. E-way bill rules, state-specific thresholds, exempted goods lists and special cases change. Always verify with the official e-way bill portal (ewaybillgst.gov.in), CBIC notifications, or your accountant before moving goods."
+      }
+    }
+  ]
+}
+</script>
+<script src="/assets/js/min/common.min.5c2663c0cd10.js"></script>
+<script src="/assets/js/min/tool-handoff.min.312be650f7d3.js"></script>
+<link href="/css/min/common-new.min.f637cbb1ad10.css" rel="stylesheet" />
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&amp;display=swap" rel="stylesheet"/>
+<style>
+  
+    /* ── HERO ── */
+    .hero {
+      padding: 72px 0 64px;
+      background: radial-gradient(circle at 20% 20%, #eef2fc 0%, #ffffff 45%, #dde6f9 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 760px; }
+    .hero-eyebrow {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 5px 12px; border-radius: 100px;
+      font-size: 11.5px; font-weight: 700; letter-spacing: .03em;
+    }
+    .badge-green  { background: rgba(5,150,105,.2);  color: #489f7d; border: 1px solid rgba(5,150,105,.3); }
+    .badge-blue   { background: rgba(26,86,219,.25); color: #3f73ae; border: 1px solid rgba(26,86,219,.4); }
+    .badge-amber  { background: rgba(217,119,6,.2);  color: #bc971b; border: 1px solid rgba(217,119,6,.3); }
+    .badge-white  { background: rgba(255,255,255,.1); color: rgb(106 101 101 / 100%); border: 1px solid rgb(106 101 101 / 100%); }
+
+    .hero-h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.17; margin-bottom: 18px;
+    }
+    .hero-h1 em { font-style: italic; color: var(--brand); }
+    .hero-sub {
+      font-size: 16px; line-height: 1.78;
+      max-width: 600px; margin-bottom: 36px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    /* ═════════════════════════════
+       TOOL LAYOUT — FORM + RESULT
+       ═════════════════════════════ */
+    .tool-wrap {
+      display: grid;
+      grid-template-columns: 460px 1fr;
+      gap: 28px;
+      align-items: start;
+      padding: 28px 0 48px;
+    }
+
+    /* ── FORM PANEL ── */
+    .form-panel {
+      background: var(--white);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; box-shadow: var(--shadow-sm);
+    }
+    .form-panel-header {
+      background: var(--brand); padding: 16px 20px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .fph-title { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--white); }
+    .fph-actions { display: flex; gap: 8px; }
+    .fph-btn {
+      background: rgba(255,255,255,.2); color: var(--white);
+      border: 1px solid rgba(255,255,255,.25); border-radius: 6px;
+      padding: 5px 12px; font-size: 12px; font-weight: 700;
+      cursor: pointer; transition: background .15s; font-family: 'DM Sans', sans-serif;
+    }
+    .fph-btn:hover { background: rgba(255,255,255,.35); }
+
+    /* Collapsible form sections */
+    .form-section { border-bottom: 1px solid var(--border); }
+    .form-section:last-child { border-bottom: none; }
+    .form-section-head {
+      width: 100%; background: none; border: none;
+      padding: 13px 20px; text-align: left; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 13px; font-weight: 700; color: var(--ink);
+      font-family: 'DM Sans', sans-serif; transition: background .15s;
+    }
+    .form-section-head:hover { background: var(--surface); }
+    .form-section-head .sec-label { flex: 1; display: flex; align-items: center; gap: 6px; }
+    .form-section-head .chevron { font-size: 10px; color: var(--ink-mute); transition: transform .2s; }
+    .form-section-head.open .chevron { transform: rotate(180deg); }
+    .form-section-body { display: none; padding: 0 20px 18px; }
+    .form-section-body.open { display: block; }
+
+    /* Fields */
+    .form-row       { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+    .form-row.full  { grid-template-columns: 1fr; }
+    .form-row.three { grid-template-columns: 1fr 1fr 1fr; }
+    label {
+      font-size: 10.5px; font-weight: 700; color: var(--ink-mute);
+      text-transform: uppercase; letter-spacing: .06em; display: block; margin-bottom: 4px;
+    }
+    .fi {
+      border: 1.5px solid var(--border) !important; border-radius: var(--radius-sm);
+      padding: 9px 12px; font-size: 13.5px; font-family: 'DM Sans', sans-serif;
+      color: var(--ink); outline: none; width: 100%;
+      transition: border-color .15s; background: var(--white);
+    }
+    .fi:focus { border-color: var(--brand); }
+    select.fi {
+      appearance: none; cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237a8898' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 10px center; padding-right: 28px;
+    }
+
+    /* Yes/No toggle row */
+    .yn-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 8px 0; border-bottom: 1px solid var(--border);
+    }
+    .yn-row:last-child { border-bottom: none; }
+    .yn-label { font-size: 12.5px; color: var(--ink-soft); flex: 1; line-height: 1.4; }
+    .yn-btns  { display: flex; gap: 4px; flex-shrink: 0; }
+    .yn-btn {
+      padding: 4px 12px; border-radius: 100px;
+      font-size: 11.5px; font-weight: 700; font-family: 'DM Sans', sans-serif;
+      border: 1.5px solid var(--border); background: var(--white);
+      color: var(--ink-mute); cursor: pointer; transition: all .15s;
+    }
+    .yn-btn.active-yes { background: var(--red-light); color: var(--red); border-color: var(--red); }
+    .yn-btn.active-no  { background: var(--green-light); color: var(--green); border-color: var(--green); }
+    .yn-btn:hover { border-color: var(--brand); color: var(--brand); }
+
+    /* Check button */
+    .btn-check-wrap { padding: 16px 20px; border-top: 1px solid var(--border); }
+    .btn-check {
+      width: 100%; background: var(--brand); color: var(--white);
+      border: none; border-radius: var(--radius-sm);
+      padding: 14px 20px; font-size: 15px; font-weight: 800;
+      font-family: 'DM Sans', sans-serif; cursor: pointer;
+      transition: background .18s, transform .1s; display: flex;
+      align-items: center; justify-content: center; gap: 8px;
+    }
+    .btn-check:hover { background: var(--brand-dark); transform: translateY(-1px); }
+    .btn-check:active { transform: translateY(0); }
+
+    /* ── RESULT PANEL ── */
+    .result-panel { position: sticky; top: 80px; }
+    .result-panel-header {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;
+    }
+    .rp-title { font-size: 13px; font-weight: 700; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .06em; }
+
+    /* Result card */
+    .result-card {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow-md); margin-bottom: 16px;
+    }
+    .result-badge-bar {
+      padding: 18px 22px; display: flex; align-items: center; gap: 14px;
+    }
+    .result-icon { font-size: 28px; flex-shrink: 0; }
+    .result-title-block {}
+    .result-label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 3px; }
+    .result-headline {
+      font-family: 'DM Serif Display', serif; font-size: 20px; line-height: 1.2;
+    }
+
+    /* Result state colours */
+    .res-required  { background: #fff1f1; border-color: #fca5a5; }
+    .res-required  .result-label    { color: var(--red); }
+    .res-required  .result-headline { color: #991b1b; }
+    .res-maybe     { background: var(--green-light); border-color: #6ee7b7; }
+    .res-maybe     .result-label    { color: var(--green); }
+    .res-maybe     .result-headline { color: #065f46; }
+    .res-special   { background: var(--amber-light); border-color: #fcd34d; }
+    .res-special   .result-label    { color: var(--amber); }
+    .res-special   .result-headline { color: #78350f; }
+    .res-incomplete { background: var(--surface); border-color: var(--border); }
+    .res-incomplete .result-label    { color: var(--ink-mute); }
+    .res-incomplete .result-headline { color: var(--ink-soft); }
+
+    /* Result body */
+    .result-body { padding: 0 22px 20px; }
+    .result-reason {
+      font-size: 13.5px; color: var(--ink-soft); line-height: 1.7;
+      margin-bottom: 14px; padding: 12px 14px;
+      background: rgba(255,255,255,.6); border-radius: var(--radius-sm);
+      border: 1px solid rgba(0,0,0,.06);
+    }
+    .result-inputs { margin-bottom: 14px; }
+    .result-inputs-title { font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 8px; }
+    .result-input-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+    .result-chip {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 100px; padding: 3px 10px;
+      font-size: 11.5px; color: var(--ink-soft); font-weight: 600;
+    }
+    .result-next { margin-bottom: 14px; }
+    .result-next-title { font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 8px; }
+    .result-next-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .result-next-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--ink-soft); }
+    .step-dot {
+      width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0;
+      background: var(--brand-light); color: var(--brand);
+      font-size: 9px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; margin-top: 2px;
+    }
+    .result-docs { margin-bottom: 14px; }
+    .result-docs-title { font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 8px; }
+    .docs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .doc-chip {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 7px 10px;
+      font-size: 12px; color: var(--ink-soft); display: flex; align-items: center; gap: 6px;
+    }
+    .result-disclaimer {
+      background: var(--amber-light); border: 1px solid rgba(217,119,6,.25);
+      border-radius: var(--radius-sm); padding: 10px 14px;
+      font-size: 11.5px; color: #78350f; line-height: 1.65; margin-bottom: 14px;
+    }
+    .result-disclaimer strong { font-size: 12px; display: block; margin-bottom: 3px; }
+
+    /* Result action buttons */
+    .result-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn-res {
+      flex: 1; min-width: 120px; padding: 10px 12px;
+      border-radius: var(--radius-sm); font-size: 12.5px; font-weight: 700;
+      cursor: pointer; border: none; font-family: 'DM Sans', sans-serif;
+      text-align: center; transition: all .15s; text-decoration: none;
+      display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+    }
+    .btn-challan { background: var(--brand); color: white; }
+    .btn-challan:hover { background: var(--brand-dark); }
+    .btn-invoice { background: var(--green-light); color: var(--green); border: 1px solid rgba(5,150,105,.2); }
+    .btn-invoice:hover { background: var(--green); color: white; }
+    .btn-copy   { background: var(--surface); color: var(--ink); border: 1.5px solid var(--border); }
+    .btn-copy:hover { border-color: var(--brand); color: var(--brand); }
+    .btn-wa     { background: #25d366; color: white; }
+    .btn-wa:hover { background: #1db954; }
+    .btn-save   { background: var(--amber-light); color: var(--amber); border: 1px solid rgba(217,119,6,.2); }
+    .btn-save:hover { background: var(--amber); color: white; }
+
+    /* ── RECENT CHECKS ── */
+    .recent-checks { margin-top: 20px; }
+    .rc-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-mute); margin-bottom: 10px; }
+    .rc-list  { display: flex; flex-direction: column; gap: 8px; }
+    .rc-item  {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 11px 14px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .rc-info  { flex: 1; min-width: 0; }
+    .rc-goods { font-size: 13px; font-weight: 700; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .rc-meta  { font-size: 11.5px; color: var(--ink-mute); margin-top: 2px; }
+    .rc-badge {
+      padding: 3px 10px; border-radius: 100px; font-size: 11px; font-weight: 700;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .rc-badge.req      { background: #fee2e2; color: var(--red); }
+    .rc-badge.notreq   { background: var(--green-light); color: var(--green); }
+    .rc-badge.special  { background: var(--amber-light); color: var(--amber); }
+    .rc-badge.incomplete { background: var(--surface); color: var(--ink-mute); }
+    .rc-btns  { display: flex; gap: 6px; flex-shrink: 0; }
+    .rc-btn {
+      padding: 4px 10px; border-radius: 6px; border: none;
+      font-size: 11px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer;
+    }
+    .rc-btn-load { background: var(--brand-light); color: var(--brand); }
+    .rc-btn-load:hover { background: var(--brand); color: white; }
+    .rc-btn-del  { background: var(--red-light); color: var(--red); }
+    .rc-btn-del:hover { background: var(--red); color: white; }
+
+    /* ══════════
+       LEAD MODAL
+       ══════════ */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 500;
+      background: rgba(15,22,35,.6); backdrop-filter: blur(4px);
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-card {
+      background: var(--white); border-radius: 20px; max-width: 540px; width: 100%;
+      box-shadow: 0 24px 80px rgba(0,0,0,.3); overflow: hidden;
+      max-height: 90vh; overflow-y: auto;
+    }
+    .modal-header { background: var(--brand); padding: 22px 24px; }
+    .modal-title { font-family: 'DM Serif Display', serif; font-size: 20px; color: white; margin-bottom: 4px; }
+    .modal-sub   { font-size: 13px; color: rgba(255,255,255,.72); line-height: 1.6; }
+    .modal-body  { padding: 24px; }
+    .modal-row      { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .modal-row.full { grid-template-columns: 1fr; }
+    .modal-input {
+      border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+      padding: 10px 14px; font-size: 13.5px; font-family: 'DM Sans', sans-serif;
+      color: var(--ink); outline: none; width: 100%; transition: border-color .15s;
+    }
+    .modal-input:focus { border-color: var(--brand); }
+    .modal-actions { display: flex; gap: 10px; margin-top: 16px; }
+    .btn-modal-primary {
+      flex: 1; background: var(--brand); color: white; border: none;
+      border-radius: 10px; padding: 13px 16px; font-size: 14px; font-weight: 700;
+      cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background .18s;
+    }
+    .btn-modal-primary:hover { background: var(--brand-dark); }
+    .btn-modal-demo {
+      flex: 1; background: var(--green); color: white; border: none;
+      border-radius: 10px; padding: 13px 16px; font-size: 14px; font-weight: 700;
+      cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background .18s;
+    }
+    .btn-modal-demo:hover { background: #047857; }
+    .modal-skip { text-align: center; margin-top: 10px; }
+    .modal-skip a { font-size: 12.5px; color: var(--ink-mute); cursor: pointer; text-decoration: underline; }
+
+    /* WhatsApp Modal */
+    .wa-msg-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 14px;
+      font-size: 13.5px; color: var(--ink-soft); line-height: 1.7;
+      white-space: pre-wrap; margin-bottom: 12px;
+    }
+
+    /* Handoff modal */
+    .handoff-msg {
+      background: var(--brand-light); border: 1px solid rgba(26,86,219,.2);
+      border-radius: var(--radius-sm); padding: 14px 16px;
+      font-size: 13.5px; color: var(--brand); line-height: 1.7; margin-bottom: 12px;
+    }
+
+    /* ═══════════════════
+       SECTION LABELS
+       ═══════════════════ */
+    .section-label {
+      font-size: 11.5px; font-weight: 700; letter-spacing: .09em;
+      text-transform: uppercase; color: var(--brand); display: block; margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(22px, 3vw, 34px); color: var(--ink); line-height: 1.22; margin-bottom: 14px;
+    }
+    .section-title em { font-style: italic; color: var(--brand); }
+
+    /* Check list */
+    .check-dot {
+      width: 18px; height: 18px; border-radius: 50%; background: var(--green-light);
+      color: var(--green); font-size: 10px; font-weight: 800;
+      display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 20px 0 24px; }
+    .feature-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--ink-soft); }
+    .btn-demo {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--brand); color: var(--white);
+      padding: 13px 28px; border-radius: 10px;
+      font-size: 15px; font-weight: 700; text-decoration: none;
+      transition: background .18s, transform .1s;
+    }
+    .btn-demo:hover { background: var(--brand-dark); transform: translateY(-1px); }
+    .btn-demo-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--white); color: var(--brand);
+      padding: 12px 28px; border-radius: 10px;
+      font-size: 15px; font-weight: 700; text-decoration: none;
+      border: 2px solid var(--brand); transition: all .18s; margin-top: 12px;
+    }
+    .btn-demo-outline:hover { background: var(--brand); color: white; }
+
+    /* SEO cards */
+    .seo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; margin-top: 40px; }
+    .seo-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px 20px; border-top: 3px solid var(--brand);
+    }
+    .seo-card h3 { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+    .seo-card p  { font-size: 13px; color: var(--ink-mute); line-height: 1.7; }
+
+    /* FAQ */
+    .faq-list { max-width: 720px; margin: 40px auto 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 10px; }
+    .faq-q {
+      width: 100%; background: var(--white); border: none;
+      padding: 18px 20px; text-align: left; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      font-size: 15px; font-weight: 600; color: var(--ink);
+      font-family: 'DM Sans', sans-serif; transition: background .15s;
+    }
+    .faq-q:hover { background: var(--brand-light); }
+    .faq-q.open  { background: var(--brand-light); color: var(--brand); }
+    .faq-chevron {
+      width: 18px; height: 18px; flex-shrink: 0; border-radius: 50%;
+      background: var(--border); display: flex; align-items: center; justify-content: center;
+      font-size: 11px; transition: transform .2s, background .15s;
+    }
+    .faq-q.open .faq-chevron { transform: rotate(180deg); background: var(--brand); color: white; }
+    .faq-a { display: none; padding: 0 20px 20px; font-size: 14px; color: var(--ink-soft); line-height: 1.75; background: var(--brand-light); }
+    .faq-a.open { display: block; }
+
+    /* Related tools */
+    .tool-chip {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 100px; padding: 7px 16px;
+      font-size: 12.5px; font-weight: 600; color: var(--brand);
+      text-decoration: none; transition: all .15s; display: inline-block;
+    }
+    .tool-chip:hover      { background: var(--brand); color: white; border-color: var(--brand); }
+    .tool-chip.active-chip { background: var(--brand); color: white; border-color: var(--brand); }
+
+    /* Toast */
+    .toast {
+      position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
+      background: var(--ink); color: white; padding: 10px 20px;
+      border-radius: 100px; font-size: 13.5px; font-weight: 600;
+      box-shadow: var(--shadow-lg); z-index: 600;
+      opacity: 0; transition: opacity .3s; pointer-events: none;
+    }
+    .toast.show { opacity: 1; }
+
+    /* ═══════════════════
+       RESPONSIVE
+       ═══════════════════ */
+    @media (max-width: 1100px) {
+      .tool-wrap { grid-template-columns: 1fr; }
+      .result-panel { position: static; }
+
+    }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .docs-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .form-row       { grid-template-columns: 1fr; }
+      .form-row.three { grid-template-columns: 1fr 1fr; }
+      .modal-row      { grid-template-columns: 1fr; }
+      .modal-actions  { flex-direction: column; }
+      .result-actions { flex-direction: column; }
+      .hero   { padding: 44px 0 32px; }
+      .section { padding: 56px 0; }
+    }
+  
+
+/* SalesOn accessibility focus states */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #1a56db;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+
+.footer-social{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.footer-social a{font-size:12px;font-weight:700;color:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:5px 10px;transition:color .2s,border-color .2s}
+.footer-social a:hover{color:#fff;border-color:rgba(255,255,255,.35)}
+
+</style>
+<meta content="Free E-Way Bill Requirement Checker | SalesOn" name="twitter:title"/>
+<meta content="Check whether an e-way bill may be required for GST goods movement based on value, state, document type and dispatch reason. Free tool by SalesOn." name="twitter:description"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Free E-Way Bill Requirement Checker",
+  "url": "https://saleson.co.in/tools/e-way-bill-checker",
+  "description": "Check whether an e-way bill is required for GST goods movement based on value, state, document type, and dispatch reason. Free for Indian businesses.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "SalesOn",
+    "url": "https://saleson.co.in/"
+  },
+  "featureList": "No account required, PDF download, Works on mobile"
+}
+</script>
+
+    <link rel="canonical" href="https://saleson.co.in/tools/e-way-bill-checker">
+    <link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css">
+</head>
+<body>
+
+<site-header source="tools" ><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header>
+<aside class="tool-storage-note" role="note">Drafts and saved tool data are stored in this browser. Keep an exported copy before clearing browser data. <a href="/privacy-policy">Privacy policy</a> · <a href="mailto:support@saleson.co.in">Contact support</a></aside>
+<!-- ══════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════ -->
+<section aria-label="E-Way Bill Requirement Checker" class="hero">
+<div class="container">
+<div class="hero-content">
+<div class="hero-eyebrow">
+<span class="badge badge-green">✓ Free · No Signup Required</span>
+<span class="badge badge-blue">📦 GST Goods Movement</span>
+<span class="badge badge-amber">🚚 Dispatch Ready</span>
+<span class="badge badge-white">🇮🇳 Built for Indian MSMEs</span>
+</div>
+<h1 class="hero-h1">Free E-Way Bill<br/><em>Requirement Checker</em></h1>
+<p class="hero-sub">Check whether an e-way bill may be required for goods movement based on consignment value, state movement, transport mode, GST document type and reason for dispatch.</p>
+</div>
+</div>
+</section>
+<!-- ══════════════════════════════════════════
+     TOOL: FORM + RESULT
+     ══════════════════════════════════════════ -->
+<div class="container">
+<div class="tool-wrap" id="toolWrap">
+<!-- ════════════ FORM PANEL ════════════ -->
+<div class="form-panel" id="formPanel">
+<div class="form-panel-header">
+<span class="fph-title">📦 E-Way Bill Checker</span>
+<div class="fph-actions">
+<button class="fph-btn" onclick="saveCheck()">💾 Save</button>
+<button class="fph-btn" onclick="loadLastCheck()">📂 Load Last</button>
+<button class="fph-btn" onclick="resetForm()" style="background:rgba(220,38,38,.3);border-color:rgba(220,38,38,.4);">↺ Reset</button>
+</div>
+</div>
+<!-- ── A. GOODS MOVEMENT DETAILS ── -->
+<div class="form-section">
+<button class="form-section-head open" onclick="toggleSection(this)">
+<span class="sec-label">📦 Goods Movement Details</span>
+<span class="chevron">▾</span>
+</button>
+<div class="form-section-body open">
+<div class="form-row full">
+<label>Consignment Value (₹) *</label>
+<input class="fi" id="consignmentValue" min="0" oninput="runChecker()" placeholder="75000" type="number"/>
+</div>
+<div class="form-row full">
+<label>Goods Description *</label>
+<input class="fi" id="goodsDesc" oninput="runChecker()" placeholder="FMCG Product Boxes" type="text"/>
+</div>
+<div class="form-row">
+<div>
+<label>HSN Code (optional)</label>
+<input class="fi" id="hsnCode" oninput="runChecker()" placeholder="3401" type="text"/>
+</div>
+<div>
+<label>Quantity (optional)</label>
+<input class="fi" id="quantity" oninput="runChecker()" placeholder="50 Boxes" type="text"/>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>From State *</label>
+<select class="fi" id="fromState" onchange="runChecker()">
+<option value="">Select state</option>
+</select>
+</div>
+<div>
+<label>To State *</label>
+<select class="fi" id="toState" onchange="runChecker()">
+<option value="">Select state</option>
+</select>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>Movement Type</label>
+<select class="fi" id="movementType" onchange="runChecker()">
+<option value="">Select</option>
+<option value="intrastate">Within same state</option>
+<option selected="" value="interstate">Between different states</option>
+<option value="import">Import</option>
+<option value="export">Export</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div>
+<label>Approx. Distance (km)</label>
+<input class="fi" id="distance" min="0" oninput="runChecker()" placeholder="120" type="number"/>
+</div>
+</div>
+<div class="form-row full">
+<label>Movement Date</label>
+<input class="fi" id="movementDate" oninput="runChecker()" type="date"/>
+</div>
+</div>
+</div>
+<!-- ── B. PARTY DETAILS ── -->
+<div class="form-section">
+<button class="form-section-head open" onclick="toggleSection(this)">
+<span class="sec-label">🤝 Party Details</span>
+<span class="chevron">▾</span>
+</button>
+<div class="form-section-body open">
+<div class="form-row">
+<div>
+<label>Supplier Type</label>
+<select class="fi" id="supplierType" onchange="runChecker()">
+<option selected="" value="registered">Registered</option>
+<option value="unregistered">Unregistered</option>
+<option value="consumer">Consumer</option>
+</select>
+</div>
+<div>
+<label>Recipient Type</label>
+<select class="fi" id="recipientType" onchange="runChecker()">
+<option selected="" value="registered">Registered</option>
+<option value="unregistered">Unregistered</option>
+<option value="consumer">Consumer</option>
+</select>
+</div>
+</div>
+<div class="form-row full">
+<label>Who is Moving Goods</label>
+<select class="fi" id="moverType" onchange="runChecker()">
+<option selected="" value="supplier">Supplier</option>
+<option value="recipient">Recipient</option>
+<option value="transporter">Transporter</option>
+<option value="ecommerce">E-commerce / Operator</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div class="form-row">
+<div>
+<label>Supplier GSTIN (optional)</label>
+<input class="fi" id="supplierGSTIN" maxlength="15" oninput="this.value=this.value.toUpperCase()" placeholder="10ABCDE1234F1Z5" style="text-transform:uppercase" type="text"/>
+</div>
+<div>
+<label>Recipient GSTIN (optional)</label>
+<input class="fi" id="recipientGSTIN" maxlength="15" oninput="this.value=this.value.toUpperCase()" placeholder="20AAAAA1234A1Z5" style="text-transform:uppercase" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- ── C. REASON FOR MOVEMENT ── -->
+<div class="form-section">
+<button class="form-section-head open" onclick="toggleSection(this)">
+<span class="sec-label">📋 Reason for Movement</span>
+<span class="chevron">▾</span>
+</button>
+<div class="form-section-body open">
+<div class="form-row full">
+<label>Reason *</label>
+<select class="fi" id="reasonForMovement" onchange="runChecker()">
+<option value="">Select reason</option>
+<option selected="" value="sale">Sale / Supply</option>
+<option value="stocktransfer">Stock Transfer</option>
+<option value="jobwork">Job Work</option>
+<option value="approval">Goods Sent for Approval</option>
+<option value="deliverybefore">Delivery Before Invoice</option>
+<option value="exhibition">Exhibition / Demo</option>
+<option value="purchasereturn">Purchase Return</option>
+<option value="salesreturn">Sales Return</option>
+<option value="replacement">Replacement</option>
+<option value="vanloading">Van Loading</option>
+<option value="branchtransfer">Branch Transfer</option>
+<option value="other">Other</option>
+</select>
+</div>
+</div>
+</div>
+<!-- ── D. DOCUMENT DETAILS ── -->
+<div class="form-section">
+<button class="form-section-head open" onclick="toggleSection(this)">
+<span class="sec-label">📄 Document Details</span>
+<span class="chevron">▾</span>
+</button>
+<div class="form-section-body open">
+<div class="form-row full">
+<label>Document Type *</label>
+<select class="fi" id="documentType" onchange="runChecker()">
+<option value="">Select document</option>
+<option selected="" value="taxinvoice">Tax Invoice</option>
+<option value="deliverychallan">Delivery Challan</option>
+<option value="billofsupply">Bill of Supply</option>
+<option value="billofentry">Bill of Entry</option>
+<option value="creditnote">Credit Note</option>
+<option value="nodocument">No Document Yet</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div class="form-row">
+<div>
+<label>Document Number (optional)</label>
+<input class="fi" id="docNumber" placeholder="INV-2024-001" type="text"/>
+</div>
+<div>
+<label>Document Date (optional)</label>
+<input class="fi" id="docDate" type="date"/>
+</div>
+</div>
+<div class="form-row">
+<div>
+<label>Vehicle Number (optional)</label>
+<input class="fi" id="vehicleNumber" oninput="this.value=this.value.toUpperCase()" placeholder="BR01AB1234" style="text-transform:uppercase" type="text"/>
+</div>
+<div>
+<label>Transporter ID (optional)</label>
+<input class="fi" id="transporterID" placeholder="Optional" type="text"/>
+</div>
+</div>
+<div class="form-row full">
+<label>LR / RR Number (optional)</label>
+<input class="fi" id="lrNumber" placeholder="Optional" type="text"/>
+</div>
+</div>
+</div>
+<!-- ── E. SPECIAL CASE QUESTIONS ── -->
+<div class="form-section">
+<button class="form-section-head" onclick="toggleSection(this)">
+<span class="sec-label">⚠️ Special Case Questions</span>
+<span class="chevron">▾</span>
+</button>
+<div class="form-section-body">
+<!-- Each yn-row has a data-key used by JS to read state -->
+<div class="yn-row">
+<span class="yn-label">Are goods being moved by hand delivery?</span>
+<div class="yn-btns">
+<button class="yn-btn" data-key="handDelivery" data-val="yes" onclick="setYN(this,'yes')">Yes</button>
+<button class="yn-btn active-no" data-key="handDelivery" data-val="no" onclick="setYN(this,'no')">No</button>
+</div>
+</div>
+<div class="yn-row">
+<span class="yn-label">Is movement by non-motorized conveyance?</span>
+<div class="yn-btns">
+<button class="yn-btn" data-key="nonMotorized" data-val="yes" onclick="setYN(this,'yes')">Yes</button>
+<button class="yn-btn active-no" data-key="nonMotorized" data-val="no" onclick="setYN(this,'no')">No</button>
+</div>
+</div>
+<div class="yn-row">
+<span class="yn-label">Are goods exempted or nil-rated?</span>
+<div class="yn-btns">
+<button class="yn-btn" data-key="exempted" data-val="yes" onclick="setYN(this,'yes')">Yes</button>
+<button class="yn-btn active-no" data-key="exempted" data-val="no" onclick="setYN(this,'no')">No</button>
+</div>
+</div>
+<div class="yn-row">
+<span class="yn-label">Is movement within a very short local distance?</span>
+<div class="yn-btns">
+<button class="yn-btn" data-key="shortLocal" data-val="yes" onclick="setYN(this,'yes')">Yes</button>
+<button class="yn-btn active-no" data-key="shortLocal" data-val="no" onclick="setYN(this,'no')">No</button>
+</div>
+</div>
+<div class="yn-row">
+<span class="yn-label">Is movement to/from a job worker?</span>
+<div class="yn-btns">
+<button class="yn-btn" data-key="jobworker" data-val="yes" onclick="setYN(this,'yes')">Yes</button>
+<button class="yn-btn active-no" data-key="jobworker" data-val="no" onclick="setYN(this,'no')">No</button>
+</div>
+</div>
+<div class="yn-row">
+<span class="yn-label">Is movement for exhibition / demo?</span>
+<div class="yn-btns">
+<button class="yn-btn" data-key="exhibition" data-val="yes" onclick="setYN(this,'yes')">Yes</button>
+<button class="yn-btn active-no" data-key="exhibition" data-val="no" onclick="setYN(this,'no')">No</button>
+</div>
+</div>
+<div class="yn-row">
+<span class="yn-label">Is movement from unregistered to registered person?</span>
+<div class="yn-btns">
+<button class="yn-btn" data-key="unreg2reg" data-val="yes" onclick="setYN(this,'yes')">Yes</button>
+<button class="yn-btn active-no" data-key="unreg2reg" data-val="no" onclick="setYN(this,'no')">No</button>
+</div>
+</div>
+<div class="yn-row">
+<span class="yn-label">Is this a multi-vehicle or transshipment movement?</span>
+<div class="yn-btns">
+<button class="yn-btn" data-key="multiVehicle" data-val="yes" onclick="setYN(this,'yes')">Yes</button>
+<button class="yn-btn active-no" data-key="multiVehicle" data-val="no" onclick="setYN(this,'no')">No</button>
+</div>
+</div>
+<div class="yn-row">
+<span class="yn-label">Are there multiple invoices in one vehicle?</span>
+<div class="yn-btns">
+<button class="yn-btn" data-key="multiInvoice" data-val="yes" onclick="setYN(this,'yes')">Yes</button>
+<button class="yn-btn active-no" data-key="multiInvoice" data-val="no" onclick="setYN(this,'no')">No</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ── CHECK BUTTON ── -->
+<div class="btn-check-wrap">
+<button class="btn-check" onclick="runChecker(true)">
+          🔍 Check E-Way Bill Requirement
+        </button>
+</div>
+</div><!-- /form-panel -->
+<!-- ════════════ RESULT PANEL ════════════ -->
+<div class="result-panel">
+<div class="result-panel-header">
+<span class="rp-title">📊 Requirement Result</span>
+<span style="font-size:12px;color:var(--ink-mute);">Updates as you fill form</span>
+</div>
+<!-- ── RESULT CARD (rendered by JS) ── -->
+<div id="resultCard"></div>
+<!-- ── RECENT CHECKS ── -->
+<div class="recent-checks" id="recentChecks"></div>
+</div>
+</div><!-- /tool-wrap -->
+</div><!-- /container -->
+<!-- ══════════════════════════════════════════
+     UPSELL SECTION
+     ══════════════════════════════════════════ -->
+<section aria-label="E-way bill checks are only one part of dispatch" class="section section-alt">
+<div class="container">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+<div>
+<span class="section-label">Dispatch Management</span>
+<h2 class="section-title">E-way bill checks are<br/><em>only one part of dispatch.</em></h2>
+<p style="font-size:15px;color:var(--ink-soft);line-height:1.75;margin-bottom:8px;">
+          Checking e-way bill requirement helps before moving goods. But growing businesses also need delivery challans, GST invoices, stock movement tracking, van loading, proof of delivery, payment collection and field sales visibility. SalesOn connects dispatch, billing, inventory, delivery and reports in one platform.
+        </p>
+<ul class="feature-list">
+<li><span class="check-dot">✓</span> <a href="/tools/delivery-challan-generator" style="color:var(--brand);font-weight:600;text-decoration:none;">Delivery challans</a> with PDF download</li>
+<li><span class="check-dot">✓</span> <a href="/tools/gst-invoice-generator" style="color:var(--brand);font-weight:600;text-decoration:none;">GST invoices</a> connected to stock movement</li>
+<li><span class="check-dot">✓</span> Dispatch tracking with van loading and route</li>
+<li><span class="check-dot">✓</span> <a href="/van-sales" style="color:var(--brand);font-weight:600;text-decoration:none;">Van sales</a> with load-in, delivery and collections</li>
+<li><span class="check-dot">✓</span> Inventory movement records per dispatch</li>
+<li><span class="check-dot">✓</span> <a href="/field-sales" style="color:var(--brand);font-weight:600;text-decoration:none;">Field sales app</a> for salesman tracking</li>
+<li><span class="check-dot">✓</span> Tally / Busy integration for billing</li>
+</ul>
+<a class="btn-demo" href="/tools/delivery-challan-generator">🚚 Create Delivery Challan Free</a>
+<br/>
+<a class="btn-demo-outline" href="/request-demo">📅 Book a Free SalesOn Demo</a>
+</div>
+<div>
+<div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:16px;">
+<div style="font-size:11px;font-weight:800;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.07em;margin-bottom:14px;">Common e-way bill scenarios</div>
+<div style="display:flex;flex-direction:column;gap:0;">
+<div style="display:flex;justify-content:space-between;font-size:13px;padding:10px 0;border-bottom:1px solid var(--border);">
+<span style="color:var(--ink-soft);">Sale above ₹50,000 — interstate</span><span style="color:var(--red);font-weight:700;">Required</span>
+</div>
+<div style="display:flex;justify-content:space-between;font-size:13px;padding:10px 0;border-bottom:1px solid var(--border);">
+<span style="color:var(--ink-soft);">Sale above ₹50,000 — intrastate</span><span style="color:var(--amber);font-weight:700;">Check state rules</span>
+</div>
+<div style="display:flex;justify-content:space-between;font-size:13px;padding:10px 0;border-bottom:1px solid var(--border);">
+<span style="color:var(--ink-soft);">Stock transfer above ₹50,000</span><span style="color:var(--red);font-weight:700;">Likely required</span>
+</div>
+<div style="display:flex;justify-content:space-between;font-size:13px;padding:10px 0;border-bottom:1px solid var(--border);">
+<span style="color:var(--ink-soft);">Van loading (beat-based dispatch)</span><span style="color:var(--amber);font-weight:700;">Delivery challan + check</span>
+</div>
+<div style="display:flex;justify-content:space-between;font-size:13px;padding:10px 0;border-bottom:1px solid var(--border);">
+<span style="color:var(--ink-soft);">Job work movement above ₹50,000</span><span style="color:var(--red);font-weight:700;">Likely required</span>
+</div>
+<div style="display:flex;justify-content:space-between;font-size:13px;padding:10px 0;border-bottom:1px solid var(--border);">
+<span style="color:var(--ink-soft);">Exempted / nil-rated goods</span><span style="color:var(--green);font-weight:700;">May be exempt</span>
+</div>
+<div style="display:flex;justify-content:space-between;font-size:13px;padding:10px 0;">
+<span style="color:var(--ink-soft);">Sale below ₹50,000</span><span style="color:var(--green);font-weight:700;">Usually not required</span>
+</div>
+</div>
+</div>
+<div style="background:var(--amber-light);border:1px solid rgba(217,119,6,.25);border-radius:var(--radius-sm);padding:14px 16px;font-size:12.5px;color:#78350f;line-height:1.7;">
+          ⚠️ <strong>Always verify.</strong> E-way bill rules, state-specific thresholds and exemption lists may change. Verify with the official <strong>ewaybillgst.gov.in</strong> portal or your accountant before dispatch.
+        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- ══════════════════════════════════════════
+     SEO CONTENT
+     ══════════════════════════════════════════ -->
+<section aria-label="Guide to e-way bill" class="section">
+<div class="container">
+<div style="text-align:center;max-width:620px;margin:0 auto;">
+<span class="section-label">Guide</span>
+<h2 class="section-title">Everything About<br/><em>E-Way Bills for GST</em></h2>
+</div>
+<div class="seo-grid">
+<div class="seo-card">
+<h3>What is an E-Way Bill?</h3>
+<p>An e-way bill (Electronic Way Bill) is a document required under GST for movement of goods in India above a specified consignment value. It must be generated on the e-way bill portal before goods leave the origin location.</p>
+</div>
+<div class="seo-card">
+<h3>When is it Required?</h3>
+<p>An e-way bill is generally required when the consignment value exceeds ₹50,000. This applies to all movement of taxable goods — whether for sale, stock transfer, job work, van loading, purchase return or delivery before invoice.</p>
+</div>
+<div class="seo-card">
+<h3>Documents Needed for E-Way Bill</h3>
+<p>To generate an e-way bill you need: supplier and recipient GSTIN, document number (invoice / challan), HSN code, consignment value, vehicle number, transporter ID, and from/to locations.</p>
+</div>
+<div class="seo-card">
+<h3>Delivery Challan vs Invoice vs E-Way Bill</h3>
+<p>A delivery challan is the dispatch document for goods movement without a sale (van loading, job work, stock transfer). A GST invoice records the sale. An e-way bill is the transit permit required for both when value exceeds ₹50,000.</p>
+</div>
+<div class="seo-card">
+<h3>E-Way Bill for Stock Transfer &amp; Van Loading</h3>
+<p>Stock transfer and van loading require a delivery challan as the base document. If the consignment value exceeds ₹50,000, an e-way bill is also required — even though no sale has occurred. Some states have different rules.</p>
+</div>
+<div class="seo-card">
+<h3>E-Way Bill for Job Work</h3>
+<p>When goods are sent to a job worker for processing, an e-way bill is typically required if the value exceeds ₹50,000. Special exemptions apply for small job work under certain conditions — verify with your accountant.</p>
+</div>
+<div class="seo-card">
+<h3>How to Use This Checker</h3>
+<p>Fill in the consignment value, from/to states, reason for movement and document type. The tool applies common GST rules and gives an instant indication of whether an e-way bill may be required — along with suggested next steps.</p>
+</div>
+<div class="seo-card">
+<h3>When to Move to SalesOn</h3>
+<p>When your business dispatches daily — with van loading, delivery challans, GST billing, stock tracking and payment collection — manual e-way bill checking becomes a bottleneck. SalesOn connects all of this in one platform built for Indian distributors.</p>
+</div>
+</div>
+<!-- Internal links block -->
+<div style="margin-top:48px;padding:28px;background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);">
+<div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-mute);margin-bottom:16px;">Related SalesOn Free Tools</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<a class="tool-chip" href="/tools/gst-invoice-generator">🧾 GST Invoice Generator</a>
+<a class="tool-chip" href="/tools/delivery-challan-generator">🚚 Delivery Challan Generator</a>
+<a class="tool-chip" href="/tools/payment-receipt-generator">💰 Payment Receipt Generator</a>
+<a class="tool-chip" href="/tools/quotation-generator">📋 Quotation Generator</a>
+<a class="tool-chip" href="/tools/purchase-order-generator">📦 Purchase Order Generator</a>
+<a class="tool-chip" href="/tools/gst-calculator">🔢 GST Calculator</a>
+<a class="tool-chip" href="/tools/hsn-sac-gst-rate-finder">📖 HSN/SAC Finder</a>
+<a class="tool-chip" href="/tools/whatsapp-payment-reminder-generator">💬 WhatsApp Reminder</a>
+<a class="tool-chip active-chip" href="/tools/e-way-bill-checker">🚦 E-Way Bill Checker</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ══════════════════════════════════════════
+     FAQ SECTION
+     ══════════════════════════════════════════ -->
+<section aria-label="E-way bill checker FAQ" class="section section-alt">
+<div class="container">
+<div style="text-align:center;">
+<span class="section-label">FAQ</span>
+<h2 class="section-title">Frequently Asked<br/><em>Questions</em></h2>
+</div>
+<div class="faq-list">
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Is this e-way bill checker free? <span class="faq-chevron">▾</span></button>
+<div class="faq-a">Yes. This e-way bill requirement checker is completely free. No account or signup required. Enter your goods movement details and get an instant indication based on common GST rules.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Is e-way bill required above ₹50,000? <span class="faq-chevron">▾</span></button>
+<div class="faq-a">Under GST rules, an e-way bill is generally required when the consignment value exceeds ₹50,000 for taxable goods. However, certain states have different thresholds, certain goods are exempted, and certain movement types have special rules. Always verify with the official e-way bill portal (ewaybillgst.gov.in) or your accountant.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Is e-way bill required for delivery challan? <span class="faq-chevron">▾</span></button>
+<div class="faq-a">Yes, an e-way bill may be required even when goods move under a delivery challan — for stock transfer, job work, van loading, exhibitions, etc. — if the consignment value exceeds the applicable threshold. The document type alone does not exempt you.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Is e-way bill required for stock transfer? <span class="faq-chevron">▾</span></button>
+<div class="faq-a">Stock transfer between branches or warehouses may require an e-way bill if the consignment value exceeds ₹50,000 — even without a sale. Some states have lower thresholds or specific rules for intra-state stock transfers. Verify with your GST consultant.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Can I use this tool for van loading or dispatch? <span class="faq-chevron">▾</span></button>
+<div class="faq-a">Yes. This tool covers van loading, stock transfer, job work, delivery before invoice and other common dispatch scenarios. It gives a basic indication of e-way bill requirement. For van loading and beat-based dispatch, also use the SalesOn Delivery Challan Generator to create the required dispatch document.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Is the result legally final? <span class="faq-chevron">▾</span></button>
+<div class="faq-a">No. This tool gives a basic indication based on common GST rules. It is not legal or tax advice. E-way bill rules, state-specific thresholds, exempted goods lists and special cases change frequently. Always verify with the official e-way bill portal (ewaybillgst.gov.in), CBIC notifications, or your accountant before moving goods.</div>
+</div>
+</div>
+</div>
+</section>
+<site-footer source="tools"><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
+<whatsapp-float msg="Hi%20SalesOn%2C%20I%27d%20like%20to%20know%20more%20about%20SalesOn"></whatsapp-float>
+<script src="/components/site-header.cd8aaee89ecb.js" defer></script>
+<script src="/components/site-footer.0ffd3829fc3f.js" defer></script>
+<script src="/components/whatsapp-float.0e773436a8ab.js" defer></script>
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+<!-- ══════════════════════════════════════════
+     LEAD CAPTURE MODAL
+     ══════════════════════════════════════════ -->
+<div aria-modal="true" class="modal-overlay" id="leadModal" role="dialog">
+<div class="modal-card">
+<div class="modal-header">
+<div class="modal-title">Managing dispatch and GST documents manually?</div>
+<div class="modal-sub">SalesOn helps businesses manage delivery challans, GST invoices, dispatch, stock movement, van sales, payment collection and field sales tracking in one platform.</div>
+</div>
+<div class="modal-body">
+<div class="modal-row">
+<div><label>Your Name *</label><input class="modal-input" id="leadName" placeholder="Ramesh Gupta" type="text"/></div>
+<div><label>Mobile / WhatsApp *</label><input class="modal-input" id="leadPhone" placeholder="+91 80928 56577" type="tel"/></div>
+</div>
+<div class="modal-row">
+<div><label>Business Name *</label><input class="modal-input" id="leadBiz" placeholder="Shree Balaji Distributors" type="text"/></div>
+<div><label>City</label><input class="modal-input" id="leadCity" placeholder="Patna" type="text"/></div>
+</div>
+<div class="modal-row">
+<div>
+<label>Business Type</label>
+<select class="modal-input" id="leadBizType">
+<option value="">Select</option>
+<option>Distributor</option><option>Wholesaler</option><option>Manufacturer</option>
+<option>FMCG</option><option>Pharma</option><option>Retailer</option>
+<option>Service Business</option><option>Other</option>
+</select>
+</div>
+<div>
+<label>Monthly Dispatches / Orders</label>
+<select class="modal-input" id="leadVolume">
+<option value="">Select</option>
+<option>1–20</option><option>21–100</option><option>101–500</option><option>500+</option>
+</select>
+</div>
+</div>
+<div class="modal-row full">
+<label>Current Dispatch / Billing Method</label>
+<select class="modal-input" id="leadMethod">
+<option value="">Select</option>
+<option>Excel</option><option>Tally</option><option>Busy</option>
+<option>Manual book</option><option>WhatsApp</option><option>Other software</option>
+</select>
+</div>
+<div class="modal-actions">
+<button class="btn-modal-primary" onclick="submitLead('continue')">✓ Continue Free</button>
+<button class="btn-modal-demo" onclick="submitLead('demo')">📅 Book SalesOn Demo</button>
+</div>
+<div class="modal-skip"><a onclick="skipLead()">Skip — continue without sharing details</a></div>
+</div>
+</div>
+</div>
+<!-- WhatsApp Share Modal -->
+<div aria-modal="true" class="modal-overlay" id="waModal" role="dialog">
+<div class="modal-card" style="max-width:460px;">
+<div class="modal-header" style="background:#25d366;">
+<div class="modal-title">💬 WhatsApp Share</div>
+<div class="modal-sub">Share e-way bill check result</div>
+</div>
+<div class="modal-body">
+<div class="wa-msg-box" id="waMessageBox"></div>
+<div style="display:flex;gap:10px;">
+<a href="#" id="waOpenBtn" style="flex:1;background:#25d366;color:white;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px;" target="_blank">
+          📲 Open WhatsApp
+        </a>
+<button onclick="copyWaMessage()" style="flex:1;background:var(--surface);color:var(--ink);border:1.5px solid var(--border);border-radius:10px;padding:13px;font-size:14px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;">
+          📋 Copy
+        </button>
+</div>
+<div class="modal-skip" style="margin-top:10px;">
+<a onclick="document.getElementById('waModal').classList.remove('open')">Close</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Handoff Modal (challan / invoice) -->
+<div aria-modal="true" class="modal-overlay" id="handoffModal" role="dialog">
+<div class="modal-card" style="max-width:440px;">
+<div class="modal-header" id="handoffHeader" style="background:var(--brand);">
+<div class="modal-title" id="handoffTitle">Data Saved</div>
+<div class="modal-sub" id="handoffSub"></div>
+</div>
+<div class="modal-body">
+<div class="handoff-msg" id="handoffMsg"></div>
+<a class="btn-demo" href="#" id="handoffLink" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:10px;">Open Tool →</a>
+<div class="modal-skip">
+<a onclick="document.getElementById('handoffModal').classList.remove('open')">Close</a>
+</div>
+</div>
+</div>
+</div>
+<!-- ══════════════════════════════════════════
+     JAVASCRIPT
+     ══════════════════════════════════════════ -->
+<script>
+/* ─────────────────────────────────────
+   STATE
+───────────────────────────────────── */
+let currentResult   = null;   // { type, headline, reason, nextSteps }
+let pendingAction   = null;   // 'copy' | 'challan' | 'invoice' | 'wa' | 'save'
+let checkCount      = 0;      // to trigger lead modal after 3 checks
+
+/* Special case Y/N state — keyed by data-key */
+const specialCases = {
+  handDelivery: 'no', nonMotorized: 'no', exempted: 'no',
+  shortLocal: 'no', jobworker: 'no', exhibition: 'no',
+  unreg2reg: 'no', multiVehicle: 'no', multiInvoice: 'no'
+};
+
+/* ─────────────────────────────────────
+   STATES LIST
+───────────────────────────────────── */
+const STATES = [
+  'Andaman & Nicobar','Andhra Pradesh','Arunachal Pradesh','Assam','Bihar',
+  'Chandigarh','Chhattisgarh','Dadra & Nagar Haveli','Daman & Diu','Delhi',
+  'Goa','Gujarat','Haryana','Himachal Pradesh','Jammu & Kashmir','Jharkhand',
+  'Karnataka','Kerala','Ladakh','Lakshadweep','Madhya Pradesh','Maharashtra',
+  'Manipur','Meghalaya','Mizoram','Nagaland','Odisha','Puducherry','Punjab',
+  'Rajasthan','Sikkim','Tamil Nadu','Telangana','Tripura','Uttar Pradesh',
+  'Uttarakhand','West Bengal'
+];
+
+function populateStates() {
+  ['fromState','toState'].forEach(id => {
+    const sel = document.getElementById(id);
+    STATES.forEach(s => {
+      const o = document.createElement('option');
+      o.value = s; o.textContent = s; sel.appendChild(o);
+    });
+  });
+}
+
+/* ─────────────────────────────────────
+   SPECIAL CASE YES/NO TOGGLES
+───────────────────────────────────── */
+function setYN(btn, val) {
+  const key  = btn.getAttribute('data-key');
+  const pair = btn.closest('.yn-btns');
+  pair.querySelectorAll('.yn-btn').forEach(b => {
+    b.classList.remove('active-yes','active-no');
+  });
+  btn.classList.add(val === 'yes' ? 'active-yes' : 'active-no');
+  specialCases[key] = val;
+  runChecker();
+}
+
+/* ─────────────────────────────────────
+   COLLAPSIBLE SECTION TOGGLE
+───────────────────────────────────── */
+function toggleSection(btn) {
+  const body = btn.nextElementSibling;
+  const open = btn.classList.toggle('open');
+  body.classList.toggle('open', open);
+}
+
+/* ─────────────────────────────────────
+   READ FORM VALUES
+───────────────────────────────────── */
+function getFormData() {
+  return {
+    consignmentValue: parseFloat(document.getElementById('consignmentValue').value) || null,
+    goodsDesc:        document.getElementById('goodsDesc').value.trim(),
+    hsnCode:          document.getElementById('hsnCode').value.trim(),
+    quantity:         document.getElementById('quantity').value.trim(),
+    fromState:        document.getElementById('fromState').value,
+    toState:          document.getElementById('toState').value,
+    movementType:     document.getElementById('movementType').value,
+    distance:         parseFloat(document.getElementById('distance').value) || null,
+    movementDate:     document.getElementById('movementDate').value,
+    supplierType:     document.getElementById('supplierType').value,
+    recipientType:    document.getElementById('recipientType').value,
+    moverType:        document.getElementById('moverType').value,
+    reason:           document.getElementById('reasonForMovement').value,
+    documentType:     document.getElementById('documentType').value,
+    vehicleNumber:    document.getElementById('vehicleNumber').value.trim(),
+    transporterID:    document.getElementById('transporterID').value.trim(),
+    lrNumber:         document.getElementById('lrNumber').value.trim(),
+    ...specialCases
+  };
+}
+
+/* ─────────────────────────────────────
+   RULE-BASED CHECKER LOGIC
+───────────────────────────────────── */
+const RESULT = {
+  REQUIRED:   'required',
+  MAYBE_NOT:  'maybeno',
+  SPECIAL:    'special',
+  INCOMPLETE: 'incomplete'
+};
+
+function applyRules(d) {
+  const reasons  = [];
+  const steps    = [];
+  let   verdict  = RESULT.MAYBE_NOT;
+
+  /* ── 0. Incomplete state ── */
+  if (d.consignmentValue === null) {
+    return {
+      type: RESULT.INCOMPLETE,
+      headline: 'Enter consignment value to check',
+      reason: 'Please enter the total consignment value (₹) to get a result. This is the main trigger for e-way bill requirement.',
+      nextSteps: ['Enter consignment value', 'Fill from and to state', 'Select reason for movement'],
+      inputs: []
+    };
+  }
+
+  /* ── 1. Value threshold — base rule ── */
+  const val = d.consignmentValue;
+  if (val > 50000) {
+    verdict = RESULT.REQUIRED;
+    reasons.push(`Consignment value ₹${val.toLocaleString('en-IN')} exceeds the ₹50,000 threshold.`);
+  } else {
+    verdict = RESULT.MAYBE_NOT;
+    reasons.push(`Consignment value ₹${val.toLocaleString('en-IN')} is within/at the ₹50,000 threshold. E-way bill may not be required, but verify voluntary generation and state-specific rules.`);
+  }
+
+  /* ── 2. Interstate movement — stronger signal ── */
+  const interstate = (d.movementType === 'interstate') ||
+    (d.fromState && d.toState && d.fromState !== d.toState);
+  if (interstate && val > 50000) {
+    reasons.push(`Interstate movement (${d.fromState||'?'} → ${d.toState||'?'}) above ₹50,000 — e-way bill is mandatory.`);
+    verdict = RESULT.REQUIRED;
+  } else if (interstate && val <= 50000) {
+    reasons.push(`Interstate movement. Even for values ≤ ₹50,000, some states or scenarios may need e-way bill. Verify.`);
+    if (verdict !== RESULT.REQUIRED) verdict = RESULT.SPECIAL;
+  }
+
+  /* ── 3. No document yet ── */
+  if (d.documentType === 'nodocument') {
+    reasons.push('No document has been prepared yet. Generate a tax invoice or delivery challan first before creating an e-way bill.');
+    verdict = RESULT.SPECIAL;
+  }
+
+  /* ── 4. Reason-based rules ── */
+  const specialReasons = ['stocktransfer','vanloading','deliverybefore','branchtransfer'];
+  const jobWorkReasons = ['jobwork'];
+  if (specialReasons.includes(d.reason) && val > 50000) {
+    reasons.push(`Reason: ${d.reason.replace(/([A-Z])/g,' $1')} — requires delivery challan AND an e-way bill if value > ₹50,000.`);
+    verdict = RESULT.REQUIRED;
+  }
+  if (jobWorkReasons.includes(d.reason) && val > 50000) {
+    reasons.push('Job work movement above ₹50,000 — e-way bill is likely required. Verify special exemptions under GST for job work.');
+    verdict = RESULT.REQUIRED;
+  }
+  if (d.reason === 'exhibition' || d.reason === 'approval') {
+    reasons.push('Goods for exhibition/approval — delivery challan required. E-way bill required if value > ₹50,000. Verify return trip rules.');
+    if (val > 50000) verdict = RESULT.REQUIRED;
+    else verdict = RESULT.SPECIAL;
+  }
+
+  /* ── 5. Unregistered parties ── */
+  if (d.supplierType === 'unregistered' || d.recipientType === 'unregistered') {
+    reasons.push('One or both parties are unregistered. Special rules may apply. Verify with your accountant.');
+    if (verdict !== RESULT.REQUIRED) verdict = RESULT.SPECIAL;
+  }
+
+  /* ── 6. Special case toggles ── */
+  if (specialCases.handDelivery === 'yes') {
+    reasons.push('Hand delivery — e-way bill may be exempt. Verify with official rules.');
+    if (verdict !== RESULT.REQUIRED) verdict = RESULT.SPECIAL;
+  }
+  if (specialCases.nonMotorized === 'yes') {
+    reasons.push('Non-motorized conveyance — typically exempt from e-way bill. Verify.');
+    if (verdict !== RESULT.REQUIRED) verdict = RESULT.SPECIAL;
+  }
+  if (specialCases.exempted === 'yes') {
+    reasons.push('Goods are exempted/nil-rated — e-way bill may not be required. Verify the exemption notification.');
+    verdict = RESULT.SPECIAL;
+  }
+  if (specialCases.shortLocal === 'yes') {
+    reasons.push('Short local distance — some states exempt intra-city movement below 10–50 km. Verify state rule.');
+    if (verdict !== RESULT.REQUIRED) verdict = RESULT.SPECIAL;
+  }
+  if (specialCases.jobworker === 'yes') {
+    reasons.push('Movement to/from job worker — verify GST Circular and e-way bill notification for job work exemptions.');
+    if (verdict === RESULT.MAYBE_NOT) verdict = RESULT.SPECIAL;
+  }
+  if (specialCases.unreg2reg === 'yes') {
+    reasons.push('Unregistered to registered person — registered person becomes responsible for e-way bill compliance. Verify rules.');
+    if (verdict !== RESULT.REQUIRED) verdict = RESULT.SPECIAL;
+  }
+  if (specialCases.multiVehicle === 'yes') {
+    reasons.push('Multi-vehicle/transshipment — update vehicle details on e-way bill portal for each vehicle change.');
+    if (verdict === RESULT.REQUIRED) reasons.push('Part-B must be updated each time the vehicle changes.');
+  }
+  if (specialCases.multiInvoice === 'yes') {
+    reasons.push('Multiple invoices in one vehicle — each consignment/invoice above ₹50,000 may need a separate e-way bill. Verify consolidated e-way bill rules.');
+    if (verdict !== RESULT.REQUIRED && val > 50000) verdict = RESULT.SPECIAL;
+  }
+  if (specialCases.exhibition === 'yes') {
+    reasons.push('Exhibition/demo movement — delivery challan required. E-way bill needed if value > ₹50,000. Return journey also needs e-way bill.');
+    if (val > 50000) verdict = RESULT.REQUIRED;
+  }
+
+  /* ── 7. Build next steps ── */
+  if (verdict === RESULT.REQUIRED) {
+    steps.push('Prepare tax invoice or delivery challan (required to generate e-way bill).');
+    steps.push('Log in to ewaybillgst.gov.in and generate e-way bill.');
+    steps.push('Keep e-way bill printout or copy with the vehicle/driver throughout transit.');
+    steps.push('If vehicle changes en route, update Part-B of the e-way bill with new vehicle number.');
+    steps.push('If using SalesOn, track dispatch and create delivery challan from the free tool below.');
+  } else if (verdict === RESULT.MAYBE_NOT) {
+    steps.push('Keep invoice or delivery challan ready with the goods during movement.');
+    steps.push('Verify if the specific state has a lower threshold than ₹50,000 for intra-state movement.');
+    steps.push('For voluntary e-way bill generation, use ewaybillgst.gov.in.');
+    steps.push('Track dispatch internally using SalesOn delivery challan tool.');
+  } else if (verdict === RESULT.SPECIAL) {
+    steps.push('Check official ewaybillgst.gov.in portal and CBIC notifications for your specific case.');
+    steps.push('Consult your GST accountant or tax consultant before moving goods.');
+    steps.push('Prepare all supporting documents: invoice/challan, GSTIN details, vehicle number, reason for movement.');
+    steps.push('Do not move goods without verifying compliance.');
+  }
+
+  /* ── 8. Summary headline ── */
+  const headlines = {
+    [RESULT.REQUIRED]:   'E-Way Bill Likely Required',
+    [RESULT.MAYBE_NOT]:  'E-Way Bill May Not Be Required',
+    [RESULT.SPECIAL]:    'Special Case — Verify Manually',
+    [RESULT.INCOMPLETE]: 'Incomplete Details'
+  };
+
+  /* ── Inputs considered chips ── */
+  const inputs = [
+    d.consignmentValue ? `₹${d.consignmentValue.toLocaleString('en-IN')}` : null,
+    d.fromState && d.toState ? `${d.fromState} → ${d.toState}` : null,
+    d.reason || null,
+    d.documentType || null,
+    d.movementType || null
+  ].filter(Boolean);
+
+  return { type: verdict, headline: headlines[verdict], reason: reasons.join(' '), nextSteps: steps, inputs };
+}
+
+/* ─────────────────────────────────────
+   RENDER RESULT CARD
+───────────────────────────────────── */
+function renderResult(res) {
+  currentResult = res;
+
+  const typeClass = {
+    [RESULT.REQUIRED]:   'res-required',
+    [RESULT.MAYBE_NOT]:  'res-maybe',
+    [RESULT.SPECIAL]:    'res-special',
+    [RESULT.INCOMPLETE]: 'res-incomplete'
+  }[res.type];
+
+  const icons = {
+    [RESULT.REQUIRED]:   '🚨',
+    [RESULT.MAYBE_NOT]:  '✅',
+    [RESULT.SPECIAL]:    '⚠️',
+    [RESULT.INCOMPLETE]: '📝'
+  };
+
+  const labels = {
+    [RESULT.REQUIRED]:   'E-Way Bill Check Result',
+    [RESULT.MAYBE_NOT]:  'E-Way Bill Check Result',
+    [RESULT.SPECIAL]:    'E-Way Bill Check Result',
+    [RESULT.INCOMPLETE]: 'Complete Your Details'
+  };
+
+  const inputChips = res.inputs.length
+    ? `<div class="result-inputs">
+        <div class="result-inputs-title">Inputs considered</div>
+        <div class="result-input-chips">
+          ${res.inputs.map(i=>`<span class="result-chip">${i}</span>`).join('')}
+        </div>
+       </div>` : '';
+
+  const stepItems = res.nextSteps.map((s,i) =>
+    `<li><span class="step-dot">${i+1}</span>${s}</li>`
+  ).join('');
+
+  const actionBtns = res.type !== RESULT.INCOMPLETE ? `
+    <div class="result-actions">
+      <button class="btn-res btn-challan" onclick="triggerAction('challan')">🚚 Create Delivery Challan</button>
+      <button class="btn-res btn-invoice" onclick="triggerAction('invoice')">🧾 Create GST Invoice</button>
+      <button class="btn-res btn-copy"    onclick="triggerAction('copy')">📋 Copy Result</button>
+      <button class="btn-res btn-wa"      onclick="triggerAction('wa')">💬 Share</button>
+      <button class="btn-res btn-save"    onclick="saveCheck()">💾 Save</button>
+    </div>` : `
+    <div class="result-actions">
+      <button class="btn-res btn-check" style="background:var(--brand);color:white;flex:1;" onclick="document.getElementById('consignmentValue').focus()">📝 Fill Details Above</button>
+    </div>`;
+
+  document.getElementById('resultCard').innerHTML = `
+    <div class="result-card ${typeClass}">
+      <div class="result-badge-bar">
+        <span class="result-icon">${icons[res.type]}</span>
+        <div class="result-title-block">
+          <div class="result-label">${labels[res.type]}</div>
+          <div class="result-headline">${res.headline}</div>
+        </div>
+      </div>
+      <div class="result-body">
+        <div class="result-reason">${res.reason}</div>
+        ${inputChips}
+        <div class="result-next">
+          <div class="result-next-title">Suggested next steps</div>
+          <ul class="result-next-list">${stepItems}</ul>
+        </div>
+        <div class="result-docs">
+          <div class="result-docs-title">Documents to keep ready</div>
+          <div class="docs-grid">
+            <div class="doc-chip">📄 Tax Invoice / Bill of Supply / Delivery Challan</div>
+            <div class="doc-chip">🔢 GSTIN details (supplier &amp; recipient)</div>
+            <div class="doc-chip">📋 HSN code and goods description</div>
+            <div class="doc-chip">💰 Consignment value</div>
+            <div class="doc-chip">🚚 Vehicle number</div>
+            <div class="doc-chip">🆔 Transporter ID (if applicable)</div>
+            <div class="doc-chip">📍 From and to locations</div>
+            <div class="doc-chip">🔗 E-way bill number (if generated)</div>
+          </div>
+        </div>
+        <div class="result-disclaimer">
+          <strong>⚠️ Important Disclaimer</strong>
+          This tool gives a basic e-way bill requirement indication based on common GST rules. Please verify with the official e-way bill portal (ewaybillgst.gov.in), CBIC/GST notifications, or your accountant before moving goods. SalesOn does not provide tax or legal advice. Certain goods, states, distances, transport modes, and special cases may have different rules.
+        </div>
+        ${actionBtns}
+      </div>
+    </div>`;
+}
+
+/* ─────────────────────────────────────
+   RUN CHECKER (main entry)
+───────────────────────────────────── */
+function runChecker(manual) {
+  const data = getFormData();
+  const res  = applyRules(data);
+  renderResult(res);
+
+  /* Count checks and trigger lead modal after 3 */
+  if (manual) {
+    checkCount++;
+    if (checkCount > 3 && !localStorage.getItem('saleson_lead_captured')) {
+      pendingAction = null;
+      setTimeout(() => document.getElementById('leadModal').classList.add('open'), 400);
+    }
+  }
+}
+
+/* ─────────────────────────────────────
+   ACTION TRIGGER (lead gate)
+───────────────────────────────────── */
+function triggerAction(action) {
+  pendingAction = action;
+  if (localStorage.getItem('saleson_lead_captured')) {
+    executeAction(action);
+  } else {
+    document.getElementById('leadModal').classList.add('open');
+  }
+}
+
+function executeAction(action) {
+  if (action === 'copy')    copyResult();
+  if (action === 'wa')      openWaShare();
+  if (action === 'challan') handoff('challan');
+  if (action === 'invoice') handoff('invoice');
+}
+
+/* ─────────────────────────────────────
+   COPY RESULT
+───────────────────────────────────── */
+function copyResult() {
+  if (!currentResult) { showToast('Run a check first'); return; }
+  const d    = getFormData();
+  const text =
+    `E-Way Bill Check Result\n` +
+    `──────────────────────\n` +
+    `Result:   ${currentResult.headline}\n` +
+    `Goods:    ${d.goodsDesc || '—'}\n` +
+    `Value:    ₹${d.consignmentValue?.toLocaleString('en-IN') || '—'}\n` +
+    `Movement: ${d.fromState || '?'} → ${d.toState || '?'}\n` +
+    `Reason:   ${d.reason || '—'}\n` +
+    `Document: ${d.documentType || '—'}\n\n` +
+    `Details:\n${currentResult.reason}\n\n` +
+    `⚠️ DISCLAIMER: This is a basic indication only. Verify with ewaybillgst.gov.in or your accountant before moving goods.`;
+
+  navigator.clipboard.writeText(text)
+    .then(() => showToast('Result copied to clipboard!'))
+    .catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); document.body.removeChild(ta);
+      showToast('Result copied!');
+    });
+}
+
+/* ─────────────────────────────────────
+   WHATSAPP SHARE
+───────────────────────────────────── */
+function openWaShare() {
+  if (!currentResult) { showToast('Run a check first'); return; }
+  const d = getFormData();
+  const msg =
+    `E-Way Bill Check:\n` +
+    `Goods: ${d.goodsDesc || '—'}\n` +
+    `Value: ₹${d.consignmentValue?.toLocaleString('en-IN') || '—'}\n` +
+    `Movement: ${d.fromState || '?'} to ${d.toState || '?'}\n` +
+    `Reason: ${d.reason || '—'}\n` +
+    `Result: ${currentResult.headline}\n\n` +
+    `Note: Please verify with official GST/e-way bill portal (ewaybillgst.gov.in) or accountant before moving goods.`;
+
+  document.getElementById('waMessageBox').textContent = msg;
+  document.getElementById('waOpenBtn').href = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+  document.getElementById('waModal').classList.add('open');
+}
+
+function copyWaMessage() {
+  const msg = document.getElementById('waMessageBox').textContent;
+  navigator.clipboard.writeText(msg).then(() => showToast('Message copied!')).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = msg; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+    showToast('Copied!');
+  });
+}
+
+/* ─────────────────────────────────────
+   HANDOFF TO CHALLAN / INVOICE
+───────────────────────────────────── */
+function handoff(type) {
+  const d = getFormData();
+  const payload = {
+    consignmentValue: d.consignmentValue,
+    goodsDescription: d.goodsDesc,
+    hsnCode:          d.hsnCode,
+    fromState:        d.fromState,
+    toState:          d.toState,
+    movementType:     d.movementType,
+    reasonForMovement: d.reason,
+    documentType:     d.documentType,
+    vehicleNumber:    d.vehicleNumber,
+    result:           currentResult?.headline || 'Unknown',
+    checkedAt:        new Date().toISOString()
+  };
+
+  if (type === 'challan') {
+    localStorage.setItem('saleson_eway_to_challan_data', JSON.stringify(payload));
+    console.log('[SalesOn E-Way → Delivery Challan]', payload);
+    showHandoffModal(
+      'Data Saved for Delivery Challan',
+      'Open the Delivery Challan Generator to continue. Your goods movement details have been saved.',
+      '/delivery-challan-generator',
+      'Open Delivery Challan Generator →',
+      '#059669'
+    );
+  } else {
+    localStorage.setItem('saleson_eway_to_invoice_data', JSON.stringify(payload));
+    console.log('[SalesOn E-Way → GST Invoice]', payload);
+    showHandoffModal(
+      'Data Saved for GST Invoice',
+      'Open the GST Invoice Generator to continue. Your goods details have been saved.',
+      '/gst-invoice-generator',
+      'Open GST Invoice Generator →',
+      'var(--brand)'
+    );
+  }
+}
+
+function showHandoffModal(title, sub, link, btnText, color) {
+  document.getElementById('handoffHeader').style.background = color;
+  document.getElementById('handoffTitle').textContent = title;
+  document.getElementById('handoffSub').textContent   = sub;
+  document.getElementById('handoffMsg').textContent   = sub;
+  const lnk = document.getElementById('handoffLink');
+  lnk.href = link; lnk.textContent = btnText;
+  document.getElementById('handoffModal').classList.add('open');
+}
+
+/* ─────────────────────────────────────
+   SAVE / LOAD CHECK
+───────────────────────────────────── */
+function saveCheck() {
+  if (!currentResult) { showToast('Run a check first'); return; }
+  const d = getFormData();
+
+  /* Add to recent checks array */
+  const existing = JSON.parse(localStorage.getItem('saleson_eway_recent_checks') || '[]');
+  const entry = {
+    id:               Date.now(),
+    goodsDesc:        d.goodsDesc || 'Unnamed goods',
+    consignmentValue: d.consignmentValue,
+    fromState:        d.fromState,
+    toState:          d.toState,
+    reason:           d.reason,
+    documentType:     d.documentType,
+    result:           currentResult.headline,
+    resultType:       currentResult.type,
+    formData:         d,
+    specialCases:     { ...specialCases },
+    checkedAt:        new Date().toISOString()
+  };
+  existing.unshift(entry);
+  const limited = existing.slice(0, 5); // keep 5
+  localStorage.setItem('saleson_eway_recent_checks', JSON.stringify(limited));
+  renderRecentChecks();
+  showToast('Check saved ✓');
+}
+
+function loadLastCheck() {
+  const existing = JSON.parse(localStorage.getItem('saleson_eway_recent_checks') || '[]');
+  if (!existing.length) { showToast('No saved checks found'); return; }
+  loadCheckEntry(existing[0]);
+}
+
+function loadCheckEntry(entry) {
+  const d = entry.formData;
+  const sv = (id, val) => { const el=document.getElementById(id); if(el && val!==undefined) el.value=val; };
+
+  sv('consignmentValue', d.consignmentValue);
+  sv('goodsDesc', d.goodsDesc); sv('hsnCode', d.hsnCode); sv('quantity', d.quantity);
+  sv('fromState', d.fromState); sv('toState', d.toState);
+  sv('movementType', d.movementType); sv('distance', d.distance); sv('movementDate', d.movementDate);
+  sv('supplierType', d.supplierType); sv('recipientType', d.recipientType); sv('moverType', d.moverType);
+  sv('reasonForMovement', d.reason); sv('documentType', d.documentType);
+  sv('vehicleNumber', d.vehicleNumber); sv('transporterID', d.transporterID); sv('lrNumber', d.lrNumber);
+
+  /* Restore special cases */
+  if (entry.specialCases) {
+    Object.assign(specialCases, entry.specialCases);
+    document.querySelectorAll('.yn-btn').forEach(btn => {
+      const key = btn.getAttribute('data-key');
+      const val = btn.getAttribute('data-val');
+      btn.classList.remove('active-yes','active-no');
+      if (specialCases[key] === val) {
+        btn.classList.add(val === 'yes' ? 'active-yes' : 'active-no');
+      }
+    });
+  }
+
+  runChecker();
+  showToast('Check loaded ✓');
+}
+
+function deleteCheckEntry(id) {
+  let existing = JSON.parse(localStorage.getItem('saleson_eway_recent_checks') || '[]');
+  existing = existing.filter(e => e.id !== id);
+  localStorage.setItem('saleson_eway_recent_checks', JSON.stringify(existing));
+  renderRecentChecks();
+}
+
+/* ─────────────────────────────────────
+   RENDER RECENT CHECKS
+───────────────────────────────────── */
+function renderRecentChecks() {
+  const existing = JSON.parse(localStorage.getItem('saleson_eway_recent_checks') || '[]');
+  const wrap     = document.getElementById('recentChecks');
+  if (!existing.length) { wrap.innerHTML = ''; return; }
+
+  const badgeClass = { required:'req', maybeno:'notreq', special:'special', incomplete:'incomplete' };
+  const items = existing.map(e => `
+    <div class="rc-item">
+      <div class="rc-info">
+        <div class="rc-goods">${e.goodsDesc}</div>
+        <div class="rc-meta">
+          ₹${(e.consignmentValue||0).toLocaleString('en-IN')} &nbsp;·&nbsp;
+          ${e.fromState||'?'} → ${e.toState||'?'} &nbsp;·&nbsp;
+          ${new Date(e.checkedAt).toLocaleDateString('en-IN')}
+        </div>
+      </div>
+      <span class="rc-badge ${badgeClass[e.resultType]||'incomplete'}">${e.result}</span>
+      <div class="rc-btns">
+        <button class="rc-btn rc-btn-load" onclick='loadCheckEntry(${JSON.stringify(e).replace(/'/g,"&#39;")})'>Load</button>
+        <button class="rc-btn rc-btn-del"  onclick="deleteCheckEntry(${e.id})">✕</button>
+      </div>
+    </div>`).join('');
+
+  wrap.innerHTML = `<div class="rc-title">Recent Checks (${existing.length})</div><div class="rc-list">${items}</div>`;
+}
+
+/* ─────────────────────────────────────
+   RESET FORM
+───────────────────────────────────── */
+function resetForm() {
+  if (!confirm('Reset all fields to sample data?')) return;
+  Object.keys(specialCases).forEach(k => specialCases[k] = 'no');
+  document.querySelectorAll('.yn-btn').forEach(btn => {
+    btn.classList.remove('active-yes','active-no');
+    if (btn.getAttribute('data-val') === 'no') btn.classList.add('active-no');
+  });
+  checkCount = 0;
+  initDefaults();
+  showToast('Form reset ✓');
+}
+
+/* ─────────────────────────────────────
+   LEAD MODAL
+───────────────────────────────────── */
+function submitLead(type) {
+  const name  = document.getElementById('leadName').value.trim();
+  const phone = document.getElementById('leadPhone').value.trim();
+  const biz   = document.getElementById('leadBiz').value.trim();
+  if (!name || !phone || !biz) { showToast('Please fill Name, Phone and Business Name'); return; }
+
+  const bizType = document.getElementById('leadBizType').value;
+  const city    = document.getElementById('leadCity').value.trim();
+  const volume  = document.getElementById('leadVolume').value;
+  const method  = document.getElementById('leadMethod').value;
+  const d       = getFormData();
+
+  /* Lead scoring */
+  let score = 20; // base: E-way bill tool
+  if (volume === '101–500') score += 20;
+  if (volume === '500+')    score += 30;
+  if (['Distributor','Wholesaler','Manufacturer','FMCG','Pharma'].includes(bizType)) score += 20;
+  if (['Excel','Manual book','WhatsApp'].includes(method)) score += 20;
+  if (d.consignmentValue && d.consignmentValue > 50000) score += 15;
+  if (pendingAction === 'challan')  score += 10;
+  if (pendingAction === 'invoice')  score += 10;
+  if (['stocktransfer','vanloading','jobwork','deliverybefore'].includes(d.reason)) score += 10;
+
+  const lead = {
+    name, phone, businessName: biz, businessType: bizType,
+    city, monthlyVolume: volume, currentMethod: method,
+    toolUsed: 'E-Way Bill Requirement Checker',
+    leadScore: score,
+    createdAt: new Date().toISOString()
+  };
+
+  const existing = JSON.parse(localStorage.getItem('saleson_free_tool_leads') || '[]');
+  existing.push(lead);
+  localStorage.setItem('saleson_free_tool_leads', JSON.stringify(existing));
+  if (window.salesonSubmitLeadToBackend) window.salesonSubmitLeadToBackend(lead);
+  if (window.salesonTrack) window.salesonTrack('lead_saved_locally', { toolUsed: lead.toolUsed || '' });
+  localStorage.setItem('saleson_lead_captured', '1');
+  console.log('[SalesOn Lead]', lead);
+
+  document.getElementById('leadModal').classList.remove('open');
+
+  if (type === 'demo') {
+    window.open('https://saleson.co.in/request-demo', '_blank');
+  } else if (pendingAction) {
+    executeAction(pendingAction);
+  }
+}
+
+function skipLead() {
+  document.getElementById('leadModal').classList.remove('open');
+  localStorage.setItem('saleson_lead_captured', '1');
+  if (pendingAction) executeAction(pendingAction);
+}
+
+/* ─────────────────────────────────────
+   FAQ ACCORDION
+───────────────────────────────────── */
+function toggleFaq(btn) {
+  const a = btn.nextElementSibling;
+  const open = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('open'); b.nextElementSibling.classList.remove('open'); });
+  if (!open) { btn.classList.add('open'); a.classList.add('open'); }
+}
+
+/* ─────────────────────────────────────
+   TOAST
+───────────────────────────────────── */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+/* ─────────────────────────────────────
+   INIT DEFAULTS (sample data)
+───────────────────────────────────── */
+function initDefaults() {
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('movementDate').value  = today;
+  document.getElementById('consignmentValue').value = '75000';
+  document.getElementById('goodsDesc').value     = 'FMCG Product Boxes';
+  document.getElementById('hsnCode').value       = '3401';
+  document.getElementById('fromState').value     = 'Bihar';
+  document.getElementById('toState').value       = 'Jharkhand';
+  document.getElementById('movementType').value  = 'interstate';
+  document.getElementById('distance').value      = '120';
+  document.getElementById('reasonForMovement').value = 'sale';
+  document.getElementById('documentType').value  = 'taxinvoice';
+  document.getElementById('vehicleNumber').value = 'BR01AB1234';
+  runChecker();
+}
+
+/* ─────────────────────────────────────
+   BOOT
+───────────────────────────────────── */
+populateStates();
+initDefaults();
+renderRecentChecks();
+</script>
+<script>
+/* SalesOn launch helpers: analytics placeholder + lead backend hook.
+   Set window.salesonLeadEndpoint = 'YOUR_ENDPOINT_URL' before lead submission
+   or replace the empty endpoint below when connecting WordPress/Supabase/CRM. */
+(function() {
+  window.salesonTrack = window.salesonTrack || function(eventName, data) {
+    const allowed = new Set(['tool_opened', 'lead_saved_locally', 'lead_submission_accepted']);
+    if (!allowed.has(eventName)) return;
+    const safe = {};
+    for (const key of ['page', 'toolUsed']) {
+      if (typeof data?.[key] === 'string' && /^[a-zA-Z0-9_-]{1,80}$/.test(data[key])) safe[key] = data[key];
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({event: eventName, ...safe});
+  };
+  window.salesonLeadEndpoint = window.salesonLeadEndpoint || '';
+  window.salesonSubmitLeadToBackend = window.salesonSubmitLeadToBackend || async function(lead) {
+    if (!window.salesonLeadEndpoint || !lead) return;
+    try {
+      const response = await fetch(window.salesonLeadEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lead)
+      });
+      if (!response.ok) throw new Error('Lead submission was not accepted');
+      window.salesonTrack('lead_submission_accepted', { toolUsed: lead.toolUsed || '' });
+    } catch (err) {
+      console.warn('SalesOn lead backend submission failed:', err);
+    }
+  };
+})();
+</script>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  if (window.salesonTrack) window.salesonTrack('tool_opened', { page: 'e-way-bill-checker' });
+});
+</script>
+    <script defer src="/assets/js/site-repairs.29824dd6d35a.js"></script>
+</body>
+</html>

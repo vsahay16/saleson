@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Van Sales Software India | SalesOn</title>
+  <meta
+    content="Van sales software for Indian distributors. Load van stock, bill at outlets, collect payment, track returns, and close EOD settlement in minutes."
+    name="description" />
+  
+  <link rel="icon" type="image/png" href="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-favicon.png" />
+  <link rel="alternate" hreflang="en-IN" href="https://saleson.co.in/van-sales" />
+  <link rel="alternate" hreflang="x-default" href="https://saleson.co.in/van-sales" />
+  <meta content="Van Sales Software India | Ready-Stock Route Selling App | SalesOn" property="og:title" />
+  <meta
+    content="Van sales software for Indian distributors. Outlet billing, van inventory tracking &amp; EOD settlement in minutes. Free 7-day trial."
+    property="og:description" />
+  <meta content="website" property="og:type" />
+  <meta property="og:url" content="https://saleson.co.in/van-sales">
+  <meta content="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-arrow-logo-blue.png" property="og:image" />
+  <meta content="1200" property="og:image:width" />
+  <meta content="630" property="og:image:height" />
+  <meta content="Van Sales Software India | Ready-Stock Route Selling App" property="og:image:alt" />
+  <meta content="index, follow" name="robots" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SalesOn Van Sales Software",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Android, iOS, Web",
+  "url": "https://saleson.co.in/van-sales/",
+  "description": "Van sales software for FMCG distributors in India — outlet billing, van inventory tracking, beat route execution, EOD stock reconciliation, and accounts sync.",
+  "featureList": [
+    "Van load-out planning",
+    "Van inventory tracking per SKU",
+    "Ready-stock route selling",
+    "Outlet billing during route sale",
+    "Returns and damaged stock capture",
+    "EOD van stock reconciliation",
+    "Route-wise settlement report",
+    "Low-connectivity Android operation"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "description": "Free 7-day trial"
+  }
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is van sales software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Van sales software automates the ready-stock route-sell cycle — the van carries goods, the DSR sells and raises a GST invoice at each outlet, collects Cash or UPI on the spot, and reconciles all stock at end of day. SalesOn covers every step from morning load-out to accounts sync."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does EOD van stock reconciliation work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At end of day, the DSR taps Close Day. SalesOn auto-matches opening stock against units sold, returns, and damaged goods per SKU. Discrepancies are flagged instantly. Distributor approves — EOD settlement ready for accounts. Review exceptions before approval."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SalesOn work on low-connectivity networks in rural India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. SalesOn's Android app is built for Indian field conditions — low-end devices and patchy 3G/4G. DSRs can invoice and log returns field-ready."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many vans can I manage? Is there a minimum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SalesOn works for 2 vans or 200 — no minimum user count, no setup fee. Most distributors are live within 1–2 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SalesOn sync with Tally Prime or other accounting software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — SalesOn pushes all van invoices and stock movements to your accounting software in one click at EOD. No manual re-entry. Supports Tally Prime and ERP 9."
+      }
+    }
+  ]
+}
+</script>
+  
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/min/common-new.min.f637cbb1ad10.css">
+  <style>
+    .pain {
+      font-size: 14px;
+      font-style: italic;
+      color: var(--ink-mute);
+      border-left: 3px solid var(--brand-light);
+      padding: 8px 14px;
+      margin-bottom: 18px;
+      background: linear-gradient(90deg, rgba(219, 234, 254, .35), transparent);
+      border-radius: 0 8px 8px 0
+    }
+
+    .btn-sub-w {
+      color: rgba(255, 255, 255, .45)
+    }
+
+    .il {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--brand-light);
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 100px;
+      border: 1px solid rgba(26, 86, 219, .18);
+      transition: background .2s, color .2s
+    }
+
+    .il:hover {
+      background: var(--brand);
+      color: var(--white)
+    }
+
+    .hero {
+      padding: 72px 0 60px;
+      background: linear-gradient(155deg, #f0f5ff 0%, #ffffff 55%, #f0fdf8 100%);
+      position: relative;
+      overflow: hidden
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 560px;
+      height: 560px;
+      background: radial-gradient(circle, rgba(26, 86, 219, .06) 0%, transparent 70%);
+      border-radius: 50%
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 18px
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-bottom: 20px
+    }
+
+    .trust-bar {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 13px 17px;
+      margin-top: 14px
+    }
+
+    .tb-text {
+      font-size: 13px;
+      color: var(--ink-soft)
+    }
+
+    .tb-text strong {
+      color: var(--ink);
+      font-weight: 800
+    }
+
+    .tb-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--green-light);
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      padding: 3px 9px;
+      border-radius: 100px;
+      flex-shrink: 0
+    }
+
+    .built-for {
+      background: #0f172a;
+      padding: 20px 0
+    }
+
+    .bf-inner {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0
+    }
+
+    .bf-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .38);
+      padding: 0 20px 0 0;
+      border-right: 1px solid rgba(255, 255, 255, .12);
+      margin-right: 20px;
+      white-space: nowrap
+    }
+
+    .bf-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center
+    }
+
+    .bf-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      color: rgba(255, 255, 255, .75);
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 100px
+    }
+
+    .thermal-wrap{
+      position: absolute;
+      bottom: 20%;
+      right: 0;
+    }
+
+    .thermal-receipt {
+        background: #fafaf8;
+        border-radius: 4px;
+        width: 172px;
+        padding: 14px 12px;
+        box-shadow: var(--shadow-lg);
+        font-family: "Courier New", monospace;
+        border-top: 5px solid var(--brand);
+        flex-shrink: 0
+    }
+
+    .tr-co {
+            font-size: 9px;
+            font-weight: 700;
+            color: var(--ink);
+            text-align: center;
+            margin-bottom: 1px
+        }
+
+        .tr-addr {
+            font-size: 7px;
+            color: var(--ink-mute);
+            text-align: center;
+            margin-bottom: 7px
+        }
+
+        .tr-div {
+            border: none;
+            border-top: 1px dashed #ccc;
+            margin: 5px 0
+        }
+
+        .tr-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 7.5px;
+            color: var(--ink-soft);
+            padding: 1.5px 0
+        }
+
+        .tr-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 9px;
+            font-weight: 700;
+            color: var(--ink);
+            margin-top: 3px
+        }
+
+        .tr-gst {
+            font-size: 7px;
+            color: var(--ink-mute)
+        }
+
+        .tr-barcode {
+            margin: 8px auto 0;
+            width: 80%;
+            height: 14px;
+            background: repeating-linear-gradient(90deg, #000 0, #000 2px, transparent 2px, transparent 4px)
+        }
+
+  
+
+    .app-frame {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg)
+    }
+
+    .af-bar {
+      background: #f1f5f9;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .dot-r {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ef4444
+    }
+
+    .dot-y {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #f59e0b
+    }
+
+    .dot-g {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #22c55e
+    }
+
+    .af-lbl {
+      flex: 1;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--ink-mute);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-left: -44px
+    }
+
+    .metric-pill {
+      display: flex;
+      gap: 20px;
+      background: var(--white);
+      border-radius: 100px;
+      padding: 11px 22px;
+      box-shadow: var(--shadow-md);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 18px
+    }
+
+    .mi {
+      text-align: center
+    }
+
+    .mi-val {
+      font-family: "DM Serif Display", serif;
+      font-size: 19px;
+      color: var(--brand)
+    }
+
+    .mi-lbl {
+      font-size: 10.5px;
+      color: var(--ink-mute);
+      text-transform: uppercase;
+      letter-spacing: .04em
+    }
+
+    .leaks {
+      background: #0f172a;
+      padding: var(--sp) 0
+    }
+
+    .lk-header {
+      text-align: center;
+      margin-bottom: 48px
+    }
+
+    .lk-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .38);
+      margin-bottom: 12px
+    }
+
+    .lk-title {
+      font-family: "DM Serif Display", serif;
+      font-size: clamp(24px, 3.8vw, 40px);
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 10px
+    }
+
+    .lk-title span {
+      color: #f87171;
+      font-style: italic
+    }
+
+    .lk-sub {
+      font-size: 15.5px;
+      color: rgba(255, 255, 255, .48);
+      max-width: 500px;
+      margin: 0 auto
+    }
+
+    .lk-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px
+    }
+
+    .lk-card {
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid rgba(255, 255, 255, .10);
+      border-radius: var(--radius-lg);
+      padding: 30px 24px;
+      text-align: center;
+      transition: background .2s, border-color .2s, transform .2s
+    }
+
+    .lk-card:hover {
+      background: rgba(255, 255, 255, .07);
+      border-color: rgba(248, 113, 113, .4);
+      transform: translateY(-4px)
+    }
+
+    .lk-icon {
+      font-size: 36px;
+      margin-bottom: 14px;
+      display: block
+    }
+
+    .lk-ct {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px
+    }
+
+    .lk-cd {
+      font-size: 14px;
+      color: rgba(255, 255, 255, .5);
+      line-height: 1.7;
+      margin-bottom: 16px
+    }
+
+    .lk-loss {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #f87171;
+      background: rgba(248, 113, 113, .12);
+      border: 1px solid rgba(248, 113, 113, .3);
+      padding: 5px 14px;
+      border-radius: 100px;
+      letter-spacing: .04em;
+      text-transform: uppercase
+    }
+
+    .hiw-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+      margin-top: 44px
+    }
+
+    .hiw-grid::before {
+      content: "";
+      position: absolute;
+      top: 50px;
+      left: calc(12.5% + 16px);
+      right: calc(12.5% + 16px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--brand), #6366f1);
+      z-index: 0
+    }
+
+    .hiw-step {
+      text-align: center;
+      padding: 0 14px;
+      position: relative;
+      z-index: 1
+    }
+
+    .hiw-num {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: var(--white);
+      font-family: "DM Serif Display", serif;
+      font-size: 21px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+      box-shadow: 0 0 0 6px var(--brand-light);
+      position: relative;
+      z-index: 2
+    }
+
+    .hiw-num.green {
+      background: var(--green);
+      box-shadow: 0 0 0 6px var(--green-light)
+    }
+
+    .hiw-icon {
+      font-size: 22px;
+      margin-bottom: 8px;
+      display: block
+    }
+
+    .hiw-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px
+    }
+
+    .hiw-desc {
+      font-size: 13px;
+      color: var(--ink-soft);
+      line-height: 1.62
+    }
+
+    .hiw-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--brand-light);
+      color: var(--brand);
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-top: 8px
+    }
+
+    .hiw-badge.green {
+      background: var(--green-light);
+      color: var(--green)
+    }
+
+    .tp {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green-light);
+      border: 1px solid rgba(5, 150, 105, .25);
+      border-radius: 10px;
+      padding: 11px 15px;
+      margin-bottom: 18px;
+      font-size: 13px;
+      color: #065f46;
+      font-weight: 600
+    }
+
+    .fmc-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 12px
+    }
+
+    .stock-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .stock-row:last-child {
+      border-bottom: none
+    }
+
+    .sr-name {
+      flex: 1;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink)
+    }
+
+    .sr-qty {
+      font-size: 12px;
+      color: var(--ink-mute);
+      margin-right: 8px
+    }
+
+    .sr-bar {
+      flex: 1;
+      height: 6px;
+      background: var(--border);
+      border-radius: 100px;
+      overflow: hidden
+    }
+
+    .sr-fill {
+      height: 100%;
+      border-radius: 100px;
+      transition: width .8s ease
+    }
+
+    .fill-g {
+      background: linear-gradient(90deg, #059669, #34d399)
+    }
+
+    .fill-a {
+      background: linear-gradient(90deg, #d97706, #fbbf24)
+    }
+
+    .fill-r {
+      background: linear-gradient(90deg, #dc2626, #f87171)
+    }
+
+    .sr-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 100px;
+      flex-shrink: 0
+    }
+
+    .tag-ok {
+      background: var(--green-light);
+      color: var(--green)
+    }
+
+    .tag-low {
+      background: var(--amber-light);
+      color: var(--amber)
+    }
+
+    .tag-out {
+      background: var(--red-light);
+      color: var(--red)
+    }
+
+    .balance-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px
+    }
+
+    .balance-row:last-child {
+      border-bottom: none
+    }
+
+    .br-label {
+      color: var(--ink-soft)
+    }
+
+    .br-val {
+      font-family: "DM Serif Display", serif;
+      font-size: 18px;
+      color: var(--ink)
+    }
+
+    .br-val.green {
+      color: var(--green)
+    }
+
+    .br-val.amber {
+      color: var(--amber)
+    }
+
+    .matched {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green-light);
+      border-radius: 10px;
+      padding: 13px 16px;
+      margin-top: 14px
+    }
+
+    .matched-tag {
+      background: var(--green);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px
+    }
+
+    .matched-text {
+      font-size: 13px;
+      color: #065f46;
+      font-weight: 600
+    }
+
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4ade80;
+      animation: pdot 2.2s ease-in-out infinite;
+      flex-shrink: 0
+    }
+
+    @keyframes pdot {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .3
+      }
+    }
+
+    .comp-wrap {
+      overflow-x: auto
+    }
+
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px
+    }
+
+    .comp-table th {
+      padding: 13px 18px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 600
+    }
+
+    .comp-table th:first-child {
+      background: var(--ink);
+      color: var(--white)
+    }
+
+    .comp-table th.hl {
+      background: var(--brand);
+      color: var(--white)
+    }
+
+    .comp-table th.m {
+      background: #374151;
+      color: rgba(255, 255, 255, .8)
+    }
+
+    .comp-table td {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink-soft)
+    }
+
+    .comp-table td:first-child {
+      font-weight: 600;
+      color: var(--ink)
+    }
+
+    .comp-table tr:last-child td {
+      border-bottom: none
+    }
+
+    .comp-table tr:nth-child(even) td {
+      background: rgba(247, 248, 250, .7)
+    }
+
+    .chk {
+      color: var(--green);
+      font-weight: 700
+    }
+
+    .crs {
+      color: #ef4444;
+      font-weight: 700
+    }
+
+    .ind-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .ind-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 18px
+    }
+
+    .ind-icon {
+      font-size: 26px;
+      margin-bottom: 10px
+    }
+
+    .ind-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 5px
+    }
+
+    .ind-desc {
+      font-size: 13px;
+      color: var(--ink-mute);
+      line-height: 1.62
+    }
+
+    .faq-q .fi {
+      font-size: 19px;
+      flex-shrink: 0;
+      margin-left: 12px;
+      transition: transform .3s
+    }
+
+    .stats-bar {
+      background: var(--brand);
+      padding: 44px 0
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 0 16px;
+      border-right: 1px solid rgba(255, 255, 255, .18)
+    }
+
+    .stat-item:last-child {
+      border-right: none
+    }
+
+    .stat-val {
+      font-family: "DM Serif Display", serif;
+      font-size: 36px;
+      color: var(--white);
+      margin-bottom: 4px
+    }
+
+    .stat-lbl {
+      font-size: 13px;
+      color: rgba(255, 255, 255, .7)
+    }
+   
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .5s ease, transform .5s ease
+    }
+
+    .reveal.vis {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    .tracking-mock {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+    }
+
+    .tm-header {
+        background: #0f172a;
+        padding: 14px 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    .comp-table th,.tm-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--white)
+    }
+
+    .map-wrap {
+        width: 294px;
+        height: 260px;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        border: .5px solid #c9d3c0;
+        width: 520px;
+        height: 316px;
+    }
+
+    .overlay {
+        position: absolute;
+        background: #fff;
+        border: .5px solid #d0d0d0;
+        border-radius: 8px;
+        padding: 6px 9px;
+        font-size: 11px;
+        pointer-events: none;
+        white-space: nowrap;
+        z-index: 20;
+        min-width: 112px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+    }
+
+    @media (max-width:1024px) {
+      .hiw-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px
+      }
+
+      .hiw-grid::before {
+        display: none
+      }
+    }
+
+    @media (max-width:991px) {
+
+      .hero-grid,
+      .hub-grid {
+        grid-template-columns: 1fr;
+        gap: 32px
+      }
+
+      .hub-grid.flip .vis {
+        order: 0
+      }
+
+      .lk-grid {
+        grid-template-columns: 1fr
+      }
+
+      .ind-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, .15);
+        padding: 14px
+      }
+
+      .stat-item:last-child {
+        border-bottom: none
+      }
+    }
+
+    @media (max-width:600px) {
+      :root {
+        --sp: 56px
+      }
+      .tracking-mock, .thermal-wrap{
+        display: none;
+      }
+
+      .ind-grid {
+        grid-template-columns: 1fr
+      }
+
+      .hiw-grid {
+        grid-template-columns: 1fr
+      }
+
+      .bf-label {
+        border-right: none;
+        margin-right: 0;
+        padding: 0 0 8px
+      }
+    }
+  </style>
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="@salesonsoftware" name="twitter:site" />
+  <meta content="Van Sales Software India | Ready-Stock Route Selling App | SalesOn" name="twitter:title" />
+  <meta content="Manage van loading, route selling, and EOD reconciliation with SalesOn's van sales software."
+    name="twitter:description" />
+  <meta content="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-arrow-logo-blue.png"
+    name="twitter:image" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebPage"
+}
+</script>
+
+  <script>window.SALESON_SCROLL_OFFSET = 88;</script>
+  <script src="/assets/js/min/common.min.5c2663c0cd10.js"></script>
+    <link rel="canonical" href="https://saleson.co.in/van-sales">
+    <link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css">
+</head>
+
+<body>
+ <site-header><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header>
+  <!-- ═══ HERO ═══ -->
+  <section aria-label="Van Sales Software India — SalesOn" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-eyebrow">
+            <!-- <span class="badge badge-blue">🚐 Van Sales Software India</span> -->
+            <span class="badge badge-green">📦 Ready-Stock Route Selling</span>
+            <span class="badge badge-amber">✅ End-of-day settlement</span>
+          </div>
+          <h1 class="disp" style="margin-bottom:16px;">
+            Van Sales Software India<br />for <em>Ready-Stock Route Selling.</em>
+          </h1>
+          <p class="hero-sub">Load the van. Sell at the outlet. Collect Cash or UPI. Reconcile van stock and prepare the end-of-day settlement for accounts. Built for Indian FMCG, dairy, and agri distributors
+            running general trade routes.</p>
+          <div class="hero-actions">
+            <div style="display:flex;flex-direction:column;align-items:center;">
+              <a class="btn-p" href="https://app.saleson.co.in/" target="_blank">🚀 Start Free 7-Day Trial</a><span class="subscription-terms-link"><a href="/terms">Trial and subscription terms</a> · <a href="/refund">Refund policy</a></span>
+              <span class="btn-sub">No credit card · Live in 1–2 days</span>
+            </div>
+            <a class="btn-s" href="#how-it-works">See How It Works</a>
+          </div>
+          <div class="trust-bar">
+            <span style="font-size:17px;">🏆</span>
+            <span class="tb-text"><strong>Trusted by 1,100+ Indian Brands</strong> — FMCG, Pharma &amp;
+              Distribution.</span>
+            <span class="tb-pill">2 to unlimited vans</span>
+          </div>
+          <div
+            style="margin-top:18px;background:var(--white);border:1px solid var(--border);border-left:3px solid var(--brand);border-radius:0 10px 10px 0;padding:13px 17px;display:flex;gap:11px;align-items:flex-start;">
+            <span style="font-size:20px;flex-shrink:0;">⭐</span>
+            <div>
+              <p style="font-size:13px;color:var(--ink-soft);line-height:1.65;margin-bottom:5px;">Review loaded stock, sales, returns and collections together before closing a route.</p>
+              <span style="font-size:11.5px;font-weight:700;color:var(--ink-mute);">Route review checklist</span>
+            </div>
+          </div>
+        </div>
+        <div>
+        <img src="/assets/img/van-dashboard.webp" loading="lazy" alt="Web dashboard with van sales, stocks, payment details" 
+        style="transform: scale(1.5);"/>
+          <div class="metric-pill">
+            <div class="mi">
+              <div class="mi-val">Stock + cash</div>
+              <div class="mi-lbl">EOD Close</div>
+            </div>
+            <div class="mi">
+              <div class="mi-val">Outlet</div>
+              <div class="mi-lbl">Billing</div>
+            </div>
+            <div class="mi">
+              <div class="mi-val">Live</div>
+              <div class="mi-lbl">Stock View</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- BUILT FOR STRIP -->
+  <div aria-label="Who SalesOn Van Sales is built for" class="built-for">
+    <div class="container">
+      <div class="bf-inner">
+        <span class="bf-label">Built for</span>
+        <div class="bf-pills">
+          <span class="bf-pill"><span>🗺️</span> Route Sales Heads</span>
+          <span class="bf-pill"><span>🚐</span> Van Supervisors</span>
+          <span class="bf-pill"><span>👤</span> DSR Teams</span>
+          <span class="bf-pill"><span>🏭</span> FMCG &amp; Dairy Distributors</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ═══ PROFIT LEAKS ═══ -->
+  <section aria-label="Van sales profit leaks" class="leaks" id="profit-leaks">
+    <div class="container">
+      <div class="lk-header">
+        <div class="lk-label">Where Manual Van Operations Fail</div>
+        <h2 class="lk-title">Where Indian Distributors<br /><span>Lose Money Every Day</span></h2>
+        <p class="lk-sub">Paper-based van operations create stock gaps, missed outlets, and billing disputes that
+          accumulate silently across every route.</p>
+      </div>
+      <div class="lk-grid reveal">
+        <div class="lk-card">
+          <span class="lk-icon">📦</span>
+          <div class="lk-ct">Stock Leakage at EOD</div>
+          <p class="lk-cd">Without SKU-level van tracking, damaged goods, short deliveries, and unrecorded returns go
+            unaccounted — making it harder to explain stock and cash differences at the end of the day.</p>
+          <span class="lk-loss">Impact: Unexplained stock differences</span>
+        </div>
+        <div class="lk-card">
+          <span class="lk-icon">🗺️</span>
+          <div class="lk-ct">Skipped Outlets</div>
+          <p class="lk-cd">DSRs skip low-priority kirana stops without detection. By the time a manager finds out, a
+            competitor has already serviced the outlet and taken the order.</p>
+          <span class="lk-loss">Impact: Reduced Outlet Coverage</span>
+        </div>
+        <div class="lk-card">
+          <span class="lk-icon">📄</span>
+          <div class="lk-ct">Manual Billing Errors</div>
+          <p class="lk-cd">Handwritten bills reach the office next morning — retailers dispute amounts, and van stock
+            counts don't match — every single day.</p>
+          <span class="lk-loss">Impact: Billing Disputes &amp; Bad Debt</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ═══ HOW IT WORKS ═══ -->
+  <section aria-label="How SalesOn van sales works" class="section section-alt" id="how-it-works">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="lbl">4-Step Daily Workflow</span>
+        <h2 class="h2" style="text-align:center;">Load. Sell. Collect. <em>Close.</em></h2>
+        <p style="font-size:15px;color:var(--ink-soft);max-width:420px;margin:0 auto;line-height:1.75;">From morning
+          load-out to accounts sync — the full van route, automated.</p>
+      </div>
+      <div class="hiw-grid reveal">
+        <div class="hiw-step">
+          <div class="hiw-num">1</div>
+          <span class="hiw-icon">🚛</span>
+          <div class="hiw-title">Morning Load-Out</div>
+          <p class="hiw-desc">Driver confirms SKUs loaded via the app. Digital loading sheet auto-generated. Warehouse
+            stock updated instantly.</p>
+          <span class="hiw-badge">📦 Loading Sheet</span>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num">2</div>
+          <span class="hiw-icon">🧾</span>
+          <div class="hiw-title">Sell &amp; Collect</div>
+          <p class="hiw-desc">Bill at the outlet. Cash, UPI, or Credit collected on the spot.
+            WhatsApp receipt sent before moving on.</p>
+          <span class="hiw-badge">🖨️ On-Spot Invoice</span>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num">3</div>
+          <span class="hiw-icon">🔄</span>
+          <div class="hiw-title">Log Returns</div>
+          <p class="hiw-desc">Saleable returns and damaged goods logged on-route — auto-separated, consolidated for
+            distributor review at EOD.</p>
+          <span class="hiw-badge">📋 Return Notes</span>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num green">4</div>
+          <span class="hiw-icon">✅</span>
+          <div class="hiw-title">Close Day</div>
+          <p class="hiw-desc">Stock reconciled per SKU. EOD settlement ready for accounts. Review exceptions before approving the day’s settlement.</p>
+          <span class="hiw-badge green">End-of-day review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ═══ HUB 1: VAN INVENTORY ═══ -->
+  <section aria-label="Real-time van inventory management" class="hub" id="van-inventory">
+    <div class="container">
+      <div class="hub-grid">
+
+        <!-- TEXT LEFT -->
+        <div class="content-col">
+          <span class="badge badge-amber">📊 Real-Time Van Inventory Management</span>
+          <h2 class="hub-title">Empty Vans Don't Sell.<br><em>Know Your Stock Before You Lose a Sale.</em></h2>
+          <p class="pain">❝ "We had no idea the van ran out of our top SKU by 11am — we lost 4 outlets worth of
+            orders." ❞</p>
+          <p class="hub-body">With live stock visibility, managers know exactly what's in every van — every SKU, every
+            unit, at all times. Prevent stock leakage and stock-outs before they cost you revenue or a retailer
+            relationship.</p>
+          <ul class="bullets">
+            <li><span class="bul"></span><span><strong>Live Visibility:</strong> See every SKU and quantity in every van
+                — updated in real time.</span></li>
+            <!-- <li><span class="bul"></span><span><strong>Auto-Refill Alerts:</strong> Get notified the moment a van needs to return for restocking.</span></li> -->
+            <li><span class="bul"></span><span><strong>Multi-Van Fleet:</strong> Monitor all vans on one central screen
+                — stock, location, and sales.</span></li>
+            <li><span class="bul"></span><span><strong>Inventory Transfers:</strong> Record stock movement between vans
+                or warehouse, seamlessly.</span></li>
+            <li><span class="bul"></span><span><strong>Secondary Sales Visibility:</strong> Track sellout data from van
+                to retailer — critical for FMCG and pharma operations at scale.</span></li>
+          </ul>
+          <div class="tp">
+            <span class="trust-pill-icon">🔄</span>
+            Real-time sync ensures your warehouse and vans are always in 100% agreement.
+          </div>
+   
+          <a href="https://app.saleson.co.in/" target="_blank" class="btn-p">📈 Stop Stock Leakage</a>
+          <span class="btn-sub" style="text-align:left;">Free 7-day trial · No credit card required</span>
+          <div class="internal-links">
+            <a href="/distribution-management-system" class="il">🏭 DMS System →</a>
+            <a href="/field-sales" class="il">📍 Field Sales Tracking →</a>
+            <!-- <a href="/blogs/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains" class="int-link">📊 Real-time inventory
+              management guide →</a> -->
+          </div>
+        </div>
+
+        <!-- VISUAL RIGHT -->
+        <div class="visual-col reveal visible">
+          <div class="app-frame">
+            <div class="af-bar">
+              <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+              <span class="af-lbl">Morning Load-Out · Van 01</span>
+            </div>
+            <!-- LOAD-OUT SCREEN MOCK -->
+            <div style="background:#f7f8fa;font-family:'DM Sans',sans-serif;">
+              <div style="background:linear-gradient(135deg,#059669,#047857);padding:10px 14px;">
+                <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.06em;">
+                  Morning Load-Out · 8:02 AM</div>
+                <div style="font-size:13px;font-weight:700;color:#fff;margin-top:2px;">Van 01 — Rajesh Kumar</div>
+              </div>
+              <div style="padding:10px 12px;">
+                <div style="font-size:9px;font-weight:700;color:#7a8898;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">
+                  Stock Loaded Today</div>
+                <div style="display:flex;flex-direction:column;gap:5px;">
+                  <div style="display:flex;align-items:center;gap:8px;background:#fff;border-radius:8px;padding:7px 10px;border:1px solid #e2e8f0;">
+                    <span style="font-size:13px;">🥥</span>
+                    <div style="flex:1;font-size:11px;font-weight:600;color:#0f1623;">Coconut Oil 500ml</div>
+                    <div style="font-size:10px;font-weight:800;color:#1a56db;background:#dbeafe;padding:2px 8px;border-radius:100px;">
+                      60 units</div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:8px;background:#fff;border-radius:8px;padding:7px 10px;border:1px solid #e2e8f0;">
+                    <span style="font-size:13px;">🧴</span>
+                    <div style="flex:1;font-size:11px;font-weight:600;color:#0f1623;">Hair Cream 200g</div>
+                    <div style="font-size:10px;font-weight:800;color:#1a56db;background:#dbeafe;padding:2px 8px;border-radius:100px;">
+                      48 units</div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:8px;background:#fff;border-radius:8px;padding:7px 10px;border:1px solid rgba(220,38,38,.15);">
+                    <span style="font-size:13px;">🧼</span>
+                    <div style="flex:1;font-size:11px;font-weight:600;color:#0f1623;">Shampoo 100ml</div>
+                    <div style="font-size:10px;font-weight:800;color:#dc2626;background:#fee2e2;padding:2px 8px;border-radius:100px;">
+                      3/40 ⚠️</div>
+                  </div>
+                </div>
+                <div style="margin-top:8px;background:#d1fae5;border-radius:8px;padding:7px 10px;display:flex;align-items:center;justify-content:space-between;">
+                  <span style="font-size:10.5px;font-weight:700;color:#059669;">✓ Load confirmed &amp; synced</span>
+                  <span style="font-size:10px;color:#059669;">120 units total</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+          <!-- Tracking mock (compact) -->
+          <div class="tracking-mock" style="margin-top:20px;">
+            <div class="tm-header">
+              <span class="tm-title">Live Delivery Tracker</span>
+            </div>
+            <div style="display:inline-block">
+              <div class="map-wrap" id="mapWrap">
+                <svg style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 520 316" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="520" height="316" fill="#f2efe9"></rect>
+                  <!-- Water -->
+                  <rect x="370" y="0" width="150" height="90" fill="#a8d4f0"></rect>
+                  <rect x="420" y="82" width="100" height="40" fill="#a8d4f0"></rect>
+                  <text x="445" y="42" text-anchor="middle" font-size="9" fill="#4a90c4" font-family="Arial,sans-serif" font-weight="600" opacity=".9">Lake View</text>
+                  <!-- Parks -->
+                  <rect x="368" y="108" width="142" height="100" rx="3" fill="#b8dfb0"></rect>
+                  <rect x="378" y="114" width="120" height="46" rx="2" fill="#a8d4a0"></rect>
+                  <rect x="0" y="104" width="120" height="52" rx="2" fill="#b8dfb0"></rect>
+                  <rect x="260" y="168" width="80" height="38" rx="2" fill="#c8e8bc"></rect>
+                  <rect x="6" y="220" width="108" height="52" rx="2" fill="#b8dfb0"></rect>
+                  <rect x="368" y="218" width="142" height="90" rx="2" fill="#b8dfb0"></rect>
+                  <!-- Trees -->
+                  <circle cx="400" cy="128" r="6" fill="#94c98a" opacity=".7"></circle>
+                  <circle cx="420" cy="120" r="5" fill="#94c98a" opacity=".7"></circle>
+                  <circle cx="445" cy="130" r="6" fill="#94c98a" opacity=".65"></circle>
+                  <circle cx="465" cy="122" r="5" fill="#94c98a" opacity=".7"></circle>
+                  <circle cx="485" cy="132" r="5.5" fill="#94c98a" opacity=".65"></circle>
+                  <circle cx="435" cy="142" r="4.5" fill="#94c98a" opacity=".6"></circle>
+                  <circle cx="460" cy="145" r="4" fill="#94c98a" opacity=".6"></circle>
+                  <circle cx="25" cy="118" r="5" fill="#94c98a" opacity=".6"></circle>
+                  <circle cx="48" cy="112" r="4.5" fill="#94c98a" opacity=".6"></circle>
+                  <circle cx="68" cy="120" r="5" fill="#94c98a" opacity=".6"></circle>
+                  <circle cx="90" cy="114" r="4" fill="#94c98a" opacity=".55"></circle>
+                  <text x="440" y="170" text-anchor="middle" font-size="9.5" fill="#4a8c40" font-family="Arial,sans-serif" font-weight="600" opacity=".85">City Park</text>
+                  <!-- Buildings -->
+                  <rect x="130" y="104" width="80" height="48" rx="1" fill="#e0dbd0"></rect>
+                  <rect x="133" y="107" width="36" height="22" rx="1" fill="#d4cfc4"></rect>
+                  <rect x="172" y="107" width="35" height="22" rx="1" fill="#cbc6bb"></rect>
+                  <rect x="133" y="132" width="74" height="16" rx="1" fill="#d8d3c8"></rect>
+                  <rect x="130" y="168" width="80" height="38" rx="1" fill="#e0dbd0"></rect>
+                  <rect x="133" y="171" width="36" height="18" rx="1" fill="#d4cfc4"></rect>
+                  <rect x="172" y="171" width="35" height="18" rx="1" fill="#cbc6bb"></rect>
+                  <rect x="14" y="168" width="108" height="38" rx="1" fill="#d8d3c8"></rect>
+                  <rect x="17" y="171" width="50" height="18" rx="1" fill="#d0cbc0"></rect>
+                  <rect x="70" y="171" width="48" height="18" rx="1" fill="#cbc6bb"></rect>
+                  <rect x="260" y="104" width="80" height="48" rx="1" fill="#e0dbd0"></rect>
+                  <rect x="263" y="107" width="36" height="22" rx="1" fill="#d4cfc4"></rect>
+                  <rect x="302" y="107" width="35" height="22" rx="1" fill="#cbc6bb"></rect>
+                  <rect x="260" y="218" width="80" height="52" rx="1" fill="#ddd8cc"></rect>
+                  <rect x="263" y="221" width="36" height="24" rx="1" fill="#d4cfc4"></rect>
+                  <rect x="302" y="221" width="35" height="24" rx="1" fill="#cbc6bb"></rect>
+                  <rect x="14" y="280" width="108" height="36" rx="1" fill="#d8d3c8"></rect>
+                  <!-- Major roads -->
+                  <line x1="0" y1="100" x2="520" y2="100" stroke="#fff" stroke-width="11"></line>
+                  <line x1="0" y1="100" x2="520" y2="100" stroke="#fdd835" stroke-width="7"></line>
+                  <line x1="0" y1="100" x2="520" y2="100" stroke="#fff" stroke-width="1.2" stroke-dasharray="14 9" opacity=".55"></line>
+                  <line x1="0" y1="210" x2="520" y2="210" stroke="#fff" stroke-width="8"></line>
+                  <line x1="0" y1="210" x2="520" y2="210" stroke="#fdd835" stroke-width="5" opacity=".75"></line>
+                  <line x1="130" y1="0" x2="130" y2="316" stroke="#fff" stroke-width="8"></line>
+                  <line x1="130" y1="0" x2="130" y2="316" stroke="#fdd835" stroke-width="5" opacity=".75"></line>
+                  <line x1="350" y1="0" x2="350" y2="316" stroke="#fff" stroke-width="8"></line>
+                  <line x1="350" y1="0" x2="350" y2="316" stroke="#fdd835" stroke-width="5" opacity=".75"></line>
+                  <!-- Local roads -->
+                  <line x1="240" y1="100" x2="240" y2="316" stroke="#fff" stroke-width="5"></line>
+                  <line x1="0" y1="158" x2="520" y2="158" stroke="#fff" stroke-width="4.5"></line>
+                  <line x1="0" y1="270" x2="130" y2="270" stroke="#fff" stroke-width="3.5"></line>
+                  <line x1="350" y1="270" x2="520" y2="270" stroke="#fff" stroke-width="3.5"></line>
+                  <line x1="60" y1="210" x2="60" y2="316" stroke="#fff" stroke-width="3"></line>
+                  <line x1="460" y1="100" x2="460" y2="210" stroke="#fff" stroke-width="3"></line>
+                  <!-- Road labels -->
+                  <rect x="166" y="91" width="72" height="12" rx="2" fill="#fff" opacity=".78"></rect>
+                  <text x="202" y="100" text-anchor="middle" font-size="8.5" fill="#555" font-family="Arial,sans-serif" font-weight="700">MG Road</text>
+                  <rect x="166" y="201" width="80" height="12" rx="2" fill="#fff" opacity=".78"></rect>
+                  <text x="206" y="210" text-anchor="middle" font-size="8.5" fill="#555" font-family="Arial,sans-serif" font-weight="700">Station Road</text>
+                  <text x="124" y="55" text-anchor="middle" font-size="8" fill="#555" font-family="Arial,sans-serif" font-weight="600" transform="rotate(-90 124 55)">Ring Road</text>
+                  <text x="344" y="55" text-anchor="middle" font-size="8" fill="#555" font-family="Arial,sans-serif" font-weight="600" transform="rotate(-90 344 55)">NH-33</text>
+                  <text x="236" y="56" text-anchor="middle" font-size="7.5" fill="#555" font-family="Arial,sans-serif" font-weight="600" transform="rotate(-90 236 56)">Market Rd</text>
+                  <!-- Route completed -->
+                  <polyline points="60,272 60,210 60,158 130,158 240,158 240,210 350,210 350,158 350,100 240,100 195,100" fill="none" stroke="#1a73e8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".92"></polyline>
+                  <!-- Route upcoming -->
+                  <polyline points="195,100 130,100 130,60" fill="none" stroke="#1a73e8" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 5" opacity=".38"></polyline>
+                  <!-- Direction dots -->
+                  <circle cx="60" cy="238" r="3" fill="#fff" stroke="#1a73e8" stroke-width="2" opacity=".8"></circle>
+                  <circle cx="185" cy="158" r="3" fill="#fff" stroke="#1a73e8" stroke-width="2" opacity=".8"></circle>
+                  <circle cx="295" cy="210" r="3" fill="#fff" stroke="#1a73e8" stroke-width="2" opacity=".8"></circle>
+                  <circle cx="350" cy="130" r="3" fill="#fff" stroke="#1a73e8" stroke-width="2" opacity=".8"></circle>
+                  <!-- Pin shadow filter -->
+                  <defs>
+                    <filter id="ps2">
+                      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000" flood-opacity=".28"></feDropShadow>
+                    </filter>
+                  </defs>
+                  <!-- Pins -->
+                  <g class="gpin" data-idx="0" style="cursor:pointer" transform="translate(60,272)">
+                    <path d="M0,-20 C9,-20 15,-13 15,-6 C15,4 0,20 0,20 C0,20 -15,4 -15,-6 C-15,-13 -9,-20 0,-20 Z" fill="#34a853" filter="url(#ps2)"></path>
+                    <circle cx="0" cy="-6" r="6.5" fill="#fff" opacity=".95"></circle>
+                    <text x="0" y="-3" text-anchor="middle" font-size="8" fill="#34a853" font-weight="700" font-family="Arial,sans-serif">1</text>
+                  </g>
+                  <g class="gpin" data-idx="1" style="cursor:pointer" transform="translate(130,158)">
+                    <path d="M0,-20 C9,-20 15,-13 15,-6 C15,4 0,20 0,20 C0,20 -15,4 -15,-6 C-15,-13 -9,-20 0,-20 Z" fill="#34a853" filter="url(#ps2)"></path>
+                    <circle cx="0" cy="-6" r="6.5" fill="#fff" opacity=".95"></circle>
+                    <text x="0" y="-3" text-anchor="middle" font-size="8" fill="#34a853" font-weight="700" font-family="Arial,sans-serif">2</text>
+                  </g>
+                  <g class="gpin" data-idx="2" style="cursor:pointer" transform="translate(240,210)">
+                    <path d="M0,-20 C9,-20 15,-13 15,-6 C15,4 0,20 0,20 C0,20 -15,4 -15,-6 C-15,-13 -9,-20 0,-20 Z" fill="#34a853" filter="url(#ps2)"></path>
+                    <circle cx="0" cy="-6" r="6.5" fill="#fff" opacity=".95"></circle>
+                    <text x="0" y="-3" text-anchor="middle" font-size="8" fill="#34a853" font-weight="700" font-family="Arial,sans-serif">3</text>
+                  </g>
+                  <g class="gpin" data-idx="3" style="cursor:pointer" transform="translate(350,158)">
+                    <path d="M0,-20 C9,-20 15,-13 15,-6 C15,4 0,20 0,20 C0,20 -15,4 -15,-6 C-15,-13 -9,-20 0,-20 Z" fill="#34a853" filter="url(#ps2)"></path>
+                    <circle cx="0" cy="-6" r="6.5" fill="#fff" opacity=".95"></circle>
+                    <text x="0" y="-3" text-anchor="middle" font-size="8" fill="#34a853" font-weight="700" font-family="Arial,sans-serif">4</text>
+                  </g>
+                  <!-- Current location -->
+                  <circle cx="195" cy="100" r="22" fill="#1a73e8" opacity=".1"></circle>
+                  <circle cx="195" cy="100" r="13" fill="#1a73e8" opacity=".18"></circle>
+                  <circle cx="195" cy="100" r="9" fill="#1a73e8"></circle>
+                  <circle cx="195" cy="100" r="3.5" fill="#fff"></circle>
+                  <!-- Stop 5 upcoming -->
+                  <g class="gpin" data-idx="4" style="cursor:pointer" transform="translate(130,60)">
+                    <path d="M0,-20 C9,-20 15,-13 15,-6 C15,4 0,20 0,20 C0,20 -15,4 -15,-6 C-15,-13 -9,-20 0,-20 Z" fill="#fff" stroke="#1a73e8" stroke-width="2" filter="url(#ps2)"></path>
+                    <circle cx="0" cy="-6" r="6.5" fill="#d2e3fc" opacity=".95"></circle>
+                    <text x="0" y="-3" text-anchor="middle" font-size="8" fill="#1a73e8" font-weight="700" font-family="Arial,sans-serif">5</text>
+                  </g>
+                </svg>
+
+                <!-- Always-on overlay: Stop 3 -->
+                <div class="overlay" style="left:202px;top:152px">
+                  <b>Stop 3 · Delivered</b>
+                  <div class="overlay-row"><span>10:22 AM</span><strong>₹2,100</strong></div>
+                </div>
+
+                <!-- Hover overlay -->
+                <div class="overlay" id="overlay-hover" style="opacity:0;transition:opacity .15s;position:absolute">
+                </div>
+
+                <div class="map-label">🚴 Ravi Kumar</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HUB 2: ON-SPOT BILLING ═══ -->
+  <section aria-label="On-spot outlet billing" class="hub section-alt" id="van-billing">
+    <div class="container">
+      <div class="hub-grid flip">
+        <div class="vis reveal" style="position: relative;">
+          <img src="/assets/img/cart.webp" loading="lazy" alt="Mobile screen showing billing for van sales"/>
+          <div class="thermal-wrap">
+            <div class="thermal-receipt">
+                <div class="tr-co">Abhilasha Retail</div>
+                <div class="tr-addr">14, Market Road, Pune - 411001<br />GSTIN: 27AABCS1234D1Z5</div>
+                <hr class="tr-div" />
+                <div class="tr-row"><span>TAX INVOICE</span><span>INV-0382</span></div>
+                <div class="tr-row"><span>Date: 14/11/2024</span></div>
+                <div class="tr-row"><span>Party: Suresh Traders</span></div>
+                <hr class="tr-div" />
+                <div class="tr-row"><span>Freshme milk 500ml×10</span><span>₹6,300</span></div>
+                <div class="tr-row"><span>Freshme curd 100ml×60</span><span>₹600</span></div>
+                <div class="tr-row"><span>Freshme A2 milk</span><span>₹3,200</span></div>
+                <!-- <div class="tr-row"><span>Scheme Disc.</span><span>−₹150</span></div> -->
+                <hr class="tr-div" />
+                <div class="tr-gst">CGST(9%):₹252.50 | SGST(9%):₹252.50</div>
+                <div class="tr-total"><span>TOTAL</span><span>₹10,605.00</span></div>
+                <hr class="tr-div" />
+                <div style="font-size:7px;color:var(--ink-mute);text-align:center;">Thank you!</div>
+                <div class="tr-barcode"></div>
+            </div>
+        </div>
+        </div>
+        <div>
+          <span class="badge badge-green">🧾 On-Spot Billing</span>
+          <h2 class="hub-title">Bill at the Outlet.<br /><em>Collect Before You Move On.</em></h2>
+          <p class="pain">❝ "Handwritten bills meant retailers disputed amounts the next day. Our DSRs had no proof of
+            what was sold." ❞</p>
+          <p class="hub-body">DSRs raise an invoice at each kirana or general trade outlet — printed on a Bluetooth thermal printer, receipt sent on WhatsApp, and van stock deducted
+            instantly.</p>
+          <ul class="bullets">
+            <li><span class="bul"></span><span><strong>Outlet Billing:</strong> Compliant GST invoice via any Bluetooth
+                thermal printer in seconds.</span></li>
+            <li><span class="bul"></span><span><strong>Instant Stock Deduction:</strong> Van inventory updated the
+                moment a sale is confirmed — no manual counting later.</span></li>
+            <li><span class="bul"></span><span><strong>Cash / UPI / Credit:</strong> All payment modes supported —
+                reconciled against each invoice on the spot.</span></li>
+            <li><span class="bul"></span><span><strong>WhatsApp Receipt:</strong> Digital proof reaches the retailer
+                before the van moves on.</span></li>
+          </ul>
+          <div class="tp">
+            <span style="font-size:17px;flex-shrink:0;">🖨️</span>
+            Compatible with <strong style="margin-left:4px;">all major Bluetooth thermal printers in India.</strong>
+          </div>
+          <a class="btn-p" href="https://app.saleson.co.in/" target="_blank">⚡ Speed Up Van Billing</a>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;">
+            <a class="il" href="/invoicing">🧾 GST Billing Software →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ═══ HUB 3: EOD RECONCILIATION ═══ -->
+  <section aria-label="EOD stock reconciliation" class="hub" id="reconciliation">
+    <div class="container">
+      <div class="hub-grid">
+        <div>
+          <span class="badge badge-blue">✅ EOD Stock Reconciliation</span>
+          <h2 class="hub-title">Reconcile Stock and Collections<br /><em>Before Closing the Day.</em></h2>
+          <p class="pain">❝ "Our DSRs were spending 2 hours every evening counting stock and matching cash — and still
+            getting it wrong." ❞</p>
+          <p class="hub-body">DSR taps "Close Day." Opening stock vs. sales vs. returns vs. damaged goods — auto-matched
+            per SKU. Any discrepancy is flagged instantly. Distributor approves. EOD settlement reports are ready for
+            accounts — one click pushes everything to your accounting software.</p>
+          <ul class="bullets">
+            <li><span class="bul"></span><span><strong>Auto SKU Match:</strong> Every unit accounted for — loaded, sold,
+                returned, damaged. Zero manual arithmetic.</span></li>
+            <li><span class="bul"></span><span><strong>Live Leakage Alerts:</strong> Stock gaps flagged the moment they
+                occur — not discovered at end of day.</span></li>
+            <li><span class="bul"></span><span><strong>Accounts Sync:</strong> All invoices pushed to your accounts
+                software — no re-entry, no export. EOD settlement reports are ready for accounts.</span></li>
+          </ul>
+          <div class="tp">
+            <span style="font-size:17px;flex-shrink:0;">⏱️</span>
+            <strong>Review stock and cash differences before approving the day.</strong>
+          </div>
+          <a class="btn-p" href="https://app.saleson.co.in/" target="_blank">✅ Reconcile in 1-Click</a>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;">
+            <a class="il" href="/tally-integration">📊 Accounting integration details →</a>
+          </div>
+        </div>
+        <div class="vis reveal">
+          <div class="app-frame">
+            <div class="af-bar"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span><span
+                class="af-lbl">EOD Settlement — Van 01</span></div>
+            <div style="padding:18px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+                <div class="fmc-title" style="margin-bottom:0;">📦 Today's Settlement Summary</div>
+                <div style="font-size:11px;color:var(--ink-mute);">6:30 PM</div>
+              </div>
+              <div class="balance-row"><span class="br-label">Opening Stock (Loaded)</span><span class="br-val">240
+                  units</span></div>
+              <div class="balance-row"><span class="br-label">Total Sales</span><span class="br-val green">186
+                  units</span></div>
+              <div class="balance-row"><span class="br-label">Returns / Damages</span><span class="br-val amber">8
+                  units</span></div>
+              <div class="balance-row"><span class="br-label">Closing Balance</span><span class="br-val">46 units</span>
+              </div>
+              <div class="matched">
+                <span class="matched-tag">✓ Matched</span>
+                <span class="matched-text">All SKUs reconciled. Zero discrepancy.</span>
+              </div>
+              <div style="margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <div style="background:var(--green-light);border-radius:10px;padding:12px;text-align:center;">
+                  <div style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--green);">₹38,400</div>
+                  <div style="font-size:11px;color:var(--green);font-weight:600;">Cash Collected</div>
+                </div>
+                <div style="background:var(--brand-light);border-radius:10px;padding:12px;text-align:center;">
+                  <div style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--brand);">₹12,200</div>
+                  <div style="font-size:11px;color:var(--brand);font-weight:600;">Credit Pending</div>
+                </div>
+              </div>
+              <div
+                style="margin-top:13px;display:flex;align-items:center;justify-content:space-between;background:var(--ink);border-radius:8px;padding:11px 14px;">
+                <div style="font-size:13px;font-weight:700;color:#fff;">🔗 EOD Settlement Ready for Accounts</div>
+                <div
+                  style="font-size:11px;font-weight:700;background:var(--green);color:#fff;padding:4px 10px;border-radius:100px;">
+                  1-Click</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- STATS BAR -->
+  <div aria-label="Van sales performance stats" class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-val">Stock + cash</div>
+          <div class="stat-lbl">EOD Reconciliation</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-val">Outlet</div>
+          <div class="stat-lbl">Faster Invoice Generation</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-val">Live</div>
+          <div class="stat-lbl">Van Stock Accountability</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-val">1,100+</div>
+          <div class="stat-lbl">Indian Businesses</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ═══ COMPARISON ═══ -->
+  <section id="comparison" class="section"><div class="container"><h2>Is van sales the right workflow?</h2><p>Use van sales when the rep carries ready stock, sells and bills at the outlet, then brings back unsold stock and collections. If reps book orders for later fulfilment, explore the <a href="/order-taking-app">Order Taking App</a> instead.</p><p>Bring a sample loading sheet, route invoice and return to the demo. Check how stock differences, credit sales and the closing settlement are reviewed.</p><a href="/request-demo" class="btn-p">Walk through a van route</a></div></section>
+  <!-- ═══ INDUSTRIES ═══ -->
+  <section aria-label="Industries using van sales software" class="section" id="industries">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:40px;">
+        <span class="lbl">Who Uses Van Sales Software</span>
+        <h2 class="h2" style="text-align:center;">Built for Every Industry That<br /><em>Moves and Sells</em></h2>
+      </div>
+      <div class="ind-grid reveal">
+        <div class="ind-card">
+          <div class="ind-icon">🥤</div>
+          <div class="ind-title">FMCG Distributors</div>
+          <p class="ind-desc">High-SKU beat route selling across kirana and general trade — beverages, snacks, personal
+            care.</p>
+        </div>
+        <div class="ind-card">
+          <div class="ind-icon">💊</div>
+          <div class="ind-title">Pharma Distributors</div>
+          <p class="ind-desc">Batch tracking, expiry management, and GST invoicing at chemist outlets.</p>
+        </div>
+        <div class="ind-card">
+          <div class="ind-icon">🥛</div>
+          <div class="ind-title">Dairy &amp; Beverages</div>
+          <p class="ind-desc">Early morning route selling with return tracking across urban and rural zones.</p>
+        </div>
+        <div class="ind-card">
+          <div class="ind-icon">🌾</div>
+          <div class="ind-title">Agri &amp; Agrochemical</div>
+          <p class="ind-desc">Seasonal demand and GST invoicing across multi-location wholesale distribution.</p>
+        </div>
+        <div class="ind-card">
+          <div class="ind-icon">🔧</div>
+          <div class="ind-title">Hardware &amp; Building Materials</div>
+          <p class="ind-desc">Bulk pricing, credit management, and accounting integration out of the box.</p>
+        </div>
+        <div class="ind-card">
+          <div class="ind-icon">🧹</div>
+          <div class="ind-title">Home Care &amp; Consumer Goods</div>
+          <p class="ind-desc">Scheme-based selling across kirana and modern trade — one dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ═══ FAQ ═══ -->
+  <section aria-label="Van sales software FAQ" class="section section-alt" id="faq">
+    <div class="container">
+      <div style="max-width:720px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:40px;">
+          <span class="lbl">Common Questions</span>
+          <h2 class="h2" style="text-align:center;">Van Sales Software — FAQ</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">What is van sales software?<span
+                class="fi">+</span></button>
+            <div class="faq-a">
+              <p>Van sales software automates the ready-stock route-sell cycle — the van carries goods, the DSR sells
+                and raises a GST invoice at each kirana or general trade outlet, collects Cash or UPI on the spot, and
+                reconciles all stock and cash at end of day. SalesOn covers every step from morning load-out to accounts
+                sync — no paper bills, no manual counting.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">How does EOD van stock reconciliation
+              work?<span class="fi">+</span></button>
+            <div class="faq-a">
+              <p>At end of day, the DSR taps "Close Day." SalesOn auto-matches opening stock loaded in the morning
+                against total units sold, returns, and damaged goods — per SKU. Any gap is flagged instantly. The
+                distributor approves and EOD settlement is ready for accounts — no re-entry. Review this process with your own loading, sales and return examples during the demo.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">Does SalesOn work on low-connectivity
+              networks in rural India?<span class="fi">+</span></button>
+            <div class="faq-a">
+              <p>Yes. SalesOn's Android app is built for Indian field conditions — low-end devices and patchy 3G/4G.
+                DSRs can invoice and log returns field-ready. </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">How many vans can I manage? Is there a
+              minimum?<span class="fi">+</span></button>
+            <div class="faq-a">
+              <p>SalesOn works for 2 vans or 200 — no minimum user count, no setup fee. The manager dashboard shows live
+                stock and collections across all active vans. Most distributors are live within 1–2 days with free
+                onboarding included.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">Does SalesOn sync with Tally Prime or
+              other accounting software?<span class="fi">+</span></button>
+            <div class="faq-a">
+              <p>Yes — SalesOn pushes all van invoices and stock movements to your accounting software in one click at
+                EOD. No manual re-entry. Supports Tally Prime and ERP 9. <a
+                  href="/tally-integration" style="color:var(--brand);">See accounting integration
+                  details →</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ═══ CLUSTER ═══ -->
+  <section aria-label="SalesOn platform related features" class="section">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:8px;"><span class="lbl">Explore SalesOn Platform</span></div>
+      <h2 class="h2" style="text-align:center;margin-bottom:6px;">Van Sales Is <em>Just the Start</em></h2>
+      <p
+        style="font-size:14.5px;color:var(--ink-soft);text-align:center;max-width:460px;margin:0 auto 28px;line-height:1.75;">
+        SalesOn connects the full distribution loop — orders, billing, collections, and accounts.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+        <a class="il" href="/invoicing">🧾 GST Invoicing Software →</a>
+        <a class="il" href="/order-taking-app">📱 Order Taking App →</a>
+        <a class="il" href="/distribution-management-system">🏭 Distribution Management →</a>
+        <a class="il" href="/tally-integration">📊 Accounting integration details →</a>
+        <a class="il" href="/field-sales">📍 Field Sales App →</a>
+      </div>
+    </div>
+  </section>
+      <!-- FOOTER -->
+      <site-footer><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
+      <whatsapp-float msg="Hi%20SalesOn%2C%20I%27d%20like%20to%20know%20more%20about%20Van%20Sales">
+      </whatsapp-float>
+      <script defer="" src="/components/site-header.cd8aaee89ecb.js"></script>
+      <script defer="" src="/components/site-footer.0ffd3829fc3f.js"></script>
+      <script defer="" src="/components/whatsapp-float.0e773436a8ab.js"></script>
+    <script defer src="/assets/js/site-repairs.29824dd6d35a.js"></script>
+</body>
+
+</html>

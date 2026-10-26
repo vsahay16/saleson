@@ -1,0 +1,39 @@
+/* Shared accessibility and narrow-screen repairs. */
+html { scroll-padding-top: 90px; }
+img, video, iframe { max-width: 100%; }
+img { height: auto; }
+input, select, textarea { max-width: 100%; }
+button, a, input, select, textarea { touch-action: manipulation; }
+:focus-visible { outline: 3px solid #1565c0; outline-offset: 3px; }
+.skip-link { position: fixed; top: -100px; left: 12px; z-index: 10001; background: #fff; color: #102040; padding: 12px; }
+.skip-link:focus { top: 12px; }
+.pricing-region { padding: 12px 24px; background: #edf4ff; text-align: right; }
+.pricing-region a { display: inline-block; padding: 8px; }
+.demo-role-note { margin: 16px auto; max-width: 900px; padding: 12px 16px; color: #17263d; background: #edf4ff; border-radius: 8px; line-height: 1.6; }
+.subscription-terms-link { display: block; margin: 12px 0; font-size: 13px; line-height: 1.6; }
+.tool-storage-note { max-width: 1000px; margin: 20px auto; padding: 12px 20px; font-size: 13px; line-height: 1.65; color: #4a5e73; background: #f3f7fc; border-radius: 8px; }
+.input-assumption { display: block; margin: 6px 0; font-size: 12px; line-height: 1.5; color: #4a5e73; }
+.repair-table-scroll { max-width: 100%; overflow-x: auto; }
+.repair-page { font: 17px/1.65 system-ui, sans-serif; color: #17263d; margin: 0; }
+.repair-page main { max-width: 1080px; margin: auto; padding: 64px 24px; }
+.repair-page h1 { font-size: clamp(32px, 6vw, 54px); line-height: 1.15; max-width: 800px; }
+.repair-page .repair-lead { max-width: 720px; font-size: 20px; }
+.repair-page .repair-actions { display: flex; flex-wrap: wrap; gap: 16px; margin: 28px 0; }
+.repair-page .repair-actions a { padding: 12px 20px; border: 1px solid #1565c0; border-radius: 8px; }
+.repair-page .repair-actions a:first-child { background: #1565c0; color: #fff; }
+.repair-page section { margin: 48px 0; }
+.repair-page .repair-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.repair-page .repair-grid article { background: #f2f6fc; border-radius: 12px; padding: 24px; }
+@media (max-width: 768px) {
+  .repair-page .repair-grid { grid-template-columns: 1fr; }
+  .repair-page main { padding: 36px 20px; }
+  .pricing-region { text-align: center; }
+  input, select, textarea { font-size: max(16px, 1em); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+@media print {
+  .repair-table-scroll { overflow: visible !important; max-height: none !important; max-width: none !important; }
+  site-header, site-footer, whatsapp-float, .skip-link, .feature-media-dialog { display: none !important; }
+}

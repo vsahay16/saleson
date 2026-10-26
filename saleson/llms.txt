@@ -1,0 +1,85 @@
+# SalesOn
+
+> SalesOn provides sales and distribution management software for Indian businesses, with information about field sales, order taking, invoicing, delivery and related workflows.
+
+The product pages describe the paid software. The tools section contains standalone free business utilities. Refer to the linked pages for current capabilities, pricing and terms.
+
+## Product and company
+
+- [SalesOn](https://saleson.co.in/)
+- [About SalesOn](https://saleson.co.in/about)
+- [Field Attendance App for Sales Teams](https://saleson.co.in/attendance)
+- [Delivery Management Software India](https://saleson.co.in/delivery-management)
+- [Distributor Management System India](https://saleson.co.in/distribution-management-system)
+- [Expense Management Software for Field Sales Teams India](https://saleson.co.in/expense-management)
+- [Best Field Sales Management Software in India](https://saleson.co.in/field-sales)
+- [GST Invoicing Software India](https://saleson.co.in/invoicing)
+- [SalesOn Mobile App for Orders, GST Billing & DMS](https://saleson.co.in/mobile-app)
+- [Order Taking App for Salesman](https://saleson.co.in/order-taking-app)
+- [Pricing](https://saleson.co.in/pricing)
+- [Production Management Software India](https://saleson.co.in/production)
+- [Request a demo](https://saleson.co.in/request-demo)
+- [Salesman Tracking App & Software India](https://saleson.co.in/salesman-tracking)
+- [SalesOn vs Bizom, Zoho, Freshsales, Salesforce, Deltasales, Beatroute](https://saleson.co.in/saleson-vs-other-field-sales)
+- [Tally Integration Software India](https://saleson.co.in/tally-integration)
+- [Sales Target Tracking Software](https://saleson.co.in/target-meter)
+- [Van Sales Software India](https://saleson.co.in/van-sales)
+
+## Industries and business use cases
+
+- [SalesOn - ERP for agriculture industry](https://saleson.co.in/industries/agriculture)
+- [SalesOn - ERP for automotive industry](https://saleson.co.in/industries/automotive)
+- [SalesOn - ERP for cosmetic industry](https://saleson.co.in/industries/cosmetic)
+- [SalesOn - ERP for electronics industry](https://saleson.co.in/industries/electronics)
+- [SalesOn - ERP for fmcg industry](https://saleson.co.in/industries/fmcg)
+- [SalesOn - ERP for hardware industry](https://saleson.co.in/industries/hardware)
+- [SalesOn - ERP for manufacturing industry](https://saleson.co.in/industries/manufacturing)
+- [SalesOn - ERP for pharmacy industry](https://saleson.co.in/industries/pharmacy)
+- [SalesOn - ERP for publishing industry](https://saleson.co.in/industries/publishing)
+- [SalesOn - ERP for sport&fitness industry](https://saleson.co.in/industries/sport-and-fitness)
+- [SalesOn - ERP for telecommunication industry](https://saleson.co.in/industries/telecommunication)
+- [SalesOn - ERP for transport industry](https://saleson.co.in/industries/transport)
+- [Software for distributors - SalesOn](https://saleson.co.in/user/software-for-distributors)
+- [Manufacturing Management Software](https://saleson.co.in/user/software-for-manufacturers)
+- [Best Distributor Management System in India](https://saleson.co.in/user/software-for-retailers)
+
+## Comparisons and articles
+
+- [Blog page](https://saleson.co.in/blogs)
+- [How Online Marketplaces Are Disrupting Traditional Distribution Channels](https://saleson.co.in/blogs/How-Online-Marketplaces-Are-Disrupting-Traditional-Distribution-Channels)
+- [How to Optimize Your Distribution Channels for Maximum Profit](https://saleson.co.in/blogs/How-to-Optimize-Your-Distribution-Channels-for-Maximum-Profit)
+- [How Workflow Automation Enhances Team Collaboration in Sales](https://saleson.co.in/blogs/How-workflow-automation-enhances-team-collaboration-in-sales)
+- [Reducing Sales Admin Time with Automation: Tips for 2024](https://saleson.co.in/blogs/Reducing-Sales-Admin-Time-with-Automation-Tips-for-2024)
+- [The Tech Behind the Wheel: Electronics in Modern Van Sales](https://saleson.co.in/blogs/The-Tech-Behind-the-Wheel-Electronics-in-Modern-Van-Sales)
+- [The Top 5 Sales Challenges B2B Companies Face](https://saleson.co.in/blogs/The-Top-5-Sales-Challenges-B2B-Companies-Face)
+- [Top Benefits of Automatic Invoicing for B2B Businesses](https://saleson.co.in/blogs/Top-Benefits-of-Automatic-Invoicing-for-B2B-Businesses)
+- [Top Sales Strategies for Small Businesses in 2024](https://saleson.co.in/blogs/Top-Sales-Strategies-for-Small-Businesses-in-2024)
+- [Why Van Sales Are Essential for Modern B2B Supply Chains](https://saleson.co.in/blogs/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains)
+- [SalesOn - BeatRoute Alternative](https://saleson.co.in/compare/beatroute-alternative)
+- [SalesOn - Bizom Alternative](https://saleson.co.in/compare/bizom-alternative)
+- [SalesOn and Delta Sales comparison](https://saleson.co.in/compare/deltasales-alternative)
+- [SalesOn - Freshsales Alternative](https://saleson.co.in/compare/freshsales-alternative)
+- [SalesOn - Salesforce Alternative](https://saleson.co.in/compare/salesforce-alternative)
+- [SalesOn - Zoho Alternative](https://saleson.co.in/compare/zoho-alternative)
+
+## Free business tools
+
+- [Free GST, Billing, Inventory & Business Tools](https://saleson.co.in/tools)
+- [Free Delivery Challan Generator under GST](https://saleson.co.in/tools/delivery-challan-generator)
+- [Free E-Way Bill Requirement Checker](https://saleson.co.in/tools/e-way-bill-checker)
+- [Free GST Calculator Online for Indian Businesses](https://saleson.co.in/tools/gst-calculator)
+- [Free GST Invoice Generator for Indian Businesses](https://saleson.co.in/tools/gst-invoice-generator)
+- [Free HSN/SAC Code & GST Rate Finder](https://saleson.co.in/tools/hsn-sac-gst-rate-finder)
+- [Free Outstanding Payment Tracker for Businesses](https://saleson.co.in/tools/outstanding-payment-tracker)
+- [Free Payment Receipt Generator for India](https://saleson.co.in/tools/payment-receipt-generator)
+- [Free Purchase Order Generator for India](https://saleson.co.in/tools/purchase-order-generator)
+- [Free Quotation Generator for Indian Businesses](https://saleson.co.in/tools/quotation-generator)
+- [Free Stock Reorder Level Calculator](https://saleson.co.in/tools/stock-reorder-level-calculator)
+- [Free Van Loading Sheet Generator for Distributors](https://saleson.co.in/tools/van-loading-sheet-generator)
+- [Free WhatsApp Payment Reminder Generator](https://saleson.co.in/tools/whatsapp-payment-reminder-generator)
+
+## Policies
+
+- [Privacy Policy](https://saleson.co.in/privacy-policy)
+- [Cancellation & Refund Policy](https://saleson.co.in/refund)
+- [Terms of Use](https://saleson.co.in/terms)

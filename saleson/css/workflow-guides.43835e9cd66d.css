@@ -1,0 +1,12 @@
+.workflow-guide { box-sizing: border-box; max-width: 1120px; margin: 36px auto; padding: 28px 24px; border: 1px solid #dce6f3; border-radius: 16px; background: #f4f8ff; color: #17263d; }
+.workflow-guide h2 { font-size: clamp(23px, 3vw, 32px); line-height: 1.3; margin: 0 0 16px; }
+.workflow-guide h3 { font-size: 19px; line-height: 1.4; margin: 0 0 10px; }
+.workflow-guide p { line-height: 1.7; margin: 0 0 16px; }
+.workflow-guide-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 24px 0; }
+.workflow-guide nav { line-height: 2; }
+.workflow-guide-cta { display: inline-block; padding: 12px 18px; margin-top: 16px; color: #fff !important; background: #1143b6; border-radius: 8px; text-decoration: none; }
+.blog-next-step { background: #fff; }
+@media(max-width: 768px) {
+  .workflow-guide { margin: 24px 16px; padding: 24px 20px; }
+  .workflow-guide-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+}

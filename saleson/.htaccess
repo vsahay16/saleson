@@ -1,0 +1,58 @@
+# Website document root: deploy saleson/, not the distributor React app.
+Options -MultiViews -Indexes
+DirectoryIndex index.html
+DirectorySlash Off
+ErrorDocument 404 /404.html
+RewriteEngine On
+
+# Canonicalize externally requested URLs before internal file resolution.
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index(?:\.html)?(?:[?\s]) [NC]
+RewriteRule ^index(?:\.html)?$ https://saleson.co.in/ [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index(?:\.html)?(?:[?\s]) [NC]
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+RewriteRule ^(.+)/index(?:\.html)?$ https://saleson.co.in/$1 [R=301,L,NE]
+RewriteRule ^pricing/in(?:\.html)?/?$ https://saleson.co.in/pricing [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s/+[^?\s]*\.html(?:[?\s]) [NC]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.+)\.html$ https://saleson.co.in/$1 [R=301,L,NE]
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/$1 -f
+RewriteRule ^(.+)/$ https://saleson.co.in/$1 [R=301,L,NE]
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.saleson\.co\.in$ [NC]
+RewriteRule ^ https://saleson.co.in%{REQUEST_URI} [R=301,L,NE]
+
+# /404 and all unknown resources keep a real 404 status.
+RewriteRule ^$ index.html [END]
+RewriteRule ^404$ - [R=404,L]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.+)$ $1/index.html [END]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [END]
+RewriteRule ^ - [R=404,L]
+
+<IfModule mod_mime.c>
+    AddType application/javascript .js
+    AddType text/css .css
+    AddType image/webp .webp
+    AddType image/svg+xml .svg
+</IfModule>
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    # Unversioned content must be revalidated on deployment.
+    <FilesMatch "\.(html?|css|js|png|jpe?g|webp|svg|ico|woff2?|ttf)$">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+    # Only content-addressed assets are immutable.
+    <FilesMatch "\.[a-f0-9]{12}\.(css|js|png|jpe?g|webp|svg|woff2?)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json application/xml image/svg+xml
+</IfModule>

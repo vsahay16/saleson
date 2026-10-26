@@ -1,0 +1,32 @@
+{
+  "bizom": {
+    "name": "Bizom",
+    "official_source": "https://bizom.com/sales-force-automation/",
+    "reviewed": "2026-10-26"
+  },
+  "deltasales": {
+    "name": "Delta Sales App",
+    "official_source": "https://deltasalesapp.com/",
+    "reviewed": "2026-10-26"
+  },
+  "beatroute": {
+    "name": "BeatRoute",
+    "official_source": "https://beatroute.io/platform/sfa-software/",
+    "reviewed": "2026-10-26"
+  },
+  "freshsales": {
+    "name": "Freshsales",
+    "official_source": "https://www.freshworks.com/crm/sales/",
+    "reviewed": "2026-10-26"
+  },
+  "salesforce": {
+    "name": "Salesforce",
+    "official_source": "https://www.salesforce.com/ap/sales/cloud/",
+    "reviewed": "2026-10-26"
+  },
+  "zoho": {
+    "name": "Zoho CRM",
+    "official_source": "https://www.zoho.com/crm/sales-force-automation/",
+    "reviewed": "2026-10-26"
+  }
+}

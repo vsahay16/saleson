@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <!--meta-->
+    <meta name="description"
+        content="Leading Field Sales Management Platform for MSMEs | SalesOn - Sales Automation, Inventory Control & Distribution Solutions">
+
+    <meta name="keywords"
+        content="sales force fsl,fmcg field sales automation software, mobile field sales, distributor software, salesman tracking software, salesman software,payment collection software for salesman, live location tracking, on field sales, field sales management solution">
+    <meta property="og:url" content="https://saleson.co.in/growth/grow-your-business">
+    <meta property="og:title" content="SalesOn - Complete Business Automation for MSMEs with GST Compliance">
+    <meta property="og:description"
+        content="Leading Field Sales Management Platform for MSMEs | SalesOn - Sales Automation, Inventory Control & Distribution Solutions">
+    <meta property="og:image" content="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-arrow-logo-blue.png">
+    <meta property="og:image:alt" content="SalesOn logo">
+    <meta name="twitter:title" content="SalesOn - Complete Business Automation for MSMEs with GST Compliance">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description"
+        content="Leading Field Sales Management Platform for MSMEs | SalesOn - Sales Automation, Inventory Control & Distribution Solutions">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta property="og:locale" content="en_US">
+    <!--favicon icon-->
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/img/salesOn.svg" type="image/svg+xml">
+
+    <!--title-->
+    <title>SalesOn - Complete Business Automation for MSMEs with GST Compliance</title>
+
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"></noscript>
+      <link rel="preload" href="/css/min/common.min.5d8e1c1559db.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/min/common.min.5d8e1c1559db.css"></noscript>
+    <style>
+        .sticky-header {
+            padding: 20px 0;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            -webkit-box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+            box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+        }
+
+        /* line 1008, src/assets/scss/custom/_style.scss */
+        .affix {
+            top: 0;
+            left: 0;
+            margin: auto;
+            position: fixed;
+            width: 100%;
+            z-index: 9999;
+            -webkit-animation: 300ms ease-in-out fadeInDown;
+            animation: 300ms ease-in-out fadeInDown;
+            background: var(--bs-dark);
+            padding: 10px 0;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* line 1060, src/assets/scss/custom/_style.scss */
+        .main-menu li.nav-item {
+            position: relative;
+        }
+
+        /* line 1063, src/assets/scss/custom/_style.scss */
+        .dropdown-menu {
+            right: auto;
+            left: 50% !important;
+            -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+        }
+
+        /* line 1068, src/assets/scss/custom/_style.scss */
+        .main-menu li.nav-item .dropdown-menu:before {
+            content: '';
+            position: absolute;
+            top: -9px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            -webkit-transform: translate(-50%, 0) rotate(-315deg);
+            transform: translate(-50%, 0) rotate(-315deg);
+            border-radius: 3px;
+            background-color: var(--bs-white);
+            opacity: 0;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        /* line 1081, src/assets/scss/custom/_style.scss */
+        .main-menu li.nav-item:hover .dropdown-menu:before {
+            opacity: 1;
+        }
+
+        /* line 1085, src/assets/scss/custom/_style.scss */
+        .main-menu li a.nav-link {
+            padding: 0.85rem 1rem;
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+            font-family: var(--bs-font-monospace);
+        }
+
+        /* line 1092, src/assets/scss/custom/_style.scss */
+        .navbar-dark .main-menu li a.nav-link {
+            color: var(--bs-secondary-dark);
+        }
+
+        /* line 1095, src/assets/scss/custom/_style.scss */
+        .navbar-dark .action-btns a.btn-link {
+            color: var(--bs-secondary-dark);
+        }
+
+        /*navbar-light*/
+        /* line 1100, src/assets/scss/custom/_style.scss */
+        .navbar-light .main-menu li a.nav-link,
+        .navbar-light .action-btns a.btn-link,
+        .navbar-dark.sticky-header.affix .main-menu li a.nav-link,
+        .navbar-dark.sticky-header.affix .action-btns a.btn-link {
+            color: var(--body-color);
+        }
+
+        /* line 1106, src/assets/scss/custom/_style.scss */
+        .navbar-light.sticky-header.affix,
+        .navbar-dark.sticky-header.affix {
+            background: var(--bs-white);
+        }
+
+        /* line 1110, src/assets/scss/custom/_style.scss */
+        .navbar-light.sticky-header.affix .btn,
+        .navbar-dark.sticky-header.affix .btn,
+        .bg-dark .btn,
+        .coming-soon-section .btn,
+        .bg-gradient .btn,
+        .coming-soon-section .btn,
+        .navbar-dark .btn-primary {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        /* line 1119, src/assets/scss/custom/_style.scss */
+        .navbar-light .navbar-brand img.logo-white,
+        .navbar-dark .navbar-brand img.logo-color,
+        .navbar-dark.sticky-header.affix .navbar-brand img.logo-white {
+            display: none;
+        }
+
+        /* line 1124, src/assets/scss/custom/_style.scss */
+        .navbar-dark.sticky-header.affix .navbar-toggler span {
+            color: var(--body-color);
+        }
+
+        /* line 1127, src/assets/scss/custom/_style.scss */
+        .navbar-dark.sticky-header.affix .navbar-brand img.logo-color {
+            display: block;
+        }
+
+        /* line 1131, src/assets/scss/custom/_style.scss */
+        .main-menu li a.nav-link:hover,
+        .action-btns a.btn-link:hover,
+        .navbar-dark.sticky-header.affix .main-menu li a.nav-link:hover,
+        .navbar-dark.sticky-header.affix .action-btns a.btn-link:hover {
+            color: var(--bs-primary);
+        }
+
+        /* line 1183, src/assets/scss/custom/_style.scss */
+        .offcanvas-header button.close-btn {
+            background: var(--bs-danger-soft);
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            outline: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: none;
+            border-radius: 20px;
+        }
+
+        /* line 1193, src/assets/scss/custom/_style.scss */
+        .offcanvas-header button.close-btn i {
+            line-height: 29px;
+        }
+
+        /* line 1196, src/assets/scss/custom/_style.scss */
+        /* .offcanvas-body .dropdown-toggle::after {
+            content: '\f067';
+            font-family: 'Font Awesome 6 Pro';
+            font-weight: 400;
+            position: absolute;
+            right: 0;
+            border: none;
+            } */
+
+        /* line 1204, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .main-menu li a.nav-link {
+            color: var(--body-color);
+            padding: 0.5rem 1rem;
+        }
+
+        /* line 1208, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .main-menu li a.nav-link:hover {
+            color: var(--bs-primary);
+        }
+
+        /* line 1211, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .radius-right-side {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+
+        /* line 1216, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .dropdown-menu {
+            position: relative;
+        }
+
+        /* line 1219, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .dropdown-grid {
+            display: block;
+            width: auto;
+        }
+
+        /* line 1223, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .dropdown-grid-item {
+            width: 100%;
+        }
+
+        /* line 1226, src/assets/scss/custom/_style.scss */
+        .offcanvas-body .dropdown-grid-item.last-item {
+            display: none;
+        }
+
+        @media (max-width: 1199px) {
+
+            /* line 1230, src/assets/scss/custom/_style.scss */
+            .nav.main-menu {
+                display: block !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            /* line 1236, src/assets/scss/custom/_style.scss */
+            .nav.main-menu {
+                display: block;
+            }
+        }
+
+        .dropdown-toggle::after {
+            vertical-align: middle;
+        }
+
+        /* line 1253, src/assets/scss/custom/_style.scss */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--bs-light);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            z-index: 999999;
+        }
+
+        /* line 1266, src/assets/scss/custom/_style.scss */
+        .preloader-icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* line 1270, src/assets/scss/custom/_style.scss */
+        .loading-bar {
+            width: 120px;
+            height: 3px;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+            background: var(--bs-white);
+        }
+
+        /* line 1279, src/assets/scss/custom/_style.scss */
+        .loading-bar::before {
+            content: '';
+            width: 35px;
+            height: 3px;
+            background: var(--bs-primary);
+            position: absolute;
+            left: -34px;
+            -webkit-animation: bluebar 1.5s infinite ease;
+            animation: bluebar 1.5s infinite ease;
+        }
+
+        #contactus {
+
+            background: #F9F9F9;
+            padding: 25px;
+            margin: 150px 0;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)
+        }
+        #midd-ctrl{
+            
+            max-width: 1000px;
+            margin: -130px auto 0;
+            background: #f8f3e7;
+            padding: 60px 50px 60px;
+            color: #222;
+            border-radius: 32px;
+            transform: translateY(210px);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+           
+        }
+        @-webkit-keyframes bluebar {
+            50% {
+                left: 96px;
+            }
+        }
+
+        @keyframes bluebar {
+            50% {
+                left: 96px;
+            }
+        }
+
+        /* line 1294, src/assets/scss/custom/_style.scss */
+        .section-heading {
+            margin-bottom: 50px;
+        }
+
+        @media (min-width: 991px) and (max-width: 1199px) {
+
+            /* line 1298, src/assets/scss/custom/_style.scss */
+            .action-btns.me-lg-0 {
+                margin-right: 3rem !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            /* line 1303, src/assets/scss/custom/_style.scss */
+            .section-heading {
+                margin-bottom: 30px;
+            }
+        }
+
+        .hero-subscribe-form-wrap {
+            max-width: 460px;
+        }
+
+        .hero-bg-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+        .form-container {
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+
+        @media (min-width: 320px) and (max-width: 414px) {
+            .hero-subscribe-form input.btn {
+                position: relative;
+                right: 0;
+                top: 10px;
+                margin-bottom: 15px;
+                -webkit-transition: all 0.3s ease-in;
+                transition: all 0.3s ease-in;
+            }
+
+            /* line 1672, src/assets/scss/custom/_style.scss */
+            .hero-subscribe-form input.form-control {
+                padding: 0.75rem 1rem;
+            }
+        }
+
+        /*hero-3*/
+        /* line 1745, src/assets/scss/custom/_style.scss */
+        .hero-screen-wrap {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: end;
+            -ms-flex-align: end;
+            align-items: flex-end;
+            margin-right: -120px;
+        }
+
+        @media (min-width: 1480px) and (max-width: 1836px) {
+
+            /* line 1764, src/assets/scss/custom/_style.scss */
+            .hero-screen-wrap {
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 1479px) {
+
+            /* line 1776, src/assets/scss/custom/_style.scss */
+            .hero-screen-wrap {
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 767px) {
+
+            /* line 1789, src/assets/scss/custom/_style.scss */
+            .hero-screen-wrap {
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <!--google fonts-->
+     <link rel="preload" href="/css/min/bootstrap-icons.min.df82b4cfba30.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/min/bootstrap-icons.min.df82b4cfba30.css"></noscript>
+    <link rel="preload" href="/css/growth/grow-your-business.cba24225f305.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/css/growth/grow-your-business.cba24225f305.css">
+    </noscript>
+    <link rel="canonical" href="https://saleson.co.in/growth/grow-your-business">
+    <link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css">
+</head>
+
+<body>
+
+    <!--preloader start-->
+    <div id="preloader">
+        <div class="preloader-wrap">
+            <img src="/assets/img/salesOn.svg" alt="logo" class="img-fluid preloader-icon" />
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+    <!--preloader end-->
+    <!--main content wrapper start-->
+    <div class="main-wrapper">
+
+        <!--header section start-->
+       <site-header><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header>
+
+        <section class="hero-section ptb-70 bg-white border-top" id="page-intro">
+            <div class="container position-relative">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 animate-fadeInUp">
+                        <!-- Social Proof Badge -->
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <span class="badge-secondary">
+                                <i class="bi bi-star-fill mr-1"></i>
+                                Trusted by 10,000+ SMEs
+                            </span>
+                            <div class="d-flex align-items-center gap-1 text-muted">
+                                <i class="bi bi-people"></i>
+                                <span class="ms-1 small">Join 50+ growing every day</span>
+                            </div>
+                        </div>
+    
+                        <!-- Main Headline -->
+                        <div class="mb-4">
+                            <h1 class="display-4 fw-semi-bold mb-3">
+                                Grow your 
+                                <span class="gradient-text text-secondary-lp">Sales & Distribution</span>
+                                business
+                            </h1>
+                            <p class="lead fs-4 text-muted">
+                                Digitalize your SME ecosystem with real-time tracking, GST invoices, 
+                                and payment collection on the go. Boost efficiency by 40%.
+                            </p>
+                        </div>
+    
+                        <!-- Benefits Grid -->
+                        <div class="row mb-4">
+                            <div class="col-sm-6">
+                                <div class="benefit-item">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                    <span class="fw-medium">40% More Efficiency</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="bi bi-people text-primary"></i>
+                                    <span class="fw-medium">10,000+ Happy Users</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="benefit-item">
+                                    <i class="bi bi-lightning-charge text-success"></i>
+                                    <span class="fw-medium">Real-time Tracking</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="bi bi-star-fill text-yellow"></i>
+                                    <span class="fw-medium">4.9/5 Rating</span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- CTA Buttons -->
+                        <div class="d-flex flex-column flex-sm-row gap-3 mb-4">
+                            <a href="/request-demo" target="_blank"  class="btn btn-hero btn-lg">
+                                Get Free Demo Now
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                            <a target="_blank" href="https://app.saleson.co.in"  class="btn btn-outline-demo btn-lg btn-outline-primary">
+                                    <!-- <i class="bi bi-play me-2"></i> -->
+                                    Start free 7 days trial
+                                </a>
+                        </div>
+    
+                        <!-- Urgency Element -->
+                        <div class="urgency-box">
+                            <p class="mb-0 small fw-medium" style="color: #b45309;">
+                                🔥 <strong>Limited Time:</strong> Get 25% off your first annual plan + Free setup worth ₹25,000
+                            </p>
+                        </div>
+                    </div>
+    
+                    <!-- Hero Image -->
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="hero-image position-relative">
+                            <img src="/assets/img/growth/hero-image.png" 
+                                 alt="SalesOn Dashboard - Sales and Distribution Management" 
+                                 class="img-fluid">
+                            
+                            <!-- Floating Stats -->
+                            <div class="floating-stat d-none d-lg-block">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-graph-up-arrow"></i>
+                                    </div>
+                                    <div>
+                                        <div class="h4 fw-semibold text-success mb-0">30%</div>
+                                        <div class="small text-muted">Avg. Sales Upliftment</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-5 bg-gradient-subtle ptb-70">
+            <div class="container py-5">
+                <!-- Header -->
+                <div class="text-center mb-5">
+                    <span class="badge-secondary mb-3 d-inline-block">
+                        Product Features
+                    </span>
+                    <h2 class="display-5 fw-bold mb-4">
+                        Powerful features that 
+                        <span class="gradient-text">drive business growth</span>
+                    </h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 600px;">
+                        Discover how SalesOn's comprehensive suite of features can transform 
+                        your business operations and accelerate your growth.
+                    </p>
+                </div>
+    
+                <!-- Carousel -->
+                <div id="featuresCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/invoicing" target="_blank" class="text-decoration-none">
+                                        <div class="card feature-card">
+                                            <div class="feature-image-container">
+                                                <img src="/assets/img/growth/feature-invoice.png" 
+                                                    alt="Automatic Invoicing" class="feature-image w-100">
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div class="icon-wrapper bg-primary-light m-0">
+                                                        <i class="bi bi-file-text text-primary fs-4"></i>
+                                                    </div>
+                                                    <h3 class="h5 fw-semibold mb-0">Automatic Invoicing</h3>
+                                                </div>
+                                                <p class="text-muted">
+                                                    Generate GST-compliant invoices automatically with accurate pricing, discounts, and taxes. Streamline your billing process with smart automation.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/salesman-tracking" target="_blank" class="text-decoration-none">
+                                        <div class="card feature-card">
+                                            <div class="feature-image-container">
+                                                <img src="/assets/img/growth/feature-tracking.jpg" 
+                                                    alt="Live Location Tracking" class="feature-image w-100">
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div class="icon-wrapper bg-cyan-light m-0">
+                                                        <i class="bi bi-geo-alt text-secondary fs-4"></i>
+                                                    </div>
+                                                    <h3 class="h5 fw-semibold mb-0">Live Location Tracking</h3>
+                                                </div>
+                                                <p class="text-muted">
+                                                    Track your field sales team in real-time with GPS-enabled location monitoring. Optimize routes and ensure coverage across all territories.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/salesman-tracking" target="_blank" class="text-decoration-none">
+                                        <div class="card feature-card">
+                                            <div class="feature-image-container">
+                                                <img src="/assets/img/growth/feature-attendance.png" 
+                                                    alt="Attendance Management" class="feature-image w-100">
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div class="icon-wrapper bg-amber-light m-0">
+                                                        <i class="bi bi-people text-success fs-4"></i>
+                                                    </div>
+                                                    <h3 class="h5 fw-semibold mb-0">Attendance Management</h3>
+                                                </div>
+                                                <p class="text-muted">
+                                                    Monitor employee attendance with automated check-in/check-out systems. Track working hours and manage workforce efficiently.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/van-sales" target="_blank" class="text-decoration-none">
+                                        <div class="card feature-card">
+                                            <div class="feature-image-container">
+                                                <img src="/assets/img/growth/feature-vansales.jpg" 
+                                                    alt="Van Sales System" class="feature-image w-100">
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div class="icon-wrapper bg-purple-light m-0">
+                                                        <i class="bi bi-truck text-purple fs-4"></i>
+                                                    </div>
+                                                    <h3 class="h5 fw-semibold mb-0">Van Sales System</h3>
+                                                </div>
+                                                <p class="text-muted">
+                                                    Empower your mobile sales team with comprehensive van sales functionality. Take orders, manage inventory, and process payments on the go.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/distribution-management-system" target="_blank" class="text-decoration-none">
+                                        <div class="card feature-card">
+                                            <div class="feature-image-container">
+                                                <img src="/assets/img/growth/feature-distribution.png" 
+                                                    alt="Distributor Management" class="feature-image w-100">
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div class="icon-wrapper bg-orange-light m-0">
+                                                        <i class="bi bi-building text-orange fs-4"></i>
+                                                    </div>
+                                                    <h3 class="h5 fw-semibold mb-0">Distributor Management</h3>
+                                                </div>
+                                                <p class="text-muted">
+                                                    Manage your entire distributor network with centralized control. Track dealer performance, manage territories, and optimize distribution channels.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/salesman-tracking" target="_blank" class="text-decoration-none">
+                                        <div class="card feature-card">
+                                            <div class="feature-image-container">
+                                                <img src="/assets/img/growth/feature-activity.png" 
+                                                    alt="Activity Log" class="feature-image w-100">
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div class="icon-wrapper bg-pink-light m-0">
+                                                        <i class="bi bi-clipboard-check text-pink fs-4"></i>
+                                                    </div>
+                                                    <h3 class="h5 fw-semibold mb-0">Activity Log</h3>
+                                                </div>
+                                                <p class="text-muted">
+                                                    Keep comprehensive records of all business activities. Monitor user actions, track changes, and maintain complete audit trails for compliance.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6 offset-lg-2">
+                                    <a href="/target-meter" target="_blank" class="text-decoration-none">
+                                        <div class="card feature-card">
+                                            <div class="feature-image-container">
+                                                <img src="/assets/img/growth/feature-target.png" 
+                                                    alt="Target Meter" class="feature-image w-100">
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div class="icon-wrapper bg-indigo-light m-0">
+                                                        <i class="bi bi-bullseye text-indigo fs-4"></i>
+                                                    </div>
+                                                    <h3 class="h5 fw-semibold mb-0">Target Meter</h3>
+                                                </div>
+                                                <p class="text-muted">
+                                                    Set and track sales targets with visual progress indicators. Monitor team performance against goals and drive achievement with real-time insights.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="/production" target="_blank" class="text-decoration-none">
+                                        <div class="card feature-card">
+                                            <div class="feature-image-container">
+                                                <img src="/assets/img/growth/feature-manufacturing.png" 
+                                                    alt="Production Management" class="feature-image w-100">
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div class="icon-wrapper bg-indigo-light m-0">
+                                                        <i class="bi bi-gear text-teal fs-4"></i>
+                                                    </div>
+                                                    <h3 class="h5 fw-semibold mb-0">Production Management</h3>
+                                                </div>
+                                                <p class="text-muted">
+                                                    Streamline manufacturing processes with integrated production planning. Monitor inventory levels, track quality, and optimize manufacturing workflows.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#featuresCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#featuresCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+    
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#featuresCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#featuresCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#featuresCarousel" data-bs-slide-to="2"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container py-5">
+                
+                <!-- Stats Row -->
+                <div class="row g-4 mb-5">
+                    <div class="col-6 col-lg-3">
+                        <div class="text-center animate-count">
+                            <div class="display-4 stat-number mb-2">10,000+</div>
+                            <div class="text-muted fw-medium">Happy Customers</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="text-center animate-count">
+                            <div class="display-4 stat-number mb-2">40%</div>
+                            <div class="text-muted fw-medium">Efficiency Boost</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="text-center animate-count">
+                            <div class="display-4 stat-number mb-2">30%</div>
+                            <div class="text-muted fw-medium">Avg. Revenue Increase</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="text-center animate-count">
+                            <div class="display-4 stat-number mb-2">99.9%</div>
+                            <div class="text-muted fw-medium">Uptime Guarantee</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Trusted Brands Section -->
+                <div class="mb-5 d-none d-md-block">
+                    <div class="text-center mb-5">
+                        <span class="badge-secondary mb-3 d-inline-block">
+                            Trusted Partners
+                        </span>
+                        <h2 class="display-6 fw-bold mb-4">
+                            Trusted by 
+                            <span class="gradient-text">leading brands</span>
+                        </h2>
+                        <p class="text-muted mx-auto" style="max-width: 600px;">
+                            Join thousands of businesses that trust SalesOn to power their sales operations
+                        </p>
+                    </div>
+    
+                    <!-- Brands Carousel -->
+                    <div id="brandsCarousel" class="carousel slide brands-carousel" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="row g-4 justify-content-center">
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <div class="text-center">
+                                            <div class="brand-logo mx-auto bg-African-Cotton"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <div class="text-center">
+                                            <div class="brand-logo mx-auto bg-upsilon"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <div class="text-center">
+                                            <div class="brand-logo mx-auto bg-samson_international"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-8 col-lg-4">
+                                        <div class="text-center">
+                                            <div class="brand-logo mx-auto bg-lapcare"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <div class="text-center">
+                                            <div class="brand-logo mx-auto bg-universagro"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="row g-4 justify-content-center">
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <div class="text-center">
+                                            <div class="brand-logo mx-auto bg-vbond "></div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-12 col-md-8 col-lg-4 d-flex mt-5">
+                                        <div class="text-center">
+                                            <div class="brand-logo mx-auto bg-fujitec_express"></div>
+                                        </div>
+                                        <div class="text-center" style="margin-left: -45px">
+                                            <div class="brand-logo mx-auto bg-hamilton"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <div class="text-center">
+                                            <div class="brand-logo mx-auto bg-mtn"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <div class="text-center">
+                                            <div class="brand-logo mx-auto bg-gene_theraptics"></div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#brandsCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#brandsCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- Customer Success Stories -->
+                <div class="text-center mb-5">
+                    <span class="badge-secondary mb-3 d-inline-block">
+                        Customer Success Stories
+                    </span>
+                    <h2 class="display-5 fw-bold mb-4">
+                        What our customers 
+                        <span class="gradient-text">say about us</span>
+                    </h2>
+                </div>
+    
+                <div class="row g-4">
+                    <!-- Testimonial 1 -->
+                    <div class="col-lg-4">
+                        <div class="card testimonial-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex mb-3">
+                                    <i class="bi bi-star-fill star-rating me-1"></i>
+                                    <i class="bi bi-star-fill star-rating me-1"></i>
+                                    <i class="bi bi-star-fill star-rating me-1"></i>
+                                    <i class="bi bi-star-fill star-rating me-1"></i>
+                                    <i class="bi bi-star-fill star-rating"></i>
+                                </div>
+                                
+                                <i class="bi bi-quote quote-icon mb-3 d-block"></i>
+                                
+                                <p class="text-muted mb-4 fst-italic">
+                                    "SalesOn transformed our distribution business. We've seen 45% increase in efficiency and our team loves the mobile app."
+                                </p>
+                                
+                                <div class="d-flex align-items-center">
+                                    <img class="avatar me-3" src="/assets/img/narayan.jpeg" loading="lazy" alt="testimonial" title="testimonial"/>
+                                    <div>
+                                        <div class="fw-semibold">Ram Anand</div>
+                                        <div class="small text-muted">Distributor, Sharma Enterprises</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Testimonial 2 -->
+                    <div class="col-lg-4">
+                        <div class="card testimonial-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex mb-3">
+                                    <i class="bi bi-star-fill star-rating me-1"></i>
+                                    <i class="bi bi-star-fill star-rating me-1"></i>
+                                    <i class="bi bi-star-fill star-rating me-1"></i>
+                                    <i class="bi bi-star-fill star-rating me-1"></i>
+                                    <i class="bi bi-star-fill star-rating"></i>
+                                </div>
+                                
+                                <i class="bi bi-quote quote-icon mb-3 d-block"></i>
+                                
+                                <p class="text-muted mb-4 fst-italic">
+                                    "The real-time tracking and GST invoicing features saved us countless hours. ROI was visible within 2 months!"
+                                </p>
+                                
+                                <div class="d-flex align-items-center">
+                                    <img class="avatar me-3" src="/assets/img/stigor.jpeg" loading="lazy" alt="testimonial" title="testimonial"/>
+                                    <div>
+                                        <div class="fw-semibold">Ritu Kumar</div>
+                                        <div class="small text-muted">Founder, Stigor</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Testimonial 3 -->
+                    <div class="col-lg-4">
+                        <div class="card testimonial-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex mb-3">
+                                    <i class="bi bi-star-fill star-rating me-1"></i>
+                                    <i class="bi bi-star-fill star-rating me-1"></i>
+                                    <i class="bi bi-star-fill star-rating me-1"></i>
+                                    <i class="bi bi-star-fill star-rating me-1"></i>
+                                    <i class="bi bi-star-fill star-rating"></i>
+                                </div>
+                                
+                                <i class="bi bi-quote quote-icon mb-3 d-block"></i>
+                                
+                                <p class="text-muted mb-4 fst-italic">
+                                    "Best investment for our manufacturing business. The inventory management and production tracking are game-changers."
+                                </p>
+                                
+                                <div class="d-flex align-items-center">
+                                    <img class="avatar me-3" src="/assets/img/fujitec.jpeg" loading="lazy" alt="testimonial" title="testimonial"/>
+                                    <div>
+                                        <div class="fw-semibold">Amit Mahto</div>
+                                        <div class="small text-muted">CFO, Fujitec Express Lifts</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-gradient-subtle">
+            <div class="container py-5">
+                
+                <!-- Header -->
+                <div class="text-center mb-5">
+                    <span class="badge-secondary mb-3 d-inline-block">
+                        Industries We Serve
+                    </span>
+                    <h2 class="display-5 fw-bold mb-4">
+                        Empowering businesses 
+                        <span class="gradient-text">across industries</span>
+                    </h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 600px;">
+                        From FMCG to manufacturing, SalesOn adapts to your industry's unique 
+                        needs and helps streamline operations across diverse business sectors.
+                    </p>
+                </div>
+    
+                <!-- Industries Grid -->
+                <div class="row g-4 mb-5">
+                    
+                    <!-- FMCG -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="/industries/fmcg" target="_blank" class="text-decoration-none">
+                            <div class="card industry-card">
+                                <div class="card-body p-4 text-center">
+                                    <div class="icon-wrapper bg-primary-light">
+                                        <i class="bi bi-bag text-primary" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h3 class="h5 fw-semibold my-3">FMCG</h3>
+                                    <p class="text-muted small">
+                                        Fast-moving consumer goods distribution and retail management
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Cosmetics -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="/industries/cosmetic" target="_blank" class="text-decoration-none">
+                            <div class="card industry-card">
+                                <div class="card-body p-4 text-center">
+                                    <div class="icon-wrapper bg-pink-light">
+                                        <i class="bi bi-stars text-pink" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h3 class="h5 fw-semibold my-3">Cosmetics</h3>
+                                    <p class="text-muted small">
+                                        Beauty and cosmetics supply chain optimization
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Agriculture -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="/industries/agriculture" target="_blank" class="text-decoration-none">
+                            <div class="card industry-card">
+                                <div class="card-body p-4 text-center">
+                                    <div class="icon-wrapper bg-green-light">
+                                        <i class="bi bi-tree text-green" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h3 class="h5 fw-semibold my-3">Agriculture</h3>
+                                    <p class="text-muted small">
+                                        Agricultural products and farming equipment distribution
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Hardware -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="/industries/hardware" target="_blank" class="text-decoration-none">
+                            <div class="card industry-card">
+                                <div class="card-body p-4 text-center">
+                                    <div class="icon-wrapper bg-gray-light">
+                                        <i class="bi bi-tools text-gray" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h3 class="h5 fw-semibold my-3">Hardware</h3>
+                                    <p class="text-muted small">
+                                        Hardware tools and construction materials management
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Transport -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="/industries/transport" target="_blank" class="text-decoration-none">
+                            <div class="card industry-card">
+                                <div class="card-body p-4 text-center">
+                                    <div class="icon-wrapper bg-blue-light">
+                                        <i class="bi bi-truck text-blue" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h3 class="h5 fw-semibold my-3">Transport</h3>
+                                    <p class="text-muted small">
+                                        Logistics and transportation fleet management
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Electronics -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="/industries/electronics" target="_blank" class="text-decoration-none">
+                            <div class="card industry-card">
+                                <div class="card-body p-4 text-center">
+                                    <div class="icon-wrapper bg-indigo-light">
+                                        <i class="bi bi-phone text-indigo" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h3 class="h5 fw-semibold my-3">Electronics</h3>
+                                    <p class="text-muted small">
+                                        Consumer electronics and technology product distribution
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Pharmacy -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="/industries/pharmacy" target="_blank" class="text-decoration-none">
+                            <div class="card industry-card">
+                                <div class="card-body p-4 text-center">
+                                    <div class="icon-wrapper bg-red-light">
+                                        <i class="bi bi-bandaid text-red" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h3 class="h5 fw-semibold my-3">Pharmacy</h3>
+                                    <p class="text-muted small">
+                                        Pharmaceutical distribution and healthcare supply chain
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Automotive -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="/industries/automotive" target="_blank" class="text-decoration-none">
+                            <div class="card industry-card">
+                                <div class="card-body p-4 text-center">
+                                    <div class="icon-wrapper bg-orange-light">
+                                        <i class="bi bi-speedometer text-orange" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h3 class="h5 fw-semibold my-3">Automotive</h3>
+                                    <p class="text-muted small">
+                                        Automotive parts and vehicle accessories distribution
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Manufacturing -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="/industries/manufacturing" target="_blank" class="text-decoration-none">
+                            <div class="card industry-card">
+                                <div class="card-body p-4 text-center">
+                                    <div class="icon-wrapper bg-purple-light">
+                                        <i class="bi bi-building text-purple" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h3 class="h5 fw-semibold my-3">Manufacturing</h3>
+                                    <p class="text-muted small">
+                                        Industrial manufacturing and production management
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Publishing -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="/industries/publishing" target="_blank" class="text-decoration-none">
+                            <div class="card industry-card">
+                                <div class="card-body p-4 text-center">
+                                    <div class="icon-wrapper bg-amber-light">
+                                        <i class="bi bi-book text-amber" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h3 class="h5 fw-semibold my-3">Publishing</h3>
+                                    <p class="text-muted small">
+                                        Books and educational materials distribution
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Sports & Fitness -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="/industries/sport-and-fitness" target="_blank" class="text-decoration-none">
+                            <div class="card industry-card">
+                                <div class="card-body p-4 text-center">
+                                    <div class="icon-wrapper bg-emerald-light">
+                                        <i class="bi bi-trophy text-emerald" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h3 class="h5 fw-semibold my-3">Sports & Fitness</h3>
+                                    <p class="text-muted small">
+                                        Sports equipment and fitness products management
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Telecommunication -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="/industries/telecommunication" target="_blank" class="text-decoration-none">
+                            <div class="card industry-card">
+                                <div class="card-body p-4 text-center">
+                                    <div class="icon-wrapper bg-cyan-light">
+                                        <i class="bi bi-broadcast text-cyan" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h3 class="h5 fw-semibold my-3">Telecommunication</h3>
+                                    <p class="text-muted small">
+                                        Telecom equipment and services distribution
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+    
+                </div>
+    
+                <!-- Call to Action -->
+                <div class="text-center">
+                    <p class="text-muted mb-4">
+                        Don't see your industry? We customize our solution for any business model.
+                    </p>
+                    <a href="/request-demo" class="btn-gradient" target="_blank">
+                        Discuss Your Requirements
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section text-white ptb-70">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        
+                        <!-- Header Content -->
+                        <div class="text-center mb-5 animate-fade-in">
+                            <div class="offer-badge mb-4 fw-medium">
+                                <i class="bi bi-gift"></i>
+                                Limited Time Offer - 25% OFF
+                            </div>
+                            
+                            <h1 class="display-3 fw-semibold mb-4 text-white">
+                                Ready to transform your business?
+                            </h1>
+                            
+                            <p class="lead mb-5 fw-medium" style="max-width: 600px; margin: 0 auto; opacity: 0.9;">
+                                Join 10,000+ businesses already growing with SalesOn. 
+                                Get started with a free demo today.
+                            </p>
+                        </div>
+    
+                        <!-- CTA Cards -->
+                        <div class="row g-4 mb-5">
+                            
+                            <!-- Demo Card -->
+                            <div class="col-lg-6">
+                                <div class="card cta-card h-100">
+                                    <div class="card-body p-5 text-center">
+                                        <i class="bi bi-telephone text-white mb-4 fs-1 d-flex align-items-center justify-content-center"></i>
+                                        
+                                        <h3 class="fw-semibold mb-4 text-white">Book a Live Demo</h3>
+                                        
+                                        <p class="mb-4" style="opacity: 0.9;">
+                                            See SalesOn in action with a personalized demo tailored to your business needs.
+                                        </p>
+                                        
+                                        <a href="/request-demo" target="_blank" class="text-decoration-none d-block">
+                                                    <i class="bi bi-calendar3 me-2"></i>
+                                                    Schedule Free Demo
+                                                    <i class="bi bi-arrow-right ms-2 arrow-icon"></i>
+                                            </a>
+                                        <div class="feature-list text-start">
+                                            ✓ 30-minute personalized demo<br>
+                                            ✓ No credit card required<br>
+                                            ✓ Free setup worth ₹25,000
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Trial Card -->
+                            <div class="col-lg-6">
+                                <div class="card cta-card h-100">
+                                    <div class="card-body p-5 text-center">
+                                        <div class="text-white mb-4">
+                                            <i class="bi bi-arrow-right fs-3"></i>
+                                        </div>
+                                        
+                                        <h3 class="fw-semibold mb-4 text-white">Start Free Trial</h3>
+                                        
+                                        <p class="mb-4" style="opacity: 0.9;">
+                                            Try SalesOn risk-free for 7 days. No setup fees, no commitments.
+                                        </p>
+
+                                        <a href="https://app.saleson.co.in" target="_blank" class="text-decoration-none d-block">
+                                                    Start 7-Day Free Trial
+                                                    <i class="bi bi-arrow-right ms-2 arrow-icon"></i>
+                                            </a>
+                                        
+                                        <div class="feature-list text-start">
+                                            ✓ Full access to all features<br>
+                                            ✓ Cancel anytime<br>
+                                            ✓ Migration support included
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Action Buttons -->
+                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mb-5">
+                            <button class="btn btn-call">
+                                <i class="bi bi-telephone me-2"></i>
+                                Call Now: +91-8092856577
+                            </button>
+                            <a href="/pricing" target="_blank" class="d-block">
+                                    <i class="bi bi-currency-rupee me-2"></i>
+                                    Get Pricing Details
+                                </a>
+                        </div>
+    
+                        <!-- Trust Indicators -->
+                        <div class="text-center">
+                            <p class="small" style="opacity: 0.8;">
+                                🔒 Your data is safe with us • 📞 24/7 Support • 💰 Money-back guarantee
+                            </p>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <site-footer><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
+    </div>
+
+    <script src="/assets/js/vendors/jquery-3.6.0.min.ce9d07500ad9.js"></script>
+    <script src="/assets/js/vendors/bootstrap.bundle.min.7700f7deec3d.js"></script>
+    
+    
+    <script src="/assets/js/min/app.min.c3a6e62360af.js"></script>
+    <script>
+        // Initialize brands carousel
+        var brandsCarousel = new bootstrap.Carousel(document.getElementById('brandsCarousel'), {
+            interval: 3000,
+            wrap: true,
+            touch: true
+        });
+
+        // Counter animation on scroll
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 50; // Adjust speed
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                // Format number based on content
+                let displayValue = Math.floor(current);
+                if (element.dataset.suffix) {
+                    displayValue += element.dataset.suffix;
+                }
+                element.textContent = displayValue;
+            }, 20);
+        }
+
+        // Intersection Observer for counter animation
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    const text = entry.target.textContent;
+                    
+                    // Extract number and suffix
+                    if (text.includes('10,000+')) {
+                        entry.target.dataset.suffix = '+';
+                        animateCounter(entry.target, 10000);
+                    } else if (text.includes('40%')) {
+                        entry.target.dataset.suffix = '%';
+                        animateCounter(entry.target, 40);
+                    } else if (text.includes('30%')) {
+                        entry.target.dataset.suffix = '%';
+                        animateCounter(entry.target, 30);
+                    } else if (text.includes('99.9%')) {
+                        entry.target.textContent = '99.9%';
+                        // animateCounter(entry.target, 99.9);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all stat numbers
+        document.querySelectorAll('.stat-number').forEach(stat => {
+            observer.observe(stat);
+        });
+
+        // Pause carousel on hover
+        document.getElementById('brandsCarousel').addEventListener('mouseenter', function() {
+            brandsCarousel.pause();
+        });
+        
+        document.getElementById('brandsCarousel').addEventListener('mouseleave', function() {
+            brandsCarousel.cycle();
+        });
+
+        // Add touch/swipe support for brands carousel
+        let startX = 0;
+        let endX = 0;
+        
+        document.getElementById('brandsCarousel').addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+        });
+        
+        document.getElementById('brandsCarousel').addEventListener('touchend', function(e) {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            if (endX < startX - 50) {
+                brandsCarousel.next();
+            }
+            if (endX > startX + 50) {
+                brandsCarousel.prev();
+            }
+        }
+
+        // Add subtle animation to testimonial cards on scroll
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.testimonial-card').forEach(card => {
+            card.style.transform = 'translateY(20px)';
+            card.style.opacity = '0';
+            card.style.transition = 'all 0.6s ease';
+            cardObserver.observe(card);
+        });
+    </script>
+
+    <script defer src="/assets/js/site-repairs.29824dd6d35a.js"></script>
+<script defer src="/components/site-header.cd8aaee89ecb.js"></script>
+<script defer src="/components/site-footer.0ffd3829fc3f.js"></script>
+<script defer src="/components/whatsapp-float.0e773436a8ab.js"></script>
+<whatsapp-float msg="Hi%20SalesOn%2C%20I%27d%20like%20to%20know%20more%20about%20SalesOn"></whatsapp-float>
+</body>
+</html>

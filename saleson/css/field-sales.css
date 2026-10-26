@@ -1,0 +1,146 @@
+.promo-bg {
+  background-image: url(/assets/img/feature-img-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+  background-size: contain;
+}
+.radial-bg {
+  background-image: url(/assets/img/radial-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+.promo-text-wrap {
+  display: inline-block;
+  width: 75%;
+}
+
+.services {
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: inset 3px 0px 7px 1px rgb(0 0 0 / 15%);
+  /* border: 1px solid #cfcfcf; */
+}
+
+.services img {
+  height: 85px;
+  /* border: 1px solid #cfcfcf; */
+}
+
+.services ul {
+  color: #2d3f3d;
+  font-weight: 400;
+  font-size: 15px;
+  padding-left: 25px;
+  text-align: left;
+}
+
+.icon-wrap {
+  padding: 3px 10px;
+  background: #1143b6;
+  color: white;
+  border-radius: 7px;
+  float: right;
+}
+.icon-wrap i {
+  font-size: 28px;
+}
+
+.production .feature-sec .feature-img img {
+  border: 15px solid #343434;
+}
+.production .section-title h2 {
+  line-height: 20px;
+  font-weight: 700;
+}
+.production .text-section {
+  line-height: 30px;
+  color: #343434;
+}
+
+@media (min-width: 768px) {
+  .promo-content-wrap {
+    position: absolute;
+    top: 350px;
+  }
+  .services:first-child {
+    top: 200px;
+    left: 115px;
+  }
+  .services:nth-child(2) {
+    bottom: 70px;
+    left: 115px;
+  }
+  .services:nth-child(3) {
+    bottom: 190px;
+    right: 115px;
+    box-shadow: inset 3px 0px 7px 1px rgb(0 0 0 / 15%);
+    /* border-bottom-right-radius: 0;
+    border-bottom-left-radius: 65px; */
+  }
+  .services:after {
+    content: "";
+    position: absolute;
+    right: -3px;
+    bottom: -9px;
+    width: 19px;
+    height: 45px;
+    transform: rotate(38deg);
+    background-color: #f0f4f4;
+  }
+  .services:nth-child(3):after {
+    content: "";
+    position: absolute;
+    margin: -13px 230px;
+    width: 64px;
+    height: 48px;
+    transform: rotate(38deg);
+    background-color: #f0f4f4;
+  }
+
+  .web-section {
+    background-image: url(/assets/img/cool-lines.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+  }
+
+  .content-left {
+    position: relative;
+    left: 24px;
+    width: 33%;
+  }
+  .content-right {
+    position: relative;
+    right: -562px;
+    width: 33%;
+  }
+  .content-right .icon-wrap {
+    float: left;
+    margin-right: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .phone-image {
+    position: absolute;
+    top: 285px;
+    right: 432px;
+    height: 500px;
+  }
+  .van-phone-img {
+    position: absolute;
+    top: 315px;
+    right: 445px;
+    height: 430px;
+  }
+  .services {
+    width: 270px;
+    position: absolute;
+    /* border-bottom-right-radius:65px; */
+  }
+  .services-wrap {
+    text-align: left !important;
+  }
+}

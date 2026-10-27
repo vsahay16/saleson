@@ -18,11 +18,8 @@
     "javascript": "/assets/js/expense-management-page.js"
   },
   "salesman-tracking": {
-    "source": "features4/salesman-tracking.html",
     "css": "/css/salesman-tracking-page.css",
-    "javascript": "/assets/js/salesman-tracking-page.js",
-    "extracted_style_attributes": 23,
-    "extracted_action_handlers": 1
+    "javascript": "/assets/js/salesman-tracking-page.js"
   },
   "field-sales": {
     "source": "Approved refined design, 27 October 2026",

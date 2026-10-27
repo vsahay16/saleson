@@ -1,0 +1,15 @@
+{
+  "team-location.webp": {
+    "source": "/assets/img/live-location.jpg",
+    "method": "WebP conversion; source screen and map content unchanged"
+  },
+  "daily-route.webp": {
+    "source": "/assets/img/activity-log.jpg",
+    "method": "WebP conversion; source screen and map content unchanged"
+  },
+  "activity-detail-enhanced.webp": {
+    "source": "/assets/img/activity-log.jpg",
+    "method": "AI-assisted enhanced recreation of timeline panel only; original date, values and events retained; not a fresh capture"
+  },
+  "public_source_verification": "Both original JPEGs served publicly on saleson-eta.vercel.app and matched repository bytes before editing. Original assets preserved."
+}

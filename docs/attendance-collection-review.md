@@ -41,3 +41,6 @@ Enhanced images use built-in image generation to clarify public source excerpts;
 Full site checks pass after initial implementation. Desktop and 390px iframe review performed. Initial small overflow in existing cards was located and fixed; both document widths equal the 375px inner viewport. Online-only FAQ expansion and accessible image enlargement verified. Final build checks include FAQ/schema equality, title/anchor preservation and the corrected financial examples. No ranking guarantee.
 
 Standalone previews were browser checked with embedded images, no shared header/footer and working FAQ controls. Both hero images and the enhanced mobile-entry excerpt use WebP assets with in-page provenance captions. Final full npm check passed.
+
+## Shared visual family revision
+Both drafts opt into css/feature-family.css, matching the approved Salesman Tracking typography, colours, buttons, content width, cards, FAQ and final CTA. Visible main-content text, titles, H1s, canonical URLs and section anchors are unchanged from the reviewed draft. Shared source CSS is loaded only by these two pages. Browser desktop/mobile review confirms the Inter stack and document width equal to the narrow viewport. This remains an unpublished review draft.

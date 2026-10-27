@@ -2,7 +2,7 @@
 .order-taking-refined .hero-grid>div,.order-taking-refined .hub-grid>div{min-width:0}
 .order-taking-refined .ot-product-figure{margin:0;background:white;border:1px solid #d9e3ee;border-radius:12px;padding:14px;box-shadow:0 12px 30px #173b6410;min-width:0}
 .order-taking-refined .ot-image-scroll{overflow:auto;scrollbar-width:thin;border-radius:6px}
-.order-taking-refined .ot-image-scroll img{display:block;width:100%;min-width:720px;height:auto;transform:none}
+.order-taking-refined .ot-image-scroll img{display:block;width:100%;min-width:0;height:auto;transform:none}
 .order-taking-refined .ot-product-figure>img{display:block;width:100%;height:auto;transform:none}
 .order-taking-refined .ot-image-open{display:block;border:0;background:none;color:var(--brand);padding:6px 0;font:600 14px/1.6 'DM Sans',Arial,sans-serif;cursor:pointer;margin:10px 0 0}
 .order-taking-refined .ot-product-figure figcaption{font:400 14px/1.6 'DM Sans',Arial,sans-serif;color:#526478;margin-top:6px}

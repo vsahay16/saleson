@@ -1,0 +1,14 @@
+[
+  {
+    "asset": "credit-note-enhanced.webp",
+    "source": "/assets/img/credit-note.webp",
+    "type": "AI-enhanced recreation",
+    "edit_brief": "Preserve the original credit note CN-07, all four invoice rows and totals. Refine legibility and edges, without adding functionality."
+  },
+  {
+    "asset": "invoice-formats-example.webp",
+    "source": "/assets/img/bill.webp",
+    "type": "Illustration based on existing formats",
+    "edit_brief": "Use A4 and thermal layout as reference. Replace original inconsistent data and real financial details with fictional sample records; subtotal5000, exampletax900,total5900. No logos, QR codes, signatures or bank details."
+  }
+]

@@ -1,0 +1,20 @@
+/* Small, page-scoped refinements. Existing layout, typography and section order retained. */
+.order-taking-refined .hero-grid>div,.order-taking-refined .hub-grid>div{min-width:0}
+.order-taking-refined .ot-product-figure{margin:0;background:white;border:1px solid #d9e3ee;border-radius:12px;padding:14px;box-shadow:0 12px 30px #173b6410;min-width:0}
+.order-taking-refined .ot-image-scroll{overflow:auto;scrollbar-width:thin;border-radius:6px}
+.order-taking-refined .ot-image-scroll img{display:block;width:100%;min-width:0;height:auto;transform:none}
+.order-taking-refined .ot-product-figure>img{display:block;width:100%;height:auto;transform:none}
+.order-taking-refined .ot-image-open{display:block;border:0;background:none;color:var(--brand);padding:6px 0;font:600 14px/1.6 'DM Sans',Arial,sans-serif;cursor:pointer;margin:10px 0 0}
+.order-taking-refined .ot-product-figure figcaption{font:400 14px/1.6 'DM Sans',Arial,sans-serif;color:#526478;margin-top:6px}
+.order-taking-refined .ot-capability-strip{display:flex;gap:10px 18px;justify-content:center;flex-wrap:wrap;font-size:14px;color:#526478;margin-top:18px}
+.order-taking-refined .hero-sub,.order-taking-refined .hub-body{font-size:17px;line-height:1.8}
+.order-taking-refined .eng-desc,.order-taking-refined .dab-a,.order-taking-refined .chklist li,.order-taking-refined .green-note,.order-taking-refined .ind-desc,.order-taking-refined .faq-q,.order-taking-refined .faq-a p{font-size:16px;line-height:1.7}
+.order-taking-refined .eng-chip,.order-taking-refined .btn-sub,.order-taking-refined .sc-bar-title,.order-taking-refined .proof-lbl{font-size:14px;line-height:1.6}
+.order-taking-refined .csc-pname{font-size:15px;line-height:1.5}
+.order-taking-refined .csc-pinfo,.order-taking-refined .csc-stock,.order-taking-refined .inv-line,.order-taking-refined .inv-sc-status,.order-taking-refined .wa-bubble-in,.order-taking-refined .wa-bubble-out{font-size:14px;line-height:1.6}
+.order-taking-refined .csc-qty .ot-qty-mark{display:grid;place-items:center;width:22px;color:#61718a;font-weight:600;font-size:15px}
+.order-taking-refined .sc-bar-title{white-space:normal}
+.order-taking-refined .proof-val{font-size:clamp(24px,3vw,34px)}
+.order-taking-refined .hero .reveal{opacity:1;transform:none}
+@media(max-width:600px){.order-taking-refined .ot-product-figure{padding:12px}.order-taking-refined .ot-capability-strip{gap:8px 13px}.order-taking-refined .msme-grid{grid-template-columns:1fr!important}.order-taking-refined .hero-sub,.order-taking-refined .hub-body{font-size:17px}.order-taking-refined .proof-val{font-size:27px}.order-taking-refined .ot-context{max-width:100%}.order-taking-refined .sc-card{max-width:100%}}
+@media(prefers-reduced-motion:reduce){.order-taking-refined .pulse-tag,.order-taking-refined .pd{animation:none}.order-taking-refined .reveal{opacity:1;transform:none;transition:none}}

@@ -1,0 +1,38 @@
+[
+  {
+    "asset": "field-orders-activity.webp",
+    "source": "/assets/img/saleson-manager-dashboard-field-sales.webp",
+    "page": "field-sales",
+    "type": "AI-enhanced recreation",
+    "width": 2172,
+    "height": 724,
+    "bytes": 98664
+  },
+  {
+    "asset": "dms-sales-stock.webp",
+    "source": "/assets/img/dms-hero.webp",
+    "page": "distribution-management-system",
+    "type": "AI-enhanced recreation",
+    "width": 2017,
+    "height": 780,
+    "bytes": 106912
+  },
+  {
+    "asset": "production-bom.webp",
+    "source": "/assets/img/bom.jpg",
+    "page": "production",
+    "type": "AI-enhanced recreation",
+    "width": 2172,
+    "height": 724,
+    "bytes": 64256
+  },
+  {
+    "asset": "target-record.webp",
+    "source": "/assets/img/target/set-target.png",
+    "page": "target-meter",
+    "type": "AI-enhanced recreation",
+    "width": 2112,
+    "height": 744,
+    "bytes": 48296
+  }
+]

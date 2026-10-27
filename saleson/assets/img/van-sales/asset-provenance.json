@@ -1,0 +1,14 @@
+{
+  "van-stock-enhanced.webp": {
+    "source": "/assets/img/van-dashboard.webp",
+    "method": "AI-assisted enhanced recreation of selected van Items panel; hardware, other panels and summary metrics removed",
+    "preserved": "VS-0011; Completed; tabs; seven item rows and opening/replaced/closing quantities",
+    "not_a_live_capture": true
+  },
+  "customer-actions-enhanced.webp": {
+    "source": "/assets/img/van-feature-img.webp",
+    "method": "AI-assisted enhanced recreation of central customer view; hardware, map and overlapping transaction panel removed",
+    "preserved": "Mahavir Traders, 18000 dues and five source customer actions",
+    "not_a_live_capture": true
+  }
+}

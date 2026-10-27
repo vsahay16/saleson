@@ -56,5 +56,9 @@
     "javascript": "/assets/js/tally-integration-page.js",
     "extracted_style_attributes": 77,
     "extracted_action_handlers": 2
+  },
+  "van-sales": {
+    "css": "/css/van-sales-page.css",
+    "javascript": "/assets/js/van-sales-page.js"
   }
 }

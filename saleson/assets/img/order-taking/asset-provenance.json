@@ -1,0 +1,11 @@
+{
+  "catalogue-enhanced.webp": {
+    "source": "/assets/img/item-dtls.webp",
+    "method": "Previously prepared AI-assisted enhanced recreation; not a live capture; source example values retained"
+  },
+  "customer-context-enhanced.webp": {
+    "source": "/assets/img/rep-info.webp",
+    "method": "AI-assisted enhanced excerpt of the existing customer context; source example values retained"
+  },
+  "original_assets_preserved": true
+}

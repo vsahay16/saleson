@@ -1,0 +1,14 @@
+[
+  {
+    "asset": "shipments-enhanced.webp",
+    "source": "/assets/img/delivery-laptop-mobile.webp",
+    "type": "AI-enhanced recreation",
+    "edit_brief": "Focus on existing shipment numbers, party names, states and assigned user; remove hardware and dates obscured by the phone. No new features."
+  },
+  {
+    "asset": "driver-trip-enhanced.webp",
+    "source": "/assets/img/delivery.webp",
+    "type": "AI-enhanced recreation",
+    "edit_brief": "Remove phone hardware and count tiles; preserve four visible customer-stop cards, statuses, references, dates and trip action."
+  }
+]

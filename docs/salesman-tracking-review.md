@@ -56,3 +56,6 @@ The two complete screens are converted to WebP with map content unchanged. No in
 - Standalone HTML preview embeds all eleven page images and all three enlargement targets. The user approved publication and requested visible videos; the video fix is included before publication.
 
 Publication fix: show the real video players without a custom play placeholder, give both players an explicit 16:9 container, retain strict-origin referrer policy and direct YouTube fallback links.
+
+## Conservative follow-up
+Restored the original descriptive H1, trial and demo choices and a compact side-by-side hero. Retained screenshot switching, client logos, enlargement and visible videos. Added concise buyer guidance and India-specific FAQ; trial terms align with the existing pricing page. Title, canonical and URL remain unchanged. This follow-up is a review draft, not a production release.

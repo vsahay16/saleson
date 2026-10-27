@@ -1,0 +1,14 @@
+{
+  "asset": "collection-entry-enhanced.webp",
+  "source": "/assets/img/payment-collection-hero.webp",
+  "method": "AI-assisted enhanced recreation of the existing public marketing visual. Labelled in-page. Original assets retained.",
+  "not_a_fresh_live_capture": true,
+  "prompt_summary": "Faithful sharp flat excerpt of the existing public marketing image, retaining source values, with device hardware removed. No invented logo or metrics.",
+  "additional_assets": {
+    "payment-in-enhanced.webp": {
+      "source": "/assets/img/total-payment.webp",
+      "method": "AI-assisted enhanced excerpt of existing public Payment In entry and confirmation; original amount ₹3000 retained. No invoice/customer details invented.",
+      "prompt_summary": "Remove hardware and desktop, retain Payment Type Cash/Cheque/Bank, Comments, Amount ₹3000, SAVE and source Success/Continue confirmation. Crisp flat source-based panels, no new logo or metrics."
+    }
+  }
+}

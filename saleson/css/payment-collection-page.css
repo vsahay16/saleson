@@ -496,3 +496,39 @@
 .page-style-112 { display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:20px;position:relative; }
 
 .page-style-113 { font-size:11.5px;color:rgba(255,255,255,.4);margin-top:8px; }
+
+/* Focused visual and readability refinements; original page layout retained. */
+.feature-review .hero-grid>div,.feature-review .hub-grid>div{min-width:0}
+.feature-review .review-product{margin:0;background:#fff;border:1px solid #dbe4ee;border-radius:12px;padding:14px;box-shadow:0 10px 30px #15375c0c;max-width:100%}
+.feature-review .review-product img{display:block;width:100%;height:auto;max-width:100%;transform:none;border-radius:6px}
+.feature-review .review-product.review-mobile{max-width:390px;margin:auto}
+.feature-review .review-enlarge{border:0;background:none;color:#174dbe;cursor:pointer;font:600 14px/1.6 'DM Sans',Arial,sans-serif;padding:9px 0;margin-top:7px}
+.feature-review .review-product figcaption{font-size:14px;line-height:1.6;color:#526478;margin-top:6px}
+.feature-review .hero-sub,.feature-review .hub-body{font-size:17px;line-height:1.8}
+.feature-review .bullets,.feature-review .faq-a,.feature-review .faq-q,.feature-review .hiw-desc,.feature-review .lk-cd,.feature-review .ind-desc,.feature-review .tp{font-size:16px;line-height:1.7}
+.feature-review .btn-sub,.feature-review .mi-lbl,.feature-review .tb-text,.feature-review .hiw-badge{font-size:14px;line-height:1.6}
+.feature-review .review-example{padding:28px;background:#fff;border:1px solid #dbe4ee;border-radius:12px;color:#203950;min-width:0}
+.feature-review .review-example h3{font-size:23px;margin:9px 0 20px;line-height:1.4}
+.feature-review .review-example p{font-size:16px;line-height:1.7;margin:16px 0 0;color:#526478}
+.feature-review .review-example .review-kicker{font-size:14px;color:#1a56c1;margin:0}
+.feature-review .review-example table{width:100%;border-collapse:collapse;font-size:15px}
+.feature-review .review-example caption{text-align:left;font-size:14px;margin-bottom:15px;color:#526478}
+.feature-review .review-example th,.feature-review .review-example td{text-align:left;padding:14px 8px;border-bottom:1px solid #e1e7ef}
+.feature-review .review-example dl{margin:0}
+.feature-review .review-example dl>div{display:flex;justify-content:space-between;gap:15px;padding:15px 0;border-bottom:1px solid #e1e7ef;font-size:17px}
+.feature-review .review-example dd{margin:0;font-weight:600}
+.feature-review .review-followup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:30px 0}
+.feature-review .review-followup article{padding:24px;border:1px solid #dbe4ee;border-radius:10px;background:#fff}
+.feature-review .review-followup h3{font-size:21px;line-height:1.4;margin:10px 0}
+.feature-review .review-followup p{font-size:16px;line-height:1.7;color:#526478}
+.feature-review .review-followup article>span{color:#1a56c1;font-size:14px;font-weight:600}
+.feature-review .review-trust{padding:25px 0;border-block:1px solid #e1e7ef;background:#fff}
+.feature-review .review-client-wrap{max-width:1180px;margin:auto;padding:0 24px}
+.feature-review .review-trust p{text-align:center;font-size:14px;color:#526478;margin:0 0 20px}
+.feature-review .review-clients{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center}
+.feature-review .review-client-logo{display:flex;justify-content:center;align-items:center;flex:1;min-width:70px;height:36px}
+.feature-review .review-client-logo img{width:96px;height:36px;object-fit:contain}
+.feature-review .review-mtn img{width:60px}
+.feature-review .hero .reveal{opacity:1;transform:none}
+@media(max-width:600px){.feature-review .review-followup{grid-template-columns:1fr}.feature-review .review-example{padding:20px 15px}.feature-review .review-example th,.feature-review .review-example td{padding:12px 5px;font-size:14px}.feature-review .review-product{padding:11px}.feature-review .review-client-logo{flex:0 0 calc(25% - 15px);min-width:0}.feature-review .review-client-logo img{width:70px;height:30px}}
+.payment-collection-review .proof-val{font-size:clamp(24px,3vw,34px)}.payment-collection-review .page-style-023,.payment-collection-review .eco-desc{font-size:16px;line-height:1.7}@media(max-width:600px){.payment-collection-review .page-style-019{grid-template-columns:1fr}.payment-collection-review .page-style-020{min-width:0}}

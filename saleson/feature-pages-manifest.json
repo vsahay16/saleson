@@ -14,11 +14,8 @@
     "extracted_action_handlers": 1
   },
   "expense-management": {
-    "source": "features4/expense-management.html",
     "css": "/css/expense-management-page.css",
-    "javascript": "/assets/js/expense-management-page.js",
-    "extracted_style_attributes": 48,
-    "extracted_action_handlers": 1
+    "javascript": "/assets/js/expense-management-page.js"
   },
   "salesman-tracking": {
     "source": "features4/salesman-tracking.html",
@@ -56,5 +53,9 @@
     "javascript": "/assets/js/tally-integration-page.js",
     "extracted_style_attributes": 77,
     "extracted_action_handlers": 2
+  },
+  "van-sales": {
+    "css": "/css/van-sales-page.css",
+    "javascript": "/assets/js/van-sales-page.js"
   }
 }

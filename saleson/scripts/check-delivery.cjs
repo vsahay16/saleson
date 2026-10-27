@@ -1,0 +1,12 @@
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');const root=path.resolve(__dirname,'..');
+const make=(key,value)=>({dataset:{[key]:value},attrs:{},addEventListener(k,f){this[k]=f},setAttribute(k,v){this.attrs[k]=v}});
+const views=['shipments','driver'].map(v=>make('dlView',v)),panels=['shipments','driver'].map(v=>make('dlPanel',v)),outcomes=['delivered','reattempt','cancelled'].map(v=>make('dlOutcome',v)),fields={};
+const app={querySelectorAll:s=>s==='[data-dl-view]'?views:s==='[data-dl-panel]'?panels:outcomes,querySelector:id=>fields[id]??=( {textContent:''})};
+vm.runInNewContext(fs.readFileSync(path.join(root,'assets/js/delivery-management-page.js'),'utf8'),{document:{querySelectorAll:()=>[],getElementById:()=>app}});
+views[1].click();assert.equal(panels[0].hidden,true);assert.equal(panels[1].hidden,false);assert.equal(views[1].attrs['aria-pressed'],'true');views[0].click();assert.equal(panels[0].hidden,false);assert.equal(panels[1].hidden,true);
+for(const [i,label] of ['Delivered','Reattempt','Cancelled'].entries()){outcomes[i].click();assert.equal(fields['#dl-status-label'].textContent,label);assert.equal(outcomes[i].attrs['aria-pressed'],'true');assert.ok(fields['#dl-next-action'].textContent.length>20);}
+outcomes[0].click();assert.equal(outcomes[2].attrs['aria-pressed'],'false');
+const s=fs.readFileSync(path.join(root,'delivery-management.html'),'utf8');assert.ok(!s.includes('delivery-phone-crop'));assert.ok(!s.includes('delivery-desktop-view'));assert.ok(s.includes('index, follow'));assert.ok(!/noindex|72%|100%|5 minutes|4 minutes|auto-reassigned/i.test(s));assert.ok(s.includes('does not support offline use'));
+const faq=JSON.parse(s.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'].find(x=>x['@type']==='FAQPage');assert.equal(faq.mainEntity.length,10);for(const q of faq.mainEntity){assert.ok(s.includes(q.name.replaceAll('&','&amp;')));assert.ok(s.includes(q.acceptedAnswer.text.replaceAll('&','&amp;')));}
+for(const link of ['/van-sales','/invoicing','/order-taking-app','/payment-collection','/salesman-tracking','/tally-integration','/distribution-management-system','/tools/delivery-challan-generator'])assert.ok(s.includes('href="'+link+'"'));
+console.log('PASS: delivery view switching, outcome/next-step switching, FAQ/schema alignment, specialist links and indexable online-only content.');

@@ -1,0 +1,9 @@
+{
+  "method": "AI-assisted enhanced recreations prepared from the existing SalesOn screenshots; not fresh live captures",
+  "sources": {
+    "expense-mobile-enhanced.webp": "expense-mobile.webp",
+    "expense-review-enhanced.webp": "expense-approval.webp"
+  },
+  "source_archive": "SalesOn_Repository_Updated_2026-10-26.zip",
+  "source_verified": "Extracted source images match the original repository bytes. Original files preserved."
+}

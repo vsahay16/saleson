@@ -1,5 +1,5 @@
 /* expense-management — page behaviour. */
-function toggleFaq(btn){const isOpen=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');b.setAttribute('aria-expanded','false');});document.querySelectorAll('.faq-a').forEach(a=>a.classList.remove('open'));if(!isOpen){btn.classList.add('open');btn.setAttribute('aria-expanded','true');btn.nextElementSibling.classList.add('open');}}
+function toggleFaq(btn){const isOpen=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');b.setAttribute('aria-expanded','false');});document.querySelectorAll('.faq-a').forEach(a=>a.classList.remove('open'));if(!isOpen){btn.classList.add('open');btn.setAttribute('aria-expanded','true');btn.closest('.ex-faq-item').querySelector('.faq-a').classList.add('open');}}
 document.querySelectorAll('[data-page-action="action-001"]').forEach(element => {
   element.addEventListener("click", function(event) {
     const result = (function(event) { toggleFaq(this) }).call(this, event);

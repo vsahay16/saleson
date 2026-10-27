@@ -10,10 +10,15 @@ const document={getElementById:()=>app,querySelectorAll:()=>[],createElement:tag
 vm.runInNewContext(script,{document});
 views[1].click();assert.equal(panels[0].hidden,true);assert.equal(panels[1].hidden,false);assert.equal(views[1].attrs['aria-pressed'],'true');assert.ok(label.textContent.includes('route'));
 views[0].click();assert.equal(panels[0].hidden,false);assert.equal(panels[1].hidden,true);assert.equal(views[1].attrs['aria-pressed'],'false');
-assert.equal(videos[0].replacement,undefined);
-videos[0].click();assert.equal(videos[0].replacement.src,'https://www.youtube-nocookie.com/embed/i5ypxxIW7TI?autoplay=1');assert.equal(videos[0].replacement.attrs.allowfullscreen,'');
-videos[2].click();assert.equal(videos[2].replacement,undefined);
-assert.ok(!/<iframe\b/i.test(html),'video players must wait for a user click');
+const embeds=[...html.matchAll(/<iframe\b([^>]+)>/g)];
+assert.equal(embeds.length,2);
+for(const [i,id] of ['i5ypxxIW7TI','V99B-tyjqbg'].entries()) {
+ assert.ok(embeds[i][1].includes('https://www.youtube-nocookie.com/embed/'+id));
+ assert.ok(embeds[i][1].includes('loading="lazy"'));
+ assert.ok(embeds[i][1].includes('referrerpolicy="strict-origin-when-cross-origin"'));
+ assert.ok(embeds[i][1].includes('allowfullscreen'));
+ assert.ok(html.includes('https://www.youtube.com/watch?v='+id));
+}
 for(const name of ['team-location.webp','daily-route.webp','activity-detail-enhanced.webp'])assert.ok(html.includes('/assets/img/salesman-tracking/'+name));
 assert.ok(html.includes('does not support offline use'));
 assert.ok(html.includes('content="index, follow"'));assert.ok(!html.toLowerCase().includes('noindex'));
@@ -25,4 +30,4 @@ assert.equal(schema['@graph'].find(n=>n['@type']==='FAQPage').mainEntity.length,
 assert.equal((html.match(/class="faq-item"/g)||[]).length,11);
 for(const link of ['/field-sales','/order-taking-app','/attendance','/expense-management','/payment-collection','/delivery-management','/pricing'])assert.ok(html.includes('href="'+link+'"'));
 for(const term of ['getCurrentPosition','watchPosition','setInterval'])assert.ok(!script.includes(term));
-console.log('PASS: tracking screenshot switching/reset, selected state, click-only allowlisted video embeds, indexability, FAQ count and specialist links.');
+console.log('PASS: tracking screenshot switching/reset, selected state, visible lazy video embeds and direct fallbacks, indexability, FAQ count and specialist links.');

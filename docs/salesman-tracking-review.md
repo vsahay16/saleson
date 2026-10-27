@@ -33,7 +33,7 @@ Use the category’s strong distinction between current visibility and retrospec
 - Preserve /salesman-tracking, the existing title “Salesman Tracking App & Software India | SalesOn”, saleson.co.in canonical, en-IN/x-default alternates and index-follow metadata.
 - Manager-first hero: see the team now and understand the day. Original team map and daily route screen are switchable, accurately labelled screenshots rather than a live map simulation.
 - Three sections: identify the employee and location timestamp; review route/time/activity; watch the existing two product walkthroughs.
-- Preserve the original videos i5ypxxIW7TI and V99B-tyjqbg, with click-to-load privacy-enhanced YouTube embeds and direct links. No player request is made until the button is used.
+- Preserve the original videos i5ypxxIW7TI and V99B-tyjqbg, with visible, lazy-loaded privacy-enhanced YouTube players and direct links. The approved revision replaces the initial click-to-load placeholders.
 - Remove repeated pain grids, generic GPS/WhatsApp comparison, repeated workflow recaps, customer-facing “page ownership”/cannibalization language and unverified pricing/setup/trial specifics.
 - Keep device-update limitations, access setup, online-only behavior and paid-product questions in relevant FAQs. No perfect location, automatic route optimization or automatic compliance promise.
 - Tracking retains location, date-wise routes, distance, total time and recorded customer-event context. Attendance rules/payroll, expense claims, detailed order capture, receipts and confirmed-order delivery stay in dedicated modules.
@@ -50,7 +50,9 @@ The two complete screens are converted to WebP with map content unchanged. No in
 ## Validation
 
 - Full npm run check passed: shared components, local references, schemas, canonical/hreflang and fingerprint integrity, FAQs and all existing page behavior checks.
-- New tracking checks cover screenshot selection/reset, selected ARIA state, allowlisted click-only video embeds, FAQ count, specialist links and indexable online-only copy.
-- Browser desktop and 390px iframe inspected. Page width equals the narrow viewport; wide product screenshots have their own deliberate scroll areas. Both views load, image enlargement opens, the offline FAQ works and the video button creates the expected iframe.
+- New tracking checks cover screenshot selection/reset, selected ARIA state, visible allowlisted video embeds and direct fallbacks, FAQ count, specialist links and indexable online-only copy.
+- Browser desktop and 390px iframe inspected. Page width equals the narrow viewport; wide product screenshots have their own deliberate scroll areas. Both views load, image enlargement opens, the offline FAQ works and the video player opens the correct existing SalesOn walkthrough.
 - Native preview does not read GPS, create tracking records or request geolocation permission. External video playback/network availability is not guaranteed by testing iframe creation.
-- Standalone HTML preview embeds all eleven page images and all three enlargement targets. No changes published to main; user review is required before publication under the established workflow.
+- Standalone HTML preview embeds all eleven page images and all three enlargement targets. The user approved publication and requested visible videos; the video fix is included before publication.
+
+Publication fix: show the real video players without a custom play placeholder, give both players an explicit 16:9 container, retain strict-origin referrer policy and direct YouTube fallback links.

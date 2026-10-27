@@ -14,17 +14,7 @@
         ? 'Team view: employee names and the latest recorded location time.'
         : 'Day view: a selected employee’s route, distance, total time and recorded events.';
     }));
-    root.querySelectorAll('[data-st-video]').forEach(button => button.addEventListener('click', () => {
-      const video = button.dataset.stVideo;
-      if (!['V99B-tyjqbg','i5ypxxIW7TI'].includes(video)) return;
-      const frame = document.createElement('iframe');
-      frame.src = 'https://www.youtube-nocookie.com/embed/' + video + '?autoplay=1';
-      frame.title = button.dataset.stVideoTitle;
-      frame.allow = 'autoplay; encrypted-media; picture-in-picture';
-      frame.setAttribute('allowfullscreen', '');
-      frame.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
-      button.replaceWith(frame);
-    }));
+
   }
   document.querySelectorAll('[data-page-action="action-001"]').forEach(button => button.addEventListener('click', () => {
     const open = button.classList.contains('open');

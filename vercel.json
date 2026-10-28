@@ -15,6 +15,11 @@
       "source": "/pricing/in",
       "destination": "/pricing",
       "permanent": true
+    },
+    {
+      "source": "/pricing/us",
+      "destination": "/pricing",
+      "permanent": true
     }
   ],
   "headers": [

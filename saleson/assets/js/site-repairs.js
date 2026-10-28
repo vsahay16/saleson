@@ -7,7 +7,7 @@
     skip.href = '#' + main.id;
     skip.className = 'skip-link';
     skip.textContent = 'Skip to content';
-    document.body.prepend(skip);
+    if (!document.querySelector('.skip-link')) document.body.prepend(skip);
   }
   document.querySelectorAll('table').forEach(table => {
     if (!table.parentElement.classList.contains('repair-table-scroll')) {
@@ -23,16 +23,32 @@
   document.querySelectorAll('iframe:not([title])').forEach(frame => {
     frame.title = frame.src.includes('zcal') ? 'SalesOn demo booking calendar' : 'Embedded content';
   });
-  document.querySelectorAll('input,select,textarea').forEach((field,index) => {
-    if (field.type === 'hidden' || field.type === 'submit' || field.type === 'button') return;
-    if (field.labels?.length || field.hasAttribute('aria-label') || field.hasAttribute('aria-labelledby')) return;
-    // Reuse a visible label from the same form group where older markup omitted for.
-    const label = field.parentElement.querySelector('label');
-    if (label && !label.htmlFor) {
-      field.id ||= 'saleson-field-'+index;
-      label.htmlFor = field.id;
-    }
-  });
+  function labelFields() {
+    document.querySelectorAll('input,select,textarea').forEach((field,index) => {
+      if (['hidden','submit','button'].includes(field.type)) return;
+      if (field.labels?.length || field.hasAttribute('aria-label') || field.hasAttribute('aria-labelledby')) return;
+      const label = field.parentElement.querySelector('label');
+      if (label && !label.htmlFor) {
+        field.id ||= 'saleson-field-'+index;
+        label.htmlFor = field.id;
+        return;
+      }
+      const cell=field.closest('td,th'), row=cell?.parentElement, table=cell?.closest('table');
+      if (cell && table) {
+        const column=[...row.children].indexOf(cell);
+        const heading=table.querySelector('thead tr')?.children[column]?.textContent.trim();
+        const context=row.querySelector('td')?.textContent.trim();
+        const name=field.type==='checkbox' ? (cell.tagName==='TH' ? 'Select all rows' : 'Select row'+(context ? ': '+context : '')) : heading;
+        if(name) {field.setAttribute('aria-label',name);return;}
+      }
+      const names={fSearch:'Search invoices',fStatus2:'Filter by payment status',fAge:'Filter by ageing',fSalesFilter:'Filter by salesperson',fBeatFilter:'Filter by beat',fSort:'Sort invoices',fMinBal:'Minimum balance',filterSearch:'Search records',filterRisk:'Filter by stock risk',filterCategory:'Filter by category',filterSupplier:'Filter by supplier',sortBy:'Sort records',filterIssue:'Filter by loading issue',filterSort:'Sort loading records',selectAllHead:'Select all rows'};
+      const name=names[field.id] || field.placeholder?.replace(/^[^a-zA-Z]+/,'') || (field.tagName==='SELECT' ? field.options[0]?.textContent : '');
+      if(name) field.setAttribute('aria-label',name);
+    });
+  }
+  labelFields();
+  // Generated rows and saved-draft restores need the same labels as initial rows.
+  new MutationObserver(labelFields).observe(document.body,{childList:true,subtree:true});
   const faqButtons=[...document.querySelectorAll('button.faq-q,button.fqb')];
   function syncFaq() {
     faqButtons.forEach((button,index) => {
@@ -45,5 +61,4 @@
   }
   faqButtons.forEach(button=>button.addEventListener('click',()=>queueMicrotask(syncFaq)));
   syncFaq();
-  // Pricing uses one canonical INR price list for every visitor.
 })();

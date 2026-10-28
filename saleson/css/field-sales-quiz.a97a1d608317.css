@@ -1,0 +1,715 @@
+
+    :root {
+      color-scheme: light;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px)
+    }
+
+    html {
+      scroll-padding-top: env(safe-area-inset-top, 0px)
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font: 14px -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fff;
+      color: #000
+    }
+
+    img {
+      max-width: 100%
+    }
+
+    [hidden]:not([hidden=until-found i]) {
+      display: none !important
+    }
+  
+
+    /* Layout: one narrow column built for a salesman's phone. The quiz is a beat route, every question is an outlet stop. */
+    :root {
+    --brand: #1143b6;
+    --brand-dark: #0c3083;
+      --bg: #f3f5fa;
+      --surface: #ffffff;
+      --ink: #0e1a3a;
+      --muted: #55607d;
+      --line: #d6dcea;
+      --primary: #1143b6;
+      --on-primary: #ffffff;
+      --teal: #057f6d;
+      --teal-soft: #dff4f0;
+      --red: #b83232;
+      --red-soft: #fbe7e7;
+      --amber: #a86500;
+      --radius: 7px;
+      --font-display: "Bricolage Grotesque", "Hind", "Noto Sans Kannada", "Noto Sans Telugu", "Noto Sans Tamil", "Noto Sans Gujarati", system-ui, sans-serif;
+      --font-body: "Hind", "Noto Sans Kannada", "Noto Sans Telugu", "Noto Sans Tamil", "Noto Sans Gujarati", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0a1120;
+        --surface: #121c36;
+        --ink: #e8ecf8;
+        --muted: #9aa6c6;
+        --line: #27345c;
+        --primary: #7da2f7;
+        --on-primary: #0a1120;
+        --teal: #36cdb2;
+        --teal-soft: #0f3a3a;
+        --red: #f08080;
+        --red-soft: #3a1b26;
+        --amber: #f0b44c;
+        color-scheme: dark;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #0a1120;
+      --surface: #121c36;
+      --ink: #e8ecf8;
+      --muted: #9aa6c6;
+      --line: #27345c;
+      --primary: #7da2f7;
+      --on-primary: #0a1120;
+      --teal: #36cdb2;
+      --teal-soft: #0f3a3a;
+      --red: #f08080;
+      --red-soft: #3a1b26;
+      --amber: #f0b44c;
+      color-scheme: dark;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .wrap {
+      max-width: 640px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--font-display);
+      line-height: 1.12;
+      margin: 0;
+      text-wrap: balance;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+      color: inherit;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+      color: var(--primary);
+      padding-top: 12px;
+    }
+
+    .brand small {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-inline-start: 8px;
+    }
+
+    .tools {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pill {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .sel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 6px 8px;
+      min-height: 36px;
+      max-width: 150px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* intro */
+    .langs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      min-height: 40px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .chip:hover {
+      border-color: var(--primary);
+    }
+
+    .chip[aria-pressed="true"] {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--on-primary);
+    }
+
+    .startbox {
+      padding: 16px;
+      gap: 14px;
+    }
+
+    .intro h1 {
+      font-size: clamp(30px, 8vw, 42px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .intro .lead {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 52ch;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .facts li {
+      border-top: 2px solid var(--primary);
+      padding-top: 8px;
+      font-size: 14px;
+      color: var(--muted);
+      min-width: 0;
+    }
+
+    .facts b {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field input[type="text"] {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      min-height: 48px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+    }
+
+    .check input {
+      width: 20px;
+      height: 20px;
+      margin: 2px 0 0;
+      accent-color: var(--primary);
+      flex: none;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: var(--on-primary);
+      border: 0;
+      border-radius: var(--radius);
+      min-height: 48px;
+      padding: 0 22px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+
+    .btn:hover {
+      filter: brightness(1.08);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+
+    .err {
+      color: var(--red);
+      font-size: 14px;
+      min-height: 1.2em;
+    }
+
+    /* route progress */
+    .route {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .stop {
+      flex: 1 1 0;
+      min-width: 0;
+      display: flex;
+    }
+
+    .stop i {
+      display: block;
+      width: 100%;
+      height: 8px;
+      border-radius: 2px;
+      background: var(--line);
+    }
+
+    .stop.ok i {
+      background: var(--teal);
+    }
+
+    .stop.bad i {
+      background: var(--red);
+    }
+
+    .stop.now i {
+      height: 16px;
+      background: var(--primary);
+    }
+
+    /* question */
+    .qhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .q h2 {
+      font-size: clamp(21px, 5.2vw, 26px);
+      font-weight: 700;
+    }
+
+    .q h2:focus {
+      outline: none;
+    }
+
+    .timer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .timer .track {
+      flex: 1;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--line);
+      overflow: hidden;
+    }
+
+    .timer .fill {
+      height: 100%;
+      width: 100%;
+      background: var(--primary);
+    }
+
+    .timer.low .fill {
+      background: var(--amber);
+    }
+
+    .timer .secs {
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+      min-width: 3ch;
+      text-align: right;
+    }
+
+    .opts {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .opt {
+      width: 100%;
+      text-align: start;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      min-height: 52px;
+      cursor: pointer;
+    }
+
+    .opt:hover:not(:disabled) {
+      border-color: var(--primary);
+    }
+
+    .opt .key {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .opt .txt {
+      flex: 1;
+      min-width: 0;
+      padding-top: 2px;
+      overflow-wrap: anywhere;
+    }
+
+    .opt .tag {
+      flex: none;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding-top: 4px;
+    }
+
+    .opt:disabled {
+      cursor: default;
+      color: var(--ink);
+    }
+
+    .opt.right {
+      background: var(--teal-soft);
+      border-color: var(--teal);
+    }
+
+    .opt.right .key {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: var(--surface);
+    }
+
+    .opt.right .tag {
+      color: var(--teal);
+    }
+
+    .opt.wrong {
+      background: var(--red-soft);
+      border-color: var(--red);
+    }
+
+    .opt.wrong .key {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--surface);
+    }
+
+    .opt.wrong .tag {
+      color: var(--red);
+    }
+
+    .opt.dim {
+      opacity: 0.6;
+    }
+
+    .feedback {
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .feedback b {
+      font-family: var(--font-display);
+      font-size: 18px;
+    }
+
+    .feedback.good b {
+      color: var(--teal);
+    }
+
+    .feedback.miss b {
+      color: var(--red);
+    }
+
+    .feedback p {
+      color: var(--ink);
+    }
+
+    /* results */
+    .score {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .score .big {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(56px, 16vw, 84px);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .score .of {
+      font-size: 22px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .verdict {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .verdict.pass {
+      color: var(--teal);
+    }
+
+    .verdict.fail {
+      color: var(--amber);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+    }
+
+    .stat {
+      border-top: 2px solid var(--line);
+      padding-top: 8px;
+      min-width: 0;
+    }
+
+    .stat b {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat span {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .cats {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .cat {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 4px 12px;
+      align-items: center;
+    }
+
+    .cat .bar {
+      grid-column: 1 / -1;
+      height: 8px;
+      border-radius: 4px;
+      background: var(--line);
+      overflow: hidden;
+    }
+
+    .cat .bar i {
+      display: block;
+      height: 100%;
+      background: var(--primary);
+    }
+
+    .cat .n {
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+    }
+
+    .code {
+      background: var(--bg);
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      font-size: 15px;
+      overflow-wrap: anywhere;
+      user-select: all;
+    }
+
+    .row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .ok-note {
+      color: var(--teal);
+      font-weight: 600;
+      font-size: 14px;
+      min-height: 1.2em;
+    }
+
+    .review {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .review li {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .review .ans {
+      color: var(--teal);
+      font-weight: 600;
+    }
+
+    .review .you {
+      color: var(--red);
+      font-size: 14px;
+    }
+
+    .foot {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Indian scripts: no letter-spacing or forced uppercase, taller lines so matras are not clipped */
+    html:not(:lang(en)) h1,
+    html:not(:lang(en)) h2,
+    html:not(:lang(en)) h3,
+    html:not(:lang(en)) .verdict,
+    html:not(:lang(en)) .feedback b,
+    html:not(:lang(en)) .facts b,
+    html:not(:lang(en)) .stat b {
+      line-height: 1.4;
+      letter-spacing: 0;
+    }
+
+    html:not(:lang(en)) .label,
+    html:not(:lang(en)) .pill,
+    html:not(:lang(en)) .opt .tag,
+    html:not(:lang(en)) .brand small {
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    html:not(:lang(en)) .score .big {
+      line-height: 1.1;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  

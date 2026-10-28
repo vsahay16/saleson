@@ -265,7 +265,7 @@ function renderPreview() {
 
   // Logo and signature HTML
   const logoHTML = logoDataURL
-    ? `<img class="qt-logo" src="/tools/quotation-generator/${logoDataURL}" alt="Company Logo">`
+    ? `<img class="qt-logo" src="${logoDataURL}" alt="Company Logo">`
     : `<div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--accent);">${bName}</div>`;
 
   const sigImgStyle = sigDataURL ? 'display:block;' : 'display:none;';
@@ -390,7 +390,7 @@ function renderPreview() {
 
       <div class="qt-sig-row">
         <div class="qt-sig-box">
-          <img class="qt-sig-img" src="/tools/quotation-generator/${sigDataURL || ''}" alt="Signature" style="${sigImgStyle}">
+          <img class="qt-sig-img" src="${sigDataURL || 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='}" alt="Signature" style="${sigImgStyle}">
           <div class="qt-sig-line"></div>
           <div class="qt-sig-name">${sigName}</div>
           <div class="qt-sig-label">For ${bName}</div>

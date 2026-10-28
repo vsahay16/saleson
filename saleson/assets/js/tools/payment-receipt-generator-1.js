@@ -267,10 +267,10 @@ function renderPreview() {
 
   // Logo / Sig
   const logoHTML = logoDataURL
-    ? `<img class="rcp-logo" src="/tools/payment-receipt-generator/${logoDataURL}" alt="Logo">`
+    ? `<img class="rcp-logo" src="${logoDataURL}" alt="Logo">`
     : `<div style="font-family:'DM Serif Display',serif;font-size:17px;color:var(--accent);">${bizName}</div>`;
   const sigImgStyle = sigDataURL ? 'display:block;' : 'display:none;';
-  const sigSrc = sigDataURL || '';
+  const sigSrc = sigDataURL || 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
 
   // Payment details info items
   let payInfoItems = `
@@ -432,7 +432,7 @@ function renderPreview() {
       <!-- Signature -->
       <div class="rcp-sig-row">
         <div class="rcp-sig-box">
-          <img class="rcp-sig-img" src="/tools/payment-receipt-generator/${sigSrc}" alt="Signature" style="${sigImgStyle}">
+          <img class="rcp-sig-img" src="${sigSrc}" alt="Signature" style="${sigImgStyle}">
           <div class="rcp-sig-line"></div>
           <div class="rcp-sig-name">${sigName}</div>
           <div class="rcp-sig-label">For ${bizName}</div>

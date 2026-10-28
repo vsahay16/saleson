@@ -697,7 +697,7 @@ function buildPrintArea(rows) {
   document.getElementById('printArea').innerHTML = `
     <div class="print-header">
       <div>
-        ${logoDataURL?`<img src="/tools/outstanding-payment-tracker/${logoDataURL}" alt="Business logo" style="max-height:48px;max-width:120px;object-fit:contain;margin-bottom:6px;display:block;">`:``}
+        ${logoDataURL?`<img src="${logoDataURL}" alt="Business logo" style="max-height:48px;max-width:120px;object-fit:contain;margin-bottom:6px;display:block;">`:``}
         <div class="print-biz-name">${biz}</div>
         <div class="print-biz-detail">${addr?addr+'&nbsp;|&nbsp;':''} ${gstin?'GSTIN: '+gstin+'&nbsp;|&nbsp;':''} ${phone}</div>
       </div>

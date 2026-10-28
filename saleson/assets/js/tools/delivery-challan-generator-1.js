@@ -283,10 +283,10 @@ function buildChallanHTML(copyLabelOverride) {
   const sigName = v('signatoryName') || 'Authorized Signatory';
 
   const logoHTML = logoDataURL
-    ? '<img class="dc-logo" src="/tools/delivery-challan-generator/' + logoDataURL + '" alt="Company Logo">'
+    ? '<img class="dc-logo" src="' + logoDataURL + '" alt="Company Logo">'
     : '<div style="font-family:\'DM Serif Display\',serif;font-size:19px;color:var(--accent);">' + escapeHTML(bName) + '</div>';
 
-  const sigImgHTML = '<img class="dc-sig-img" src="/tools/delivery-challan-generator/' + (sigDataURL || '') + '" alt="Signature" style="' + (sigDataURL ? 'display:block;' : 'display:none;') + '">';
+  const sigImgHTML = '<img class="dc-sig-img" src="' + (sigDataURL || 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=') + '" alt="Signature" style="' + (sigDataURL ? 'display:block;' : 'display:none;') + '">';
 
   const itemsTableHTML = buildItemsTableHTML(items, showValueCols, showGSTCols);
 

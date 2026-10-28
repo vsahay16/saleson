@@ -25,3 +25,10 @@ The source images `assets/img/item-dtls.webp` and `rep-info.webp` were verified 
 
 ## Validation
 Full npm check passes, including title/H1/anchor conservation, local references, schema, shared shell, indexability and example arithmetic. Desktop and 390px iframe inspected in browser; document width equals viewport width. FAQ open state verified. Screenshot enlargement and the standalone preview were verified in-browser. No ranking guarantee; monitor page-level GSC after a separately approved release. Vercel is separate from saleson.co.in, whose canonical hosting also needs the approved version deployed.
+
+## Visual family and repetition follow-up — 28 October 2026
+Based on production main 502c351. Removed the Quick Answers section whose first three answers duplicated the retained FAQ, the repeated capability proof strip, stacked hero badges and pulse message, the repeated trust strip and screenshot capability chips. No core catalogue, pricing/scheme, confirmation or customer-context section was removed. Industry content, plan information and all seven FAQs remain. The general approved client-logo band replaces the repeated business-count treatment.
+
+Order Taking opts into the same existing feature-family.css as Attendance and Collection, with page-scoped adapters in order-taking-refinement.css. Typography, colours, buttons, cards, FAQ and final CTA follow the approved Tracking visual style; the two-column hero and existing product illustrations remain. The shared CSS source and all other feature pages are unchanged.
+
+Exact title, H1 text/markup, meta description, canonical URL and section-anchor sequence are conserved. Full npm check passes, including sample arithmetic and index/follow metadata. Updated standalone preview embeds all product images and logos. Final browser visual verification remains unavailable following the earlier browser URL-policy block; do not claim that this last styling pass has been visually certified. Review draft only; not published.

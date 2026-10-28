@@ -5,6 +5,15 @@ class SiteFooter extends HTMLElement {
     }
   
     connectedCallback() {
+    // The shared shell must not depend on a page loading its font.
+    if (document.head && !document.getElementById('saleson-shell-font')) {
+      const font = document.createElement('link');
+      font.id = 'saleson-shell-font';
+      font.rel = 'stylesheet';
+      font.href = 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap';
+      document.head.appendChild(font);
+    }
+
       const year = new Date().getFullYear();
       let path=""
       const source = this.getAttribute("source");
@@ -20,6 +29,16 @@ class SiteFooter extends HTMLElement {
           *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   
           :host {
+          font-family: "DM Sans", sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          font-style: normal;
+          line-height: 1.4;
+          letter-spacing: normal;
+          word-spacing: normal;
+          text-align: left;
+          text-transform: none;
+
             display: block;
             --f-bg:        #ffffff;
             --f-bg2:       #f8f9fa;
@@ -30,7 +49,7 @@ class SiteFooter extends HTMLElement {
             --f-link-h:    #e8501a;
             --f-tag-bg:    #fff4f0;
             --f-tag-text:  #c93f10;
-            font-family:  "DM Sans", sans-serif;;
+            font-family:  "DM Sans", sans-serif;
           }
 
           /* App badges row inside CTA */

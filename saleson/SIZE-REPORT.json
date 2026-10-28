@@ -1,0 +1,97 @@
+{
+  "original_html_bytes": 27178160,
+  "original_gzip_bytes": 20313101,
+  "optimized_html_bytes": 24010,
+  "optimized_html_gzip_bytes": 6242,
+  "media_occurrences": 22,
+  "unique_media": 17,
+  "assets": [
+    {
+      "path": "assets/homepage/media-2e0000037710.webp",
+      "bytes": 9928,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-eb69832f7ddb.webp",
+      "bytes": 6788,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-a296407e01d0.webp",
+      "bytes": 3330,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-687cecfbcf6f.webp",
+      "bytes": 3670,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-044de4da6caa.webp",
+      "bytes": 3050,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-f34196d34648.webp",
+      "bytes": 5166,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-c3bb1d5814c2.webp",
+      "bytes": 3048,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-abba76d60f4e.webp",
+      "bytes": 5620,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-c0b44c89b8c7.webp",
+      "bytes": 175034,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-e572f326c1f3.webp",
+      "bytes": 56678,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-9ec1fc5ff171.webp",
+      "bytes": 152490,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-b792f40a0795.webp",
+      "bytes": 67516,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-71425aa4aed1.webp",
+      "bytes": 68074,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-c8db9e30dce6.webp",
+      "bytes": 31546,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-eeeb1400a851.mp4",
+      "bytes": 4332144,
+      "type": "video/mp4"
+    },
+    {
+      "path": "assets/homepage/media-01ad95b7d464.webp",
+      "bytes": 114772,
+      "type": "image/webp"
+    },
+    {
+      "path": "assets/homepage/media-be74185a087e.mp4",
+      "bytes": 14740724,
+      "type": "video/mp4"
+    }
+  ],
+  "css_bytes": 34295,
+  "js_bytes": 54431
+}

@@ -1,0 +1,5 @@
+SalesOn homepage: media separated from HTML
+
+Upload index.html AND the assets/homepage folder together to the website root. Merge the folder into existing assets; do not delete other website files. Keep your existing /assets/img/salesOn-logo.webp; this preview already expects that file. This package changes only delivery of media/CSS/JS, not wording or design. Preview-domain navigation links are preserved; change saleson-eta.vercel.app links to relative website paths before production. Existing video click handlers attach the video URL only on click; preload remains none.
+
+The ZIP remains large because it contains both full videos. Visitors no longer download those videos inside the HTML. Video content was preserved without lossy recompression. All images retain original dimensions/quality. Duplicate embedded images now share a URL and can be cached. Full browser/mobile verification and live network measurements are still required before publishing.

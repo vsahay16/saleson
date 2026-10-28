@@ -1,0 +1,127 @@
+[
+  {
+    "command": "node scripts/check-pricing.cjs",
+    "exit": 0,
+    "output": "PASS: 2 inline scripts compile; 64 pricing cases, two-seat minimum, billing toggle synchronization, exact annual payments, Enterprise-only van sales, FAQ/schema and regional consolidation.\n"
+  },
+  {
+    "command": "python3 scripts/check-feature-pages.py",
+    "exit": 0,
+    "output": "PASS: 10 feature pages use one shared header/footer, separate CSS/JS, accessible image markup and no inline CSS/events/executable JS.\n"
+  },
+  {
+    "command": "node scripts/check-feature-behaviour.cjs",
+    "exit": 0,
+    "output": "PASS: 10 extracted FAQ bindings (open, switch, close), Tally technical toggle, and image dialog open/zoom/close/focus behaviour. Browser layout remains unverified.\n"
+  },
+  {
+    "command": "python3 scripts/check-completion.py",
+    "exit": 0,
+    "output": "PASS: all 77 pages share header/footer; industry/audience/blog/comparison additions and first-paint pricing verified.\n"
+  },
+  {
+    "command": "node scripts/check-tools-core.cjs",
+    "exit": 0,
+    "output": "PASS: decimal/paise boundaries, currency words in 6 tools, and handoff selection, draft preservation, malformed/stale/future data and blocked storage.\n"
+  },
+  {
+    "command": "node scripts/check-demo-role.cjs",
+    "exit": 0,
+    "output": "PASS: demo role restoration, persistence, invalid selection and blocked session storage. Scheduler submission is not inferred.\n"
+  },
+  {
+    "command": "node scripts/check-planning-and-totals.cjs",
+    "exit": 0,
+    "output": "PASS: reorder/MOQ/pack/zero/negative-stock scenarios, local-midnight ageing, partial/paid balances, invoice totals and quotation advance rounding. Tax classifications and legal rules are not certified.\n"
+  },
+  {
+    "command": "python3 scripts/check-alternates.py",
+    "exit": 0,
+    "output": "PASS: 64 declared hreflang links use canonical indexable targets, valid code syntax, consistent mappings and reciprocal regional links. Google-selected canonicals require GSC.\n"
+  },
+  {
+    "command": "node scripts/check-navigation.cjs",
+    "exit": 0,
+    "output": "PASS: shared header/footer pricing links use the single pricing page regardless of saved region and work with blocked storage.\n"
+  },
+  {
+    "command": "node scripts/check-production.cjs",
+    "exit": 0,
+    "output": "PASS: production tabs, keyboard navigation, illustrative costing arithmetic, online-only copy and isolated responsive CSS.\n"
+  },
+  {
+    "command": "node scripts/check-target-meter.cjs",
+    "exit": 0,
+    "output": "PASS: target territory totals, over-target handling, ARIA progress, incentive boundaries and indexable online-only page.\n"
+  },
+  {
+    "command": "node scripts/check-invoicing.cjs",
+    "exit": 0,
+    "output": "PASS: invoicing format switches, sample totals, FAQ/schema alignment, specialist links and indexable online-only copy.\n"
+  },
+  {
+    "command": "node scripts/check-delivery.cjs",
+    "exit": 0,
+    "output": "PASS: delivery view switching, outcome/next-step switching, FAQ/schema alignment, specialist links and indexable online-only content.\n"
+  },
+  {
+    "command": "node scripts/check-van-sales.cjs",
+    "exit": 0,
+    "output": "PASS: Van Sales count matching, shortage/surplus, invalid inputs, reset, FAQ/schema, scope links and indexable online-only content.\n"
+  },
+  {
+    "command": "node scripts/check-expense.cjs",
+    "exit": 0,
+    "output": "PASS: expense sample claim switching, exception reset, selected state, totals, FAQ/schema alignment and indexable online-only copy.\n"
+  },
+  {
+    "command": "node scripts/check-salesman-tracking.cjs",
+    "exit": 0,
+    "output": "PASS: tracking screenshot switching/reset, selected state, visible lazy video embeds and direct fallbacks, indexability, FAQ count and specialist links.\n"
+  },
+  {
+    "command": "node scripts/check-order-taking.cjs",
+    "exit": 0,
+    "output": "PASS: Order Taking title/H1, original anchor sequence, shared shell, FAQ/schema, online-only/free-trial clarity and consistent example arithmetic.\n"
+  },
+  {
+    "command": "node scripts/check-attendance-collection.cjs",
+    "exit": 0,
+    "output": "PASS: Attendance/Collection preserved titles and focused section anchors, FAQ/schema alignment, indexability, screenshot enlargement and financial example consistency.\n"
+  },
+  {
+    "command": "python3 scripts/check-demo-page.py",
+    "exit": 0,
+    "output": "PASS: Demo title/canonical/indexing, booking destination, direct eager calendar iframe, fallback, unique IDs and visible FAQ/schema alignment.\n"
+  },
+  {
+    "command": "python3 scripts/check-policy-consistency.py",
+    "exit": 0,
+    "output": "PASS: minimum 2 users in visible copy and matched FAQ schemas; website privacy coverage and both USD redirects.\n"
+  },
+  {
+    "command": "python3 scripts/check-shared-shell.py",
+    "exit": 0,
+    "output": "PASS: 77 pages use one shared header/footer and current fingerprints; no visible breadcrumb rows or collection second navigation bar.\n"
+  },
+  {
+    "command": "node scripts/check-regional-pricing.cjs",
+    "exit": 0,
+    "output": "PASS: both hosting roots, all six higher-price countries, India/rest/unknown routing, exact doubling, two-month annual savings, no-store fetch and network/HTTP/JSON/timeout fallbacks.\n"
+  },
+  {
+    "command": "python3 scripts/check-content-structure.py",
+    "exit": 0,
+    "output": "PASS: 77 pages have valid internal fragments; 12 distinct industry workflows, manufacturer scope/URLs, supported buyer detail and booking fallback verified.\n"
+  },
+  {
+    "command": "python3 scripts/check-comparisons.py",
+    "exit": 0,
+    "output": "PASS: 6 comparison pages: official source domains, citation targets, FAQ/schema matching, shared INR totals, product distinctions and maximum five-word overlap 18.8%.\n"
+  },
+  {
+    "command": "python3 scripts/check-page-release.py",
+    "exit": 0,
+    "output": "PASS: 24 revised pages use the shared design and dimensioned lightweight images.\nPASS: shared WhatsApp buttons have a message and Tally module links do not point to Home.\n"
+  }
+]

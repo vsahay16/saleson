@@ -1,0 +1,18 @@
+/* Shared article layout: a single title, readable measure and content-led height. */
+.article-page { font-family: 'DM Sans', Arial, sans-serif; }
+.article-page h1, .article-page h2, .article-page h3 { font-family: inherit; }
+.article-page #page-intro { height: auto; min-height: 0; padding: 56px 0 36px; }
+.article-page #page-intro .row > div { width: 100%; max-width: 900px; }
+.article-page #page-intro h1 { font-size: clamp(30px,4vw,46px); line-height: 1.2; letter-spacing: -.7px; margin: 0; }
+.article-page #page-intro .hero-subscribe-form-wrap { display: none !important; }
+.article-page .hero-screen-wrap img { display: block; width: 100%; height: auto; max-height: 440px; object-fit: contain; margin: auto; }
+.article-page .blog-section { padding: 36px 0 64px; font-size: 18px; line-height: 1.8; color: #183249; }
+.article-page .blog-section .footer-social-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+@media (max-width:767px) {
+ .article-page #page-intro { padding: 32px 0 24px; }
+ .article-page .blog-section { padding: 28px 0 44px; }
+ .article-page .blog-section .row > .col-md-2.text-center { text-align: left !important; margin-bottom: 20px; }
+ .article-page .blog-section .footer-social-list { justify-content: flex-start; margin-top: 12px !important; }
+}
+
+.article-page .article-deck { max-width:760px; margin:16px auto 0; font-size:20px; line-height:1.5; color:#52677a; }

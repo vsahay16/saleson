@@ -26,7 +26,7 @@ def walk(value):
         for child in value: yield from walk(child)
 
 schemas = {}
-for page in ROOT.rglob('*.html'):
+for page in (p for p in ROOT.rglob('*.html') if 'node_modules' not in p.parts):
     source = page.read_text()
     assert not re.search(r'no\s+(?:setup fee or\s+)?minimum\s+user(?:s| requirement)?', clean(source), re.I), page
     objects = []

@@ -334,6 +334,7 @@ const footerYear = $('footerYear');
 // 4. STATE
 // ───────────────────────────────────────────────────────────────
 let currentResults = [];
+let visibleResults = 8;
 let selectedRecord = null;
 let toastTimer     = null;
 
@@ -351,6 +352,7 @@ function init() {
 // 6. SEARCH & FILTER
 // ───────────────────────────────────────────────────────────────
 function runSearch() {
+  visibleResults=8;
   const nameTerm = searchName.value.trim().toLowerCase();
   const codeTerm = searchCode.value.trim().toLowerCase();
   const cat      = filterCat.value;
@@ -401,6 +403,7 @@ function resetAll() {
 // ───────────────────────────────────────────────────────────────
 function renderResults(results, isSearch = true) {
   resultsGrid.innerHTML = '';
+  document.getElementById('more-heading-results')?.remove();
 
   if (isSearch) {
     resultsHead.textContent = 'Search Results';
@@ -419,7 +422,7 @@ function renderResults(results, isSearch = true) {
   noResults.style.display = 'none';
   const frag = document.createDocumentFragment();
 
-  results.forEach(r => {
+  results.slice(0,visibleResults).forEach(r => {
     const card = document.createElement('div');
     card.className = 'result-card';
     if (selectedRecord && selectedRecord.code === r.code && selectedRecord.type === r.type) {
@@ -443,7 +446,7 @@ function renderResults(results, isSearch = true) {
           Verify
         </span>
       </div>
-      <div class="rc-notes">${r.notes}</div>
+
       <div class="rc-actions">
         <button type="button" data-action="copy-code" aria-label="Copy code ${r.code}">Copy Code</button>
         <button type="button" data-action="use-invoice" class="primary-action">Use in Invoice</button>
@@ -456,6 +459,7 @@ function renderResults(results, isSearch = true) {
       selectRecord(r);
     });
     card.addEventListener('keydown', e => {
+      if(e.target.closest('[data-action]'))return;
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectRecord(r); }
     });
 
@@ -477,6 +481,11 @@ function renderResults(results, isSearch = true) {
   });
 
   resultsGrid.appendChild(frag);
+  if(results.length>visibleResults){
+    const more=document.createElement('button');more.type='button';more.id='more-heading-results';more.className='more-heading-results';more.textContent='Show more headings ('+(results.length-visibleResults)+' remaining)';
+    more.addEventListener('click',()=>{visibleResults+=8;renderResults(results,isSearch);resultsGrid.querySelectorAll('.result-card')[Math.max(0,visibleResults-8)]?.focus();});
+    resultsGrid.after(more);
+  }
 }
 
 // ───────────────────────────────────────────────────────────────
@@ -540,20 +549,8 @@ function buildInvoiceLine(r) { const rate = confirmedRate(); return `${r.type} $
 // 9. COPY HELPERS
 // ───────────────────────────────────────────────────────────────
 function copyText(text, message) {
-  if (!text) { showToast('⚠ No item selected. Please select a code first.'); return; }
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(() => showToast('✓ ' + (message || 'Copied!')));
-  } else {
-    // Fallback for older browsers
-    const el = document.createElement('textarea');
-    el.value = text;
-    el.style.cssText = 'position:fixed;top:-999px;left:-999px;opacity:0;';
-    document.body.appendChild(el);
-    el.select();
-    try { document.execCommand('copy'); showToast('✓ ' + (message || 'Copied!')); }
-    catch { showToast('⚠ Could not copy. Please copy manually.'); }
-    document.body.removeChild(el);
-  }
+  if (!text) { showToast('Select or generate a message first.'); return; }
+  SalesOnToolSafety.copy(text).then(ok => showToast(ok ? (message || 'Copied.') : 'Copy failed. Select and copy the text manually.'));
 }
 
 // ───────────────────────────────────────────────────────────────
@@ -603,7 +600,7 @@ function handoffTo(target, record) {
     gst_rate  : confirmedRate()
   });
   const url = (target === 'invoice' ? INVOICE_URL : QUOTATION_URL) + '?' + params.toString();
-  showToast(`✓ Saved to ${target === 'invoice' ? 'GST Invoice' : 'Quotation'} Generator. Opening…`);
+  showToast(`Opening ${target === 'invoice' ? 'GST Invoice' : 'Quotation'} with your selected code and rate…`);
   setTimeout(() => { window.location.href = url; }, 900);
 }
 
@@ -611,20 +608,20 @@ function handoffTo(target, record) {
 // 11. RECENT SEARCHES (localStorage)
 // ───────────────────────────────────────────────────────────────
 function getRecent() {
-  try {
-    const current = JSON.parse(SalesOnStorage.getItem(LS_RECENT) || '[]');
-    if (Array.isArray(current) && current.length) return current;
-    const legacy = JSON.parse(SalesOnStorage.getItem(LS_RECENT_OLD) || '[]');
-    if (Array.isArray(legacy) && legacy.length) {
-      SalesOnStorage.setItem(LS_RECENT, JSON.stringify(legacy.slice(0, MAX_RECENT)));
-      return legacy.slice(0, MAX_RECENT);
-    }
-    return [];
-  } catch { return []; }
+  for (const key of [LS_RECENT, LS_RECENT_OLD]) {
+    try {
+      const value = JSON.parse(SalesOnStorage.getItem(key) || '[]');
+      if (Array.isArray(value)) {
+        const terms = value.filter(t => typeof t === 'string' && t.trim() && t.length <= 120).slice(0, MAX_RECENT);
+        if (terms.length) return terms;
+      }
+    } catch (_) {}
+  }
+  return [];
 }
 
 function saveRecent(term) {
-  const t = term.trim().toLowerCase();
+  const t = String(term || '').trim().toLowerCase().slice(0,120);
   if (!t) return;
   let arr = getRecent().filter(x => x !== t);
   arr.unshift(t);
@@ -640,18 +637,12 @@ function renderRecentChips() {
     recentChips.innerHTML = '<span class="recent-empty">Your recent searches will appear here.</span>';
     return;
   }
-  recentChips.innerHTML = arr.map(t =>
-    `<button class="recent-chip" type="button" data-term="${encodeURIComponent(t)}">${t}</button>`
-  ).join('');
-
-  recentChips.querySelectorAll('.recent-chip').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const term = decodeURIComponent(btn.dataset.term);
-      searchName.value = term;
-      searchCode.value = '';
-      runSearch();
-      searchName.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
+  recentChips.replaceChildren();
+  arr.forEach(term => {
+    const button = document.createElement('button');
+    button.type = 'button'; button.className = 'recent-chip'; button.textContent = term;
+    button.addEventListener('click', () => { searchName.value = term; searchCode.value = ''; runSearch(); searchName.focus(); });
+    recentChips.appendChild(button);
   });
 }
 
@@ -660,7 +651,7 @@ function renderRecentChips() {
 // ───────────────────────────────────────────────────────────────
 function showToast(msg, duration = 3000) {
   if (toastTimer) clearTimeout(toastTimer);
-  toast.innerHTML = msg;
+  toast.textContent = msg;
   toast.classList.add('show');
   toastTimer = setTimeout(() => toast.classList.remove('show'), duration);
 }

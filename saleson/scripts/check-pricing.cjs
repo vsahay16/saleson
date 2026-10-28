@@ -1,6 +1,6 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
 const root=path.resolve(__dirname,'..');let scripts=0,cases=0;
-function files(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?files(path.join(dir,e.name)):[path.join(dir,e.name)]);}
+function files(dir){return fs.readdirSync(dir,{withFileTypes:true}).filter(e=>e.name!=='node_modules').flatMap(e=>e.isDirectory()?files(path.join(dir,e.name)):[path.join(dir,e.name)]);}
 for(const file of files(root).filter(f=>f.endsWith('.html')))for(const m of fs.readFileSync(file,'utf8').matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)){if(/\bsrc\s*=|application\/ld\+json/.test(m[1]))continue;new vm.Script(m[2],{filename:file});scripts++;}
 const elements=Object.fromEntries(['calc-users','calc-plan','calc-cycle','res-monthly','res-annual','res-save','res-payment','res-payment-label','res-annual-label','res-payment-note','calc-note','seat-note'].map(id=>[id,{value:'',listeners:{},addEventListener(k,f){this.listeners[k]=f;}}]));
 elements['calc-users'].value='10';elements['calc-plan'].value='250';elements['calc-cycle'].value='annual';

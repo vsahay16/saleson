@@ -12,7 +12,7 @@ class Metadata(HTMLParser):
   if t=='meta' and a.get('name')=='robots' and 'noindex' in a.get('content',''):self.noindex=True
 def normalize(url):return url if urlsplit(url).path else url+'/'
 pages={}
-for p in R.rglob('*.html'):
+for p in (p for p in R.rglob('*.html') if 'node_modules' not in p.parts):
  if p.relative_to(R).as_posix()=='pricing/in.html':continue
  data=Metadata();data.feed(p.read_text());pages[data.canonical]=data
 count=0

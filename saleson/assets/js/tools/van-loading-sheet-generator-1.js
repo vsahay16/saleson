@@ -318,7 +318,7 @@ function updateCategoryFilter() {
   const cats = [...new Set(skuList.map(s => s.cat).filter(Boolean))];
   const sel = document.getElementById('filterCategory');
   const current = sel.value;
-  sel.innerHTML = '<option value="">All Categories</option>' + cats.map(c => `<option value="${c}"${c===current?' selected':''}>${c}</option>`).join('');
+  sel.innerHTML = '<option value="">All Categories</option>' + cats.map(c => `<option value="${escHtml(c)}"${c===current?' selected':''}>${escHtml(c)}</option>`).join('');
 }
 
 /* ============================
@@ -547,7 +547,7 @@ function exportCSV() {
   a.download = `Van-Loading-Sheet-${getDate()}.csv`;
   if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click();
   URL.revokeObjectURL(url);
-  showToast('CSV exported!');
+  showToast('CSV download requested. Check your browser downloads.');
   // Score: +10 for exporting
   updateLeadScore(10);
 }
@@ -783,14 +783,14 @@ function saveSheet() {
   const recent = JSON.parse(SalesOnStorage.getItem('saleson_van_loading_recent_sheets') || '[]');
   recent.unshift({ savedAt: data.savedAt, bizName: data.biz.name, vanNumber: data.van.vanNumber, date: data.biz.date });
   SalesOnStorage.setItem('saleson_van_loading_recent_sheets', JSON.stringify(recent.slice(0, 5)));
-  showToast('Sheet saved to browser storage!');
+  showToast(SalesOnStorage.persistent ? 'Sheet saved to browser storage!' : 'Not saved to browser storage. Keep this tab open or export your work.');
 }
 
 function loadSheet() {
   const raw = SalesOnStorage.getItem('saleson_van_loading_sheet_data');
   if (!raw) { showToast('No saved sheet found.'); return; }
   if (!confirm('Load saved sheet? This will replace current data.')) return;
-  const data = JSON.parse(raw);
+  const data = SalesOnToolSafety.draft(raw);
   // Restore biz
   Object.keys(data.biz).forEach(k => {
     const el = document.getElementById('biz' + k.charAt(0).toUpperCase() + k.slice(1));
@@ -816,6 +816,7 @@ function loadSheet() {
   renderSKUTable(); renderOutletTable(); renderDamageTable();
   updateKPIs(); updateCollection(); updateOutletKPIs(); updateCategoryFilter();
   showToast('Sheet loaded!');
+  return true;
 }
 
 function resetSheet() {

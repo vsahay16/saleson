@@ -22,7 +22,7 @@ class Page(HTMLParser):
  def handle_data(self,d):
   if self.in_h1:self.h1+=d
   if self.main and not self.skip:self.words.extend(re.findall(r'\w+',d.lower()))
-pages={p:Page(p.read_text()) for p in R.rglob('*.html')}
+pages={p:Page(p.read_text()) for p in (p for p in R.rglob('*.html') if 'node_modules' not in p.parts)}
 def resolve(source,u):
  p=R/unquote(u.path).lstrip('/') if u.path.startswith('/') else source.parent/unquote(u.path) if u.path else source
  for target in [p,p.with_suffix('.html'),p/'index.html']:

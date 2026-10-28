@@ -31,7 +31,7 @@ class Page(HTMLParser):
             links+=1
             if resolve(v.path) is None:errors.append(f'{self.p}: missing {k}: {u}')
 
-for p in sorted(ROOT.rglob('*.html')):
+for p in sorted((p for p in ROOT.rglob('*.html') if 'node_modules' not in p.parts)):
     pages+=1; s=p.read_text(); page=Page(p.relative_to(ROOT));page.feed(s)
     if len(page.canon)!=1: errors.append(f'{p.name}: expected one canonical')
     elif not page.canon[0].startswith('https://saleson.co.in/'):errors.append(f'{p.name}: canonical must be absolute HTTPS')

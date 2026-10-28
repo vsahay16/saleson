@@ -239,9 +239,7 @@ function openWaReminder(id) {
 
 function copyWaMessage() {
   const msg = document.getElementById('waMsg').textContent;
-  navigator.clipboard.writeText(msg)
-    .then(() => showToast('Message copied!'))
-    .catch(() => { const t=document.createElement('textarea'); t.value=msg; document.body.appendChild(t); t.select(); document.execCommand('copy'); document.body.removeChild(t); showToast('Copied!'); });
+  return SalesOnToolSafety.copy(msg).then(ok => showToast(ok ? 'Copied to clipboard.' : 'Copy failed. Select and copy the text manually.'));
 }
 
 /* ─────────────────────────────────────────────
@@ -389,7 +387,7 @@ function renderTable() {
   const sort     = document.getElementById('fSort').value;
 
   let filtered = entries.filter(e => {
-    if (search && !(`${e.party} ${e.invNum} ${e.salesperson} ${e.company}`.toLowerCase().includes(search))) return false;
+    if (search && !(`${SalesOnToolSafety.escape(e.party)} ${SalesOnToolSafety.escape(e.invNum)} ${SalesOnToolSafety.escape(e.salesperson)} ${SalesOnToolSafety.escape(e.company)}`.toLowerCase().includes(search))) return false;
     if (status && e.status !== status) return false;
     if (ageing && e.ageing !== ageing) return false;
     if (sales  && e.salesperson !== sales) return false;
@@ -424,9 +422,9 @@ function renderTable() {
     const risk = computeRisk(e.ageing);
     return `<tr class="${statusClass[e.status]||''} ${selectedIds.has(e.id)?'row-selected':''}" id="tr_${e.id}">
       <td><input type="checkbox" ${selectedIds.has(e.id)?'checked':''} onchange="toggleSelect('${e.id}',this.checked)" style="cursor:pointer;width:14px;height:14px;"></td>
-      <td style="font-weight:700;color:var(--ink);">${e.party}${e.company?'<br><span style="font-size:10.5px;color:var(--ink-mute);">'+e.company+'</span>':''}</td>
-      <td><a href="https://wa.me/${cleanMobile(e.mobile)}" target="_blank" style="color:var(--brand);text-decoration:none;font-size:12px;">${e.mobile}</a></td>
-      <td style="font-weight:600;">${e.invNum}</td>
+      <td style="font-weight:700;color:var(--ink);">${SalesOnToolSafety.escape(e.party)}${e.company?'<br><span style="font-size:10.5px;color:var(--ink-mute);">'+e.company+'</span>':''}</td>
+      <td><a href="https://wa.me/${cleanMobile(e.mobile)}" target="_blank" style="color:var(--brand);text-decoration:none;font-size:12px;">${SalesOnToolSafety.escape(e.mobile)}</a></td>
+      <td style="font-weight:600;">${SalesOnToolSafety.escape(e.invNum)}</td>
       <td>${formatDisplayDate(e.invDate)}</td>
       <td style="${e.daysOverdue>0?'color:var(--red);font-weight:600;':''}">${formatDisplayDate(e.dueDate)}</td>
       <td style="text-align:right;font-weight:600;">${fmtINR(e.invAmount)}</td>
@@ -434,8 +432,8 @@ function renderTable() {
       <td style="text-align:right;font-weight:800;${e.balance>0?'color:var(--red);':'color:var(--green);'}">${fmtINR(e.balance)}</td>
       <td style="text-align:center;${e.daysOverdue>0?'color:var(--red);font-weight:700;':''}">${e.daysOverdue>0?e.daysOverdue:'—'}</td>
       <td><span class="status-badge status-${e.ageing==='Paid'?'paid':e.ageing==='Not Due'?'unpaid':e.daysOverdue<=7?'partial':e.daysOverdue<=15?'partial':'overdue'}">${e.ageing}</span>${risk?'<br><span class="risk-badge risk-'+risk.toLowerCase()+'">'+risk+'</span>':''}</td>
-      <td>${e.salesperson||'—'}</td>
-      <td>${e.beat||'—'}</td>
+      <td>${SalesOnToolSafety.escape(e.salesperson||'—')}</td>
+      <td>${SalesOnToolSafety.escape(e.beat||'—')}</td>
       <td style="font-size:11.5px;">${formatDisplayDate(e.nextFollowup)||'—'}</td>
       <td><span class="status-badge ${statusBadge[e.status]||'status-unpaid'}">${e.status}</span></td>
       <td>
@@ -467,8 +465,8 @@ function updateFilterDropdowns() {
   const sf = document.getElementById('fSalesFilter');
   const bef = document.getElementById('fBeatFilter');
   const sv = sf.value, bv = bef.value;
-  sf.innerHTML  = '<option value="">All Salesmen</option>' + [...salesSet].map(s=>`<option value="${s}">${s}</option>`).join('');
-  bef.innerHTML = '<option value="">All Beats</option>'    + [...beatSet].map(b=>`<option value="${b}">${b}</option>`).join('');
+  sf.innerHTML  = '<option value="">All Salesmen</option>' + [...salesSet].map(s=>`<option value="${SalesOnToolSafety.escape(s)}">${SalesOnToolSafety.escape(s)}</option>`).join('');
+  bef.innerHTML = '<option value="">All Beats</option>'    + [...beatSet].map(b=>`<option value="${SalesOnToolSafety.escape(b)}">${SalesOnToolSafety.escape(b)}</option>`).join('');
   if (sv) sf.value=sv;
   if (bv) bef.value=bv;
 }
@@ -595,7 +593,7 @@ function exportCSV(rows) {
   a.href = url; a.download = `Outstanding_${SalesOnDates.today()}.csv`;
   document.body.appendChild(a); if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click(); document.body.removeChild(a);
   URL.revokeObjectURL(url);
-  showToast('CSV exported ✓');
+  showToast('CSV download requested. Check your browser downloads.');
 }
 
 function downloadSampleCSV() {
@@ -680,9 +678,9 @@ function buildPrintArea(rows) {
   const tableRows = rows.map((e,i)=>`
     <tr>
       <td>${i+1}</td>
-      <td>${e.party}</td>
-      <td>${e.mobile}</td>
-      <td>${e.invNum}</td>
+      <td>${SalesOnToolSafety.escape(e.party)}</td>
+      <td>${SalesOnToolSafety.escape(e.mobile)}</td>
+      <td>${SalesOnToolSafety.escape(e.invNum)}</td>
       <td>${formatDisplayDate(e.invDate)}</td>
       <td>${formatDisplayDate(e.dueDate)}</td>
       <td style="text-align:right;">${fmtINR(e.invAmount)}</td>
@@ -690,7 +688,7 @@ function buildPrintArea(rows) {
       <td style="text-align:right;font-weight:700;">${fmtINR(e.balance)}</td>
       <td style="text-align:center;">${e.daysOverdue||'—'}</td>
       <td>${e.ageing}</td>
-      <td>${e.salesperson||'—'}</td>
+      <td>${SalesOnToolSafety.escape(e.salesperson||'—')}</td>
       <td>${e.status}</td>
     </tr>`).join('');
 
@@ -735,13 +733,14 @@ function saveEntries() {
 
 function saveTrackerToStorage() {
   saveEntries();
-  showToast('Tracker saved ✓');
+  showToast(SalesOnStorage.persistent ? 'Draft saved.' : 'Not saved to browser storage. Export before leaving.');
 }
 
 function loadTracker() {
   const raw = SalesOnStorage.getItem(STORAGE_KEY);
   if (!raw) { showToast('No saved tracker found'); return; }
-  const data = JSON.parse(raw);
+  const data = SalesOnToolSafety.draft(raw);
+  if (!confirm('Restore saved draft? This replaces the current workspace.')) return;
   entries = (data.entries || []).map(e => ({
     ...e,
     status:      computeStatus(e.balance, e.paidAmount, e.dueDate),
@@ -753,6 +752,7 @@ function loadTracker() {
   renderTable();
   updateFilterDropdowns();
   showToast('Tracker loaded ✓');
+  return true;
 }
 
 function resetTracker() {
@@ -892,7 +892,7 @@ function applyVanOutstandingHandoff(hadSavedTracker) {
       beat: data.routeName || "",
       invNum:
         outlet.invoice ||
-        VAN-`${invoiceDate.replaceAll("-", "")}-${index + 1}`,
+        `VAN-${invoiceDate.replaceAll("-", "")}-${index + 1}`,
       invDate: invoiceDate,
       dueDate: "",
       invAmount: invoiceAmount,

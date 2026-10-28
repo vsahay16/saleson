@@ -115,5 +115,10 @@
       "source": "/api/pricing",
       "destination": "/regional-pricing/usd.json"
     }
-  ]
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "review/quiet-tools-and-safety": false
+    }
+  }
 }

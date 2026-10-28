@@ -99,7 +99,11 @@ function renderResult(rows, total, formulaHtml) {
 function calculate() {
   if (currentMode === 'invoice') { calculateInvoice(); return; }
 
-  const raw      = parseFloat(document.getElementById('amount').value) || 0;
+  const amountInput=document.getElementById('amount');
+  if(amountInput.value==='' || !amountInput.checkValidity()){
+    lastResult=null;document.getElementById('resultRows').textContent='Enter a valid non-negative amount.';document.getElementById('wordsBox').textContent='';document.getElementById('formulaBox').textContent='';return;
+  }
+  const raw      = parseFloat(amountInput.value);
   const gstRate  = parseFloat(document.getElementById('gstRate').value) || 0;
   const qty      = parseFloat(document.getElementById('qty').value)  || 1;
   const discount = parseFloat(document.getElementById('discount').value) || 0;
@@ -215,20 +219,22 @@ function addInvRow(d) {
   const tr = document.createElement('tr');
   tr.id = id;
   tr.innerHTML = `
-    <td><input type="text" value="${def.name||''}" placeholder="Product name" oninput="recalcInvRow('${id}')"></td>
-    <td><input type="number" value="${def.qty||1}" min="0" step="any" oninput="recalcInvRow('${id}')"></td>
-    <td><input type="number" value="${def.rate||0}" min="0" step="any" oninput="recalcInvRow('${id}')"></td>
+    <td><input type="text" value="" placeholder="Product name" oninput="recalcInvRow('${id}')"></td>
+    <td><input type="number" value="" min="0" step="any" oninput="recalcInvRow('${id}')"></td>
+    <td><input type="number" value="" min="0" step="any" oninput="recalcInvRow('${id}')"></td>
     <td>
       <select oninput="recalcInvRow('${id}')">
         <option value="0">0%</option><option value="3">3%</option><option value="5">5%</option>
         <option value="12">12%</option><option value="18" ${!def.gst||def.gst==18?'selected':''}>18%</option><option value="28">28%</option><option value="40">40%</option>
       </select>
     </td>
-    <td><input type="number" value="${def.disc||0}" min="0" max="100" step="any" oninput="recalcInvRow('${id}')"></td>
+    <td><input type="number" value="" min="0" max="100" step="any" oninput="recalcInvRow('${id}')"></td>
     <td class="computed" id="${id}_t">—</td>
     <td class="computed" id="${id}_g">—</td>
     <td class="computed" id="${id}_tot">—</td>
     <td><button class="btn-rm-row" onclick="removeInvRow('${id}')">✕</button></td>`;
+  tr.querySelectorAll('input').forEach((input,i)=>{input.value=String([def.name||'',def.qty??1,def.rate||0,def.disc||0][i] ?? '');});
+
   tbody.appendChild(tr);
   recalcInvRow(id);
 }
@@ -355,12 +361,7 @@ function buildCopyText() {
 }
 
 function copyText(text) {
-  navigator.clipboard.writeText(text).then(() => showToast('Copied to clipboard ✓')).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = text; document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); document.body.removeChild(ta);
-    showToast('Copied ✓');
-  });
+  return SalesOnToolSafety.copy(text).then(ok => showToast(ok ? 'Copied to clipboard.' : 'Copy failed. Select and copy the text manually.'));
 }
 
 function copyFormula() {
@@ -436,6 +437,7 @@ function buildCalculatorHandoffItems() {
    HANDOFF TO INVOICE / QUOTATION
 ───────────────────────── */
 function doHandoffInvoice() {
+  if(!lastResult){showToast('Calculate a valid amount before transferring.');return;}
   const data = {
     mode:        lastResult?.mode || currentMode,
     amount:      lastResult?.amount || 0,
@@ -458,6 +460,7 @@ function doHandoffInvoice() {
 }
 
 function doHandoffQuot() {
+  if(!lastResult){showToast('Calculate a valid amount before transferring.');return;}
   const data = {
     mode:        lastResult?.mode || currentMode,
     amount:      lastResult?.amount || 0,
@@ -569,13 +572,14 @@ function saveCalc() {
     savedAt:  new Date().toISOString(),
   };
   SalesOnStorage.setItem('saleson_gst_calculator_last', JSON.stringify(draft));
-  showToast('Calculation saved ✓');
+  showToast(SalesOnStorage.persistent ? 'Calculation saved ✓' : 'Not saved to browser storage. Keep this tab open or export your work.');
 }
 
 function loadLastCalc() {
   const raw = SalesOnStorage.getItem('saleson_gst_calculator_last');
   if (!raw) { showToast('No saved calculation found'); return; }
-  const d = JSON.parse(raw);
+  const d = SalesOnToolSafety.draft(raw);
+  if (!confirm('Restore saved draft? This replaces the current workspace.')) return;
   if (document.getElementById('amount')) document.getElementById('amount').value = d.amount;
   if (document.getElementById('gstRate')) { document.getElementById('gstRate').value = d.gstRate; syncRateBtns(); }
   if (document.getElementById('qty')) document.getElementById('qty').value = d.qty;
@@ -584,6 +588,7 @@ function loadLastCalc() {
   setGstType(d.gstType||'intra', document.querySelectorAll('.radio-opt')[d.gstType==='inter'?1:0]);
   calculate();
   showToast('Last calculation loaded ✓');
+  return true;
 }
 
 /* ─────────────────────────

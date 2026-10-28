@@ -597,7 +597,7 @@ function exportCSV() {
   if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click();
   URL.revokeObjectURL(url);
   usedCSV = true;
-  showToast('CSV exported ✓');
+  showToast('CSV download requested. Check your browser downloads.');
 }
 
 function downloadSampleCSV() {
@@ -710,13 +710,13 @@ function savePlan() {
     savedAt: new Date().toISOString(),
   };
   SalesOnStorage.setItem('saleson_stock_reorder_plan_data', JSON.stringify(plan));
-  showToast('Stock plan saved ✓');
+  showToast(SalesOnStorage.persistent ? 'Stock plan saved ✓' : 'Not saved to browser storage. Keep this tab open or export your work.');
 }
 
 function loadPlan() {
   const raw = SalesOnStorage.getItem('saleson_stock_reorder_plan_data');
   if (!raw) { showToast('No saved plan found'); return; }
-  const plan = JSON.parse(raw);
+  const plan = SalesOnToolSafety.draft(raw);
   sv('bizName',   plan.bizName   || '');
   sv('bizType',   plan.bizType   || '');
   sv('bizCity',   plan.bizCity   || '');
@@ -728,6 +728,7 @@ function loadPlan() {
   skuPlan = plan.skuPlan || [];
   updateFilterOptions(); renderTable(); updateDashboard();
   showToast('Stock plan loaded ✓');
+  return true;
 }
 
 function resetAll() {

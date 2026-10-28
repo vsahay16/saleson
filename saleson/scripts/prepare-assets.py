@@ -12,10 +12,15 @@ for name in ['build-audience-pages.py','build-comparisons.py','build-page-theme.
 subprocess.run([sys.executable,str(ROOT/'scripts/prepare-tracking-seo.py')],check=True)
 manifest_path = ROOT / 'assets-manifest.json'
 previous = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
-pages = sorted(ROOT.rglob('*.html'))
+pages = sorted((p for p in ROOT.rglob('*.html') if 'node_modules' not in p.parts))
 for p in pages:
     s = p.read_text()
     for source, versioned in previous.items(): s = s.replace(versioned, source)
+    # Recover any orphaned fingerprint references after interrupted preparations.
+    def unversion(m):
+        source=re.sub(r'\.[a-f0-9]{12}(?=\.(?:js|css)$)','',m[3])
+        return m[1]+'='+m[2]+source+m[2] if (ROOT/source.lstrip('/')).is_file() else m[0]
+    s=re.sub(r'\b(href|src)=("|\')(.*?)\2',unversion,s)
     p.write_text(s)
 
 # Keep the no-JavaScript/first-paint calculator totals consistent with the same

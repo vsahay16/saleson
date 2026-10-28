@@ -152,12 +152,14 @@ function addMultiInvRow(d) {
   row.id = id;
   d = d || {};
   row.innerHTML = `
-    <td><input type="text" value="${d.invNum||''}" placeholder="INV-001" oninput="calcMultiRowBalance('${id}');renderPreview()"></td>
-    <td><input type="date" value="${d.invDate||''}" oninput="renderPreview()"></td>
-    <td><input type="number" value="${d.invAmt||''}" placeholder="0" min="0" step="0.01" oninput="calcMultiRowBalance('${id}');renderPreview()"></td>
-    <td><input type="number" value="${d.received||''}" placeholder="0" min="0" step="0.01" oninput="calcMultiRowBalance('${id}');renderPreview()"></td>
+    <td><input type="text" value="" placeholder="INV-001" oninput="calcMultiRowBalance('${id}');renderPreview()"></td>
+    <td><input type="date" value="" oninput="renderPreview()"></td>
+    <td><input type="number" value="" placeholder="0" min="0" step="0.01" oninput="calcMultiRowBalance('${id}');renderPreview()"></td>
+    <td><input type="number" value="" placeholder="0" min="0" step="0.01" oninput="calcMultiRowBalance('${id}');renderPreview()"></td>
     <td class="mbal-${id}" style="padding:4px 6px;font-size:11.5px;color:var(--ink-soft);">—</td>
     <td><button class="btn-remove-row" onclick="document.getElementById('${id}').remove();renderPreview()">✕</button></td>`;
+  row.querySelectorAll('input').forEach((input, i) => { input.value = String([d.invNum||'',d.invDate||'',d.invAmt||'',d.received||''][i] ?? ""); });
+
   document.getElementById('multiInvBody').appendChild(row);
   calcMultiRowBalance(id);
 }
@@ -225,43 +227,43 @@ function renderPreview() {
   const T = calcBalance();
 
   // Business
-  const bizName    = document.getElementById('bizName').value    || 'Your Business Name';
-  const bizGSTIN   = document.getElementById('bizGSTIN').value   || '';
-  const bizAddress = document.getElementById('bizAddress').value || '';
-  const bizPhone   = document.getElementById('bizPhone').value   || '';
-  const bizEmail   = document.getElementById('bizEmail').value   || '';
-  const bizWeb     = document.getElementById('bizWebsite').value || '';
+  const bizName    = SalesOnToolSafety.escape(document.getElementById('bizName').value    || 'Your Business Name');
+  const bizGSTIN   = SalesOnToolSafety.escape(document.getElementById('bizGSTIN').value   || '');
+  const bizAddress = SalesOnToolSafety.escape(document.getElementById('bizAddress').value || '');
+  const bizPhone   = SalesOnToolSafety.escape(document.getElementById('bizPhone').value   || '');
+  const bizEmail   = SalesOnToolSafety.escape(document.getElementById('bizEmail').value   || '');
+  const bizWeb     = SalesOnToolSafety.escape(document.getElementById('bizWebsite').value || '');
 
   // Customer
-  const custName    = document.getElementById('custName').value    || 'Customer Name';
-  const custCompany = document.getElementById('custCompany').value || '';
-  const custAddress = document.getElementById('custAddress').value || '';
-  const custPhone   = document.getElementById('custPhone').value   || '';
-  const custEmail   = document.getElementById('custEmail').value   || '';
-  const custGSTIN   = document.getElementById('custGSTIN').value   || '';
+  const custName    = SalesOnToolSafety.escape(document.getElementById('custName').value    || 'Customer Name');
+  const custCompany = SalesOnToolSafety.escape(document.getElementById('custCompany').value || '');
+  const custAddress = SalesOnToolSafety.escape(document.getElementById('custAddress').value || '');
+  const custPhone   = SalesOnToolSafety.escape(document.getElementById('custPhone').value   || '');
+  const custEmail   = SalesOnToolSafety.escape(document.getElementById('custEmail').value   || '');
+  const custGSTIN   = SalesOnToolSafety.escape(document.getElementById('custGSTIN').value   || '');
 
   // Receipt
-  const rcptNum      = document.getElementById('rcptNumber').value    || '—';
+  const rcptNum      = SalesOnToolSafety.escape(document.getElementById('rcptNumber').value    || '—');
   const rcptDate     = formatDate(document.getElementById('rcptDate').value);
-  const payAgainst   = document.getElementById('payAgainst').value    || '';
-  const relInvoice   = document.getElementById('relatedInvoice').value || '';
-  const relOrder     = document.getElementById('relatedOrder').value   || '';
-  const salesperson  = document.getElementById('salesperson').value    || '';
-  const beatRoute    = document.getElementById('beatRoute').value      || '';
+  const payAgainst   = SalesOnToolSafety.escape(document.getElementById('payAgainst').value    || '');
+  const relInvoice   = SalesOnToolSafety.escape(document.getElementById('relatedInvoice').value || '');
+  const relOrder     = SalesOnToolSafety.escape(document.getElementById('relatedOrder').value   || '');
+  const salesperson  = SalesOnToolSafety.escape(document.getElementById('salesperson').value    || '');
+  const beatRoute    = SalesOnToolSafety.escape(document.getElementById('beatRoute').value      || '');
 
   // Payment
-  const payMode    = document.getElementById('payMode').value     || '';
-  const txnRef     = document.getElementById('txnRef').value      || '';
-  const chequeNum  = document.getElementById('chequeNum').value   || '';
-  const bankName   = document.getElementById('bankName').value    || document.getElementById('bankName2').value || '';
+  const payMode    = SalesOnToolSafety.escape(document.getElementById('payMode').value     || '');
+  const txnRef     = SalesOnToolSafety.escape(document.getElementById('txnRef').value      || '');
+  const chequeNum  = SalesOnToolSafety.escape(document.getElementById('chequeNum').value   || '');
+  const bankName   = SalesOnToolSafety.escape(document.getElementById('bankName').value    || document.getElementById('bankName2').value || '');
   const chequeDate = formatDate(document.getElementById('chequeDate').value);
-  const upiId      = document.getElementById('upiId').value       || '';
-  const bankIFSC   = document.getElementById('bankIFSC').value    || '';
+  const upiId      = SalesOnToolSafety.escape(document.getElementById('upiId').value       || '');
+  const bankIFSC   = SalesOnToolSafety.escape(document.getElementById('bankIFSC').value    || '');
 
   // Other
-  const notes       = document.getElementById('rcptNotes').value    || '';
-  const terms       = document.getElementById('rcptTerms').value    || '';
-  const sigName     = document.getElementById('signatoryName').value || 'Authorized Signatory';
+  const notes       = SalesOnToolSafety.escape(document.getElementById('rcptNotes').value    || '');
+  const terms       = SalesOnToolSafety.escape(document.getElementById('rcptTerms').value    || '');
+  const sigName     = SalesOnToolSafety.escape(document.getElementById('signatoryName').value || 'Authorized Signatory');
   const showAck     = document.getElementById('ackToggle').checked;
   const showMulti   = document.getElementById('multiInvToggle').checked;
 
@@ -448,7 +450,7 @@ function renderPreview() {
     </div>
   </div>`;
 
-  document.getElementById('receiptPreview').innerHTML = html;
+  document.getElementById('receiptPreview').innerHTML = SalesOnToolSafety.html(html);
 }
 
 /* ─────────────────────────
@@ -585,7 +587,7 @@ function openWaShare() {
 
 function copyWaMessage() {
   const msg = document.getElementById('waMessageBox').textContent;
-  navigator.clipboard.writeText(msg).then(() => showToast('✓ Message copied!'));
+  return SalesOnToolSafety.copy(msg).then(ok => showToast(ok ? 'Copied to clipboard.' : 'Copy failed. Select and copy the text manually.'));
 }
 
 /* ─────────────────────────
@@ -614,7 +616,7 @@ function openReminderModal() {
 
 function copyReminderMessage() {
   const msg = document.getElementById('reminderMessageBox').textContent;
-  navigator.clipboard.writeText(msg).then(() => showToast('✓ Reminder copied!'));
+  return SalesOnToolSafety.copy(msg).then(ok => showToast(ok ? 'Copied to clipboard.' : 'Copy failed. Select and copy the text manually.'));
 }
 
 /* ─────────────────────────
@@ -649,13 +651,14 @@ function saveDraft() {
   draft.multiInvToggle = document.getElementById('multiInvToggle').checked;
 
   SalesOnStorage.setItem('saleson_payment_receipt_draft', JSON.stringify(draft));
-  showToast('💾 Draft saved!');
+  showToast(SalesOnStorage.persistent ? '💾 Draft saved!' : 'Not saved to browser storage. Keep this tab open or export your work.');
 }
 
 function loadDraft() {
   const raw = SalesOnStorage.getItem('saleson_payment_receipt_draft');
   if (!raw) { showToast('⚠ No saved draft found'); return; }
-  const draft = JSON.parse(raw);
+  const draft = SalesOnToolSafety.draft(raw);
+  if (!confirm('Restore saved draft? This replaces the current workspace.')) return;
 
   Object.keys(draft).forEach(id => {
     const el = document.getElementById(id);
@@ -695,6 +698,7 @@ function loadDraft() {
   calcBalance();
   renderPreview();
   showToast('📂 Draft loaded!');
+  return true;
 }
 
 /* ─────────────────────────

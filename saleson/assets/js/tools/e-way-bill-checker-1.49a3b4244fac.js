@@ -283,7 +283,7 @@ function renderResult(res) {
       <button class="btn-res btn-invoice" onclick="triggerAction('invoice')">🧾 Create GST Invoice</button>
       <button class="btn-res btn-copy"    onclick="triggerAction('copy')">📋 Copy Result</button>
       <button class="btn-res btn-wa"      onclick="triggerAction('wa')">💬 Share</button>
-      <button class="btn-res btn-save"    onclick="saveCheck()">💾 Save</button>
+
     </div>` : `
     <div class="result-actions">
       <button class="btn-res btn-check" style="background:var(--brand);color:white;flex:1;" onclick="document.getElementById('consignmentValue').focus()">📝 Fill Details Above</button>
@@ -372,14 +372,7 @@ function copyResult() {
     `Details:\n${currentResult.reason}\n\n` +
     `⚠️ DISCLAIMER: This is a basic indication only. Verify with ewaybillgst.gov.in or your accountant before moving goods.`;
 
-  navigator.clipboard.writeText(text)
-    .then(() => showToast('Result copied to clipboard!'))
-    .catch(() => {
-      const ta = document.createElement('textarea');
-      ta.value = text; document.body.appendChild(ta); ta.select();
-      document.execCommand('copy'); document.body.removeChild(ta);
-      showToast('Result copied!');
-    });
+  return SalesOnToolSafety.copy(text).then(ok => showToast(ok ? 'Copied to clipboard.' : 'Copy failed. Select and copy the text manually.'));
 }
 
 /* ─────────────────────────────────────
@@ -404,12 +397,7 @@ function openWaShare() {
 
 function copyWaMessage() {
   const msg = document.getElementById('waMessageBox').textContent;
-  navigator.clipboard.writeText(msg).then(() => showToast('Message copied!')).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = msg; document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); document.body.removeChild(ta);
-    showToast('Copied!');
-  });
+  return SalesOnToolSafety.copy(msg).then(ok => showToast(ok ? 'Copied to clipboard.' : 'Copy failed. Select and copy the text manually.'));
 }
 
 /* ─────────────────────────────────────
@@ -437,7 +425,7 @@ function handoff(type) {
     showHandoffModal(
       'Data Saved for Delivery Challan',
       'Open the Delivery Challan Generator to continue. Your goods movement details have been saved.',
-      '/delivery-challan-generator',
+      '/tools/delivery-challan-generator',
       'Open Delivery Challan Generator →',
       '#059669'
     );
@@ -447,7 +435,7 @@ function handoff(type) {
     showHandoffModal(
       'Data Saved for GST Invoice',
       'Open the GST Invoice Generator to continue. Your goods details have been saved.',
-      '/gst-invoice-generator',
+      '/tools/gst-invoice-generator',
       'Open GST Invoice Generator →',
       'var(--brand)'
     );
@@ -491,13 +479,15 @@ function saveCheck() {
   const limited = existing.slice(0, 5); // keep 5
   SalesOnStorage.setItem('saleson_eway_recent_checks', JSON.stringify(limited));
   renderRecentChecks();
-  showToast('Check saved ✓');
+  showToast(SalesOnStorage.persistent ? 'Check saved ✓' : 'Not saved to browser storage. Export before leaving.');
 }
 
 function loadLastCheck() {
   const existing = JSON.parse(SalesOnStorage.getItem('saleson_eway_recent_checks') || '[]');
   if (!existing.length) { showToast('No saved checks found'); return; }
+  if(!confirm('Restore saved check? This replaces the current workspace.'))return;
   loadCheckEntry(existing[0]);
+  return true;
 }
 
 function loadCheckEntry(entry) {

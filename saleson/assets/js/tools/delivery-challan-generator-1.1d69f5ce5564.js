@@ -11,7 +11,7 @@ function v(id) { const el = document.getElementById(id); return el ? el.value : 
 function sv(id, val) { const el = document.getElementById(id); if (el) el.value = val; }
 function escapeHTML(str) {
   return String(str === undefined || str === null ? '' : str)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
 /* ── Indian GST state codes (used to auto-fill State Code) ── */
@@ -113,16 +113,17 @@ function addItemRow(defaults) {
   tr.innerHTML =
     '<td><input type="text" value="' + escapeHTML(d.desc || '') + '" placeholder="Product / Goods" oninput="recalcRow(\'' + id + '\')"></td>' +
     '<td><input type="text" value="' + escapeHTML(d.hsn || '') + '" placeholder="3401" oninput="recalcRow(\'' + id + '\')"></td>' +
-    '<td><input type="number" value="' + (d.qty !== undefined ? d.qty : 1) + '" min="0" step="any" oninput="recalcRow(\'' + id + '\')"></td>' +
+    '<td><input type="number" value="' + escapeHTML(String(d.qty ?? 1)) + '" min="0" step="any" oninput="recalcRow(\'' + id + '\')"></td>' +
     '<td><input type="text" value="' + escapeHTML(d.unit || 'Nos') + '" placeholder="Box" oninput="recalcRow(\'' + id + '\')"></td>' +
-    '<td><input type="number" value="' + (d.rate !== undefined ? d.rate : 0) + '" min="0" step="any" oninput="recalcRow(\'' + id + '\')"></td>' +
+    '<td><input type="number" value="' + escapeHTML(String(d.rate ?? 0)) + '" min="0" step="any" oninput="recalcRow(\'' + id + '\')"></td>' +
     '<td><select oninput="recalcRow(\'' + id + '\')">' +
-      [0,3,5,12,18,28].map(g => '<option value="' + g + '"' + (Number(d.gst) === g ? ' selected' : '') + '>' + g + '%</option>').join('') +
+      [0,0.1,0.25,1.5,3,5,6,7.5,12,18,28,40].map(g => '<option value="' + g + '"' + (Number(d.gst) === g ? ' selected' : '') + '>' + g + '%</option>').join('') +
     '</select></td>' +
     '<td class="computed" id="' + id + '_taxable">—</td>' +
     '<td class="computed" id="' + id + '_gstamt">—</td>' +
     '<td class="computed" id="' + id + '_total">—</td>' +
     '<td><button class="btn-remove-row" onclick="removeItemRow(\'' + id + '\')" title="Remove row">✕</button></td>';
+  SalesOnToolSafety.setGST(tr.querySelector("select"), d.gst ?? 0);
   tbody.appendChild(tr);
   recalcRow(id);
 }
@@ -396,7 +397,7 @@ function buildChallanHTML(copyLabelOverride) {
 }
 
 function renderPreview() {
-  document.getElementById('challanPreview').innerHTML = buildChallanHTML();
+  document.getElementById('challanPreview').innerHTML = SalesOnToolSafety.html(buildChallanHTML());
 }
 
 /* ── collapsible sections ── */
@@ -570,11 +571,7 @@ function openWaShare() {
 
 function copyWaMessage() {
   const msg = document.getElementById('waMessageBox').textContent;
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(msg).then(() => showToast('Message copied ✓')).catch(() => fallbackCopy(msg));
-  } else {
-    fallbackCopy(msg);
-  }
+  return SalesOnToolSafety.copy(msg).then(ok => showToast(ok ? 'Copied to clipboard.' : 'Copy failed. Select and copy the text manually.'));
 }
 function fallbackCopy(msg) {
   const ta = document.createElement('textarea');
@@ -623,14 +620,14 @@ function saveDraft() {
   draft.savedAt = new Date().toISOString();
 
   SalesOnStorage.setItem('saleson_delivery_challan_draft', JSON.stringify(draft));
-  showToast('Draft saved ✓');
+  showToast(SalesOnStorage.persistent ? 'Draft saved ✓' : 'Not saved to browser storage. Keep this tab open or export your work.');
 }
 
 function loadDraft() {
   const raw = SalesOnStorage.getItem('saleson_delivery_challan_draft');
   if (!raw) { showToast('No saved draft found'); return; }
   let d;
-  try { d = JSON.parse(raw); } catch (e) { showToast('Saved draft is corrupted'); return; }
+  try { d = SalesOnToolSafety.draft(raw); } catch (e) { showToast('Saved draft is corrupted'); return; }
 
   [
     'consignorName','consignorGSTIN','consignorAddress','consignorState','consignorStateCode','consignorPhone','consignorEmail',
@@ -673,6 +670,7 @@ function loadDraft() {
 
   renderPreview();
   showToast('Draft loaded ✓');
+  return true;
 }
 
 /* ── reset ── */

@@ -43,7 +43,7 @@ head='''<!-- SALESON_TRACKING_HEAD:START -->
 body='''<!-- SALESON_TRACKING_BODY:START -->
 <noscript><template data-saleson-gtm-fallback><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQNBHFQS" height="0" width="0" class="saleson-gtm-fallback" title="Google Tag Manager"></iframe></template></noscript>
 <!-- SALESON_TRACKING_BODY:END -->'''
-for p in sorted(R.rglob('*.html')):
+for p in sorted((p for p in R.rglob('*.html') if 'node_modules' not in p.parts)):
  s=p.read_text()
  for name in ['HEAD','BODY']:
   s=re.sub(r'<!-- SALESON_TRACKING_'+name+r':START -->.*?<!-- SALESON_TRACKING_'+name+r':END -->','',s,flags=re.S)

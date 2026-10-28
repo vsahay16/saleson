@@ -102,12 +102,12 @@ function addItemRow(defaults) {
   const tr = document.createElement('tr');
   tr.id = id;
   tr.innerHTML = `
-    <td><input type="text" value="${d.desc||''}" placeholder="Product / Service" oninput="recalcRow('${id}')"></td>
-    <td><input type="text" value="${d.hsn||''}" placeholder="3401"></td>
-    <td><input type="number" value="${d.qty||1}" min="0" step="any" oninput="recalcRow('${id}')"></td>
-    <td><input type="text" value="${d.unit||'Nos'}" placeholder="Box"></td>
-    <td><input type="number" value="${d.rate||0}" min="0" step="any" oninput="recalcRow('${id}')"></td>
-    <td><input type="number" value="${d.disc||0}" min="0" max="100" step="any" oninput="recalcRow('${id}')"></td>
+    <td><input type="text" value="" placeholder="Product / Service" oninput="recalcRow('${id}')"></td>
+    <td><input type="text" value="" placeholder="3401"></td>
+    <td><input type="number" value="" min="0" step="any" oninput="recalcRow('${id}')"></td>
+    <td><input type="text" value="" placeholder="Box"></td>
+    <td><input type="number" value="" min="0" step="any" oninput="recalcRow('${id}')"></td>
+    <td><input type="number" value="" min="0" max="100" step="any" oninput="recalcRow('${id}')"></td>
     <td>
       <select oninput="recalcRow('${id}')">
         <option value="0">0%</option>
@@ -124,8 +124,10 @@ function addItemRow(defaults) {
     <td class="computed" id="${id}_total">—</td>
     <td><button class="btn-remove-row" onclick="removeItemRow('${id}')">✕</button></td>
   `;
+  tr.querySelectorAll('input').forEach((input, i) => { input.value = String([d.desc||'',d.hsn||'',d.qty??1,d.unit||'Nos',d.rate||0,d.disc||0][i] ?? ""); });
+  SalesOnToolSafety.setGST(tr.querySelector("select"), d.gst ?? 0);
+
   tbody.appendChild(tr);
-  tr.querySelector("select").value = String(d.gst ?? 0);
   recalcRow(id);
 }
 
@@ -270,31 +272,31 @@ function renderPreview() {
   const T = computeTotals(items);
 
   // Seller
-  const sName = document.getElementById('sellerName').value || 'Your Business Name';
-  const sGSTIN = document.getElementById('sellerGSTIN').value || '';
-  const sAddr = document.getElementById('sellerAddress').value || '';
-  const sPhone = document.getElementById('sellerPhone').value || '';
-  const sEmail = document.getElementById('sellerEmail').value || '';
+  const sName = SalesOnToolSafety.escape(document.getElementById('sellerName').value || 'Your Business Name');
+  const sGSTIN = SalesOnToolSafety.escape(document.getElementById('sellerGSTIN').value || '');
+  const sAddr = SalesOnToolSafety.escape(document.getElementById('sellerAddress').value || '');
+  const sPhone = SalesOnToolSafety.escape(document.getElementById('sellerPhone').value || '');
+  const sEmail = SalesOnToolSafety.escape(document.getElementById('sellerEmail').value || '');
 
   // Buyer
-  const bName = document.getElementById('buyerName').value || 'Customer Name';
-  const bGSTIN = document.getElementById('buyerGSTIN').value || '';
-  const bBillAddr = document.getElementById('buyerBillingAddress').value || '';
-  const bShipAddr = document.getElementById('buyerShippingAddress').value || '';
-  const bPhone = document.getElementById('buyerPhone').value || '';
+  const bName = SalesOnToolSafety.escape(document.getElementById('buyerName').value || 'Customer Name');
+  const bGSTIN = SalesOnToolSafety.escape(document.getElementById('buyerGSTIN').value || '');
+  const bBillAddr = SalesOnToolSafety.escape(document.getElementById('buyerBillingAddress').value || '');
+  const bShipAddr = SalesOnToolSafety.escape(document.getElementById('buyerShippingAddress').value || '');
+  const bPhone = SalesOnToolSafety.escape(document.getElementById('buyerPhone').value || '');
 
   // Invoice
-  const invNum = document.getElementById('invNumber').value || '—';
+  const invNum = SalesOnToolSafety.escape(document.getElementById('invNumber').value || '—');
   const invDate = formatDate(document.getElementById('invDate').value);
   const invDue = formatDate(document.getElementById('invDueDate').value);
-  const posState = document.getElementById('placeOfSupply').value;
+  const posState = SalesOnToolSafety.escape(document.getElementById('placeOfSupply').value);
   const posName = INDIAN_STATES.find(s=>s[0]===posState)?.[1] || posState;
-  const revCharge = document.getElementById('reverseCharge').value;
-  const notes = document.getElementById('invNotes').value;
-  const terms = document.getElementById('invTerms').value;
-  const sigName = document.getElementById('signatoryName').value || 'Authorized Signatory';
-  const payMethod = document.getElementById('paymentMethod').value;
-  const upiId = document.getElementById('upiId').value;
+  const revCharge = SalesOnToolSafety.escape(document.getElementById('reverseCharge').value);
+  const notes = SalesOnToolSafety.escape(document.getElementById('invNotes').value);
+  const terms = SalesOnToolSafety.escape(document.getElementById('invTerms').value);
+  const sigName = SalesOnToolSafety.escape(document.getElementById('signatoryName').value || 'Authorized Signatory');
+  const payMethod = SalesOnToolSafety.escape(document.getElementById('paymentMethod').value);
+  const upiId = SalesOnToolSafety.escape(document.getElementById('upiId').value);
 
   // Logo / Sig HTML
   const logoHTML = logoDataURL ? `<img class="inv-logo" src="${logoDataURL}" alt="Business Logo">` : `<div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--accent);">${sName}</div>`;
@@ -311,10 +313,10 @@ function renderPreview() {
     const taxHeader = bos ? '' : (interState ? '<th>IGST</th>' : '<th>CGST</th><th>SGST</th>');
     itemRows += `
       <tr>
-        <td style="color:var(--ink);font-weight:600;">${i+1}. ${it.desc}</td>
-        <td>${it.hsn}</td>
+        <td style="color:var(--ink);font-weight:600;">${i+1}. ${SalesOnToolSafety.escape(it.desc)}</td>
+        <td>${SalesOnToolSafety.escape(it.hsn)}</td>
         <td style="text-align:center;">${it.qty}</td>
-        <td style="text-align:center;">${it.unit}</td>
+        <td style="text-align:center;">${SalesOnToolSafety.escape(it.unit)}</td>
         <td style="text-align:right;">${fmtINR(it.rate)}</td>
         ${it.disc>0?`<td style="text-align:center;">${it.disc}%</td>`:'<td style="text-align:center;">—</td>'}
         <td style="text-align:center;">${bos?'—':it.gstPct+'%'}</td>
@@ -406,10 +408,10 @@ function renderPreview() {
           ${items.map((it,i)=>`
           <tr>
             <td>${i+1}</td>
-            <td style="font-weight:600;color:var(--ink);">${it.desc}</td>
+            <td style="font-weight:600;color:var(--ink);">${SalesOnToolSafety.escape(it.desc)}</td>
             <td>${it.hsn||'—'}</td>
             <td style="text-align:center;">${it.qty}</td>
-            <td style="text-align:center;">${it.unit}</td>
+            <td style="text-align:center;">${SalesOnToolSafety.escape(it.unit)}</td>
             <td style="text-align:right;">${fmtINR(it.rate)}</td>
             <td style="text-align:center;">${it.disc>0?it.disc+'%':'—'}</td>
             <td style="text-align:center;">${bos?'—':it.gstPct+'%'}</td>
@@ -458,7 +460,7 @@ function renderPreview() {
     </div>
   </div>`;
 
-  document.getElementById('invoicePreview').innerHTML = html;
+  document.getElementById('invoicePreview').innerHTML = SalesOnToolSafety.html(html);
 }
 
 /* ─────────────────────────
@@ -581,13 +583,7 @@ function openWaShare() {
 
 function copyWaMessage() {
   const msg = document.getElementById('waMessageBox').textContent;
-  navigator.clipboard.writeText(msg).then(() => showToast('Message copied!')).catch(() => {
-    // fallback
-    const ta = document.createElement('textarea');
-    ta.value = msg; document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); document.body.removeChild(ta);
-    showToast('Message copied!');
-  });
+  return SalesOnToolSafety.copy(msg).then(ok => showToast(ok ? 'Copied to clipboard.' : 'Copy failed. Select and copy the text manually.'));
 }
 
 /* ─────────────────────────
@@ -633,13 +629,14 @@ function saveDraft() {
     savedAt: new Date().toISOString()
   };
   SalesOnStorage.setItem('saleson_gst_invoice_draft', JSON.stringify(draft));
-  showToast('Draft saved ✓');
+  showToast(SalesOnStorage.persistent ? 'Draft saved ✓' : 'Not saved to browser storage. Keep this tab open or export your work.');
 }
 
 function loadDraft() {
   const raw = SalesOnStorage.getItem('saleson_gst_invoice_draft');
   if (!raw) { showToast('No saved draft found'); return; }
-  const d = JSON.parse(raw);
+  const d = SalesOnToolSafety.draft(raw);
+  if (!confirm('Restore saved draft? This replaces the current workspace.')) return;
 
   ['sellerName','sellerGSTIN','sellerAddress','sellerState','sellerStateCode','sellerPhone','sellerEmail',
    'buyerName','buyerGSTIN','buyerBillingAddress','buyerShippingAddress','buyerState','buyerStateCode','buyerPhone',
@@ -670,6 +667,7 @@ function loadDraft() {
 
   renderPreview();
   showToast('Draft loaded ✓');
+  return true;
 }
 
 function v(id) { const el=document.getElementById(id); return el?el.value:''; }
@@ -740,7 +738,7 @@ function replaceInvoiceItems(items) {
 
     addItemRow(normalised);
 
-    // Current addItemRow selects only 18% correctly.
+    // Keep the explicitly supplied rate in the imported row.
     const row = body.lastElementChild;
     const gstSelect = row?.querySelector("select");
 
@@ -871,6 +869,9 @@ function applyInvoiceHandoff() {
   }
 
   if (incoming.kind === "hsn") {
+    if(data.gstRate===null || data.gstRate===undefined || data.gstRate==='' || !Number.isFinite(Number(data.gstRate))){
+      document.getElementById('tool-action-status').textContent='Import stopped: confirm a valid GST rate before transferring this item.';return false;
+    }
     replaceInvoiceItems([
       {
         desc: data.description || data.itemDescription,

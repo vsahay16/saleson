@@ -9,7 +9,7 @@ class Page(HTMLParser):
   if t=='site-header':self.h+=1
   if t=='site-footer':self.f+=1
   if t in ('header-component','footer-component'):self.old=True
-pages=list(R.rglob('*.html'))
+pages=list((p for p in R.rglob('*.html') if 'node_modules' not in p.parts))
 for p in pages:
  s=p.read_text();page=Page();page.feed(s)
  assert (page.h,page.f,page.old)==(1,1,False),(p.relative_to(R),page.h,page.f,page.old)

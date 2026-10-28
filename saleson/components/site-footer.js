@@ -342,7 +342,7 @@ class SiteFooter extends HTMLElement {
                 <li><a href="/tools/e-way-bill-checker"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>E-Way Bill Checker</a></li>
                 <li><a href="/tools/gst-calculator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>GST Calculator</a></li>
                 <li><a href="/tools/gst-invoice-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>GST Invoice Generator</a></li>
-                <li><a href="/tools/hsn-sac-gst-rate-finder"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>HSN SAC GST Rate Finder</a></li>
+                <li><a href="/tools/hsn-sac-gst-rate-finder"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>HSN Goods Heading Lookup</a></li>
                 <li><a href="/tools/outstanding-payment-tracker"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Outstanding Payment Tracker</a></li>
                 <li><a href="/tools/payment-receipt-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Payment Receipt Generator</a></li>
                 <li><a href="/tools/purchase-order-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Purchase Order Generator</a></li>
@@ -375,6 +375,16 @@ class SiteFooter extends HTMLElement {
         </footer>
       `;
 
+      if (this.hasAttribute?.('compact')) {
+        this.shadowRoot.querySelector('.footer-explore')?.remove();
+        this.shadowRoot.querySelector('.brand-desc')?.remove();
+        this.shadowRoot.querySelectorAll('.link-col').forEach(column=>column.remove());
+        const main=this.shadowRoot.querySelector('.footer-main');
+        const nav=document.createElement('nav');nav.className='compact-footer-links';nav.setAttribute('aria-label','SalesOn links');
+        for(const [href,label] of [['/tools','All tools'],['/blogs','Blog'],['/about','About SalesOn'],['/pricing','Pricing'],['/request-demo','Contact']]){const a=document.createElement('a');a.href=href;a.textContent=label;nav.appendChild(a);}
+        main.appendChild(nav);
+        const style=document.createElement('style');style.textContent=':host([compact]) .footer-main{grid-template-columns:1fr 1fr;padding:24px;gap:24px}:host([compact]) .footer-logo{margin-bottom:12px}:host([compact]) .contact-list{margin:10px 0}:host([compact]) .compact-footer-links{display:flex;flex-wrap:wrap;align-content:flex-start;gap:12px 20px}:host([compact]) .compact-footer-links a{font:14px/1.6 "DM Sans",Arial,sans-serif;color:#52677a}:host([compact]) .footer-bottom{padding-top:16px;padding-bottom:16px}@media(max-width:600px){:host([compact]) .footer-main{grid-template-columns:1fr;gap:16px}}';this.shadowRoot.appendChild(style);
+      }
       // One canonical pricing page for every visitor.
 
     }

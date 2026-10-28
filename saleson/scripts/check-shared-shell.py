@@ -15,7 +15,7 @@ for name in ('site-header', 'site-footer'):
     assert 'font-size: 16px;' in code and 'line-height: 1.4;' in code
     assert 'letter-spacing: normal;' in code and 'text-transform: none;' in code
 
-pages = list(ROOT.rglob('*.html'))
+pages = list((p for p in ROOT.rglob('*.html') if 'node_modules' not in p.parts))
 for page in pages:
     source = page.read_text()
     for name in ('site-header', 'site-footer'):

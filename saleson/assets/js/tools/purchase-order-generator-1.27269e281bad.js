@@ -136,12 +136,12 @@ function addItemRow(d) {
   const tr = document.createElement('tr');
   tr.id = id;
   tr.innerHTML = `
-    <td><input type="text"   value="${def.desc||''}"  placeholder="Product / Service" oninput="recalcRow('${id}')"></td>
-    <td><input type="text"   value="${def.hsn||''}"   placeholder="3401"></td>
-    <td><input type="number" value="${def.qty||1}"    min="0" step="any" oninput="recalcRow('${id}')"></td>
-    <td><input type="text"   value="${def.unit||'Box'}" placeholder="Nos"></td>
-    <td><input type="number" value="${def.rate||0}"   min="0" step="any" oninput="recalcRow('${id}')"></td>
-    <td><input type="number" value="${def.disc||0}"   min="0" max="100" step="any" oninput="recalcRow('${id}')"></td>
+    <td><input type="text"   value=""  placeholder="Product / Service" oninput="recalcRow('${id}')"></td>
+    <td><input type="text"   value=""   placeholder="3401"></td>
+    <td><input type="number" value=""    min="0" step="any" oninput="recalcRow('${id}')"></td>
+    <td><input type="text"   value="" placeholder="Nos"></td>
+    <td><input type="number" value=""   min="0" step="any" oninput="recalcRow('${id}')"></td>
+    <td><input type="number" value=""   min="0" max="100" step="any" oninput="recalcRow('${id}')"></td>
     <td>
       <select oninput="recalcRow('${id}')">
         <option value="0">0%</option>
@@ -157,6 +157,9 @@ function addItemRow(d) {
     <td class="computed" id="${id}_gstamt">—</td>
     <td class="computed" id="${id}_total">—</td>
     <td><button class="btn-remove-row" onclick="removeItemRow('${id}')">✕</button></td>`;
+  tr.querySelectorAll('input').forEach((input, i) => { input.value = String([def.desc||'',def.hsn||'',def.qty??1,def.unit||'Box',def.rate||0,def.disc||0][i] ?? ""); });
+  SalesOnToolSafety.setGST(tr.querySelector("select"), def.gst ?? 0);
+
   document.getElementById('itemsBody').appendChild(tr);
   recalcRow(id);
 }
@@ -212,11 +215,13 @@ function addSchedRow(d) {
   const tr  = document.createElement('tr');
   tr.id = id;
   tr.innerHTML = `
-    <td><input type="text" value="${def.item||''}"   placeholder="FMCG Product Box"></td>
-    <td><input type="date" value="${def.date||''}"   oninput="renderPreview()"></td>
-    <td><input type="number" value="${def.qty||''}"  placeholder="50" min="0" oninput="renderPreview()"></td>
-    <td><input type="text" value="${def.loc||''}"    placeholder="Main Warehouse, Patna" oninput="renderPreview()"></td>
+    <td><input type="text" value=""   placeholder="FMCG Product Box"></td>
+    <td><input type="date" value=""   oninput="renderPreview()"></td>
+    <td><input type="number" value=""  placeholder="50" min="0" oninput="renderPreview()"></td>
+    <td><input type="text" value=""    placeholder="Main Warehouse, Patna" oninput="renderPreview()"></td>
     <td><button class="btn-remove-row" onclick="removeSchedRow('${id}')">✕</button></td>`;
+  tr.querySelectorAll('input').forEach((input,i)=>{input.value=String([def.item||'',def.date||'',def.qty||'',def.loc||''][i] ?? '');});
+
   document.getElementById('schedBody').appendChild(tr);
   renderPreview();
 }
@@ -292,45 +297,45 @@ function renderPreview() {
   /* ── Collect field values ── */
   const v = id => (document.getElementById(id)||{}).value || '';
 
-  const bName    = v('buyerName')    || 'Your Company Name';
-  const bGSTIN   = v('buyerGSTIN');
-  const bAddr    = v('buyerAddress');
-  const bPhone   = v('buyerPhone');
-  const bEmail   = v('buyerEmail');
-  const bWeb     = v('buyerWebsite');
+  const bName    = SalesOnToolSafety.escape(v('buyerName')    || 'Your Company Name');
+  const bGSTIN   = SalesOnToolSafety.escape(v('buyerGSTIN'));
+  const bAddr    = SalesOnToolSafety.escape(v('buyerAddress'));
+  const bPhone   = SalesOnToolSafety.escape(v('buyerPhone'));
+  const bEmail   = SalesOnToolSafety.escape(v('buyerEmail'));
+  const bWeb     = SalesOnToolSafety.escape(v('buyerWebsite'));
 
-  const vnName   = v('vendorName')   || 'Vendor / Supplier Name';
-  const vnComp   = v('vendorCompany');
-  const vnGSTIN  = v('vendorGSTIN');
-  const vnAddr   = v('vendorAddress');
-  const vnPhone  = v('vendorPhone');
-  const vnEmail  = v('vendorEmail');
-  const vnCtct   = v('vendorContact');
+  const vnName   = SalesOnToolSafety.escape(v('vendorName')   || 'Vendor / Supplier Name');
+  const vnComp   = SalesOnToolSafety.escape(v('vendorCompany'));
+  const vnGSTIN  = SalesOnToolSafety.escape(v('vendorGSTIN'));
+  const vnAddr   = SalesOnToolSafety.escape(v('vendorAddress'));
+  const vnPhone  = SalesOnToolSafety.escape(v('vendorPhone'));
+  const vnEmail  = SalesOnToolSafety.escape(v('vendorEmail'));
+  const vnCtct   = SalesOnToolSafety.escape(v('vendorContact'));
 
-  const poNum    = v('poNumber')     || '—';
+  const poNum    = SalesOnToolSafety.escape(v('poNumber')     || '—');
   const poDate   = formatDate(v('poDate'));
   const delDate  = formatDate(v('deliveryDate'));
-  const delLoc   = v('deliveryLocation');
-  const reqBy    = v('requestedBy');
-  const dept     = v('department');
-  const refQuot  = v('refQuotation');
-  const projRef  = v('projectRef');
-  const payTerms = v('paymentTerms');
-  const shipTerms= v('shippingTerms');
+  const delLoc   = SalesOnToolSafety.escape(v('deliveryLocation'));
+  const reqBy    = SalesOnToolSafety.escape(v('requestedBy'));
+  const dept     = SalesOnToolSafety.escape(v('department'));
+  const refQuot  = SalesOnToolSafety.escape(v('refQuotation'));
+  const projRef  = SalesOnToolSafety.escape(v('projectRef'));
+  const payTerms = SalesOnToolSafety.escape(v('paymentTerms'));
+  const shipTerms= SalesOnToolSafety.escape(v('shippingTerms'));
 
-  const delInstr = v('deliveryInstructions');
-  const qualNote = v('qualityNotes');
-  const termsC   = v('termsConditions');
-  const intRmk   = v('internalRemarks');
+  const delInstr = SalesOnToolSafety.escape(v('deliveryInstructions'));
+  const qualNote = SalesOnToolSafety.escape(v('qualityNotes'));
+  const termsC   = SalesOnToolSafety.escape(v('termsConditions'));
+  const intRmk   = SalesOnToolSafety.escape(v('internalRemarks'));
 
   const showAppr  = document.getElementById('showApproval').checked;
   const showVA    = document.getElementById('showVendorAcceptance').checked;
   const showSched = document.getElementById('showDelivSched').checked;
 
-  const prepBy    = v('preparedBy');
-  const chkBy     = v('checkedBy');
-  const appBy     = v('approvedBy');
-  const vaAuth    = v('vendorAuthPerson');
+  const prepBy    = SalesOnToolSafety.escape(v('preparedBy'));
+  const chkBy     = SalesOnToolSafety.escape(v('checkedBy'));
+  const appBy     = SalesOnToolSafety.escape(v('approvedBy'));
+  const vaAuth    = SalesOnToolSafety.escape(v('vendorAuthPerson'));
   const vaDate    = formatDate(v('acceptanceDate'));
 
   /* ── Logo HTML ── */
@@ -342,10 +347,10 @@ function renderPreview() {
   const itemRows = items.map((it, i) => `
     <tr>
       <td>${i+1}</td>
-      <td style="font-weight:600;color:var(--ink);">${it.desc}</td>
+      <td style="font-weight:600;color:var(--ink);">${SalesOnToolSafety.escape(it.desc)}</td>
       <td>${it.hsn||'—'}</td>
       <td style="text-align:center;">${it.qty}</td>
-      <td style="text-align:center;">${it.unit}</td>
+      <td style="text-align:center;">${SalesOnToolSafety.escape(it.unit)}</td>
       <td style="text-align:right;">${fmtINR(it.rate)}</td>
       <td style="text-align:center;">${it.disc>0?it.disc+'%':'—'}</td>
       <td style="text-align:center;">${it.gstPct}%</td>
@@ -526,7 +531,7 @@ function renderPreview() {
     </div>
   </div>`;
 
-  document.getElementById('poPreview').innerHTML = docHTML;
+  document.getElementById('poPreview').innerHTML = SalesOnToolSafety.html(docHTML);
 }
 
 /* ─────────────────────────────
@@ -636,14 +641,7 @@ function openWaShare() {
 
 function copyWaMessage() {
   const msg = document.getElementById('waMessageBox').textContent;
-  navigator.clipboard.writeText(msg)
-    .then(() => showToast('Message copied!'))
-    .catch(() => {
-      const ta = document.createElement('textarea');
-      ta.value = msg; document.body.appendChild(ta); ta.select();
-      document.execCommand('copy'); document.body.removeChild(ta);
-      showToast('Message copied!');
-    });
+  return SalesOnToolSafety.copy(msg).then(ok => showToast(ok ? 'Copied to clipboard.' : 'Copy failed. Select and copy the text manually.'));
 }
 
 /* ─────────────────────────────
@@ -708,13 +706,14 @@ function saveDraft() {
   };
 
   SalesOnStorage.setItem('saleson_purchase_order_draft', JSON.stringify(draft));
-  showToast('Draft saved ✓');
+  showToast(SalesOnStorage.persistent ? 'Draft saved ✓' : 'Not saved to browser storage. Keep this tab open or export your work.');
 }
 
 function loadDraft() {
   const raw = SalesOnStorage.getItem('saleson_purchase_order_draft');
   if (!raw) { showToast('No saved draft found'); return; }
-  const d = JSON.parse(raw);
+  const d = SalesOnToolSafety.draft(raw);
+  if (!confirm('Restore saved draft? This replaces the current workspace.')) return;
 
   /* Restore text/select fields */
   const fields = [
@@ -773,6 +772,7 @@ function loadDraft() {
 
   renderPreview();
   showToast('Draft loaded ✓');
+  return true;
 }
 
 /* ─────────────────────────────

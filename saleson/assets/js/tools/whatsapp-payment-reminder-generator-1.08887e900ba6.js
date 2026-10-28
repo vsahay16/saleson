@@ -329,7 +329,7 @@ function generateMessage() {
 function showVariation(idx) {
   currentVariation = idx;
   const msg = generatedMessages[idx] || 'Generating...';
-  document.getElementById('waBubble').textContent = msg;
+  document.getElementById('waBubble').value = msg;
 }
 
 function switchVariation(idx, el) {
@@ -488,14 +488,8 @@ function openWA(msg, phone) {
 }
 
 function copyText(text) {
-  navigator.clipboard.writeText(text).then(() => {
-    showToast('Message copied. Paste it on WhatsApp.');
-  }).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = text; document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); document.body.removeChild(ta);
-    showToast('Message copied. Paste it on WhatsApp.');
-  });
+  if (!text) { showToast('Select or generate a message first.'); return; }
+  SalesOnToolSafety.copy(text).then(ok => showToast(ok ? 'Message copied. Paste it on WhatsApp.' : 'Copy failed. Select and copy the text manually.'));
 }
 
 function escHtml(str) {
@@ -534,6 +528,7 @@ function skipLead() {}
 ───────────────────────── */
 function saveDraft() {
   const draft = {
+    editedMessage: document.getElementById('waBubble').value, messageVariation: currentVariation,
     bizName: v('bizName'), senderName: v('senderName'),
     bizPhone: v('bizPhone'), upiId: v('upiId'),
     paymentLink: v('paymentLink'), bankDetails: v('bankDetails'),
@@ -554,13 +549,14 @@ function saveDraft() {
     savedAt: new Date().toISOString()
   };
   SalesOnStorage.setItem('saleson_whatsapp_payment_reminder_draft', JSON.stringify(draft));
-  showToast('Draft saved ✓');
+  showToast(SalesOnStorage.persistent ? 'Draft saved ✓' : 'Not saved to browser storage. Keep this tab open or export your work.');
 }
 
 function loadDraft() {
   const raw = SalesOnStorage.getItem('saleson_whatsapp_payment_reminder_draft');
   if (!raw) { showToast('No saved draft found'); return; }
-  const d = JSON.parse(raw);
+  const d = SalesOnToolSafety.draft(raw);
+  if (!confirm('Restore saved draft? This replaces the current workspace.')) return;
 
   ['bizName','senderName','bizPhone','upiId','paymentLink','bankDetails',
    'custName','custShop','custPhone','custCity','custType','paymentAgainst',
@@ -575,8 +571,12 @@ function loadDraft() {
   if (d.inclFooter   !== undefined) document.getElementById('inclFooter').checked   = !!d.inclFooter;
 
   updateDaysOverdue();
+  currentVariation=Number.isInteger(d.messageVariation)&&d.messageVariation>=0&&d.messageVariation<3?d.messageVariation:0;
+  document.querySelectorAll('.var-tab').forEach((tab,i)=>tab.classList.toggle('active',i===currentVariation));
   generateMessage();
+  if(typeof d.editedMessage==='string'){generatedMessages[currentVariation]=d.editedMessage;document.getElementById('waBubble').value=d.editedMessage;}
   showToast('Draft loaded ✓');
+  return true;
 }
 
 /* ─────────────────────────
@@ -637,3 +637,5 @@ function sv(id, val) { const el = document.getElementById(id); if (el) el.value 
 ───────────────────────── */
 initDefaults();
 
+
+document.getElementById('waBubble').addEventListener('input',function(){generatedMessages[currentVariation]=this.value;});

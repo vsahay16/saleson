@@ -4,6 +4,7 @@ DirectoryIndex index.html
 DirectorySlash Off
 ErrorDocument 404 /404.html
 RewriteEngine On
+RewriteRule ^growth/grow-your-business(?:\.html)?/?$ https://saleson.co.in/ [R=301,L,NE]
 
 # Canonicalize externally requested URLs before internal file resolution.
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index(?:\.html)?(?:[?\s]) [NC]

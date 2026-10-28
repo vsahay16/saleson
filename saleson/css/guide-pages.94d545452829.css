@@ -15,3 +15,5 @@
 .industry-product-evidence img{width:100%;height:auto;max-height:480px;object-fit:contain;border:1px solid #dbe5ef;border-radius:14px;background:#f5f8fd;padding:12px}.industry-product-evidence figure{margin:24px 0 0}.industry-product-evidence figcaption{font-size:12px;color:#65758a;margin-top:8px;text-align:right}
 
 .so-guide h1{font-size:clamp(36px,3.65vw,48px)}.so-guide .so-facts{font-size:13px;color:#52677a;line-height:1.7}
+
+.so-guide .industry-scene{padding:0;background:transparent;border:0;box-shadow:none}.so-guide .industry-scene img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:16px;border:1px solid #e0e7ef}.so-guide .industry-scene figcaption{font-size:11px;line-height:1.5;color:#66758a;text-align:right;margin-top:8px}

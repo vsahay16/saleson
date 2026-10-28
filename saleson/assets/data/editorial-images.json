@@ -1,0 +1,150 @@
+{
+  "industries": {
+    "fmcg": {
+      "path": "/assets/img/editorial/industries/fmcg.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Illustrative scene: A field sales representative reviewing a grocery replenishment order with a shop owner"
+    },
+    "pharmacy": {
+      "path": "/assets/img/editorial/industries/pharmacy.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Illustrative scene: A woman pharmaceutical distribution manager reviewing unbranded sealed medicine cartons with a colleague at a clean stockroom dispatch bench, tablet and batch labels without legible writing"
+    },
+    "electronics": {
+      "path": "/assets/img/editorial/industries/electronics.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Illustrative scene: An Indian electronics wholesale manager checking unbranded keyboards, headphones and accessory boxes against a tablet order at a bright dispatch table"
+    },
+    "automotive": {
+      "path": "/assets/img/editorial/industries/automotive.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Illustrative scene: An Indian automotive parts dealer and sales rep at a bright parts counter, carefully arranged brake discs, filters and boxed spare parts, one tablet used to review the requested part"
+    },
+    "cosmetic": {
+      "path": "/assets/img/editorial/industries/cosmetic.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Illustrative scene: A cosmetics distributor at a refined shelf-lined stockroom arranging unbranded perfume bottles and skincare cartons while a woman rep checks an order on a tablet"
+    },
+    "hardware": {
+      "path": "/assets/img/editorial/industries/hardware.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Illustrative scene: An Indian hardware shop owner and a woman field rep reviewing a short order at a counter with organised fastener bins, hand tools and plain hardware cartons"
+    },
+    "telecommunication": {
+      "path": "/assets/img/editorial/industries/telecommunication.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Illustrative scene: An Indian telecom products dealer reviewing unbranded phones and packaged mobile accessories with a sales representative at a clean bright dealer counter"
+    },
+    "manufacturing": {
+      "path": "/assets/img/editorial/industries/manufacturing.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Illustrative scene: A woman operations manager and a production colleague reviewing finished goods on a factory packing bench, neatly arranged components and sealed cartons with a clean production line softly visible behind"
+    },
+    "agriculture": {
+      "path": "/assets/img/editorial/industries/agriculture.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Illustrative scene: An Indian agricultural-input dealer and a woman sales representative reviewing a tablet beside neatly stacked plain seed sacks, small seedling trays and a sunlit rural store entrance"
+    },
+    "publishing": {
+      "path": "/assets/img/editorial/industries/publishing.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Illustrative scene: A book distributor and a woman bookshop owner reviewing a stack of unbranded books and a tablet order at a sunlit bookstore stockroom counter, shelves of books with no legible titles"
+    },
+    "sport-and-fitness": {
+      "path": "/assets/img/editorial/industries/sport-and-fitness.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Illustrative scene: An Indian sports equipment dealer inspecting an order of rackets, footballs and rolled exercise mats with a sales representative using a tablet, bright organised equipment showroom"
+    },
+    "transport": {
+      "path": "/assets/img/editorial/industries/transport.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Illustrative scene: An Indian delivery driver and a woman dispatch supervisor reviewing a tablet beside sealed parcels at a clean loading dock, a plain white small delivery vehicle in the background"
+    }
+  },
+  "articles": {
+    "How-to-Optimize-Your-Distribution-Channels-for-Maximum-Profit": {
+      "path": "/assets/img/editorial/articles/How-to-Optimize-Your-Distribution-Channels-for-Maximum-Profit.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Editorial illustration: How to Optimize Your Distribution Channels for Maximum Profit"
+    },
+    "How-workflow-automation-enhances-team-collaboration-in-sales": {
+      "path": "/assets/img/editorial/articles/How-workflow-automation-enhances-team-collaboration-in-sales.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Editorial illustration: How Workflow Automation Enhances Team Collaboration in Sales"
+    },
+    "Top-Benefits-of-Automatic-Invoicing-for-B2B-Businesses": {
+      "path": "/assets/img/editorial/articles/Top-Benefits-of-Automatic-Invoicing-for-B2B-Businesses.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Editorial illustration: Top Benefits of Automatic Invoicing for B2B Businesses"
+    },
+    "Top-Sales-Strategies-for-Small-Businesses-in-2024": {
+      "path": "/assets/img/editorial/articles/Top-Sales-Strategies-for-Small-Businesses-in-2024.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Editorial illustration: Top Sales Strategies for Small Businesses in 2024"
+    },
+    "How-Real-Time-Sales-Tracking-Boosts-Productivity-and-Transparency": {
+      "path": "/assets/img/editorial/articles/How-Real-Time-Sales-Tracking-Boosts-Productivity-and-Transparency.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Editorial illustration: How Real-Time Sales Tracking Boosts Productivity and Transparency"
+    },
+    "How-Online-Marketplaces-Are-Disrupting-Traditional-Distribution-Channels": {
+      "path": "/assets/img/editorial/articles/How-Online-Marketplaces-Are-Disrupting-Traditional-Distribution-Channels.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Editorial illustration: How Online Marketplaces Are Disrupting Traditional Distribution Channels"
+    },
+    "Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains": {
+      "path": "/assets/img/editorial/articles/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Editorial illustration: Why Van Sales Are Essential for Modern B2B Supply Chains"
+    },
+    "The-Tech-Behind-the-Wheel-Electronics-in-Modern-Van-Sales": {
+      "path": "/assets/img/editorial/articles/The-Tech-Behind-the-Wheel-Electronics-in-Modern-Van-Sales.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Editorial illustration: The Tech Behind the Wheel: Electronics in Modern Van Sales"
+    },
+    "Sales-Force-Tracking-Privac-Performance-and-the-Path-to-Trust": {
+      "path": "/assets/img/editorial/articles/Sales-Force-Tracking-Privac-Performance-and-the-Path-to-Trust.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Editorial illustration: Sales Force Tracking: Privacy, Performance, and the Path to Trust"
+    },
+    "Reducing-Sales-Admin-Time-with-Automation-Tips-for-2024": {
+      "path": "/assets/img/editorial/articles/Reducing-Sales-Admin-Time-with-Automation-Tips-for-2024.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Editorial illustration: Reducing Sales Admin Time with Automation: Tips for 2024"
+    },
+    "The-Top-5-Sales-Challenges-B2B-Companies-Face": {
+      "path": "/assets/img/editorial/articles/The-Top-5-Sales-Challenges-B2B-Companies-Face.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Editorial illustration: The Top 5 Sales Challenges B2B Companies Face"
+    },
+    "Tracking-Industrial-Success-with-Target-Meters-and-Visual-KPIs": {
+      "path": "/assets/img/editorial/articles/Tracking-Industrial-Success-with-Target-Meters-and-Visual-KPIs.webp",
+      "width": 1000,
+      "height": 667,
+      "alt": "Editorial illustration: Tracking Industrial Success with Target Meters and Visual KPIs"
+    }
+  }
+}

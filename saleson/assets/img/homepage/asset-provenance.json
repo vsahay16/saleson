@@ -1,0 +1,8 @@
+{
+  "laptop-mobile-clear.webp": {
+    "source": "/assets/img/screen/hero-image1.png",
+    "method": "Built-in image generation edit: preserve the laptop, phone and source interface; remove badge and dotted circles; improve clarity on a pale blue-white background.",
+    "type": "Enhanced product-image recreation",
+    "prompt": "Retain the existing laptop and mobile and their on-screen interface; improve crispness, remove the decorative badge and circles, center the devices on a pale blue-white background with soft shadows. No added captions or floating graphics."
+  }
+}

@@ -1,7 +1,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),s=fs.readFileSync(path.join(root,'order-taking-app.html'),'utf8');
 assert.equal(s.match(/<title>(.*?)<\/title>/s)[1],'Order Taking App for Salesman | SalesOn');
-assert.equal(s.match(/<h1\b[^>]*>(.*?)<\/h1>/s)[1],'Order Taking App<br />for Salesman');
+assert.equal(s.match(/<h1\b[^>]*>(.*?)<\/h1>/s)[1],'Order Taking App<br/>for Salesman');
 assert.ok(s.includes('href="https://saleson.co.in/order-taking-app"'));
 const anchors=['how-it-works','smart-catalog','whatsapp-sharing','retailer-context','universal','faq','msme-block'];
 for(const id of anchors)assert.equal((s.match(new RegExp('id="'+id+'"','g'))||[]).length,1);

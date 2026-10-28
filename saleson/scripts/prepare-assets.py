@@ -7,8 +7,9 @@ from decimal import Decimal, ROUND_HALF_UP
 
 ROOT = Path(__file__).resolve().parents[1]
 subprocess.run([sys.executable,str(ROOT/'scripts/generate-pricing.py')],check=True)
-for name in ['build-audience-pages.py','build-comparisons.py','build-page-theme.py','extract-tool-assets.py']:
+for name in ['build-audience-pages.py','build-comparisons.py','build-page-theme.py','build-editorial-assets.py','build-client-showcases.py','extract-tool-assets.py']:
     subprocess.run([sys.executable,str(ROOT/'scripts'/name)],check=True)
+subprocess.run([sys.executable,str(ROOT/'scripts/prepare-tracking-seo.py')],check=True)
 manifest_path = ROOT / 'assets-manifest.json'
 previous = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
 pages = sorted(ROOT.rglob('*.html'))

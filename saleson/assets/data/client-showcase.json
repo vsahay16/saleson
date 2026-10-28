@@ -1,0 +1,670 @@
+{
+  "clients": {
+    "indianoil": {
+      "name": "IndianOil / IOCL",
+      "logo": "assets/img/clients/master/indianoil.webp",
+      "logo_dimensions": [
+        240,
+        218
+      ],
+      "dark_background": false,
+      "modules": [
+        "Field Sales",
+        "DMS",
+        "Payment Collection",
+        "Delivery"
+      ]
+    },
+    "mtn": {
+      "name": "MTN",
+      "logo": "assets/img/clients/master/mtn.webp",
+      "logo_dimensions": [
+        240,
+        120
+      ],
+      "dark_background": false,
+      "modules": [
+        "Field Sales",
+        "Salesman Tracking",
+        "Payment Collection",
+        "DMS"
+      ]
+    },
+    "reliance-consumer-products": {
+      "name": "Reliance Consumer Products",
+      "logo": "assets/img/clients/master/reliance-consumer-products.webp",
+      "logo_dimensions": [
+        240,
+        109
+      ],
+      "dark_background": false,
+      "modules": []
+    },
+    "waycool-brandsnext": {
+      "name": "Waycool / Brandsnext",
+      "logo": "assets/img/clients/master/waycool-brandsnext.webp",
+      "logo_dimensions": [
+        128,
+        34
+      ],
+      "dark_background": false,
+      "modules": [
+        "Order Taking",
+        "DMS",
+        "GST Invoicing",
+        "Payment Collection"
+      ]
+    },
+    "lapcare": {
+      "name": "Lapcare",
+      "logo": "assets/img/clients/master/lapcare.webp",
+      "logo_dimensions": [
+        500,
+        101
+      ],
+      "dark_background": false,
+      "modules": [
+        "Order Taking",
+        "Field Sales",
+        "GST Invoicing",
+        "Tally"
+      ]
+    },
+    "rapoo-india": {
+      "name": "Rapoo India",
+      "logo": "assets/img/clients/master/rapoo-india.webp",
+      "logo_dimensions": [
+        156,
+        44
+      ],
+      "dark_background": false,
+      "modules": [
+        "Order Taking",
+        "GST Invoicing",
+        "Tally",
+        "Field Sales"
+      ]
+    },
+    "britannia": {
+      "name": "Britannia",
+      "logo": "assets/img/clients/master/britannia.webp",
+      "logo_dimensions": [
+        640,
+        301
+      ],
+      "dark_background": false,
+      "modules": []
+    },
+    "nestle": {
+      "name": "Nestlé",
+      "logo": "assets/img/clients/master/nestle.webp",
+      "logo_dimensions": [
+        300,
+        168
+      ],
+      "dark_background": false,
+      "modules": []
+    },
+    "pg": {
+      "name": "P&G",
+      "logo": "assets/img/clients/master/pg.webp",
+      "logo_dimensions": [
+        336,
+        150
+      ],
+      "dark_background": false,
+      "modules": []
+    },
+    "parle": {
+      "name": "Parle",
+      "logo": "assets/img/clients/master/parle.webp",
+      "logo_dimensions": [
+        480,
+        320
+      ],
+      "dark_background": false,
+      "modules": []
+    },
+    "himalaya": {
+      "name": "Himalaya",
+      "logo": "assets/img/clients/master/himalaya.webp",
+      "logo_dimensions": [
+        377,
+        134
+      ],
+      "dark_background": false,
+      "modules": []
+    },
+    "african-cotton": {
+      "name": "African Cotton Industries Ltd",
+      "logo": "assets/img/clients/master/african-cotton.webp",
+      "logo_dimensions": [
+        216,
+        112
+      ],
+      "dark_background": false,
+      "modules": [
+        "Production",
+        "DMS",
+        "GST Invoicing",
+        "Tally"
+      ]
+    },
+    "rubine-glass": {
+      "name": "Rubine Glass / Rubine Tuff",
+      "logo": "assets/img/clients/master/rubine-glass.webp",
+      "logo_dimensions": [
+        124,
+        63
+      ],
+      "dark_background": false,
+      "modules": [
+        "Order Taking",
+        "Delivery",
+        "GST Invoicing",
+        "Payment Collection"
+      ]
+    },
+    "suruchi-foods": {
+      "name": "Suruchi Foods",
+      "logo": "assets/img/clients/master/suruchi-foods.webp",
+      "logo_dimensions": [
+        320,
+        320
+      ],
+      "dark_background": false,
+      "modules": [
+        "Order Taking",
+        "GST Invoicing",
+        "Payment Collection",
+        "Delivery"
+      ]
+    },
+    "bambino": {
+      "name": "Bambino",
+      "logo": "assets/img/clients/master/bambino.webp",
+      "logo_dimensions": [
+        225,
+        225
+      ],
+      "dark_background": false,
+      "modules": []
+    },
+    "first-katalyst": {
+      "name": "First Katalyst Marketing Ltd",
+      "logo": "assets/img/clients/master/first-katalyst.webp",
+      "logo_dimensions": [
+        211,
+        145
+      ],
+      "dark_background": false,
+      "modules": [
+        "Field Sales",
+        "Order Taking",
+        "GST Invoicing",
+        "Payment Collection"
+      ]
+    },
+    "gene-theraptics": {
+      "name": "Gene Theraptics Pharma",
+      "logo": "assets/img/clients/master/gene-theraptics.webp",
+      "logo_dimensions": [
+        293,
+        200
+      ],
+      "dark_background": false,
+      "modules": [
+        "Field Sales",
+        "GST Invoicing",
+        "Payment Collection",
+        "Delivery"
+      ]
+    },
+    "upsilon": {
+      "name": "Upsilon",
+      "logo": "assets/img/clients/master/upsilon.webp",
+      "logo_dimensions": [
+        180,
+        27
+      ],
+      "dark_background": false,
+      "modules": [
+        "Order Taking",
+        "GST Invoicing",
+        "Tally",
+        "Delivery"
+      ]
+    },
+    "panchamrutha-industries": {
+      "name": "Panchamrutha Industries",
+      "logo": null,
+      "logo_dimensions": null,
+      "dark_background": false,
+      "modules": [
+        "Production",
+        "DMS",
+        "GST Invoicing",
+        "Tally"
+      ]
+    },
+    "durest-mattress": {
+      "name": "Durest Mattress",
+      "logo": null,
+      "logo_dimensions": null,
+      "dark_background": false,
+      "modules": [
+        "Order Taking",
+        "DMS",
+        "GST Invoicing",
+        "Payment Collection"
+      ]
+    },
+    "jagan-food-products": {
+      "name": "Jagan Food Products",
+      "logo": null,
+      "logo_dimensions": null,
+      "dark_background": false,
+      "modules": [
+        "Production",
+        "Order Taking",
+        "GST Invoicing",
+        "Tally"
+      ]
+    },
+    "fitnest-eggs": {
+      "name": "FitNest Eggs",
+      "logo": "assets/img/clients/master/fitnest-eggs.webp",
+      "logo_dimensions": [
+        304,
+        320
+      ],
+      "dark_background": false,
+      "modules": [
+        "Order Taking",
+        "Delivery",
+        "Payment Collection",
+        "Field Sales"
+      ]
+    },
+    "dhanshi-snacks": {
+      "name": "Dhanshi Snacks and Beverages",
+      "logo": null,
+      "logo_dimensions": null,
+      "dark_background": false,
+      "modules": [
+        "Order Taking",
+        "Delivery",
+        "GST Invoicing",
+        "Payment Collection"
+      ]
+    },
+    "remi-martin": {
+      "name": "Remi Martin",
+      "logo": null,
+      "logo_dimensions": null,
+      "dark_background": false,
+      "modules": [
+        "Van Sales",
+        "Delivery",
+        "GST Invoicing",
+        "Tally"
+      ]
+    },
+    "tap-house-beverages": {
+      "name": "Tap House Beverages Pvt Ltd",
+      "logo": null,
+      "logo_dimensions": null,
+      "dark_background": false,
+      "modules": [
+        "Van Sales",
+        "Delivery",
+        "GST Invoicing",
+        "Payment Collection"
+      ]
+    },
+    "happilo": {
+      "name": "Happilo",
+      "logo": "assets/img/clients/master/happilo.webp",
+      "logo_dimensions": [
+        310,
+        163
+      ],
+      "dark_background": false,
+      "modules": []
+    },
+    "guin-agri-solutions": {
+      "name": "Guin Agri Solutions",
+      "logo": "assets/img/clients/master/guin-agri-solutions.webp",
+      "logo_dimensions": [
+        224,
+        225
+      ],
+      "dark_background": false,
+      "modules": []
+    },
+    "hamilton": {
+      "name": "Hamilton — Electronics & Home Appliances",
+      "logo": "assets/img/clients/master/hamilton.webp",
+      "logo_dimensions": [
+        293,
+        85
+      ],
+      "dark_background": false,
+      "modules": []
+    },
+    "rss-metals": {
+      "name": "RSS Metals",
+      "logo": "assets/img/clients/master/rss-metals.webp",
+      "logo_dimensions": [
+        428,
+        304
+      ],
+      "dark_background": false,
+      "modules": []
+    },
+    "vbond": {
+      "name": "V-Bond",
+      "logo": "assets/img/clients/master/vbond.webp",
+      "logo_dimensions": [
+        100,
+        60
+      ],
+      "dark_background": false,
+      "modules": []
+    },
+    "emami": {
+      "name": "Emami",
+      "logo": "assets/img/clients/master/emami.webp",
+      "logo_dimensions": [
+        237,
+        213
+      ],
+      "dark_background": false,
+      "modules": []
+    }
+  },
+  "pages": [
+    {
+      "page": "homepage",
+      "basis": "general_client_showcase",
+      "clients": [
+        "indianoil",
+        "mtn",
+        "reliance-consumer-products",
+        "waycool-brandsnext",
+        "lapcare",
+        "rapoo-india",
+        "britannia",
+        "nestle"
+      ]
+    },
+    {
+      "page": "about",
+      "basis": "general_client_showcase",
+      "clients": [
+        "indianoil",
+        "mtn",
+        "reliance-consumer-products",
+        "waycool-brandsnext",
+        "lapcare",
+        "rapoo-india",
+        "britannia",
+        "nestle",
+        "pg",
+        "parle",
+        "himalaya",
+        "african-cotton"
+      ]
+    },
+    {
+      "page": "request-demo",
+      "basis": "general_client_showcase",
+      "clients": [
+        "indianoil",
+        "mtn",
+        "lapcare",
+        "waycool-brandsnext"
+      ]
+    },
+    {
+      "page": "pricing",
+      "basis": "general_client_showcase",
+      "clients": [
+        "lapcare",
+        "rubine-glass",
+        "suruchi-foods",
+        "bambino"
+      ]
+    },
+    {
+      "page": "field-sales",
+      "basis": "owner_indexed_module_use",
+      "clients": [
+        "indianoil",
+        "mtn",
+        "lapcare",
+        "rapoo-india",
+        "first-katalyst",
+        "gene-theraptics"
+      ]
+    },
+    {
+      "page": "order-taking-app",
+      "basis": "owner_indexed_module_use",
+      "clients": [
+        "lapcare",
+        "rapoo-india",
+        "waycool-brandsnext",
+        "rubine-glass",
+        "upsilon",
+        "suruchi-foods"
+      ]
+    },
+    {
+      "page": "distribution-management-system",
+      "basis": "owner_indexed_module_use",
+      "clients": [
+        "indianoil",
+        "mtn",
+        "waycool-brandsnext",
+        "african-cotton",
+        "panchamrutha-industries",
+        "durest-mattress"
+      ]
+    },
+    {
+      "page": "salesman-tracking",
+      "basis": "owner_indexed_module_use",
+      "clients": [
+        "mtn"
+      ]
+    },
+    {
+      "page": "payment-collection",
+      "basis": "owner_indexed_module_use",
+      "clients": [
+        "indianoil",
+        "mtn",
+        "waycool-brandsnext",
+        "rubine-glass",
+        "first-katalyst",
+        "suruchi-foods"
+      ]
+    },
+    {
+      "page": "invoicing",
+      "basis": "owner_indexed_module_use",
+      "clients": [
+        "lapcare",
+        "rapoo-india",
+        "african-cotton",
+        "rubine-glass",
+        "upsilon",
+        "gene-theraptics"
+      ]
+    },
+    {
+      "page": "production",
+      "basis": "owner_indexed_module_use",
+      "clients": [
+        "african-cotton",
+        "panchamrutha-industries",
+        "jagan-food-products"
+      ]
+    },
+    {
+      "page": "delivery-management",
+      "basis": "owner_indexed_module_use",
+      "clients": [
+        "indianoil",
+        "rubine-glass",
+        "upsilon",
+        "gene-theraptics",
+        "fitnest-eggs",
+        "dhanshi-snacks"
+      ]
+    },
+    {
+      "page": "van-sales",
+      "basis": "owner_indexed_module_use",
+      "clients": [
+        "remi-martin",
+        "tap-house-beverages"
+      ]
+    },
+    {
+      "page": "tally-integration",
+      "basis": "owner_indexed_module_use",
+      "clients": [
+        "lapcare",
+        "rapoo-india",
+        "african-cotton",
+        "upsilon",
+        "panchamrutha-industries",
+        "jagan-food-products"
+      ]
+    },
+    {
+      "page": "inventory-management",
+      "basis": "owner_indexed_DMS_adjacent",
+      "clients": [
+        "waycool-brandsnext",
+        "african-cotton",
+        "durest-mattress",
+        "indianoil"
+      ]
+    },
+    {
+      "page": "mobile-app",
+      "basis": "general_client_showcase",
+      "clients": [
+        "lapcare",
+        "rapoo-india",
+        "first-katalyst",
+        "mtn"
+      ]
+    },
+    {
+      "page": "user/software-for-manufacturers",
+      "basis": "general_client_showcase",
+      "clients": [
+        "african-cotton",
+        "rubine-glass",
+        "panchamrutha-industries",
+        "jagan-food-products"
+      ]
+    },
+    {
+      "page": "user/software-for-distributors",
+      "basis": "general_client_showcase",
+      "clients": [
+        "waycool-brandsnext",
+        "lapcare",
+        "rapoo-india",
+        "suruchi-foods",
+        "african-cotton",
+        "dhanshi-snacks"
+      ]
+    },
+    {
+      "page": "user/software-for-retailers",
+      "basis": "general_client_showcase",
+      "clients": [
+        "suruchi-foods",
+        "upsilon"
+      ]
+    },
+    {
+      "page": "industries/fmcg",
+      "basis": "sector_relevance",
+      "clients": [
+        "reliance-consumer-products",
+        "waycool-brandsnext",
+        "britannia",
+        "nestle",
+        "parle",
+        "happilo"
+      ]
+    },
+    {
+      "page": "industries/agriculture",
+      "basis": "sector_relevance",
+      "clients": [
+        "guin-agri-solutions"
+      ]
+    },
+    {
+      "page": "industries/pharmacy",
+      "basis": "sector_relevance",
+      "clients": [
+        "gene-theraptics",
+        "himalaya"
+      ]
+    },
+    {
+      "page": "industries/electronics",
+      "basis": "sector_relevance",
+      "clients": [
+        "lapcare",
+        "rapoo-india",
+        "hamilton"
+      ]
+    },
+    {
+      "page": "industries/hardware",
+      "basis": "sector_relevance",
+      "clients": [
+        "rubine-glass",
+        "rss-metals",
+        "vbond"
+      ]
+    },
+    {
+      "page": "industries/manufacturing",
+      "basis": "sector_relevance",
+      "clients": [
+        "african-cotton",
+        "panchamrutha-industries",
+        "jagan-food-products",
+        "rubine-glass"
+      ]
+    },
+    {
+      "page": "industries/cosmetic",
+      "basis": "sector_relevance",
+      "clients": [
+        "upsilon",
+        "himalaya",
+        "emami",
+        "pg"
+      ]
+    },
+    {
+      "page": "industries/telecommunication",
+      "basis": "sector_relevance",
+      "clients": [
+        "mtn"
+      ]
+    }
+  ]
+}

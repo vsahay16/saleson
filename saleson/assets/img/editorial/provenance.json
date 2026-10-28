@@ -1,0 +1,194 @@
+[
+  {
+    "group": "industries",
+    "slug": "fmcg",
+    "file": "assets/img/editorial/industries/fmcg.webp",
+    "source": "exec-f006f16f-006d-4979-8c73-4e7739c70a61.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Editorial FMCG scene: field representative and grocery owner reviewing a tablet, unbranded groceries and cartons, pale blue-white and cobalt palette, no text or logos."
+  },
+  {
+    "group": "industries",
+    "slug": "pharmacy",
+    "file": "assets/img/editorial/industries/pharmacy.webp",
+    "source": "exec-ab9bf9c4-4c69-4d8c-a514-ec684f990dd9.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: photorealistic-natural. Asset type: SalesOn industry webpage hero, landscape 3:2. A woman pharmaceutical distribution manager reviewing unbranded sealed medicine cartons with a colleague at a clean stockroom dispatch bench, tablet and batch labels without legible writing. No patients, doctors or dispensing. Premium natural editorial photograph style, cobalt blue #1143b6 accents, pale blue-white and warm neutral surroundings, soft daylight, believable human proportions and hands. A single coherent scene with purposeful detail and a clean composition. No text, numbers, labels, logos, captions, watermarks, floating UI, fake dashboards or decorative metrics. Not a real customer photograph; do not portray identifiable public figures. Keep people and key products fully in frame."
+  },
+  {
+    "group": "industries",
+    "slug": "electronics",
+    "file": "assets/img/editorial/industries/electronics.webp",
+    "source": "exec-6381ca09-5eeb-4869-bc49-0aca9c4ab7ed.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: photorealistic-natural. Asset type: SalesOn industry webpage hero, landscape 3:2. An Indian electronics wholesale manager checking unbranded keyboards, headphones and accessory boxes against a tablet order at a bright dispatch table. Crisp product detail, organised shelving. Premium natural editorial photograph style, cobalt blue #1143b6 accents, pale blue-white and warm neutral surroundings, soft daylight, believable human proportions and hands. A single coherent scene with purposeful detail and a clean composition. No text, numbers, labels, logos, captions, watermarks, floating UI, fake dashboards or decorative metrics. Not a real customer photograph; do not portray identifiable public figures. Keep people and key products fully in frame."
+  },
+  {
+    "group": "industries",
+    "slug": "automotive",
+    "file": "assets/img/editorial/industries/automotive.webp",
+    "source": "exec-54048b87-16be-4df4-9542-91c035216fb6.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: photorealistic-natural. Asset type: SalesOn industry webpage hero, landscape 3:2. An Indian automotive parts dealer and sales rep at a bright parts counter, carefully arranged brake discs, filters and boxed spare parts, one tablet used to review the requested part. No car logos. Premium natural editorial photograph style, cobalt blue #1143b6 accents, pale blue-white and warm neutral surroundings, soft daylight, believable human proportions and hands. A single coherent scene with purposeful detail and a clean composition. No text, numbers, labels, logos, captions, watermarks, floating UI, fake dashboards or decorative metrics. Not a real customer photograph; do not portray identifiable public figures. Keep people and key products fully in frame."
+  },
+  {
+    "group": "industries",
+    "slug": "cosmetic",
+    "file": "assets/img/editorial/industries/cosmetic.webp",
+    "source": "exec-0dda3819-30ea-450e-ba13-8d8662d1ca58.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: photorealistic-natural. Asset type: SalesOn industry webpage hero, landscape 3:2. A cosmetics distributor at a refined shelf-lined stockroom arranging unbranded perfume bottles and skincare cartons while a woman rep checks an order on a tablet. Warm cream details and restrained blue accents. Premium natural editorial photograph style, cobalt blue #1143b6 accents, pale blue-white and warm neutral surroundings, soft daylight, believable human proportions and hands. A single coherent scene with purposeful detail and a clean composition. No text, numbers, labels, logos, captions, watermarks, floating UI, fake dashboards or decorative metrics. Not a real customer photograph; do not portray identifiable public figures. Keep people and key products fully in frame."
+  },
+  {
+    "group": "industries",
+    "slug": "hardware",
+    "file": "assets/img/editorial/industries/hardware.webp",
+    "source": "exec-c87afe4e-f476-4375-b400-651868bd271a.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: photorealistic-natural. Asset type: SalesOn industry webpage hero, landscape 3:2. An Indian hardware shop owner and a woman field rep reviewing a short order at a counter with organised fastener bins, hand tools and plain hardware cartons. Product selection is the subject. Premium natural editorial photograph style, cobalt blue #1143b6 accents, pale blue-white and warm neutral surroundings, soft daylight, believable human proportions and hands. A single coherent scene with purposeful detail and a clean composition. No text, numbers, labels, logos, captions, watermarks, floating UI, fake dashboards or decorative metrics. Not a real customer photograph; do not portray identifiable public figures. Keep people and key products fully in frame."
+  },
+  {
+    "group": "industries",
+    "slug": "telecommunication",
+    "file": "assets/img/editorial/industries/telecommunication.webp",
+    "source": "exec-a34fc188-1f11-4454-8564-ef796febc8e1.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: photorealistic-natural. Asset type: SalesOn industry webpage hero, landscape 3:2. An Indian telecom products dealer reviewing unbranded phones and packaged mobile accessories with a sales representative at a clean bright dealer counter. Physical product distribution, no telecom tower or SIM activation imagery. Premium natural editorial photograph style, cobalt blue #1143b6 accents, pale blue-white and warm neutral surroundings, soft daylight, believable human proportions and hands. A single coherent scene with purposeful detail and a clean composition. No text, numbers, labels, logos, captions, watermarks, floating UI, fake dashboards or decorative metrics. Not a real customer photograph; do not portray identifiable public figures. Keep people and key products fully in frame."
+  },
+  {
+    "group": "industries",
+    "slug": "manufacturing",
+    "file": "assets/img/editorial/industries/manufacturing.webp",
+    "source": "exec-4fc72b04-2986-4667-882d-bd426ce7e591.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: photorealistic-natural. Asset type: SalesOn industry webpage hero, landscape 3:2. A woman operations manager and a production colleague reviewing finished goods on a factory packing bench, neatly arranged components and sealed cartons with a clean production line softly visible behind. Tablet held by manager. Premium natural editorial photograph style, cobalt blue #1143b6 accents, pale blue-white and warm neutral surroundings, soft daylight, believable human proportions and hands. A single coherent scene with purposeful detail and a clean composition. No text, numbers, labels, logos, captions, watermarks, floating UI, fake dashboards or decorative metrics. Not a real customer photograph; do not portray identifiable public figures. Keep people and key products fully in frame."
+  },
+  {
+    "group": "industries",
+    "slug": "agriculture",
+    "file": "assets/img/editorial/industries/agriculture.webp",
+    "source": "exec-92145213-7002-497d-aa00-5ab8118363bd.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: photorealistic-natural. Asset type: SalesOn industry webpage hero, landscape 3:2. An Indian agricultural-input dealer and a woman sales representative reviewing a tablet beside neatly stacked plain seed sacks, small seedling trays and a sunlit rural store entrance. Focus on dealer replenishment, not farming advice. Premium natural editorial photograph style, cobalt blue #1143b6 accents, pale blue-white and warm neutral surroundings, soft daylight, believable human proportions and hands. A single coherent scene with purposeful detail and a clean composition. No text, numbers, labels, logos, captions, watermarks, floating UI, fake dashboards or decorative metrics. Not a real customer photograph; do not portray identifiable public figures. Keep people and key products fully in frame."
+  },
+  {
+    "group": "industries",
+    "slug": "publishing",
+    "file": "assets/img/editorial/industries/publishing.webp",
+    "source": "exec-bafd6373-f2ae-40f5-9630-e7850bef1120.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: photorealistic-natural. Asset type: SalesOn industry webpage hero, landscape 3:2. A book distributor and a woman bookshop owner reviewing a stack of unbranded books and a tablet order at a sunlit bookstore stockroom counter, shelves of books with no legible titles. Premium natural editorial photograph style, cobalt blue #1143b6 accents, pale blue-white and warm neutral surroundings, soft daylight, believable human proportions and hands. A single coherent scene with purposeful detail and a clean composition. No text, numbers, labels, logos, captions, watermarks, floating UI, fake dashboards or decorative metrics. Not a real customer photograph; do not portray identifiable public figures. Keep people and key products fully in frame."
+  },
+  {
+    "group": "industries",
+    "slug": "sport-and-fitness",
+    "file": "assets/img/editorial/industries/sport-and-fitness.webp",
+    "source": "exec-b7668910-afe6-4982-a7cb-971b9390c70e.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: photorealistic-natural. Asset type: SalesOn industry webpage hero, landscape 3:2. An Indian sports equipment dealer inspecting an order of rackets, footballs and rolled exercise mats with a sales representative using a tablet, bright organised equipment showroom. Premium natural editorial photograph style, cobalt blue #1143b6 accents, pale blue-white and warm neutral surroundings, soft daylight, believable human proportions and hands. A single coherent scene with purposeful detail and a clean composition. No text, numbers, labels, logos, captions, watermarks, floating UI, fake dashboards or decorative metrics. Not a real customer photograph; do not portray identifiable public figures. Keep people and key products fully in frame."
+  },
+  {
+    "group": "industries",
+    "slug": "transport",
+    "file": "assets/img/editorial/industries/transport.webp",
+    "source": "exec-378a4fa3-db65-4c95-950d-039e438eb89c.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: photorealistic-natural. Asset type: SalesOn industry webpage hero, landscape 3:2. An Indian delivery driver and a woman dispatch supervisor reviewing a tablet beside sealed parcels at a clean loading dock, a plain white small delivery vehicle in the background. Shipment handover, not freight finance. Premium natural editorial photograph style, cobalt blue #1143b6 accents, pale blue-white and warm neutral surroundings, soft daylight, believable human proportions and hands. A single coherent scene with purposeful detail and a clean composition. No text, numbers, labels, logos, captions, watermarks, floating UI, fake dashboards or decorative metrics. Not a real customer photograph; do not portray identifiable public figures. Keep people and key products fully in frame."
+  },
+  {
+    "group": "articles",
+    "slug": "How-to-Optimize-Your-Distribution-Channels-for-Maximum-Profit",
+    "file": "assets/img/editorial/articles/How-to-Optimize-Your-Distribution-Channels-for-Maximum-Profit.webp",
+    "source": "exec-90399e10-9859-474c-bbe1-620a18d03ffe.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: illustration-story. Asset type: SalesOn journal article illustration, landscape 3:2. A refined miniature distribution network: one central warehouse connected by three short blue routes to a neighbourhood shop, a dealer counter and a delivery van. Carefully spaced physical models, no diagram labels or metrics. Polished handcrafted three-dimensional editorial illustration with subtle paper and ceramic textures, cobalt blue #1143b6, muted teal, pale blue-white background and warm kraft accents. Soft daylight, soft realistic shadows, precise calm composition, human figures naturally proportioned when present. Single scene, no collage, no infographic. No words, numbers, labels, company logos, watermark, slogans, fake product screenshots or exaggerated upward growth arrows."
+  },
+  {
+    "group": "articles",
+    "slug": "How-workflow-automation-enhances-team-collaboration-in-sales",
+    "file": "assets/img/editorial/articles/How-workflow-automation-enhances-team-collaboration-in-sales.webp",
+    "source": "exec-a14732a5-9cee-46e6-b334-cf012d05589c.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: illustration-story. Asset type: SalesOn journal article illustration, landscape 3:2. An elegant three-dimensional editorial scene of three small human figures at connected workstations passing one blue order folder from a field tablet to an office desk and dispatch trolley, a clear continuous handover. Polished handcrafted three-dimensional editorial illustration with subtle paper and ceramic textures, cobalt blue #1143b6, muted teal, pale blue-white background and warm kraft accents. Soft daylight, soft realistic shadows, precise calm composition, human figures naturally proportioned when present. Single scene, no collage, no infographic. No words, numbers, labels, company logos, watermark, slogans, fake product screenshots or exaggerated upward growth arrows."
+  },
+  {
+    "group": "articles",
+    "slug": "Top-Benefits-of-Automatic-Invoicing-for-B2B-Businesses",
+    "file": "assets/img/editorial/articles/Top-Benefits-of-Automatic-Invoicing-for-B2B-Businesses.webp",
+    "source": "exec-00f972ba-3c83-4e5e-8692-eb44f5f48da7.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: illustration-story. Asset type: SalesOn journal article illustration, landscape 3:2. An elegant desk still-life: a digital tablet with an abstract invoice containing simple blank rows, a tidy paper invoice and a compact printer, a restrained blue confirmation check shape. No readable text, actual numbers or product screen. Polished handcrafted three-dimensional editorial illustration with subtle paper and ceramic textures, cobalt blue #1143b6, muted teal, pale blue-white background and warm kraft accents. Soft daylight, soft realistic shadows, precise calm composition, human figures naturally proportioned when present. Single scene, no collage, no infographic. No words, numbers, labels, company logos, watermark, slogans, fake product screenshots or exaggerated upward growth arrows."
+  },
+  {
+    "group": "articles",
+    "slug": "Top-Sales-Strategies-for-Small-Businesses-in-2024",
+    "file": "assets/img/editorial/articles/Top-Sales-Strategies-for-Small-Businesses-in-2024.webp",
+    "source": "exec-1b64c8d9-f480-473f-9016-daa4e0b165f3.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: illustration-story. Asset type: SalesOn journal article illustration, landscape 3:2. A small business owner at an airy planning desk arranging three customer visit cards beside a folded street map, a small calendar without words, and a tablet. Thoughtful sales planning, no arrows to growth charts. Polished handcrafted three-dimensional editorial illustration with subtle paper and ceramic textures, cobalt blue #1143b6, muted teal, pale blue-white background and warm kraft accents. Soft daylight, soft realistic shadows, precise calm composition, human figures naturally proportioned when present. Single scene, no collage, no infographic. No words, numbers, labels, company logos, watermark, slogans, fake product screenshots or exaggerated upward growth arrows."
+  },
+  {
+    "group": "articles",
+    "slug": "How-Real-Time-Sales-Tracking-Boosts-Productivity-and-Transparency",
+    "file": "assets/img/editorial/articles/How-Real-Time-Sales-Tracking-Boosts-Productivity-and-Transparency.webp",
+    "source": "exec-3e6a1e63-475a-4fa0-9894-f5ae12f54fe6.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: illustration-story. Asset type: SalesOn journal article illustration, landscape 3:2. A refined miniature tabletop map of a few streets and shop buildings with three cobalt location markers, a manager reviewing the map on a tablet, one field rep by a shop. No realistic personal map records. Polished handcrafted three-dimensional editorial illustration with subtle paper and ceramic textures, cobalt blue #1143b6, muted teal, pale blue-white background and warm kraft accents. Soft daylight, soft realistic shadows, precise calm composition, human figures naturally proportioned when present. Single scene, no collage, no infographic. No words, numbers, labels, company logos, watermark, slogans, fake product screenshots or exaggerated upward growth arrows."
+  },
+  {
+    "group": "articles",
+    "slug": "How-Online-Marketplaces-Are-Disrupting-Traditional-Distribution-Channels",
+    "file": "assets/img/editorial/articles/How-Online-Marketplaces-Are-Disrupting-Traditional-Distribution-Channels.webp",
+    "source": "exec-cda55e8a-37f4-44d2-8734-f1e96a5700e0.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: illustration-story. Asset type: SalesOn journal article illustration, landscape 3:2. A miniature warehouse table connected visually to both a small physical shop and a generic online storefront on a tablet, parcels moving through the two channels. No ecommerce company logos or fake interface text. Polished handcrafted three-dimensional editorial illustration with subtle paper and ceramic textures, cobalt blue #1143b6, muted teal, pale blue-white background and warm kraft accents. Soft daylight, soft realistic shadows, precise calm composition, human figures naturally proportioned when present. Single scene, no collage, no infographic. No words, numbers, labels, company logos, watermark, slogans, fake product screenshots or exaggerated upward growth arrows."
+  },
+  {
+    "group": "articles",
+    "slug": "Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains",
+    "file": "assets/img/editorial/articles/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains.webp",
+    "source": "exec-c0617c9d-745f-4f87-aa10-d3a7e82493fb.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: illustration-story. Asset type: SalesOn journal article illustration, landscape 3:2. A miniature white and cobalt delivery van open at the rear with a tidy organised load; a salesperson hands a small carton to a neighbourhood shopkeeper. Emphasise selling from carried stock. Polished handcrafted three-dimensional editorial illustration with subtle paper and ceramic textures, cobalt blue #1143b6, muted teal, pale blue-white background and warm kraft accents. Soft daylight, soft realistic shadows, precise calm composition, human figures naturally proportioned when present. Single scene, no collage, no infographic. No words, numbers, labels, company logos, watermark, slogans, fake product screenshots or exaggerated upward growth arrows."
+  },
+  {
+    "group": "articles",
+    "slug": "The-Tech-Behind-the-Wheel-Electronics-in-Modern-Van-Sales",
+    "file": "assets/img/editorial/articles/The-Tech-Behind-the-Wheel-Electronics-in-Modern-Van-Sales.webp",
+    "source": "exec-2e637886-5015-4505-988b-0529c460d6c3.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: illustration-story. Asset type: SalesOn journal article illustration, landscape 3:2. A close editorial still-life inside the open rear of a delivery van: handheld tablet, compact mobile receipt printer and neatly arranged product crates. Clean functional hardware details, no actual product UI. Polished handcrafted three-dimensional editorial illustration with subtle paper and ceramic textures, cobalt blue #1143b6, muted teal, pale blue-white background and warm kraft accents. Soft daylight, soft realistic shadows, precise calm composition, human figures naturally proportioned when present. Single scene, no collage, no infographic. No words, numbers, labels, company logos, watermark, slogans, fake product screenshots or exaggerated upward growth arrows."
+  },
+  {
+    "group": "articles",
+    "slug": "Sales-Force-Tracking-Privac-Performance-and-the-Path-to-Trust",
+    "file": "assets/img/editorial/articles/Sales-Force-Tracking-Privac-Performance-and-the-Path-to-Trust.webp",
+    "source": "exec-2be62c8b-04c4-499a-82d2-3b183df4169d.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: illustration-story. Asset type: SalesOn journal article illustration, landscape 3:2. A respectful scene of a sales manager and field representative agreeing over a simple location map on a tablet, with a small blue shield-shaped token on the desk. Balanced collaboration and privacy, no surveillance cameras. Polished handcrafted three-dimensional editorial illustration with subtle paper and ceramic textures, cobalt blue #1143b6, muted teal, pale blue-white background and warm kraft accents. Soft daylight, soft realistic shadows, precise calm composition, human figures naturally proportioned when present. Single scene, no collage, no infographic. No words, numbers, labels, company logos, watermark, slogans, fake product screenshots or exaggerated upward growth arrows."
+  },
+  {
+    "group": "articles",
+    "slug": "Reducing-Sales-Admin-Time-with-Automation-Tips-for-2024",
+    "file": "assets/img/editorial/articles/Reducing-Sales-Admin-Time-with-Automation-Tips-for-2024.webp",
+    "source": "exec-13c5e7af-1e2a-48f3-abce-862a9723d8a2.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: illustration-story. Asset type: SalesOn journal article illustration, landscape 3:2. A refined desk scene where a modest pile of order slips is organised into one clean blue folder next to a tablet and a small neutral clock, two office colleagues reviewing it calmly. No readable UI or numerical time-saving claim. Polished handcrafted three-dimensional editorial illustration with subtle paper and ceramic textures, cobalt blue #1143b6, muted teal, pale blue-white background and warm kraft accents. Soft daylight, soft realistic shadows, precise calm composition, human figures naturally proportioned when present. Single scene, no collage, no infographic. No words, numbers, labels, company logos, watermark, slogans, fake product screenshots or exaggerated upward growth arrows."
+  },
+  {
+    "group": "articles",
+    "slug": "The-Top-5-Sales-Challenges-B2B-Companies-Face",
+    "file": "assets/img/editorial/articles/The-Top-5-Sales-Challenges-B2B-Companies-Face.webp",
+    "source": "exec-1965dbff-4859-4d42-8d21-157cf55cf6b4.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: illustration-story. Asset type: SalesOn journal article illustration, landscape 3:2. A carefully composed miniature distributor desk with three practical issues represented by a partly empty product shelf, a small stack of unpaid blank invoices and a tangled route string being straightened by two colleagues. Restrained, calm problem-solving. Polished handcrafted three-dimensional editorial illustration with subtle paper and ceramic textures, cobalt blue #1143b6, muted teal, pale blue-white background and warm kraft accents. Soft daylight, soft realistic shadows, precise calm composition, human figures naturally proportioned when present. Single scene, no collage, no infographic. No words, numbers, labels, company logos, watermark, slogans, fake product screenshots or exaggerated upward growth arrows."
+  },
+  {
+    "group": "articles",
+    "slug": "Tracking-Industrial-Success-with-Target-Meters-and-Visual-KPIs",
+    "file": "assets/img/editorial/articles/Tracking-Industrial-Success-with-Target-Meters-and-Visual-KPIs.webp",
+    "source": "exec-a2c5c82f-8689-45c1-ad74-1037660e12f2.png",
+    "method": "Built-in image generation; WebP format and size optimisation",
+    "prompt": "Use case: illustration-story. Asset type: SalesOn journal article illustration, landscape 3:2. A production sales manager reviewing a simple abstract progress board with three blue progress bars and a small target disc, finished-goods cartons on a nearby table. Illustrative performance review, no actual numbers or growth claims. Polished handcrafted three-dimensional editorial illustration with subtle paper and ceramic textures, cobalt blue #1143b6, muted teal, pale blue-white background and warm kraft accents. Soft daylight, soft realistic shadows, precise calm composition, human figures naturally proportioned when present. Single scene, no collage, no infographic. No words, numbers, labels, company logos, watermark, slogans, fake product screenshots or exaggerated upward growth arrows."
+  }
+]

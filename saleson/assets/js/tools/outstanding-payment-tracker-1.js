@@ -593,7 +593,7 @@ function exportCSV(rows) {
   const url  = URL.createObjectURL(blob);
   const a    = document.createElement('a');
   a.href = url; a.download = `Outstanding_${SalesOnDates.today()}.csv`;
-  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  document.body.appendChild(a); if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click(); document.body.removeChild(a);
   URL.revokeObjectURL(url);
   showToast('CSV exported ✓');
 }
@@ -606,7 +606,7 @@ Kumar General Store,9876543211,INV-2026-002,05/01/2026,20/01/2026,18000,0,0,Sure
   const url  = URL.createObjectURL(blob);
   const a    = document.createElement('a');
   a.href=url; a.download='SalesOn_Outstanding_Sample.csv';
-  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  document.body.appendChild(a); if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click(); document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
 

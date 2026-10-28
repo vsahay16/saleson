@@ -1,3 +1,5 @@
+/* SALESON_LEGACY_QUARANTINE: retain until remote GTM replacements are verified. */
+if (false) {
 /* Existing supplied advertising/analytics integrations, shared across feature pages. */
 if (!window.__salesonFeatureAnalyticsLoaded) {
 window.__salesonFeatureAnalyticsLoaded = true;
@@ -31,4 +33,6 @@ _linkedin_partner_id = "10538113";
       b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
       s.parentNode.insertBefore(b, s);
     })(window.lintrk);
+}
+
 }

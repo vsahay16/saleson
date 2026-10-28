@@ -1,134 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en-IN">
-
-<head>
-  <meta charset=utf8>
-  <meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
-
-    <link rel="icon" type="image/png" href="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-favicon.png"/>
-    <link rel="alternate" hreflang="en-IN" href="https://saleson.co.in/guide/quiz-pro"/>
-    <link rel="alternate" hreflang="x-default" href="https://saleson.co.in/guide/quiz-pro"/>
-  
-    <link rel="canonical" href="https://saleson.co.in/guide/quiz-pro">
-    <link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css">
-<title>Field Sales Quiz | SalesOn</title><meta name="description" content="Test your field sales knowledge with the SalesOn quiz. Practise everyday sales decisions in English and Indian languages, with feedback after each answer.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Hind:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+Gujarati:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="/css/field-sales-quiz.a97a1d608317.css">
-</head>
-
-<body>
-  <site-header source="tools-index"><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header><main id="main-content">
-
-
-  
-
-  <div class="wrap">
-    <div class="topbar">
-      <div class="brand">SalesOn<small data-i="brandSub"></small></div>
-      <div class="tools">
-        <select class="sel" id="langSel" hidden data-aria="langLabel"></select>
-        <div class="pill" id="pill" aria-live="polite"></div>
-      </div>
-    </div>
-
-    <!-- Intro -->
-    <section id="intro" class="card intro" aria-labelledby="introTitle">
-      <div class="langs" id="langRow" role="group" data-aria="langLabel"></div>
-      <p class="label" data-i="introLabel"></p>
-      <h1 id="introTitle" data-i="title"></h1>
-      <p class="lead" data-i="lead"></p>
-      <ul class="facts">
-        <li><b data-i="f1b"></b><span data-i="f1t"></span></li>
-        <li><b data-i="f2b"></b><span data-i="f2t"></span></li>
-        <li><b data-i="f3b"></b><span data-i="f3t"></span></li>
-      </ul>
-      <div id="startForm" class="card startbox">
-        <div class="field">
-          <label class="label" for="name" data-i="lblName"></label>
-          <input type="text" id="name" autocomplete="name" maxlength="40" data-ph="phName">
-        </div>
-        <div class="field">
-          <label class="label" for="company" data-i="lblCompany"></label>
-          <input type="text" id="company" maxlength="50" data-ph="phCompany">
-        </div>
-        <label class="check" for="timed"><input type="checkbox" id="timed"><span data-i="timed"></span></label>
-        <div class="err" id="startErr" role="alert"></div>
-        <button class="btn" type="button" id="startBtn" data-i="start"></button>
-      </div>
-    </section>
-
-    <!-- Quiz -->
-    <section id="quiz" hidden aria-live="polite">
-      <div class="card q">
-        <ol class="route" id="route" data-aria="progress"></ol>
-        <div class="qhead">
-          <span class="label" id="stopLabel"></span>
-          <span class="label" id="catLabel"></span>
-        </div>
-        <div class="timer" id="timer" hidden>
-          <div class="track">
-            <div class="fill" id="fill"></div>
-          </div>
-          <span class="secs" id="secs"></span>
-        </div>
-        <h2 id="qtext" tabindex="-1"></h2>
-        <ul class="opts" id="opts"></ul>
-        <div id="fb"></div>
-        <button class="btn" id="next" type="button" hidden></button>
-      </div>
-    </section>
-
-    <!-- Results -->
-    <section id="result" hidden>
-      <div class="wrap">
-        <div class="card">
-          <p class="label" id="rName"></p>
-          <div class="score"><span class="big" id="rScore"></span><span class="of" id="rOf"></span></div>
-          <div class="verdict" id="rVerdict"></div>
-          <p id="rMsg" style="color:var(--muted)"></p>
-          <div class="stats" data-aria="dayReport">
-            <div class="stat"><b id="sCalls"></b><span data-i="sCalls"></span></div>
-            <div class="stat"><b id="sProd"></b><span data-i="sProd"></span></div>
-            <div class="stat"><b id="sRate"></b><span data-i="sRate"></span></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 data-i="byArea"></h3>
-          <ul class="cats" id="cats"></ul>
-        </div>
-
-        <div class="card">
-          <h3 data-i="supTitle"></h3>
-          <p style="color:var(--muted)" data-i="supText"></p>
-          <div class="code" id="code"></div>
-          <div class="row">
-            <button class="btn" id="copy" type="button" data-i="copy"></button>
-            <span class="ok-note" id="copied" role="status"></span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 id="revTitle"></h3>
-          <ul class="review" id="review"></ul>
-        </div>
-
-        <div class="row"><button class="btn ghost" id="again" type="button" data-i="again"></button></div>
-      </div>
-    </section>
-
-    <p class="foot" data-i="foot"></p>
-  </div>
-
-  <script src="/assets/js/field-sales-quiz.ccf07c4a65ed.js"></script>
-  </main><site-footer source="tools-index"><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
-  <script src="/components/site-header.429b1e04f891.js" defer></script>
-  <script src="/components/site-footer.3a1c7b6ae618.js" defer></script>
-
-    <script defer src="/assets/js/site-repairs.4d45242fc5e1.js"></script>
+<head><!-- SALESON_TRACKING_HEAD:START -->
+<script src="/assets/js/tracking-config.e66692716c48.js" data-saleson-page="/guide/quiz-pro"></script>
+<script src="/assets/js/site-tag-manager.5536c9155cba.js"></script>
+<link rel="stylesheet" href="/css/consent-controls.7a68d63b9a72.css">
+<script defer src="/assets/js/consent-controls.8e1083876b38.js"></script>
+<script defer src="/assets/js/marketing-events.b98b72e97c62.js"></script>
+<!-- SALESON_TRACKING_HEAD:END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<link href="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-favicon.png" rel="icon" type="image/png"/>
+<link href="https://saleson.co.in/guide/quiz-pro" hreflang="en-IN" rel="alternate"/>
+<link href="https://saleson.co.in/guide/quiz-pro" hreflang="x-default" rel="alternate"/>
+<link href="https://saleson.co.in/guide/quiz-pro" rel="canonical"/>
+<link href="/css/site-repairs.c0185b0ec282.css" rel="stylesheet"/>
+<title>Field Sales Quiz | SalesOn</title><meta content="Test your field sales knowledge with the SalesOn quiz. Practise everyday sales decisions in English and Indian languages, with feedback after each answer." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Hind:wght@400;500;600&amp;family=Noto+Sans+Kannada:wght@400;600;700&amp;family=Noto+Sans+Telugu:wght@400;600;700&amp;family=Noto+Sans+Tamil:wght@400;600;700&amp;family=Noto+Sans+Gujarati:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/css/field-sales-quiz.a97a1d608317.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="/css/utility-pages.c88e34bba591.css" rel="stylesheet"/></head>
+<body class="utility-quiz"><!-- SALESON_TRACKING_BODY:START -->
+<noscript><template data-saleson-gtm-fallback><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQNBHFQS" height="0" width="0" class="saleson-gtm-fallback" title="Google Tag Manager"></iframe></template></noscript>
+<!-- SALESON_TRACKING_BODY:END -->
+<site-header source="tools-index"><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header><main id="main-content">
+<div class="wrap">
+<div class="topbar">
+<div class="brand">SalesOn<small data-i="brandSub"></small></div>
+<div class="tools">
+<select class="sel" data-aria="langLabel" hidden="" id="langSel"></select>
+<div aria-live="polite" class="pill" id="pill"></div>
+</div>
+</div>
+<!-- Intro -->
+<section aria-labelledby="introTitle" class="card intro" id="intro">
+<div class="langs" data-aria="langLabel" id="langRow" role="group"></div>
+<p class="label" data-i="introLabel"></p>
+<h1 data-i="title" id="introTitle"></h1>
+<p class="lead" data-i="lead"></p>
+<ul class="facts">
+<li><b data-i="f1b"></b><span data-i="f1t"></span></li>
+<li><b data-i="f2b"></b><span data-i="f2t"></span></li>
+<li><b data-i="f3b"></b><span data-i="f3t"></span></li>
+</ul>
+<div class="card startbox" id="startForm">
+<div class="field">
+<label class="label" data-i="lblName" for="name"></label>
+<input autocomplete="name" data-ph="phName" id="name" maxlength="40" type="text"/>
+</div>
+<div class="field">
+<label class="label" data-i="lblCompany" for="company"></label>
+<input data-ph="phCompany" id="company" maxlength="50" type="text"/>
+</div>
+<label class="check" for="timed"><input id="timed" type="checkbox"/><span data-i="timed"></span></label>
+<div class="err" id="startErr" role="alert"></div>
+<button class="btn" data-i="start" id="startBtn" type="button"></button>
+</div>
+</section>
+<!-- Quiz -->
+<section aria-live="polite" hidden="" id="quiz">
+<div class="card q">
+<ol class="route" data-aria="progress" id="route"></ol>
+<div class="qhead">
+<span class="label" id="stopLabel"></span>
+<span class="label" id="catLabel"></span>
+</div>
+<div class="timer" hidden="" id="timer">
+<div class="track">
+<div class="fill" id="fill"></div>
+</div>
+<span class="secs" id="secs"></span>
+</div>
+<h2 id="qtext" tabindex="-1"></h2>
+<ul class="opts" id="opts"></ul>
+<div id="fb"></div>
+<button class="btn" hidden="" id="next" type="button"></button>
+</div>
+</section>
+<!-- Results -->
+<section hidden="" id="result">
+<div class="wrap">
+<div class="card">
+<p class="label" id="rName"></p>
+<div class="score"><span class="big" id="rScore"></span><span class="of" id="rOf"></span></div>
+<div class="verdict" id="rVerdict"></div>
+<p id="rMsg" style="color:var(--muted)"></p>
+<div class="stats" data-aria="dayReport">
+<div class="stat"><b id="sCalls"></b><span data-i="sCalls"></span></div>
+<div class="stat"><b id="sProd"></b><span data-i="sProd"></span></div>
+<div class="stat"><b id="sRate"></b><span data-i="sRate"></span></div>
+</div>
+</div>
+<div class="card">
+<h3 data-i="byArea"></h3>
+<ul class="cats" id="cats"></ul>
+</div>
+<div class="card">
+<h3 data-i="supTitle"></h3>
+<p data-i="supText" style="color:var(--muted)"></p>
+<div class="code" id="code"></div>
+<div class="row">
+<button class="btn" data-i="copy" id="copy" type="button"></button>
+<span class="ok-note" id="copied" role="status"></span>
+</div>
+</div>
+<div class="card">
+<h3 id="revTitle"></h3>
+<ul class="review" id="review"></ul>
+</div>
+<div class="row"><button class="btn ghost" data-i="again" id="again" type="button"></button></div>
+</div>
+</section>
+<p class="foot" data-i="foot"></p>
+</div>
+<script src="/assets/js/field-sales-quiz.ccf07c4a65ed.js"></script>
+</main><site-footer source="tools-index"><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
+<script defer="" src="/components/site-header.b84083f669c5.js"></script>
+<script defer="" src="/components/site-footer.83d6a96ff831.js"></script>
+<script defer="" src="/assets/js/site-repairs.4d45242fc5e1.js"></script>
 </body>
-
 </html>

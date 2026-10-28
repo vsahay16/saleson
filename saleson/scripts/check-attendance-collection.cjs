@@ -18,7 +18,7 @@ for(const [slug,title,count,anchors] of [
  assert.equal(faq.length,count);assert.deepEqual(faq.map(x=>x.name),questions);assert.deepEqual(faq.map(x=>clean(x.acceptedAnswer.text)),answers);
  assert.ok(answers.some(a=>a.includes('does not support offline use')));
  assert.ok(!schema.find(x=>x['@type']==='SoftwareApplication').offers.price);
- assert.equal((s.match(/class="review-client-logo/g)||[]).length,8);
+ assert.equal((s.match(/class="review-client-logo/g)||[]).length,0);
  assert.equal((s.match(/data-media-src=/g)||[]).length,2);
 }
 const s=fs.readFileSync(path.join(root,'payment-collection.html'),'utf8');

@@ -1,0 +1,17 @@
+/* Client identities and module associations follow assets/data/client-showcase.json. */
+.client-showcase{margin:0!important;padding:30px 24px!important;border-top:1px solid #e5ebf2;border-bottom:1px solid #e5ebf2;background:#fff;color:#52677a;font-family:"DM Sans",Arial,sans-serif}
+.client-showcase-inner{max-width:1160px;margin:0 auto}
+.client-showcase .client-showcase-label{font:500 13px/1.6 "DM Sans",Arial,sans-serif!important;text-align:center;letter-spacing:0;text-transform:none;color:#52677a!important;margin:0 0 20px!important;max-width:none!important}
+.client-showcase .client-showcase-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 30px;list-style:none!important;padding:0!important;margin:0!important}
+.client-showcase .client-showcase-logo{display:flex;align-items:center;justify-content:center;flex:0 1 110px;height:56px;padding:4px;margin:0!important;list-style:none}
+.client-showcase .client-showcase-logo img{display:block;width:auto!important;height:auto!important;max-width:110px!important;max-height:50px!important;object-fit:contain;filter:none!important;opacity:1!important;border:0!important;border-radius:0!important;padding:0!important;background:transparent!important}
+.client-showcase .client-logo-dark{background:#183249;border-radius:8px;padding:8px}
+.client-showcase .client-showcase-names{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:8px 16px;margin-top:18px;font-size:14px}
+.client-showcase .client-showcase-names>p{font-size:12px;margin:0;color:#66758a}
+.client-showcase .client-showcase-names ul{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;list-style:none;padding:0;margin:0}
+.client-showcase .client-showcase-names li{padding:0;margin:0;font:500 14px/1.6 "DM Sans",Arial,sans-serif;color:#183249}
+.client-showcase-single .client-showcase-inner{display:flex;align-items:center;justify-content:center;gap:24px}.client-showcase-single .client-showcase-label{margin:0!important}
+.client-showcase-gallery .client-showcase-logos{max-width:900px;margin:auto!important;gap:24px 36px}
+.client-showcase-compact{padding:20px 0!important;margin:24px 0 0!important;border-bottom:0}.client-showcase-compact .client-showcase-logos{gap:12px 20px}.client-showcase-compact .client-showcase-logo{flex-basis:85px;height:42px}.client-showcase-compact .client-showcase-logo img{max-width:85px!important;max-height:38px!important}
+@media(max-width:600px){.client-showcase{padding:24px 20px!important}.client-showcase .client-showcase-logos{gap:16px 22px}.client-showcase .client-showcase-logo{flex-basis:85px;height:48px}.client-showcase .client-showcase-logo img{max-width:85px!important;max-height:44px!important}.client-showcase-single .client-showcase-inner{flex-wrap:wrap;gap:12px}.client-showcase .client-showcase-label{font-size:12px!important}.client-showcase-compact{padding:18px 0!important}}
+@media(max-width:600px){.client-showcase-compact .client-showcase-logos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));justify-items:center;gap:12px 20px}}

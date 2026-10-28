@@ -1,0 +1,29 @@
+/* Shared marketing typography and product evidence. */
+:root{--saleson-blue:#1143b6;--saleson-ink:#183249;--saleson-muted:#52677a}
+body main{font-family:"DM Sans",Arial,sans-serif}
+body main :is(h1,h2,.disp,.h2,.hub-title){font-family:"DM Serif Display",Georgia,serif!important;font-weight:400!important;font-style:normal;letter-spacing:-.025em!important;color:var(--saleson-ink)}
+body main h1{font-size:clamp(38px,4.1vw,54px)!important;line-height:1.12!important}
+body main h2{font-size:clamp(29px,3.1vw,40px)!important;line-height:1.18!important}
+body main h3{font-family:"DM Sans",Arial,sans-serif}
+body main :is(.dashboard-window,.tm-review,.iv-document-demo,.ti-example) :is(h2,h3){font-family:"DM Sans",Arial,sans-serif!important;font-size:20px!important;letter-spacing:-.02em!important}
+body main :is(.home-btn,.se-button,.st-button,.tm-button,.iv-button,.pm-button,.ti-button,.dl-button,.vs-button,.ex-button,.btn-p){font-family:"DM Sans",Arial,sans-serif;font-size:15px;font-weight:600;border-radius:8px;min-height:48px;line-height:1.4}
+.commercial-strip{display:flex;flex-wrap:wrap;gap:6px 0;margin:20px 0 12px!important;color:var(--saleson-muted);font:500 13px/1.7 "DM Sans",Arial,sans-serif!important;letter-spacing:0;text-align:left}
+.commercial-strip span{white-space:nowrap}.commercial-strip span+span:before{content:"·";padding:0 9px;color:#71829a}
+.product-hero-image{margin:0;width:100%;min-width:0}.product-hero-image img{display:block;width:100%;height:auto;max-height:470px;object-fit:contain;border-radius:12px}
+.product-hero-image figcaption{font:400 11px/1.5 "DM Sans",Arial,sans-serif;color:#66758a;margin-top:8px;text-align:right}
+.product-hero-surface{min-width:0;padding:16px;border:1px solid #dce5f1;border-radius:18px;background:#f4f7fc}
+.product-hero-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}.product-hero-grid>*{min-width:0}
+.supporting-example{margin-top:32px!important;max-width:850px;margin-left:auto!important;margin-right:auto!important}
+#saleson-editorial .se-hero-grid{grid-template-columns:1fr 1.1fr}
+.hero-product>.product-hero-image{background:#f3f7ff;border-radius:20px;padding:12px}.hero-product{min-width:0}
+.product-zoom{display:inline-flex!important;justify-content:center;align-items:center;width:36px;min-height:36px;padding:5px!important;margin:6px 0!important;border:1px solid #dbe5ef!important;border-radius:50%;background:#fff;color:#1143b6;font-size:20px!important;text-decoration:none!important}
+.order-taking-refined .hero-actions{display:flex!important;align-items:center!important;gap:12px;flex-wrap:wrap}
+.order-taking-refined .hero-actions>a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border:1px solid #1143b6;border-radius:8px;text-decoration:none}
+.order-taking-refined .hero-actions>.btn-s{background:#fff;color:#1143b6}
+.order-taking-refined .subscription-terms-link{font-size:12px;line-height:1.6;margin:12px 0 4px}.order-taking-refined .btn-sub{text-align:left;margin:4px 0}
+.st-console-title{font-weight:600}.st-console .st-panel-footer{padding:8px 14px}.st-console .st-caption{display:none}
+@media(max-width:760px){.product-hero-grid,#saleson-editorial .se-hero-grid{grid-template-columns:1fr;gap:28px}.commercial-strip{font-size:12px!important}.product-hero-image img{max-height:360px}.product-hero-surface{padding:9px}.order-taking-refined .hero-actions{align-items:stretch!important}.order-taking-refined .hero-actions>a{flex:1 1 180px}}
+
+body main[data-product-marketing] h1{font-size:clamp(36px,3.65vw,48px)!important}body main[data-product-marketing] h1>span{font-size:.7em!important;line-height:1.25!important}.commercial-strip{gap:6px 10px}.commercial-strip span+span:before{content:none}.commercial-strip span:not(:last-child):after{content:"·";padding-left:10px;color:#71829a}
+
+body main .product-zoom::after{content:none!important}body main figure>figcaption{font:400 11px/1.5 "DM Sans",Arial,sans-serif!important;color:#66758a!important;margin-top:8px!important}.order-taking-refined.saleson-family .review-client-logo img{width:auto;max-width:110px;height:auto;max-height:40px;object-fit:contain}

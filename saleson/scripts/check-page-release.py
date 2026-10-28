@@ -27,3 +27,9 @@ for p in files:
    svg=ET.fromstring(file.read_text());assert svg.tag.endswith('svg');assert file.stat().st_size<6000,file
  assert not any('saleson-eta.vercel.app' in x for x in d.links),p
 print(f'PASS: {len(files)} revised pages use the shared design and dimensioned lightweight images.')
+
+for page in R.rglob("*.html"):
+ source=page.read_text()
+ assert not re.search(r"<whatsapp-float\s*>",source),page
+ assert not re.search(r'<a\b[^>]*href="https://saleson.co.in/?"[^>]*>\s*Tally Integration',source),page
+print("PASS: shared WhatsApp buttons have a message and Tally module links do not point to Home.")

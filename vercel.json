@@ -20,6 +20,21 @@
       "source": "/pricing/us",
       "destination": "/pricing",
       "permanent": true
+    },
+    {
+      "source": "/growth/grow-your-business",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/growth/grow-your-business/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/growth/grow-your-business.html",
+      "destination": "/",
+      "permanent": true
     }
   ],
   "headers": [

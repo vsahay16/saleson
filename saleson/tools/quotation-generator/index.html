@@ -1,26 +1,27 @@
 <!DOCTYPE html>
+
 <html lang="en-IN">
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Free Quotation Generator for Indian Businesses | SalesOn</title>
-<meta content="Create professional quotations and estimates with GST, logo, item pricing, validity date, payment terms and PDF download. Free tool by SalesOn." name="description">
+<meta content="Create professional quotations and estimates with GST, logo, item pricing, validity date, payment terms and PDF download. Free tool by SalesOn." name="description"/>
 
-<link rel="icon" type="image/png" href="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-favicon.png">
-<link rel="alternate" hreflang="en-IN" href="https://saleson.co.in/tools/quotation-generator">
-<link rel="alternate" hreflang="x-default" href="https://saleson.co.in/tools/quotation-generator">
-<meta content="Free Quotation Generator for Indian Businesses | SalesOn" property="og:title">
-<meta content="Create professional quotations and estimates with GST, logo, item pricing, validity date, payment terms and PDF download. Free tool by SalesOn." property="og:description">
-<meta content="website" property="og:type">
+<link rel="icon" type="image/png" href="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-favicon.png"/>
+<link rel="alternate" hreflang="en-IN" href="https://saleson.co.in/tools/quotation-generator"/>
+<link rel="alternate" hreflang="x-default" href="https://saleson.co.in/tools/quotation-generator"/>
+<meta content="Free Quotation Generator for Indian Businesses | SalesOn" property="og:title"/>
+<meta content="Create professional quotations and estimates with GST, logo, item pricing, validity date, payment terms and PDF download. Free tool by SalesOn." property="og:description"/>
+<meta content="website" property="og:type"/>
 <meta property="og:url" content="https://saleson.co.in/tools/quotation-generator">
-<meta content="https://saleson.co.in/tools/assets/saleson-free-tools-og.jpg" property="og:image">
-<meta content="1200" property="og:image:width">
-<meta content="630" property="og:image:height">
-<meta content="SalesOn Free Business Tools" property="og:image:alt">
-<meta content="summary_large_image" name="twitter:card">
-<meta content="@salesonsoftware" name="twitter:site">
-<meta content="https://saleson.co.in/tools/assets/saleson-free-tools-og.jpg" name="twitter:image">
-<meta content="index, follow" name="robots">
+<meta content="https://saleson.co.in/tools/assets/saleson-free-tools-og.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="SalesOn Free Business Tools" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@salesonsoftware" name="twitter:site"/>
+<meta content="https://saleson.co.in/tools/assets/saleson-free-tools-og.jpg" name="twitter:image"/>
+<meta content="index, follow" name="robots"/>
 <!-- FAQ Schema -->
 <script type="application/ld+json">
 {
@@ -99,599 +100,13 @@
 </script>
 <script src="/assets/js/min/common.min.5c2663c0cd10.js"></script>
 <script src="/assets/js/min/tool-handoff.min.312be650f7d3.js"></script>
-<link href="/css/min/common-new.min.f637cbb1ad10.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&amp;display=swap" rel="stylesheet">
-<style>
-    :root {
-      /* Quotation accent — user-switchable */
-      --accent: #1143b6;
-    }
-/* ── HERO ── */
-    .hero {
-      padding: 72px 0 64px;
-      background: radial-gradient(circle at 20% 20%, #eef2fc 0%, #ffffff 45%, #dde6f9 100%);
-      position: relative; overflow: hidden;
-    }
-    .hero-content { position: relative; z-index: 1; max-width: 760px; }
-    .hero-eyebrow {
-      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px;
-    }
-    .badge {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 5px 12px; border-radius: 100px;
-      font-size: 11.5px; font-weight: 700; letter-spacing: .03em;
-    }
-    .badge-green  { background: rgba(5,150,105,.2);  color: #489f7d; border: 1px solid rgba(5,150,105,.3); }
-    .badge-blue   { background: rgba(26,86,219,.25); color: #3f73ae; border: 1px solid rgba(26,86,219,.4); }
-    .badge-amber  { background: rgba(217,119,6,.2);  color: #bc971b; border: 1px solid rgba(217,119,6,.3); }
-    .badge-white  { background: rgba(255,255,255,.1); color: rgb(106 101 101 / 100%); border: 1px solid rgb(106 101 101 / 100%); }
+<link href="/css/min/common-new.min.f637cbb1ad10.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&amp;display=swap" rel="stylesheet"/>
 
-    .hero-h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(28px, 4vw, 46px);
-      line-height: 1.17; margin-bottom: 18px;
-    }
-    .hero-h1 em { font-style: italic; color: var(--brand); }
-    .hero-sub {
-      font-size: 16px; line-height: 1.78;
-      max-width: 600px; margin-bottom: 36px;
-    }
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-
-    /* ══════════════════════════════
-       TOOL LAYOUT: FORM + PREVIEW
-       ══════════════════════════════ */
-    .tool-wrap {
-      display: grid;
-      grid-template-columns: 480px 1fr;
-      gap: 28px;
-      align-items: start;
-      padding: 28px 0 48px;
-    }
-
-    /* ── FORM PANEL ── */
-    .form-panel {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-    }
-    .form-panel-header {
-      background: var(--brand);
-      padding: 16px 20px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .fph-title {
-      font-family: 'DM Serif Display', serif;
-      font-size: 17px; color: var(--white);
-    }
-    .fph-actions { display: flex; gap: 8px; flex-wrap: wrap; }
-    .fph-btn {
-      background: rgba(255,255,255,.2); color: var(--white);
-      border: 1px solid rgba(255,255,255,.25); border-radius: 6px;
-      padding: 5px 12px; font-size: 12px; font-weight: 700;
-      cursor: pointer; transition: background .15s; font-family: 'DM Sans', sans-serif;
-    }
-    .fph-btn:hover { background: rgba(255,255,255,.35); }
-
-    /* Collapsible form sections */
-    .form-section { border-bottom: 1px solid var(--border); }
-    .form-section:last-child { border-bottom: none; }
-    .form-section-head {
-      width: 100%; background: none; border: none;
-      padding: 14px 20px; text-align: left; cursor: pointer;
-      display: flex; align-items: center; justify-content: space-between;
-      font-size: 13.5px; font-weight: 700; color: var(--ink);
-      font-family: 'DM Sans', sans-serif; transition: background .15s;
-    }
-    .form-section-head:hover { background: var(--surface); }
-    .form-section-head .sec-icon { font-size: 15px; margin-right: 8px; }
-    .form-section-head .sec-label { flex: 1; display: flex; align-items: center; gap: 2px; }
-    .form-section-head .chevron { font-size: 10px; color: var(--ink-mute); transition: transform .2s; }
-    .form-section-head.open .chevron { transform: rotate(180deg); }
-    .form-section-body { display: none; padding: 0 20px 20px; }
-    .form-section-body.open { display: block; }
-
-    /* Form inputs */
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
-    .form-row.full { grid-template-columns: 1fr; }
-    .form-row.three { grid-template-columns: 1fr 1fr 1fr; }
-    label {
-      font-size: 11px; font-weight: 700; color: var(--ink-mute);
-      text-transform: uppercase; letter-spacing: .06em;
-      display: block; margin-bottom: 5px;
-    }
-    .fi {
-      border: 1.5px solid var(--border) !important; border-radius: var(--radius-sm);
-      padding: 9px 12px; font-size: 13.5px; font-family: 'DM Sans', sans-serif;
-      color: var(--ink); outline: none; width: 100%; transition: border-color .15s;
-      background: var(--white);
-    }
-    .fi:focus { border-color: var(--brand); }
-    textarea.fi { resize: vertical; min-height: 70px; line-height: 1.5; }
-    select.fi {
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237a8898' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: right 10px center;
-      padding-right: 28px; cursor: pointer;
-    }
-    .fi-upload { display: none; }
-    .upload-btn {
-      border: 1.5px dashed var(--border); border-radius: var(--radius-sm);
-      padding: 10px 14px; font-size: 13px; font-family: 'DM Sans', sans-serif;
-      color: var(--ink-mute); cursor: pointer; text-align: center; width: 100%;
-      background: var(--surface); transition: all .15s; display: flex;
-      align-items: center; justify-content: center; gap: 6px;
-    }
-    .upload-btn:hover { border-color: var(--brand); color: var(--brand); background: var(--brand-light); }
-    .upload-preview { height: 40px; max-width: 100px; object-fit: contain; border-radius: 4px; margin-top: 6px; display: none; }
-
-    .toggle-row {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 10px;
-    }
-    .toggle-label { font-size: 13px; font-weight: 600; color: var(--ink-soft); }
-    .toggle { position: relative; width: 40px; height: 22px; }
-    .toggle input { opacity: 0; width: 0; height: 0; }
-    .toggle-slider {
-      position: absolute; inset: 0; background: var(--border);
-      border-radius: 100px; cursor: pointer; transition: background .2s;
-    }
-    .toggle-slider::after {
-      content: ''; position: absolute;
-      width: 16px; height: 16px; border-radius: 50%;
-      background: white; top: 3px; left: 3px; transition: transform .2s;
-    }
-    .toggle input:checked + .toggle-slider { background: var(--brand); }
-    .toggle input:checked + .toggle-slider::after { transform: translateX(18px); }
-
-    /* Validity quick-select pills */
-    .validity-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
-    .validity-pill {
-      padding: 4px 12px; border-radius: 100px; border: 1.5px solid var(--border);
-      font-size: 12px; font-weight: 600; color: var(--ink-soft); cursor: pointer;
-      background: var(--white); transition: all .15s;
-    }
-    .validity-pill:hover { border-color: var(--brand); color: var(--brand); }
-
-    /* Items table inside form */
-    .items-table-wrap { overflow-x: auto; margin-bottom: 12px; }
-    .items-table {
-      width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 620px;
-    }
-    .items-table th {
-      background: var(--surface); color: var(--ink-mute);
-      font-size: 10.5px; font-weight: 700; letter-spacing: .05em;
-      text-transform: uppercase; padding: 8px 6px; text-align: left;
-      border: 1px solid var(--border);
-    }
-    .items-table td { padding: 5px 4px; border: 1px solid var(--border); }
-    .items-table input, .items-table select {
-      border: none; outline: none; width: 100%; padding: 5px 6px;
-      font-size: 12.5px; font-family: 'DM Sans', sans-serif;
-      color: var(--ink); background: transparent; min-width: 0;
-    }
-    .items-table input:focus, .items-table select:focus { background: var(--brand-light); }
-    .items-table td.computed { background: var(--surface); text-align: right; padding: 6px 8px; color: var(--ink-soft); font-weight: 600; }
-    .btn-add-row, .btn-remove-row {
-      padding: 6px 12px; border-radius: var(--radius-sm);
-      font-size: 12.5px; font-weight: 700; font-family: 'DM Sans', sans-serif;
-      cursor: pointer; transition: all .15s; border: none;
-    }
-    .btn-add-row { background: var(--brand-light); color: var(--brand); }
-    .btn-add-row:hover { background: var(--brand); color: var(--white); }
-    .btn-remove-row { background: #fee2e2; color: #dc2626; font-size: 14px; padding: 4px 8px; }
-    .btn-remove-row:hover { background: #dc2626; color: white; }
-
-    /* Accent color pills */
-    .accent-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
-    .accent-pill {
-      width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
-      border: 3px solid transparent; transition: transform .15s;
-    }
-    .accent-pill.active { border-color: var(--ink); transform: scale(1.15); }
-    .accent-pill:hover { transform: scale(1.1); }
-
-    /* Template selector */
-    .template-pills { display: flex; gap: 8px; margin-bottom: 14px; }
-    .tpl-pill {
-      flex: 1; padding: 8px 10px; border-radius: var(--radius-sm);
-      border: 1.5px solid var(--border); background: var(--white);
-      font-size: 12.5px; font-weight: 600; color: var(--ink-soft);
-      cursor: pointer; text-align: center; transition: all .15s;
-    }
-    .tpl-pill.active { border-color: var(--brand); background: var(--brand-light); color: var(--brand); }
-    .tpl-pill:hover { border-color: var(--brand); color: var(--brand); }
-
-    /* Form action buttons */
-    .form-actions { padding: 16px 20px; border-top: 1px solid var(--border); display: flex; gap: 8px; flex-wrap: wrap; }
-    .btn-action {
-      flex: 1; min-width: 110px; padding: 11px 14px;
-      border-radius: var(--radius-sm); font-size: 13px; font-weight: 700;
-      cursor: pointer; transition: all .15s; border: none;
-      font-family: 'DM Sans', sans-serif; text-align: center;
-    }
-    .btn-dl { background: var(--brand); color: var(--white); }
-    .btn-dl:hover { background: var(--brand-dark); transform: translateY(-1px); }
-    .btn-print { background: var(--surface); color: var(--ink); border: 1.5px solid var(--border); }
-    .btn-print:hover { border-color: var(--brand); color: var(--brand); }
-    .btn-wa { background: #25d366; color: var(--white); }
-    .btn-wa:hover { background: #1db954; }
-    .btn-save { background: var(--amber-light); color: var(--amber); border: 1px solid rgba(217,119,6,.2); }
-    .btn-save:hover { background: var(--amber); color: white; }
-    .btn-convert { background: var(--green-light); color: var(--green); border: 1px solid rgba(5,150,105,.2); }
-    .btn-convert:hover { background: var(--green); color: white; }
-    .btn-reset { background: var(--surface); color: var(--ink-mute); border: 1.5px solid var(--border); }
-    .btn-reset:hover { border-color: #dc2626; color: #dc2626; }
-
-    /* ── PREVIEW PANEL ── */
-    .preview-panel { position: sticky; top: 80px; }
-    .preview-panel-header {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 12px;
-    }
-    .pp-title { font-size: 13px; font-weight: 700; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .06em; }
-    .pp-hint { font-size: 12px; color: var(--ink-mute); }
-
-    /* ═══════════════════════════════════════
-       QUOTATION PREVIEW (printable area)
-       ═══════════════════════════════════════ */
-    #quotePreview {
-      background: white;
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-md);
-      overflow: hidden;
-    }
-
-    /* ── CLASSIC TEMPLATE ── */
-    .qt-classic { font-family: 'DM Sans', sans-serif; }
-    .qt-classic .qt-header {
-      padding: 24px 28px 16px;
-      border-bottom: 3px solid var(--accent);
-      display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
-    }
-    .qt-classic .qt-logo { max-height: 60px; max-width: 140px; object-fit: contain; }
-    .qt-classic .qt-seller-name { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--ink); }
-    .qt-classic .qt-seller-detail { font-size: 11px; color: var(--ink-mute); line-height: 1.65; margin-top: 3px; }
-    .qt-classic .qt-doc-title { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--accent); text-align: right; }
-    .qt-classic .qt-doc-meta { font-size: 11.5px; color: var(--ink-soft); text-align: right; line-height: 1.7; margin-top: 4px; }
-    .qt-classic .qt-body { padding: 20px 28px; }
-
-    /* ── MODERN TEMPLATE ── */
-    .qt-modern .qt-header {
-      background: var(--accent);
-      padding: 24px 28px;
-      display: flex; justify-content: space-between; align-items: flex-start;
-    }
-    .qt-modern .qt-seller-name { color: white; font-family: 'DM Serif Display', serif; font-size: 18px; }
-    .qt-modern .qt-seller-detail { color: rgba(255,255,255,.75); font-size: 11px; line-height: 1.65; margin-top: 3px; }
-    .qt-modern .qt-logo { filter: brightness(0) invert(1); max-height: 50px; max-width: 120px; object-fit: contain; }
-    .qt-modern .qt-doc-title { color: white; font-family: 'DM Serif Display', serif; font-size: 22px; text-align: right; }
-    .qt-modern .qt-doc-meta { color: rgba(255,255,255,.75); font-size: 11.5px; text-align: right; line-height: 1.7; margin-top: 4px; }
-    .qt-modern .qt-body { padding: 20px 28px; }
-    .qt-modern .qt-items-table th { background: var(--ink); }
-
-    /* ── COMPACT TEMPLATE ── */
-    .qt-compact .qt-header {
-      padding: 18px 22px 12px;
-      border-bottom: 2px solid var(--accent);
-      display: flex; justify-content: space-between; align-items: flex-start;
-    }
-    .qt-compact .qt-seller-name { font-size: 15px; font-weight: 700; color: var(--ink); }
-    .qt-compact .qt-doc-title { font-size: 16px; font-weight: 800; color: var(--accent); text-align: right; }
-    .qt-compact .qt-body { padding: 14px 22px; }
-    .qt-compact .qt-items-table { font-size: 10.5px; }
-    .qt-compact .qt-items-table th { padding: 5px 6px; }
-    .qt-compact .qt-items-table td { padding: 5px 6px; }
-
-    /* Shared preview sub-elements */
-    .qt-bill-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 16px; }
-    .qt-bill-label { font-size: 9.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 5px; }
-    .qt-bill-name { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
-    .qt-bill-detail { font-size: 11px; color: var(--ink-soft); line-height: 1.65; }
-    .qt-project-title { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
-
-    /* Items table in preview */
-    .qt-items-table { width: 100%; border-collapse: collapse; font-size: 11.5px; margin-bottom: 16px; }
-    .qt-items-table th {
-      background: var(--accent); color: white;
-      padding: 7px 8px; text-align: left; font-size: 10px;
-      font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
-    }
-    .qt-items-table th:last-child, .qt-items-table td:last-child { text-align: right; }
-    .qt-items-table td { padding: 7px 8px; border-bottom: 1px solid var(--border); color: var(--ink-soft); }
-    .qt-items-table tr:last-child td { border-bottom: none; }
-    .qt-items-table tr:nth-child(even) td { background: var(--surface); }
-
-    /* Summary */
-    .qt-summary { display: flex; justify-content: flex-end; margin-bottom: 16px; }
-    .qt-summary-table { min-width: 240px; font-size: 12px; }
-    .qt-summary-row { display: flex; justify-content: space-between; gap: 24px; padding: 4px 0; }
-    .qt-summary-row.total {
-      border-top: 2px solid var(--accent);
-      font-size: 13.5px; font-weight: 800; color: var(--ink);
-      margin-top: 6px; padding-top: 8px;
-    }
-    .qt-summary-row .s-label { color: var(--ink-mute); }
-    .qt-summary-row .s-val { font-weight: 600; color: var(--ink); text-align: right; }
-
-    /* Amount in words */
-    .qt-words {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 6px; padding: 9px 14px;
-      font-size: 11.5px; color: var(--ink-soft); margin-bottom: 16px;
-    }
-    .qt-words strong { color: var(--ink); }
-
-    /* Optional section blocks (scope, delivery, warranty, etc.) */
-    .qt-section-block { margin-bottom: 14px; }
-    .qt-section-block strong { display: block; font-size: 11.5px; color: var(--ink); margin-bottom: 3px; }
-    .qt-section-block p { font-size: 11px; color: var(--ink-soft); line-height: 1.7; }
-
-    /* Signature row */
-    .qt-sig-row {
-      display: flex; justify-content: flex-end; align-items: flex-end;
-      margin-bottom: 16px; padding-top: 12px; border-top: 1px solid var(--border);
-    }
-    .qt-sig-box { text-align: center; min-width: 160px; }
-    .qt-sig-img { max-height: 52px; max-width: 140px; object-fit: contain; margin-bottom: 4px; display: none; }
-    .qt-sig-line { border-top: 1px solid var(--ink-mute); margin: 6px auto 4px; width: 140px; }
-    .qt-sig-name { font-size: 11.5px; font-weight: 700; color: var(--ink); }
-    .qt-sig-label { font-size: 10px; color: var(--ink-mute); }
-
-    /* Footer strip */
-    .qt-footer-strip {
-      background: var(--accent); color: white;
-      font-size: 10px; text-align: center; padding: 7px 20px;
-      letter-spacing: .03em;
-    }
-
-    /* Disclaimer */
-    .qt-disclaimer {
-      font-size: 9.5px; color: var(--ink-mute); padding: 8px 28px;
-      border-top: 1px solid var(--border); text-align: center; line-height: 1.6;
-    }
-
-    /* ══════════
-       LEAD MODAL
-       ══════════ */
-    .modal-overlay {
-      display: none; position: fixed; inset: 0; z-index: 500;
-      background: rgba(15,22,35,.6); backdrop-filter: blur(4px);
-      align-items: center; justify-content: center; padding: 20px;
-    }
-    .modal-overlay.open { display: flex; }
-    .modal-card {
-      background: var(--white); border-radius: 20px;
-      max-width: 540px; width: 100%;
-      box-shadow: 0 24px 80px rgba(0,0,0,.3);
-      overflow: hidden; max-height: 90vh; overflow-y: auto;
-    }
-    .modal-header { background: var(--brand); padding: 22px 24px; }
-    .modal-title { font-family: 'DM Serif Display', serif; font-size: 20px; color: white; margin-bottom: 4px; }
-    .modal-sub { font-size: 13px; color: rgba(255,255,255,.72); line-height: 1.6; }
-    .modal-body { padding: 24px; }
-    .modal-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
-    .modal-row.full { grid-template-columns: 1fr; }
-    .modal-input {
-      border: 1.5px solid var(--border); border-radius: var(--radius-sm);
-      padding: 10px 14px; font-size: 13.5px; font-family: 'DM Sans', sans-serif;
-      color: var(--ink); outline: none; width: 100%; transition: border-color .15s;
-    }
-    .modal-input:focus { border-color: var(--brand); }
-    .modal-actions { display: flex; gap: 10px; margin-top: 16px; }
-    .btn-modal-primary {
-      flex: 1; background: var(--brand); color: white; border: none;
-      border-radius: 10px; padding: 13px 16px;
-      font-size: 14px; font-weight: 700; cursor: pointer;
-      font-family: 'DM Sans', sans-serif; transition: background .18s;
-    }
-    .btn-modal-primary:hover { background: var(--brand-dark); }
-    .btn-modal-demo {
-      flex: 1; background: var(--green); color: white; border: none;
-      border-radius: 10px; padding: 13px 16px;
-      font-size: 14px; font-weight: 700; cursor: pointer;
-      font-family: 'DM Sans', sans-serif; transition: background .18s;
-    }
-    .btn-modal-demo:hover { background: #047857; }
-    .modal-skip { text-align: center; margin-top: 10px; }
-    .modal-skip a { font-size: 12.5px; color: var(--ink-mute); cursor: pointer; text-decoration: underline; }
-
-    /* WhatsApp share modal */
-    .wa-msg-box {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius-sm); padding: 14px;
-      font-size: 13.5px; color: var(--ink-soft); line-height: 1.7;
-      white-space: pre-wrap; margin-bottom: 12px;
-    }
-
-    /* Convert-to-invoice confirmation panel */
-    .convert-success {
-      display: none; background: var(--green-light); border: 1px solid rgba(5,150,105,.2);
-      border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 10px;
-      font-size: 13px; color: var(--green);
-    }
-    .convert-success.show { display: block; }
-    .convert-success a {
-      display: inline-block; margin-top: 8px; color: var(--brand);
-      font-weight: 700; text-decoration: none;
-    }
-    .convert-success a:hover { text-decoration: underline; }
-
-    /* ══════════════════
-       UPSELL + SEO SECTIONS
-       ══════════════════ */
-    .section-label { font-size: 11.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--brand); display: block; margin-bottom: 10px; }
-    .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(22px, 3vw, 34px); color: var(--ink); line-height: 1.22; margin-bottom: 14px; }
-    .section-title em { font-style: italic; color: var(--brand); }
-    .section-sub { font-size: 15px; color: var(--ink-mute); line-height: 1.7; max-width: 600px; }
-    .check-dot {
-      width: 18px; height: 18px; border-radius: 50%;
-      background: var(--green-light); color: var(--green);
-      font-size: 10px; font-weight: 800;
-      display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
-    }
-    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 20px 0 24px; }
-    .feature-list li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink-soft); }
-    .btn-demo {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--brand); color: var(--white);
-      padding: 13px 28px; border-radius: 10px;
-      font-size: 15px; font-weight: 700; text-decoration: none;
-      transition: background .18s, transform .1s;
-    }
-    .btn-demo:hover { background: var(--brand-dark); transform: translateY(-1px); }
-
-    /* SEO cards */
-    .seo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; margin-top: 40px; }
-    .seo-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 24px 20px;
-      border-top: 3px solid var(--brand);
-    }
-    .seo-card h3 { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
-    .seo-card p { font-size: 13px; color: var(--ink-mute); line-height: 1.7; }
-
-    /* FAQ */
-    .faq-list { max-width: 720px; margin: 40px auto 0; }
-    .faq-item { border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 10px; }
-    .faq-q {
-      width: 100%; background: var(--white); border: none; padding: 18px 20px;
-      text-align: left; cursor: pointer;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-      font-size: 15px; font-weight: 600; color: var(--ink);
-      font-family: 'DM Sans', sans-serif; transition: background .15s;
-    }
-    .faq-q:hover { background: var(--brand-light); }
-    .faq-q.open { background: var(--brand-light); color: var(--brand); }
-    .faq-chevron {
-      width: 18px; height: 18px; flex-shrink: 0; border-radius: 50%;
-      background: var(--border); display: flex; align-items: center; justify-content: center;
-      font-size: 11px; transition: transform .2s, background .15s;
-    }
-    .faq-q.open .faq-chevron { transform: rotate(180deg); background: var(--brand); color: white; }
-    .faq-a { display: none; padding: 0 20px 20px; font-size: 14px; color: var(--ink-soft); line-height: 1.75; background: var(--brand-light); }
-    .faq-a.open { display: block; }
-
-    /* Related tools */
-    .tools-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
-    .tool-chip {
-      background: var(--white); border: 1.5px solid var(--border);
-      border-radius: 100px; padding: 8px 18px;
-      font-size: 13px; font-weight: 600; color: var(--brand);
-      text-decoration: none; transition: all .15s;
-    }
-    .tool-chip:hover { background: var(--brand-light); border-color: var(--brand); }
-
-    /* Toast */
-    .toast {
-      position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
-      background: var(--ink); color: white; padding: 10px 20px;
-      border-radius: 100px; font-size: 13.5px; font-weight: 600;
-      box-shadow: var(--shadow-lg); z-index: 600; opacity: 0;
-      transition: opacity .3s; pointer-events: none;
-    }
-    .toast.show { opacity: 1; }
-
-    /* Mobile sticky action bar */
-.mobile-sticky button, .mobile-sticky a {
-      flex: 1; padding: 11px 8px; border-radius: var(--radius-sm);
-      font-size: 13px; font-weight: 700; font-family: 'DM Sans', sans-serif;
-      cursor: pointer; border: none; text-align: center; text-decoration: none;
-      display: flex; align-items: center; justify-content: center; gap: 5px;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 1100px) {
-      .tool-wrap { grid-template-columns: 1fr; }
-      .preview-panel { position: static; }
-
-    }
-    @media (max-width: 900px) {
-      .nav-links { display: none; }
-      .nav-hamburger { display: flex; }
-      .qt-bill-row { grid-template-columns: 1fr; gap: 12px; }
-    }
-    @media (max-width: 600px) {
-      .form-row { grid-template-columns: 1fr; }
-      .form-row.three { grid-template-columns: 1fr 1fr; }
-      .form-actions { flex-direction: column; }
-      .modal-row { grid-template-columns: 1fr; }
-      .modal-actions { flex-direction: column; }
-      .hero { padding: 44px 0 32px; }
-      .section { padding: 56px 0; }
-    }
-
-    /* ══════════════════════════════
-       PRINT STYLES — quotation only
-       ══════════════════════════════ */
-    /* Print through a dedicated root so the hidden website does not create blank pages. */
-    #salesonPrintRoot { display: none; }
-
-    @media print {
-      @page { size: A4; margin: 8mm; }
-
-      html, body {
-        margin: 0 !important;
-        padding: 0 !important;
-        width: auto !important;
-        min-height: 0 !important;
-        height: auto !important;
-        overflow: visible !important;
-        background: #fff !important;
-      }
-
-      body > *:not(#salesonPrintRoot) { display: none !important; }
-
-      #salesonPrintRoot {
-        display: block !important;
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        background: #fff !important;
-      }
-
-      #salesonPrintRoot .saleson-print-document {
-        display: block !important;
-        position: static !important;
-        inset: auto !important;
-        width: 100% !important;
-        min-height: 0 !important;
-        height: auto !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        box-sizing: border-box !important;
-        overflow: visible !important;
-        border: 1px solid #cbd5e1 !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-        break-inside: avoid-page;
-        page-break-inside: avoid;
-      }
-
-      .qt-footer-strip { position: static !important; }
-    }
-
-/* SalesOn accessibility focus states */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: 3px solid #1a56db;
-  outline-offset: 3px;
-  border-radius: 8px;
-}
-
-
-</style>
-<meta content="Free Quotation Generator for Indian Businesses | SalesOn" name="twitter:title">
-<meta content="Create professional quotations and estimates with GST, logo, item pricing, validity date, payment terms and PDF download. Free tool by SalesOn." name="twitter:description">
+<meta content="Free Quotation Generator for Indian Businesses | SalesOn" name="twitter:title"/>
+<meta content="Create professional quotations and estimates with GST, logo, item pricing, validity date, payment terms and PDF download. Free tool by SalesOn." name="twitter:description"/>
 
 <script type="application/ld+json">
 {
@@ -719,7 +134,11 @@ textarea:focus-visible {
     <link rel="canonical" href="https://saleson.co.in/tools/quotation-generator">
     <link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css">
 <script src="/assets/js/money.d4749de815c9.js"></script>
-<link rel="stylesheet" href="/css/tools-editorial.862fd10d64c4.css"></head>
+<script src="/assets/js/tool-runtime.3fe9b4763ae5.js"></script>
+<link rel="stylesheet" href="/css/tool-workspace.475615067928.css">
+<script src="/assets/js/page-readiness.3cc152fdd743.js" defer></script>
+<link rel="stylesheet" href="/css/tools-editorial.862fd10d64c4.css">
+<link rel="stylesheet" href="/css/tools/quotation-generator.06303284eff6.css"></head>
 <body>
 
   <site-header source="tools"><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header>
@@ -734,7 +153,7 @@ textarea:focus-visible {
 <span class="badge badge-blue">📊 GST Ready</span>
 <span class="badge badge-white">📄 PDF Download</span>
 </div>
-<h1 class="hero-h1">Free Quotation Generator<br>for <em>Indian Businesses</em></h1>
+<h1 class="hero-h1">Free Quotation Generator<br/>for <em>Indian Businesses</em></h1>
 <p class="hero-sub">Create professional quotations and estimates with your logo, item pricing, GST, validity date, payment terms and PDF download. Built for Indian distributors, wholesalers, manufacturers and sales teams.</p>
 </div>
 </div>
@@ -762,39 +181,39 @@ textarea:focus-visible {
 <div class="form-row">
 <div>
 <label>Company Name *</label>
-<input class="fi" id="bizName" oninput="renderPreview()" placeholder="Shree Balaji Distributors" type="text">
+<input class="fi" id="bizName" oninput="renderPreview()" placeholder="Shree Balaji Distributors" type="text"/>
 </div>
 <div>
 <label>GSTIN (Optional)</label>
-<input class="fi" id="bizGSTIN" maxlength="15" oninput="this.value=this.value.toUpperCase();renderPreview()" placeholder="10ABCDE1234F1Z5" style="text-transform:uppercase" type="text">
+<input class="fi" id="bizGSTIN" maxlength="15" oninput="this.value=this.value.toUpperCase();renderPreview()" placeholder="10ABCDE1234F1Z5" style="text-transform:uppercase" type="text"/>
 </div>
 </div>
 <div class="form-row full">
 <div>
 <label>Address</label>
-<input class="fi" id="bizAddress" oninput="renderPreview()" placeholder="123 Market Road, Patna, Bihar - 800001" type="text">
+<input class="fi" id="bizAddress" oninput="renderPreview()" placeholder="123 Market Road, Patna, Bihar - 800001" type="text"/>
 </div>
 </div>
 <div class="form-row">
 <div>
 <label>Phone</label>
-<input class="fi" id="bizPhone" oninput="renderPreview()" placeholder="+91 80928 56577" type="tel">
+<input class="fi" id="bizPhone" oninput="renderPreview()" placeholder="+91 80928 56577" type="tel"/>
 </div>
 <div>
 <label>Email</label>
-<input class="fi" id="bizEmail" oninput="renderPreview()" placeholder="sales@example.com" type="email">
+<input class="fi" id="bizEmail" oninput="renderPreview()" placeholder="sales@example.com" type="email"/>
 </div>
 </div>
 <div class="form-row">
 <div>
 <label>Website (Optional)</label>
-<input class="fi" id="bizWebsite" oninput="renderPreview()" placeholder="www.example.com" type="text">
+<input class="fi" id="bizWebsite" oninput="renderPreview()" placeholder="www.example.com" type="text"/>
 </div>
 <div>
 <label>Logo (PNG/JPG)</label>
 <div class="upload-btn" onclick="document.getElementById('logoUpload').click()">📷 Upload Logo</div>
-<input accept="image/*" class="fi-upload" id="logoUpload" onchange="handleLogoUpload(this)" type="file">
-<img alt="Logo preview" class="upload-preview" id="logoPreviewThumb">
+<input accept="image/*" class="fi-upload" id="logoUpload" onchange="handleLogoUpload(this)" type="file"/>
+<img alt="Logo preview" class="upload-preview" id="logoPreviewThumb"/>
 </div>
 </div>
 </div>
@@ -809,33 +228,33 @@ textarea:focus-visible {
 <div class="form-row">
 <div>
 <label>Customer Name *</label>
-<input class="fi" id="custName" oninput="renderPreview()" placeholder="Mohan Retail Store" type="text">
+<input class="fi" id="custName" oninput="renderPreview()" placeholder="Mohan Retail Store" type="text"/>
 </div>
 <div>
 <label>Company (Optional)</label>
-<input class="fi" id="custCompany" oninput="renderPreview()" placeholder="Mohan Enterprises Pvt Ltd" type="text">
+<input class="fi" id="custCompany" oninput="renderPreview()" placeholder="Mohan Enterprises Pvt Ltd" type="text"/>
 </div>
 </div>
 <div class="form-row full">
 <div>
 <label>Address</label>
-<input class="fi" id="custAddress" oninput="renderPreview()" placeholder="Boring Road, Patna, Bihar - 800001" type="text">
+<input class="fi" id="custAddress" oninput="renderPreview()" placeholder="Boring Road, Patna, Bihar - 800001" type="text"/>
 </div>
 </div>
 <div class="form-row">
 <div>
 <label>GSTIN (Optional)</label>
-<input class="fi" id="custGSTIN" maxlength="15" oninput="this.value=this.value.toUpperCase();renderPreview()" placeholder="10AAACM1234B1Z6" style="text-transform:uppercase" type="text">
+<input class="fi" id="custGSTIN" maxlength="15" oninput="this.value=this.value.toUpperCase();renderPreview()" placeholder="10AAACM1234B1Z6" style="text-transform:uppercase" type="text"/>
 </div>
 <div>
 <label>Phone</label>
-<input class="fi" id="custPhone" oninput="renderPreview()" placeholder="+91 80928 56577" type="tel">
+<input class="fi" id="custPhone" oninput="renderPreview()" placeholder="+91 80928 56577" type="tel"/>
 </div>
 </div>
 <div class="form-row full">
 <div>
 <label>Email</label>
-<input class="fi" id="custEmail" oninput="renderPreview()" placeholder="purchase@customer.com" type="email">
+<input class="fi" id="custEmail" oninput="renderPreview()" placeholder="purchase@customer.com" type="email"/>
 </div>
 </div>
 </div>
@@ -850,17 +269,17 @@ textarea:focus-visible {
 <div class="form-row">
 <div>
 <label>Quotation Number</label>
-<input class="fi" id="quoteNumber" oninput="renderPreview()" placeholder="QT-20240101-001" type="text">
+<input class="fi" id="quoteNumber" oninput="renderPreview()" placeholder="QT-20240101-001" type="text"/>
 </div>
 <div>
 <label>Quotation Date</label>
-<input class="fi" id="quoteDate" oninput="renderPreview()" type="date">
+<input class="fi" id="quoteDate" oninput="renderPreview()" type="date"/>
 </div>
 </div>
 <div class="form-row">
 <div>
 <label>Valid Until</label>
-<input class="fi" id="validUntil" oninput="renderPreview()" type="date">
+<input class="fi" id="validUntil" oninput="renderPreview()" type="date"/>
 <div class="validity-pills">
 <span class="validity-pill" onclick="setValidity(7)">7 days</span>
 <span class="validity-pill" onclick="setValidity(15)">15 days</span>
@@ -870,27 +289,27 @@ textarea:focus-visible {
 </div>
 <div>
 <label>Prepared By</label>
-<input class="fi" id="preparedBy" oninput="renderPreview()" placeholder="Ramesh Gupta" type="text">
+<input class="fi" id="preparedBy" oninput="renderPreview()" placeholder="Ramesh Gupta" type="text"/>
 </div>
 </div>
 <div class="form-row">
 <div>
 <label>Reference No. (Optional)</label>
-<input class="fi" id="refNumber" oninput="renderPreview()" placeholder="ENQ-2024-001" type="text">
+<input class="fi" id="refNumber" oninput="renderPreview()" placeholder="ENQ-2024-001" type="text"/>
 </div>
 <div>
 <label>Salesperson (Optional)</label>
-<input class="fi" id="salesperson" oninput="renderPreview()" placeholder="Suresh Kumar" type="text">
+<input class="fi" id="salesperson" oninput="renderPreview()" placeholder="Suresh Kumar" type="text"/>
 </div>
 </div>
 <div class="form-row">
 <div>
 <label>Project / Service Title (Optional)</label>
-<input class="fi" id="projectTitle" oninput="renderPreview()" placeholder="Monthly FMCG Supply Quotation" type="text">
+<input class="fi" id="projectTitle" oninput="renderPreview()" placeholder="Monthly FMCG Supply Quotation" type="text"/>
 </div>
 <div>
 <label>Beat / Route (Optional)</label>
-<input class="fi" id="beatRoute" oninput="renderPreview()" placeholder="Boring Road Beat" type="text">
+<input class="fi" id="beatRoute" oninput="renderPreview()" placeholder="Boring Road Beat" type="text"/>
 </div>
 </div>
 </div>
@@ -934,16 +353,16 @@ textarea:focus-visible {
 <div class="form-section-body">
 <div class="toggle-row">
 <span class="toggle-label">Price includes tax</span>
-<label class="toggle"><input id="priceInclTax" onchange="recalcAll();renderPreview()" type="checkbox"><span class="toggle-slider"></span></label>
+<label class="toggle"><input id="priceInclTax" onchange="recalcAll();renderPreview()" type="checkbox"/><span class="toggle-slider"></span></label>
 </div>
 <div class="toggle-row">
 <span class="toggle-label">Round off grand total</span>
-<label class="toggle"><input checked id="roundOff" onchange="renderPreview()" type="checkbox"><span class="toggle-slider"></span></label>
+<label class="toggle"><input checked="" id="roundOff" onchange="renderPreview()" type="checkbox"/><span class="toggle-slider"></span></label>
 </div>
 <div class="form-row">
 <div>
 <label>Other Charges (₹)</label>
-<input class="fi" id="otherCharges" min="0" oninput="renderPreview()" placeholder="0" type="number" value="0">
+<input class="fi" id="otherCharges" min="0" oninput="renderPreview()" placeholder="0" type="number" value="0"/>
 <div style="margin-top:5px;">
 <select class="fi" id="otherChargesLabel" onchange="renderPreview()" style="font-size:12px;padding:6px 10px;">
 <option value="">— Charge Label —</option>
@@ -957,7 +376,7 @@ textarea:focus-visible {
 </div>
 <div>
 <label>Advance Payment (%)</label>
-<input class="fi" id="advancePct" max="100" min="0" oninput="renderPreview()" placeholder="0" type="number" value="0">
+<input class="fi" id="advancePct" max="100" min="0" oninput="renderPreview()" placeholder="0" type="number" value="0"/>
 </div>
 </div>
 <div class="form-row full">
@@ -992,13 +411,13 @@ textarea:focus-visible {
 <div class="form-row full" style="margin-bottom:10px;">
 <div>
 <label>Delivery Timeline (Optional)</label>
-<input class="fi" id="deliveryTimeline" oninput="renderPreview()" placeholder="e.g. 7-10 working days from order confirmation" type="text">
+<input class="fi" id="deliveryTimeline" oninput="renderPreview()" placeholder="e.g. 7-10 working days from order confirmation" type="text"/>
 </div>
 </div>
 <div class="form-row full" style="margin-bottom:10px;">
 <div>
 <label>Warranty / Guarantee (Optional)</label>
-<input class="fi" id="warranty" oninput="renderPreview()" placeholder="e.g. 1 year manufacturer warranty" type="text">
+<input class="fi" id="warranty" oninput="renderPreview()" placeholder="e.g. 1 year manufacturer warranty" type="text"/>
 </div>
 </div>
 <div class="form-row full" style="margin-bottom:10px;">
@@ -1022,13 +441,13 @@ textarea:focus-visible {
 <div class="form-row">
 <div>
 <label>Authorized Signatory Name</label>
-<input class="fi" id="signatoryName" oninput="renderPreview()" placeholder="Authorized Signatory" type="text">
+<input class="fi" id="signatoryName" oninput="renderPreview()" placeholder="Authorized Signatory" type="text"/>
 </div>
 <div>
 <label>Signature / Stamp (PNG)</label>
 <div class="upload-btn" onclick="document.getElementById('sigUpload').click()">🖊️ Upload Signature</div>
-<input accept="image/*" class="fi-upload" id="sigUpload" onchange="handleSigUpload(this)" type="file">
-<img alt="Signature preview" class="upload-preview" id="sigPreviewThumb">
+<input accept="image/*" class="fi-upload" id="sigUpload" onchange="handleSigUpload(this)" type="file"/>
+<img alt="Signature preview" class="upload-preview" id="sigPreviewThumb"/>
 </div>
 </div>
 </div>
@@ -1059,7 +478,7 @@ textarea:focus-visible {
 <div style="padding:0 20px;">
 <div class="convert-success" id="convertSuccess">
           ✅ Quotation data saved! Open the GST Invoice Generator to create a GST invoice from this quotation — no re-entering needed.
-          <br><a href="/tools/gst-invoice-generator">→ Open GST Invoice Generator</a>
+          <br/><a href="/tools/gst-invoice-generator">→ Open GST Invoice Generator</a>
 </div>
 </div>
 <!-- ACTION BUTTONS -->
@@ -1083,6 +502,45 @@ textarea:focus-visible {
 </div><!-- /tool-wrap -->
 </div><!-- /container -->
 <!-- ── UPSELL SECTION ── -->
+<section class="section section-alt">
+<div class="container">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+<div>
+<span class="section-label">SalesOn Platform</span>
+<h2 class="section-title">Still preparing quotations separately from <em>orders and billing?</em></h2>
+<p class="section-sub">Free quotation tools are useful for a few estimates. But when your sales team creates quotations, takes orders, manages follow-ups, converts quotes into GST invoices and tracks payments — manual work becomes slow and confusing. SalesOn connects everything in one platform.</p>
+<ul class="feature-list">
+<li><span class="check-dot">✓</span> Convert enquiries into orders</li>
+<li><span class="check-dot">✓</span> GST billing &amp; e-invoicing</li>
+<li><span class="check-dot">✓</span> Stock tracking across locations</li>
+<li><span class="check-dot">✓</span> Payment follow-ups &amp; collections</li>
+<li><span class="check-dot">✓</span> Field sales app for your team</li>
+<li><span class="check-dot">✓</span> Sales team visibility &amp; reports</li>
+<li><span class="check-dot">✓</span> Tally integration</li>
+</ul>
+<a class="btn-demo" href="/request-demo">See SalesOn in Action →</a>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+<div class="seo-card" style="margin-top:0;border-color:var(--border);border-top-color:var(--brand);">
+<h3>📋 Quotation → Order</h3>
+<p>Convert approved quotations to orders in one click. No re-entering data.</p>
+</div>
+<div class="seo-card" style="margin-top:0;border-top-color:var(--green);">
+<h3>🧾 GST Billing</h3>
+<p>Generate GST invoices from orders. CGST/SGST/IGST handled automatically.</p>
+</div>
+<div class="seo-card" style="margin-top:0;border-top-color:var(--amber);">
+<h3>📦 Stock Tracking</h3>
+<p>Live stock levels across godowns. Alerts when stock runs low.</p>
+</div>
+<div class="seo-card" style="margin-top:0;border-top-color:var(--brand-dark);">
+<h3>💰 Collections</h3>
+<p>Track outstanding dues and send payment reminders automatically.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
 <!-- ── SEO CONTENT ── -->
 <section class="section">
 <div class="container">
@@ -1190,7 +648,41 @@ textarea:focus-visible {
 </div>
 </div>
 </section>
+<section class="section">
+<div class="container" style="max-width:720px;">
+<h2 class="section-title">When should you move from free quotation tools to <em>SalesOn?</em></h2>
+<p class="section-sub" style="margin-bottom:24px;">Free tools work well when you're doing a handful of quotations. You need a platform when:</p>
+<ul class="feature-list" style="margin-bottom:28px;">
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> Your team creates 20+ quotations per month</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> Quotation approval and follow-up is hard to track</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> Converting approved quotes to invoices is a manual effort</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> Multiple salespersons sending quotations from different templates</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> No clear picture of pending quotations or conversion rate</li>
+<li><span class="check-dot" style="background:var(--amber-light);color:var(--amber);">→</span> Quotation to order to billing is all happening on WhatsApp</li>
+</ul>
+<a class="btn-demo" href="/request-demo">Book a SalesOn Demo →</a>
+</div>
+</section>
 <!-- ── RELATED TOOLS ── -->
+<section class="section section-alt">
+<div class="container">
+<span class="section-label">Free Business Tools</span>
+<h2 class="section-title">Related <em>SalesOn</em> Free Tools</h2>
+<div class="tools-row">
+<a class="tool-chip" href="/tools">🛠️ All Free Tools</a>
+<a class="tool-chip" href="/tools/gst-invoice-generator">🧾 GST Invoice Generator</a>
+<a class="tool-chip" href="/tools/delivery-challan-generator">🚚 Delivery Challan</a>
+<a class="tool-chip" href="/tools/payment-receipt-generator">💰 Payment Receipt</a>
+<a class="tool-chip" href="/tools/purchase-order-generator">📦 Purchase Order</a>
+</div>
+<div style="margin-top:24px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+<a href="/invoicing" style="font-size:13px;color:var(--brand);">GST Invoicing Software →</a>
+<a href="/field-sales" style="font-size:13px;color:var(--brand);">Field Sales →</a>
+<a href="/request-demo" style="font-size:13px;color:var(--brand);">Book Demo →</a>
+<a href="/tools" style="font-size:13px;color:var(--brand);">All Free Tools →</a>
+</div>
+</div>
+</section>
 <!-- ── FAQ ── -->
 <section class="section">
 <div class="container">
@@ -1220,7 +712,7 @@ textarea:focus-visible {
 </div>
 </div>
 </section>
-<section class="tool-next-step" aria-label="Related tools and SalesOn"><div class="tool-next-inner"><div><h2>Continue with a related tool</h2><nav aria-label="Related free tools"><a href="/tools/gst-invoice-generator">GST Invoice Generator</a><a href="/tools/gst-calculator">GST Calculator</a><a href="/tools/purchase-order-generator">Purchase Order Generator</a><a href="/tools">All free tools →</a></nav></div><div class="tool-product-link"><h3>Capture confirmed customer demand.</h3><p>Explore order taking in SalesOn.</p><a href="/order-taking-app">See the feature →</a></div></div></section><site-footer source="tools"><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
+<site-footer source="tools"><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
 <whatsapp-float msg="Hi%20SalesOn%2C%20I%27d%20like%20to%20know%20more%20about%20SalesOn"></whatsapp-float>
 <script src="/components/site-header.429b1e04f891.js" defer></script>
 <script src="/components/site-footer.3a1c7b6ae618.js" defer></script>
@@ -1230,83 +722,7 @@ textarea:focus-visible {
 <!-- ══════════════════════
      LEAD CAPTURE MODAL
      ══════════════════════ -->
-<div class="modal-overlay" id="leadModal">
-<div class="modal-card">
-<div class="modal-header">
-<div class="modal-title">Want to save this quotation and get a cleaner PDF?</div>
-<div class="modal-sub">SalesOn helps businesses convert quotations into orders, GST bills, stock movement, payments and field sales workflows. Tell us about your business — takes 30 seconds.</div>
-</div>
-<div class="modal-body">
-<div class="modal-row">
-<div>
-<label>Your Name *</label>
-<input class="modal-input" id="leadName" placeholder="Ramesh Gupta" type="text">
-</div>
-<div>
-<label>Mobile / WhatsApp *</label>
-<input class="modal-input" id="leadPhone" placeholder="+91 80928 56577" type="tel">
-</div>
-</div>
-<div class="modal-row">
-<div>
-<label>Business Name *</label>
-<input class="modal-input" id="leadBiz" placeholder="Shree Balaji Distributors" type="text">
-</div>
-<div>
-<label>City</label>
-<input class="modal-input" id="leadCity" placeholder="Patna" type="text">
-</div>
-</div>
-<div class="modal-row">
-<div>
-<label>Business Type</label>
-<select class="modal-input" id="leadBizType" style="appearance:none;cursor:pointer;">
-<option value="">Select</option>
-<option>Distributor</option>
-<option>Wholesaler</option>
-<option>Manufacturer</option>
-<option>FMCG</option>
-<option>Pharma</option>
-<option>Retailer</option>
-<option>Service Business</option>
-<option>Other</option>
-</select>
-</div>
-<div>
-<label>Monthly Quotations / Orders</label>
-<select class="modal-input" id="leadVolume" style="appearance:none;cursor:pointer;">
-<option value="">Select</option>
-<option>1–20</option>
-<option>21–100</option>
-<option>101–500</option>
-<option>500+</option>
-</select>
-</div>
-</div>
-<div class="modal-row full">
-<div>
-<label>Current Method for Quotations</label>
-<select class="modal-input" id="leadMethod" style="appearance:none;cursor:pointer;">
-<option value="">Select</option>
-<option>Excel</option>
-<option>Tally</option>
-<option>Busy</option>
-<option>Manual book</option>
-<option>WhatsApp</option>
-<option>Other software</option>
-</select>
-</div>
-</div>
-<div class="modal-actions">
-<button class="btn-modal-primary" onclick="submitLead('continue')">✓ Continue Free Download</button>
-<button class="btn-modal-demo" onclick="submitLead('demo')">📅 Book SalesOn Demo</button>
-</div>
-<div class="modal-skip">
-<a onclick="skipLead()">Skip — continue without sharing details</a>
-</div>
-</div>
-</div>
-</div>
+
 <!-- WhatsApp Share Modal -->
 <div class="modal-overlay" id="waModal">
 <div class="modal-card" style="max-width:460px;">
@@ -1329,852 +745,9 @@ textarea:focus-visible {
 <!-- ══════════════════════════════════════
      JAVASCRIPT
      ══════════════════════════════════════ -->
-<script>
-/* ─────────────────────────
-   STATE
-───────────────────────── */
-let currentTemplate = 'classic';
-let currentAccent = '#1a56db';
-let logoDataURL = null;
-let sigDataURL = null;
-let pendingAction = null; // 'pdf' | 'print' | 'wa' | 'convert'
-let convertedToInvoice = false; // track if user clicked Convert to Invoice (for lead scoring)
-
-/* ─────────────────────────
-   INIT DEFAULTS — sample data so preview never looks empty
-───────────────────────── */
-function initDefaults() {
-  const today = new Date();
-  const yyyy = today.getFullYear();
-  const mm = String(today.getMonth() + 1).padStart(2, '0');
-  const dd = String(today.getDate()).padStart(2, '0');
-
-  sv('bizName',     'Shree Balaji Distributors');
-  sv('bizGSTIN',    '10ABCDE1234F1Z5');
-  sv('bizAddress',  'MG Road, Fraser Road, Patna, Bihar - 800001');
-  sv('bizPhone',    '+91-9876543210');
-  sv('bizEmail',    'sales@example.com');
-  sv('bizWebsite',  'www.example.com');
-
-  sv('custName',    'Mohan Retail Store');
-  sv('custCompany', 'Mohan Enterprises');
-  sv('custAddress', 'Boring Road, Patna, Bihar - 800001');
-  sv('custPhone',   '+91-9800000001');
-
-  sv('quoteNumber', 'QT-' + yyyy + mm + dd + '-001');
-  sv('quoteDate',   yyyy + '-' + mm + '-' + dd);
-  sv('preparedBy',  'Ramesh Gupta');
-  sv('projectTitle','Monthly FMCG Supply Quotation');
-  sv('salesperson', 'Suresh Kumar');
-
-  // Set validity 30 days from today
-  setValidity(30, true);
-
-  sv('paymentTerms', '50% Advance, 50% Before Delivery');
-  sv('signatoryName','Authorized Signatory');
-
-  // Add one sample item
-  addItemRow({ desc: 'FMCG Product Box', hsn: '3401', qty: 10, unit: 'Box', rate: 500, disc: 0, gst: 18 });
-
-  renderPreview();
-}
-
-/* ─────────────────────────
-   VALIDITY QUICK SELECTOR
-───────────────────────── */
-function setValidity(days, silent) {
-  const dateInput = document.getElementById('quoteDate');
-  const base = dateInput.value ? new Date(dateInput.value) : new Date();
-  const future = new Date(base.getTime() + days * 24 * 60 * 60 * 1000);
-  const y = future.getFullYear();
-  const m = String(future.getMonth() + 1).padStart(2, '0');
-  const d = String(future.getDate()).padStart(2, '0');
-  document.getElementById('validUntil').value = y + '-' + m + '-' + d;
-  if (!silent) renderPreview();
-}
-
-/* ─────────────────────────
-   ITEM ROWS
-───────────────────────── */
-let itemRowCount = 0;
-
-function addItemRow(defaults) {
-  itemRowCount++;
-  const id = 'row_' + itemRowCount;
-  const d = defaults || {};
-  const tbody = document.getElementById('itemsBody');
-  const tr = document.createElement('tr');
-  tr.id = id;
-  tr.innerHTML = `
-    <td><input type="text" value="${d.desc || ''}" placeholder="Product / Service" oninput="recalcRow('${id}')"></td>
-    <td><input type="text" value="${d.hsn || ''}" placeholder="3401"></td>
-    <td><input type="number" value="${d.qty !== undefined ? d.qty : 1}" min="0" step="any" oninput="recalcRow('${id}')"></td>
-    <td><input type="text" value="${d.unit || 'Nos'}" placeholder="Box"></td>
-    <td><input type="number" value="${d.rate !== undefined ? d.rate : 0}" min="0" step="any" oninput="recalcRow('${id}')"></td>
-    <td><input type="number" value="${d.disc !== undefined ? d.disc : 0}" min="0" max="100" step="any" oninput="recalcRow('${id}')"></td>
-    <td>
-      <select oninput="recalcRow('${id}')">
-        <option value="0">0%</option>
-        <option value="3">3%</option>
-        <option value="5">5%</option>
-        <option value="12">12%</option>
-        <option value="18" ${(d.gst || 0) == 18 ? 'selected' : ''}>18%</option>
-        <option value="28">28%</option>
-        <option value="40">40% (De-merit)</option>
-      </select>
-    </td>
-    <td class="computed" id="${id}_taxable">—</td>
-    <td class="computed" id="${id}_gstamt">—</td>
-    <td class="computed" id="${id}_total">—</td>
-    <td><button class="btn-remove-row" onclick="removeItemRow('${id}')" title="Remove row">✕</button></td>
-  `;
-  tbody.appendChild(tr);
-  recalcRow(id);
-}
-
-function removeItemRow(id) {
-  const row = document.getElementById(id);
-  if (row) { row.remove(); renderPreview(); }
-}
-
-function recalcRow(id) {
-  const row = document.getElementById(id);
-  if (!row) return;
-  const inputs = row.querySelectorAll('input, select');
-  const qty    = parseFloat(inputs[2].value) || 0;
-  const rate   = parseFloat(inputs[4].value) || 0;
-  const disc   = parseFloat(inputs[5].value) || 0;
-  const gstPct = parseFloat(inputs[6].value) || 0;
-  const inclTax = document.getElementById('priceInclTax').checked;
-
-  let taxable, gstAmt, total;
-  if (inclTax && gstPct > 0) {
-    const gross = qty * rate * (1 - disc / 100);
-    taxable = gross / (1 + gstPct / 100);
-    gstAmt  = gross - taxable;
-    total   = gross;
-  } else {
-    taxable = qty * rate * (1 - disc / 100);
-    gstAmt  = taxable * gstPct / 100;
-    total   = taxable + gstAmt;
-  }
-
-  document.getElementById(id + '_taxable').textContent = fmtINR(taxable);
-  document.getElementById(id + '_gstamt').textContent  = gstAmt > 0 ? fmtINR(gstAmt) : '—';
-  document.getElementById(id + '_total').textContent   = fmtINR(total);
-  renderPreview();
-}
-
-function recalcAll() {
-  document.querySelectorAll('#itemsBody tr').forEach(row => recalcRow(row.id));
-}
-
-/* ─────────────────────────
-   COLLECT ITEMS DATA
-───────────────────────── */
-function getItemsData() {
-  const rows = document.querySelectorAll('#itemsBody tr');
-  const inclTax = document.getElementById('priceInclTax').checked;
-  const items = [];
-
-  rows.forEach(row => {
-    const inp    = row.querySelectorAll('input, select');
-    const qty    = parseFloat(inp[2].value) || 0;
-    const rate   = parseFloat(inp[4].value) || 0;
-    const disc   = parseFloat(inp[5].value) || 0;
-    const gstPct = parseFloat(inp[6].value) || 0;
-
-    let taxable, gstAmt, total;
-    if (inclTax && gstPct > 0) {
-      const gross = qty * rate * (1 - disc / 100);
-      taxable = gross / (1 + gstPct / 100);
-      gstAmt  = gross - taxable;
-      total   = gross;
-    } else {
-      taxable = qty * rate * (1 - disc / 100);
-      gstAmt  = taxable * gstPct / 100;
-      total   = taxable + gstAmt;
-    }
-
-    items.push({
-      desc: inp[0].value || '—', hsn: inp[1].value || '',
-      qty, unit: inp[3].value || 'Nos', rate, disc, gstPct,
-      taxable, gstAmt, total
-    });
-  });
-  return items;
-}
-
-/* ─────────────────────────
-   COMPUTE TOTALS
-───────────────────────── */
-function computeTotals(items) {
-  let subTotal = 0, totalDiscount = 0, totalTaxable = 0, totalGST = 0, grandRaw = 0;
-
-  items.forEach(it => {
-    subTotal      += it.qty * it.rate;
-    totalDiscount += it.qty * it.rate * it.disc / 100;
-    totalTaxable  += it.taxable;
-    totalGST      += it.gstAmt;
-    grandRaw      += it.total;
-  });
-
-  const otherCharges = Math.max(0, parseFloat(document.getElementById('otherCharges').value) || 0);
-  grandRaw += otherCharges;
-
-  const doRound  = document.getElementById('roundOff').checked;
-  const roundOff = doRound ? Math.round(grandRaw) - grandRaw : 0;
-  const grandTotal = doRound ? Math.round(grandRaw) : grandRaw;
-
-  const advancePct = Math.min(100, Math.max(0, parseFloat(document.getElementById('advancePct').value) || 0));
-  const advanceAmt = SalesOnMoney.minorUnits(grandTotal * advancePct / 100) / 100;
-  const balanceAmt = Math.max(0, SalesOnMoney.minorUnits(grandTotal - advanceAmt) / 100);
-
-  return { subTotal, totalDiscount, totalTaxable, totalGST, otherCharges, grandRaw, roundOff, grandTotal, advancePct, advanceAmt, balanceAmt };
-}
-
-/* ─────────────────────────
-   FORMAT HELPERS
-───────────────────────── */
-function fmtINR(n) {
-  return '₹' + Number(n.toFixed(2)).toLocaleString('en-IN', { minimumFractionDigits: 2 });
-}
-
-function amountToWords(value) { return SalesOnMoney.toWords(value); }
-
-function formatDate(d) {
-  if (!d) return '';
-  const [y, m, day] = d.split('-');
-  return day + '/' + m + '/' + y;
-}
-
-/* ─────────────────────────
-   RENDER QUOTATION PREVIEW
-───────────────────────── */
-function renderPreview() {
-  const items = getItemsData();
-  const T = computeTotals(items);
-
-  // Business
-  const bName    = v('bizName')    || 'Your Company Name';
-  const bGSTIN   = v('bizGSTIN')   || '';
-  const bAddr    = v('bizAddress') || '';
-  const bPhone   = v('bizPhone')   || '';
-  const bEmail   = v('bizEmail')   || '';
-  const bWeb     = v('bizWebsite') || '';
-
-  // Customer
-  const cName    = v('custName')    || 'Customer Name';
-  const cCompany = v('custCompany') || '';
-  const cAddr    = v('custAddress') || '';
-  const cGSTIN   = v('custGSTIN')   || '';
-  const cPhone   = v('custPhone')   || '';
-  const cEmail   = v('custEmail')   || '';
-
-  // Quotation meta
-  const qNum    = v('quoteNumber') || '—';
-  const qDate   = formatDate(v('quoteDate'));
-  const qValid  = formatDate(v('validUntil'));
-  const qPrep   = v('preparedBy')  || '';
-  const qRef    = v('refNumber')   || '';
-  const qTitle  = v('projectTitle')|| '';
-  const qSales  = v('salesperson') || '';
-  const qBeat   = v('beatRoute')   || '';
-
-  // Optional sections
-  const scope    = v('scopeOfWork')      || '';
-  const delivery = v('deliveryTimeline') || '';
-  const warranty = v('warranty')         || '';
-  const excl     = v('exclusions')       || '';
-  const notes    = v('quoteNotes')       || '';
-  const terms    = v('quoteTerms')       || '';
-  const sigName  = v('signatoryName')    || 'Authorized Signatory';
-
-  // Advanced
-  const payTerms    = v('paymentTerms')    || '';
-  const otherLabel  = v('otherChargesLabel')|| 'Other Charges';
-
-  // Logo and signature HTML
-  const logoHTML = logoDataURL
-    ? `<img class="qt-logo" src="/tools/quotation-generator/${logoDataURL}" alt="Company Logo">`
-    : `<div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--accent);">${bName}</div>`;
-
-  const sigImgStyle = sigDataURL ? 'display:block;' : 'display:none;';
-
-  // Items rows HTML
-  const itemRowsHTML = items.map((it, i) => `
-    <tr>
-      <td>${i + 1}</td>
-      <td style="font-weight:600;color:var(--ink);">${it.desc}</td>
-      <td>${it.hsn || '—'}</td>
-      <td style="text-align:center;">${it.qty}</td>
-      <td style="text-align:center;">${it.unit}</td>
-      <td style="text-align:right;">${fmtINR(it.rate)}</td>
-      <td style="text-align:center;">${it.disc > 0 ? it.disc + '%' : '—'}</td>
-      <td style="text-align:center;">${it.gstPct > 0 ? it.gstPct + '%' : '—'}</td>
-      <td style="text-align:right;">${fmtINR(it.taxable)}</td>
-      <td style="text-align:right;">${it.gstAmt > 0 ? fmtINR(it.gstAmt) : '—'}</td>
-      <td style="text-align:right;font-weight:700;color:var(--ink);">${fmtINR(it.total)}</td>
-    </tr>`).join('');
-
-  // Summary HTML
-  let summaryHTML = `
-    <div class="qt-summary-row"><span class="s-label">Subtotal</span><span class="s-val">${fmtINR(T.subTotal)}</span></div>
-    ${T.totalDiscount > 0 ? `<div class="qt-summary-row"><span class="s-label">Discount</span><span class="s-val" style="color:var(--green);">− ${fmtINR(T.totalDiscount)}</span></div>` : ''}
-    <div class="qt-summary-row"><span class="s-label">Taxable Value</span><span class="s-val">${fmtINR(T.totalTaxable)}</span></div>
-    ${T.totalGST > 0 ? `<div class="qt-summary-row"><span class="s-label">GST Total</span><span class="s-val">${fmtINR(T.totalGST)}</span></div>` : ''}
-    ${T.otherCharges > 0 ? `<div class="qt-summary-row"><span class="s-label">${otherLabel || 'Other Charges'}</span><span class="s-val">${fmtINR(T.otherCharges)}</span></div>` : ''}
-    ${T.roundOff !== 0 ? `<div class="qt-summary-row"><span class="s-label">Round Off</span><span class="s-val">${T.roundOff >= 0 ? '+' : ''}${T.roundOff.toFixed(2)}</span></div>` : ''}
-    <div class="qt-summary-row total"><span class="s-label">Grand Total</span><span class="s-val">${fmtINR(T.grandTotal)}</span></div>
-    ${T.advancePct > 0 ? `
-      <div class="qt-summary-row"><span class="s-label">Advance (${T.advancePct}%)</span><span class="s-val" style="color:var(--green);">${fmtINR(T.advanceAmt)}</span></div>
-      <div class="qt-summary-row" style="font-weight:800;"><span class="s-label" style="color:var(--ink);">Balance Amount</span><span class="s-val" style="color:${T.balanceAmt > 0 ? '#1a56db' : 'var(--green)'};">${fmtINR(T.balanceAmt)}</span></div>
-    ` : ''}
-  `;
-
-  // Template class
-  const tplClass = 'qt-' + currentTemplate;
-
-  const html = `
-  <div class="${tplClass}" style="--accent:${currentAccent};">
-    <div class="qt-header">
-      <div>
-        ${logoHTML}
-        <div class="qt-seller-name">${bName}</div>
-        <div class="qt-seller-detail">
-          ${bGSTIN ? 'GSTIN: ' + bGSTIN + '<br>' : ''}
-          ${bAddr ? bAddr + '<br>' : ''}
-          ${bPhone ? '📞 ' + bPhone + '&nbsp;&nbsp;' : ''}${bEmail ? '✉️ ' + bEmail : ''}
-          ${bWeb ? '<br>🌐 ' + bWeb : ''}
-        </div>
-      </div>
-      <div>
-        <div class="qt-doc-title">QUOTATION</div>
-        <div class="qt-doc-meta">
-          No: <strong>${qNum}</strong><br>
-          Date: ${qDate || '—'}<br>
-          ${qValid ? 'Valid Until: <strong>' + qValid + '</strong><br>' : ''}
-          ${qPrep ? 'Prepared By: ' + qPrep + '<br>' : ''}
-          ${qRef ? 'Ref: ' + qRef + '<br>' : ''}
-          ${qSales ? 'Salesperson: ' + qSales : ''}
-        </div>
-      </div>
-    </div>
-
-    <div class="qt-body">
-      <div class="qt-bill-row">
-        <div>
-          <div class="qt-bill-label">Quotation For</div>
-          <div class="qt-bill-name">${cName}</div>
-          <div class="qt-bill-detail">
-            ${cCompany ? '<em>' + cCompany + '</em><br>' : ''}
-            ${cGSTIN ? 'GSTIN: ' + cGSTIN + '<br>' : ''}
-            ${cAddr}
-            ${cPhone ? '<br>📞 ' + cPhone : ''}
-            ${cEmail ? '<br>✉️ ' + cEmail : ''}
-          </div>
-        </div>
-        <div>
-          ${qTitle ? `<div class="qt-bill-label">Subject</div><div class="qt-project-title" style="border:none;padding:0;margin:0;">${qTitle}</div>` : ''}
-          ${qBeat ? `<div class="qt-bill-label" style="margin-top:10px;">Beat / Route</div><div class="qt-bill-detail">${qBeat}</div>` : ''}
-          ${payTerms ? `<div class="qt-bill-label" style="margin-top:10px;">Payment Terms</div><div class="qt-bill-detail" style="font-weight:600;color:var(--ink);">${payTerms}</div>` : ''}
-        </div>
-      </div>
-
-      <table class="qt-items-table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Item / Service</th>
-            <th>HSN/SAC</th>
-            <th>Qty</th>
-            <th>Unit</th>
-            <th>Rate</th>
-            <th>Disc</th>
-            <th>GST%</th>
-            <th>Taxable</th>
-            <th>GST Amt</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>${itemRowsHTML}</tbody>
-      </table>
-
-      <div class="qt-summary">
-        <div class="qt-summary-table">${summaryHTML}</div>
-      </div>
-
-      <div class="qt-words">
-        <strong>Amount in Words:</strong> ${amountToWords(T.grandTotal)}
-      </div>
-
-      ${scope ? `<div class="qt-section-block"><strong>Scope of Work</strong><p>${scope}</p></div>` : ''}
-      ${delivery ? `<div class="qt-section-block"><strong>Delivery Timeline</strong><p>${delivery}</p></div>` : ''}
-      ${warranty ? `<div class="qt-section-block"><strong>Warranty / Guarantee</strong><p>${warranty}</p></div>` : ''}
-      ${excl ? `<div class="qt-section-block"><strong>Exclusions</strong><p>${excl}</p></div>` : ''}
-
-      ${(notes || terms) ? `
-      <div class="qt-section-block">
-        ${notes ? `<strong>Notes</strong><p>${notes}</p>` : ''}
-        ${terms ? `<strong style="margin-top:8px;display:block;">Terms &amp; Conditions</strong><p>${terms}</p>` : ''}
-      </div>` : ''}
-
-      <div class="qt-sig-row">
-        <div class="qt-sig-box">
-          <img class="qt-sig-img" src="/tools/quotation-generator/${sigDataURL || ''}" alt="Signature" style="${sigImgStyle}">
-          <div class="qt-sig-line"></div>
-          <div class="qt-sig-name">${sigName}</div>
-          <div class="qt-sig-label">For ${bName}</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="qt-disclaimer">
-      ⚠️ SalesOn Free Tools help you create professional document formats. Please verify tax and legal compliance with your accountant before issuing official documents.
-    </div>
-
-    <div class="qt-footer-strip">
-      Created using SalesOn Free Business Tools · saleson.co.in
-    </div>
-  </div>`;
-
-  document.getElementById('quotePreview').innerHTML = html;
-}
-
-/* ─────────────────────────
-   COLLAPSIBLE SECTIONS
-───────────────────────── */
-function toggleSection(btn) {
-  const body = btn.nextElementSibling;
-  const isOpen = btn.classList.contains('open');
-  btn.classList.toggle('open', !isOpen);
-  body.classList.toggle('open', !isOpen);
-}
-
-/* ─────────────────────────
-   DESIGN: TEMPLATE + ACCENT
-───────────────────────── */
-function setTemplate(tpl, el) {
-  currentTemplate = tpl;
-  document.querySelectorAll('.tpl-pill').forEach(p => p.classList.remove('active'));
-  el.classList.add('active');
-  renderPreview();
-}
-
-function setAccent(color, el) {
-  currentAccent = color;
-  document.querySelectorAll('.accent-pill').forEach(p => p.classList.remove('active'));
-  el.classList.add('active');
-  renderPreview();
-}
-
-/* ─────────────────────────
-   UPLOADS
-───────────────────────── */
-function handleLogoUpload(input) {
-  const file = input.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = e => {
-    logoDataURL = e.target.result;
-    const thumb = document.getElementById('logoPreviewThumb');
-    thumb.src = logoDataURL;
-    thumb.style.display = 'block';
-    renderPreview();
-  };
-  reader.readAsDataURL(file);
-}
-
-function handleSigUpload(input) {
-  const file = input.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = e => {
-    sigDataURL = e.target.result;
-    const thumb = document.getElementById('sigPreviewThumb');
-    thumb.src = sigDataURL;
-    thumb.style.display = 'block';
-    renderPreview();
-  };
-  reader.readAsDataURL(file);
-}
-
-
-/* Build a print-only copy at body level. This prevents the hidden webpage from
-   retaining its height and creating extra blank print pages. */
-function prepareSalesOnPrint(sourceId) {
-  const existing = document.getElementById('salesonPrintRoot');
-  if (existing) existing.remove();
-
-  const source = document.getElementById(sourceId);
-  if (!source) return false;
-
-  const root = document.createElement('div');
-  root.id = 'salesonPrintRoot';
-
-  const printable = source.cloneNode(true);
-  printable.classList.add('saleson-print-document');
-  root.appendChild(printable);
-  document.body.appendChild(root);
-
-  // Force layout before opening the browser print dialog.
-  void root.offsetHeight;
-  return true;
-}
-
-function cleanupSalesOnPrint() {
-  const root = document.getElementById('salesonPrintRoot');
-  if (root) root.remove();
-}
-
-window.addEventListener('afterprint', cleanupSalesOnPrint);
-
-/* ─────────────────────────
-   ACTION TRIGGER — checks lead first
-───────────────────────── */
-function triggerAction(action) {
-  pendingAction = action;
-  const leadCaptured = localStorage.getItem('saleson_lead_captured');
-  if (leadCaptured) {
-    executeAction(action);
-  } else {
-    document.getElementById('leadModal').classList.add('open');
-  }
-}
-
-function executeAction(action) {
-  if (action === 'pdf' || action === 'print') {
-    prepareSalesOnPrint('quotePreview');
-    window.print();
-  } else if (action === 'wa') {
-    openWaShare();
-  } else if (action === 'convert') {
-    doConvertToInvoice();
-  }
-}
-
-/* ─────────────────────────
-   CONVERT TO INVOICE
-───────────────────────── */
-function doConvertToInvoice() {
-  const items = getItemsData();
-  const rows  = document.querySelectorAll('#itemsBody tr');
-  const itemsArr = [];
-  rows.forEach(row => {
-    const inp = row.querySelectorAll('input, select');
-    itemsArr.push({
-      desc: inp[0].value, hsn: inp[1].value,
-      qty: inp[2].value, unit: inp[3].value,
-      rate: inp[4].value, disc: inp[5].value, gst: inp[6].value
-    });
-  });
-
-  const payload = {
-    sellerName:    v('bizName'),
-    sellerGSTIN:   v('bizGSTIN'),
-    sellerAddress: v('bizAddress'),
-    sellerPhone:   v('bizPhone'),
-    sellerEmail:   v('bizEmail'),
-    buyerName:     v('custName'),
-    buyerGSTIN:    v('custGSTIN'),
-    buyerBillingAddress: v('custAddress'),
-    buyerPhone:    v('custPhone'),
-    projectTitle:  v('projectTitle'),
-    refNumber:     v('refNumber'),
-    paymentTerms:  v('paymentTerms'),
-    invNotes:      v('quoteNotes'),
-    invTerms:      v('quoteTerms'),
-    signatoryName: v('signatoryName'),
-    logoDataURL,
-    sigDataURL,
-    items: itemsArr,
-    convertedFromQuote: v('quoteNumber'),
-    convertedAt: new Date().toISOString()
-  };
-
-  localStorage.setItem('saleson_quote_to_invoice_data', JSON.stringify(payload));
-  convertedToInvoice = true;
-
-  // Show success message
-  const el = document.getElementById('convertSuccess');
-  el.classList.add('show');
-  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  showToast('Quotation data saved. Open GST Invoice Generator ✓');
-}
-
-/* ─────────────────────────
-   WHATSAPP SHARE
-───────────────────────── */
-function openWaShare() {
-  const items = getItemsData();
-  const T = computeTotals(items);
-  const cName  = v('custName')    || 'Customer';
-  const qNum   = v('quoteNumber') || '—';
-  const bName  = v('bizName')     || 'Your Business';
-  const qValid = formatDate(v('validUntil'));
-
-  const msg = `Hi ${cName},\n\nPlease find Quotation No. ${qNum} from ${bName} for ${fmtINR(T.grandTotal)}.\n\n${qValid ? 'This quotation is valid until ' + qValid + '.\n\n' : ''}Created using SalesOn Free Business Tools — saleson.co.in`;
-
-  document.getElementById('waMessageBox').textContent = msg;
-  const encoded = encodeURIComponent(msg);
-  document.getElementById('waOpenBtn').href = `https://wa.me/?text=${encoded}`;
-  document.getElementById('waModal').classList.add('open');
-}
-
-function copyWaMessage() {
-  const msg = document.getElementById('waMessageBox').textContent;
-  navigator.clipboard.writeText(msg).then(() => showToast('Message copied!')).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = msg; document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); document.body.removeChild(ta);
-    showToast('Message copied!');
-  });
-}
-
-/* ─────────────────────────
-   LEAD MODAL
-───────────────────────── */
-function submitLead(type) {
-  const name  = document.getElementById('leadName').value.trim();
-  const phone = document.getElementById('leadPhone').value.trim();
-  const biz   = document.getElementById('leadBiz').value.trim();
-
-  if (!name || !phone || !biz) {
-    showToast('Please fill Name, Phone and Business Name');
-    return;
-  }
-
-  const bizType = document.getElementById('leadBizType').value;
-  const city    = document.getElementById('leadCity').value.trim();
-  const volume  = document.getElementById('leadVolume').value;
-  const method  = document.getElementById('leadMethod').value;
-
-  // Lead scoring
-  let score = 10; // base: Quotation Generator tool
-  if (volume === '101–500')   score += 20;
-  if (volume === '500+')      score += 30;
-  if (['Distributor','Wholesaler','Manufacturer','FMCG','Pharma'].includes(bizType)) score += 20;
-  if (['Excel','Manual book','WhatsApp'].includes(method)) score += 20;
-  if (convertedToInvoice)     score += 10;
-
-  const lead = {
-    name, phone,
-    businessName:  biz,
-    businessType:  bizType,
-    city, monthlyVolume: volume,
-    currentMethod: method,
-    toolUsed:      'Quotation Generator',
-    leadScore:     score,
-    createdAt:     new Date().toISOString()
-  };
-
-  // Store in localStorage array
-  const existing = JSON.parse(localStorage.getItem('saleson_free_tool_leads') || '[]');
-  existing.push(lead);
-  localStorage.setItem('saleson_free_tool_leads', JSON.stringify(existing));
-  if (window.salesonSubmitLeadToBackend) window.salesonSubmitLeadToBackend(lead);
-  if (window.salesonTrack) window.salesonTrack('lead_saved_locally', { toolUsed: lead.toolUsed || '' });
-  localStorage.setItem('saleson_lead_captured', '1');
-
-  // Log for Supabase / API integration
-  console.log('[SalesOn Lead]', lead);
-
-  document.getElementById('leadModal').classList.remove('open');
-
-  if (type === 'demo') {
-    window.open('https://saleson.co.in/request-demo', '_blank');
-  } else {
-    executeAction(pendingAction);
-  }
-}
-
-function skipLead() {
-  document.getElementById('leadModal').classList.remove('open');
-  localStorage.setItem('saleson_lead_captured', '1');
-  executeAction(pendingAction);
-}
-
-/* ─────────────────────────
-   DRAFT SAVE / LOAD
-───────────────────────── */
-function saveDraft() {
-  const rows = document.querySelectorAll('#itemsBody tr');
-  const itemsArr = [];
-  rows.forEach(row => {
-    const inp = row.querySelectorAll('input, select');
-    itemsArr.push({
-      desc: inp[0].value, hsn: inp[1].value,
-      qty: inp[2].value, unit: inp[3].value,
-      rate: inp[4].value, disc: inp[5].value, gst: inp[6].value
-    });
-  });
-
-  const draft = {
-    bizName: v('bizName'), bizGSTIN: v('bizGSTIN'), bizAddress: v('bizAddress'),
-    bizPhone: v('bizPhone'), bizEmail: v('bizEmail'), bizWebsite: v('bizWebsite'),
-    custName: v('custName'), custCompany: v('custCompany'), custAddress: v('custAddress'),
-    custGSTIN: v('custGSTIN'), custPhone: v('custPhone'), custEmail: v('custEmail'),
-    quoteNumber: v('quoteNumber'), quoteDate: v('quoteDate'), validUntil: v('validUntil'),
-    preparedBy: v('preparedBy'), refNumber: v('refNumber'), salesperson: v('salesperson'),
-    projectTitle: v('projectTitle'), beatRoute: v('beatRoute'),
-    priceInclTax: document.getElementById('priceInclTax').checked,
-    roundOff: document.getElementById('roundOff').checked,
-    otherCharges: v('otherCharges'), otherChargesLabel: v('otherChargesLabel'),
-    advancePct: v('advancePct'), paymentTerms: v('paymentTerms'),
-    scopeOfWork: v('scopeOfWork'), deliveryTimeline: v('deliveryTimeline'),
-    warranty: v('warranty'), exclusions: v('exclusions'),
-    quoteNotes: v('quoteNotes'), quoteTerms: v('quoteTerms'),
-    signatoryName: v('signatoryName'),
-    template: currentTemplate, accent: currentAccent,
-    logoDataURL, sigDataURL,
-    items: itemsArr,
-    savedAt: new Date().toISOString()
-  };
-
-  localStorage.setItem('saleson_quotation_draft', JSON.stringify(draft));
-  showToast('Draft saved ✓');
-}
-
-function loadDraft() {
-  const raw = localStorage.getItem('saleson_quotation_draft');
-  if (!raw) { showToast('No saved draft found'); return; }
-  const d = JSON.parse(raw);
-
-  [
-    'bizName','bizGSTIN','bizAddress','bizPhone','bizEmail','bizWebsite',
-    'custName','custCompany','custAddress','custGSTIN','custPhone','custEmail',
-    'quoteNumber','quoteDate','validUntil','preparedBy','refNumber','salesperson',
-    'projectTitle','beatRoute','otherCharges','otherChargesLabel','advancePct','paymentTerms',
-    'scopeOfWork','deliveryTimeline','warranty','exclusions','quoteNotes','quoteTerms','signatoryName'
-  ].forEach(id => { if (d[id] !== undefined) sv(id, d[id]); });
-
-  document.getElementById('priceInclTax').checked = !!d.priceInclTax;
-  document.getElementById('roundOff').checked = d.roundOff !== false;
-
-  if (d.logoDataURL) {
-    logoDataURL = d.logoDataURL;
-    const thumb = document.getElementById('logoPreviewThumb');
-    thumb.src = logoDataURL; thumb.style.display = 'block';
-  }
-  if (d.sigDataURL) {
-    sigDataURL = d.sigDataURL;
-    const thumb = document.getElementById('sigPreviewThumb');
-    thumb.src = sigDataURL; thumb.style.display = 'block';
-  }
-  if (d.template) {
-    currentTemplate = d.template;
-    document.querySelectorAll('.tpl-pill').forEach(p => {
-      p.classList.remove('active');
-      if (p.textContent.toLowerCase().trim() === d.template) p.classList.add('active');
-    });
-  }
-  if (d.accent) {
-    currentAccent = d.accent;
-    document.querySelectorAll('.accent-pill').forEach(p => {
-      p.classList.remove('active');
-      const onclick = p.getAttribute('onclick') || '';
-      if (onclick.includes(d.accent)) p.classList.add('active');
-    });
-  }
-
-  document.getElementById('itemsBody').innerHTML = '';
-  itemRowCount = 0;
-  (d.items || []).forEach(it => addItemRow({ desc: it.desc, hsn: it.hsn, qty: it.qty, unit: it.unit, rate: it.rate, disc: it.disc, gst: it.gst }));
-
-  renderPreview();
-  showToast('Draft loaded ✓');
-}
-
-/* ─────────────────────────
-   RESET
-───────────────────────── */
-function resetForm() {
-  if (!confirm('Reset all fields to sample data?')) return;
-  document.getElementById('itemsBody').innerHTML = '';
-  itemRowCount = 0;
-  logoDataURL = null;
-  sigDataURL = null;
-  convertedToInvoice = false;
-  document.getElementById('logoPreviewThumb').style.display = 'none';
-  document.getElementById('sigPreviewThumb').style.display  = 'none';
-  document.getElementById('convertSuccess').classList.remove('show');
-  document.getElementById('priceInclTax').checked = false;
-  document.getElementById('roundOff').checked = true;
-  initDefaults();
-  showToast('Form reset ✓');
-}
-
-/* ─────────────────────────
-   FAQ
-───────────────────────── */
-function toggleFaq(btn) {
-  const a = btn.nextElementSibling;
-  const isOpen = btn.classList.contains('open');
-  document.querySelectorAll('.faq-q').forEach(b => {
-    b.classList.remove('open');
-    b.nextElementSibling.classList.remove('open');
-  });
-  if (!isOpen) { btn.classList.add('open'); a.classList.add('open'); }
-}
-
-/* ─────────────────────────
-   TOAST
-───────────────────────── */
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2500);
-}
-
-/* ─────────────────────────
-   HELPERS
-───────────────────────── */
-function v(id)       { const el = document.getElementById(id); return el ? el.value : ''; }
-function sv(id, val) { const el = document.getElementById(id); if (el) el.value = val; }
-
-/* ─────────────────────────
-   INIT
-───────────────────────── */
-initDefaults();
-</script>
-<script>
-/* SalesOn launch helpers: analytics placeholder + lead backend hook.
-   Set window.salesonLeadEndpoint = 'YOUR_ENDPOINT_URL' before lead submission
-   or replace the empty endpoint below when connecting WordPress/Supabase/CRM. */
-(function() {
-  window.salesonTrack = window.salesonTrack || function(eventName, data) {
-    const allowed = new Set(['tool_opened', 'lead_saved_locally', 'lead_submission_accepted']);
-    if (!allowed.has(eventName)) return;
-    const safe = {};
-    for (const key of ['page', 'toolUsed']) {
-      if (typeof data?.[key] === 'string' && /^[a-zA-Z0-9_-]{1,80}$/.test(data[key])) safe[key] = data[key];
-    }
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({event: eventName, ...safe});
-  };
-  window.salesonLeadEndpoint = window.salesonLeadEndpoint || '';
-  window.salesonSubmitLeadToBackend = window.salesonSubmitLeadToBackend || async function(lead) {
-    if (!window.salesonLeadEndpoint || !lead) return;
-    try {
-      const response = await fetch(window.salesonLeadEndpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(lead)
-      });
-      if (!response.ok) throw new Error('Lead submission was not accepted');
-      window.salesonTrack('lead_submission_accepted', { toolUsed: lead.toolUsed || '' });
-    } catch (err) {
-      console.warn('SalesOn lead backend submission failed:', err);
-    }
-  };
-})();
-</script>
-<script>
-window.addEventListener('DOMContentLoaded', function() {
-  if (window.salesonTrack) window.salesonTrack('tool_opened', { page: 'quotation-generator' });
-});
-</script>
+<script src="/assets/js/tools/quotation-generator-1.eaab15ec81bc.js"></script>
+<script src="/assets/js/tools/quotation-generator-2.1977ef58fe3b.js"></script>
+<script src="/assets/js/tools/quotation-generator-3.09fafe3d2e9a.js"></script>
     <script defer src="/assets/js/site-repairs.a49082162838.js"></script>
 </body>
 </html>

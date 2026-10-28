@@ -19,7 +19,7 @@ for p in (R/'industries').glob('*.html'):
 for p in (R/'blogs').glob('*.html'):
  assert 'blog-next-step' in p.read_text(),p.name
 for p in (R/'compare').glob('*.html'):
- s=p.read_text();assert 'Sources and review date' in s and '26 October 2026' in s,p.name
+ s=p.read_text();assert 'Sources and review date' in s and '28 October 2026' in s,p.name
  assert 'Custom pricing - more expensive' not in s and 'Complex UI' not in s
 s=(R/'pricing.html').read_text()
 assert 'id="res-annual">₹25,000' in s

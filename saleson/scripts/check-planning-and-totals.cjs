@@ -1,4 +1,6 @@
 const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),assert=require('node:assert/strict');
+
+const originalToolRead=fs.readFileSync.bind(fs);fs.readFileSync=function(file,...args){const value=originalToolRead(file,...args);if(typeof value!=='string'||!String(file).includes(path.sep+'tools'+path.sep)||!String(file).endsWith('.html'))return value;return value+'\n'+[...value.matchAll(/<script[^>]*src=["'](\/assets\/js\/tools\/[^"']+)["'][^>]*>/g)].map(m=>originalToolRead(path.join(root,m[1]),'utf8')).join('\n');};
 const root=path.resolve(__dirname,'..');
 function source(slug){return fs.readFileSync(path.join(root,'tools',slug,'index.html'),'utf8');}
 function extract(text,name){

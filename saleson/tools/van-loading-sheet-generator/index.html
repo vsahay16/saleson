@@ -1,30 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="en-IN">
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Free Van Loading Sheet Generator for Distributors | SalesOn</title>
-<meta content="Create van loading sheets, route stock records, EOD reconciliation, returns summary and collection summary. Free van sales tool by SalesOn." name="description">
-<meta content="index, follow" name="robots">
+<meta content="Create van loading sheets, route stock records, EOD reconciliation, returns summary and collection summary. Free van sales tool by SalesOn." name="description"/>
+<meta content="index, follow" name="robots"/>
 
-<link rel="icon" type="image/png" href="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-favicon.png">
-<link rel="alternate" hreflang="en-IN" href="https://saleson.co.in/tools/van-loading-sheet-generator">
-<link rel="alternate" hreflang="x-default" href="https://saleson.co.in/tools/van-loading-sheet-generator">
-<meta content="Free Van Loading Sheet Generator for Distributors | SalesOn" property="og:title">
-<meta content="Create van loading sheets, route stock records, EOD reconciliation, returns summary and collection summary. Free van sales tool by SalesOn." property="og:description">
+<link rel="icon" type="image/png" href="https://sales-on.s3.ap-south-1.amazonaws.com/assets/salesOn-favicon.png"/>
+<link rel="alternate" hreflang="en-IN" href="https://saleson.co.in/tools/van-loading-sheet-generator"/>
+<link rel="alternate" hreflang="x-default" href="https://saleson.co.in/tools/van-loading-sheet-generator"/>
+<meta content="Free Van Loading Sheet Generator for Distributors | SalesOn" property="og:title"/>
+<meta content="Create van loading sheets, route stock records, EOD reconciliation, returns summary and collection summary. Free van sales tool by SalesOn." property="og:description"/>
 <meta property="og:url" content="https://saleson.co.in/tools/van-loading-sheet-generator">
-<meta content="https://saleson.co.in/tools/assets/saleson-free-tools-og.jpg" property="og:image">
-<meta content="1200" property="og:image:width">
-<meta content="630" property="og:image:height">
-<meta content="SalesOn Free Business Tools" property="og:image:alt">
-<meta content="summary_large_image" name="twitter:card">
-<meta content="@salesonsoftware" name="twitter:site">
-<meta content="https://saleson.co.in/tools/assets/saleson-free-tools-og.jpg" name="twitter:image">
-<meta content="website" property="og:type">
+<meta content="https://saleson.co.in/tools/assets/saleson-free-tools-og.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="SalesOn Free Business Tools" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@salesonsoftware" name="twitter:site"/>
+<meta content="https://saleson.co.in/tools/assets/saleson-free-tools-og.jpg" name="twitter:image"/>
+<meta content="website" property="og:type"/>
 <!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;display=swap" rel="stylesheet"/>
 <!-- FAQ + Breadcrumb Schema -->
 <script type="application/ld+json">
 {
@@ -84,498 +85,10 @@
 </script>
 <script src="/assets/js/min/common.min.5c2663c0cd10.js"></script>
 <script src="/assets/js/min/tool-handoff.min.312be650f7d3.js"></script>
-<link href="/css/min/common-new.min.f637cbb1ad10.css" rel="stylesheet">
-<style>
-   /* ── HERO ── */
- .hero {
-      padding: 72px 0 64px;
-      background: radial-gradient(circle at 20% 20%, #eef2fc 0%, #ffffff 45%, #dde6f9 100%);
-      position: relative; overflow: hidden;
-    }
-    .hero-content { position: relative; z-index: 1; max-width: 760px; }
-    .hero-eyebrow {
-      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px;
-    }
-    .badge {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 5px 12px; border-radius: 100px;
-      font-size: 11.5px; font-weight: 700; letter-spacing: .03em;
-    }
-    .badge-green  { background: rgba(5,150,105,.2);  color: #489f7d; border: 1px solid rgba(5,150,105,.3); }
-    .badge-blue   { background: rgba(26,86,219,.25); color: #3f73ae; border: 1px solid rgba(26,86,219,.4); }
-    .badge-amber  { background: rgba(217,119,6,.2);  color: #bc971b; border: 1px solid rgba(217,119,6,.3); }
-    .badge-white  { background: rgba(255,255,255,.1); color: rgb(106 101 101 / 100%); border: 1px solid rgb(106 101 101 / 100%); }
+<link href="/css/min/common-new.min.f637cbb1ad10.css" rel="stylesheet" />
 
-    .hero-h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(28px, 4vw, 46px);
-      line-height: 1.17; margin-bottom: 18px;
-    }
-    .hero-h1 em { font-style: italic; color: var(--brand); }
-    .hero-sub {
-      font-size: 16px; line-height: 1.78;
-      max-width: 600px; margin-bottom: 36px;
-    }
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-    /* ===========================
-       TOOL LAYOUT
-    =========================== */
-    .tool-wrapper {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 32px 20px 40px;
-      display: grid;
-      grid-template-columns: 420px 1fr;
-      gap: 24px;
-      align-items: start;
-    }
-    .tool-left { display: flex; flex-direction: column; gap: 20px; }
-    .tool-right { display: flex; flex-direction: column; gap: 20px; position: sticky; top: 72px; max-height: calc(100vh - 90px); overflow-y: auto; }
-
-    /* ===========================
-       CARDS
-    =========================== */
-    .card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-    }
-    .card-header {
-      padding: 14px 18px 13px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-    .card-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--ink);
-      display: flex;
-      align-items: center;
-      gap: 7px;
-    }
-    .card-title .icon {
-      width: 28px; height: 28px;
-      border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-    .icon-blue { background: var(--brand-light); }
-    .icon-green { background: var(--green-light); }
-    .icon-amber { background: var(--amber-light); }
-    .card-body { padding: 16px 18px; }
-    .card-collapse-btn {
-      background: none; border: none; color: var(--ink-muted); font-size: 18px;
-      padding: 2px 6px; border-radius: 4px; line-height: 1;
-    }
-    .card-collapse-btn:hover { background: var(--surface); }
-    .collapsible-body { transition: none; }
-    .collapsible-body.collapsed { display: none; }
-
-    /* ===========================
-       FORM ELEMENTS
-    =========================== */
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
-    .form-row.three { grid-template-columns: 1fr 1fr 1fr; }
-    .form-row.single { grid-template-columns: 1fr; }
-    .form-group { display: flex; flex-direction: column; gap: 4px; }
-    .form-group label {
-      font-size: 12px; font-weight: 600; color: var(--ink-soft);
-      text-transform: uppercase; letter-spacing: 0.04em;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      height: 38px;
-      padding: 0 10px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-body);
-      font-size: 14px;
-      color: var(--ink);
-      background: var(--white);
-      transition: border-color 0.15s, box-shadow 0.15s;
-      outline: none;
-    }
-    .form-group textarea { height: auto; padding: 8px 10px; resize: vertical; }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--brand);
-      box-shadow: 0 0 0 3px rgba(26,86,219,0.10);
-    }
-    .form-group input.readonly,
-    .form-group input[readonly] {
-      background: var(--surface);
-      color: var(--ink-soft);
-      cursor: default;
-    }
-    .form-group input.error-field { border-color: var(--red); }
-    .field-note { font-size: 11px; color: var(--ink-muted); margin-top: 2px; }
-    .field-note.error { color: var(--red); }
-
-    /* ===========================
-       BUTTONS
-    =========================== */
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
-      font-family: var(--font-body); font-size: 13.5px; font-weight: 600;
-      border-radius: var(--radius-sm); border: none; padding: 9px 16px;
-      transition: all 0.15s; cursor: pointer; white-space: nowrap;
-    }
-    .btn-primary { background: var(--brand); color: var(--white); }
-    .btn-primary:hover { background: var(--brand-dark); }
-    .btn-secondary { background: var(--surface); color: var(--ink-soft); border: 1px solid var(--border); }
-    .btn-secondary:hover { background: var(--border); color: var(--ink); }
-    .btn-green { background: var(--green); color: var(--white); }
-    .btn-green:hover { background: #047857; }
-    .btn-amber { background: var(--amber); color: var(--white); }
-    .btn-amber:hover { background: #b45309; }
-    .btn-red { background: var(--red-light); color: var(--red); border: 1px solid #fca5a5; }
-    .btn-red:hover { background: #fecaca; }
-    .btn-ghost { background: none; color: var(--brand); border: 1px solid var(--brand); }
-    .btn-ghost:hover { background: var(--brand-light); }
-    .btn-sm { padding: 5px 10px; font-size: 12px; }
-    .btn-lg { padding: 12px 22px; font-size: 15px; }
-    .btn-full { width: 100%; }
-    .btn-group { display: flex; gap: 8px; flex-wrap: wrap; }
-
-    /* ===========================
-       KPI CARDS
-    =========================== */
-    .kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 12px;
-    }
-    .kpi-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 14px;
-      box-shadow: var(--shadow-sm);
-    }
-    .kpi-label { font-size: 11px; font-weight: 600; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
-    .kpi-value { font-size: 22px; font-weight: 700; color: var(--ink); line-height: 1; }
-    .kpi-value.green { color: var(--green); }
-    .kpi-value.amber { color: var(--amber); }
-    .kpi-value.red { color: var(--red); }
-    .kpi-sub { font-size: 11px; color: var(--ink-muted); margin-top: 3px; }
-
-    /* ===========================
-       SKU TABLE
-    =========================== */
-    .table-wrapper { overflow-x: auto; border-radius: var(--radius-md); }
-    .sku-table {
-      width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 900px;
-    }
-    .sku-table th {
-      background: var(--surface); padding: 9px 10px;
-      text-align: left; font-weight: 700; font-size: 11px; color: var(--ink-muted);
-      text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 2px solid var(--border);
-      white-space: nowrap;
-    }
-    .sku-table td { padding: 9px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
-    .sku-table tr:last-child td { border-bottom: none; }
-    .sku-table tr:hover td { background: var(--surface); }
-    .sku-table tr.checked td { background: #f0fdf4; }
-    .sku-table tr.editing td { background: var(--brand-light); }
-    .sku-name { font-weight: 600; color: var(--ink); }
-    .sku-code { font-size: 11px; color: var(--ink-muted); }
-    .closing-neg { color: var(--red); font-weight: 700; }
-    .badge { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 100px; font-size: 11px; font-weight: 600; }
-    .badge-green { background: var(--green-light); color: var(--green); }
-    .badge-amber { background: var(--amber-light); color: var(--amber); }
-    .badge-red { background: var(--red-light); color: var(--red); }
-    .badge-blue { background: var(--brand-light); color: var(--brand); }
-    .row-actions { display: flex; gap: 4px; }
-
-    /* ===========================
-       RECONCILIATION STATUS
-    =========================== */
-    .status-card {
-      border-radius: var(--radius-md);
-      padding: 14px 18px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 700;
-      font-size: 15px;
-    }
-    .status-matched { background: var(--green-light); color: var(--green); border: 1px solid #6ee7b7; }
-    .status-short { background: var(--red-light); color: var(--red); border: 1px solid #fca5a5; }
-    .status-excess { background: var(--amber-light); color: var(--amber); border: 1px solid #fcd34d; }
-    .status-review { background: var(--brand-light); color: var(--brand); border: 1px solid #bfdbfe; }
-
-    /* ===========================
-       TOGGLE SECTION
-    =========================== */
-    .toggle-row {
-      display: flex; align-items: center; gap: 10px;
-      padding: 10px 14px; background: var(--surface); border-radius: var(--radius-sm);
-      border: 1px solid var(--border); cursor: pointer;
-    }
-    .toggle-row label { font-weight: 600; font-size: 13.5px; color: var(--ink-soft); cursor: pointer; flex: 1; }
-    .toggle-switch {
-      width: 36px; height: 20px; border-radius: 10px; background: var(--border);
-      position: relative; transition: background 0.2s; flex-shrink: 0;
-    }
-    .toggle-switch::after {
-      content: ''; position: absolute; left: 3px; top: 3px;
-      width: 14px; height: 14px; border-radius: 50%; background: var(--white);
-      transition: left 0.2s; box-shadow: var(--shadow-sm);
-    }
-    .toggle-switch.on { background: var(--brand); }
-    .toggle-switch.on::after { left: 19px; }
-
-    /* ===========================
-       FILTER BAR
-    =========================== */
-    .filter-bar {
-      display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
-      padding: 12px 16px; background: var(--surface); border-bottom: 1px solid var(--border);
-    }
-    .filter-bar input, .filter-bar select {
-      height: 34px; padding: 0 10px; font-size: 13px; border: 1px solid var(--border);
-      border-radius: var(--radius-sm); font-family: var(--font-body); color: var(--ink); background: var(--white);
-    }
-    .filter-bar input { min-width: 180px; }
-    .filter-bar select { min-width: 140px; }
-
-    /* ===========================
-       PREVIEW (PRINT AREA)
-    =========================== */
-    #printArea { display: none; }
-
-    /* ===========================
-       OUTLET TABLE
-    =========================== */
-    .outlet-table {
-      width: 100%; border-collapse: collapse; font-size: 12.5px;
-    }
-    .outlet-table th {
-      background: var(--surface); padding: 8px 10px;
-      font-size: 11px; font-weight: 700; color: var(--ink-muted);
-      text-transform: uppercase; letter-spacing: 0.04em;
-      border-bottom: 2px solid var(--border); text-align: left;
-    }
-    .outlet-table td { padding: 8px 10px; border-bottom: 1px solid var(--border); font-size: 12.5px; }
-
-    /* ===========================
-       HANDOFF CARDS
-    =========================== */
-    .handoff-card {
-      background: var(--brand-light);
-      border: 1px solid #bfdbfe;
-      border-radius: var(--radius-md);
-      padding: 14px 16px;
-    }
-    .handoff-card h4 { font-size: 13px; font-weight: 700; color: var(--brand-dark); margin-bottom: 4px; }
-    .handoff-card p { font-size: 12px; color: var(--ink-soft); margin-bottom: 10px; }
-    .handoff-success { display: none; margin-top: 8px; padding: 8px 12px; background: var(--green-light); border-radius: var(--radius-sm); color: var(--green); font-size: 12.5px; font-weight: 600; }
-
-    /* ===========================
-       TOAST
-    =========================== */
-    #toast {
-      position: fixed; bottom: 80px; right: 20px; z-index: 9999;
-      background: var(--ink); color: var(--white); padding: 11px 18px;
-      border-radius: var(--radius-md); font-size: 13.5px; font-weight: 500;
-      box-shadow: var(--shadow-lg); opacity: 0; transform: translateY(10px);
-      transition: all 0.25s; pointer-events: none; max-width: 320px;
-    }
-    #toast.show { opacity: 1; transform: translateY(0); }
-
-    /* ===========================
-       LEAD MODAL
-    =========================== */
-    .modal-overlay {
-      position: fixed; inset: 0; background: rgba(0,0,0,0.55);
-      z-index: 200; display: flex; align-items: center; justify-content: center;
-      padding: 20px; opacity: 0; pointer-events: none; transition: opacity 0.2s;
-    }
-    .modal-overlay.open { opacity: 1; pointer-events: all; }
-    .modal {
-      background: var(--white); border-radius: var(--radius-lg);
-      max-width: 520px; width: 100%; max-height: 90vh;
-      overflow-y: auto; box-shadow: var(--shadow-lg); padding: 28px 28px 24px;
-      transform: scale(0.95); transition: transform 0.2s;
-    }
-    .modal-overlay.open .modal { transform: scale(1); }
-    .modal-logo { font-family: var(--font-display); font-size: 20px; color: var(--brand); margin-bottom: 16px; }
-    .modal h3 { font-family: var(--font-display); font-size: 22px; color: var(--ink); margin-bottom: 8px; line-height: 1.25; }
-    .modal p { font-size: 14px; color: var(--ink-soft); margin-bottom: 20px; }
-    .modal-actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
-    .modal-close {
-      position: absolute; top: 16px; right: 16px;
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 50%; width: 30px; height: 30px;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--ink-muted); font-size: 16px; cursor: pointer;
-    }
-
-    /* ===========================
-       SEO SECTIONS
-    =========================== */
-    .content-section {
-      max-width: 900px; margin: 0 auto; padding: 48px 20px;
-    }
-    .content-section h2 {
-      font-family: var(--font-display); font-size: 28px; color: var(--ink);
-      margin-bottom: 14px; font-weight: 400;
-    }
-    .content-section h3 { font-size: 18px; font-weight: 700; color: var(--ink); margin: 24px 0 8px; }
-    .content-section p { color: var(--ink-soft); margin-bottom: 12px; line-height: 1.75; }
-    .content-section ul { margin: 0 0 14px 20px; color: var(--ink-soft); }
-    .content-section ul li { margin-bottom: 6px; line-height: 1.65; }
-    .divider { height: 1px; background: var(--border); max-width: 1240px; margin: 0 auto; }
-
-    /* ===========================
-       CTA SECTION
-    =========================== */
-    .cta-section {
-      background: linear-gradient(135deg, #0f1623 0%, #1240b0 100%);
-      color: var(--white); padding: 56px 20px; text-align: center;
-    }
-    .cta-section h2 { font-family: var(--font-display); font-size: clamp(22px,4vw,36px); margin-bottom: 16px; font-weight: 400; }
-    .cta-section p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 28px; font-size: 16px; }
-    .cta-bullets {
-      display: flex; flex-wrap: wrap; gap: 10px;
-      justify-content: center; margin-bottom: 32px;
-    }
-    .cta-bullet {
-      background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 100px; padding: 5px 14px; font-size: 12.5px; font-weight: 600;
-      color: rgba(255,255,255,0.85);
-    }
-    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .cta-btn-primary {
-      background: var(--white); color: var(--brand-dark);
-      border-radius: var(--radius-sm); padding: 12px 24px;
-      font-weight: 700; font-size: 15px; border: none; cursor: pointer;
-      font-family: var(--font-body); transition: background 0.15s;
-    }
-    .cta-btn-primary:hover { background: var(--brand-light); }
-    .cta-btn-ghost {
-      border: 2px solid rgba(255,255,255,0.35); color: var(--white);
-      border-radius: var(--radius-sm); padding: 12px 24px; background: none;
-      font-weight: 700; font-size: 15px; cursor: pointer; font-family: var(--font-body);
-      transition: border-color 0.15s;
-    }
-    .cta-btn-ghost:hover { border-color: rgba(255,255,255,0.7); }
-
-    /* ===========================
-       FAQ SECTION
-    =========================== */
-    .faq-section { max-width: 760px; margin: 0 auto; padding: 48px 20px; }
-    .faq-section h2 { font-family: var(--font-display); font-size: 28px; margin-bottom: 24px; font-weight: 400; color: var(--ink); }
-    .faq-item { border-bottom: 1px solid var(--border); }
-    .faq-q {
-      width: 100%; text-align: left; background: none; border: none; padding: 16px 0;
-      font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--ink);
-      display: flex; align-items: center; justify-content: space-between; gap: 12px;
-      cursor: pointer;
-    }
-    .faq-q .faq-arrow { font-size: 18px; color: var(--ink-muted); transition: transform 0.2s; flex-shrink: 0; }
-    .faq-q.open .faq-arrow { transform: rotate(180deg); }
-    .faq-a { display: none; padding: 0 0 16px; font-size: 14px; color: var(--ink-soft); line-height: 1.75; }
-    .faq-a.open { display: block; }
-
-    /* ===========================
-       FOOTER
-    =========================== */
-    .footer {
-      background: var(--ink); color: rgba(255,255,255,0.65); padding: 48px 20px 28px;
-    }
-    .footer-inner { max-width: 1240px; margin: 0 auto; }
-    .footer-top {
-      display: grid; grid-template-columns: 220px 1fr 1fr 1fr;
-      gap: 32px; margin-bottom: 40px;
-    }
-    .footer-brand { }
-    .footer-logo { font-family: var(--font-display); font-size: 22px; color: var(--white); margin-bottom: 10px; }
-    .footer-tagline { font-size: 13px; line-height: 1.65; margin-bottom: 16px; }
-    .footer-col h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
-    .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 8px; transition: color 0.15s; }
-    .footer-col a:hover { color: var(--white); text-decoration: none; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.10); padding-top: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 12.5px; }
-    .disclaimer {
-      background: var(--amber-light); border: 1px solid #fcd34d; border-radius: var(--radius-md);
-      padding: 12px 16px; font-size: 12.5px; color: var(--amber); margin: 0 0 20px;
-    }
-    .disclaimer strong { font-weight: 700; }
-/* ===========================
-       PRINT STYLES
-    =========================== */
-    @media print {
-      body > *:not(#printArea) { display: none !important; }
-      #printArea { display: block !important; font-family: var(--font-body); color: #000; }
-      .print-header { padding: 20px; border-bottom: 2px solid #000; margin-bottom: 16px; }
-      .print-logo { font-family: var(--font-display); font-size: 24px; color: var(--brand); }
-      .print-title { font-size: 16px; font-weight: 700; margin: 8px 0 4px; }
-      .print-meta { font-size: 12px; color: #444; }
-      .print-table { width: 100%; border-collapse: collapse; font-size: 11px; margin: 16px 0; }
-      .print-table th { background: #f0f0f0; padding: 6px 8px; border: 1px solid #ccc; font-weight: 700; text-align: left; }
-      .print-table td { padding: 5px 8px; border: 1px solid #ddd; }
-      .print-section { margin-top: 20px; }
-      .print-section h3 { font-size: 13px; font-weight: 700; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-bottom: 8px; }
-      .print-sig { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 32px; margin-top: 40px; }
-      .print-sig-box { border-top: 1px solid #000; padding-top: 8px; font-size: 11px; }
-      .print-footer-note { font-size: 10px; color: #999; text-align: center; margin-top: 24px; border-top: 1px solid #eee; padding-top: 10px; }
-      .print-kpi-row { display: flex; gap: 20px; flex-wrap: wrap; margin: 10px 0; }
-      .print-kpi { font-size: 12px; }
-      .print-kpi strong { display: block; font-size: 14px; }
-      @page { size: A4; margin: 10mm; }
-    }
-
-    /* ===========================
-       RESPONSIVE
-    =========================== */
-    @media (max-width: 960px) {
-      .tool-wrapper { grid-template-columns: 1fr; }
-      .tool-right { position: static; max-height: none; overflow-y: visible; }
-      .footer-top { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .nav-ham { display: flex; flex-direction: column; }
-      .form-row { grid-template-columns: 1fr; }
-      .form-row.three { grid-template-columns: 1fr 1fr; }
-      .kpi-grid { grid-template-columns: 1fr 1fr; }
-
-      .footer-top { grid-template-columns: 1fr; }
-      .tool-wrapper { padding: 16px 12px 32px; gap: 16px; }
-      .modal { padding: 20px 16px; }
-    }
-    @media (max-width: 380px) {
-      .kpi-grid { grid-template-columns: 1fr; }
-    }
-  
-
-/* SalesOn accessibility focus states */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: 3px solid #1a56db;
-  outline-offset: 3px;
-  border-radius: 8px;
-}
-
-
-.footer-social{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.footer-social a{font-size:12px;font-weight:700;color:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:5px 10px;transition:color .2s,border-color .2s}
-.footer-social a:hover{color:#fff;border-color:rgba(255,255,255,.35)}
-
-</style>
-<meta content="Free Van Loading Sheet Generator for Distributors | SalesOn" name="twitter:title">
-<meta content="Create van loading sheets, route stock records, EOD reconciliation, returns summary and collection summary. Free van sales tool by SalesOn." name="twitter:description">
+<meta content="Free Van Loading Sheet Generator for Distributors | SalesOn" name="twitter:title"/>
+<meta content="Create van loading sheets, route stock records, EOD reconciliation, returns summary and collection summary. Free van sales tool by SalesOn." name="twitter:description"/>
 
 <script type="application/ld+json">
 {
@@ -599,7 +112,11 @@ textarea:focus-visible {
   "featureList": "No account required, PDF download, Works on mobile"
 }
 </script>
-<link rel="canonical" href="https://saleson.co.in/tools/van-loading-sheet-generator"><link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css"><link rel="stylesheet" href="/css/tools-editorial.862fd10d64c4.css"></head>
+<link rel="canonical" href="https://saleson.co.in/tools/van-loading-sheet-generator"><link rel="stylesheet" href="/css/site-repairs.c0185b0ec282.css"><script src="/assets/js/tool-runtime.3fe9b4763ae5.js"></script>
+<link rel="stylesheet" href="/css/tool-workspace.475615067928.css">
+<script src="/assets/js/page-readiness.3cc152fdd743.js" defer></script>
+<link rel="stylesheet" href="/css/tools-editorial.862fd10d64c4.css">
+<link rel="stylesheet" href="/css/tools/van-loading-sheet-generator.5a2c21d698be.css"></head>
 <body>
 <site-header source="tools"><nav aria-label="Main navigation"><a href="/">SalesOn</a> · <a href="/field-sales">Field sales</a> · <a href="/distribution-management-system">DMS</a> · <a href="/pricing">Pricing</a> · <a href="/tools">Tools</a> · <a href="/blogs">Blog</a> · <a href="/request-demo">Book a demo</a></nav></site-header>
 <aside class="tool-storage-note" role="note">Drafts and saved tool data are stored in this browser. Keep an exported copy before clearing browser data. <a href="/privacy-policy">Privacy policy</a> · <a href="mailto:support@saleson.co.in">Contact support</a></aside><aside role="note" style="max-width:1000px;margin:20px auto;padding:16px;background:#edf4ff;border-radius:8px;"><strong>Free to use:</strong> Calculate, export, print, save and transfer your sheet without submitting contact details. Contact details are optional when requesting a demo.</aside>
@@ -641,37 +158,37 @@ textarea:focus-visible {
 <div class="form-row">
 <div class="form-group">
 <label>Business Name *</label>
-<input id="bizName" placeholder="Shree Balaji Distributors" type="text" value="Shree Balaji Distributors">
+<input id="bizName" placeholder="Shree Balaji Distributors" type="text" value="Shree Balaji Distributors"/>
 </div>
 <div class="form-group">
 <label>GSTIN (Optional)</label>
-<input id="bizGST" placeholder="22XXXXX1234Z5" type="text">
+<input id="bizGST" placeholder="22XXXXX1234Z5" type="text"/>
 </div>
 </div>
 <div class="form-row single">
 <div class="form-group">
 <label>Address (Optional)</label>
-<input id="bizAddress" placeholder="Patna, Bihar" type="text" value="Patna, Bihar">
+<input id="bizAddress" placeholder="Patna, Bihar" type="text" value="Patna, Bihar"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Phone</label>
-<input id="bizPhone" placeholder="+91 80928 56577" type="text" value="+91 80928 56577">
+<input id="bizPhone" placeholder="+91 80928 56577" type="text" value="+91 80928 56577"/>
 </div>
 <div class="form-group">
 <label>Email (Optional)</label>
-<input id="bizEmail" placeholder="info@example.com" type="email">
+<input id="bizEmail" placeholder="info@example.com" type="email"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Report Date</label>
-<input id="reportDate" type="date">
+<input id="reportDate" type="date"/>
 </div>
 <div class="form-group">
 <label>Logo (Optional)</label>
-<input accept="image/*" id="bizLogo" style="padding:6px 10px;height:auto;font-size:13px;" type="file">
+<input accept="image/*" id="bizLogo" style="padding:6px 10px;height:auto;font-size:13px;" type="file"/>
 </div>
 </div>
 </div>
@@ -689,61 +206,61 @@ textarea:focus-visible {
 <div class="form-row">
 <div class="form-group">
 <label>Van Number *</label>
-<input id="vanNumber" placeholder="VAN-01" type="text" value="VAN-01">
+<input id="vanNumber" placeholder="VAN-01" type="text" value="VAN-01"/>
 </div>
 <div class="form-group">
 <label>Vehicle Number</label>
-<input id="vehicleNumber" placeholder="BR01AB1234" type="text" value="BR01AB1234">
+<input id="vehicleNumber" placeholder="BR01AB1234" type="text" value="BR01AB1234"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Salesman Name *</label>
-<input id="salesmanName" placeholder="Ramesh Kumar" type="text" value="Ramesh Kumar">
+<input id="salesmanName" placeholder="Ramesh Kumar" type="text" value="Ramesh Kumar"/>
 </div>
 <div class="form-group">
 <label>Helper (Optional)</label>
-<input id="helperName" placeholder="Suresh" type="text" value="Suresh">
+<input id="helperName" placeholder="Suresh" type="text" value="Suresh"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Driver (Optional)</label>
-<input id="driverName" placeholder="Driver name" type="text">
+<input id="driverName" placeholder="Driver name" type="text"/>
 </div>
 <div class="form-group">
 <label>Warehouse / Godown</label>
-<input id="warehouseName" placeholder="Patna Main Godown" type="text" value="Patna Main Godown">
+<input id="warehouseName" placeholder="Patna Main Godown" type="text" value="Patna Main Godown"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Route / Beat Name</label>
-<input id="routeName" placeholder="Boring Road Beat" type="text" value="Boring Road Beat">
+<input id="routeName" placeholder="Boring Road Beat" type="text" value="Boring Road Beat"/>
 </div>
 <div class="form-group">
 <label>Area / Territory</label>
-<input id="areaName" placeholder="Central Patna" type="text">
+<input id="areaName" placeholder="Central Patna" type="text"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Start Time</label>
-<input id="startTime" type="time">
+<input id="startTime" type="time"/>
 </div>
 <div class="form-group">
 <label>End Time</label>
-<input id="endTime" type="time">
+<input id="endTime" type="time"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Opening Odometer</label>
-<input id="odometerOpen" placeholder="KM" type="number">
+<input id="odometerOpen" placeholder="KM" type="number"/>
 </div>
 <div class="form-group">
 <label>Closing Odometer</label>
-<input id="odometerClose" placeholder="KM" type="number">
+<input id="odometerClose" placeholder="KM" type="number"/>
 </div>
 </div>
 </div>
@@ -761,17 +278,17 @@ textarea:focus-visible {
 <div class="form-row">
 <div class="form-group">
 <label>Product / SKU Name *</label>
-<input id="skuName" placeholder="e.g. FMCG Product Box" type="text">
+<input id="skuName" placeholder="e.g. FMCG Product Box" type="text"/>
 </div>
 <div class="form-group">
 <label>SKU Code (Optional)</label>
-<input id="skuCode" placeholder="FMCG-001" type="text">
+<input id="skuCode" placeholder="FMCG-001" type="text"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Category</label>
-<input id="skuCategory" placeholder="e.g. Detergent" type="text">
+<input id="skuCategory" placeholder="e.g. Detergent" type="text"/>
 </div>
 <div class="form-group">
 <label>Unit</label>
@@ -785,71 +302,71 @@ textarea:focus-visible {
 <div class="form-row">
 <div class="form-group">
 <label>Opening Van Stock</label>
-<input id="skuOpenStock" min="0" placeholder="0" type="number" value="0">
+<input id="skuOpenStock" min="0" placeholder="0" type="number" value="0"/>
 </div>
 <div class="form-group">
 <label>Loaded Quantity</label>
-<input id="skuLoaded" min="0" placeholder="0" type="number" value="0">
+<input id="skuLoaded" min="0" placeholder="0" type="number" value="0"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Total Available</label>
-<input class="readonly" id="skuTotalAvail" placeholder="Auto" readonly type="number">
+<input class="readonly" id="skuTotalAvail" placeholder="Auto" readonly="" type="number"/>
 </div>
 <div class="form-group">
 <label>Sold Quantity</label>
-<input id="skuSold" min="0" placeholder="0" type="number" value="0">
+<input id="skuSold" min="0" placeholder="0" type="number" value="0"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Returned (Good)</label>
-<input id="skuReturnGood" min="0" placeholder="0" type="number" value="0">
+<input id="skuReturnGood" min="0" placeholder="0" type="number" value="0"/>
 </div>
 <div class="form-group">
 <label>Damaged / Expired</label>
-<input id="skuDamaged" min="0" placeholder="0" type="number" value="0">
+<input id="skuDamaged" min="0" placeholder="0" type="number" value="0"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Free Sample (Optional)</label>
-<input id="skuSample" min="0" placeholder="0" type="number" value="0">
+<input id="skuSample" min="0" placeholder="0" type="number" value="0"/>
 </div>
 <div class="form-group">
 <label>Closing Stock</label>
-<input class="readonly" id="skuClosingStock" placeholder="Auto" readonly type="number">
+<input class="readonly" id="skuClosingStock" placeholder="Auto" readonly="" type="number"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Rate Per Unit (₹)</label>
-<input id="skuRate" min="0" placeholder="0" type="number" value="0">
+<input id="skuRate" min="0" placeholder="0" type="number" value="0"/>
 </div>
 <div class="form-group">
 <label>Total Sales Value (₹)</label>
-<input class="readonly" id="skuSalesValue" placeholder="Auto" readonly type="number">
+<input class="readonly" id="skuSalesValue" placeholder="Auto" readonly="" type="number"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Credit Sales Value (₹)</label>
-<input id="skuCreditSales" min="0" placeholder="0" type="number" value="0">
+<input id="skuCreditSales" min="0" placeholder="0" type="number" value="0"/>
 </div>
 <div class="form-group">
 <label>Cash Sales Value (₹)</label>
-<input id="skuCashSales" min="0" placeholder="0" type="number" value="0">
+<input id="skuCashSales" min="0" placeholder="0" type="number" value="0"/>
 </div>
 </div>
 <div class="form-row single">
 <div class="form-group">
 <label>UPI Sales Value (₹)</label>
-<input id="skuUPISales" min="0" placeholder="0" type="number" value="0">
+<input id="skuUPISales" min="0" placeholder="0" type="number" value="0"/>
 </div>
 </div>
 <div class="field-note error" id="skuErrorMsg" style="display:none;margin-bottom:8px;"></div>
-<input id="editingSkuId" type="hidden" value="">
+<input id="editingSkuId" type="hidden" value=""/>
 <div class="btn-group">
 <button class="btn btn-green" id="skuAddBtn" onclick="addOrUpdateSKU()">➕ Add SKU</button>
 <button class="btn btn-secondary" onclick="clearSKUForm()">🔄 Clear</button>
@@ -869,41 +386,41 @@ textarea:focus-visible {
 <div class="form-row">
 <div class="form-group">
 <label>Cash Collected (₹)</label>
-<input id="colCash" oninput="updateCollection()" placeholder="0" type="number" value="18000">
+<input id="colCash" oninput="updateCollection()" placeholder="0" type="number" value="18000"/>
 </div>
 <div class="form-group">
 <label>UPI Collected (₹)</label>
-<input id="colUPI" oninput="updateCollection()" placeholder="0" type="number" value="12000">
+<input id="colUPI" oninput="updateCollection()" placeholder="0" type="number" value="12000"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Cheque Collected (₹)</label>
-<input id="colCheque" oninput="updateCollection()" placeholder="0" type="number" value="0">
+<input id="colCheque" oninput="updateCollection()" placeholder="0" type="number" value="0"/>
 </div>
 <div class="form-group">
 <label>Bank Transfer (₹)</label>
-<input id="colBank" oninput="updateCollection()" placeholder="0" type="number" value="0">
+<input id="colBank" oninput="updateCollection()" placeholder="0" type="number" value="0"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Credit Sales (₹)</label>
-<input id="colCredit" oninput="updateCollection()" placeholder="0" type="number" value="5000">
+<input id="colCredit" oninput="updateCollection()" placeholder="0" type="number" value="5000"/>
 </div>
 <div class="form-group">
 <label>Expenses from Cash (₹)</label>
-<input id="colExpenses" oninput="updateCollection()" placeholder="0" type="number" value="500">
+<input id="colExpenses" oninput="updateCollection()" placeholder="0" type="number" value="500"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Cash Deposited (₹)</label>
-<input id="colDeposited" oninput="updateCollection()" placeholder="0" type="number" value="17500">
+<input id="colDeposited" oninput="updateCollection()" placeholder="0" type="number" value="17500"/>
 </div>
 <div class="form-group">
 <label>Remarks</label>
-<input id="colRemarks" placeholder="Any notes..." type="text">
+<input id="colRemarks" placeholder="Any notes..." type="text"/>
 </div>
 </div>
 <!-- Reconciliation status display -->
@@ -930,47 +447,47 @@ textarea:focus-visible {
 <div class="form-row">
 <div class="form-group">
 <label>Retailer / Shop Name</label>
-<input id="outletName" placeholder="Shop name" type="text">
+<input id="outletName" placeholder="Shop name" type="text"/>
 </div>
 <div class="form-group">
 <label>Area</label>
-<input id="outletArea" placeholder="Area" type="text">
+<input id="outletArea" placeholder="Area" type="text"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Invoice No. (Optional)</label>
-<input id="outletInvoice" placeholder="INV-001" type="text">
+<input id="outletInvoice" placeholder="INV-001" type="text"/>
 </div>
 <div class="form-group">
 <label>Sales Amount (₹)</label>
-<input id="outletSales" placeholder="0" type="number" value="0">
+<input id="outletSales" placeholder="0" type="number" value="0"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Cash Received (₹)</label>
-<input id="outletCash" placeholder="0" type="number" value="0">
+<input id="outletCash" placeholder="0" type="number" value="0"/>
 </div>
 <div class="form-group">
 <label>UPI Received (₹)</label>
-<input id="outletUPI" placeholder="0" type="number" value="0">
+<input id="outletUPI" placeholder="0" type="number" value="0"/>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Credit Amount (₹)</label>
-<input id="outletCredit" placeholder="0" type="number" value="0">
+<input id="outletCredit" placeholder="0" type="number" value="0"/>
 </div>
 <div class="form-group">
 <label>Return Amount (₹)</label>
-<input id="outletReturn" placeholder="0" type="number" value="0">
+<input id="outletReturn" placeholder="0" type="number" value="0"/>
 </div>
 </div>
 <div class="form-row single">
 <div class="form-group">
 <label>Remarks</label>
-<input id="outletRemarks" placeholder="Optional remarks" type="text">
+<input id="outletRemarks" placeholder="Optional remarks" type="text"/>
 </div>
 </div>
 <div class="btn-group">
@@ -1009,11 +526,11 @@ textarea:focus-visible {
 <div class="form-row">
 <div class="form-group">
 <label>SKU / Product</label>
-<input id="dmgSKU" placeholder="Product name" type="text">
+<input id="dmgSKU" placeholder="Product name" type="text"/>
 </div>
 <div class="form-group">
 <label>Quantity</label>
-<input id="dmgQty" min="0" placeholder="0" type="number" value="0">
+<input id="dmgQty" min="0" placeholder="0" type="number" value="0"/>
 </div>
 </div>
 <div class="form-row">
@@ -1026,13 +543,13 @@ textarea:focus-visible {
 </div>
 <div class="form-group">
 <label>Approx Value (₹)</label>
-<input id="dmgValue" min="0" placeholder="0" type="number" value="0">
+<input id="dmgValue" min="0" placeholder="0" type="number" value="0"/>
 </div>
 </div>
 <div class="form-row single">
 <div class="form-group">
 <label>Remarks</label>
-<input id="dmgRemarks" placeholder="Optional remarks" type="text">
+<input id="dmgRemarks" placeholder="Optional remarks" type="text"/>
 </div>
 </div>
 <div class="btn-group">
@@ -1129,7 +646,7 @@ textarea:focus-visible {
 </div>
 <!-- Filter Bar -->
 <div class="filter-bar">
-<input id="filterSearch" oninput="renderSKUTable()" placeholder="🔍 Search SKU..." type="text">
+<input id="filterSearch" oninput="renderSKUTable()" placeholder="🔍 Search SKU..." type="text"/>
 <select id="filterCategory" onchange="renderSKUTable()"><option value="">All Categories</option></select>
 <select id="filterIssue" onchange="renderSKUTable()">
 <option value="">All SKUs</option>
@@ -1228,6 +745,24 @@ textarea:focus-visible {
      CTA SECTION
 =========================== -->
 <div class="divider"></div>
+<section class="cta-section">
+<h2>Van loading and EOD reconciliation should not depend on paper sheets forever.</h2>
+<p>A van loading sheet helps you track stock for one trip. But when your business manages multiple vans, salesmen, routes, stock loading, GST billing, collections, returns, credit sales and EOD reconciliation, manual tracking becomes difficult. SalesOn connects van sales, stock, billing, collections, delivery and reports in one platform.</p>
+<div class="cta-bullets">
+<span class="cta-bullet">🚛 Van loading</span>
+<span class="cta-bullet">📦 Van stock</span>
+<span class="cta-bullet">🗺️ Route-wise sales</span>
+<span class="cta-bullet">🧾 GST billing</span>
+<span class="cta-bullet">💰 Payment collection</span>
+<span class="cta-bullet">↩️ Returns tracking</span>
+<span class="cta-bullet">📊 EOD reconciliation</span>
+<span class="cta-bullet">📍 Field sales tracking</span>
+</div>
+<div class="cta-btns">
+<button class="cta-btn-primary" onclick="window.open('https://saleson.co.in/van-sales','_blank')">Manage Van Sales with SalesOn</button>
+<button class="cta-btn-ghost" onclick="window.open('/request-demo','_blank')">Book a Free SalesOn Demo</button>
+</div>
+</section>
 <!-- ===========================
      SEO CONTENT
 =========================== -->
@@ -1256,6 +791,16 @@ textarea:focus-visible {
 <p>In the Collection Details section, enter cash collected, UPI collected, cheque, bank transfer, credit sales and expenses separately. The tool calculates total actual collection, expected collection (total sales − credit sales), and the difference. If actual collection is less than expected, the status shows Short. If more, it shows Excess.</p>
 <h3>Difference Between Van Loading Sheet and Delivery Challan</h3>
 <p>A van loading sheet tracks internal stock movement from warehouse to van — it is used for stock control and EOD reconciliation inside your distribution business. A delivery challan is a document given to the customer at the time of delivery, listing products delivered and serving as proof of delivery. You can send your van loading data directly to the SalesOn <a href="/tools/delivery-challan-generator">Delivery Challan Generator</a> using the Connected Tools section.</p>
+<h3>When Should You Move from Paper Van Sheets to SalesOn?</h3>
+<p>Paper van sheets and Excel sheets work for a single van and simple routes. When your business grows to multiple vans, multiple salesmen, multiple beats, live stock tracking, GST billing, credit management and daily reporting, manual sheets become a bottleneck. SalesOn is designed for this exact transition — from paper-based van sales tracking to a connected digital platform.</p>
+<h3>Related SalesOn Free Tools</h3>
+<ul>
+<li><a href="/tools/delivery-challan-generator">Free Delivery Challan Generator</a> — create professional delivery challans</li>
+<li><a href="/tools/stock-reorder-level-calculator">Stock Reorder Level Calculator</a> — plan stock reorders based on sales data</li>
+<li><a href="/tools/outstanding-payment-tracker">Outstanding Payment Tracker</a> — track credit sales and overdues</li>
+<li><a href="/tools/payment-receipt-generator">Payment Receipt Generator</a> — create payment receipts</li>
+<li><a href="/tools/gst-invoice-generator">GST Invoice Generator</a> — create GST invoices for distributor billing</li>
+</ul>
 </section>
 <div class="divider"></div>
 <!-- ===========================
@@ -1308,7 +853,7 @@ textarea:focus-visible {
 </section>
 <div class="divider"></div>
 
-<section class="tool-next-step" aria-label="Related tools and SalesOn"><div class="tool-next-inner"><div><h2>Continue with a related tool</h2><nav aria-label="Related free tools"><a href="/tools/stock-reorder-level-calculator">Stock Reorder Level Calculator</a><a href="/tools/delivery-challan-generator">Delivery Challan Generator</a><a href="/tools/outstanding-payment-tracker">Outstanding Payment Tracker</a><a href="/tools">All free tools →</a></nav></div><div class="tool-product-link"><h3>Managing several vans and daily stock?</h3><p>Explore SalesOn’s van sales workflow.</p><a href="/van-sales">See the feature →</a></div></div></section><site-footer source="tools"><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
+<site-footer source="tools"><nav aria-label="Footer navigation"><a href="/about">About</a> · <a href="/privacy-policy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a> · <a href="mailto:support@saleson.co.in">Support</a></nav></site-footer>
 <whatsapp-float msg="Hi%20SalesOn%2C%20I%27d%20like%20to%20know%20more%20about%20SalesOn"></whatsapp-float>
 <script src="/components/site-header.429b1e04f891.js" defer></script>
 <script src="/components/site-footer.3a1c7b6ae618.js" defer></script>
@@ -1321,1137 +866,13 @@ textarea:focus-visible {
 <!-- ===========================
      LEAD MODAL
 =========================== -->
-<div class="modal-overlay" id="leadModalOverlay">
-<div class="modal" style="position:relative;">
-<button class="modal-close" onclick="closeLeadModal()" title="Close">✕</button>
-<div class="modal-logo">SalesOn</div>
-<h3>Still managing van loading and EOD reconciliation manually?</h3>
-<p>SalesOn helps distributors manage van sales, van stock, loading, billing, collections, returns, field sales tracking and EOD reconciliation in one connected platform.</p>
-<div style="display:flex;flex-direction:column;gap:10px;">
-<div class="form-row">
-<div class="form-group">
-<label>Your Name *</label>
-<input id="leadName" placeholder="Ramesh Kumar" type="text">
-</div>
-<div class="form-group">
-<label>WhatsApp / Mobile *</label>
-<input id="leadPhone" placeholder="+91 80928 56577" type="tel">
-</div>
-</div>
-<div class="form-row">
-<div class="form-group">
-<label>Business Name *</label>
-<input id="leadBusiness" placeholder="Your distributor name" type="text">
-</div>
-<div class="form-group">
-<label>Business Type</label>
-<select id="leadBizType">
-<option>Distributor</option><option>Wholesaler</option><option>Manufacturer</option>
-<option>FMCG</option><option>Pharma</option><option>Retailer</option>
-<option>Service Business</option><option>Other</option>
-</select>
-</div>
-</div>
-<div class="form-row">
-<div class="form-group">
-<label>City</label>
-<input id="leadCity" placeholder="Patna" type="text">
-</div>
-<div class="form-group">
-<label>No. of Vans / Salesmen</label>
-<select id="leadVanCount">
-<option>1-2</option><option>3-5</option><option>6-10</option><option>10+</option>
-</select>
-</div>
-</div>
-<div class="form-row single">
-<div class="form-group">
-<label>Current Van Sales Tracking Method</label>
-<select id="leadCurrentMethod">
-<option>Excel</option><option>Manual register</option><option>WhatsApp</option>
-<option>Tally</option><option>Busy</option><option>Other software</option>
-</select>
-</div>
-</div>
-</div>
-<div class="modal-actions">
-<button class="btn btn-secondary" onclick="closeLeadModal()">Continue Free →</button>
-<button class="btn btn-primary" onclick="submitLead(false)">Save Details</button>
-<button class="btn btn-green" onclick="submitLead(true)">Book SalesOn Demo</button>
-</div>
-</div>
-</div>
+
 <!-- ===========================
      JAVASCRIPT
 =========================== -->
-<script>
-/* ============================
-   STATE
-============================ */
-let skuList = [];        // Array of SKU objects
-let outletList = [];     // Outlet-wise rows
-let damageList = [];     // Damage/return rows
-let nextSKUID = 1;       // SKU ID counter
-let nextOutletID = 1;
-let nextDamageID = 1;
-let outletEnabled = false;
-let damageEnabled = false;
-let logoDataURL = null;
-let leadCaptured = false;
-let pendingAction = null; // Action to run after lead modal
-
-/* ============================
-   INIT
-============================ */
-document.addEventListener('DOMContentLoaded', () => {
-  // Set today's date
-  document.getElementById('reportDate').valueAsDate = new Date();
-
-  // Check if lead was already captured
-  leadCaptured = !!localStorage.getItem('saleson_lead_captured');
-
-  // Prefill business name in lead modal from biz details
-  document.getElementById('bizName').addEventListener('input', () => {
-    document.getElementById('leadBusiness').value = document.getElementById('bizName').value;
-  });
-
-  // Logo upload
-  document.getElementById('bizLogo').addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (ev) => { logoDataURL = ev.target.result; };
-    reader.readAsDataURL(file);
-  });
-
-  // Live recalculation on SKU form
-  ['skuOpenStock','skuLoaded','skuSold','skuReturnGood','skuDamaged','skuSample','skuRate'].forEach(id => {
-    document.getElementById(id).addEventListener('input', recalcSKUForm);
-  });
-
-  // Load sample data
-  loadSampleData();
-
-  // Initial renders
-  renderSKUTable();
-  updateKPIs();
-  updateCollection();
-});
-
-/* ============================
-   SAMPLE DATA
-============================ */
-function loadSampleData() {
-  const samples = [
-    { name:'FMCG Product Box', code:'FMCG-001', cat:'FMCG', unit:'Box', open:10, loaded:50, sold:42, retGood:5, damaged:1, sample:0, rate:500, credit:5000, cash:15000, upi:1000 },
-    { name:'Detergent Pack', code:'FMCG-002', cat:'Detergent', unit:'Packet', open:25, loaded:100, sold:80, retGood:10, damaged:2, sample:3, rate:100, credit:0, cash:5000, upi:3000 },
-    { name:'Tea Packet', code:'FMCG-003', cat:'Beverages', unit:'Packet', open:50, loaded:150, sold:120, retGood:15, damaged:0, sample:5, rate:120, credit:0, cash:8000, upi:6400 },
-  ];
-  samples.forEach(s => {
-    const totalAvail = s.open + s.loaded;
-    const closing = totalAvail - s.sold - s.retGood - s.damaged - s.sample;
-    const salesVal = s.sold * s.rate;
-    skuList.push({
-      id: nextSKUID++,
-      name: s.name, code: s.code, cat: s.cat, unit: s.unit,
-      open: s.open, loaded: s.loaded, totalAvail,
-      sold: s.sold, retGood: s.retGood, damaged: s.damaged, sample: s.sample,
-      closing, rate: s.rate, salesVal,
-      creditSales: s.credit, cashSales: s.cash, upiSales: s.upi,
-      checked: false
-    });
-  });
-}
-
-/* ============================
-   SKU FORM RECALCULATION
-============================ */
-function recalcSKUForm() {
-  const open = parseFloat(document.getElementById('skuOpenStock').value) || 0;
-  const loaded = parseFloat(document.getElementById('skuLoaded').value) || 0;
-  const sold = parseFloat(document.getElementById('skuSold').value) || 0;
-  const retGood = parseFloat(document.getElementById('skuReturnGood').value) || 0;
-  const damaged = parseFloat(document.getElementById('skuDamaged').value) || 0;
-  const sample = parseFloat(document.getElementById('skuSample').value) || 0;
-  const rate = parseFloat(document.getElementById('skuRate').value) || 0;
-
-  const totalAvail = open + loaded;
-  const closing = totalAvail - sold - retGood - damaged - sample;
-  const salesVal = sold * rate;
-
-  document.getElementById('skuTotalAvail').value = totalAvail;
-  document.getElementById('skuClosingStock').value = closing;
-  document.getElementById('skuSalesValue').value = salesVal;
-
-  // Inline error
-  const errEl = document.getElementById('skuErrorMsg');
-  const closeEl = document.getElementById('skuClosingStock');
-  if (closing < 0) {
-    errEl.style.display = 'block';
-    errEl.textContent = `⚠️ Closing stock cannot be negative. Sold/return/damage/sample quantity (${sold+retGood+damaged+sample}) is more than available stock (${totalAvail}).`;
-    closeEl.classList.add('error-field');
-  } else {
-    errEl.style.display = 'none';
-    closeEl.classList.remove('error-field');
-  }
-}
-
-/* ============================
-   ADD / UPDATE SKU
-============================ */
-function addOrUpdateSKU() {
-  const errEl = document.getElementById('skuErrorMsg');
-  const name = document.getElementById('skuName').value.trim();
-  if (!name) { showToast('Please enter a product name.'); return; }
-
-  const open = parseFloat(document.getElementById('skuOpenStock').value) || 0;
-  const loaded = parseFloat(document.getElementById('skuLoaded').value) || 0;
-  const sold = parseFloat(document.getElementById('skuSold').value) || 0;
-  const retGood = parseFloat(document.getElementById('skuReturnGood').value) || 0;
-  const damaged = parseFloat(document.getElementById('skuDamaged').value) || 0;
-  const sample = parseFloat(document.getElementById('skuSample').value) || 0;
-  const rate = parseFloat(document.getElementById('skuRate').value) || 0;
-
-  const totalAvail = open + loaded;
-  const closing = totalAvail - sold - retGood - damaged - sample;
-
-  if (closing < 0) {
-    errEl.style.display = 'block';
-    errEl.textContent = `⚠️ Closing stock cannot be negative. Sold/return/damage/sample (${sold+retGood+damaged+sample}) > available (${totalAvail}).`;
-    return;
-  }
-
-  const sku = {
-    id: null,
-    name, code: document.getElementById('skuCode').value.trim(),
-    cat: document.getElementById('skuCategory').value.trim(),
-    unit: document.getElementById('skuUnit').value,
-    open, loaded, totalAvail, sold, retGood, damaged, sample,
-    closing, rate, salesVal: sold * rate,
-    creditSales: parseFloat(document.getElementById('skuCreditSales').value) || 0,
-    cashSales: parseFloat(document.getElementById('skuCashSales').value) || 0,
-    upiSales: parseFloat(document.getElementById('skuUPISales').value) || 0,
-    checked: false
-  };
-
-  const editId = document.getElementById('editingSkuId').value;
-  if (editId) {
-    const idx = skuList.findIndex(s => s.id === parseInt(editId));
-    if (idx !== -1) {
-      sku.id = parseInt(editId);
-      sku.checked = skuList[idx].checked;
-      skuList[idx] = sku;
-      showToast('SKU updated.');
-    }
-  } else {
-    sku.id = nextSKUID++;
-    skuList.push(sku);
-    showToast('SKU added.');
-  }
-
-  clearSKUForm();
-  renderSKUTable();
-  updateKPIs();
-  updateCollection();
-  updateCategoryFilter();
-}
-
-/* ============================
-   CLEAR SKU FORM
-============================ */
-function clearSKUForm() {
-  ['skuName','skuCode','skuCategory'].forEach(id => document.getElementById(id).value = '');
-  ['skuOpenStock','skuLoaded','skuSold','skuReturnGood','skuDamaged','skuSample','skuRate','skuCreditSales','skuCashSales','skuUPISales'].forEach(id => document.getElementById(id).value = 0);
-  document.getElementById('skuUnit').value = 'PCS';
-  document.getElementById('skuTotalAvail').value = '';
-  document.getElementById('skuClosingStock').value = '';
-  document.getElementById('skuSalesValue').value = '';
-  document.getElementById('editingSkuId').value = '';
-  document.getElementById('skuAddBtn').textContent = '➕ Add SKU';
-  document.getElementById('skuErrorMsg').style.display = 'none';
-  document.getElementById('skuClosingStock').classList.remove('error-field');
-  // Remove editing highlight from table
-  document.querySelectorAll('#skuTbody tr').forEach(r => r.classList.remove('editing'));
-}
-
-/* ============================
-   EDIT SKU
-============================ */
-function editSKU(id) {
-  const sku = skuList.find(s => s.id === id);
-  if (!sku) return;
-  document.getElementById('skuName').value = sku.name;
-  document.getElementById('skuCode').value = sku.code || '';
-  document.getElementById('skuCategory').value = sku.cat || '';
-  document.getElementById('skuUnit').value = sku.unit;
-  document.getElementById('skuOpenStock').value = sku.open;
-  document.getElementById('skuLoaded').value = sku.loaded;
-  document.getElementById('skuSold').value = sku.sold;
-  document.getElementById('skuReturnGood').value = sku.retGood;
-  document.getElementById('skuDamaged').value = sku.damaged;
-  document.getElementById('skuSample').value = sku.sample;
-  document.getElementById('skuRate').value = sku.rate;
-  document.getElementById('skuCreditSales').value = sku.creditSales || 0;
-  document.getElementById('skuCashSales').value = sku.cashSales || 0;
-  document.getElementById('skuUPISales').value = sku.upiSales || 0;
-  document.getElementById('editingSkuId').value = sku.id;
-  document.getElementById('skuAddBtn').textContent = '✏️ Update SKU';
-  recalcSKUForm();
-  document.getElementById('skuBody').scrollIntoView({ behavior: 'smooth' });
-  // Highlight row
-  document.querySelectorAll('#skuTbody tr').forEach(r => {
-    r.classList.toggle('editing', r.dataset.skuid == id);
-  });
-}
-
-/* ============================
-   DELETE SKU
-============================ */
-function deleteSKU(id) {
-  if (!confirm('Delete this SKU?')) return;
-  skuList = skuList.filter(s => s.id !== id);
-  renderSKUTable();
-  updateKPIs();
-  updateCollection();
-  updateCategoryFilter();
-  showToast('SKU deleted.');
-}
-
-/* ============================
-   COPY SKU
-============================ */
-function copySKU(id) {
-  const sku = skuList.find(s => s.id === id);
-  if (!sku) return;
-  const copy = Object.assign({}, sku, { id: nextSKUID++, name: sku.name + ' (Copy)', checked: false });
-  skuList.push(copy);
-  renderSKUTable();
-  updateKPIs();
-  showToast('SKU row copied.');
-}
-
-/* ============================
-   TOGGLE CHECK
-============================ */
-function toggleChecked(id) {
-  const sku = skuList.find(s => s.id === id);
-  if (sku) sku.checked = !sku.checked;
-  renderSKUTable();
-}
-
-/* ============================
-   RENDER SKU TABLE
-============================ */
-function renderSKUTable() {
-  const search = (document.getElementById('filterSearch').value || '').toLowerCase();
-  const catFilter = document.getElementById('filterCategory').value;
-  const issueFilter = document.getElementById('filterIssue').value;
-  const sortBy = document.getElementById('filterSort').value;
-
-  let filtered = skuList.filter(sku => {
-    if (search && !sku.name.toLowerCase().includes(search) && !(sku.code||'').toLowerCase().includes(search)) return false;
-    if (catFilter && sku.cat !== catFilter) return false;
-    if (issueFilter === 'neg' && sku.closing >= 0) return false;
-    if (issueFilter === 'high_return' && sku.retGood < sku.sold * 0.3) return false;
-    if (issueFilter === 'damaged' && sku.damaged === 0) return false;
-    if (issueFilter === 'zero_sold' && sku.sold !== 0) return false;
-    return true;
-  });
-
-  filtered.sort((a, b) => {
-    if (sortBy === 'sales_desc') return b.salesVal - a.salesVal;
-    if (sortBy === 'closing_desc') return b.closing - a.closing;
-    if (sortBy === 'return_desc') return b.retGood - a.retGood;
-    return a.name.localeCompare(b.name);
-  });
-
-  const tbody = document.getElementById('skuTbody');
-  if (filtered.length === 0) {
-    tbody.innerHTML = `<tr id="skuEmptyRow"><td colspan="13" style="text-align:center;padding:28px;color:var(--ink-muted);">${skuList.length === 0 ? 'No SKUs added yet. Add your first product above.' : 'No SKUs match the current filter.'}</td></tr>`;
-    return;
-  }
-
-  tbody.innerHTML = filtered.map(sku => {
-    const closingClass = sku.closing < 0 ? 'closing-neg' : '';
-    return `<tr class="${sku.checked ? 'checked' : ''}" data-skuid="${sku.id}">
-      <td>
-        <div class="sku-name">${escHtml(sku.name)}</div>
-        ${sku.code ? `<div class="sku-code">${escHtml(sku.code)}</div>` : ''}
-        ${sku.cat ? `<span class="badge badge-blue">${escHtml(sku.cat)}</span>` : ''}
-      </td>
-      <td>${escHtml(sku.unit)}</td>
-      <td>${sku.open}</td>
-      <td>${sku.loaded}</td>
-      <td>${sku.totalAvail}</td>
-      <td><strong>${sku.sold}</strong></td>
-      <td>${sku.retGood}</td>
-      <td>${sku.damaged > 0 ? `<span class="badge badge-amber">${sku.damaged}</span>` : 0}</td>
-      <td>${sku.sample}</td>
-      <td class="${closingClass}">${sku.closing}${sku.closing < 0 ? ' ⚠️' : ''}</td>
-      <td>₹${sku.rate}</td>
-      <td><strong>₹${fmt(sku.salesVal)}</strong></td>
-      <td>
-        <div class="row-actions">
-          <button class="btn btn-sm btn-secondary" onclick="editSKU(${sku.id})" title="Edit">✏️</button>
-          <button class="btn btn-sm btn-red" onclick="deleteSKU(${sku.id})" title="Delete">🗑️</button>
-          <button class="btn btn-sm btn-secondary" onclick="copySKU(${sku.id})" title="Copy">📋</button>
-          <button class="btn btn-sm ${sku.checked ? 'btn-green' : 'btn-secondary'}" onclick="toggleChecked(${sku.id})" title="Mark checked">✓</button>
-        </div>
-      </td>
-    </tr>`;
-  }).join('');
-}
-
-/* ============================
-   UPDATE CATEGORY FILTER
-============================ */
-function updateCategoryFilter() {
-  const cats = [...new Set(skuList.map(s => s.cat).filter(Boolean))];
-  const sel = document.getElementById('filterCategory');
-  const current = sel.value;
-  sel.innerHTML = '<option value="">All Categories</option>' + cats.map(c => `<option value="${c}"${c===current?' selected':''}>${c}</option>`).join('');
-}
-
-/* ============================
-   UPDATE KPIs
-============================ */
-function updateKPIs() {
-  const totalSKUs = skuList.length;
-  const totalOpen = sum('open');
-  const totalLoaded = sum('loaded');
-  const totalAvail = sum('totalAvail');
-  const totalSold = sum('sold');
-  const totalClosing = sum('closing');
-  const totalReturn = sum('retGood');
-  const totalDamaged = sum('damaged');
-  const totalSample = sum('sample');
-  const totalSalesVal = sum('salesVal');
-
-  const grid = document.getElementById('kpiGrid');
-  grid.innerHTML = [
-    { label: 'Total SKUs', value: totalSKUs, cls: '' },
-    { label: 'Total Loaded Qty', value: fmt(totalLoaded), cls: '' },
-    { label: 'Total Available', value: fmt(totalAvail), cls: '' },
-    { label: 'Total Sold Qty', value: fmt(totalSold), cls: 'green' },
-    { label: 'Total Closing Stock', value: fmt(totalClosing), cls: totalClosing < 0 ? 'red' : '' },
-    { label: 'Total Returns', value: fmt(totalReturn), cls: 'amber' },
-    { label: 'Total Damaged', value: fmt(totalDamaged), cls: totalDamaged > 0 ? 'red' : '' },
-    { label: 'Free Samples', value: fmt(totalSample), cls: '' },
-    { label: 'Total Sales Value', value: '₹' + fmt(totalSalesVal), cls: 'green' },
-  ].map(k => `
-    <div class="kpi-card">
-      <div class="kpi-label">${k.label}</div>
-      <div class="kpi-value ${k.cls}">${k.value}</div>
-    </div>
-  `).join('');
-}
-
-/* ============================
-   UPDATE COLLECTION
-============================ */
-function updateCollection() {
-  const cash = parseFloat(document.getElementById('colCash').value) || 0;
-  const upi = parseFloat(document.getElementById('colUPI').value) || 0;
-  const cheque = parseFloat(document.getElementById('colCheque').value) || 0;
-  const bank = parseFloat(document.getElementById('colBank').value) || 0;
-  const credit = parseFloat(document.getElementById('colCredit').value) || 0;
-  const expenses = parseFloat(document.getElementById('colExpenses').value) || 0;
-
-  const totalSalesVal = sum('salesVal');
-  const totalCreditSKU = sum('creditSales');
-  const effectiveCredit = credit || totalCreditSKU;
-
-  const actualCollection = cash + upi + cheque + bank;
-  const expectedCollection = totalSalesVal - effectiveCredit;
-  const diff = actualCollection - expectedCollection;
-  const cashToDeposit = cash - expenses;
-
-  // Status
-  let statusClass = 'status-review', statusIcon = '📊', statusText;
-  if (totalSalesVal === 0 && actualCollection === 0) {
-    statusText = 'Enter SKU and collection data to see reconciliation status.';
-  } else if (Math.abs(diff) < 1) {
-    statusClass = 'status-matched'; statusIcon = '✅';
-    statusText = 'Collection Matched — Actual collection equals expected sales collection.';
-  } else if (diff < 0) {
-    statusClass = 'status-short'; statusIcon = '⚠️';
-    statusText = `Short by ₹${fmt(Math.abs(diff))} — Actual collection is less than expected.`;
-  } else if (diff > 0) {
-    statusClass = 'status-excess'; statusIcon = '💡';
-    statusText = `Excess of ₹${fmt(Math.abs(diff))} — Actual collection is more than expected. Verify entries.`;
-  }
-
-  const card = document.getElementById('reconStatusCard');
-  card.className = `status-card ${statusClass}`;
-  card.innerHTML = `<span>${statusIcon}</span><span id="reconStatusText">${statusText}</span>`;
-
-  // Collection KPIs
-  const cgrid = document.getElementById('collectionKPIGrid');
-  cgrid.innerHTML = [
-    { label: 'Total Sales Value', value: '₹' + fmt(totalSalesVal), cls: 'green' },
-    { label: 'Cash Collected', value: '₹' + fmt(cash), cls: '' },
-    { label: 'UPI Collected', value: '₹' + fmt(upi), cls: '' },
-    { label: 'Credit Sales', value: '₹' + fmt(effectiveCredit), cls: 'amber' },
-    { label: 'Expected Collection', value: '₹' + fmt(expectedCollection), cls: '' },
-    { label: 'Actual Collection', value: '₹' + fmt(actualCollection), cls: '' },
-    { label: 'Difference', value: (diff >= 0 ? '+' : '') + '₹' + fmt(diff), cls: diff < 0 ? 'red' : diff > 0 ? 'amber' : 'green' },
-    { label: 'Cash to Deposit', value: '₹' + fmt(cashToDeposit), cls: '' },
-    { label: 'Status', value: diff === 0 && totalSalesVal > 0 ? 'Matched' : diff < 0 ? 'Short' : diff > 0 ? 'Excess' : '—', cls: diff === 0 && totalSalesVal > 0 ? 'green' : diff < 0 ? 'red' : 'amber' },
-  ].map(k => `
-    <div class="kpi-card">
-      <div class="kpi-label">${k.label}</div>
-      <div class="kpi-value ${k.cls}" style="font-size:16px;">${k.value}</div>
-    </div>
-  `).join('');
-}
-
-/* ============================
-   OUTLET SECTION
-============================ */
-function toggleOutlet() {
-  outletEnabled = !outletEnabled;
-  document.getElementById('outletToggle').className = 'toggle-switch' + (outletEnabled ? ' on' : '');
-  document.getElementById('outletSection').style.display = outletEnabled ? 'block' : 'none';
-
-  updateOutletKPIs();
-}
-
-function addOutlet() {
-  const name = document.getElementById('outletName').value.trim();
-  if (!name) { showToast('Enter a shop/retailer name.'); return; }
-  outletList.push({
-    id: nextOutletID++,
-    name, area: document.getElementById('outletArea').value.trim(),
-    invoice: document.getElementById('outletInvoice').value.trim(),
-    sales: parseFloat(document.getElementById('outletSales').value) || 0,
-    cash: parseFloat(document.getElementById('outletCash').value) || 0,
-    upi: parseFloat(document.getElementById('outletUPI').value) || 0,
-    credit: parseFloat(document.getElementById('outletCredit').value) || 0,
-    ret: parseFloat(document.getElementById('outletReturn').value) || 0,
-    remarks: document.getElementById('outletRemarks').value.trim(),
-  });
-  renderOutletTable();
-  clearOutletForm();
-  updateOutletKPIs();
-  showToast('Outlet added.');
-}
-
-function renderOutletTable() {
-  const tbody = document.getElementById('outletTbody');
-  const wrapper = document.getElementById('outletTableWrapper');
-  if (outletList.length === 0) { wrapper.style.display = 'none'; return; }
-  wrapper.style.display = 'block';
-  tbody.innerHTML = outletList.map(o => `<tr>
-    <td>${escHtml(o.name)}</td><td>${escHtml(o.area)}</td><td>${escHtml(o.invoice)}</td>
-    <td>₹${fmt(o.sales)}</td><td>₹${fmt(o.cash)}</td><td>₹${fmt(o.upi)}</td>
-    <td>₹${fmt(o.credit)}</td><td>₹${fmt(o.ret)}</td><td>${escHtml(o.remarks)}</td>
-    <td><button class="btn btn-sm btn-red" onclick="deleteOutlet(${o.id})">🗑️</button></td>
-  </tr>`).join('');
-}
-
-function deleteOutlet(id) {
-  outletList = outletList.filter(o => o.id !== id);
-  renderOutletTable(); updateOutletKPIs();
-}
-
-function clearOutletForm() {
-  ['outletName','outletArea','outletInvoice','outletRemarks'].forEach(id => document.getElementById(id).value = '');
-  ['outletSales','outletCash','outletUPI','outletCredit','outletReturn'].forEach(id => document.getElementById(id).value = 0);
-}
-
-function updateOutletKPIs() {
-  const card = document.getElementById('outletSummaryCard');
-  if (!outletEnabled || outletList.length === 0) { card.style.display = 'none'; return; }
-  card.style.display = 'block';
-  const totalOutlets = outletList.length;
-  const productive = outletList.filter(o => o.sales > 0).length;
-  const creditOutlets = outletList.filter(o => o.credit > 0).length;
-  const totalSales = outletList.reduce((a,o) => a + o.sales, 0);
-  document.getElementById('outletKPIGrid').innerHTML = [
-    { label:'Total Outlets', value: totalOutlets },
-    { label:'Productive Outlets', value: productive, cls:'green' },
-    { label:'Credit Outlets', value: creditOutlets, cls:'amber' },
-    { label:'Total Outlet Sales', value:'₹'+fmt(totalSales), cls:'green' },
-  ].map(k => `<div class="kpi-card"><div class="kpi-label">${k.label}</div><div class="kpi-value ${k.cls||''}">${k.value}</div></div>`).join('');
-}
-
-/* ============================
-   DAMAGE SECTION
-============================ */
-function toggleDamage() {
-  damageEnabled = !damageEnabled;
-  document.getElementById('damageToggle').className = 'toggle-switch' + (damageEnabled ? ' on' : '');
-  document.getElementById('damageSection').style.display = damageEnabled ? 'block' : 'none';
-}
-
-function addDamage() {
-  const sku = document.getElementById('dmgSKU').value.trim();
-  if (!sku) { showToast('Enter SKU/product name.'); return; }
-  damageList.push({
-    id: nextDamageID++,
-    sku, qty: parseFloat(document.getElementById('dmgQty').value) || 0,
-    reason: document.getElementById('dmgReason').value,
-    value: parseFloat(document.getElementById('dmgValue').value) || 0,
-    remarks: document.getElementById('dmgRemarks').value.trim(),
-  });
-  renderDamageTable(); clearDamageForm();
-  showToast('Damage/return entry added.');
-}
-
-function renderDamageTable() {
-  const tbody = document.getElementById('damageTbody');
-  const wrapper = document.getElementById('damageTableWrapper');
-  if (damageList.length === 0) { wrapper.style.display = 'none'; return; }
-  wrapper.style.display = 'block';
-  tbody.innerHTML = damageList.map(d => `<tr>
-    <td>${escHtml(d.sku)}</td><td>${d.qty}</td>
-    <td><span class="badge badge-amber">${escHtml(d.reason)}</span></td>
-    <td>₹${fmt(d.value)}</td><td>${escHtml(d.remarks)}</td>
-    <td><button class="btn btn-sm btn-red" onclick="deleteDamage(${d.id})">🗑️</button></td>
-  </tr>`).join('');
-}
-
-function deleteDamage(id) { damageList = damageList.filter(d => d.id !== id); renderDamageTable(); }
-
-function clearDamageForm() {
-  ['dmgSKU','dmgRemarks'].forEach(id => document.getElementById(id).value = '');
-  ['dmgQty','dmgValue'].forEach(id => document.getElementById(id).value = 0);
-  document.getElementById('dmgReason').value = 'Expired';
-}
-
-/* ============================
-   EXPORT CSV
-============================ */
-function exportCSV() {
-  if (skuList.length === 0) { showToast('No SKUs to export.'); return; }
-  const headers = ['Product Name','SKU Code','Category','Unit','Opening Stock','Loaded Quantity','Total Available','Sold Quantity','Returned Good','Damaged/Expired','Free Sample','Closing Stock','Rate','Sales Value','Credit Sales','Cash Sales','UPI Sales'];
-  const rows = skuList.map(s => [
-    s.name, s.code, s.cat, s.unit, s.open, s.loaded, s.totalAvail,
-    s.sold, s.retGood, s.damaged, s.sample, s.closing,
-    s.rate, s.salesVal, s.creditSales, s.cashSales, s.upiSales
-  ]);
-  const csv = [headers, ...rows].map(r => r.map(v => `"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');
-  const blob = new Blob([csv], { type: 'text/csv' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `Van-Loading-Sheet-${getDate()}.csv`;
-  a.click();
-  URL.revokeObjectURL(url);
-  showToast('CSV exported!');
-  // Score: +10 for exporting
-  updateLeadScore(10);
-}
-
-/* ============================
-   DOWNLOAD SAMPLE CSV
-============================ */
-function downloadSampleCSV() {
-  const csv = `Product Name,SKU Code,Category,Unit,Opening Stock,Loaded Quantity,Sold Quantity,Returned Good,Damaged/Expired,Free Sample,Rate,Credit Sales,Cash Sales,UPI Sales\n"Sample Product","SKU-001","FMCG","Box","10","50","42","5","1","0","500","5000","15000","1000"`;
-  const blob = new Blob([csv], { type: 'text/csv' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'SalesOn-Van-Loading-Sample.csv';
-  a.click();
-  URL.revokeObjectURL(url);
-}
-
-/* ============================
-   IMPORT CSV PASTE
-============================ */
-function toggleImportArea() {
-  const el = document.getElementById('importArea');
-  el.style.display = el.style.display === 'none' ? 'block' : 'none';
-}
-
-function importCSVPaste() {
-  const text = document.getElementById('csvPasteInput').value.trim();
-  if (!text) { showToast('Paste CSV rows first.'); return; }
-  const lines = text.split('\n').filter(l => l.trim());
-  let added = 0;
-  lines.forEach(line => {
-    const cols = line.split(',').map(c => c.replace(/^"|"$/g,'').trim());
-    if (cols.length < 8) return;
-    const open = parseFloat(cols[4]) || 0;
-    const loaded = parseFloat(cols[5]) || 0;
-    const sold = parseFloat(cols[6]) || 0;
-    const retGood = parseFloat(cols[7]) || 0;
-    const damaged = parseFloat(cols[8]) || 0;
-    const sample = parseFloat(cols[9]) || 0;
-    const rate = parseFloat(cols[10]) || 0;
-    const totalAvail = open + loaded;
-    const closing = totalAvail - sold - retGood - damaged - sample;
-    skuList.push({
-      id: nextSKUID++,
-      name: cols[0] || 'Imported SKU', code: cols[1] || '', cat: cols[2] || '',
-      unit: cols[3] || 'PCS',
-      open, loaded, totalAvail, sold, retGood, damaged, sample, closing,
-      rate, salesVal: sold * rate,
-      creditSales: parseFloat(cols[11]) || 0,
-      cashSales: parseFloat(cols[12]) || 0,
-      upiSales: parseFloat(cols[13]) || 0,
-      checked: false
-    });
-    added++;
-  });
-  document.getElementById('csvPasteInput').value = '';
-  document.getElementById('importArea').style.display = 'none';
-  renderSKUTable(); updateKPIs(); updateCollection(); updateCategoryFilter();
-  showToast(`${added} SKU(s) imported.`);
-}
-
-/* ============================
-   PRINT SHEET
-============================ */
-function printSheet() {
-  // Build print area content
-  const biz = document.getElementById('bizName').value || 'Business Name';
-  const date = document.getElementById('reportDate').value || getDate();
-  const van = document.getElementById('vanNumber').value;
-  const vehicle = document.getElementById('vehicleNumber').value;
-  const salesman = document.getElementById('salesmanName').value;
-  const route = document.getElementById('routeName').value;
-  const warehouse = document.getElementById('warehouseName').value;
-  const addr = document.getElementById('bizAddress').value;
-  const phone = document.getElementById('bizPhone').value;
-
-  document.getElementById('printLogo').textContent = biz;
-  document.getElementById('printMeta').innerHTML = `
-    <strong>${addr}</strong> | Ph: ${phone}<br>
-    Date: ${date} | Van: ${van} | Vehicle: ${vehicle} | Salesman: ${salesman}<br>
-    Route/Beat: ${route} | Warehouse: ${warehouse}
-  `;
-
-  // SKU table
-  const skuRows = skuList.map(s => `<tr>
-    <td>${escHtml(s.name)}${s.code ? ' ('+escHtml(s.code)+')' : ''}</td>
-    <td>${s.unit}</td><td>${s.open}</td><td>${s.loaded}</td><td>${s.totalAvail}</td>
-    <td>${s.sold}</td><td>${s.retGood}</td><td>${s.damaged}</td><td>${s.sample}</td>
-    <td>${s.closing}</td><td>₹${s.rate}</td><td>₹${fmt(s.salesVal)}</td>
-  </tr>`).join('');
-
-  document.getElementById('printSKUSection').innerHTML = `
-    <div class="print-section">
-      <h3>Van Loading Sheet</h3>
-      <table class="print-table">
-        <thead><tr><th>Product</th><th>Unit</th><th>Open</th><th>Loaded</th><th>Avail</th><th>Sold</th><th>Ret.</th><th>Dmg.</th><th>Sample</th><th>Closing</th><th>Rate</th><th>Sales ₹</th></tr></thead>
-        <tbody>${skuRows}</tbody>
-        <tfoot>
-          <tr style="font-weight:700;background:#f5f5f5;">
-            <td colspan="5">TOTAL</td>
-            <td>${sum('sold')}</td><td>${sum('retGood')}</td><td>${sum('damaged')}</td><td>${sum('sample')}</td>
-            <td>${sum('closing')}</td><td></td><td>₹${fmt(sum('salesVal'))}</td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>`;
-
-  // Collection
-  const cash = parseFloat(document.getElementById('colCash').value) || 0;
-  const upi = parseFloat(document.getElementById('colUPI').value) || 0;
-  const cheque = parseFloat(document.getElementById('colCheque').value) || 0;
-  const bank = parseFloat(document.getElementById('colBank').value) || 0;
-  const credit = parseFloat(document.getElementById('colCredit').value) || 0;
-  const expenses = parseFloat(document.getElementById('colExpenses').value) || 0;
-  const deposited = parseFloat(document.getElementById('colDeposited').value) || 0;
-  const remarks = document.getElementById('colRemarks').value;
-  const totalSalesVal = sum('salesVal');
-  const actualCol = cash + upi + cheque + bank;
-  const expectedCol = totalSalesVal - credit;
-  const diff = actualCol - expectedCol;
-
-  document.getElementById('printCollectionSection').innerHTML = `
-    <div class="print-section">
-      <h3>Collection Summary</h3>
-      <table class="print-table" style="max-width:400px;">
-        <tr><td>Cash Collected</td><td>₹${fmt(cash)}</td></tr>
-        <tr><td>UPI Collected</td><td>₹${fmt(upi)}</td></tr>
-        <tr><td>Cheque Collected</td><td>₹${fmt(cheque)}</td></tr>
-        <tr><td>Bank Transfer</td><td>₹${fmt(bank)}</td></tr>
-        <tr><td>Credit Sales</td><td>₹${fmt(credit)}</td></tr>
-        <tr><td>Expenses</td><td>₹${fmt(expenses)}</td></tr>
-        <tr><td>Cash Deposited</td><td>₹${fmt(deposited)}</td></tr>
-        ${remarks ? `<tr><td>Remarks</td><td>${escHtml(remarks)}</td></tr>` : ''}
-      </table>
-    </div>`;
-
-  document.getElementById('printEODSection').innerHTML = `
-    <div class="print-section">
-      <h3>EOD Reconciliation</h3>
-      <div class="print-kpi-row">
-        <div class="print-kpi"><strong>₹${fmt(totalSalesVal)}</strong>Total Sales Value</div>
-        <div class="print-kpi"><strong>₹${fmt(expectedCol)}</strong>Expected Collection</div>
-        <div class="print-kpi"><strong>₹${fmt(actualCol)}</strong>Actual Collection</div>
-        <div class="print-kpi"><strong>${diff >= 0 ? '+' : ''}₹${fmt(diff)}</strong>Difference</div>
-        <div class="print-kpi"><strong>${Math.abs(diff) < 1 ? 'MATCHED' : diff < 0 ? 'SHORT' : 'EXCESS'}</strong>Status</div>
-      </div>
-    </div>`;
-
-  // Outlet
-  if (outletEnabled && outletList.length > 0) {
-    const outletRows = outletList.map(o => `<tr>
-      <td>${escHtml(o.name)}</td><td>${escHtml(o.area)}</td><td>${escHtml(o.invoice)}</td>
-      <td>₹${fmt(o.sales)}</td><td>₹${fmt(o.cash)}</td><td>₹${fmt(o.upi)}</td>
-      <td>₹${fmt(o.credit)}</td><td>₹${fmt(o.ret)}</td>
-    </tr>`).join('');
-    document.getElementById('printOutletSection').innerHTML = `
-      <div class="print-section">
-        <h3>Outlet-wise Sales Summary</h3>
-        <table class="print-table">
-          <thead><tr><th>Shop</th><th>Area</th><th>Invoice</th><th>Sales</th><th>Cash</th><th>UPI</th><th>Credit</th><th>Return</th></tr></thead>
-          <tbody>${outletRows}</tbody>
-        </table>
-      </div>`;
-  } else {
-    document.getElementById('printOutletSection').innerHTML = '';
-  }
-
-  // Damage
-  if (damageEnabled && damageList.length > 0) {
-    const dmgRows = damageList.map(d => `<tr>
-      <td>${escHtml(d.sku)}</td><td>${d.qty}</td><td>${escHtml(d.reason)}</td><td>₹${fmt(d.value)}</td><td>${escHtml(d.remarks)}</td>
-    </tr>`).join('');
-    document.getElementById('printDamageSection').innerHTML = `
-      <div class="print-section">
-        <h3>Damage / Return Summary</h3>
-        <table class="print-table">
-          <thead><tr><th>SKU</th><th>Qty</th><th>Reason</th><th>Value</th><th>Remarks</th></tr></thead>
-          <tbody>${dmgRows}</tbody>
-        </table>
-      </div>`;
-  } else {
-    document.getElementById('printDamageSection').innerHTML = '';
-  }
-
-  window.print();
-  updateLeadScore(10);
-}
-
-/* ============================
-   SAVE / LOAD SHEET
-============================ */
-function saveSheet() {
-  const data = {
-    biz: {
-      name: document.getElementById('bizName').value,
-      gst: document.getElementById('bizGST').value,
-      address: document.getElementById('bizAddress').value,
-      phone: document.getElementById('bizPhone').value,
-      email: document.getElementById('bizEmail').value,
-      date: document.getElementById('reportDate').value,
-    },
-    van: {
-      vanNumber: document.getElementById('vanNumber').value,
-      vehicleNumber: document.getElementById('vehicleNumber').value,
-      salesmanName: document.getElementById('salesmanName').value,
-      helperName: document.getElementById('helperName').value,
-      driverName: document.getElementById('driverName').value,
-      routeName: document.getElementById('routeName').value,
-      areaName: document.getElementById('areaName').value,
-      startTime: document.getElementById('startTime').value,
-      endTime: document.getElementById('endTime').value,
-      warehouseName: document.getElementById('warehouseName').value,
-      odometerOpen: document.getElementById('odometerOpen').value,
-      odometerClose: document.getElementById('odometerClose').value,
-    },
-    collection: {
-      cash: document.getElementById('colCash').value,
-      upi: document.getElementById('colUPI').value,
-      cheque: document.getElementById('colCheque').value,
-      bank: document.getElementById('colBank').value,
-      credit: document.getElementById('colCredit').value,
-      expenses: document.getElementById('colExpenses').value,
-      deposited: document.getElementById('colDeposited').value,
-      remarks: document.getElementById('colRemarks').value,
-    },
-    skuList, outletList, damageList,
-    nextSKUID, nextOutletID, nextDamageID,
-    savedAt: new Date().toISOString()
-  };
-  localStorage.setItem('saleson_van_loading_sheet_data', JSON.stringify(data));
-  // Also save to recent
-  const recent = JSON.parse(localStorage.getItem('saleson_van_loading_recent_sheets') || '[]');
-  recent.unshift({ savedAt: data.savedAt, bizName: data.biz.name, vanNumber: data.van.vanNumber, date: data.biz.date });
-  localStorage.setItem('saleson_van_loading_recent_sheets', JSON.stringify(recent.slice(0, 5)));
-  showToast('Sheet saved to browser storage!');
-}
-
-function loadSheet() {
-  const raw = localStorage.getItem('saleson_van_loading_sheet_data');
-  if (!raw) { showToast('No saved sheet found.'); return; }
-  if (!confirm('Load saved sheet? This will replace current data.')) return;
-  const data = JSON.parse(raw);
-  // Restore biz
-  Object.keys(data.biz).forEach(k => {
-    const el = document.getElementById('biz' + k.charAt(0).toUpperCase() + k.slice(1));
-    if (el) el.value = data.biz[k];
-  });
-  document.getElementById('reportDate').value = data.biz.date;
-  // Restore van
-  Object.keys(data.van).forEach(k => {
-    const el = document.getElementById(k);
-    if (el) el.value = data.van[k];
-  });
-  // Restore collection
-  Object.keys(data.collection).forEach(k => {
-    const el = document.getElementById('col' + k.charAt(0).toUpperCase() + k.slice(1));
-    if (el) el.value = data.collection[k];
-  });
-  skuList = data.skuList || [];
-  outletList = data.outletList || [];
-  damageList = data.damageList || [];
-  nextSKUID = data.nextSKUID || skuList.length + 1;
-  nextOutletID = data.nextOutletID || outletList.length + 1;
-  nextDamageID = data.nextDamageID || damageList.length + 1;
-  renderSKUTable(); renderOutletTable(); renderDamageTable();
-  updateKPIs(); updateCollection(); updateOutletKPIs(); updateCategoryFilter();
-  showToast('Sheet loaded!');
-}
-
-function resetSheet() {
-  if (!confirm('Reset all data? This cannot be undone.')) return;
-  skuList = []; outletList = []; damageList = [];
-  nextSKUID = 1; nextOutletID = 1; nextDamageID = 1;
-  clearSKUForm(); clearOutletForm(); clearDamageForm();
-  renderSKUTable(); renderOutletTable(); renderDamageTable();
-  updateKPIs(); updateCollection(); updateOutletKPIs(); updateCategoryFilter();
-  document.getElementById('outletSummaryCard').style.display = 'none';
-  showToast('Sheet reset.');
-}
-
-/* ============================
-   HANDOFF: DELIVERY CHALLAN
-============================ */
-function handoffDeliveryChallan() {
-  const payload = {
-    businessName: document.getElementById('bizName').value,
-    vanNumber: document.getElementById('vanNumber').value,
-    vehicleNumber: document.getElementById('vehicleNumber').value,
-    salesmanName: document.getElementById('salesmanName').value,
-    routeName: document.getElementById('routeName').value,
-    warehouseName: document.getElementById('warehouseName').value,
-    date: document.getElementById('reportDate').value,
-    items: skuList.map(s => ({ name: s.name, code: s.code, unit: s.unit, qty: s.loaded, rate: s.rate })),
-    selectedAt: new Date().toISOString()
-  };
-  localStorage.setItem('saleson_van_loading_to_delivery_challan', JSON.stringify(payload));
-  document.getElementById('challanSuccess').style.display = 'block';
-  showToast('Van loading data saved for Delivery Challan.');
-  updateLeadScore(10);
-}
-
-/* ============================
-   HANDOFF: STOCK REORDER
-============================ */
-function handoffReorder() {
-  const payload = {
-    businessName: document.getElementById('bizName').value,
-    vanNumber: document.getElementById('vanNumber').value,
-    routeName: document.getElementById('routeName').value,
-    items: skuList.map(s => ({ name: s.name, code: s.code, unit: s.unit, closing: s.closing, sold: s.sold })),
-    selectedAt: new Date().toISOString(),
-    items: skuList.map(item => ({
-      productName: item.name,
-      skuCode: item.code,
-      category: item.cat,
-      unit: item.unit,
-      currentStock: item.closing,
-      averageDailySales: item.sold,
-      costPerUnit: item.rate
-    }))
-  };
-  localStorage.setItem('saleson_van_loading_to_stock_reorder', JSON.stringify(payload));
-  document.getElementById('reorderSuccess').style.display = 'block';
-  showToast('Van stock data saved for Reorder Calculator.');
-}
-
-/* ============================
-   HANDOFF: OUTSTANDING TRACKER
-============================ */
-function handoffOutstanding() {
-  const payload = {
-    businessName: document.getElementById('bizName').value,
-    vanNumber: document.getElementById('vanNumber').value,
-    salesmanName: document.getElementById('salesmanName').value,
-    routeName: document.getElementById('routeName').value,
-    creditSales: parseFloat(document.getElementById('colCredit').value) || 0,
-    outlets: outletList.filter(o => o.credit > 0),
-    selectedAt: new Date().toISOString(),
-    date: document.getElementById("reportDate").value,
-  };
-  localStorage.setItem('saleson_van_loading_to_outstanding_tracker', JSON.stringify(payload));
-  document.getElementById('outstandingSuccess').style.display = 'block';
-  showToast('Credit sales data saved for Outstanding Tracker.');
-}
-
-/* ============================
-   LEAD MODAL
-============================ */
-function showLeadModal(callback) {
-  if (leadCaptured) { if (callback) callback(); return; }
-  pendingAction = callback;
-  // Pre-fill from business details
-  const bizName = document.getElementById('bizName').value;
-  if (bizName && bizName !== 'Shree Balaji Distributors') {
-    document.getElementById('leadBusiness').value = bizName;
-  }
-  document.getElementById('leadModalOverlay').classList.add('open');
-}
-
-function closeLeadModal() {
-  document.getElementById('leadModalOverlay').classList.remove('open');
-  // Allow action to proceed even without submitting
-  if (pendingAction) { pendingAction(); pendingAction = null; }
-}
-
-function submitLead(bookDemo) {
-  const name = document.getElementById('leadName').value.trim();
-  const phone = document.getElementById('leadPhone').value.trim();
-  const bizName = document.getElementById('leadBusiness').value.trim();
-  if (!name || !phone) { showToast('Please enter your name and phone number.'); return; }
-
-  const vanCount = document.getElementById('leadVanCount').value;
-  const bizType = document.getElementById('leadBizType').value;
-  const currentMethod = document.getElementById('leadCurrentMethod').value;
-  const totalSalesVal = sum('salesVal');
-  const totalCredit = parseFloat(document.getElementById('colCredit').value) || 0;
-
-  // Lead scoring
-  let score = 30; // Base: tool is van loading
-  if (vanCount === '3-5') score += 20;
-  else if (vanCount === '6-10') score += 30;
-  else if (vanCount === '10+') score += 40;
-  if (['Distributor','Wholesaler','FMCG','Pharma'].includes(bizType)) score += 25;
-  if (['Excel','Manual register','WhatsApp'].includes(currentMethod)) score += 25;
-  if (totalSalesVal > 50000) score += 20;
-  if (totalCredit > 10000) score += 15;
-  if (skuList.length > 5) score += 15;
-  if (outletEnabled) score += 15;
-
-  const lead = {
-    name, phone, businessName: bizName,
-    businessType: bizType,
-    city: document.getElementById('leadCity').value.trim(),
-    vanCount, currentMethod,
-    toolUsed: 'Van Loading Sheet Generator',
-    leadScore: score,
-    createdAt: new Date().toISOString()
-  };
-
-  // Save lead
-  const leads = JSON.parse(localStorage.getItem('saleson_free_tool_leads') || '[]');
-  leads.push(lead);
-  localStorage.setItem('saleson_free_tool_leads', JSON.stringify(leads));
-  if (window.salesonSubmitLeadToBackend) window.salesonSubmitLeadToBackend(lead);
-  if (window.salesonTrack) window.salesonTrack('lead_saved_locally', { toolUsed: lead.toolUsed || '' });
-  localStorage.setItem('saleson_lead_captured', '1');
-  leadCaptured = true;
-
-  // Log for future API integration
-  console.log('SalesOn Lead Captured:', lead);
-  // TODO: Connect to Supabase, Google Sheet, WordPress API or SalesOn backend:
-  // fetch('https://your-backend/api/leads', { method: 'POST', body: JSON.stringify(lead), headers: { 'Content-Type': 'application/json' }})
-
-  document.getElementById('leadModalOverlay').classList.remove('open');
-
-  if (bookDemo) {
-    window.open('https://saleson.co.in/request-demo', '_blank');
-  }
-
-  showToast('Thank you! Your details have been saved.');
-
-  // Continue pending action
-  if (pendingAction) { pendingAction(); pendingAction = null; }
-}
-
-function updateLeadScore(points) {
-  // Update score for existing lead if present
-  const raw = localStorage.getItem('saleson_free_tool_leads');
-  if (!raw) return;
-  const leads = JSON.parse(raw);
-  if (leads.length > 0) {
-    leads[leads.length - 1].leadScore = (leads[leads.length - 1].leadScore || 0) + points;
-    localStorage.setItem('saleson_free_tool_leads', JSON.stringify(leads));
-  if (window.salesonSubmitLeadToBackend) window.salesonSubmitLeadToBackend(lead);
-  if (window.salesonTrack) window.salesonTrack('lead_saved_locally', { toolUsed: lead.toolUsed || '' });
-  }
-}
-
-/* ============================
-   CARD COLLAPSE
-============================ */
-function toggleCard(btn) {
-  const body = btn.closest('.card').querySelector('.collapsible-body');
-  if (!body) return;
-  body.classList.toggle('collapsed');
-  btn.textContent = body.classList.contains('collapsed') ? '▸' : '▾';
-}
-
-/* ============================
-   FAQ
-============================ */
-function toggleFAQ(btn) {
-  const a = btn.nextElementSibling;
-  btn.classList.toggle('open');
-  a.classList.toggle('open');
-}
-
-/* ============================
-   HELPERS
-============================ */
-function sum(key) { return skuList.reduce((a, s) => a + (parseFloat(s[key]) || 0), 0); }
-function fmt(n) { return Number(n).toLocaleString('en-IN', { maximumFractionDigits: 2 }); }
-function getDate() { return new Date().toISOString().split('T')[0]; }
-function escHtml(str) {
-  if (str == null) return '';
-  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  clearTimeout(showToast._timer);
-  showToast._timer = setTimeout(() => t.classList.remove('show'), 3000);
-}
-</script>
-<script>
-/* SalesOn launch helpers: analytics placeholder + lead backend hook.
-   Set window.salesonLeadEndpoint = 'YOUR_ENDPOINT_URL' before lead submission
-   or replace the empty endpoint below when connecting WordPress/Supabase/CRM. */
-(function() {
-  window.salesonTrack = window.salesonTrack || function(eventName, data) {
-    const allowed = new Set(['tool_opened', 'lead_saved_locally', 'lead_submission_accepted']);
-    if (!allowed.has(eventName)) return;
-    const safe = {};
-    for (const key of ['page', 'toolUsed']) {
-      if (typeof data?.[key] === 'string' && /^[a-zA-Z0-9_-]{1,80}$/.test(data[key])) safe[key] = data[key];
-    }
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({event: eventName, ...safe});
-  };
-  window.salesonLeadEndpoint = window.salesonLeadEndpoint || '';
-  window.salesonSubmitLeadToBackend = window.salesonSubmitLeadToBackend || async function(lead) {
-    if (!window.salesonLeadEndpoint || !lead) return;
-    try {
-      const response = await fetch(window.salesonLeadEndpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(lead)
-      });
-      if (!response.ok) throw new Error('Lead submission was not accepted');
-      window.salesonTrack('lead_submission_accepted', { toolUsed: lead.toolUsed || '' });
-    } catch (err) {
-      console.warn('SalesOn lead backend submission failed:', err);
-    }
-  };
-})();
-</script>
-<script>
-window.addEventListener('DOMContentLoaded', function() {
-  if (window.salesonTrack) window.salesonTrack('tool_opened', { page: 'van-loading-sheet-generator' });
-});
-</script>
+<script src="/assets/js/tools/van-loading-sheet-generator-1.5810c2a1626b.js"></script>
+<script src="/assets/js/tools/van-loading-sheet-generator-2.1977ef58fe3b.js"></script>
+<script src="/assets/js/tools/van-loading-sheet-generator-3.edd6ce4dc38f.js"></script>
     <script defer src="/assets/js/site-repairs.a49082162838.js"></script>
 </body>
 </html>

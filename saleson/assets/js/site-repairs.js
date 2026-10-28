@@ -45,21 +45,5 @@
   }
   faqButtons.forEach(button=>button.addEventListener('click',()=>queueMicrotask(syncFaq)));
   syncFaq();
-  const region = document.documentElement.dataset.pricingRegion;
-  if (region) {
-    try { localStorage.setItem('saleson-pricing-region', region); } catch (_) {}
-    document.querySelectorAll('[data-region]').forEach(link => {
-      if (link.dataset.region === region) link.setAttribute('aria-current', 'page');
-      link.addEventListener('click', () => {
-        try { localStorage.setItem('saleson-pricing-region', link.dataset.region); } catch (_) {}
-      });
-    });
-  }
-  // Offer the saved region explicitly; never redirect a visitor or crawler by IP.
-  if (!region) {
-    try {
-      const preferred = localStorage.getItem('saleson-pricing-region');
-      if (preferred === 'US') document.querySelectorAll('a[href="/pricing"]').forEach(a => a.href = '/pricing/us');
-    } catch (_) {}
-  }
+  // Pricing uses one canonical INR price list for every visitor.
 })();

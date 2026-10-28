@@ -1,11 +1,12 @@
 """Fingerprint HTML-referenced JS/CSS and regenerate the canonical sitemap."""
 from pathlib import Path
 from html.parser import HTMLParser
-import hashlib, json, re
+import hashlib, json, re, subprocess, sys
 from xml.sax.saxutils import escape
 from decimal import Decimal, ROUND_HALF_UP
 
 ROOT = Path(__file__).resolve().parents[1]
+subprocess.run([sys.executable,str(ROOT/'scripts/generate-pricing.py')],check=True)
 manifest_path = ROOT / 'assets-manifest.json'
 previous = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
 pages = sorted(ROOT.rglob('*.html'))
@@ -28,14 +29,14 @@ def money(amount, region):
     else:whole=f'{int(whole):,}'
     suffix=decimal.rstrip('0')
     return region['symbol']+whole+('.'+suffix if suffix else '')
-for relative,code in [('pricing.html','IN'),('pricing/in.html','IN'),('pricing/us.html','US')]:
+for relative,code in [('pricing.html','IN')]:
     p=ROOT/relative;s=p.read_text();region=pricing[code]
     users=Decimal(re.search(r'<input\b(?=[^>]*id="calc-users")[^>]*value="([^"]+)"',s)[1])
     plan=next(iter(region['plans'].values()))
     annual=users*plan['annual'];saving=users*plan['monthly']*12-annual
-    values={'res-monthly':annual/12,'res-annual':annual,'res-save':saving}
+    values={'res-monthly':annual/12,'res-annual':annual,'res-payment':annual,'res-save':saving}
     for identifier,amount in values.items():
-        s=re.sub(r'(<div\b(?=[^>]*id="'+identifier+r'")[^>]*>)[^<]*(</div>)',lambda m:m[1]+money(amount,region)+m[2],s)
+        s=re.sub(r'(<(?:div|strong)\b(?=[^>]*id="'+identifier+r'")[^>]*>)[^<]*(</(?:div|strong)>)',lambda m:m[1]+money(amount,region)+m[2],s)
     p.write_text(s)
 for versioned in previous.values():
     (ROOT / versioned.lstrip('/')).unlink(missing_ok=True)

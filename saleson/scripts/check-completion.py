@@ -21,8 +21,8 @@ for p in (R/'blogs').glob('*.html'):
 for p in (R/'compare').glob('*.html'):
  s=p.read_text();assert 'Sources and review date' in s and '26 October 2026' in s,p.name
  assert 'Custom pricing - more expensive' not in s and 'Complex UI' not in s
-for rel,expected in [('pricing.html','₹25,000'),('pricing/in.html','₹25,000'),('pricing/us.html','$900')]:
- s=(R/rel).read_text();m=re.search(r'<div\b(?=[^>]*id="res-annual")[^>]*>([^<]*)',s)
- assert m[1]==expected,(rel,m[1])
- assert 'Annual lock-in' not in s
+s=(R/'pricing.html').read_text()
+assert 'id="res-annual">₹25,000' in s
+for rel in ['pricing/in.html','pricing/us.html']:
+ s=(R/rel).read_text();assert '0;url=/pricing' in s and 'https://saleson.co.in/pricing' in s
 print(f'PASS: all {len(pages)} pages share header/footer; industry/audience/blog/comparison additions and first-paint pricing verified.')

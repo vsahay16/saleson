@@ -1,6 +1,6 @@
-/* One published INR price list. No quote, lead or purchase is submitted here. */
+/* Regional display prices. No quote, lead or purchase is submitted here. */
 (() => {
- const cfg=window.SalesOnPricing.IN;
+ let cfg=window.SalesOnPricing.IN;
  const $=id=>document.getElementById(id);
  const money=n=>cfg.symbol+Number(n).toLocaleString(cfg.locale,{maximumFractionDigits:2,minimumFractionDigits:0});
  function calculate(users,planKey,cycle){
@@ -15,7 +15,7 @@
   $('res-monthly').textContent=money(r.monthly);$('res-annual').textContent=money(r.yearly);$('res-save').textContent=money(r.saving);$('res-payment').textContent=money(r.payment);
   $('res-payment-label').textContent=r.annual?'Pay yearly':'Pay monthly';
   $('res-annual-label').textContent=r.annual?'Annual payment':'12-month projected spend';
-  $('res-payment-note').textContent=`For ${r.seats} ${r.plan.name} users, before GST`;
+  $('res-payment-note').textContent=`For ${r.seats} ${r.plan.name} users, before ${cfg.currency==='INR'?'GST':'taxes'}`;
   $('calc-note').textContent=r.annual?'Annual billing is paid upfront for 12 months. The monthly equivalent is shown for comparison.':'Monthly billing is charged monthly. The 12-month figure is a projection at this team size and rate, not an annual upfront charge.';
   $('seat-note').textContent=Number($('calc-users').value)<cfg.minimumUsers?`Cost shown for the minimum ${cfg.minimumUsers} users.`:`Minimum ${cfg.minimumUsers} users.`;
   return r;
@@ -31,6 +31,10 @@
   $('calc-cycle').value=cycle;calcUpdate();
  }
  window.SalesOnPricingCalculator={calculate};
+ window.SalesOnPricingCalculator.setRegion=tier=>{
+  cfg=window.SalesOnPricing[tier]||window.SalesOnPricing.USD;
+  setBilling($('calc-cycle').value);
+ };
  window.calcUpdate=calcUpdate;
  if(!$('calc-users'))return;
  document.querySelectorAll('[data-billing]').forEach(b=>b.addEventListener('click',()=>setBilling(b.dataset.billing)));
@@ -39,4 +43,20 @@
  $('calc-plan').addEventListener('change',calcUpdate);
  $('calc-cycle').addEventListener('change',()=>setBilling($('calc-cycle').value));
  setBilling($('calc-cycle').value);
+ if(window.SalesOnRegionalPricing){
+  const controls=[...document.querySelectorAll('[data-billing], #calc-users, #calc-plan, #calc-cycle')];
+  controls.forEach(el=>{el.disabled=true;});
+  document.querySelectorAll('[data-regional-pricing-notice]').forEach(el=>{el.textContent='Checking prices for your visiting region…';});
+  document.querySelectorAll('[data-plan-price]').forEach(el=>{el.textContent='Checking price…';});
+  document.querySelectorAll('[data-plan-equivalent]').forEach(el=>{el.textContent='';});
+  for(const id of ['res-monthly','res-annual','res-save','res-payment'])$(id).textContent='—';
+  window.SalesOnRegionalPricing.ready.then(({tier,detected})=>{
+   controls.forEach(el=>{el.disabled=false;});
+   window.SalesOnPricingCalculator.setRegion(tier);
+   document.documentElement.dataset.pricingRegion=tier;
+   document.querySelectorAll('[data-regional-pricing-label]').forEach(el=>{el.textContent='SalesOn pricing · '+cfg.currency;});
+   document.querySelectorAll('[data-regional-pricing-notice]').forEach(el=>{el.textContent=detected?'Prices in '+cfg.currency+' for your visiting region. Taxes extra where applicable.':'Standard USD prices shown. Contact SalesOn to confirm your regional quote.';});
+  });
+ }
 })();
+

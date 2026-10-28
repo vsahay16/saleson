@@ -48,8 +48,8 @@
   "/css/payment-collection-page.css": "/css/payment-collection-page.be883ba1ec63.css",
   "/assets/js/payment-collection-page.js": "/assets/js/payment-collection-page.5710e08c875c.js",
   "/css/pricing-page.css": "/css/pricing-page.b916f7b0291b.css",
-  "/assets/js/pricing-config.js": "/assets/js/pricing-config.64eece067784.js",
-  "/assets/js/pricing-page.js": "/assets/js/pricing-page.4258114fdc88.js",
+  "/assets/js/pricing-config.js": "/assets/js/pricing-config.94471fbad3c4.js",
+  "/assets/js/pricing-page.js": "/assets/js/pricing-page.367ebcb25b12.js",
   "/css/production-page.css": "/css/production-page.3ed82229e008.css",
   "/assets/js/production-page.js": "/assets/js/production-page.a2e956d59eb6.js",
   "/css/request-demo-page.css": "/css/request-demo-page.a2c85bd74c07.css",
@@ -65,5 +65,7 @@
   "/assets/js/industry.js": "/assets/js/industry.2461976f6ca1.js",
   "/css/min/dms.min.css": "/css/min/dms.min.c8d358660f2b.css",
   "/css/van-sales-page.css": "/css/van-sales-page.4c20cfefd9e7.css",
-  "/assets/js/van-sales-page.js": "/assets/js/van-sales-page.2c205010515e.js"
+  "/assets/js/van-sales-page.js": "/assets/js/van-sales-page.2c205010515e.js",
+  "/assets/js/regional-pricing.js": "/assets/js/regional-pricing.a098f56d6a12.js",
+  "/assets/js/homepage-pricing.js": "/assets/js/homepage-pricing.81b0200416ab.js"
 }

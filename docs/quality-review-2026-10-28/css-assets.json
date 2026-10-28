@@ -1,0 +1,212 @@
+[
+  {
+    "url": "https://saleson-eta.vercel.app/assets/fonts/poppins-regular-webfont.woff2",
+    "status": 200,
+    "type": "font/woff2",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/fonts/poppins-medium-webfont.woff2",
+    "status": 200,
+    "type": "font/woff2",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/fonts/poppins-semibold-webfont.woff2",
+    "status": 200,
+    "type": "font/woff2",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/fonts/poppins-bold-webfont.woff2",
+    "status": 200,
+    "type": "font/woff2",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/fonts/Poppins-ExtraBold.ttf",
+    "status": 200,
+    "type": "font/ttf",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/bg.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/privacy-compressed.jpg",
+    "status": 200,
+    "type": "image/jpeg",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/spiral.jpg",
+    "status": 200,
+    "type": "image/jpeg",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/auto-inv/agri.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/auto-inv/pharmacy.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/auto-inv/bus.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/auto-inv/lipstick.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/auto-inv/hammer.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/auto-inv/fmcg.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/auto-inv/electronics.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/auto-inv/sports.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/auto-inv/telecom.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/auto-inv/publish.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/auto-inv/automotive.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/auto-inv/manufacturing.svg",
+    "status": 200,
+    "type": "image/svg+xml",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/feature-icons/features_sprite.png",
+    "status": 200,
+    "type": "image/png",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css",
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/brands/logos-sprite.png",
+    "status": 200,
+    "type": "image/png",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/img/brands/brands-sprite.png",
+    "status": 200,
+    "type": "image/png",
+    "from": [
+      "/css/min/common.min.5d8e1c1559db.css",
+      "/css/min/common.min.5d8e1c1559db.css",
+      "/css/min/common.min.5d8e1c1559db.css",
+      "/css/min/common.min.5d8e1c1559db.css",
+      "/css/min/common.min.5d8e1c1559db.css",
+      "/css/min/common.min.5d8e1c1559db.css",
+      "/css/min/common.min.5d8e1c1559db.css",
+      "/css/min/common.min.5d8e1c1559db.css",
+      "/css/min/common.min.5d8e1c1559db.css",
+      "/css/min/common.min.5d8e1c1559db.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/fonts/bootstrap-icons/bootstrap-icons.woff2",
+    "status": 200,
+    "type": "font/woff2",
+    "from": [
+      "/css/min/bootstrap-icons.min.df82b4cfba30.css"
+    ]
+  },
+  {
+    "url": "https://saleson-eta.vercel.app/assets/fonts/bootstrap-icons/bootstrap-icons.woff",
+    "status": 200,
+    "type": "font/woff",
+    "from": [
+      "/css/min/bootstrap-icons.min.df82b4cfba30.css"
+    ]
+  }
+]

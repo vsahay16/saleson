@@ -297,9 +297,9 @@ function renderPreview() {
   const upiId = document.getElementById('upiId').value;
 
   // Logo / Sig HTML
-  const logoHTML = logoDataURL ? `<img class="inv-logo" src="/tools/gst-invoice-generator/${logoDataURL}" alt="Business Logo">` : `<div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--accent);">${sName}</div>`;
+  const logoHTML = logoDataURL ? `<img class="inv-logo" src="${logoDataURL}" alt="Business Logo">` : `<div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--accent);">${sName}</div>`;
   const sigImgStyle = sigDataURL ? 'display:block;' : 'display:none;';
-  const sigSrc = sigDataURL || '';
+  const sigSrc = sigDataURL || 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
 
   // Items rows
   let itemRows = '';
@@ -442,7 +442,7 @@ function renderPreview() {
 
       <div class="inv-sig-row">
         <div class="inv-sig-box">
-          <img class="inv-sig-img" src="/tools/gst-invoice-generator/${sigSrc}" alt="Signature" style="${sigImgStyle}">
+          <img class="inv-sig-img" src="${sigSrc}" alt="Signature" style="${sigImgStyle}">
           <div class="inv-sig-line"></div>
           <div class="inv-sig-name">${sigName}</div>
           <div class="inv-sig-label">For ${sName}</div>

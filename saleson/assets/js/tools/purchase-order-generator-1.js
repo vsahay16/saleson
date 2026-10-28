@@ -335,7 +335,7 @@ function renderPreview() {
 
   /* ── Logo HTML ── */
   const logoHTML = logoDataURL
-    ? `<img class="po-logo" src="/tools/purchase-order-generator/${logoDataURL}" alt="Company Logo">`
+    ? `<img class="po-logo" src="${logoDataURL}" alt="Company Logo">`
     : `<div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--brand);">${bName}</div>`;
 
   /* ── Items table rows ── */

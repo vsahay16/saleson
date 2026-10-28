@@ -1,0 +1,25 @@
+.tool-workspace-controls { max-width:1120px; margin:18px auto; padding:16px 20px; border:1px solid #dce4ef; border-radius:12px; background:#f6f9fd; color:#24354b; font:14px/1.6 Arial,sans-serif; }
+.tool-workspace-controls p { margin:0 0 10px; }
+.tool-workspace-controls button { padding:10px 16px; margin:0 10px 6px 0; border:1px solid #b8c9e3; border-radius:8px; background:#fff; color:#183b70; cursor:pointer; font:inherit; }
+.tool-workspace-controls button:focus-visible { outline:3px solid #235dc4; outline-offset:3px; }
+#tool-storage-notice { color:#844d00; }
+@media print { .tool-workspace-controls { display:none!important; } }
+@media (max-width:600px) { .tool-workspace-controls { margin:12px 16px; } }
+
+/* Grid children must shrink before their scrollable tables can contain overflow. */
+@media screen {
+ .tool-page :where(div, section, aside, article, form) { min-width: 0; }
+ .tool-page .repair-table-scroll { width: 100%; }
+ .tool-page :where(.form-panel-header,.preview-panel-header,.card-header,.dashboard-header,.filter-bar,.filters-bar,.fph-actions) { flex-wrap: wrap; gap: 10px; }
+ .tool-page :where(.form-panel,.preview-panel,.result-panel,.results-panel,.dashboard-card) { max-width: 100%; }
+}
+@media screen and (max-width:1100px) {
+ .tool-page .tool-wrap { grid-template-columns: minmax(0,1fr); }
+}
+@media screen and (max-width:600px) {
+ .tool-page .section [style*="grid-template-columns"] { grid-template-columns: minmax(0,1fr) !important; gap: 24px !important; }
+ .tool-page :where(.form-row,.modal-row,.field-row,.dp-grid) { grid-template-columns: minmax(0,1fr); }
+ .tool-page :where(.ageing-grid,.tax-split) { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .tool-page :where(.filter-bar,.filters-bar) > * { max-width: 100%; }
+ .tool-page :where(.hero-h1,.hero-sub,.faq-q,.seo-card) { overflow-wrap: anywhere; }
+}

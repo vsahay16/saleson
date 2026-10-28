@@ -20,6 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   function showMobileNav() {
     var nav = document.getElementsByClassName("offcanvas")[0];
+    if (!nav) return;
     if(nav.classList.contains('showNav')){
         nav.classList.remove("showNav");
     }else{
@@ -28,6 +29,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   function showTestimonial(param) {
+    if (typeof $.fn.slick !== "function" || !$(".appie-testimonial-slider").length) return;
     $(".appie-testimonial-slider").not('.slick-initialized').slick({
         dots: true,
         infinite: true,

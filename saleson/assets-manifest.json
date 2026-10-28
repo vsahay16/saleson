@@ -19,7 +19,7 @@
   "/css/workflow-guides.css": "/css/workflow-guides.43835e9cd66d.css",
   "/assets/js/page-readiness.js": "/assets/js/page-readiness.3cc152fdd743.js",
   "/assets/js/vendors/jquery-3.6.0.min.js": "/assets/js/vendors/jquery-3.6.0.min.ce9d07500ad9.js",
-  "/assets/js/min/app.min.js": "/assets/js/min/app.min.c3a6e62360af.js",
+  "/assets/js/min/app.min.js": "/assets/js/min/app.min.414ae80f3748.js",
   "/css/min/blogs.min.css": "/css/min/blogs.min.27f14ba52e33.css",
   "/assets/js/vendors/bootstrap.bundle.min.js": "/assets/js/vendors/bootstrap.bundle.min.7700f7deec3d.js",
   "/css/min/calculator.min.css": "/css/min/calculator.min.c644262348fa.css",
@@ -115,5 +115,6 @@
   "/assets/js/van-sales-page.js": "/assets/js/van-sales-page.2c205010515e.js",
   "/css/source-screens.css": "/css/source-screens.2c03158a39d1.css",
   "/css/field-sales-quiz.css": "/css/field-sales-quiz.a97a1d608317.css",
-  "/assets/js/field-sales-quiz.js": "/assets/js/field-sales-quiz.ccf07c4a65ed.js"
+  "/assets/js/field-sales-quiz.js": "/assets/js/field-sales-quiz.ccf07c4a65ed.js",
+  "/css/customer-case-page.css": "/css/customer-case-page.5ff4b148c20d.css"
 }

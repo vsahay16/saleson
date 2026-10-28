@@ -22,6 +22,8 @@ for page in pages:
         assert len(re.findall(r'<'+name+r'\b', source)) == 1, page
         assert len(re.findall(r'</'+name+r'>', source)) == 1, page
         assert source.count(manifest['/components/'+name+'.js']) == 1, page
+    assert source.index('<site-header') < source.index('<h1'), (page, 'header must precede page heading')
+    assert source.index('<site-footer') > source.index('<h1'), (page, 'footer must follow page heading')
     assert not re.search(r'<nav\b[^>]*aria-label=["\']Breadcrumb["\']', source, re.I), page
     assert not re.search(r'<(?:header-component|footer-component)\b', source), page
 home = (ROOT/'assets/homepage/homepage.js').read_text()

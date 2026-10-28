@@ -4,7 +4,7 @@ The homepage leads with a cleaner version of the existing laptop-and-phone produ
 
 The shared header now defines its own brand colours, fixing the invisible demo button. Feature headings use the same serif family as the homepage and industry pages. Order-taking trial and demo actions align, with subscription links beneath. Feature heroes have one compact setup/minimum-users/monthly-billing/support strip. Tracking copy is shortened; Target Meter visible and metadata copy includes distributors and manufacturers.
 
-Captions are reduced to short labels where needed to distinguish recreated imagery. Zoom remains accessible through a compact button. Specialist pages no longer repeat the eight-logo strip; the general roster remains on the homepage and core overview pages. The supplied client-to-module mapping was not recoverable in this session, so no module-specific customer usage was inferred.
+Captions are reduced to short labels where needed to distinguish recreated imagery. Zoom remains accessible through a compact button. Specialist pages no longer repeat the eight-logo strip; the general roster remains on the homepage and core overview pages. The subsequently supplied client allocation is implemented through `assets/data/client-showcase.json`; module-specific customer names follow that allocation. Original artwork is shared across pages through master URLs. Unapproved candidate identities are omitted; confirmed customers without artwork appear as plain names.
 
 Industry lower sections explain supported processes directly, with a relevant product image per industry. Images illustrate workflows, not sector-specific customer adoption. The footer covers all 12 industries, buyer pages, Inventory, partner enquiries and comparisons.
 
@@ -23,3 +23,7 @@ Both images use the built-in image editing tool and WebP export. Source files re
 - `assets/img/target/target-meter-hero.webp`: compose existing monthly target and mobile achievement records; preserve names/values and label points as points.
 
 Recreated imagery carries a concise illustrative label. Fresh product captures can replace these assets when available.
+
+## Supplied client allocation follow-up
+
+Implemented 27 page-specific groups from the uploaded plan, sharing 25 master WebP logos. The homepage uses the primary eight; About has the wider gallery; Tracking uses MTN only. Confirmed customers with missing artwork use plain names. Unapproved candidate identities and missing case-study links remain unpublished. Attendance, Expenses and Target Meter have no dedicated module strip. The new allocation check passes, and all 27 pages have no page-wide overflow at a 375px phone content width. The original private customer-name registry is not included in the website.

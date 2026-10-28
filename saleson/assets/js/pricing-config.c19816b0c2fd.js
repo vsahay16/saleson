@@ -1,1 +1,0 @@
-window.SalesOnPricing = Object.freeze({"IN": {"currency": "INR", "symbol": "₹", "locale": "en-IN", "plans": {"250": {"monthly": 250, "annual": 2500}, "400": {"monthly": 400, "annual": 4000}}}, "US": {"currency": "USD", "symbol": "$", "locale": "en-US", "plans": {"9": {"monthly": 9, "annual": 90}, "12": {"monthly": 12, "annual": 120}}}});

@@ -355,11 +355,7 @@ class SiteFooter extends HTMLElement {
         </footer>
       `;
 
-      let preferredRegion = document.documentElement.dataset.pricingRegion;
-      try { preferredRegion ||= localStorage.getItem('saleson-pricing-region'); } catch (_) {}
-      if (preferredRegion === 'US') {
-        this.shadowRoot.querySelectorAll('a[href="/pricing"]').forEach(link => link.setAttribute('href', '/pricing/us'));
-      }
+      // One canonical pricing page for every visitor.
 
     }
   }

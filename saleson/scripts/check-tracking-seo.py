@@ -13,7 +13,7 @@ for p in pages:
  for el in s.find_all(['iframe','img','script']):
   if any(x in el.get('src','') for x in ['googletagmanager.com/ns','facebook.com/tr','px.ads.linkedin']):assert el.find_parent('template'),(rel,str(el))
  # Metadata/URL preservation against this task's starting tree.
- old=BeautifulSoup(subprocess.check_output(['git','show','456bf25:saleson/'+rel],cwd=R.parent,text=True),'html.parser')
+ old=BeautifulSoup(subprocess.check_output(['git','show','7a1e2b7d06700eff8ec6d1401370bca255cb51f6:saleson/'+rel],cwd=R.parent,text=True),'html.parser')
  for selector in ['title','link[rel="canonical"]','meta[name="description"]','meta[property^="og:"]','meta[name^="twitter:"]','meta[name="robots"]']:
   if rel=='tools/hsn-sac-gst-rate-finder/index.html' and selector!='link[rel="canonical"]' and selector!='meta[name="robots"]':continue
   if rel=='pricing.html' and selector=='title':continue # pricing generator preserves its established current title
@@ -37,12 +37,12 @@ for p in pages:
 assert not issues,issues
 # Established sitemap, redirects and robots stay byte-identical.
 for rel in ['sitemap.xml','robots.txt']:
- assert (R/rel).read_bytes()==subprocess.check_output(['git','show','456bf25:saleson/'+rel],cwd=R.parent),rel
+ assert (R/rel).read_bytes()==subprocess.check_output(['git','show','7a1e2b7d06700eff8ec6d1401370bca255cb51f6:saleson/'+rel],cwd=R.parent),rel
 # Review-only deployment suppression is the sole permitted hosting-config delta.
 for rel in ['vercel.json','../vercel.json']:
  current=json.loads((R/rel).read_text())
  source_path='saleson/vercel.json' if rel=='vercel.json' else 'vercel.json'
- baseline=json.loads(subprocess.check_output(['git','show','456bf25:'+source_path],cwd=R.parent,text=True))
+ baseline=json.loads(subprocess.check_output(['git','show','7a1e2b7d06700eff8ec6d1401370bca255cb51f6:'+source_path],cwd=R.parent,text=True))
  assert current.pop('git',None)=={'deploymentEnabled':{'review/quiet-tools-and-safety':False}}
  assert current==baseline,rel
 print(f'PASS: {len(pages)} pages, one GTM/consent/event setup each; {links} internal links and fragments; {articles} dated BlogPosting schemas; metadata preserved except the intentional HSN scope correction; robots, sitemap and hosting routes preserved; review-branch auto-deployment disabled.')

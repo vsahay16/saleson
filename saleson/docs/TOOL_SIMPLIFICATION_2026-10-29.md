@@ -86,3 +86,5 @@ General-site recommendations about Production/Attendance layouts, Lapcare claims
 ## GitHub review preparation
 
 The verified changes were rebased onto main `7a1e2b7` without conflicts. Both Vercel configuration roots disable automatic deployment for `review/quiet-tools-and-safety` only, so pushing this review branch does not request a preview deployment. Other hosting settings, routes and main deployment behaviour remain unchanged. No merge or deployment is authorised by this PR.
+
+The metadata/route regression baseline references published main commit `7a1e2b7d06700eff8ec6d1401370bca255cb51f6`, rather than a local-only historical commit, so it is available in a fresh GitHub checkout with history.

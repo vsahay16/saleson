@@ -545,7 +545,7 @@ function exportCSV() {
   const a = document.createElement('a');
   a.href = url;
   a.download = `Van-Loading-Sheet-${getDate()}.csv`;
-  a.click();
+  if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click();
   URL.revokeObjectURL(url);
   showToast('CSV exported!');
   // Score: +10 for exporting
@@ -562,7 +562,7 @@ function downloadSampleCSV() {
   const a = document.createElement('a');
   a.href = url;
   a.download = 'SalesOn-Van-Loading-Sample.csv';
-  a.click();
+  if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click();
   URL.revokeObjectURL(url);
 }
 

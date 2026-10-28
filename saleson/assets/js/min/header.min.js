@@ -7,10 +7,7 @@ class Header extends HTMLElement {
     const source = this.getAttribute('source');
     const path = source === 'compare' ? '../' : '';
     this.innerHTML = `
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQNBHFQS"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) --> 
+
       <header class="main-header w-100">
       <nav class="navbar navbar-expand-xl navbar-light sticky-header flex-column pt-2 pb-2">
           <!-- <div class="container container-full-width d-flex align-items-center justify-content-lg-start position-relative bg-green-6 px-lg-5 px-0 py-1">

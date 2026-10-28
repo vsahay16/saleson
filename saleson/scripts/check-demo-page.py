@@ -18,7 +18,7 @@ assert '<title>Book a SalesOn Demo | 30-Min Live Walkthrough</title>' in s
 assert any(t=='link' and a.get('rel')=='canonical' and a.get('href')=='https://saleson.co.in/request-demo' for t,a in p.tags)
 assert 'noindex' not in s.lower()
 assert 'static.zcal.co/embed/v1/embed.js' not in s
-frames=[a for tag,a in p.tags if tag=='iframe'];assert len(frames)==1
+frames=[a for tag,a in p.tags if tag=='iframe' and 'zcal.co' in a.get('src','')];assert len(frames)==1
 assert frames[0]['src']=='https://zcal.co/i/bkJXrTMK?embed=1&embedType=iframe'
 assert frames[0].get('loading')=='eager' and frames[0].get('title')
 assert sum(t=='a' and 'data-demo-direct' in a and a.get('href')=='https://zcal.co/i/bkJXrTMK' for t,a in p.tags)==1

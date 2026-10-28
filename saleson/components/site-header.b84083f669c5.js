@@ -263,10 +263,7 @@ class SiteHeader extends HTMLElement {
           .hamburger { display: flex; align-items: center; justify-content: center; }
         }
       </style>
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQNBHFQS" height="0" width="0"
-          style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
+
       <div class="header-container" style="min-height: 70px; position: sticky; top: 0; z-index: 99;">
       <header id="hdr">
         <div class="inner">
@@ -368,7 +365,7 @@ class SiteHeader extends HTMLElement {
             <a href="/order-taking-app">Sales</a>
             <a href="/expense-management">Expense Management</a>
             <a href="/attendance">Attendance</a>
-            
+
           </div>
           <div class="mobile-section">
             <div class="section-label">Solutions</div>

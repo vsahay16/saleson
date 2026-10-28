@@ -594,7 +594,7 @@ function exportCSV() {
   const a    = document.createElement('a');
   a.href = url;
   a.download = `stock-reorder-plan-${SalesOnDates.today()}.csv`;
-  a.click();
+  if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click();
   URL.revokeObjectURL(url);
   usedCSV = true;
   showToast('CSV exported ✓');
@@ -607,7 +607,7 @@ Detergent Pack,FMCG-002,Household,Clean India,35,12,20,7,10,30,,,80,100,20`;
   const blob = new Blob([sample], { type: 'text/csv' });
   const url  = URL.createObjectURL(blob);
   const a    = document.createElement('a'); a.href = url;
-  a.download = 'stock-reorder-sample.csv'; a.click();
+  a.download = 'stock-reorder-sample.csv'; if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click();
   URL.revokeObjectURL(url);
 }
 

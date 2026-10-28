@@ -2,8 +2,8 @@ const fs=require('fs'),assert=require('assert'),path=require('path');
 const root=path.resolve(__dirname,'..');
 const clean=s=>s.replace(/<[^>]*>/g,'').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
 for(const [slug,title,count,anchors] of [
- ['attendance','Field Attendance App for Sales Teams | Photo &amp; GPS Check-In | SalesOn',7,['attendance-leaks','how-it-works','quick-answers','verified-checkin','work-hours','comparison','industries','faq']],
- ['payment-collection','Payment Collection Software India | SalesOn',8,['pain-points','outstanding','collection-flow','credit-limit','alerts','comparison','faq']]
+ ['attendance','Field Attendance App for Sales Teams | Photo &amp; GPS Check-In | SalesOn',7,['how-it-works','verified-checkin','work-hours','faq']],
+ ['payment-collection','Payment Collection Software India | SalesOn',8,['outstanding','collection-flow','credit-limit','alerts','faq']]
 ]){
  const s=fs.readFileSync(path.join(root,slug+'.html'),'utf8');
  assert.equal(s.match(/<title>(.*?)<\/title>/s)[1],title);
@@ -28,4 +28,4 @@ assert.equal(money.slice(0,-1).reduce((a,b)=>a+b,0),money.at(-1));
 const credit=s.match(/<dl>(.*?)<\/dl>/s)[1];const amounts=[...credit.matchAll(/₹([\d,]+)/g)].map(x=>Number(x[1].replace(/,/g,'')));assert.equal(amounts[0]-amounts[1],amounts[2]);
 assert.ok(!s.includes('3d, 30d, 60d, 90d'));assert.ok(!s.includes('30<span>–40%'));
 const at=fs.readFileSync(path.join(root,'attendance.html'),'utf8');assert.ok(!at.includes('No Spoofing'));assert.ok(!at.includes('60+ field staff'));assert.ok(at.includes('09:52')&&at.includes('52 minutes'));
-console.log('PASS: Attendance/Collection preserved titles and anchors, FAQ/schema alignment, indexability, screenshot enlargement and financial example consistency.');
+console.log('PASS: Attendance/Collection preserved titles and focused section anchors, FAQ/schema alignment, indexability, screenshot enlargement and financial example consistency.');

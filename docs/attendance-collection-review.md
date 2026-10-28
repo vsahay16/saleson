@@ -44,3 +44,6 @@ Standalone previews were browser checked with embedded images, no shared header/
 
 ## Shared visual family revision
 Both drafts opt into css/feature-family.css, matching the approved Salesman Tracking typography, colours, buttons, content width, cards, FAQ and final CTA. Visible main-content text, titles, H1s, canonical URLs and section anchors are unchanged from the reviewed draft. Shared source CSS is loaded only by these two pages. Browser desktop/mobile review confirms the Inter stack and document width equal to the narrow viewport. This remains an unpublished review draft.
+
+## Repetition cleanup
+Removed the stacked hero badges, repeated business-count/trust messages, paper-register problem section, repeated stats/comparison/industry/plan blocks and duplicate quick answers from Attendance. Its workflow summary is now a short sequence followed by the mobile check-in and office-hours sections. Collection drops the repeated problem, overview, proof, checklist and plan blocks. Follow-up no longer repeats the payment-entry steps. Both pages retain one client band, product evidence, relevant FAQs and a final CTA. Obsolete local navigation anchors were removed. Original titles, canonical URLs and primary H1s remain.

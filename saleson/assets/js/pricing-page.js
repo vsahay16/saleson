@@ -34,6 +34,7 @@
  window.SalesOnPricingCalculator.setRegion=tier=>{
   cfg=window.SalesOnPricing[tier]||window.SalesOnPricing.USD;
   setBilling($('calc-cycle').value);
+  document.querySelectorAll('[data-plan-tax-note]').forEach(el=>{el.textContent='Prices in '+cfg.currency+' · '+(cfg.currency==='INR'?'GST':'Taxes')+' extra where applicable · '+money(cfg.setupFee)+' setup fee';});
  };
  window.calcUpdate=calcUpdate;
  if(!$('calc-users'))return;

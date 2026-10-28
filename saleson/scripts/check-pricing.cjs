@@ -6,7 +6,8 @@ const elements=Object.fromEntries(['calc-users','calc-plan','calc-cycle','res-mo
 elements['calc-users'].value='10';elements['calc-plan'].value='250';elements['calc-cycle'].value='annual';
 const buttons=['monthly','annual'].map(b=>({dataset:{billing:b},attrs:{},listeners:{},setAttribute(k,v){this.attrs[k]=v;},addEventListener(k,f){this.listeners[k]=f;}}));
 const prices={};for(const key of ['250','400']){prices[`[data-plan-price="${key}"]`]={nextElementSibling:{}};prices[`[data-plan-equivalent="${key}"]`]={};}
-const context=vm.createContext({window:{},document:{getElementById:id=>elements[id],querySelectorAll:()=>buttons,querySelector:s=>prices[s]}});
+const taxNote={};
+const context=vm.createContext({window:{},document:{getElementById:id=>elements[id],querySelectorAll:s=>s==='[data-plan-tax-note]'?[taxNote]:buttons,querySelector:s=>prices[s]}});
 for(const f of ['pricing-config','pricing-page'])vm.runInContext(fs.readFileSync(path.join(root,'assets/js',f+'.js'),'utf8'),context);
 const cfg=context.window.SalesOnPricing.IN;assert.deepEqual(Object.keys(context.window.SalesOnPricing),['IN','USD','EN']);assert.equal(cfg.minimumUsers,2);
 const calc=context.window.SalesOnPricingCalculator.calculate;
@@ -30,6 +31,7 @@ for(const tier of ['USD','EN']){
  elements['calc-users'].value='2';elements['calc-plan'].value='400';buttons[0].listeners.click();
  assert.equal(elements['res-payment'].textContent,'$'+(regional.plans['400'].monthly*2));
  assert.ok(elements['res-payment-note'].textContent.endsWith('before taxes'));
+ assert.equal(taxNote.textContent,'Prices in USD · Taxes extra where applicable · $0 setup fee');
 }
 context.window.SalesOnPricingCalculator.setRegion('IN');
 const html=fs.readFileSync(path.join(root,'pricing.html'),'utf8');assert.ok(!/no minimum users|noindex|pricing\/us/i.test(html));assert.equal((html.match(/<h1\b/g)||[]).length,1);assert.equal((html.match(/<details>/g)||[]).length,8);

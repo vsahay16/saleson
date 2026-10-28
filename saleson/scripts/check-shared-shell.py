@@ -32,3 +32,7 @@ assert 'customElements.define' not in home
 collection = (ROOT/'payment-collection.html').read_text()
 assert 'aria-label="Page sections"' not in collection
 print(f'PASS: {len(pages)} pages use one shared header/footer and current fingerprints; no visible breadcrumb rows or collection second navigation bar.')
+
+header=(ROOT/"components/site-header.js").read_text()
+for token in ("--brand: #1143b6", "--brand-dark: #0c3083", "--brand-light: #edf4ff"):
+    assert token in header, "Shared header must define its own button colours"

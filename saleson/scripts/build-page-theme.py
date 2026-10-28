@@ -52,7 +52,7 @@ def illustration(slug,labels,index):
  for i,(label,color) in enumerate([(a,'#1143b6'),(b,'#0b8b71'),(c,'#d49b37')]):
   y=220+i*126
   cards+=f'<rect x="103" y="{y}" width="674" height="98" rx="20" fill="white" stroke="#e2e8f0"/><rect x="125" y="{y+20}" width="58" height="58" rx="17" fill="{color}"/><text x="154" y="{y+58}" text-anchor="middle" fill="white" font-size="26" font-weight="700">{i+1:02d}</text><text x="205" y="{y+59}" font-size="27" font-weight="600" fill="#20324a">{E(label)}</text><circle cx="735" cy="{y+49}" r="14" fill="#edf4ff"/><path d="m730 {y+49} 4 4 7-8" fill="none" stroke="#1143b6" stroke-width="3"/>'
- svg=f'''<svg xmlns="http://www.w3.org/2000/svg" width="880" height="660" viewBox="0 0 880 660"><title>{E(title)}</title><desc>{E(a+'; '+b+'; '+c)}. Illustrative workflow, not a product screen.</desc><defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#eff5ff"/><stop offset="1" stop-color="#f6faf9"/></linearGradient></defs><rect width="880" height="660" rx="32" fill="#f1f6ff"/><circle cx="785" cy="70" r="118" fill="#e3edff"/><circle cx="60" cy="625" r="90" fill="#dff3eb"/><rect x="103" y="65" width="92" height="92" rx="24" fill="white"/><g transform="translate(109 70)" fill="none" stroke="#1143b6" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">{icon}</g><text x="220" y="102" font-family="Arial,sans-serif" font-size="17" letter-spacing="3" fill="#1143b6">SALESON · WORKFLOW</text><text x="220" y="142" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#0f1623">{E(title)}</text><g font-family="Arial,sans-serif">{cards}</g><text x="440" y="625" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#65758a">Illustration · confirm your process in a demo</text></svg>'''
+ svg=f'''<svg xmlns="http://www.w3.org/2000/svg" width="880" height="660" viewBox="0 0 880 660"><title>{E(title)}</title><desc>{E(a+'; '+b+'; '+c)}. Illustrative workflow, not a product screen.</desc><defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#eff5ff"/><stop offset="1" stop-color="#f6faf9"/></linearGradient></defs><rect width="880" height="660" rx="32" fill="#f1f6ff"/><circle cx="785" cy="70" r="118" fill="#e3edff"/><circle cx="60" cy="625" r="90" fill="#dff3eb"/><rect x="103" y="65" width="92" height="92" rx="24" fill="white"/><g transform="translate(109 70)" fill="none" stroke="#1143b6" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">{icon}</g><text x="220" y="102" font-family="Arial,sans-serif" font-size="17" letter-spacing="3" fill="#1143b6">SALESON · WORKFLOW</text><text x="220" y="142" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#0f1623">{E(title)}</text><g font-family="Arial,sans-serif">{cards}</g></svg>'''
  (D/(slug+'.svg')).write_text(svg)
  return '/assets/img/workflows/'+slug+'.svg'
 files=sorted((W/'industries').glob('*.html'))+sorted((W/'compare').glob('*.html'))+[W/x for x in ['inventory-management.html','user/software-for-manufacturers.html','user/software-for-distributors.html','user/software-for-retailers.html','saleson-vs-other-field-sales.html','partner.html']]
@@ -63,6 +63,7 @@ for index,p in enumerate(files):
   labels=(name+' or SalesOn?','Start with the job','Compare editions','Confirm the total cost')
  else:labels=SCENES[slug]
  image=illustration(slug,labels,index)
+ if slug=="inventory-management":image="/assets/img/dms-hero.webp"
  h1=re.search(r'<h1[^>]*>(.*?)</h1>',s,re.S)[1]
  desc=html.unescape(re.search(r'<meta name="description" content="([^"]*)"',s)[1])
  body=re.search(r'<main\b[^>]*>(.*?)</main>',s,re.S)[1]
@@ -73,12 +74,32 @@ for index,p in enumerate(files):
  badge='Partnership enquiries' if slug=='partner' else 'SalesOn vs '+name if p.parent.name=='compare' else breadcrumb
  primary='Email your interest' if slug=='partner' else 'Book a workflow demo';href=mail if slug=='partner' else '/request-demo'
  secondary='<a href="/pricing" class="so-button so-secondary">See plans and pricing</a>'
- hero='<section class="so-hero"><div class="so-container so-hero-grid"><div><p class="so-kicker">'+E(badge)+'</p><h1>'+h1+'</h1><p class="so-lead">'+E(desc)+'</p><div class="so-actions"><a href="'+href+'" class="so-button">'+primary+' <span aria-hidden="true">↗</span></a>'+secondary+'</div><p class="so-facts">'+('Programme not yet live · Terms confirmed in writing' if slug=='partner' else '₹0 setup · Minimum 2 users · Monthly or annual billing')+'</p></div><figure class="so-hero-art"><img src="'+image+'" width="880" height="660" alt="'+E(labels[0]+': '+', '.join(labels[1:]))+'" fetchpriority="high" decoding="async"><figcaption>Workflow illustration. Explore the supported modules below.</figcaption></figure></div></section>'
+ hero='<section class="so-hero"><div class="so-container so-hero-grid"><div><p class="so-kicker">'+E(badge)+'</p><h1>'+h1+'</h1><p class="so-lead">'+E(desc)+'</p><div class="so-actions"><a href="'+href+'" class="so-button">'+primary+' <span aria-hidden="true">↗</span></a>'+secondary+'</div><p class="so-facts">'+('Programme not yet live · Terms confirmed in writing' if slug=='partner' else '₹0 setup · Minimum 2 users · Monthly billing available · Support included')+'</p></div><figure class="so-hero-art"><img src="'+image+'" width="880" height="660" alt="'+E(labels[0]+': '+', '.join(labels[1:]))+'" fetchpriority="high" decoding="async"></figure></div></section>'
+ if slug=='inventory-management':hero=hero.replace('width="880" height="660"','width="'+str(1200)+'" height="'+str(783)+'"').replace('Workflow overview','Illustrative example')
  body=re.sub(r'<nav aria-label="Breadcrumb">.*?</nav>','',body,flags=re.S)
  screens={
  'inventory-management':('/assets/img/distribution-management-system/illustrative-saleson-style-godown-stock-showing-sample-distributi-b90e82a490.webp','Godown stock example','Illustrative SalesOn-style godown stock view. Example data; confirm your required stock controls in a demo.'),
  'software-for-retailers':('/assets/img/invoicing/invoice-formats-example.webp','Invoice format example','Invoice format example from the SalesOn Invoicing page. Confirm the format and printer setup your counter needs.'),
  'software-for-distributors':('/assets/img/order-taking/customer-context-enhanced.webp','Customer context example','Enhanced recreation of the existing SalesOn customer context screen, with source example data.')}
+ if p.parent.name=='industries':
+  industry_screens={
+   'fmcg':('/assets/img/order-taking/catalogue-enhanced.webp','Select products, quantities and customer prices',1536,1024,True),
+   'agriculture':('/assets/img/order-taking/customer-context-enhanced.webp','Review the dealer account before booking',1536,1024,True),
+   'pharmacy':('/assets/img/dms-hero.webp','Review distribution sales and stock',1200,783,True),
+   'automotive':('/assets/img/order-taking/catalogue-enhanced.webp','Find the configured product and review quantities',1536,1024,True),
+   'cosmetic':('/assets/img/order-taking/catalogue-enhanced.webp','Review catalogue items and customer prices',1536,1024,True),
+   'electronics':('/assets/img/dms-hero.webp','Keep dealer sales and stock in view',1200,783,True),
+   'hardware':('/assets/img/order-taking/customer-context-enhanced.webp','Keep the customer account close to the order',1536,1024,True),
+   'manufacturing':('/assets/img/bom.jpg','Review a bill of materials and its components',1440,821,False),
+   'publishing':('/assets/img/desktop-invoice.png','Review the invoice before sharing it',1000,563,False),
+   'sport-and-fitness':('/assets/img/delivery-management/shipments-enhanced.webp','Follow the shipment after order booking',1774,887,True),
+   'telecommunication':('/assets/img/order-taking/customer-context-enhanced.webp','Review dealer transactions and balances',1536,1024,True),
+   'transport':('/assets/img/delivery-management/shipments-enhanced.webp','Review recorded shipment outcomes',1774,887,True)}
+  shot,label,iw,ih,illustrated=industry_screens[slug]
+  # Read source dimensions, using the standard library so builds need no Pillow dependency.
+  # Existing declared dimensions only establish aspect ratio; CSS contains the full image.
+  evidence='<section class="industry-product-evidence"><h2>'+label+'</h2><figure><img src="'+shot+'" alt="'+E(label)+' in SalesOn" width="'+str(iw)+'" height="'+str(ih)+'" loading="lazy" decoding="async">'+('<figcaption>Illustrative example</figcaption>' if illustrated else '')+'</figure></section>'
+  body=body.replace('</section>','</section>'+evidence,1)
  if slug in screens:
   path,label,caption=screens[slug]
   # Intrinsic dimensions are stored with the source images; no image bytes are embedded.

@@ -27,7 +27,7 @@ assert.equal((html.match(/<h1[ >]/g)||[]).length,1);
 assert.ok(html.includes('Salesman Tracking App for <span>Live Location</span> and Daily Activity Logs'));
 assert.ok(html.includes('How to choose a salesman tracking app'));
 assert.ok(html.includes('Start Free 7-Day Trial'));
-assert.equal((html.match(/class="st-client-logo/g)||[]).length,8);
+assert.equal((html.match(/class="st-client-logo/g)||[]).length,0);
 const schema=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
 assert.equal(schema['@graph'].find(n=>n['@type']==='FAQPage').mainEntity.length,11);
 assert.equal((html.match(/class="faq-item"/g)||[]).length,11);

@@ -48,6 +48,9 @@ class SiteHeader extends HTMLElement {
         }
 
         :host {
+          --brand: #1143b6;
+          --brand-dark: #0c3083;
+          --brand-light: #edf4ff;
           --so-bg: #fff;
           --so-bg2: #f8f9fa;
           --so-text: #222;

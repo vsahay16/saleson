@@ -11,8 +11,8 @@
       views.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
       panels.forEach(panel => { panel.hidden = panel.dataset.stPanel !== selected; });
       label.textContent = selected === 'team'
-        ? 'Team view: employee names and the latest recorded location time.'
-        : 'Day view: a selected employee’s route, distance, total time and recorded events.';
+        ? 'Sample location records'
+        : 'Sample route and activity records';
     }));
 
   }

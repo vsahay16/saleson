@@ -1,0 +1,10 @@
+{
+  "asset": "target-meter-hero.webp",
+  "sources": [
+    "/assets/img/target/achievements.png",
+    "/assets/img/screenshots-refined/target-record.webp"
+  ],
+  "method": "Built-in image generation compositing and clarity enhancement",
+  "type": "Illustrative recreation",
+  "prompt": "Recompose the existing monthly target record and the mobile achievement screen as a white browser card and phone on a pale blue-white background. Preserve source names, target values, monthly totals, ranks and points; add no new product functions or charts. Label points as points, not money."
+}

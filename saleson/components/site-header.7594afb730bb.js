@@ -5,6 +5,15 @@ class SiteHeader extends HTMLElement {
   }
 
   connectedCallback() {
+    // The shared shell must not depend on a page loading its font.
+    if (document.head && !document.getElementById('saleson-shell-font')) {
+      const font = document.createElement('link');
+      font.id = 'saleson-shell-font';
+      font.rel = 'stylesheet';
+      font.href = 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap';
+      document.head.appendChild(font);
+    }
+
     let path=""
     const source = this.getAttribute("source");
     if(source === "tools-index" || source === "pricing"){
@@ -20,6 +29,16 @@ class SiteHeader extends HTMLElement {
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         :host {
+          font-family: "DM Sans", sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          font-style: normal;
+          line-height: 1.4;
+          letter-spacing: normal;
+          word-spacing: normal;
+          text-align: left;
+          text-transform: none;
+
           display: block;
           position: sticky;
           top: 0;
@@ -29,6 +48,9 @@ class SiteHeader extends HTMLElement {
         }
 
         :host {
+          --brand: #1143b6;
+          --brand-dark: #0c3083;
+          --brand-light: #edf4ff;
           --so-bg: #fff;
           --so-bg2: #f8f9fa;
           --so-text: #222;
@@ -75,7 +97,7 @@ class SiteHeader extends HTMLElement {
         .logo-text {
           font-size: 22px; font-weight: 700;
           color: var(--so-text); letter-spacing: -0.5px; line-height: 1;
-          font-family: "DM Sans", sans-serif;;
+          font-family: "DM Sans", sans-serif;
         }
         .logo-text span { color: var(--brand); }
 
@@ -88,7 +110,7 @@ class SiteHeader extends HTMLElement {
           padding: 8px 11px; border-radius: 6px;
           display: flex; align-items: center; gap: 4px;
           transition: background 0.15s, color 0.15s;
-          white-space: nowrap; font-family: "DM Sans", sans-serif;;
+          white-space: nowrap; font-family: "DM Sans", sans-serif;
         }
         nav a:hover, nav button:hover,
         nav a.active { background: var(--so-bg2); color: var(--brand); }
@@ -143,7 +165,7 @@ class SiteHeader extends HTMLElement {
           border: 1.5px solid var(--brand); cursor: pointer;
           display: inline-flex; align-items: center; gap: 6px;
           transition: background 0.15s, color 0.15s, transform 0.1s;
-          font-family: "DM Sans", sans-serif;; white-space: nowrap;
+          font-family: "DM Sans", sans-serif; white-space: nowrap;
         }
         .btn-outline { background: transparent; color: var(--brand); }
         .btn-outline:hover { background: var(--brand-light); }
@@ -163,7 +185,7 @@ class SiteHeader extends HTMLElement {
         .badge:hover { opacity: 0.82; }
         .badge:active { transform: scale(0.97); }
         .badge svg { width: 16px; height: 16px; fill: var(--so-bg); flex-shrink: 0; }
-        .badge-text { display: flex; flex-direction: column; line-height: 1.15; font-family: "DM Sans", sans-serif;; }
+        .badge-text { display: flex; flex-direction: column; line-height: 1.15; font-family: "DM Sans", sans-serif; }
         .badge-text .t1 { font-size: 9px; opacity: 0.7; letter-spacing: 0.2px; }
         .badge-text .t2 { font-size: 12px; font-weight: 600; letter-spacing: -0.2px; }
 
@@ -212,7 +234,7 @@ class SiteHeader extends HTMLElement {
         .drawer-nav a {
           display: block; padding: 11px 16px; font-size: 14.5px;
           color: var(--so-nav-link); text-decoration: none; border-radius: 8px;
-          transition: background 0.12s, color 0.12s; font-family: "DM Sans", sans-serif;;
+          transition: background 0.12s, color 0.12s; font-family: "DM Sans", sans-serif;
         }
         .drawer-nav a:hover,
         .drawer-nav a.active { background: var(--so-bg2); color: var(--brand); }
@@ -220,7 +242,7 @@ class SiteHeader extends HTMLElement {
         .section-label {
           font-size: 11px; font-weight: 500; text-transform: uppercase;
           letter-spacing: 0.7px; color: var(--so-muted); padding: 6px 16px;
-          font-family: "DM Sans", sans-serif;;
+          font-family: "DM Sans", sans-serif;
         }
         .mobile-section { margin-bottom: 8px; }
 
@@ -494,3 +516,4 @@ class SiteHeader extends HTMLElement {
 }
 
 customElements.define("site-header", SiteHeader);
+

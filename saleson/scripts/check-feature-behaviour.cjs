@@ -46,7 +46,7 @@ for(const [slug,info] of Object.entries(JSON.parse(fs.readFileSync(path.join(roo
   const answers=buttons.map(b=>b.nextElementSibling=new Element());
   const tech=new Element(),details=new Element();
   const document={
-    querySelector:()=>null,
+    querySelector:selector=>selector==='.mobile-app-review'?{querySelectorAll:()=>buttons}:null,
     getElementById:id=>id==='techDetails'?details:null,
     querySelectorAll:selector=>{
       if(['.faq-q','.fqb'].includes(selector))return buttons;

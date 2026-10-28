@@ -8,7 +8,7 @@ const buttons=['monthly','annual'].map(b=>({dataset:{billing:b},attrs:{},listene
 const prices={};for(const key of ['250','400']){prices[`[data-plan-price="${key}"]`]={nextElementSibling:{}};prices[`[data-plan-equivalent="${key}"]`]={};}
 const context=vm.createContext({window:{},document:{getElementById:id=>elements[id],querySelectorAll:()=>buttons,querySelector:s=>prices[s]}});
 for(const f of ['pricing-config','pricing-page'])vm.runInContext(fs.readFileSync(path.join(root,'assets/js',f+'.js'),'utf8'),context);
-const cfg=context.window.SalesOnPricing.IN;assert.deepEqual(Object.keys(context.window.SalesOnPricing),['IN']);assert.equal(cfg.minimumUsers,2);
+const cfg=context.window.SalesOnPricing.IN;assert.deepEqual(Object.keys(context.window.SalesOnPricing),['IN','USD','EN']);assert.equal(cfg.minimumUsers,2);
 const calc=context.window.SalesOnPricingCalculator.calculate;
 for(const key of Object.keys(cfg.plans))for(const users of [-5,0,1,2,2.2,10,101,10001,'abc',''])for(const cycle of ['monthly','annual']){
  const r=calc(users,key,cycle),n=Math.min(10000,Math.max(2,Math.ceil(Number(users)||2))),p=cfg.plans[key];
@@ -18,9 +18,24 @@ assert.equal(calc(1,'250','monthly').payment,500);assert.equal(calc(1,'400','mon
 buttons[0].listeners.click();assert.equal(elements['calc-cycle'].value,'monthly');assert.equal(elements['res-payment'].textContent,'₹2,500');assert.equal(buttons[0].attrs['aria-pressed'],'true');
 elements['calc-cycle'].value='annual';elements['calc-cycle'].listeners.change();assert.equal(buttons[1].attrs['aria-pressed'],'true');assert.equal(elements['res-payment'].textContent,'₹25,000');
 elements['calc-users'].value='1';elements['calc-users'].listeners.change();assert.equal(elements['calc-users'].value,'2');assert.equal(elements['res-payment'].textContent,'₹5,000');
-const html=fs.readFileSync(path.join(root,'pricing.html'),'utf8');assert.ok(!/no minimum users|noindex|pricing\/us|USD/i.test(html));assert.equal((html.match(/<h1\b/g)||[]).length,1);assert.equal((html.match(/<details>/g)||[]).length,8);
+
+for(const tier of ['USD','EN']){
+ context.window.SalesOnPricingCalculator.setRegion(tier);
+ const regional=context.window.SalesOnPricing[tier];
+ for(const key of ['250','400'])for(const seats of [1,2,10])for(const cycle of ['monthly','annual']){
+  const r=calc(seats,key,cycle),n=Math.max(2,seats),p=regional.plans[key];
+  assert.equal(r.payment,n*(cycle==='annual'?p.annual:p.monthly));
+  assert.equal(r.saving,cycle==='annual'?n*p.monthly*2:0);cases++;
+ }
+ elements['calc-users'].value='2';elements['calc-plan'].value='400';buttons[0].listeners.click();
+ assert.equal(elements['res-payment'].textContent,'$'+(regional.plans['400'].monthly*2));
+ assert.ok(elements['res-payment-note'].textContent.endsWith('before taxes'));
+}
+context.window.SalesOnPricingCalculator.setRegion('IN');
+const html=fs.readFileSync(path.join(root,'pricing.html'),'utf8');assert.ok(!/no minimum users|noindex|pricing\/us/i.test(html));assert.equal((html.match(/<h1\b/g)||[]).length,1);assert.equal((html.match(/<details>/g)||[]).length,8);
 const van=cfg.comparison.find(f=>f.name.startsWith('Van sales'));assert.deepEqual(Array.from(van.plans),['400']);assert.ok(html.includes('<th scope="row">Van sales and end-of-day settlement</th><td>—</td><td>Included</td>'));
 const faq=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);for(const q of faq.mainEntity){assert.ok(html.includes(q.name));assert.ok(html.includes(q.acceptedAnswer.text));}
 for(const region of ['us','in']){const s=fs.readFileSync(path.join(root,'pricing',region+'.html'),'utf8');assert.ok(s.includes('0;url=/pricing'));assert.ok(s.includes('https://saleson.co.in/pricing'));}
 const redirects=JSON.parse(fs.readFileSync(path.join(root,'..','vercel.json'))).redirects;for(const region of ['us','in'])assert.ok(redirects.some(r=>r.source==='/pricing/'+region&&r.destination==='/pricing'&&r.permanent));
 console.log(`PASS: ${scripts} inline scripts compile; ${cases} pricing cases, two-seat minimum, billing toggle synchronization, exact annual payments, Enterprise-only van sales, FAQ/schema and regional consolidation.`);
+

@@ -35,7 +35,61 @@
           "value": "SAMEORIGIN"
         }
       ]
+    },
+    {
+      "source": "/api/pricing",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "private, no-store, max-age=0"
+        },
+        {
+          "key": "Vercel-CDN-Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/regional-pricing/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "private, no-store, max-age=0"
+        },
+        {
+          "key": "Vercel-CDN-Cache-Control",
+          "value": "no-store"
+        }
+      ]
     }
   ],
-  "outputDirectory": "saleson"
+  "outputDirectory": "saleson",
+  "rewrites": [
+    {
+      "source": "/api/pricing",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "IN"
+        }
+      ],
+      "destination": "/regional-pricing/in.json"
+    },
+    {
+      "source": "/api/pricing",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "(US|GB|CA|AU|NZ|IE)"
+        }
+      ],
+      "destination": "/regional-pricing/english.json"
+    },
+    {
+      "source": "/api/pricing",
+      "destination": "/regional-pricing/usd.json"
+    }
+  ]
 }

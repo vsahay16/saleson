@@ -1,0 +1,50 @@
+{
+  "dashboard": {
+    "src": "/assets/img/product-evidence/dashboard.webp",
+    "full": "/assets/img/product-evidence/dashboard-full.webp",
+    "width": 1200,
+    "height": 426,
+    "source": 7,
+    "redacted_regions": 0
+  },
+  "attendance": {
+    "src": "/assets/img/product-evidence/attendance.webp",
+    "full": "/assets/img/product-evidence/attendance-full.webp",
+    "width": 1200,
+    "height": 297,
+    "source": 36,
+    "redacted_regions": 3
+  },
+  "expenses": {
+    "src": "/assets/img/product-evidence/expenses.webp",
+    "full": "/assets/img/product-evidence/expenses-full.webp",
+    "width": 1200,
+    "height": 549,
+    "source": 40,
+    "redacted_regions": 9
+  },
+  "shipments": {
+    "src": "/assets/img/product-evidence/shipments.webp",
+    "full": "/assets/img/product-evidence/shipments-full.webp",
+    "width": 1200,
+    "height": 573,
+    "source": 45,
+    "redacted_regions": 18
+  },
+  "transfers": {
+    "src": "/assets/img/product-evidence/transfers.webp",
+    "full": "/assets/img/product-evidence/transfers-full.webp",
+    "width": 1200,
+    "height": 551,
+    "source": 65,
+    "redacted_regions": 18
+  },
+  "inventory": {
+    "src": "/assets/img/product-evidence/inventory.webp",
+    "full": "/assets/img/product-evidence/inventory-full.webp",
+    "width": 1200,
+    "height": 600,
+    "source": 8,
+    "redacted_regions": 0
+  }
+}

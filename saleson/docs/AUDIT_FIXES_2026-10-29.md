@@ -26,6 +26,8 @@ Base: main `248b514e43b89056afb941f40792038d44e60201`.
 
 ## GitHub enforcement still requires administrator access
 
+The new workflow completed successfully in GitHub Actions: https://github.com/vsahay16/saleson/actions/runs/40873284142 (the code revision uploaded in PR #32).
+
 The connected GitHub integration returned 403 for branch-protection access (`Resource not accessible by integration`). Adding a workflow creates checks; it does not make them required. After its first successful remote run, an administrator should edit the existing main rule/ruleset and require **Website regression checks** before merge, preserving other established settings. Verify with a deliberately failing PR. Do not claim enforcement until that setting is confirmed.
 
 ## Custom-domain diagnosis and remaining access
@@ -36,7 +38,7 @@ The main domain still serves the old AWS-hosted site. Public DNS on 29 October 2
 - Authoritative nameservers: `ns-1120.awsdns-12.org`, `ns-1957.awsdns-52.co.uk`, `ns-871.awsdns-44.net`, `ns-11.awsdns-01.com` — AWS Route 53.
 - Vercel `/help` is the new hub; `saleson.co.in/help` still redirects to `/404` with HTTP 200. This is not fixed by a repository-only change.
 
-The user installed Vercel during this task. Vercel skills became available, but no authenticated Vercel project tools were exposed in the tool registry; Vercel CLI 65.7.0 explicitly reported “Logged out.” No tokens were requested or read. Domain/DNS settings were not changed.
+The user installed Vercel during this task. Authenticated Vercel tools subsequently became available and located project `saleson` (`prj_WZlqs0s5BAsL9g5LrxxIOi4Ko4St`) under the `viv24` team. Project/domain inspection returned HTTP 403 requiring approval of this connection for that existing team. A one-time team-access link was generated. The CLI login state is separate from this connection. No tokens were requested or read, and domain/DNS settings were not changed.
 
 To use Vercel as the primary release:
 

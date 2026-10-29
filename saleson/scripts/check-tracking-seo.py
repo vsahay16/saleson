@@ -17,6 +17,7 @@ for p in pages:
   old=BeautifulSoup(subprocess.check_output(['git','show','7a1e2b7d06700eff8ec6d1401370bca255cb51f6:saleson/'+rel],cwd=R.parent,text=True),'html.parser')
   for selector in ['title','link[rel="canonical"]','meta[name="description"]','meta[property^="og:"]','meta[name^="twitter:"]','meta[name="robots"]']:
    if rel=='tools/hsn-sac-gst-rate-finder/index.html' and selector!='link[rel="canonical"]' and selector!='meta[name="robots"]':continue
+   if rel=='customers/Lapcare.html' and selector in ['title','meta[name="description"]','meta[property^="og:"]','meta[name^="twitter:"]']:continue # Correct unrelated legacy customer metadata.
    if rel=='pricing.html' and selector=='title':continue # pricing generator preserves its established current title
    def values(doc):return [str(x) for x in doc.select(selector)]
    assert values(old)==values(s),(rel,selector)

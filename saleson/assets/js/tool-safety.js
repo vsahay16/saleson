@@ -25,6 +25,24 @@ window.SalesOnToolSafety = Object.freeze({
     rates.sort((a,b)=>a-b).forEach(n=>{const option=document.createElement('option');option.value=String(n);option.textContent=n+'%';select.appendChild(option);});
     select.value=String(rate);
   },
+  csvCell(value) {
+    return '"'+String(value ?? '').replace(/"/g, '""')+'"';
+  },
+  download(blob, filename, fileType) {
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url; anchor.download = filename; anchor.hidden = true;
+    document.body.appendChild(anchor);
+    try {
+      anchor.click();
+      if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:fileType});
+    } catch (error) {
+      anchor.remove(); URL.revokeObjectURL(url); throw error;
+    }
+    // Browsers need time to consume the Blob URL, especially on mobile Safari.
+    // Dispatch is an intent event, never proof that the browser saved the file.
+    setTimeout(() => {anchor.remove(); URL.revokeObjectURL(url);}, 30000);
+  },
   async copy(text) {
     if(navigator.clipboard?.writeText){try{await navigator.clipboard.writeText(text);return true;}catch(_) {}}
     const field=document.createElement('textarea');field.value=text;field.setAttribute('readonly','');field.style.cssText='position:fixed;top:-9999px';document.body.appendChild(field);field.select();

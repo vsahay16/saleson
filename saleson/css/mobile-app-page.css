@@ -1,5 +1,5 @@
 body{margin:0;background:#fff}
-.mobile-app-review{--brand:#1858ce;--ink:#183249;--ink-soft:#52677a;--border:#dbe5ee;font:17px/1.7 Inter,Arial,sans-serif;color:var(--ink)}
+.mobile-app-review{--brand:#1858ce;--ink:#183249;--ink-soft:#52677a;--border:#dbe5ee;font:17px/1.7 "DM Sans",Arial,sans-serif;color:var(--ink)}
 .mobile-app-review *{box-sizing:border-box}
 .mobile-app-review :is(h1,h2,h3,p,figure){margin:0}
 .mobile-app-review .container,.mobile-app-review .review-client-wrap{max-width:1220px;padding:0 32px;margin:auto}

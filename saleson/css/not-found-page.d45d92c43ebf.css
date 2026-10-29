@@ -1,0 +1,63 @@
+/* ─── 404 HERO ─── */
+    .error-hero {
+      background: #0b1527;
+      padding: 90px 0;
+      position: relative; overflow: hidden;
+      flex: 1;
+      display: flex; align-items: center;
+    }
+    .error-hero::before {
+      content: '';
+      position: absolute; top: 0; right: 0; bottom: 0; width: 55%;
+      background: radial-gradient(ellipse 60% 70% at 80% 40%, rgba(26, 86, 219, .22) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .error-hero::after {
+      content: '';
+      position: absolute; top: 0; left: 0; bottom: 0; width: 45%;
+      background: radial-gradient(ellipse 50% 60% at 15% 65%, rgba(26,86,219,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .error-inner {
+      position: relative; z-index: 1;
+      max-width: 620px; margin: 0 auto;
+      text-align: center;
+    }
+    .hbadge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 4px 11px; border-radius: 100px;
+      font-size: 11px; font-weight: 700; letter-spacing: .04em;
+      margin-bottom: 26px;
+      background: rgba(26,86,219,.2); color: #93c5fd; border: 1px solid rgba(26,86,219,.35);
+    }
+    .error-code {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(72px, 14vw, 140px);
+      line-height: 1;
+      background: linear-gradient(135deg, #ffffff 0%, #93c5fd 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+      letter-spacing: -.02em;
+    }
+    .error-title {
+      font-size: clamp(22px, 3vw, 30px);
+      color: var(--white); margin-bottom: 14px; font-weight: 600;
+    }
+    .error-lede {
+      font-size: 16px; color: rgba(255,255,255,.62);
+      line-height: 1.8; max-width: 460px; margin: 0 auto 36px;
+    }
+    .error-lede strong { color: rgba(255,255,255,.88); font-weight: 600; }
+
+    .error-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+   
+    .error-links {
+      display: flex; gap: 22px; justify-content: center; flex-wrap: wrap;
+      padding-top: 28px; border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .error-links a {
+      font-size: 13px; color: rgba(255,255,255,.5); text-decoration: none;
+      font-weight: 500; transition: color .15s;
+    }
+    .error-links a:hover { color: rgba(255,255,255,.9); }

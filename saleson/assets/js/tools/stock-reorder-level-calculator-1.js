@@ -586,16 +586,11 @@ function exportCSV() {
     s.daysRemaining >= 9999 ? '∞' : Math.floor(s.daysRemaining),
     s.stockoutDate, s.risk,
     s.reorderValue > 0 ? s.reorderValue.toFixed(0) : '',
-  ].map(c => `"${String(c || '').replace(/"/g, '""')}"`));
+  ].map(c => SalesOnToolSafety.csvCell(c)));
 
   const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
   const blob = new Blob([csv], { type: 'text/csv' });
-  const url  = URL.createObjectURL(blob);
-  const a    = document.createElement('a');
-  a.href = url;
-  a.download = `stock-reorder-plan-${SalesOnDates.today()}.csv`;
-  if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click();
-  URL.revokeObjectURL(url);
+  SalesOnToolSafety.download(blob, `stock-reorder-plan-${SalesOnDates.today()}.csv`, 'csv');
   usedCSV = true;
   showToast('CSV download requested. Check your browser downloads.');
 }
@@ -605,10 +600,7 @@ function downloadSampleCSV() {
 FMCG Product Box,FMCG-001,FMCG,Mohan Suppliers,120,25,40,5,8,50,50,12,450,500,15
 Detergent Pack,FMCG-002,Household,Clean India,35,12,20,7,10,30,,,80,100,20`;
   const blob = new Blob([sample], { type: 'text/csv' });
-  const url  = URL.createObjectURL(blob);
-  const a    = document.createElement('a'); a.href = url;
-  a.download = 'stock-reorder-sample.csv'; if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click();
-  URL.revokeObjectURL(url);
+  SalesOnToolSafety.download(blob, 'stock-reorder-sample.csv', 'csv');
 }
 
 /* ─────────────────────────

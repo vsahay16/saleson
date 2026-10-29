@@ -1,0 +1,290 @@
+/*======================
+            03. HEADER SECTION CSS
+            =======================*/
+        .sticky-header {
+            padding: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+        }
+
+        .affix {
+            top: 0;
+            left: 0;
+            margin: auto;
+            position: fixed;
+            width: 100%;
+            z-index: 9999;
+            animation: 300ms ease-in-out fadeInDown;
+            background: var(--bs-dark);
+            padding: 10px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-menu li.nav-item {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            right: auto;
+            left: 50% !important;
+            transform: translate(-50%, 0);
+        }
+
+        .main-menu li.nav-item .dropdown-menu:before {
+            content: '';
+            position: absolute;
+            top: -9px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            transform: translate(-50%, 0) rotate(-315deg);
+            border-radius: 3px;
+            background-color: var(--bs-white);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .main-menu li.nav-item:hover .dropdown-menu:before {
+            opacity: 1;
+        }
+
+        .main-menu li a.nav-link {
+            padding: 0.85rem 1rem;
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+            font-family: var(--bs-font-monospace);
+        }
+
+        .navbar-dark .main-menu li a.nav-link {
+            color: var(--bs-secondary-dark);
+        }
+
+        .navbar-dark .action-btns a.btn-link {
+            color: var(--bs-secondary-dark);
+        }
+
+        .navbar-light .main-menu li a.nav-link,
+        .navbar-light .action-btns a.btn-link,
+        .navbar-dark.sticky-header.affix .main-menu li a.nav-link,
+        .navbar-dark.sticky-header.affix .action-btns a.btn-link {
+            color: var(--body-color);
+        }
+
+        .navbar-light.sticky-header.affix,
+        .navbar-dark.sticky-header.affix {
+            background: var(--bs-white);
+        }
+
+        .navbar-light.sticky-header.affix .btn,
+        .navbar-dark.sticky-header.affix .btn,
+        .bg-dark .btn,
+        .coming-soon-section .btn,
+        .bg-gradient .btn,
+        .coming-soon-section .btn,
+        .navbar-dark .btn-primary {
+            box-shadow: none;
+        }
+
+        .navbar-light .navbar-brand img.logo-white,
+        .navbar-dark .navbar-brand img.logo-color,
+        .navbar-dark.sticky-header.affix .navbar-brand img.logo-white {
+            display: none;
+        }
+
+        .navbar-dark.sticky-header.affix .navbar-toggler span {
+            color: var(--body-color);
+        }
+
+        .navbar-dark.sticky-header.affix .navbar-brand img.logo-color {
+            display: block;
+        }
+
+        .main-menu li a.nav-link:hover,
+        .action-btns a.btn-link:hover,
+        .navbar-dark.sticky-header.affix .main-menu li a.nav-link:hover,
+        .navbar-dark.sticky-header.affix .action-btns a.btn-link:hover {
+            color: var(--bs-primary);
+        }
+
+        .offcanvas-header button.close-btn {
+            background: var(--bs-danger-soft);
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            outline: none;
+            box-shadow: none;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .offcanvas-header button.close-btn i {
+            line-height: 29px;
+        }
+
+        .offcanvas-body .main-menu li a.nav-link {
+            color: var(--body-color);
+            padding: 0.5rem 1rem;
+        }
+
+        .offcanvas-body .main-menu li a.nav-link:hover {
+            color: var(--bs-primary);
+        }
+
+        .offcanvas-body .radius-right-side {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+
+        .offcanvas-body .dropdown-menu {
+            position: relative;
+        }
+
+        .offcanvas-body .dropdown-grid {
+            display: block;
+            width: auto;
+        }
+
+        .offcanvas-body .dropdown-grid-item {
+            width: 100%;
+        }
+
+        .offcanvas-body .dropdown-grid-item.last-item {
+            display: none;
+        }
+
+        @media (max-width: 1199px) {
+            .nav.main-menu {
+                display: block !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .nav.main-menu {
+                display: block;
+            }
+        }
+
+        .dropdown-toggle::after {
+            vertical-align: middle;
+        }
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--bs-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            z-index: 999999;
+        }
+
+        .preloader-icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        .loading-bar {
+            width: 120px;
+            height: 3px;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+            background: var(--bs-white);
+        }
+
+        .loading-bar::before {
+            content: '';
+            width: 35px;
+            height: 3px;
+            background: var(--bs-primary);
+            position: absolute;
+            left: -34px;
+            animation: bluebar 1.5s infinite ease;
+        }
+
+        @keyframes bluebar {
+            50% {
+                left: 96px;
+            }
+        }
+
+        .section-heading {
+            margin-bottom: 50px;
+        }
+
+        @media (min-width: 991px) and (max-width: 1199px) {
+            .action-btns.me-lg-0 {
+                margin-right: 3rem !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .section-heading {
+                margin-bottom: 30px;
+            }
+        }
+
+        /*======================
+            05. HERO SECTION CSS
+            =======================*/
+        .hero-subscribe-form-wrap {
+            max-width: 460px;
+        }
+
+        .hero-bg-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (min-width: 320px) and (max-width: 414px) {
+            .hero-subscribe-form input.btn {
+                position: relative;
+                right: 0;
+                top: 10px;
+                margin-bottom: 15px;
+                transition: all 0.3s ease-in;
+            }
+
+            .hero-subscribe-form input.form-control {
+                padding: 0.75rem 1rem;
+            }
+        }
+
+        .hero-screen-wrap {
+            display: flex;
+            align-items: flex-end;
+            margin-right: -120px;
+        }
+
+        @media (min-width: 1480px) and (max-width: 1836px) {
+            .hero-screen-wrap {
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 1479px) {
+            .hero-screen-wrap {
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            .hero-screen-wrap {
+                align-items: center;
+                justify-content: center;
+            }
+        }

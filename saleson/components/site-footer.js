@@ -6,7 +6,8 @@ class SiteFooter extends HTMLElement {
   
     connectedCallback() {
     // The shared shell must not depend on a page loading its font.
-    if (document.head && !document.getElementById('saleson-shell-font')) {
+    if (document.head && !document.getElementById('saleson-shell-font') &&
+        ![...document.querySelectorAll('link[rel=stylesheet]')].some(link => /fonts\.googleapis\.com/.test(link.href) && /DM(?:\+|%20)Sans/.test(link.href))) {
       const font = document.createElement('link');
       font.id = 'saleson-shell-font';
       font.rel = 'stylesheet';
@@ -235,7 +236,7 @@ class SiteFooter extends HTMLElement {
             </a>
   
               <p class="brand-desc">
-                India's leading sales &amp; distribution management platform. Empowering SMEs with digital tools for orders, invoicing, tracking, and business growth.
+                Sales and distribution software for orders, invoicing, stock and field teams.
               </p>
   
               <ul class="contact-list">

@@ -1,0 +1,14 @@
+{
+  "order-taking-app.html": {
+    "before_html": 70335,
+    "after_html": 39612
+  },
+  "calculators/sales-leakage-calculator.html": {
+    "before_html": 23436,
+    "after_html": 15906
+  },
+  "404.html": {
+    "before_html": 6262,
+    "after_html": 3958
+  }
+}

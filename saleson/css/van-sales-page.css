@@ -1,5 +1,5 @@
 body{margin:0;background:#fff}
-#van-route-desk{--vs-blue:#1858ce;--vs-ink:#17314b;--vs-muted:#53687b;--vs-line:#dbe5ef;--vs-tint:#eff5fc;font:17px/1.7 Inter,Arial,sans-serif;color:var(--vs-ink);background:#fff;overflow:clip}
+#van-route-desk{--vs-blue:#1858ce;--vs-ink:#17314b;--vs-muted:#53687b;--vs-line:#dbe5ef;--vs-tint:#eff5fc;font:17px/1.7 "DM Sans",Arial,sans-serif;color:var(--vs-ink);background:#fff;overflow:clip}
 #van-route-desk *{box-sizing:border-box}
 #van-route-desk h1,#van-route-desk h2,#van-route-desk h3,#van-route-desk p,#van-route-desk figure{margin:0}
 #van-route-desk a{color:var(--vs-blue);text-decoration:none}

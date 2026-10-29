@@ -11,6 +11,8 @@ for name in ['build-audience-pages.py','build-comparisons.py','build-page-theme.
     subprocess.run([sys.executable,str(ROOT/'scripts'/name)],check=True)
 subprocess.run([sys.executable,str(ROOT/'scripts/prepare-tracking-seo.py')],check=True)
 subprocess.run([sys.executable,str(ROOT/'scripts/optimize-media.py')],check=True)
+subprocess.run([sys.executable,str(ROOT/'scripts/prepare-page-assets.py')],check=True)
+subprocess.run([sys.executable,str(ROOT/'scripts/prepare-display-media.py')],check=True)
 manifest_path = ROOT / 'assets-manifest.json'
 previous = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
 pages = sorted((p for p in ROOT.rglob('*.html') if 'node_modules' not in p.parts))

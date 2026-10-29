@@ -6,8 +6,8 @@
   "/assets/js/marketing-events.js": "/assets/js/marketing-events.b98b72e97c62.js",
   "/css/min/common-new.min.css": "/css/min/common-new.min.f637cbb1ad10.css",
   "/css/site-repairs.css": "/css/site-repairs.c0185b0ec282.css",
-  "/components/site-header.js": "/components/site-header.b84083f669c5.js",
-  "/components/site-footer.js": "/components/site-footer.f064ede600f2.js",
+  "/components/site-header.js": "/components/site-header.87f1ed0ba3cc.js",
+  "/components/site-footer.js": "/components/site-footer.5858827f67c6.js",
   "/components/whatsapp-float.js": "/components/whatsapp-float.9ce3804a0508.js",
   "/assets/js/site-repairs.js": "/assets/js/site-repairs.4d45242fc5e1.js",
   "/assets/js/min/common.min.js": "/assets/js/min/common.min.53d3376fa22f.js",
@@ -135,5 +135,7 @@
   "/css/van-sales-page.css": "/css/van-sales-page.4c20cfefd9e7.css",
   "/assets/js/van-sales-page.js": "/assets/js/van-sales-page.2c205010515e.js",
   "/assets/js/demo-calendar.js": "/assets/js/demo-calendar.f0ef3e2724d0.js",
-  "/css/product-evidence.css": "/css/product-evidence.7c1a49dc8ffc.css"
+  "/css/product-evidence.css": "/css/product-evidence.7c1a49dc8ffc.css",
+  "/css/help-page.css": "/css/help-page.b4d801a8c845.css",
+  "/assets/js/help-page.js": "/assets/js/help-page.4b815766153c.js"
 }

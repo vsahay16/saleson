@@ -38,7 +38,7 @@
   "/assets/js/utility-steps.js": "/assets/js/utility-steps.044d28ab8a6c.js",
   "/css/guide-pages.css": "/css/guide-pages.94d545452829.css",
   "/css/min/customers.min.css": "/css/min/customers.min.1e65cbca6e2d.css",
-  "/css/customer-case-page.css": "/css/customer-case-page.5ff4b148c20d.css",
+  "/css/customer-case-page.css": "/css/customer-case-page.a94d75e71206.css",
   "/assets/js/testimonial.js": "/assets/js/testimonial.ca659e89bb6c.js",
   "/css/delivery-management-page.css": "/css/delivery-management-page.60d7c3573d24.css",
   "/assets/js/delivery-management-page.js": "/assets/js/delivery-management-page.11033781b96b.js",
@@ -66,9 +66,9 @@
   "/assets/js/payment-collection-page.js": "/assets/js/payment-collection-page.5710e08c875c.js",
   "/css/pricing-page.css": "/css/pricing-page.b916f7b0291b.css",
   "/assets/js/pricing-page.js": "/assets/js/pricing-page.5bc2ceaf2e38.js",
-  "/css/production-page.css": "/css/production-page.3ed82229e008.css",
+  "/css/production-page.css": "/css/production-page.8b6161b6e11d.css",
   "/assets/js/production-page.js": "/assets/js/production-page.a2e956d59eb6.js",
-  "/css/request-demo-page.css": "/css/request-demo-page.a2c85bd74c07.css",
+  "/css/request-demo-page.css": "/css/request-demo-page.6e28f74dc308.css",
   "/css/salesman-tracking-page.css": "/css/salesman-tracking-page.3ae604fbe94e.css",
   "/assets/js/salesman-tracking-page.js": "/assets/js/salesman-tracking-page.0ae15b28b693.js",
   "/css/tally-integration-page.css": "/css/tally-integration-page.2791348960bf.css",
@@ -133,5 +133,6 @@
   "/assets/js/tools/whatsapp-payment-reminder-generator-2.js": "/assets/js/tools/whatsapp-payment-reminder-generator-2.70680ca5fce5.js",
   "/assets/js/tools/whatsapp-payment-reminder-generator-3.js": "/assets/js/tools/whatsapp-payment-reminder-generator-3.b016df3dd43c.js",
   "/css/van-sales-page.css": "/css/van-sales-page.4c20cfefd9e7.css",
-  "/assets/js/van-sales-page.js": "/assets/js/van-sales-page.2c205010515e.js"
+  "/assets/js/van-sales-page.js": "/assets/js/van-sales-page.2c205010515e.js",
+  "/assets/js/demo-calendar.js": "/assets/js/demo-calendar.f0ef3e2724d0.js"
 }

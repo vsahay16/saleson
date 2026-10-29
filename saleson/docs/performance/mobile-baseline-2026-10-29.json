@@ -1,0 +1,27 @@
+{
+  "url": "https://saleson-eta.vercel.app/",
+  "report": "https://pagespeed.web.dev/analysis/https-saleson-eta-vercel-app/qenyguo3wk?form_factor=mobile",
+  "captured": "2026-10-29 17:33 Asia/Kolkata",
+  "performance": 79,
+  "accessibility": 94,
+  "best_practices": 100,
+  "seo": 100,
+  "fcp_seconds": 3.3,
+  "lcp_seconds": 4.2,
+  "tbt_ms": 0,
+  "cls": 0.03,
+  "conditions": "Emulated Moto G Power, Lighthouse 13.5.0, slow 4G; one lab run on pre-change Vercel production; no field data",
+  "demo": {
+    "url": "https://saleson-eta.vercel.app/request-demo",
+    "performance": 61,
+    "accessibility": 100,
+    "best_practices": 92,
+    "seo": 100,
+    "fcp_seconds": 2.7,
+    "lcp_seconds": 2.7,
+    "tbt_ms": 2010,
+    "cls": 0.045,
+    "speed_index_seconds": 4.5,
+    "conditions": "Emulated Moto G Power; Lighthouse 13.5.0; slow 4G; baseline before current fixes; embedded scheduler retained"
+  }
+}

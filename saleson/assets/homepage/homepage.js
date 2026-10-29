@@ -14,6 +14,13 @@
  }
  bindTabs('[data-dash-tab]');bindTabs('[data-explore-tab]');
  const shells=[...root.querySelectorAll('[data-home-video]')];
+ const posters=[...root.querySelectorAll('video[data-poster]')];
+ const loadPoster=video=>{video.poster=video.dataset.poster;delete video.dataset.poster;};
+ if('IntersectionObserver' in window){
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){loadPoster(entry.target);observer.unobserve(entry.target);}}),{rootMargin:'300px'});
+  posters.forEach(video=>observer.observe(video));
+ }else posters.forEach(loadPoster);
+
  shells.forEach(shell=>{
   const video=shell.querySelector('video'),button=shell.querySelector('.video-play'),source=video.querySelector('source');
   button.addEventListener('click',()=>{

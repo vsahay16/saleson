@@ -6,7 +6,8 @@ class SiteHeader extends HTMLElement {
 
   connectedCallback() {
     // The shared shell must not depend on a page loading its font.
-    if (document.head && !document.getElementById('saleson-shell-font')) {
+    if (document.head && !document.getElementById('saleson-shell-font') &&
+        ![...document.querySelectorAll('link[rel=stylesheet]')].some(link => /fonts\.googleapis\.com/.test(link.href) && /DM(?:\+|%20)Sans/.test(link.href))) {
       const font = document.createElement('link');
       font.id = 'saleson-shell-font';
       font.rel = 'stylesheet';

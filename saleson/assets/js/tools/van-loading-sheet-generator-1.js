@@ -539,14 +539,9 @@ function exportCSV() {
     s.sold, s.retGood, s.damaged, s.sample, s.closing,
     s.rate, s.salesVal, s.creditSales, s.cashSales, s.upiSales
   ]);
-  const csv = [headers, ...rows].map(r => r.map(v => `"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');
+  const csv = [headers, ...rows].map(r => r.map(v => SalesOnToolSafety.csvCell(v)).join(',')).join('\n');
   const blob = new Blob([csv], { type: 'text/csv' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `Van-Loading-Sheet-${getDate()}.csv`;
-  if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click();
-  URL.revokeObjectURL(url);
+  SalesOnToolSafety.download(blob, `Van-Loading-Sheet-${getDate()}.csv`, 'csv');
   showToast('CSV download requested. Check your browser downloads.');
   // Score: +10 for exporting
   updateLeadScore(10);
@@ -558,12 +553,7 @@ function exportCSV() {
 function downloadSampleCSV() {
   const csv = `Product Name,SKU Code,Category,Unit,Opening Stock,Loaded Quantity,Sold Quantity,Returned Good,Damaged/Expired,Free Sample,Rate,Credit Sales,Cash Sales,UPI Sales\n"Sample Product","SKU-001","FMCG","Box","10","50","42","5","1","0","500","5000","15000","1000"`;
   const blob = new Blob([csv], { type: 'text/csv' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'SalesOn-Van-Loading-Sample.csv';
-  if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click();
-  URL.revokeObjectURL(url);
+  SalesOnToolSafety.download(blob, 'SalesOn-Van-Loading-Sample.csv', 'csv');
 }
 
 /* ============================

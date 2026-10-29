@@ -11,7 +11,7 @@ class Group(HTMLParser):
   a=dict(a)
   if 'data-client-showcase' in a:self.groups.append(a['data-client-showcase'])
   if 'data-client' in a:self.ids.append(a['data-client'])
-  if t=='img' and '/assets/img/clients/master/' in a.get('src',''):self.images.append(a)
+  if t=='img' and any(folder in a.get('src','') for folder in ['/assets/img/clients/master/','/assets/img/clients/display/']):self.images.append(a)
 used=set()
 for p in m['pages']:
  route=p['page'];source=(W/(('index' if route=='homepage' else route)+'.html')).read_text();d=Group(source)

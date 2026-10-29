@@ -1,0 +1,49 @@
+name: Website checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  website:
+    name: Website regression checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: saleson
+    steps:
+      - name: Check out the complete baseline history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: saleson/package-lock.json
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: saleson/requirements-checks.txt
+      - name: Install locked Node dependencies
+        run: npm ci
+      - name: Install Python check dependencies
+        run: python -m pip install -r requirements-checks.txt
+      - name: Run the full website regression suite
+        run: npm run check
+      - name: Check patch whitespace
+        run: git diff --check

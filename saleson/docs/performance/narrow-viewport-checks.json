@@ -1,0 +1,86 @@
+[
+  {
+    "tool": "delivery-challan-generator",
+    "fonts": 1,
+    "h1": "Free Delivery Challan Generator for GST Goods Movement",
+    "viewport": 375,
+    "width": 375
+  },
+  {
+    "tool": "e-way-bill-checker",
+    "fonts": 1,
+    "h1": "Free E-Way Bill Requirement Checker",
+    "viewport": 375,
+    "width": 375
+  },
+  {
+    "tool": "gst-calculator",
+    "fonts": 1,
+    "h1": "Free GST Calculator for Indian Businesses",
+    "viewport": 375,
+    "width": 375
+  },
+  {
+    "tool": "gst-invoice-generator",
+    "fonts": 1,
+    "h1": "Free GST Invoice Generator for Indian Distributors & MSMEs",
+    "viewport": 375,
+    "width": 375
+  },
+  {
+    "tool": "hsn-sac-gst-rate-finder",
+    "fonts": 1,
+    "h1": "Free HSN Goods Heading Lookup",
+    "viewport": 375,
+    "width": 375
+  },
+  {
+    "tool": "outstanding-payment-tracker",
+    "fonts": 1,
+    "h1": "Free Outstanding Payment Tracker",
+    "viewport": 375,
+    "width": 375
+  },
+  {
+    "tool": "payment-receipt-generator",
+    "fonts": 1,
+    "h1": "Free Payment Receipt Generator",
+    "viewport": 375,
+    "width": 375
+  },
+  {
+    "tool": "purchase-order-generator",
+    "fonts": 1,
+    "h1": "Free Purchase Order Generator for Indian Businesses",
+    "viewport": 375,
+    "width": 375
+  },
+  {
+    "tool": "quotation-generator",
+    "fonts": 1,
+    "h1": "Free Quotation Generator for Indian Businesses",
+    "viewport": 375,
+    "width": 375
+  },
+  {
+    "tool": "stock-reorder-level-calculator",
+    "fonts": 1,
+    "h1": "Free Stock Reorder Level Calculator",
+    "viewport": 375,
+    "width": 375
+  },
+  {
+    "tool": "van-loading-sheet-generator",
+    "fonts": 1,
+    "h1": "Free Van Loading Sheet Generator",
+    "viewport": 375,
+    "width": 375
+  },
+  {
+    "tool": "whatsapp-payment-reminder-generator",
+    "fonts": 1,
+    "h1": "Free WhatsApp Payment Reminder Generator",
+    "viewport": 375,
+    "width": 375
+  }
+]

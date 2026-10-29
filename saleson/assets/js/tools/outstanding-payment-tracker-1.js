@@ -579,20 +579,14 @@ function executeAction(action, entryId) {
 ───────────────────────────────────────────── */
 function exportCSV(rows) {
   const headers = ['Party Name','Mobile','Invoice Number','Invoice Date','Due Date','Invoice Amount','Paid Amount','Adjustment','Balance Amount','Days Overdue','Ageing Bucket','Salesperson','Beat/Route','Next Follow-up','Status','Notes'];
-  const csv = [headers.join(','), ...rows.map(e => [
-    `"${e.party}"`, `"${e.mobile}"`, `"${e.invNum}"`,
-    formatDisplayDate(e.invDate), formatDisplayDate(e.dueDate),
-    e.invAmount, e.paidAmount, e.adjustment, e.balance,
-    e.daysOverdue, `"${e.ageing}"`, `"${e.salesperson}"`, `"${e.beat}"`,
-    formatDisplayDate(e.nextFollowup), e.status, `"${e.notes}"`
-  ].join(','))].join('\n');
+  const data = rows.map(e => [e.party,e.mobile,e.invNum,
+    formatDisplayDate(e.invDate),formatDisplayDate(e.dueDate),e.invAmount,
+    e.paidAmount,e.adjustment,e.balance,e.daysOverdue,e.ageing,e.salesperson,
+    e.beat,formatDisplayDate(e.nextFollowup),e.status,e.notes]);
+  const csv = [headers,...data].map(row=>row.map(value=>SalesOnToolSafety.csvCell(value)).join(',')).join('\r\n');
 
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-  const url  = URL.createObjectURL(blob);
-  const a    = document.createElement('a');
-  a.href = url; a.download = `Outstanding_${SalesOnDates.today()}.csv`;
-  document.body.appendChild(a); if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click(); document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+  SalesOnToolSafety.download(blob, `Outstanding_${SalesOnDates.today()}.csv`, 'csv');
   showToast('CSV download requested. Check your browser downloads.');
 }
 
@@ -601,11 +595,7 @@ function downloadSampleCSV() {
 Mohan Retail Store,9876543210,INV-2026-001,01/01/2026,15/01/2026,25000,12500,0,Ramesh,Boring Road,First reminder sent
 Kumar General Store,9876543211,INV-2026-002,05/01/2026,20/01/2026,18000,0,0,Suresh,Kankarbagh,`;
   const blob = new Blob([sample], {type:'text/csv;charset=utf-8;'});
-  const url  = URL.createObjectURL(blob);
-  const a    = document.createElement('a');
-  a.href=url; a.download='SalesOn_Outstanding_Sample.csv';
-  document.body.appendChild(a); if (window.SalesOnTracking) window.SalesOnTracking.emit('tool_download', {file_type:'csv'}); a.click(); document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+  SalesOnToolSafety.download(blob, 'SalesOn_Outstanding_Sample.csv', 'csv');
 }
 
 function openImport() { document.getElementById('importModal').classList.add('open'); }

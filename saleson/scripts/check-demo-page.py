@@ -25,4 +25,7 @@ assert sum(t=='a' and 'data-demo-direct' in a and a.get('href')=='https://zcal.c
 faq=next(d for d in p.jsons if d.get('@type')=='FAQPage')['mainEntity'];assert len(faq)==5
 for q in faq:assert q['name'] in s and q['acceptedAnswer']['text'] in s
 for phrase in ['zero errors','No Exceptions','1–2 days','1,100+ demos','Questions People Ask']:assert phrase not in s
+assert s.index('id="calCard"') < s.index('data-client-showcase="request-demo"')
+assert 'id="booking-loading" role="status"' in s
+assert 'Why attend the demo' in s and 'See SalesOn in action.' in s
 print('PASS: Demo title/canonical/indexing, booking destination, direct eager calendar iframe, fallback, unique IDs and visible FAQ/schema alignment.')

@@ -26,7 +26,7 @@ for page in m['pages']:
  s=re.sub(r'<section\b[^>]*class="(?:home-customers|se-trust|review-trust)"[^>]*>.*?</section>','',s,flags=re.S)
  block=markup(page)
  if route=='request-demo':
-  pattern=r'(<p class="demo-reassurance">.*?</p>)';assert re.search(pattern,s,re.S)
+  pattern=r'(<!-- BOOKING_SECTION:END -->)';assert re.search(pattern,s,re.S)
   s=re.sub(pattern,lambda x:x[1]+block,s,count=1,flags=re.S)
  else:
   main=re.search(r'<main\b[^>]*>',s);assert main,p

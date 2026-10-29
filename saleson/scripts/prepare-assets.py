@@ -13,6 +13,7 @@ subprocess.run([sys.executable,str(ROOT/'scripts/prepare-tracking-seo.py')],chec
 subprocess.run([sys.executable,str(ROOT/'scripts/optimize-media.py')],check=True)
 subprocess.run([sys.executable,str(ROOT/'scripts/prepare-page-assets.py')],check=True)
 subprocess.run([sys.executable,str(ROOT/'scripts/prepare-display-media.py')],check=True)
+subprocess.run([sys.executable,str(ROOT/'scripts/prepare-help-video-metadata.py')],check=True)
 manifest_path = ROOT / 'assets-manifest.json'
 previous = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
 pages = sorted((p for p in ROOT.rglob('*.html') if 'node_modules' not in p.parts))
@@ -90,3 +91,6 @@ xml='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.
 xml+=''.join('  <url><loc>'+escape(u)+'</loc></url>\n' for u in sorted(urls))+'</urlset>\n'
 (ROOT/'sitemap.xml').write_text(xml)
 print(f'Prepared {len(manifest)} versioned assets and {len(urls)} canonical sitemap URLs.')
+
+# Refresh descriptions after all page generators have run.
+subprocess.run([sys.executable, str(ROOT / "scripts/prepare-discovery.py")], check=True)

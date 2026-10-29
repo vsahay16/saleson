@@ -1,85 +1,104 @@
 # SalesOn
 
-> SalesOn provides sales and distribution management software for Indian businesses, with information about field sales, order taking, invoicing, delivery and related workflows.
+> SalesOn provides sales and distribution software for field teams, distributors and manufacturers.
 
-The product pages describe the paid software. The tools section contains standalone free business utilities. Refer to the linked pages for current capabilities, pricing and terms.
+Use linked pages for current capabilities, pricing, support and terms. Free tools are standalone business utilities; customer stories describe individual customer workflows.
+
+## Getting started and support
+
+- [SalesOn Help & Onboarding | Setup and Video Guides](https://saleson.co.in/help): Get started with SalesOn. Find setup and business review videos, attendance guidance, password recovery and help with products and routes.
+- [SalesOn Pricing | Pro & Enterprise Plans, No Setup Fee](https://saleson.co.in/pricing): Compare regional SalesOn Pro and Enterprise plans in INR or USD. Paid subscriptions start with 2 users. Calculate monthly or annual costs and check included workflows.
+- [Book a SalesOn Demo | 30-Min Live Walkthrough](https://saleson.co.in/request-demo): Book a 30-minute SalesOn demo for distributors and field sales teams. Get a role-based walkthrough, fit assessment and module recommendation.
 
 ## Product and company
 
-- [SalesOn](https://saleson.co.in/)
-- [About SalesOn](https://saleson.co.in/about)
-- [Field Attendance App for Sales Teams](https://saleson.co.in/attendance)
-- [Delivery Management Software India](https://saleson.co.in/delivery-management)
-- [Distributor Management System India](https://saleson.co.in/distribution-management-system)
-- [Expense Management Software for Field Sales Teams India](https://saleson.co.in/expense-management)
-- [Best Field Sales Management Software in India](https://saleson.co.in/field-sales)
-- [GST Invoicing Software India](https://saleson.co.in/invoicing)
-- [SalesOn Mobile App for Orders, GST Billing & DMS](https://saleson.co.in/mobile-app)
-- [Order Taking App for Salesman](https://saleson.co.in/order-taking-app)
-- [Pricing](https://saleson.co.in/pricing)
-- [Production Management Software India](https://saleson.co.in/production)
-- [Request a demo](https://saleson.co.in/request-demo)
-- [Salesman Tracking App & Software India](https://saleson.co.in/salesman-tracking)
-- [SalesOn vs Bizom, Zoho, Freshsales, Salesforce, Deltasales, Beatroute](https://saleson.co.in/saleson-vs-other-field-sales)
-- [Tally Integration Software India](https://saleson.co.in/tally-integration)
-- [Sales Target Tracking Software](https://saleson.co.in/target-meter)
-- [Van Sales Software India](https://saleson.co.in/van-sales)
+- [SalesOn | Sales and Distribution Software for Your Team](https://saleson.co.in/): Connect field sales, orders, stock, invoicing and collections with SalesOn. Explore workflows for distributors and manufacturers, compare plans and book a demo.
+- [About SalesOn | Distribution Software for Indian MSMEs](https://saleson.co.in/about): Learn about SalesOn by Swarnshlok Software Pvt. Ltd., built for Indian MSMEs, distributors, manufacturers, and field sales teams.
+- [Field Attendance App for Sales Teams | Photo & GPS Check-In | SalesOn](https://saleson.co.in/attendance): Track field staff attendance with photo and GPS check-ins, odometer logs, work hours and attendance reports for HR review. Free 7-day trial.
+- [Sales Efficiency & ROI Calculator | Identify Sales Leakage | SalesOn](https://saleson.co.in/calculators/sales-leakage-calculator): Calculate your sales efficiency, ROI, and revenue leakage instantly. Discover hidden sales losses and see how SalesOn’s sales automation improves productivity, tracking, and profitability.
+- [Delivery Management Software for Distributors | SalesOn](https://saleson.co.in/delivery-management): Assign confirmed-order shipments, manage driver trips, record proof of delivery and review reattempts with SalesOn delivery management software.
+- [Distributor Management System & Software | SalesOn](https://saleson.co.in/distribution-management-system): Connect secondary sales, multi-godown stock and customer balances with SalesOn distributor management software. Explore DMS for FMCG and distribution teams.
+- [Field Sales Expense Management Software & TA/DA | SalesOn](https://saleson.co.in/expense-management): Manage field sales expense claims, receipt photographs, TA/DA policy checks and manager approvals. Give finance approved records for reimbursement review.
+- [Field Sales Management Software | SalesOn](https://saleson.co.in/field-sales): Manage customer visits, routes, orders and daily activity with SalesOn field sales software and SFA app for FMCG, distributors and manufacturers. Book a demo.
+- [Field Sales Quiz | SalesOn](https://saleson.co.in/guide/quiz-pro): Test your field sales knowledge with the SalesOn quiz. Practise everyday sales decisions in English and Indian languages, with feedback after each answer.
+- [Inventory management software for distributors | SalesOn](https://saleson.co.in/inventory-management): Review product stock by godown, configured batch and expiry records, and the stock context behind ordering, billing and van operations.
+- [GST Invoicing Software for Distributors & Manufacturers | SalesOn](https://saleson.co.in/invoicing): Create sales invoices, review GST and totals, share PDFs on WhatsApp, print supported formats and apply credit notes. Built for distributor and manufacturer billing teams.
+- [SalesOn Mobile App for Orders, GST Billing & DMS](https://saleson.co.in/mobile-app): SalesOn mobile app helps field teams manage order taking, GST billing workflows, payment collection, salesman tracking, van sales and DMS.
+- [Order Taking App for Salesman | SalesOn](https://saleson.co.in/order-taking-app): Take distributor orders faster with SKU search, auto-applied schemes, customer-wise pricing, credit checks.
+- [Interested in partnering with SalesOn? | SalesOn](https://saleson.co.in/partner): Our partner programme is not yet live. Email your interest so the team can discuss the opportunity and confirm terms when available.
+- [Payment Collection Software India | SalesOn](https://saleson.co.in/payment-collection): Track outstanding invoices, record UPI, cash and cheque collections, manage credit limits, and prepare clean receipt reports for accounts.
+- [Production Management Software for Manufacturers | SalesOn](https://saleson.co.in/production): Manage multi-level BOMs, work orders, raw material use, batch costs and finished goods with SalesOn production management software. Book a manufacturing demo.
+- [Salesman Tracking App & Software India | SalesOn](https://saleson.co.in/salesman-tracking): View your sales team’s latest locations, date-wise routes, distance, field time and activity logs. For distributor and manufacturer sales managers.
+- [Tally Integration Software for Distributors & Manufacturers | SalesOn](https://saleson.co.in/tally-integration): Connect SalesOn with Tally for sales vouchers, receipts and master data. Review sync directions, ledger mapping and accounting exceptions with your team.
+- [Sales Target Tracking Software for Manufacturers | SalesOn](https://saleson.co.in/target-meter): Track sales targets, territory achievement, product-category goals and incentive progress with SalesOn Target Meter. For distributors, manufacturers and their sales teams.
+- [Van Sales Software for India, UAE & Oman | SalesOn](https://saleson.co.in/van-sales): Manage ready-stock van sales with vehicle-wise stock, outlet billing, payments, returns and day-end review. For distributors and manufacturers in India and the Middle East.
 
 ## Industries and business use cases
 
-- [SalesOn - ERP for agriculture industry](https://saleson.co.in/industries/agriculture)
-- [SalesOn - ERP for automotive industry](https://saleson.co.in/industries/automotive)
-- [SalesOn - ERP for cosmetic industry](https://saleson.co.in/industries/cosmetic)
-- [SalesOn - ERP for electronics industry](https://saleson.co.in/industries/electronics)
-- [SalesOn - ERP for fmcg industry](https://saleson.co.in/industries/fmcg)
-- [SalesOn - ERP for hardware industry](https://saleson.co.in/industries/hardware)
-- [SalesOn - ERP for manufacturing industry](https://saleson.co.in/industries/manufacturing)
-- [SalesOn - ERP for pharmacy industry](https://saleson.co.in/industries/pharmacy)
-- [SalesOn - ERP for publishing industry](https://saleson.co.in/industries/publishing)
-- [SalesOn - ERP for sport&fitness industry](https://saleson.co.in/industries/sport-and-fitness)
-- [SalesOn - ERP for telecommunication industry](https://saleson.co.in/industries/telecommunication)
-- [SalesOn - ERP for transport industry](https://saleson.co.in/industries/transport)
-- [Software for distributors - SalesOn](https://saleson.co.in/user/software-for-distributors)
-- [Manufacturing Management Software](https://saleson.co.in/user/software-for-manufacturers)
-- [Best Distributor Management System in India](https://saleson.co.in/user/software-for-retailers)
+- [Agricultural distribution sales software | SalesOn](https://saleson.co.in/industries/agriculture): For agricultural distributors organising dealer visits, product orders and collections while checking availability before fulfilment.
+- [Automotive parts distribution software | SalesOn](https://saleson.co.in/industries/automotive): For automotive parts distributors connecting dealer visits, product selection, customer prices and delivery follow-up.
+- [Cosmetics distribution sales software | SalesOn](https://saleson.co.in/industries/cosmetic): For cosmetics distributors managing outlet orders across product ranges, customer-specific prices and follow-up collections.
+- [Electronics distribution sales software | SalesOn](https://saleson.co.in/industries/electronics): For electronics distributors reviewing dealer orders, SKU availability, customer prices and outstanding balances.
+- [FMCG sales and distribution software | SalesOn](https://saleson.co.in/industries/fmcg): For FMCG distributors reviewing repeat outlet orders, customer prices, schemes and collections across a busy sales day.
+- [Hardware distribution sales software | SalesOn](https://saleson.co.in/industries/hardware): For hardware distributors capturing dealer orders, checking customer prices and following supply from the godown.
+- [Manufacturer-to-distributor order workflow | SalesOn](https://saleson.co.in/industries/manufacturing): A worked operating example for a manufacturer supplying distributors. For the broader buying decision, use our manufacturer software page; factory work orders and costing are covered by Production.
+- [Pharmaceutical distribution sales software | SalesOn](https://saleson.co.in/industries/pharmacy): For pharmaceutical distributors evaluating chemist/dealer orders, customer balances and configured batch or expiry records. This is a distribution workflow, not a retail-pharmacy compliance claim.
+- [Publishing distribution sales software | SalesOn](https://saleson.co.in/industries/publishing): For publishers and publication distributors evaluating dealer orders, catalogue items, stock availability and customer dues.
+- [Sports and fitness equipment distribution software | SalesOn](https://saleson.co.in/industries/sport-and-fitness): For distributors selling sports equipment or fitness products to dealers and business customers, with an office team reviewing stock and billing.
+- [Telecom product distribution sales software | SalesOn](https://saleson.co.in/industries/telecommunication): For distributors supplying telecom products through dealers and outlets, with field reps collecting demand and the office managing the sale.
+- [Delivery operations software for transport teams | SalesOn](https://saleson.co.in/industries/transport): For businesses evaluating the delivery part of their sales operation: assigning responsibility, following shipments and reviewing delivery exceptions.
+- [Sales and distribution software for distributors | SalesOn](https://saleson.co.in/user/software-for-distributors): Connect outlet orders, stock review, billing and collections. Choose the workflows your reps and office need to run together.
+- [Sales and distribution software for manufacturers | SalesOn](https://saleson.co.in/user/software-for-manufacturers): For manufacturers choosing how to connect distributor orders, finished-goods stock, billing and collections—with Production available for factory work orders and costing.
+- [Orders and billing software for retailers | SalesOn](https://saleson.co.in/user/software-for-retailers): Evaluate customer orders, invoice sharing and printing, stock review and payment records for your retail business. Confirm counter/POS requirements in a demo.
 
-## Comparisons and articles
+## Customer stories
 
-- [Blog page](https://saleson.co.in/blogs)
-- [How Online Marketplaces Are Disrupting Traditional Distribution Channels](https://saleson.co.in/blogs/How-Online-Marketplaces-Are-Disrupting-Traditional-Distribution-Channels)
-- [How to Optimize Your Distribution Channels for Maximum Profit](https://saleson.co.in/blogs/How-to-Optimize-Your-Distribution-Channels-for-Maximum-Profit)
-- [How Workflow Automation Enhances Team Collaboration in Sales](https://saleson.co.in/blogs/How-workflow-automation-enhances-team-collaboration-in-sales)
-- [Reducing Sales Admin Time with Automation: Tips for 2024](https://saleson.co.in/blogs/Reducing-Sales-Admin-Time-with-Automation-Tips-for-2024)
-- [The Tech Behind the Wheel: Electronics in Modern Van Sales](https://saleson.co.in/blogs/The-Tech-Behind-the-Wheel-Electronics-in-Modern-Van-Sales)
-- [The Top 5 Sales Challenges B2B Companies Face](https://saleson.co.in/blogs/The-Top-5-Sales-Challenges-B2B-Companies-Face)
-- [Top Benefits of Automatic Invoicing for B2B Businesses](https://saleson.co.in/blogs/Top-Benefits-of-Automatic-Invoicing-for-B2B-Businesses)
-- [Top Sales Strategies for Small Businesses in 2024](https://saleson.co.in/blogs/Top-Sales-Strategies-for-Small-Businesses-in-2024)
-- [Why Van Sales Are Essential for Modern B2B Supply Chains](https://saleson.co.in/blogs/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains)
-- [SalesOn - BeatRoute Alternative](https://saleson.co.in/compare/beatroute-alternative)
-- [SalesOn - Bizom Alternative](https://saleson.co.in/compare/bizom-alternative)
-- [SalesOn and Delta Sales comparison](https://saleson.co.in/compare/deltasales-alternative)
-- [SalesOn - Freshsales Alternative](https://saleson.co.in/compare/freshsales-alternative)
-- [SalesOn - Salesforce Alternative](https://saleson.co.in/compare/salesforce-alternative)
-- [SalesOn - Zoho Alternative](https://saleson.co.in/compare/zoho-alternative)
+- [How Lapcare uses SalesOn | Customer Story](https://saleson.co.in/customers/Lapcare): Explore Lapcare’s SalesOn field sales and order workflows, connecting the sales team with the office.
+
+## Comparisons
+
+- [SalesOn vs BeatRoute: Practical Workflows or AI-led Execution?](https://saleson.co.in/compare/beatroute-alternative): SalesOn makes a small-team operational start accessible. BeatRoute’s proposition adds goal-driven execution and AI agents across retail distribution. Compare the work you need today and the automation you will actually use.
+- [SalesOn vs Bizom: MSME Costs and Distribution Workflows](https://saleson.co.in/compare/bizom-alternative): Compare the cost and operating scope of a small distribution team with the requirements of a brand managing a larger channel network.
+- [SalesOn vs Delta Sales App: Field Operations and Team Cost](https://saleson.co.in/compare/deltasales-alternative): Both products address field teams, orders and collections. The useful comparison is the office handover, connectivity, included modules and total team cost—not a generic list of green ticks.
+- [SalesOn vs Freshsales: Distributor Operations or Sales CRM?](https://saleson.co.in/compare/freshsales-alternative): Choose around the job: organising prospects and sales conversations, or connecting field orders, billing and collection records for a distribution business.
+- [SalesOn vs Salesforce: Distribution Workflow and CRM Scope](https://saleson.co.in/compare/salesforce-alternative): An MSME buying its daily operating software and a business building a customised CRM programme have different briefs. Compare the required scope before judging price or implementation.
+- [SalesOn vs Zoho CRM: Free CRM or Distribution Operations?](https://saleson.co.in/compare/zoho-alternative): A small team may need contact follow-up, a distribution operating workflow, or both. Zoho CRM’s free entry and paid inventory capabilities deserve a fair comparison with SalesOn’s two-user plans.
+- [Compare SalesOn Alternatives: Distribution Platforms and CRMs](https://saleson.co.in/saleson-vs-other-field-sales): Compare SalesOn with Bizom, BeatRoute, Delta Sales App, Freshsales, Salesforce and Zoho CRM by business fit, team cost and scope.
+
+## Articles
+
+- [SalesOn Blog | Sales and Distribution Guides](https://saleson.co.in/blogs): Read practical guides on field sales, distribution, invoicing, van sales and team management. Explore ideas and related SalesOn workflows for your business.
+- [How Online Marketplaces Are Disrupting Traditional Distribution Channels](https://saleson.co.in/blogs/How-Online-Marketplaces-Are-Disrupting-Traditional-Distribution-Channels): Explore how online marketplaces affect traditional distribution, customer reach and channel choices, with practical considerations for distributors and SMEs.
+- [How Real-Time Sales Tracking Boosts Productivity and Transparency](https://saleson.co.in/blogs/How-Real-Time-Sales-Tracking-Boosts-Productivity-and-Transparency): Learn how shared sales activity records can help managers review field work, follow customer visits and improve communication across a distributed sales team.
+- [How to Optimize Your Distribution Channels for Maximum Profit](https://saleson.co.in/blogs/How-to-Optimize-Your-Distribution-Channels-for-Maximum-Profit): Review your distribution channels, identify operational gaps and consider ways to improve customer coverage, inventory coordination and sales performance.
+- [How Workflow Automation Enhances Team Collaboration in Sales](https://saleson.co.in/blogs/How-workflow-automation-enhances-team-collaboration-in-sales): Explore how workflow automation connects sales activity, office handovers and team updates, helping reduce repeated data entry and missed communication.
+- [Reducing Sales Admin Time with Automation: Tips for 2024](https://saleson.co.in/blogs/Reducing-Sales-Admin-Time-with-Automation-Tips-for-2024): Read the 2024 guide to reducing sales administration through workflow automation, organised records and clearer handovers between field and office teams.
+- [Sales Force Tracking: Privacy, Performance, and the Path to Trust](https://saleson.co.in/blogs/Sales-Force-Tracking-Privac-Performance-and-the-Path-to-Trust): Consider employee privacy, performance review and transparency when introducing sales force tracking, with an emphasis on clear expectations and team trust.
+- [The Tech Behind the Wheel: Electronics in Modern Van Sales](https://saleson.co.in/blogs/The-Tech-Behind-the-Wheel-Electronics-in-Modern-Van-Sales): Explore the technology behind van sales, including mobile records, route information and connected stock and billing workflows for distribution teams.
+- [The Top 5 Sales Challenges B2B Companies Face](https://saleson.co.in/blogs/The-Top-5-Sales-Challenges-B2B-Companies-Face): Review five common B2B sales challenges and how clearer sales records, workflow automation and team coordination can support day-to-day sales management.
+- [Top Benefits of Automatic Invoicing for B2B Businesses](https://saleson.co.in/blogs/Top-Benefits-of-Automatic-Invoicing-for-B2B-Businesses): Explore automatic invoicing for B2B sales, including billing consistency, reduced repeated entry and clearer handovers between sales and accounts teams.
+- [Top Sales Strategies for Small Businesses in 2024](https://saleson.co.in/blogs/Top-Sales-Strategies-for-Small-Businesses-in-2024): Read the 2024 guide to small-business sales strategies, including team coordination, customer information and practical uses of sales workflow automation.
+- [Tracking Industrial Success with Target Meters and Visual KPIs](https://saleson.co.in/blogs/Tracking-Industrial-Success-with-Target-Meters-and-Visual-KPIs): Learn how target meters and visual KPIs can help teams review progress, discuss performance gaps and connect sales activity with clearly defined goals.
+- [Why Van Sales Are Essential for Modern B2B Supply Chains](https://saleson.co.in/blogs/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains): Explore where van sales fits in B2B distribution, including ready-stock selling, outlet billing and the handover of route stock and collections.
 
 ## Free business tools
 
-- [Free GST, Billing, Inventory & Business Tools](https://saleson.co.in/tools)
-- [Free Delivery Challan Generator under GST](https://saleson.co.in/tools/delivery-challan-generator)
-- [Free E-Way Bill Requirement Checker](https://saleson.co.in/tools/e-way-bill-checker)
-- [Free GST Calculator Online for Indian Businesses](https://saleson.co.in/tools/gst-calculator)
-- [Free GST Invoice Generator for Indian Businesses](https://saleson.co.in/tools/gst-invoice-generator)
-- [Free HSN/SAC Code & GST Rate Finder](https://saleson.co.in/tools/hsn-sac-gst-rate-finder)
-- [Free Outstanding Payment Tracker for Businesses](https://saleson.co.in/tools/outstanding-payment-tracker)
-- [Free Payment Receipt Generator for India](https://saleson.co.in/tools/payment-receipt-generator)
-- [Free Purchase Order Generator for India](https://saleson.co.in/tools/purchase-order-generator)
-- [Free Quotation Generator for Indian Businesses](https://saleson.co.in/tools/quotation-generator)
-- [Free Stock Reorder Level Calculator](https://saleson.co.in/tools/stock-reorder-level-calculator)
-- [Free Van Loading Sheet Generator for Distributors](https://saleson.co.in/tools/van-loading-sheet-generator)
-- [Free WhatsApp Payment Reminder Generator](https://saleson.co.in/tools/whatsapp-payment-reminder-generator)
+- [Free GST, Billing, Inventory & Business Tools | SalesOn](https://saleson.co.in/tools): Create GST invoices, quotations, challans, receipts, purchase orders, GST calculators, stock trackers and van loading sheets. Free tools by SalesOn.
+- [Free Delivery Challan Generator under GST | SalesOn](https://saleson.co.in/tools/delivery-challan-generator): Create delivery challans for stock transfer, job work, dispatch, van loading and GST goods movement with triplicate copies and PDF download.
+- [Free E-Way Bill Requirement Checker | SalesOn](https://saleson.co.in/tools/e-way-bill-checker): Check whether an e-way bill may be required for GST goods movement based on value, state, document type and dispatch reason. Free tool by SalesOn.
+- [Free GST Calculator Online for Indian Businesses | SalesOn](https://saleson.co.in/tools/gst-calculator): Calculate GST inclusive and exclusive amounts, CGST, SGST, IGST, taxable value, invoice totals and reverse GST. Free tool by SalesOn.
+- [Free GST Invoice Generator for Indian Businesses | SalesOn](https://saleson.co.in/tools/gst-invoice-generator): Create GST invoices with GSTIN, HSN/SAC, CGST, SGST, IGST, logo, item table and PDF download. Free tool for Indian MSMEs by SalesOn.
+- [HSN Goods Heading Lookup | SalesOn](https://saleson.co.in/tools/hsn-sac-gst-rate-finder): Search 28 goods-heading candidates. Verify the exact classification and GST rate before using an invoice or quotation. No service/SAC or automatic rate lookup.
+- [Free Outstanding Payment Tracker for Businesses | SalesOn](https://saleson.co.in/tools/outstanding-payment-tracker): Track pending payments, overdue invoices, ageing buckets, party-wise outstanding and WhatsApp reminders. Free collection tracker by SalesOn.
+- [Free Payment Receipt Generator for India | SalesOn](https://saleson.co.in/tools/payment-receipt-generator): Create payment receipts for cash, UPI, bank transfer, cheque, advance, partial payments and outstanding balance. Free PDF tool by SalesOn.
+- [Free Purchase Order Generator for India | SalesOn](https://saleson.co.in/tools/purchase-order-generator): Create purchase orders with vendor details, item list, GST, delivery terms, payment terms, approval section and PDF download. Free tool by SalesOn.
+- [Free Quotation Generator for Indian Businesses | SalesOn](https://saleson.co.in/tools/quotation-generator): Create professional quotations and estimates with GST, logo, item pricing, validity date, payment terms and PDF download. Free tool by SalesOn.
+- [Free Stock Reorder Level Calculator | SalesOn](https://saleson.co.in/tools/stock-reorder-level-calculator): Calculate reorder level, reorder quantity, safety stock, days of stock remaining and stock-out risk for SKUs. Free inventory tool by SalesOn.
+- [Free Van Loading Sheet Generator for Distributors | SalesOn](https://saleson.co.in/tools/van-loading-sheet-generator): Create van loading sheets, route stock records, EOD reconciliation, returns summary and collection summary. Free van sales tool by SalesOn.
+- [Free WhatsApp Payment Reminder Generator | SalesOn](https://saleson.co.in/tools/whatsapp-payment-reminder-generator): Generate polite WhatsApp payment reminders for pending invoices, overdue payments, partial payments and credit customers. Free tool by SalesOn.
 
 ## Policies
 
-- [Privacy Policy](https://saleson.co.in/privacy-policy)
-- [Cancellation & Refund Policy](https://saleson.co.in/refund)
-- [Terms of Use](https://saleson.co.in/terms)
+- [SalesOn Privacy Policy | Data and Support Contacts](https://saleson.co.in/privacy-policy): How SalesOn handles information across its website and app, including analytics, browser-saved tool drafts, enquiries and external demo scheduling.
+- [Cancellation & Refund Policy | SalesOn](https://saleson.co.in/refund): Read SalesOn's Cancellation and Refund Policy — eligibility, timelines, and terms for subscription cancellations and refunds.
+- [Terms of Use | SalesOn](https://saleson.co.in/terms): Read SalesOn's Terms of Use — the terms governing use of the SalesOn app and website by Swarnshlok Software Pvt. Ltd.

@@ -1,0 +1,865 @@
+[
+  {
+    "page": "request-demo.html",
+    "url": "https://saleson-eta.vercel.app/request-demo",
+    "final_url": "https://saleson-eta.vercel.app/request-demo",
+    "status": 200,
+    "ttfb_s": 5.535,
+    "total_s": 5.58,
+    "html_transfer_bytes": 4144,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "partner.html",
+    "url": "https://saleson-eta.vercel.app/partner",
+    "final_url": "https://saleson-eta.vercel.app/partner",
+    "status": 200,
+    "ttfb_s": 5.53,
+    "total_s": 5.531,
+    "html_transfer_bytes": 2374,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "target-meter.html",
+    "url": "https://saleson-eta.vercel.app/target-meter",
+    "final_url": "https://saleson-eta.vercel.app/target-meter",
+    "status": 200,
+    "ttfb_s": 5.396,
+    "total_s": 5.439,
+    "html_transfer_bytes": 6117,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "payment-collection.html",
+    "url": "https://saleson-eta.vercel.app/payment-collection",
+    "final_url": "https://saleson-eta.vercel.app/payment-collection",
+    "status": 200,
+    "ttfb_s": 5.55,
+    "total_s": 5.594,
+    "html_transfer_bytes": 6999,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "field-sales.html",
+    "url": "https://saleson-eta.vercel.app/field-sales",
+    "final_url": "https://saleson-eta.vercel.app/field-sales",
+    "status": 200,
+    "ttfb_s": 5.492,
+    "total_s": 5.492,
+    "html_transfer_bytes": 6601,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "salesman-tracking.html",
+    "url": "https://saleson-eta.vercel.app/salesman-tracking",
+    "final_url": "https://saleson-eta.vercel.app/salesman-tracking",
+    "status": 200,
+    "ttfb_s": 5.477,
+    "total_s": 5.525,
+    "html_transfer_bytes": 6464,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "attendance.html",
+    "url": "https://saleson-eta.vercel.app/attendance",
+    "final_url": "https://saleson-eta.vercel.app/attendance",
+    "status": 200,
+    "ttfb_s": 5.523,
+    "total_s": 5.565,
+    "html_transfer_bytes": 5811,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "mobile-app.html",
+    "url": "https://saleson-eta.vercel.app/mobile-app",
+    "final_url": "https://saleson-eta.vercel.app/mobile-app",
+    "status": 200,
+    "ttfb_s": 5.527,
+    "total_s": 5.527,
+    "html_transfer_bytes": 6308,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "privacy-policy.html",
+    "url": "https://saleson-eta.vercel.app/privacy-policy",
+    "final_url": "https://saleson-eta.vercel.app/privacy-policy",
+    "status": 200,
+    "ttfb_s": 4.111,
+    "total_s": 4.152,
+    "html_transfer_bytes": 6786,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "inventory-management.html",
+    "url": "https://saleson-eta.vercel.app/inventory-management",
+    "final_url": "https://saleson-eta.vercel.app/inventory-management",
+    "status": 200,
+    "ttfb_s": 3.999,
+    "total_s": 4.041,
+    "html_transfer_bytes": 3503,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "about.html",
+    "url": "https://saleson-eta.vercel.app/about",
+    "final_url": "https://saleson-eta.vercel.app/about",
+    "status": 200,
+    "ttfb_s": 3.977,
+    "total_s": 3.977,
+    "html_transfer_bytes": 4096,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "production.html",
+    "url": "https://saleson-eta.vercel.app/production",
+    "final_url": "https://saleson-eta.vercel.app/production",
+    "status": 200,
+    "ttfb_s": 3.967,
+    "total_s": 4.009,
+    "html_transfer_bytes": 6139,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "distribution-management-system.html",
+    "url": "https://saleson-eta.vercel.app/distribution-management-system",
+    "final_url": "https://saleson-eta.vercel.app/distribution-management-system",
+    "status": 200,
+    "ttfb_s": 3.999,
+    "total_s": 3.999,
+    "html_transfer_bytes": 5400,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "terms.html",
+    "url": "https://saleson-eta.vercel.app/terms",
+    "final_url": "https://saleson-eta.vercel.app/terms",
+    "status": 200,
+    "ttfb_s": 3.933,
+    "total_s": 3.98,
+    "html_transfer_bytes": 8510,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "blogs.html",
+    "url": "https://saleson-eta.vercel.app/blogs",
+    "final_url": "https://saleson-eta.vercel.app/blogs",
+    "status": 200,
+    "ttfb_s": 3.911,
+    "total_s": 3.956,
+    "html_transfer_bytes": 4084,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "index.html",
+    "url": "https://saleson-eta.vercel.app/",
+    "final_url": "https://saleson-eta.vercel.app/",
+    "status": 200,
+    "ttfb_s": 3.836,
+    "total_s": 3.836,
+    "html_transfer_bytes": 6260,
+    "encoding": "gzip",
+    "cache": "HIT"
+  },
+  {
+    "page": "delivery-management.html",
+    "url": "https://saleson-eta.vercel.app/delivery-management",
+    "error": "<urlopen error timed out>",
+    "retry": {
+      "status": 200,
+      "final_url": "https://saleson-eta.vercel.app/delivery-management",
+      "ttfb_s": 3.92,
+      "total_s": 3.961,
+      "html_transfer_bytes": 6176,
+      "encoding": "gzip"
+    }
+  },
+  {
+    "page": "expense-management.html",
+    "url": "https://saleson-eta.vercel.app/expense-management",
+    "error": "<urlopen error timed out>",
+    "retry": {
+      "status": 200,
+      "final_url": "https://saleson-eta.vercel.app/expense-management",
+      "ttfb_s": 3.965,
+      "total_s": 4.008,
+      "html_transfer_bytes": 5480,
+      "encoding": "gzip"
+    }
+  },
+  {
+    "page": "van-sales.html",
+    "url": "https://saleson-eta.vercel.app/van-sales",
+    "error": "<urlopen error timed out>",
+    "retry": {
+      "status": 200,
+      "final_url": "https://saleson-eta.vercel.app/van-sales",
+      "ttfb_s": 3.951,
+      "total_s": 3.951,
+      "html_transfer_bytes": 6685,
+      "encoding": "gzip"
+    }
+  },
+  {
+    "page": "tally-integration.html",
+    "url": "https://saleson-eta.vercel.app/tally-integration",
+    "error": "<urlopen error timed out>",
+    "retry": {
+      "status": 200,
+      "final_url": "https://saleson-eta.vercel.app/tally-integration",
+      "ttfb_s": 4.282,
+      "total_s": 4.282,
+      "html_transfer_bytes": 6046,
+      "encoding": "gzip"
+    }
+  },
+  {
+    "page": "invoicing.html",
+    "url": "https://saleson-eta.vercel.app/invoicing",
+    "error": "<urlopen error timed out>",
+    "retry": {
+      "status": 200,
+      "final_url": "https://saleson-eta.vercel.app/invoicing",
+      "ttfb_s": 4.319,
+      "total_s": 4.36,
+      "html_transfer_bytes": 6051,
+      "encoding": "gzip"
+    }
+  },
+  {
+    "page": "pricing.html",
+    "url": "https://saleson-eta.vercel.app/pricing",
+    "error": "<urlopen error timed out>",
+    "retry": {
+      "status": 200,
+      "final_url": "https://saleson-eta.vercel.app/pricing",
+      "ttfb_s": 4.165,
+      "total_s": 4.208,
+      "html_transfer_bytes": 4724,
+      "encoding": "gzip"
+    }
+  },
+  {
+    "page": "refund.html",
+    "url": "https://saleson-eta.vercel.app/refund",
+    "error": "<urlopen error timed out>",
+    "retry": {
+      "status": 200,
+      "final_url": "https://saleson-eta.vercel.app/refund",
+      "ttfb_s": 3.317,
+      "total_s": 3.317,
+      "html_transfer_bytes": 3664,
+      "encoding": "gzip"
+    }
+  },
+  {
+    "page": "saleson-vs-other-field-sales.html",
+    "url": "https://saleson-eta.vercel.app/saleson-vs-other-field-sales",
+    "error": "<urlopen error timed out>",
+    "retry": {
+      "status": 200,
+      "final_url": "https://saleson-eta.vercel.app/saleson-vs-other-field-sales",
+      "ttfb_s": 3.345,
+      "total_s": 3.345,
+      "html_transfer_bytes": 2966,
+      "encoding": "gzip"
+    }
+  },
+  {
+    "page": "404.html",
+    "url": "https://saleson-eta.vercel.app/404",
+    "final_url": "https://saleson-eta.vercel.app/404",
+    "status": 200,
+    "ttfb_s": 0.743,
+    "total_s": 0.743,
+    "html_transfer_bytes": 2449,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "order-taking-app.html",
+    "url": "https://saleson-eta.vercel.app/order-taking-app",
+    "final_url": "https://saleson-eta.vercel.app/order-taking-app",
+    "status": 200,
+    "ttfb_s": 0.725,
+    "total_s": 0.725,
+    "html_transfer_bytes": 14944,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "user/software-for-retailers.html",
+    "url": "https://saleson-eta.vercel.app/user/software-for-retailers",
+    "final_url": "https://saleson-eta.vercel.app/user/software-for-retailers",
+    "status": 200,
+    "ttfb_s": 0.589,
+    "total_s": 0.632,
+    "html_transfer_bytes": 3336,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "user/software-for-distributors.html",
+    "url": "https://saleson-eta.vercel.app/user/software-for-distributors",
+    "final_url": "https://saleson-eta.vercel.app/user/software-for-distributors",
+    "status": 200,
+    "ttfb_s": 0.598,
+    "total_s": 0.645,
+    "html_transfer_bytes": 3335,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "user/software-for-manufacturers.html",
+    "url": "https://saleson-eta.vercel.app/user/software-for-manufacturers",
+    "final_url": "https://saleson-eta.vercel.app/user/software-for-manufacturers",
+    "status": 200,
+    "ttfb_s": 0.614,
+    "total_s": 0.657,
+    "html_transfer_bytes": 3349,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "guide/quiz-pro.html",
+    "url": "https://saleson-eta.vercel.app/guide/quiz-pro",
+    "final_url": "https://saleson-eta.vercel.app/guide/quiz-pro",
+    "status": 200,
+    "ttfb_s": 0.634,
+    "total_s": 0.634,
+    "html_transfer_bytes": 2255,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "industries/hardware.html",
+    "url": "https://saleson-eta.vercel.app/industries/hardware",
+    "final_url": "https://saleson-eta.vercel.app/industries/hardware",
+    "status": 200,
+    "ttfb_s": 0.562,
+    "total_s": 0.562,
+    "html_transfer_bytes": 2916,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "industries/publishing.html",
+    "url": "https://saleson-eta.vercel.app/industries/publishing",
+    "final_url": "https://saleson-eta.vercel.app/industries/publishing",
+    "status": 200,
+    "ttfb_s": 0.534,
+    "total_s": 0.577,
+    "html_transfer_bytes": 2772,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "industries/telecommunication.html",
+    "url": "https://saleson-eta.vercel.app/industries/telecommunication",
+    "final_url": "https://saleson-eta.vercel.app/industries/telecommunication",
+    "status": 200,
+    "ttfb_s": 3.634,
+    "total_s": 3.678,
+    "html_transfer_bytes": 2863,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "industries/transport.html",
+    "url": "https://saleson-eta.vercel.app/industries/transport",
+    "final_url": "https://saleson-eta.vercel.app/industries/transport",
+    "status": 200,
+    "ttfb_s": 3.642,
+    "total_s": 3.642,
+    "html_transfer_bytes": 2761,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "industries/automotive.html",
+    "url": "https://saleson-eta.vercel.app/industries/automotive",
+    "final_url": "https://saleson-eta.vercel.app/industries/automotive",
+    "status": 200,
+    "ttfb_s": 3.651,
+    "total_s": 3.651,
+    "html_transfer_bytes": 2784,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "industries/agriculture.html",
+    "url": "https://saleson-eta.vercel.app/industries/agriculture",
+    "final_url": "https://saleson-eta.vercel.app/industries/agriculture",
+    "status": 200,
+    "ttfb_s": 3.589,
+    "total_s": 3.632,
+    "html_transfer_bytes": 2915,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "industries/pharmacy.html",
+    "url": "https://saleson-eta.vercel.app/industries/pharmacy",
+    "final_url": "https://saleson-eta.vercel.app/industries/pharmacy",
+    "status": 200,
+    "ttfb_s": 3.667,
+    "total_s": 3.667,
+    "html_transfer_bytes": 2921,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "industries/cosmetic.html",
+    "url": "https://saleson-eta.vercel.app/industries/cosmetic",
+    "final_url": "https://saleson-eta.vercel.app/industries/cosmetic",
+    "status": 200,
+    "ttfb_s": 3.581,
+    "total_s": 3.624,
+    "html_transfer_bytes": 2975,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "industries/electronics.html",
+    "url": "https://saleson-eta.vercel.app/industries/electronics",
+    "final_url": "https://saleson-eta.vercel.app/industries/electronics",
+    "status": 200,
+    "ttfb_s": 3.612,
+    "total_s": 3.612,
+    "html_transfer_bytes": 2949,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "industries/fmcg.html",
+    "url": "https://saleson-eta.vercel.app/industries/fmcg",
+    "final_url": "https://saleson-eta.vercel.app/industries/fmcg",
+    "status": 200,
+    "ttfb_s": 3.524,
+    "total_s": 3.568,
+    "html_transfer_bytes": 2992,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "industries/manufacturing.html",
+    "url": "https://saleson-eta.vercel.app/industries/manufacturing",
+    "final_url": "https://saleson-eta.vercel.app/industries/manufacturing",
+    "status": 200,
+    "ttfb_s": 3.723,
+    "total_s": 3.723,
+    "html_transfer_bytes": 3046,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "industries/sport-and-fitness.html",
+    "url": "https://saleson-eta.vercel.app/industries/sport-and-fitness",
+    "final_url": "https://saleson-eta.vercel.app/industries/sport-and-fitness",
+    "status": 200,
+    "ttfb_s": 3.737,
+    "total_s": 3.784,
+    "html_transfer_bytes": 2761,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "blogs/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains.html",
+    "url": "https://saleson-eta.vercel.app/blogs/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains",
+    "final_url": "https://saleson-eta.vercel.app/blogs/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains",
+    "status": 200,
+    "ttfb_s": 3.703,
+    "total_s": 3.703,
+    "html_transfer_bytes": 4223,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "blogs/Sales-Force-Tracking-Privac-Performance-and-the-Path-to-Trust.html",
+    "url": "https://saleson-eta.vercel.app/blogs/Sales-Force-Tracking-Privac-Performance-and-the-Path-to-Trust",
+    "final_url": "https://saleson-eta.vercel.app/blogs/Sales-Force-Tracking-Privac-Performance-and-the-Path-to-Trust",
+    "status": 200,
+    "ttfb_s": 3.739,
+    "total_s": 3.739,
+    "html_transfer_bytes": 4520,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "blogs/Tracking-Industrial-Success-with-Target-Meters-and-Visual-KPIs.html",
+    "url": "https://saleson-eta.vercel.app/blogs/Tracking-Industrial-Success-with-Target-Meters-and-Visual-KPIs",
+    "final_url": "https://saleson-eta.vercel.app/blogs/Tracking-Industrial-Success-with-Target-Meters-and-Visual-KPIs",
+    "status": 200,
+    "ttfb_s": 3.671,
+    "total_s": 3.711,
+    "html_transfer_bytes": 4354,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "blogs/The-Top-5-Sales-Challenges-B2B-Companies-Face.html",
+    "url": "https://saleson-eta.vercel.app/blogs/The-Top-5-Sales-Challenges-B2B-Companies-Face",
+    "final_url": "https://saleson-eta.vercel.app/blogs/The-Top-5-Sales-Challenges-B2B-Companies-Face",
+    "status": 200,
+    "ttfb_s": 3.72,
+    "total_s": 3.767,
+    "html_transfer_bytes": 4476,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "blogs/How-Online-Marketplaces-Are-Disrupting-Traditional-Distribution-Channels.html",
+    "url": "https://saleson-eta.vercel.app/blogs/How-Online-Marketplaces-Are-Disrupting-Traditional-Distribution-Channels",
+    "final_url": "https://saleson-eta.vercel.app/blogs/How-Online-Marketplaces-Are-Disrupting-Traditional-Distribution-Channels",
+    "status": 200,
+    "ttfb_s": 3.716,
+    "total_s": 3.757,
+    "html_transfer_bytes": 4295,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "blogs/Reducing-Sales-Admin-Time-with-Automation-Tips-for-2024.html",
+    "url": "https://saleson-eta.vercel.app/blogs/Reducing-Sales-Admin-Time-with-Automation-Tips-for-2024",
+    "final_url": "https://saleson-eta.vercel.app/blogs/Reducing-Sales-Admin-Time-with-Automation-Tips-for-2024",
+    "status": 200,
+    "ttfb_s": 3.67,
+    "total_s": 3.67,
+    "html_transfer_bytes": 4835,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "blogs/Top-Benefits-of-Automatic-Invoicing-for-B2B-Businesses.html",
+    "url": "https://saleson-eta.vercel.app/blogs/Top-Benefits-of-Automatic-Invoicing-for-B2B-Businesses",
+    "final_url": "https://saleson-eta.vercel.app/blogs/Top-Benefits-of-Automatic-Invoicing-for-B2B-Businesses",
+    "status": 200,
+    "ttfb_s": 5.639,
+    "total_s": 5.639,
+    "html_transfer_bytes": 3974,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "blogs/How-Real-Time-Sales-Tracking-Boosts-Productivity-and-Transparency.html",
+    "url": "https://saleson-eta.vercel.app/blogs/How-Real-Time-Sales-Tracking-Boosts-Productivity-and-Transparency",
+    "final_url": "https://saleson-eta.vercel.app/blogs/How-Real-Time-Sales-Tracking-Boosts-Productivity-and-Transparency",
+    "status": 200,
+    "ttfb_s": 5.55,
+    "total_s": 5.55,
+    "html_transfer_bytes": 4017,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "blogs/The-Tech-Behind-the-Wheel-Electronics-in-Modern-Van-Sales.html",
+    "url": "https://saleson-eta.vercel.app/blogs/The-Tech-Behind-the-Wheel-Electronics-in-Modern-Van-Sales",
+    "final_url": "https://saleson-eta.vercel.app/blogs/The-Tech-Behind-the-Wheel-Electronics-in-Modern-Van-Sales",
+    "status": 200,
+    "ttfb_s": 5.607,
+    "total_s": 5.649,
+    "html_transfer_bytes": 4088,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "blogs/Top-Sales-Strategies-for-Small-Businesses-in-2024.html",
+    "url": "https://saleson-eta.vercel.app/blogs/Top-Sales-Strategies-for-Small-Businesses-in-2024",
+    "final_url": "https://saleson-eta.vercel.app/blogs/Top-Sales-Strategies-for-Small-Businesses-in-2024",
+    "status": 200,
+    "ttfb_s": 5.651,
+    "total_s": 5.652,
+    "html_transfer_bytes": 4603,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "blogs/How-to-Optimize-Your-Distribution-Channels-for-Maximum-Profit.html",
+    "url": "https://saleson-eta.vercel.app/blogs/How-to-Optimize-Your-Distribution-Channels-for-Maximum-Profit",
+    "final_url": "https://saleson-eta.vercel.app/blogs/How-to-Optimize-Your-Distribution-Channels-for-Maximum-Profit",
+    "status": 200,
+    "ttfb_s": 5.567,
+    "total_s": 5.567,
+    "html_transfer_bytes": 5238,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "blogs/How-workflow-automation-enhances-team-collaboration-in-sales.html",
+    "url": "https://saleson-eta.vercel.app/blogs/How-workflow-automation-enhances-team-collaboration-in-sales",
+    "final_url": "https://saleson-eta.vercel.app/blogs/How-workflow-automation-enhances-team-collaboration-in-sales",
+    "status": 200,
+    "ttfb_s": 5.583,
+    "total_s": 5.628,
+    "html_transfer_bytes": 4627,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "tools/index.html",
+    "url": "https://saleson-eta.vercel.app/tools",
+    "final_url": "https://saleson-eta.vercel.app/tools",
+    "status": 200,
+    "ttfb_s": 5.53,
+    "total_s": 5.531,
+    "html_transfer_bytes": 3712,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "pricing/us.html",
+    "url": "https://saleson-eta.vercel.app/pricing",
+    "final_url": "https://saleson-eta.vercel.app/pricing",
+    "status": 200,
+    "ttfb_s": 5.505,
+    "total_s": 5.505,
+    "html_transfer_bytes": 4724,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "pricing/in.html",
+    "url": "https://saleson-eta.vercel.app/pricing",
+    "final_url": "https://saleson-eta.vercel.app/pricing",
+    "status": 200,
+    "ttfb_s": 16.156,
+    "total_s": 16.156,
+    "html_transfer_bytes": 4724,
+    "encoding": "gzip",
+    "cache": "HIT"
+  },
+  {
+    "page": "compare/zoho-alternative.html",
+    "url": "https://saleson-eta.vercel.app/compare/zoho-alternative",
+    "final_url": "https://saleson-eta.vercel.app/compare/zoho-alternative",
+    "status": 200,
+    "ttfb_s": 16.206,
+    "total_s": 16.247,
+    "html_transfer_bytes": 4123,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "compare/bizom-alternative.html",
+    "url": "https://saleson-eta.vercel.app/compare/bizom-alternative",
+    "final_url": "https://saleson-eta.vercel.app/compare/bizom-alternative",
+    "status": 200,
+    "ttfb_s": 16.066,
+    "total_s": 16.109,
+    "html_transfer_bytes": 4224,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "compare/deltasales-alternative.html",
+    "url": "https://saleson-eta.vercel.app/compare/deltasales-alternative",
+    "final_url": "https://saleson-eta.vercel.app/compare/deltasales-alternative",
+    "status": 200,
+    "ttfb_s": 16.143,
+    "total_s": 16.199,
+    "html_transfer_bytes": 4159,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "compare/freshsales-alternative.html",
+    "url": "https://saleson-eta.vercel.app/compare/freshsales-alternative",
+    "final_url": "https://saleson-eta.vercel.app/compare/freshsales-alternative",
+    "status": 200,
+    "ttfb_s": 16.114,
+    "total_s": 16.158,
+    "html_transfer_bytes": 4254,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "compare/salesforce-alternative.html",
+    "url": "https://saleson-eta.vercel.app/compare/salesforce-alternative",
+    "final_url": "https://saleson-eta.vercel.app/compare/salesforce-alternative",
+    "status": 200,
+    "ttfb_s": 16.054,
+    "total_s": 16.054,
+    "html_transfer_bytes": 4124,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "compare/beatroute-alternative.html",
+    "url": "https://saleson-eta.vercel.app/compare/beatroute-alternative",
+    "final_url": "https://saleson-eta.vercel.app/compare/beatroute-alternative",
+    "status": 200,
+    "ttfb_s": 16.196,
+    "total_s": 16.241,
+    "html_transfer_bytes": 4181,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "customers/Lapcare.html",
+    "url": "https://saleson-eta.vercel.app/customers/Lapcare",
+    "final_url": "https://saleson-eta.vercel.app/customers/Lapcare",
+    "status": 200,
+    "ttfb_s": 16.117,
+    "total_s": 16.117,
+    "html_transfer_bytes": 2797,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "calculators/sales-leakage-calculator.html",
+    "url": "https://saleson-eta.vercel.app/calculators/sales-leakage-calculator",
+    "final_url": "https://saleson-eta.vercel.app/calculators/sales-leakage-calculator",
+    "status": 200,
+    "ttfb_s": 4.889,
+    "total_s": 4.936,
+    "html_transfer_bytes": 5560,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "tools/van-loading-sheet-generator/index.html",
+    "url": "https://saleson-eta.vercel.app/tools/van-loading-sheet-generator",
+    "final_url": "https://saleson-eta.vercel.app/tools/van-loading-sheet-generator",
+    "status": 200,
+    "ttfb_s": 4.53,
+    "total_s": 4.575,
+    "html_transfer_bytes": 7137,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "tools/quotation-generator/index.html",
+    "url": "https://saleson-eta.vercel.app/tools/quotation-generator",
+    "final_url": "https://saleson-eta.vercel.app/tools/quotation-generator",
+    "status": 200,
+    "ttfb_s": 4.918,
+    "total_s": 4.918,
+    "html_transfer_bytes": 6384,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "tools/gst-invoice-generator/index.html",
+    "url": "https://saleson-eta.vercel.app/tools/gst-invoice-generator",
+    "final_url": "https://saleson-eta.vercel.app/tools/gst-invoice-generator",
+    "status": 200,
+    "ttfb_s": 4.788,
+    "total_s": 4.788,
+    "html_transfer_bytes": 5906,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "tools/purchase-order-generator/index.html",
+    "url": "https://saleson-eta.vercel.app/tools/purchase-order-generator",
+    "final_url": "https://saleson-eta.vercel.app/tools/purchase-order-generator",
+    "status": 200,
+    "ttfb_s": 4.816,
+    "total_s": 4.859,
+    "html_transfer_bytes": 6946,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "tools/hsn-sac-gst-rate-finder/index.html",
+    "url": "https://saleson-eta.vercel.app/tools/hsn-sac-gst-rate-finder",
+    "final_url": "https://saleson-eta.vercel.app/tools/hsn-sac-gst-rate-finder",
+    "status": 200,
+    "ttfb_s": 4.517,
+    "total_s": 4.563,
+    "html_transfer_bytes": 4559,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "tools/gst-calculator/index.html",
+    "url": "https://saleson-eta.vercel.app/tools/gst-calculator",
+    "final_url": "https://saleson-eta.vercel.app/tools/gst-calculator",
+    "status": 200,
+    "ttfb_s": 4.484,
+    "total_s": 4.528,
+    "html_transfer_bytes": 5268,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "tools/stock-reorder-level-calculator/index.html",
+    "url": "https://saleson-eta.vercel.app/tools/stock-reorder-level-calculator",
+    "final_url": "https://saleson-eta.vercel.app/tools/stock-reorder-level-calculator",
+    "status": 200,
+    "ttfb_s": 4.429,
+    "total_s": 4.429,
+    "html_transfer_bytes": 6859,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "tools/whatsapp-payment-reminder-generator/index.html",
+    "url": "https://saleson-eta.vercel.app/tools/whatsapp-payment-reminder-generator",
+    "final_url": "https://saleson-eta.vercel.app/tools/whatsapp-payment-reminder-generator",
+    "status": 200,
+    "ttfb_s": 5.052,
+    "total_s": 5.092,
+    "html_transfer_bytes": 5655,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "tools/e-way-bill-checker/index.html",
+    "url": "https://saleson-eta.vercel.app/tools/e-way-bill-checker",
+    "final_url": "https://saleson-eta.vercel.app/tools/e-way-bill-checker",
+    "status": 200,
+    "ttfb_s": 4.955,
+    "total_s": 4.998,
+    "html_transfer_bytes": 5635,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "tools/delivery-challan-generator/index.html",
+    "url": "https://saleson-eta.vercel.app/tools/delivery-challan-generator",
+    "final_url": "https://saleson-eta.vercel.app/tools/delivery-challan-generator",
+    "status": 200,
+    "ttfb_s": 4.969,
+    "total_s": 5.012,
+    "html_transfer_bytes": 6943,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "tools/payment-receipt-generator/index.html",
+    "url": "https://saleson-eta.vercel.app/tools/payment-receipt-generator",
+    "final_url": "https://saleson-eta.vercel.app/tools/payment-receipt-generator",
+    "status": 200,
+    "ttfb_s": 4.954,
+    "total_s": 4.996,
+    "html_transfer_bytes": 6518,
+    "encoding": "gzip",
+    "cache": "MISS"
+  },
+  {
+    "page": "tools/outstanding-payment-tracker/index.html",
+    "url": "https://saleson-eta.vercel.app/tools/outstanding-payment-tracker",
+    "final_url": "https://saleson-eta.vercel.app/tools/outstanding-payment-tracker",
+    "status": 200,
+    "ttfb_s": 4.702,
+    "total_s": 4.702,
+    "html_transfer_bytes": 6517,
+    "encoding": "gzip",
+    "cache": "MISS"
+  }
+]

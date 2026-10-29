@@ -1,0 +1,431 @@
+{
+  "pages": [
+    "blogs/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains.html",
+    "blogs.html",
+    "delivery-management.html",
+    "distribution-management-system.html",
+    "expense-management.html",
+    "field-sales.html",
+    "index.html",
+    "industries/agriculture.html",
+    "industries/automotive.html",
+    "industries/hardware.html",
+    "industries/sport-and-fitness.html",
+    "industries/transport.html",
+    "inventory-management.html",
+    "invoicing.html",
+    "order-taking-app.html",
+    "payment-collection.html",
+    "salesman-tracking.html",
+    "target-meter.html",
+    "user/software-for-retailers.html"
+  ],
+  "images": {
+    "/assets/img/editorial/articles/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains.webp": {
+      "original_bytes": 89298,
+      "original_width": 1000,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains-156b6ed952-480.webp",
+          "width": 480,
+          "bytes": 44870
+        },
+        {
+          "path": "/assets/img/optimized/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains-156b6ed952-768.webp",
+          "width": 768,
+          "bytes": 88228
+        }
+      ]
+    },
+    "/assets/img/delivery-management/shipments-enhanced.webp": {
+      "original_bytes": 124902,
+      "original_width": 1774,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/shipments-enhanced-aa9ecc2a7c-480.webp",
+          "width": 480,
+          "bytes": 16224
+        },
+        {
+          "path": "/assets/img/optimized/shipments-enhanced-aa9ecc2a7c-768.webp",
+          "width": 768,
+          "bytes": 31348
+        },
+        {
+          "path": "/assets/img/optimized/shipments-enhanced-aa9ecc2a7c-960.webp",
+          "width": 960,
+          "bytes": 42212
+        }
+      ]
+    },
+    "/assets/img/delivery-management/driver-trip-enhanced.webp": {
+      "original_bytes": 113028,
+      "original_width": 1024,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/driver-trip-enhanced-2ee2e5cb94-480.webp",
+          "width": 480,
+          "bytes": 32688
+        },
+        {
+          "path": "/assets/img/optimized/driver-trip-enhanced-2ee2e5cb94-768.webp",
+          "width": 768,
+          "bytes": 58894
+        },
+        {
+          "path": "/assets/img/optimized/driver-trip-enhanced-2ee2e5cb94-960.webp",
+          "width": 960,
+          "bytes": 78806
+        }
+      ]
+    },
+    "/assets/img/screenshots-refined/dms-sales-stock.webp": {
+      "original_bytes": 106912,
+      "original_width": 2017,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/dms-sales-stock-88ddfb2c3a-480.webp",
+          "width": 480,
+          "bytes": 10912
+        },
+        {
+          "path": "/assets/img/optimized/dms-sales-stock-88ddfb2c3a-768.webp",
+          "width": 768,
+          "bytes": 21550
+        },
+        {
+          "path": "/assets/img/optimized/dms-sales-stock-88ddfb2c3a-959.webp",
+          "width": 959,
+          "bytes": 28708
+        }
+      ]
+    },
+    "/assets/img/distribution-management-system/illustrative-saleson-style-godown-stock-showing-sample-distributi-b90e82a490.webp": {
+      "original_bytes": 83792,
+      "original_width": 1672,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/illustrative-saleson-style-godown-stock-showing-sample-distributi-b90e82a490-b90e82a490-480.webp",
+          "width": 480,
+          "bytes": 15722
+        },
+        {
+          "path": "/assets/img/optimized/illustrative-saleson-style-godown-stock-showing-sample-distributi-b90e82a490-b90e82a490-768.webp",
+          "width": 768,
+          "bytes": 31870
+        },
+        {
+          "path": "/assets/img/optimized/illustrative-saleson-style-godown-stock-showing-sample-distributi-b90e82a490-b90e82a490-959.webp",
+          "width": 959,
+          "bytes": 43258
+        }
+      ]
+    },
+    "/assets/img/expense-management/expense-review-enhanced.webp": {
+      "original_bytes": 97530,
+      "original_width": 1967,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/expense-review-enhanced-2af818bc22-480.webp",
+          "width": 480,
+          "bytes": 9934
+        },
+        {
+          "path": "/assets/img/optimized/expense-review-enhanced-2af818bc22-768.webp",
+          "width": 768,
+          "bytes": 21040
+        },
+        {
+          "path": "/assets/img/optimized/expense-review-enhanced-2af818bc22-960.webp",
+          "width": 960,
+          "bytes": 27768
+        }
+      ]
+    },
+    "/assets/img/field-sales/recreated-saleson-business-overview-with-example-data-showing-ord-7cd01b1943.webp": {
+      "original_bytes": 101120,
+      "original_width": 1672,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/recreated-saleson-business-overview-with-example-data-showing-ord-7cd01b1943-7cd01b1943-480.webp",
+          "width": 480,
+          "bytes": 18368
+        },
+        {
+          "path": "/assets/img/optimized/recreated-saleson-business-overview-with-example-data-showing-ord-7cd01b1943-7cd01b1943-768.webp",
+          "width": 768,
+          "bytes": 37040
+        },
+        {
+          "path": "/assets/img/optimized/recreated-saleson-business-overview-with-example-data-showing-ord-7cd01b1943-7cd01b1943-960.webp",
+          "width": 960,
+          "bytes": 52178
+        }
+      ]
+    },
+    "/assets/img/screenshots-refined/field-orders-activity.webp": {
+      "original_bytes": 98664,
+      "original_width": 2172,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/field-orders-activity-6c51e1c5cd-480.webp",
+          "width": 480,
+          "bytes": 7572
+        },
+        {
+          "path": "/assets/img/optimized/field-orders-activity-6c51e1c5cd-768.webp",
+          "width": 768,
+          "bytes": 16066
+        },
+        {
+          "path": "/assets/img/optimized/field-orders-activity-6c51e1c5cd-960.webp",
+          "width": 960,
+          "bytes": 22404
+        }
+      ]
+    },
+    "/assets/img/homepage/laptop-mobile-clear.webp": {
+      "original_bytes": 106640,
+      "original_width": 1536,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/laptop-mobile-clear-431fba8669-480.webp",
+          "width": 480,
+          "bytes": 15550
+        },
+        {
+          "path": "/assets/img/optimized/laptop-mobile-clear-431fba8669-768.webp",
+          "width": 768,
+          "bytes": 29662
+        },
+        {
+          "path": "/assets/img/optimized/laptop-mobile-clear-431fba8669-960.webp",
+          "width": 960,
+          "bytes": 39930
+        }
+      ]
+    },
+    "/assets/homepage/media-c0b44c89b8c7.webp": {
+      "original_bytes": 175034,
+      "original_width": 1536,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/media-c0b44c89b8c7-c0b44c89b8-480.webp",
+          "width": 480,
+          "bytes": 24032
+        },
+        {
+          "path": "/assets/img/optimized/media-c0b44c89b8c7-c0b44c89b8-768.webp",
+          "width": 768,
+          "bytes": 50492
+        },
+        {
+          "path": "/assets/img/optimized/media-c0b44c89b8c7-c0b44c89b8-960.webp",
+          "width": 960,
+          "bytes": 69858
+        }
+      ]
+    },
+    "/assets/homepage/media-9ec1fc5ff171.webp": {
+      "original_bytes": 152490,
+      "original_width": 1440,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/media-9ec1fc5ff171-9ec1fc5ff1-480.webp",
+          "width": 480,
+          "bytes": 24618
+        },
+        {
+          "path": "/assets/img/optimized/media-9ec1fc5ff171-9ec1fc5ff1-768.webp",
+          "width": 768,
+          "bytes": 56664
+        },
+        {
+          "path": "/assets/img/optimized/media-9ec1fc5ff171-9ec1fc5ff1-960.webp",
+          "width": 960,
+          "bytes": 81988
+        }
+      ]
+    },
+    "/assets/img/editorial/industries/agriculture.webp": {
+      "original_bytes": 80240,
+      "original_width": 1000,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/agriculture-95d1442ea8-480.webp",
+          "width": 480,
+          "bytes": 44290
+        }
+      ]
+    },
+    "/assets/img/order-taking/catalogue-enhanced.webp": {
+      "original_bytes": 175034,
+      "original_width": 1536,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/catalogue-enhanced-c0b44c89b8-480.webp",
+          "width": 480,
+          "bytes": 24032
+        },
+        {
+          "path": "/assets/img/optimized/catalogue-enhanced-c0b44c89b8-768.webp",
+          "width": 768,
+          "bytes": 50492
+        },
+        {
+          "path": "/assets/img/optimized/catalogue-enhanced-c0b44c89b8-960.webp",
+          "width": 960,
+          "bytes": 69858
+        }
+      ]
+    },
+    "/assets/img/editorial/industries/hardware.webp": {
+      "original_bytes": 91754,
+      "original_width": 1000,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/hardware-36b31101c5-480.webp",
+          "width": 480,
+          "bytes": 50416
+        }
+      ]
+    },
+    "/assets/img/editorial/industries/sport-and-fitness.webp": {
+      "original_bytes": 103340,
+      "original_width": 1000,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/sport-and-fitness-12618b17f0-480.webp",
+          "width": 480,
+          "bytes": 53820
+        }
+      ]
+    },
+    "/assets/img/invoicing/invoice-formats-example.webp": {
+      "original_bytes": 148300,
+      "original_width": 1448,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/invoice-formats-example-0c11cfb0bc-480.webp",
+          "width": 480,
+          "bytes": 24246
+        },
+        {
+          "path": "/assets/img/optimized/invoice-formats-example-0c11cfb0bc-768.webp",
+          "width": 768,
+          "bytes": 49660
+        },
+        {
+          "path": "/assets/img/optimized/invoice-formats-example-0c11cfb0bc-960.webp",
+          "width": 960,
+          "bytes": 68368
+        }
+      ]
+    },
+    "/assets/img/invoicing/credit-note-enhanced.webp": {
+      "original_bytes": 86194,
+      "original_width": 1429,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/credit-note-enhanced-ccdc6dd0ff-479.webp",
+          "width": 479,
+          "bytes": 12590
+        },
+        {
+          "path": "/assets/img/optimized/credit-note-enhanced-ccdc6dd0ff-768.webp",
+          "width": 768,
+          "bytes": 25468
+        },
+        {
+          "path": "/assets/img/optimized/credit-note-enhanced-ccdc6dd0ff-960.webp",
+          "width": 960,
+          "bytes": 36016
+        }
+      ]
+    },
+    "/assets/img/payment-collection/collection-entry-enhanced.webp": {
+      "original_bytes": 90538,
+      "original_width": 1536,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/collection-entry-enhanced-445fe7e344-480.webp",
+          "width": 480,
+          "bytes": 19340
+        },
+        {
+          "path": "/assets/img/optimized/collection-entry-enhanced-445fe7e344-768.webp",
+          "width": 768,
+          "bytes": 38764
+        },
+        {
+          "path": "/assets/img/optimized/collection-entry-enhanced-445fe7e344-960.webp",
+          "width": 960,
+          "bytes": 51388
+        }
+      ]
+    },
+    "/assets/img/salesman-tracking/team-location.webp": {
+      "original_bytes": 137492,
+      "original_width": 1440,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/team-location-2419d8ccd7-480.webp",
+          "width": 480,
+          "bytes": 26398
+        },
+        {
+          "path": "/assets/img/optimized/team-location-2419d8ccd7-768.webp",
+          "width": 768,
+          "bytes": 56744
+        },
+        {
+          "path": "/assets/img/optimized/team-location-2419d8ccd7-960.webp",
+          "width": 960,
+          "bytes": 77958
+        }
+      ]
+    },
+    "/assets/img/salesman-tracking/daily-route.webp": {
+      "original_bytes": 152490,
+      "original_width": 1440,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/daily-route-9ec1fc5ff1-480.webp",
+          "width": 480,
+          "bytes": 24618
+        },
+        {
+          "path": "/assets/img/optimized/daily-route-9ec1fc5ff1-768.webp",
+          "width": 768,
+          "bytes": 56664
+        },
+        {
+          "path": "/assets/img/optimized/daily-route-9ec1fc5ff1-960.webp",
+          "width": 960,
+          "bytes": 81988
+        }
+      ]
+    },
+    "/assets/img/target/target-meter-hero.webp": {
+      "original_bytes": 108990,
+      "original_width": 1536,
+      "variants": [
+        {
+          "path": "/assets/img/optimized/target-meter-hero-c720b54daf-480.webp",
+          "width": 480,
+          "bytes": 15874
+        },
+        {
+          "path": "/assets/img/optimized/target-meter-hero-c720b54daf-768.webp",
+          "width": 768,
+          "bytes": 30570
+        },
+        {
+          "path": "/assets/img/optimized/target-meter-hero-c720b54daf-960.webp",
+          "width": 960,
+          "bytes": 41370
+        }
+      ]
+    }
+  }
+}

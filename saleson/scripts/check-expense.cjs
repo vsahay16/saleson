@@ -12,7 +12,7 @@ const graph=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/
 for(const q of faq.mainEntity)assert.ok(html.includes(q.name.replaceAll('&','&amp;')));
 console.log('PASS: expense sample claim switching, exception reset, selected state, totals, FAQ/schema alignment and indexable online-only copy.');
 
-for(const name of ["expense-mobile-enhanced.webp","expense-review-enhanced.webp"])assert.ok(html.includes("/assets/img/expense-management/"+name));
+assert.ok(html.includes("/assets/img/expense-management/expense-mobile-enhanced.webp"));assert.ok(html.includes("/assets/img/product-evidence/expenses.webp"));assert.ok(html.includes("/assets/img/product-evidence/expenses-full.webp"));
 assert.equal((html.match(/class="ex-client-logo/g)||[]).length,0);
 assert.equal((html.match(/id="expense-review"/g)||[]).length,1);
 assert.equal((html.match(/<h1[ >]/g)||[]).length,1);

@@ -1,0 +1,618 @@
+[
+  {
+    "page": "request-demo.html",
+    "html_bytes": 13201,
+    "local_direct_asset_bytes": 151078,
+    "responsive_images": 0,
+    "images": 4,
+    "lazy_images": 4
+  },
+  {
+    "page": "partner.html",
+    "html_bytes": 6793,
+    "local_direct_asset_bytes": 75401,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "target-meter.html",
+    "html_bytes": 22449,
+    "local_direct_asset_bytes": 256706,
+    "responsive_images": 1,
+    "images": 2,
+    "lazy_images": 1
+  },
+  {
+    "page": "payment-collection.html",
+    "html_bytes": 27083,
+    "local_direct_asset_bytes": 356984,
+    "responsive_images": 1,
+    "images": 8,
+    "lazy_images": 7
+  },
+  {
+    "page": "field-sales.html",
+    "html_bytes": 26154,
+    "local_direct_asset_bytes": 459421,
+    "responsive_images": 2,
+    "images": 19,
+    "lazy_images": 6
+  },
+  {
+    "page": "salesman-tracking.html",
+    "html_bytes": 26500,
+    "local_direct_asset_bytes": 464789,
+    "responsive_images": 2,
+    "images": 4,
+    "lazy_images": 3
+  },
+  {
+    "page": "attendance.html",
+    "html_bytes": 22984,
+    "local_direct_asset_bytes": 217290,
+    "responsive_images": 0,
+    "images": 2,
+    "lazy_images": 1
+  },
+  {
+    "page": "mobile-app.html",
+    "html_bytes": 23576,
+    "local_direct_asset_bytes": 195186,
+    "responsive_images": 0,
+    "images": 5,
+    "lazy_images": 4
+  },
+  {
+    "page": "privacy-policy.html",
+    "html_bytes": 21739,
+    "local_direct_asset_bytes": 84839,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "inventory-management.html",
+    "html_bytes": 10512,
+    "local_direct_asset_bytes": 259548,
+    "responsive_images": 1,
+    "images": 5,
+    "lazy_images": 4
+  },
+  {
+    "page": "about.html",
+    "html_bytes": 13672,
+    "local_direct_asset_bytes": 225501,
+    "responsive_images": 0,
+    "images": 12,
+    "lazy_images": 12
+  },
+  {
+    "page": "production.html",
+    "html_bytes": 22397,
+    "local_direct_asset_bytes": 176251,
+    "responsive_images": 0,
+    "images": 3,
+    "lazy_images": 2
+  },
+  {
+    "page": "distribution-management-system.html",
+    "html_bytes": 21171,
+    "local_direct_asset_bytes": 423487,
+    "responsive_images": 2,
+    "images": 9,
+    "lazy_images": 4
+  },
+  {
+    "page": "terms.html",
+    "html_bytes": 29396,
+    "local_direct_asset_bytes": 84839,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "blogs.html",
+    "html_bytes": 18626,
+    "local_direct_asset_bytes": 1037048,
+    "responsive_images": 1,
+    "images": 12,
+    "lazy_images": 12
+  },
+  {
+    "page": "index.html",
+    "html_bytes": 23142,
+    "local_direct_asset_bytes": 858889,
+    "responsive_images": 3,
+    "images": 14,
+    "lazy_images": 13
+  },
+  {
+    "page": "delivery-management.html",
+    "html_bytes": 24889,
+    "local_direct_asset_bytes": 417491,
+    "responsive_images": 2,
+    "images": 7,
+    "lazy_images": 6
+  },
+  {
+    "page": "expense-management.html",
+    "html_bytes": 21442,
+    "local_direct_asset_bytes": 259644,
+    "responsive_images": 1,
+    "images": 2,
+    "lazy_images": 1
+  },
+  {
+    "page": "van-sales.html",
+    "html_bytes": 24449,
+    "local_direct_asset_bytes": 219567,
+    "responsive_images": 0,
+    "images": 2,
+    "lazy_images": 1
+  },
+  {
+    "page": "tally-integration.html",
+    "html_bytes": 23707,
+    "local_direct_asset_bytes": 225478,
+    "responsive_images": 0,
+    "images": 6,
+    "lazy_images": 5
+  },
+  {
+    "page": "invoicing.html",
+    "html_bytes": 22895,
+    "local_direct_asset_bytes": 437335,
+    "responsive_images": 2,
+    "images": 9,
+    "lazy_images": 8
+  },
+  {
+    "page": "pricing.html",
+    "html_bytes": 16562,
+    "local_direct_asset_bytes": 161863,
+    "responsive_images": 0,
+    "images": 4,
+    "lazy_images": 4
+  },
+  {
+    "page": "refund.html",
+    "html_bytes": 12901,
+    "local_direct_asset_bytes": 84839,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "saleson-vs-other-field-sales.html",
+    "html_bytes": 8128,
+    "local_direct_asset_bytes": 78690,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "404.html",
+    "html_bytes": 6262,
+    "local_direct_asset_bytes": 78674,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "order-taking-app.html",
+    "html_bytes": 70335,
+    "local_direct_asset_bytes": 398740,
+    "responsive_images": 1,
+    "images": 8,
+    "lazy_images": 7
+  },
+  {
+    "page": "user/software-for-retailers.html",
+    "html_bytes": 9778,
+    "local_direct_asset_bytes": 264255,
+    "responsive_images": 1,
+    "images": 4,
+    "lazy_images": 3
+  },
+  {
+    "page": "user/software-for-distributors.html",
+    "html_bytes": 9630,
+    "local_direct_asset_bytes": 186584,
+    "responsive_images": 0,
+    "images": 7,
+    "lazy_images": 6
+  },
+  {
+    "page": "user/software-for-manufacturers.html",
+    "html_bytes": 9285,
+    "local_direct_asset_bytes": 94472,
+    "responsive_images": 0,
+    "images": 3,
+    "lazy_images": 2
+  },
+  {
+    "page": "guide/quiz-pro.html",
+    "html_bytes": 6469,
+    "local_direct_asset_bytes": 402139,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "industries/hardware.html",
+    "html_bytes": 8130,
+    "local_direct_asset_bytes": 216560,
+    "responsive_images": 1,
+    "images": 4,
+    "lazy_images": 3
+  },
+  {
+    "page": "industries/publishing.html",
+    "html_bytes": 7493,
+    "local_direct_asset_bytes": 204523,
+    "responsive_images": 0,
+    "images": 2,
+    "lazy_images": 1
+  },
+  {
+    "page": "industries/telecommunication.html",
+    "html_bytes": 7893,
+    "local_direct_asset_bytes": 137880,
+    "responsive_images": 0,
+    "images": 2,
+    "lazy_images": 1
+  },
+  {
+    "page": "industries/transport.html",
+    "html_bytes": 7896,
+    "local_direct_asset_bytes": 240719,
+    "responsive_images": 1,
+    "images": 2,
+    "lazy_images": 1
+  },
+  {
+    "page": "industries/automotive.html",
+    "html_bytes": 7797,
+    "local_direct_asset_bytes": 325379,
+    "responsive_images": 1,
+    "images": 2,
+    "lazy_images": 1
+  },
+  {
+    "page": "industries/agriculture.html",
+    "html_bytes": 8043,
+    "local_direct_asset_bytes": 172660,
+    "responsive_images": 1,
+    "images": 2,
+    "lazy_images": 1
+  },
+  {
+    "page": "industries/pharmacy.html",
+    "html_bytes": 8342,
+    "local_direct_asset_bytes": 153542,
+    "responsive_images": 0,
+    "images": 3,
+    "lazy_images": 2
+  },
+  {
+    "page": "industries/cosmetic.html",
+    "html_bytes": 8264,
+    "local_direct_asset_bytes": 209246,
+    "responsive_images": 0,
+    "images": 5,
+    "lazy_images": 4
+  },
+  {
+    "page": "industries/electronics.html",
+    "html_bytes": 8098,
+    "local_direct_asset_bytes": 171852,
+    "responsive_images": 0,
+    "images": 4,
+    "lazy_images": 3
+  },
+  {
+    "page": "industries/fmcg.html",
+    "html_bytes": 8607,
+    "local_direct_asset_bytes": 278168,
+    "responsive_images": 0,
+    "images": 7,
+    "lazy_images": 6
+  },
+  {
+    "page": "industries/manufacturing.html",
+    "html_bytes": 8694,
+    "local_direct_asset_bytes": 161926,
+    "responsive_images": 0,
+    "images": 3,
+    "lazy_images": 2
+  },
+  {
+    "page": "industries/sport-and-fitness.html",
+    "html_bytes": 8121,
+    "local_direct_asset_bytes": 304429,
+    "responsive_images": 2,
+    "images": 2,
+    "lazy_images": 1
+  },
+  {
+    "page": "blogs/Why-Van-Sales-Are-Essential-for-Modern-B2B-Supply-Chains.html",
+    "html_bytes": 13654,
+    "local_direct_asset_bytes": 358361,
+    "responsive_images": 1,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "blogs/Sales-Force-Tracking-Privac-Performance-and-the-Path-to-Trust.html",
+    "html_bytes": 14342,
+    "local_direct_asset_bytes": 329437,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "blogs/Tracking-Industrial-Success-with-Target-Meters-and-Visual-KPIs.html",
+    "html_bytes": 13548,
+    "local_direct_asset_bytes": 320709,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "blogs/The-Top-5-Sales-Challenges-B2B-Companies-Face.html",
+    "html_bytes": 13880,
+    "local_direct_asset_bytes": 338637,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "blogs/How-Online-Marketplaces-Are-Disrupting-Traditional-Distribution-Channels.html",
+    "html_bytes": 13271,
+    "local_direct_asset_bytes": 330335,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "blogs/Reducing-Sales-Admin-Time-with-Automation-Tips-for-2024.html",
+    "html_bytes": 15578,
+    "local_direct_asset_bytes": 318393,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "blogs/Top-Benefits-of-Automatic-Invoicing-for-B2B-Businesses.html",
+    "html_bytes": 12102,
+    "local_direct_asset_bytes": 317763,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "blogs/How-Real-Time-Sales-Tracking-Boosts-Productivity-and-Transparency.html",
+    "html_bytes": 12324,
+    "local_direct_asset_bytes": 342327,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "blogs/The-Tech-Behind-the-Wheel-Electronics-in-Modern-Van-Sales.html",
+    "html_bytes": 12163,
+    "local_direct_asset_bytes": 343755,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "blogs/Top-Sales-Strategies-for-Small-Businesses-in-2024.html",
+    "html_bytes": 14306,
+    "local_direct_asset_bytes": 336353,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "blogs/How-to-Optimize-Your-Distribution-Channels-for-Maximum-Profit.html",
+    "html_bytes": 16470,
+    "local_direct_asset_bytes": 333921,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "blogs/How-workflow-automation-enhances-team-collaboration-in-sales.html",
+    "html_bytes": 14258,
+    "local_direct_asset_bytes": 327487,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "tools/index.html",
+    "html_bytes": 12413,
+    "local_direct_asset_bytes": 122691,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "pricing/us.html",
+    "html_bytes": 1515,
+    "local_direct_asset_bytes": 63966,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "pricing/in.html",
+    "html_bytes": 1515,
+    "local_direct_asset_bytes": 63966,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "compare/zoho-alternative.html",
+    "html_bytes": 12019,
+    "local_direct_asset_bytes": 78714,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "compare/bizom-alternative.html",
+    "html_bytes": 11817,
+    "local_direct_asset_bytes": 78701,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "compare/deltasales-alternative.html",
+    "html_bytes": 12092,
+    "local_direct_asset_bytes": 78708,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "compare/freshsales-alternative.html",
+    "html_bytes": 12194,
+    "local_direct_asset_bytes": 78746,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "compare/salesforce-alternative.html",
+    "html_bytes": 11832,
+    "local_direct_asset_bytes": 78692,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "compare/beatroute-alternative.html",
+    "html_bytes": 12207,
+    "local_direct_asset_bytes": 78698,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "customers/Lapcare.html",
+    "html_bytes": 7788,
+    "local_direct_asset_bytes": 381894,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "calculators/sales-leakage-calculator.html",
+    "html_bytes": 23436,
+    "local_direct_asset_bytes": 374655,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "tools/van-loading-sheet-generator/index.html",
+    "html_bytes": 28954,
+    "local_direct_asset_bytes": 217561,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "tools/quotation-generator/index.html",
+    "html_bytes": 23276,
+    "local_direct_asset_bytes": 216685,
+    "responsive_images": 0,
+    "images": 2,
+    "lazy_images": 0
+  },
+  {
+    "page": "tools/gst-invoice-generator/index.html",
+    "html_bytes": 21082,
+    "local_direct_asset_bytes": 220464,
+    "responsive_images": 0,
+    "images": 2,
+    "lazy_images": 0
+  },
+  {
+    "page": "tools/purchase-order-generator/index.html",
+    "html_bytes": 28667,
+    "local_direct_asset_bytes": 225100,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  },
+  {
+    "page": "tools/hsn-sac-gst-rate-finder/index.html",
+    "html_bytes": 14614,
+    "local_direct_asset_bytes": 202250,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "tools/gst-calculator/index.html",
+    "html_bytes": 17419,
+    "local_direct_asset_bytes": 204625,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "tools/stock-reorder-level-calculator/index.html",
+    "html_bytes": 23301,
+    "local_direct_asset_bytes": 219572,
+    "responsive_images": 0,
+    "images": 2,
+    "lazy_images": 0
+  },
+  {
+    "page": "tools/whatsapp-payment-reminder-generator/index.html",
+    "html_bytes": 21396,
+    "local_direct_asset_bytes": 207366,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "tools/e-way-bill-checker/index.html",
+    "html_bytes": 23029,
+    "local_direct_asset_bytes": 206071,
+    "responsive_images": 0,
+    "images": 0,
+    "lazy_images": 0
+  },
+  {
+    "page": "tools/delivery-challan-generator/index.html",
+    "html_bytes": 25411,
+    "local_direct_asset_bytes": 224355,
+    "responsive_images": 0,
+    "images": 2,
+    "lazy_images": 0
+  },
+  {
+    "page": "tools/payment-receipt-generator/index.html",
+    "html_bytes": 25520,
+    "local_direct_asset_bytes": 217600,
+    "responsive_images": 0,
+    "images": 2,
+    "lazy_images": 0
+  },
+  {
+    "page": "tools/outstanding-payment-tracker/index.html",
+    "html_bytes": 23647,
+    "local_direct_asset_bytes": 226115,
+    "responsive_images": 0,
+    "images": 1,
+    "lazy_images": 0
+  }
+]

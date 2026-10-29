@@ -40,8 +40,8 @@ delivery=(ROOT/'delivery-management.html').read_text()
 dms=(ROOT/'distribution-management-system.html').read_text()
 assert 'dl-driver-image' in delivery and 'dl-shipment-scroll' in delivery
 assert 'delivery-phone-crop' not in delivery and 'delivery-desktop-view' not in delivery
-assert 'data-media-src="/assets/img/delivery-management/shipments-enhanced.webp"' in delivery
+assert 'data-media-src="/assets/img/product-evidence/shipments-full.webp"' in delivery
 assert '/assets/img/delivery-management/driver-trip-enhanced.webp' in delivery
 assert 'dms-dashboard-viewport' in dms and 'role="region"' in dms
-assert 'data-media-src="/assets/img/distribution-management-system/' in dms
+assert 'data-media-src="/assets/img/product-evidence/transfers-full.webp"' in dms
 print(f'PASS: {len(manifest)} feature pages use one shared header/footer, separate CSS/JS, accessible image markup and no inline CSS/events/executable JS.')

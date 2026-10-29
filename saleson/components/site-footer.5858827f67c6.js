@@ -309,6 +309,7 @@ class SiteFooter extends HTMLElement {
               <span class="col-title" style="margin-top:28px;display:inline-block">Resources</span>
               <ul class="link-list">
                 <li><a href="/blogs"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Blog</a></li>
+                <li><a href="/help"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Help &amp; Onboarding</a></li>
                 <li><a href="/request-demo"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Request Demo</a></li>
                 <li><a href="https://app.saleson.co.in/" target="_blank" rel="noopener"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Sign Up Free</a></li>
                 <li><a href="https://app.saleson.co.in/login" target="_blank" rel="noopener"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Login</a></li>
@@ -381,7 +382,7 @@ class SiteFooter extends HTMLElement {
         this.shadowRoot.querySelectorAll('.link-col').forEach(column=>column.remove());
         const main=this.shadowRoot.querySelector('.footer-main');
         const nav=document.createElement('nav');nav.className='compact-footer-links';nav.setAttribute('aria-label','SalesOn links');
-        for(const [href,label] of [['/tools','All tools'],['/blogs','Blog'],['/about','About SalesOn'],['/pricing','Pricing'],['/request-demo','Contact']]){const a=document.createElement('a');a.href=href;a.textContent=label;nav.appendChild(a);}
+        for(const [href,label] of [['/help','Help & onboarding'],['/tools','All tools'],['/blogs','Blog'],['/about','About SalesOn'],['/pricing','Pricing'],['/request-demo','Contact']]){const a=document.createElement('a');a.href=href;a.textContent=label;nav.appendChild(a);}
         main.appendChild(nav);
         const style=document.createElement('style');style.textContent=':host([compact]) .footer-main{grid-template-columns:1fr 1fr;padding:24px;gap:24px}:host([compact]) .footer-logo{margin-bottom:12px}:host([compact]) .contact-list{margin:10px 0}:host([compact]) .compact-footer-links{display:flex;flex-wrap:wrap;align-content:flex-start;gap:12px 20px}:host([compact]) .compact-footer-links a{font:14px/1.6 "DM Sans",Arial,sans-serif;color:#52677a}:host([compact]) .footer-bottom{padding-top:16px;padding-bottom:16px}@media(max-width:600px){:host([compact]) .footer-main{grid-template-columns:1fr;gap:16px}}';this.shadowRoot.appendChild(style);
       }

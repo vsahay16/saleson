@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "setup",
+    "category": "Getting started",
+    "title": "Set up your SalesOn workspace",
+    "description": "Start with the setup walkthrough before your team begins daily work.",
+    "driveId": "1MabCdbqtescmE8p6TNDTeIbtxT5uMtpV"
+  },
+  {
+    "slug": "review",
+    "category": "Getting started",
+    "title": "Review your business",
+    "description": "Use the business review walkthrough when you are ready to review recorded activity.",
+    "driveId": "1HY81zVL8Q0DhkwwNFJO_harDRm4dS_5c"
+  },
+  {
+    "slug": "get-help",
+    "category": "Getting started",
+    "title": "Find help inside SalesOn",
+    "description": "Learn where to look when you need help using SalesOn.",
+    "driveId": "10IOkfSX_ugrWCAX-Kz6sx6B2SXV9Vh8l"
+  },
+  {
+    "slug": "mark-attendance",
+    "category": "Daily work",
+    "title": "Mark your attendance",
+    "description": "Watch the attendance walkthrough before your first check-in.",
+    "driveId": "12vJyAHgic9JAJ3YHiXjCswymyDorTYvK"
+  },
+  {
+    "slug": "forgot-password",
+    "category": "Troubleshooting",
+    "title": "Forgot your password?",
+    "description": "Follow the password recovery walkthrough to regain access.",
+    "driveId": "1Mz25ipiTQG5HTVJemhsAswAgizdqCv2g"
+  },
+  {
+    "slug": "accidental-checkout",
+    "category": "Troubleshooting",
+    "title": "Checked out by mistake?",
+    "description": "Watch the guide for an accidental attendance checkout.",
+    "driveId": "1J0EeKtprE9Hf63r6xkafOklUNtRaoMEY"
+  },
+  {
+    "slug": "missing-product",
+    "category": "Troubleshooting",
+    "title": "Cannot see the right product?",
+    "description": "Use this guide when the product you expect is not visible.",
+    "driveId": "1Oi_Tx62Sz7Otdt6ppTJJ2JDyO2RMC_ze"
+  },
+  {
+    "slug": "missing-route",
+    "category": "Troubleshooting",
+    "title": "Cannot see the right route?",
+    "description": "Use this guide when the route you expect is not visible.",
+    "driveId": "1O90V4L2PUllnBT0XDLVWD64COpYqgw08"
+  }
+]

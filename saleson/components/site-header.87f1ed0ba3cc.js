@@ -301,6 +301,7 @@ class SiteHeader extends HTMLElement {
                   <a href="/van-sales"><div class="dm-icon"><svg viewBox="0 0 24 24"><rect x="2" y="12" width="20" height="8" rx="2"/><path d="M6 12V8a6 6 0 0112 0v4"/></svg></div><div class="dm-text">Van Sales<small>Real-time van inventory mgmt</small></div></a>
                   <a href="/tally-integration"><div class="dm-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4"/></svg></div><div class="dm-text">Tally Integration<small>Two-way data sync</small></div></a>
                   <a href="/mobile-app"><div class="dm-icon"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 19h2"/></svg></div><div class="dm-text">Salesman Order App<small>Workflow and control</small></div></a>
+<a href="/help"><div class="dm-icon">?</div><div class="dm-text">Help &amp; Onboarding<small>Setup and practical video guides</small></div></a>
                   </div>
               </div>
             </div>
@@ -382,6 +383,7 @@ class SiteHeader extends HTMLElement {
           </div>
           <div class="mobile-section">
             <div class="section-label">Company</div>
+            <a href="/help">Help &amp; Onboarding</a>
             <a href="/pricing" ${
       activePage === "pricing" ? 'class="active"' : ""
     }>Pricing</a>

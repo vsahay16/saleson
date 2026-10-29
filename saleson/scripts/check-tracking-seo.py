@@ -13,12 +13,13 @@ for p in pages:
  for el in s.find_all(['iframe','img','script']):
   if any(x in el.get('src','') for x in ['googletagmanager.com/ns','facebook.com/tr','px.ads.linkedin']):assert el.find_parent('template'),(rel,str(el))
  # Metadata/URL preservation against this task's starting tree.
- old=BeautifulSoup(subprocess.check_output(['git','show','7a1e2b7d06700eff8ec6d1401370bca255cb51f6:saleson/'+rel],cwd=R.parent,text=True),'html.parser')
- for selector in ['title','link[rel="canonical"]','meta[name="description"]','meta[property^="og:"]','meta[name^="twitter:"]','meta[name="robots"]']:
-  if rel=='tools/hsn-sac-gst-rate-finder/index.html' and selector!='link[rel="canonical"]' and selector!='meta[name="robots"]':continue
-  if rel=='pricing.html' and selector=='title':continue # pricing generator preserves its established current title
-  def values(doc):return [str(x) for x in doc.select(selector)]
-  assert values(old)==values(s),(rel,selector)
+ if rel!='help.html': # New canonical help hub; existing page baselines remain enforced.
+  old=BeautifulSoup(subprocess.check_output(['git','show','7a1e2b7d06700eff8ec6d1401370bca255cb51f6:saleson/'+rel],cwd=R.parent,text=True),'html.parser')
+  for selector in ['title','link[rel="canonical"]','meta[name="description"]','meta[property^="og:"]','meta[name^="twitter:"]','meta[name="robots"]']:
+   if rel=='tools/hsn-sac-gst-rate-finder/index.html' and selector!='link[rel="canonical"]' and selector!='meta[name="robots"]':continue
+   if rel=='pricing.html' and selector=='title':continue # pricing generator preserves its established current title
+   def values(doc):return [str(x) for x in doc.select(selector)]
+   assert values(old)==values(s),(rel,selector)
  def resolve(path):
   q=R/path.lstrip('/')
   return next((x for x in [q,q.with_suffix('.html'),q/'index.html'] if x.is_file()),None)
@@ -35,9 +36,17 @@ for p in pages:
   a=[n for g in graphs for n in g.get('@graph',[g]) if n.get('@type')=='BlogPosting'];assert len(a)==1
   assert a[0].get('datePublished') and a[0].get('image');articles+=1
 assert not issues,issues
-# Established sitemap, redirects and robots stay byte-identical.
+# Preserve all established sitemap URLs; allow exactly the new Help hub.
+import xml.etree.ElementTree as ET
 for rel in ['sitemap.xml','robots.txt']:
- assert (R/rel).read_bytes()==subprocess.check_output(['git','show','7a1e2b7d06700eff8ec6d1401370bca255cb51f6:saleson/'+rel],cwd=R.parent),rel
+ current=(R/rel).read_bytes()
+ baseline=subprocess.check_output(['git','show','7a1e2b7d06700eff8ec6d1401370bca255cb51f6:saleson/'+rel],cwd=R.parent)
+ if rel=='sitemap.xml':
+  ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+  urls=lambda data:[n.text for n in ET.fromstring(data).findall('.//s:loc',ns)]
+  actual=urls(current);assert actual.count('https://saleson.co.in/help')==1
+  assert [u for u in actual if u!='https://saleson.co.in/help']==urls(baseline),rel
+ else:assert current==baseline,rel
 # Review-only deployment suppression is the sole permitted hosting-config delta.
 for rel in ['vercel.json','../vercel.json']:
  current=json.loads((R/rel).read_text())

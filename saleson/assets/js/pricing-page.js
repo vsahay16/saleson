@@ -26,7 +26,7 @@
   Object.entries(cfg.plans).forEach(([key,plan])=>{
    document.querySelector(`[data-plan-price="${key}"]`).textContent=money(annual?plan.annual:plan.monthly);
    document.querySelector(`[data-plan-price="${key}"]`).nextElementSibling.textContent=annual?'/user/year':'/user/month';
-   document.querySelector(`[data-plan-equivalent="${key}"]`).textContent=annual?`Equivalent to ${money(plan.annual/12)}/user/month, billed annually.`:'Billed monthly for your subscribed users.';
+   document.querySelector(`[data-plan-equivalent="${key}"]`).textContent=`Minimum ${cfg.minimumUsers} users: ${money(cfg.minimumUsers*(annual?plan.annual:plan.monthly))}/${annual?'year, paid upfront':'month'}.`+(annual?` Equivalent to ${money(plan.annual/12)}/user/month.`:'');
   });
   $('calc-cycle').value=cycle;calcUpdate();
  }
@@ -34,7 +34,7 @@
  window.SalesOnPricingCalculator.setRegion=tier=>{
   cfg=window.SalesOnPricing[tier]||window.SalesOnPricing.USD;
   setBilling($('calc-cycle').value);
-  document.querySelectorAll('[data-plan-tax-note]').forEach(el=>{el.textContent='Prices in '+cfg.currency+' · '+(cfg.currency==='INR'?'GST':'Taxes')+' extra where applicable · '+money(cfg.setupFee)+' setup fee';});
+  document.querySelectorAll('[data-plan-tax-note]').forEach(el=>{el.textContent='Prices in '+cfg.currency+' · '+(cfg.currency==='INR'?'GST':'Taxes')+' extra where applicable · '+money(cfg.setupFee)+' SalesOn account setup';});
  };
  window.calcUpdate=calcUpdate;
  if(!$('calc-users'))return;

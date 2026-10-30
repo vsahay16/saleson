@@ -80,10 +80,10 @@ class SiteFooter extends HTMLElement {
           .footer-main {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 24px 40px;
+            padding: 36px 24px 24px;
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-            gap: 40px 32px;
+            grid-template-columns: 1.6fr repeat(5,minmax(0,1fr));
+            gap: 28px 24px;
           }
   
           /* Brand column */
@@ -223,7 +223,7 @@ class SiteFooter extends HTMLElement {
             .cta-badges { flex-direction: column; align-items: center; }
           }
         .footer-explore{max-width:1200px;margin:0 auto;padding:28px 24px;border-top:1px solid #e8e8e8;display:grid;grid-template-columns:1fr 2fr 1.3fr;gap:28px}.footer-explore h3{font:600 14px/1.5 "DM Sans",sans-serif;margin-bottom:12px;color:#183249}.footer-explore-links{display:flex;flex-wrap:wrap;gap:8px 16px}.footer-explore a{font:400 13px/1.7 "DM Sans",sans-serif;color:#52677a;text-decoration:none}.footer-explore a:hover{color:#1143b6;text-decoration:underline}@media(max-width:700px){.footer-explore{grid-template-columns:1fr;gap:22px}}
-      </style>
+      .footer-discovery{max-width:1200px;margin:auto;padding:0 24px}.footer-discovery>summary,.footer-more-tools>summary{cursor:pointer;min-height:44px;padding:12px 0;font-size:13px;color:#52677a}.footer-discovery .footer-explore{padding:16px 0 24px}.footer-more-tools .link-list{padding:8px 0 0}.footer-discovery summary:focus-visible,.footer-more-tools summary:focus-visible{outline:3px solid #1143b6;outline-offset:3px}</style>
   
         <!-- ── Main Footer Grid ── -->
         <footer>
@@ -307,7 +307,7 @@ class SiteFooter extends HTMLElement {
                 <li><a href="/mobile-app"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Mobile App</a></li>
                 </ul>
   
-              <span class="col-title" style="margin-top:28px;display:inline-block">Resources</span>
+              </div><div class="link-col"><span class="col-title">Resources</span>
               <ul class="link-list">
                 <li><a href="/blogs"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Blog</a></li>
                 <li><a href="/help"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Help &amp; Onboarding</a></li>
@@ -328,7 +328,7 @@ class SiteFooter extends HTMLElement {
                 <!-- <li><a href="/partners"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Partners</a></li> -->
               </ul>
   
-              <span class="col-title" style="margin-top:28px;display:inline-block">Legal</span>
+              <span class="col-title" style="margin-top:20px;display:inline-block">Legal</span>
               <ul class="link-list">
                 <li><a href="/privacy-policy"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Privacy Policy</a></li>
                 <li><a href="/terms"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Terms of Service</a></li>
@@ -338,21 +338,7 @@ class SiteFooter extends HTMLElement {
 
             <div class="link-col">
               <span class="col-title">Tools</span>
-              <ul class="link-list">
-                <li><a href="/tools"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>All Free Tools</a></li>
-                <li><a href="/tools/delivery-challan-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Delivery Challan Generator</a></li>
-                <li><a href="/tools/e-way-bill-checker"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>E-Way Bill Checker</a></li>
-                <li><a href="/tools/gst-calculator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>GST Calculator</a></li>
-                <li><a href="/tools/gst-invoice-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>GST Invoice Generator</a></li>
-                <li><a href="/tools/hsn-sac-gst-rate-finder"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>HSN Goods Heading Lookup</a></li>
-                <li><a href="/tools/outstanding-payment-tracker"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Outstanding Payment Tracker</a></li>
-                <li><a href="/tools/payment-receipt-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Payment Receipt Generator</a></li>
-                <li><a href="/tools/purchase-order-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Purchase Order Generator</a></li>
-                <li><a href="/tools/quotation-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Quotation Generator</a></li>
-                <li><a href="/tools/stock-reorder-level-calculator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Stock Reorder Level Calculator</a></li>
-                <li><a href="/tools/van-loading-sheet-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Van Loading Sheet Generator</a></li>
-                <li><a href="/tools/whatsapp-payment-reminder-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Whatsapp Payment Reminder Generator</a></li>
-              </ul>
+              <ul class="link-list"><li><a href="/tools"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>All Free Tools</a></li><li><a href="/tools/gst-invoice-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>GST Invoice Generator</a></li><li><a href="/tools/outstanding-payment-tracker"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Outstanding Payment Tracker</a></li></ul><details class="footer-more-tools"><summary>More free tools</summary><ul class="link-list"><li><a href="/tools/delivery-challan-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Delivery Challan Generator</a></li><li><a href="/tools/e-way-bill-checker"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>E-Way Bill Checker</a></li><li><a href="/tools/gst-calculator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>GST Calculator</a></li><li><a href="/tools/hsn-sac-gst-rate-finder"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>HSN Goods Heading Lookup</a></li><li><a href="/tools/payment-receipt-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Payment Receipt Generator</a></li><li><a href="/tools/purchase-order-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Purchase Order Generator</a></li><li><a href="/tools/quotation-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Quotation Generator</a></li><li><a href="/tools/stock-reorder-level-calculator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Stock Reorder Level Calculator</a></li><li><a href="/tools/van-loading-sheet-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Van Loading Sheet Generator</a></li><li><a href="/tools/whatsapp-payment-reminder-generator"><svg class="arr" viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>Whatsapp Payment Reminder Generator</a></li></ul></details>
             </div>
   
           </div>
@@ -360,7 +346,7 @@ class SiteFooter extends HTMLElement {
           <hr class="footer-divider">
   
           <!-- Bottom bar -->
-          <nav class="footer-explore" aria-label="More SalesOn pages"><div><h3>For your business</h3><div class="footer-explore-links"><a href="/inventory-management">Inventory Management</a><a href="/user/software-for-distributors">For Distributors</a><a href="/user/software-for-manufacturers">For Manufacturers</a><a href="/user/software-for-retailers">For Retailers</a><a href="/partner">Partner Enquiries</a></div></div><div><h3>Industries</h3><div class="footer-explore-links"><a href="/industries/fmcg">FMCG</a><a href="/industries/agriculture">Agriculture</a><a href="/industries/pharmacy">Pharmacy</a><a href="/industries/automotive">Automotive</a><a href="/industries/cosmetic">Cosmetic</a><a href="/industries/electronics">Electronics</a><a href="/industries/hardware">Hardware</a><a href="/industries/manufacturing">Manufacturing</a><a href="/industries/telecommunication">Telecommunication</a><a href="/industries/publishing">Publishing</a><a href="/industries/sport-and-fitness">Sport and Fitness</a><a href="/industries/transport">Transport</a></div></div><div><h3>Compare software</h3><div class="footer-explore-links"><a href="/compare/bizom-alternative">Bizom Alternative</a><a href="/compare/beatroute-alternative">BeatRoute Alternative</a><a href="/compare/deltasales-alternative">Delta Sales Alternative</a><a href="/compare/freshsales-alternative">Freshsales Alternative</a><a href="/compare/salesforce-alternative">Salesforce Alternative</a><a href="/compare/zoho-alternative">Zoho Alternative</a><a href="/saleson-vs-other-field-sales">Field Sales Comparison</a></div></div></nav><div class="footer-bottom">
+          <details class="footer-discovery"><summary>Industries, audiences and comparisons</summary><nav class="footer-explore" aria-label="More SalesOn pages"><div><h3>For your business</h3><div class="footer-explore-links"><a href="/inventory-management">Inventory Management</a><a href="/user/software-for-distributors">For Distributors</a><a href="/user/software-for-manufacturers">For Manufacturers</a><a href="/user/software-for-retailers">For Retailers</a><a href="/partner">Partner Enquiries</a></div></div><div><h3>Industries</h3><div class="footer-explore-links"><a href="/industries/fmcg">FMCG</a><a href="/industries/agriculture">Agriculture</a><a href="/industries/pharmacy">Pharmacy</a><a href="/industries/automotive">Automotive</a><a href="/industries/cosmetic">Cosmetic</a><a href="/industries/electronics">Electronics</a><a href="/industries/hardware">Hardware</a><a href="/industries/manufacturing">Manufacturing</a><a href="/industries/telecommunication">Telecommunication</a><a href="/industries/publishing">Publishing</a><a href="/industries/sport-and-fitness">Sport and Fitness</a><a href="/industries/transport">Transport</a></div></div><div><h3>Compare software</h3><div class="footer-explore-links"><a href="/compare/bizom-alternative">Bizom Alternative</a><a href="/compare/beatroute-alternative">BeatRoute Alternative</a><a href="/compare/deltasales-alternative">Delta Sales Alternative</a><a href="/compare/freshsales-alternative">Freshsales Alternative</a><a href="/compare/salesforce-alternative">Salesforce Alternative</a><a href="/compare/zoho-alternative">Zoho Alternative</a><a href="/saleson-vs-other-field-sales">Field Sales Comparison</a></div></div></nav></details><div class="footer-bottom">
             <p>© ${year} SalesOn. All rights reserved.</p>
   
             <div class="bottom-links">
@@ -378,7 +364,7 @@ class SiteFooter extends HTMLElement {
       `;
 
       if (this.hasAttribute?.('compact')) {
-        this.shadowRoot.querySelector('.footer-explore')?.remove();
+        this.shadowRoot.querySelector('.footer-discovery')?.remove();
         this.shadowRoot.querySelector('.brand-desc')?.remove();
         this.shadowRoot.querySelectorAll('.link-col').forEach(column=>column.remove());
         const main=this.shadowRoot.querySelector('.footer-main');

@@ -19,8 +19,11 @@ for p in files:
  assert 'so-guide' in s and any('/css/guide-pages.' in x for x in d.styles),p
  assert not re.search(r'data:[^;]+;base64,',s),p
  assert p.stat().st_size<18000,(p,'HTML payload unexpectedly large')
- assert d.images and all(x.get('width') and x.get('height') and x.get('alt') for x in d.images),p
- assert len([x for x in d.images if x.get('fetchpriority')=='high'])==1,p
+ assert (d.images or p.parent.name=='compare') and all(x.get('width') and x.get('height') and x.get('alt') for x in d.images),p
+ if p.parent.name=='compare':
+  assert 'comparison-summary' in s and 'so-hero-art' not in s,p
+ else:
+  assert len([x for x in d.images if x.get('fetchpriority')=='high'])==1,p
  for image in d.images:
   file=R/image['src'].lstrip('/');assert file.is_file(),(p,file)
   if file.suffix=='.svg':

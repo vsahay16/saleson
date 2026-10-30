@@ -33,7 +33,7 @@ for p in sorted((R/'compare').glob('*.html')):
  s=p.read_text();d=Page(s)
  assert 'SalesOn vs ' in ''.join(d.h1),p.name
  assert d.rows==5,(p.name,d.rows)
- assert '28 October 2026' in s and '₹0 setup' in s and 'minimum 2 users' in s.lower(),p.name
+ assert '28 October 2026' in s and '₹0 SalesOn account setup' in s and 'minimum 2 users' in s.lower(),p.name
  for plan in config.values():
   assert '₹'+format(plan['monthly']*2,',')+'/month for 2 users' in s
   assert '₹'+format(plan['annual']*2,',')+'/year' in s

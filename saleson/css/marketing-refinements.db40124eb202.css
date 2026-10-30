@@ -17,3 +17,10 @@ button.product-zoom:not(.screen-enlarge)::after{content:none!important}button.pr
 .so-guide .workflow-guide-grid.workflow-list{display:block;background:transparent;border:0}.so-guide .workflow-list>article{border:0;border-top:1px solid #dce5ef;border-radius:0;background:transparent;padding:22px 0;box-shadow:none}.so-guide .workflow-list>article:first-child{border-top:2px solid #cbdcf4}
 #invoice-studio .iv-section-heading{gap:48px;margin-bottom:30px}#invoice-studio .iv-section-heading>p{line-height:1.75}
 @media(max-width:760px){#invoice-studio .iv-section-heading{gap:22px}}
+/* Pair the tall format demo with the explanation and format image on desktop. */
+@media(min-width:701px){
+ #invoice-studio .iv-output-layout{grid-template-columns:.9fr 1.1fr;gap:28px 48px;align-items:start}
+ #invoice-studio .iv-output-layout>div:first-child{grid-column:1;grid-row:1}
+ #invoice-studio .iv-output-layout>.iv-output-visual{grid-column:1;grid-row:2}
+ #invoice-studio .iv-output-layout>.iv-document-demo{grid-column:2;grid-row:1/span 2}
+}

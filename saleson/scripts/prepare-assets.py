@@ -11,6 +11,7 @@ for name in ['build-audience-pages.py','build-comparisons.py','build-page-theme.
     subprocess.run([sys.executable,str(ROOT/'scripts'/name)],check=True)
 subprocess.run([sys.executable,str(ROOT/'scripts/refine-generated-guides.py')],check=True)
 subprocess.run([sys.executable,str(ROOT/'scripts/prepare-tracking-seo.py')],check=True)
+subprocess.run([sys.executable,str(ROOT/'scripts/refine-metadata-scope.py')],check=True)
 subprocess.run([sys.executable,str(ROOT/'scripts/optimize-media.py')],check=True)
 subprocess.run([sys.executable,str(ROOT/'scripts/prepare-page-assets.py')],check=True)
 subprocess.run([sys.executable,str(ROOT/'scripts/prepare-display-media.py')],check=True)

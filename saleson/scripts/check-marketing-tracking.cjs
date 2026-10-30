@@ -61,12 +61,14 @@ console.log(`PASS: ${tests} tracking scenarios: consent, one bootstrap/page view
   const {dom,d,changes}=consentUI();
   assert.equal(d.querySelector('.consent-panel').hidden,false);
   assert.equal(d.querySelector('[name=analytics]').checked,false);
-  if(choice==='save')d.querySelector('[name=analytics]').checked=true;
+  assert.equal(d.querySelector('.consent-options').hidden,true);
+  if(choice==='save'){d.querySelector('.consent-manage').click();assert.equal(d.querySelector('.consent-options').hidden,false);assert.equal(changes.length,0);d.querySelector('[name=analytics]').checked=true;}
   d.querySelector(`[data-choice=${choice}]`).click();
   assert.deepEqual(changes,[{analytics:choice!=='reject',advertising:choice==='accept'}]);
   assert.equal(d.querySelector('.consent-panel').hidden,true);
   assert.equal(d.activeElement,d.querySelector('.consent-open'));
   d.querySelector('.consent-open').click();
+  assert.equal(d.querySelector('.consent-options').hidden,false);
   assert.equal(d.querySelector('[name=analytics]').checked,choice!=='reject');
   dom.window.close();
  }

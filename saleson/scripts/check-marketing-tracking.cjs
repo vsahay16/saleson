@@ -68,7 +68,9 @@ console.log(`PASS: ${tests} tracking scenarios: consent, one bootstrap/page view
   assert.equal(d.querySelector('.consent-panel').hidden,true);
   assert.equal(d.activeElement,d.querySelector('.consent-open'));
   d.querySelector('.consent-open').click();
-  assert.equal(d.querySelector('.consent-options').hidden,false);
+  assert.equal(d.querySelector('.consent-options').hidden,true);
+  assert.equal(d.querySelector('.saleson-consent').classList.contains('has-choice'),true);
+  d.querySelector('.consent-manage').click();
   assert.equal(d.querySelector('[name=analytics]').checked,choice!=='reject');
   dom.window.close();
  }

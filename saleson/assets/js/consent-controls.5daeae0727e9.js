@@ -6,11 +6,12 @@
   function details(visible){panel.querySelector('.consent-options').hidden=!visible;panel.querySelector('[data-choice="save"]').hidden=!visible;panel.querySelector('.consent-manage').hidden=visible;}
   function show(focus=true,detailed=true){var c=api.getConsent();panel.querySelector('[name="analytics"]').checked=c.analytics;panel.querySelector('[name="advertising"]').checked=c.advertising;details(detailed);panel.hidden=false;open.setAttribute('aria-expanded','true');if(focus)panel.querySelector(detailed?'input':'[data-choice="reject"]').focus();}
   panel.querySelector('.consent-manage').addEventListener('click',function(){details(true);panel.querySelector('input').focus();});
-  function close(){panel.hidden=true;open.setAttribute('aria-expanded','false');open.focus();}
+  function close(){panel.hidden=true;open.setAttribute('aria-expanded','false');open.focus({preventScroll:true});}
   box.querySelector('.consent-close').addEventListener('click',close);
   box.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden){e.preventDefault();close();}});
-  open.addEventListener('click',function(){if(panel.hidden)show();else{panel.hidden=true;open.setAttribute('aria-expanded','false');}});
-  box.querySelectorAll('[data-choice]').forEach(function(b){b.addEventListener('click',function(){var choice=b.dataset.choice;api.setConsent(choice==='accept'||choice==='save'&&panel.querySelector('[name="analytics"]').checked,choice==='accept'||choice==='save'&&panel.querySelector('[name="advertising"]').checked);panel.hidden=true;open.setAttribute('aria-expanded','false');open.focus();});});
+  open.addEventListener('click',function(){if(panel.hidden)show(true,false);else{panel.hidden=true;open.setAttribute('aria-expanded','false');}});
+  box.querySelectorAll('[data-choice]').forEach(function(b){b.addEventListener('click',function(){var choice=b.dataset.choice;api.setConsent(choice==='accept'||choice==='save'&&panel.querySelector('[name="analytics"]').checked,choice==='accept'||choice==='save'&&panel.querySelector('[name="advertising"]').checked);panel.hidden=true;box.classList.add('has-choice');open.setAttribute('aria-expanded','false');open.focus({preventScroll:true});});});
   var saved=false;try{var v=JSON.parse(localStorage.getItem('saleson-consent-v1'));saved=v&&v.version===1&&Date.now()-v.savedAt<180*86400000;}catch(e){}
+  if(saved)box.classList.add('has-choice');
   if(!saved)show(!d.body.matches('.tool-page,.utility-calculator,.utility-quiz'),false);
 })(window,document);

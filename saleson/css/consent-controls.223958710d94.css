@@ -26,3 +26,8 @@
 
 .saleson-consent .consent-manage{grid-column:1/-1;border-color:transparent;background:transparent;color:#1143b6;text-decoration:underline;text-underline-offset:3px}
 .saleson-consent .consent-options[hidden]+.consent-privacy{margin-top:0}
+
+/* After a decision, keep the change-preferences control at the page footer. */
+.saleson-consent.has-choice{position:static;max-width:none;padding:8px 24px;margin:0;background:#f7f9fc;text-align:center}
+.saleson-consent.has-choice .consent-open{box-shadow:none;border-color:transparent;background:transparent;color:#526478;text-decoration:underline;text-underline-offset:3px}
+.saleson-consent.has-choice .consent-panel{position:fixed;left:14px;bottom:14px;margin:0;text-align:left;z-index:10001}

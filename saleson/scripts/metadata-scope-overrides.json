@@ -1,0 +1,51 @@
+{
+  "saleson-vs-other-field-sales.html": {
+    "title": "How to Choose Field Sales Software | SalesOn Selection Guide",
+    "description": "Choose field sales software by business fit, workflows, integrations, total cost and support. Use a practical demo checklist and named product comparisons."
+  },
+  "compare/beatroute-alternative.html": {
+    "title": "SalesOn vs BeatRoute: Field Workflows and Distribution Scope",
+    "description": "Compare SalesOn and BeatRoute by field workflows, distribution scope, AI-led execution, team cost and rollout requirements, with links to official sources."
+  },
+  "compare/deltasales-alternative.html": {
+    "description": "Compare SalesOn and Delta Sales App on field orders, collections, office handovers, connectivity, included modules and total team cost."
+  },
+  "compare/salesforce-alternative.html": {
+    "description": "Compare SalesOn distribution workflows with Salesforce CRM scope. Review edition requirements, customisation, implementation and total team cost."
+  },
+  "compare/zoho-alternative.html": {
+    "description": "Compare SalesOn and Zoho CRM for outlet orders, billing, collections and prospect follow-up. Review free-plan limits, paid editions and team costs."
+  },
+  "industries/manufacturing.html": {
+    "description": "Follow a manufacturer-to-distributor order through finished-goods availability, billing and dispatch. See where the workflow hands over to Production."
+  },
+  "industries/pharmacy.html": {
+    "description": "Review chemist and dealer orders, customer dues, and configured batch or expiry records for pharmaceutical distribution. Confirm specialist requirements."
+  },
+  "user/software-for-manufacturers.html": {
+    "description": "Evaluate SalesOn for distributor orders, finished-goods stock, billing and collections. Compare the modules your manufacturing business needs."
+  },
+  "mobile-app.html": {
+    "title": "SalesOn Mobile App | Downloads, Devices & Permissions",
+    "description": "Download SalesOn for Android or iPhone. Review company setup, team sign-in, device compatibility, permissions and internet requirements."
+  },
+  "pricing.html": {
+    "title": "SalesOn Pricing | Pro & Enterprise Plans for 2+ Users"
+  },
+  "target-meter.html": {
+    "title": "Sales Target & Incentive Tracking Software | SalesOn"
+  },
+  "calculators/sales-leakage-calculator.html": {
+    "title": "Sales Leakage & ROI Estimate Calculator | SalesOn",
+    "description": "Estimate possible sales leakage and ROI using your sales figures and adjustable assumptions. Results are estimates, not audited losses or guaranteed savings."
+  },
+  "order-taking-app.html": {
+    "description": "Capture distributor orders with SKU search, customer-wise prices and applicable schemes. Review quantities and credit information, then share confirmation."
+  },
+  "about.html": {
+    "description": "Meet SalesOn founders Shruti Sahay and Suraj Jaiswal. Learn how their engineering and Quintol experience shaped the sales and distribution platform."
+  },
+  "tools/index.html": {
+    "description": "Use free browser tools for GST calculations, invoices, quotations, challans, receipts, payment tracking, stock reorder planning and van loading sheets."
+  }
+}

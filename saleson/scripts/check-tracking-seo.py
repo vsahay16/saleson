@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urlsplit,unquote
 import json,subprocess,re
 R=Path(__file__).resolve().parents[1];pages=list((p for p in R.rglob('*.html') if 'node_modules' not in p.parts));issues=[];links=0;articles=0
+approved_metadata=json.loads((R/'scripts/metadata-scope-overrides.json').read_text())
 for p in pages:
  raw=p.read_text();s=BeautifulSoup(raw,'html.parser');rel=p.relative_to(R).as_posix()
  for asset in ['tracking-config','site-tag-manager','marketing-events','consent-controls']:
@@ -15,6 +16,16 @@ for p in pages:
  # Metadata/URL preservation against this task's starting tree.
  if rel!='help.html': # New canonical help hub; existing page baselines remain enforced.
   old=BeautifulSoup(subprocess.check_output(['git','show','7a1e2b7d06700eff8ec6d1401370bca255cb51f6:saleson/'+rel],cwd=R.parent,text=True),'html.parser')
+  # Explicit reviewed values replace only the approved text fields in the baseline.
+  reviewed=approved_metadata.get(rel,{})
+  if 'title' in reviewed:old.title.string=reviewed['title']
+  for tag in old.select('meta'):
+   key=tag.get('name',tag.get('property',''))
+   field={'description':'description','og:title':'title','og:description':'description','twitter:title':'title','twitter:description':'description'}.get(key)
+   if field in reviewed:tag['content']=reviewed[field]
+  for key,value in reviewed.items():
+   if key=='title':assert s.title.get_text()==value,rel
+   else:assert s.select_one('meta[name="description"]')['content']==value,rel
   for selector in ['title','link[rel="canonical"]','meta[name="description"]','meta[property^="og:"]','meta[name^="twitter:"]','meta[name="robots"]']:
    if rel=='tools/hsn-sac-gst-rate-finder/index.html' and selector!='link[rel="canonical"]' and selector!='meta[name="robots"]':continue
    if rel=='customers/Lapcare.html' and selector in ['title','meta[name="description"]','meta[property^="og:"]','meta[name^="twitter:"]']:continue # Correct unrelated legacy customer metadata.
@@ -55,4 +66,4 @@ for rel in ['vercel.json','../vercel.json']:
  baseline=json.loads(subprocess.check_output(['git','show','7a1e2b7d06700eff8ec6d1401370bca255cb51f6:'+source_path],cwd=R.parent,text=True))
  assert current.pop('git',None)=={'deploymentEnabled':{'review/quiet-tools-and-safety':False}}
  assert current==baseline,rel
-print(f'PASS: {len(pages)} pages, one GTM/consent/event setup each; {links} internal links and fragments; {articles} dated BlogPosting schemas; metadata preserved except the intentional HSN scope correction; robots, sitemap and hosting routes preserved; review-branch auto-deployment disabled.')
+print(f'PASS: {len(pages)} pages, one GTM/consent/event setup each; {links} internal links and fragments; {articles} dated BlogPosting schemas; metadata matches reviewed scope corrections; unapproved metadata preserved; robots, sitemap and hosting routes preserved; review-branch auto-deployment disabled.')

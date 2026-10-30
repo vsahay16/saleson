@@ -32,3 +32,7 @@ body{margin:0;background:#fff}
 #tracking-observatory .st-buyer-guide li{margin:10px 0}
 @media(max-width:900px){#tracking-observatory .st-hero-layout{grid-template-columns:1fr;gap:30px}#tracking-observatory .st-hero-product{width:100%;max-width:760px;margin:auto}}
 @media(max-width:760px){#tracking-observatory h1{font-size:34px}#tracking-observatory .st-hero-copy{margin-bottom:0}}
+
+/* Let narrow grid columns shrink to the viewport instead of their text width. */
+#tracking-observatory .st-day-layout > * { min-width: 0; }
+@media(max-width:760px){#tracking-observatory .st-day-layout{grid-template-columns:minmax(0,1fr)}}

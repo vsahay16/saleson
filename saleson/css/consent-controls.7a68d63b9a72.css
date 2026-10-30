@@ -1,6 +1,0 @@
-.saleson-consent{position:fixed;bottom:14px;left:14px;z-index:10001;font:14px/1.5 "DM Sans",Arial,sans-serif;color:#183249;max-width:calc(100vw - 28px)}
-.saleson-consent button{font:inherit;cursor:pointer;border:1px solid #bac7d4;border-radius:8px;padding:8px 12px;background:#fff;color:#183249}
-.saleson-consent button:focus-visible,.saleson-consent input:focus-visible{outline:3px solid #1143b6;outline-offset:3px}
-.saleson-consent .consent-panel{width:420px;max-width:calc(100vw - 28px);box-sizing:border-box;background:#fff;border:1px solid #dbe3ec;border-radius:14px;padding:20px;box-shadow:0 8px 40px #18324924;margin-bottom:8px;max-height:80vh;overflow:auto}
-.saleson-consent [hidden]{display:none!important}.saleson-consent h2{font:24px/1.2 "DM Serif Display",Georgia,serif;margin:0 0 10px}.saleson-consent p{margin:8px 0 14px}.saleson-consent label{display:flex;gap:8px;align-items:flex-start;margin:12px 0}.saleson-consent input{margin-top:4px;accent-color:#1143b6}.saleson-consent a{color:#1143b6}.consent-actions{display:flex;gap:8px;flex-wrap:wrap}.saleson-consent [data-choice=accept]{background:#1143b6;color:#fff;border-color:#1143b6}.saleson-consent .consent-open{font-size:12px;box-shadow:0 2px 8px #18324918}
-@media print{.saleson-consent{display:none!important}}

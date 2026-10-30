@@ -45,3 +45,36 @@ console.log(`PASS: ${tests} tracking scenarios: consent, one bootstrap/page view
  wl.beforeprint();assert.equal(emitted.at(-1).name,'tool_download');assert.equal(emitted.at(-1).file_type,'print');
  console.log('PASS: delegated/shadow-compatible contact/demo/trial click classification and double-click dedup; no login-as-signup, no contact values; native video milestones/end dedup and print intent.');
 }
+
+// Consent UI choices must preserve the independent measurement categories.
+{
+ const {JSDOM}=require('jsdom');
+ const ui=fs.readFileSync(path.join(root,'assets/js/consent-controls.js'),'utf8');
+ function consentUI(blocked=false){
+  const dom=new JSDOM('<body></body>',{url:'https://saleson.co.in',runScripts:'outside-only'});
+  const changes=[];let state={analytics:false,advertising:false};
+  dom.window.SalesOnTracking={getConsent:()=>state,setConsent:(analytics,advertising)=>{state={analytics,advertising};changes.push(state);}};
+  if(blocked)Object.defineProperty(dom.window,'localStorage',{get(){throw Error('blocked');}});
+  dom.window.eval(ui);return {dom,d:dom.window.document,changes};
+ }
+ for(const choice of ['reject','accept','save']){
+  const {dom,d,changes}=consentUI();
+  assert.equal(d.querySelector('.consent-panel').hidden,false);
+  assert.equal(d.querySelector('[name=analytics]').checked,false);
+  if(choice==='save')d.querySelector('[name=analytics]').checked=true;
+  d.querySelector(`[data-choice=${choice}]`).click();
+  assert.deepEqual(changes,[{analytics:choice!=='reject',advertising:choice==='accept'}]);
+  assert.equal(d.querySelector('.consent-panel').hidden,true);
+  assert.equal(d.activeElement,d.querySelector('.consent-open'));
+  d.querySelector('.consent-open').click();
+  assert.equal(d.querySelector('[name=analytics]').checked,choice!=='reject');
+  dom.window.close();
+ }
+ const {dom,d,changes}=consentUI(true);
+ d.querySelector('.consent-close').click();assert.equal(changes.length,0);
+ d.querySelector('.consent-open').click();
+ d.querySelector('[name=analytics]').dispatchEvent(new dom.window.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
+ assert.equal(d.querySelector('.consent-panel').hidden,true);assert.equal(changes.length,0);
+ dom.window.close();
+ console.log('PASS: consent UI rejects, accepts and saves independent categories; close/Escape do not grant consent; focus returns and blocked storage remains usable.');
+}

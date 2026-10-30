@@ -3,7 +3,7 @@ const root=path.resolve(__dirname,'..');
 const clean=s=>s.replace(/<[^>]*>/g,'').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
 for(const [slug,title,count,anchors] of [
  ['attendance','Field Attendance App for Sales Teams | Photo &amp; GPS Check-In | SalesOn',7,['how-it-works','verified-checkin','work-hours','faq']],
- ['payment-collection','Payment Collection Software India | SalesOn',8,['outstanding','collection-flow','credit-limit','alerts','faq']]
+ ['payment-collection','Payment Collection Software India | SalesOn',8,['outstanding','collection-flow','faq']]
 ]){
  const s=fs.readFileSync(path.join(root,slug+'.html'),'utf8');
  assert.equal(s.match(/<title>(.*?)<\/title>/s)[1],title);
@@ -25,7 +25,10 @@ const s=fs.readFileSync(path.join(root,'payment-collection.html'),'utf8');
 const table=s.match(/<table><caption>Unpaid balances by invoice[\s\S]*?<\/table>/)[0];
 const money=[...table.matchAll(/₹([\d,]+)/g)].map(x=>Number(x[1].replace(/,/g,'')));
 assert.equal(money.slice(0,-1).reduce((a,b)=>a+b,0),money.at(-1));
-const credit=s.match(/<dl>(.*?)<\/dl>/s)[1];const amounts=[...credit.matchAll(/₹([\d,]+)/g)].map(x=>Number(x[1].replace(/,/g,'')));assert.equal(amounts[0]-amounts[1],amounts[2]);
+for(const id of ['credit-limit','alerts'])assert.ok(s.includes('id="'+id+'"'));
+assert.ok(s.includes('One account review, three checks'));
+assert.ok(s.includes('whatsapp-payment-reminder-generator'));
+assert.ok(!s.includes('Illustrative credit review · Sample policy'));
 assert.ok(!s.includes('3d, 30d, 60d, 90d'));assert.ok(!s.includes('30<span>–40%'));
 const at=fs.readFileSync(path.join(root,'attendance.html'),'utf8');assert.ok(!at.includes('No Spoofing'));assert.ok(!at.includes('60+ field staff'));assert.ok(at.includes('09:52')&&at.includes('52 minutes'));
 console.log('PASS: Attendance/Collection preserved titles and focused section anchors, FAQ/schema alignment, indexability, screenshot enlargement and financial example consistency.');

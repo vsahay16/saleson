@@ -16,8 +16,8 @@ for(const key of Object.keys(cfg.plans))for(const users of [-5,0,1,2,2.2,10,101,
  assert.equal(r.seats,n);assert.equal(r.yearly,n*(cycle==='annual'?p.annual:p.monthly*12));assert.equal(r.payment,n*(cycle==='annual'?p.annual:p.monthly));assert.equal(r.saving,cycle==='annual'?n*(12*p.monthly-p.annual):0);cases++;
 }
 assert.equal(calc(1,'250','monthly').payment,500);assert.equal(calc(1,'400','monthly').payment,800);assert.equal(calc(10,'250','annual').payment,25000);assert.equal(calc(10,'400','annual').payment,40000);
-buttons[0].listeners.click();assert.equal(elements['calc-cycle'].value,'monthly');assert.equal(elements['res-payment'].textContent,'₹2,500');assert.equal(buttons[0].attrs['aria-pressed'],'true');
-elements['calc-cycle'].value='annual';elements['calc-cycle'].listeners.change();assert.equal(buttons[1].attrs['aria-pressed'],'true');assert.equal(elements['res-payment'].textContent,'₹25,000');
+buttons[0].listeners.click();assert.ok(prices['[data-plan-equivalent="250"]'].textContent.includes('Minimum 2 users: ₹500/month'));assert.ok(prices['[data-plan-equivalent="400"]'].textContent.includes('₹800/month'));assert.equal(elements['calc-cycle'].value,'monthly');assert.equal(elements['res-payment'].textContent,'₹2,500');assert.equal(buttons[0].attrs['aria-pressed'],'true');
+elements['calc-cycle'].value='annual';elements['calc-cycle'].listeners.change();assert.ok(prices['[data-plan-equivalent="250"]'].textContent.includes('₹5,000/year, paid upfront'));assert.ok(prices['[data-plan-equivalent="400"]'].textContent.includes('₹8,000/year, paid upfront'));assert.equal(buttons[1].attrs['aria-pressed'],'true');assert.equal(elements['res-payment'].textContent,'₹25,000');
 elements['calc-users'].value='1';elements['calc-users'].listeners.change();assert.equal(elements['calc-users'].value,'2');assert.equal(elements['res-payment'].textContent,'₹5,000');
 
 for(const tier of ['USD','EN']){
@@ -31,7 +31,7 @@ for(const tier of ['USD','EN']){
  elements['calc-users'].value='2';elements['calc-plan'].value='400';buttons[0].listeners.click();
  assert.equal(elements['res-payment'].textContent,'$'+(regional.plans['400'].monthly*2));
  assert.ok(elements['res-payment-note'].textContent.endsWith('before taxes'));
- assert.equal(taxNote.textContent,'Prices in USD · Taxes extra where applicable · $0 setup fee');
+ assert.equal(taxNote.textContent,'Prices in USD · Taxes extra where applicable · $0 SalesOn account setup');
 }
 context.window.SalesOnPricingCalculator.setRegion('IN');
 const html=fs.readFileSync(path.join(root,'pricing.html'),'utf8');assert.ok(!/no minimum users|noindex|pricing\/us/i.test(html));assert.equal((html.match(/<h1\b/g)||[]).length,1);assert.equal((html.match(/<details>/g)||[]).length,8);

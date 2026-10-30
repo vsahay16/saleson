@@ -1,0 +1,26 @@
+/* Focused presentation refinements; preserve each page's workflow and controls. */
+#saleson-editorial .se-wrap{max-width:1220px;padding-inline:32px}
+#saleson-editorial .se-lead{font-size:17px;max-width:540px}
+.saleson-family .hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+.saleson-family .trial-terms{font-size:12px;color:#52677a;margin:12px 0 0;line-height:1.6}
+.saleson-family .commercial-strip{flex-wrap:wrap}
+.saleson-family .collection-review{margin-top:28px;border-top:1px solid #dce5ef;padding-top:24px;max-width:900px}
+.collection-review h3{font-size:20px;margin-bottom:14px}.collection-review ol{padding-left:22px;display:grid;gap:12px}.collection-review p{margin-top:18px}.retained-anchor{display:block;scroll-margin-top:100px}
+#invoice-studio h2{max-width:680px}.integration-offer{margin-top:22px;padding-top:18px;border-top:1px solid #dce5ef;font-size:14px;line-height:1.65}.integration-offer p+p{margin-top:8px}.integration-offer a{text-decoration:underline}
+.ending-terms{font-size:14px!important;margin-top:20px!important}.ending-terms a{color:inherit;text-decoration:underline}
+.comparison-summary{background:#fff;border:1px solid #dce5ef;border-radius:12px;padding:28px;min-width:0;box-shadow:0 12px 32px #17324908}.comparison-summary h2{font-size:25px!important;line-height:1.3}.comparison-summary dl{margin:20px 0}.comparison-summary dl>div{padding:13px 0;border-top:1px solid #e3eaf1}.comparison-summary dt{font-weight:700;margin-bottom:5px}.comparison-summary dd{margin:0;font-size:15px;line-height:1.6;color:#52677a}.comparison-summary a{font-size:14px;text-underline-offset:3px}
+.founder-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-top:30px}.founder-grid article{padding-top:22px;border-top:2px solid #dce6f6}.company-review .founder-role{color:#1858ce;font-weight:600;margin:5px 0 15px}.founder-grid article>a{display:inline-block;margin-top:18px}.company-review .company-facts dl dd{margin-bottom:12px}
+/* The icon is visually quiet but keeps its accessible name, title and touch target. */
+button.product-zoom:not(.screen-enlarge){display:inline-flex!important;align-items:center;justify-content:center;width:44px!important;height:44px!important;min-width:44px;min-height:44px;padding:0!important;border:1px solid #c8d9ed!important;border-radius:50%!important;background:#fff!important;color:#1143b6!important;font:600 23px/1 Arial,sans-serif!important;cursor:pointer;box-shadow:0 2px 8px #18324912}
+button.product-zoom:not(.screen-enlarge)::after{content:none!important}button.product-zoom:focus-visible{outline:3px solid #1143b6;outline-offset:4px}
+@media(max-width:760px){#saleson-editorial .se-wrap{padding-inline:22px}.founder-grid{grid-template-columns:1fr;gap:28px}.comparison-summary{padding:22px}.saleson-family .hero-actions>a{max-width:100%}}
+.so-guide .workflow-guide-grid.workflow-list{display:block;background:transparent;border:0}.so-guide .workflow-list>article{border:0;border-top:1px solid #dce5ef;border-radius:0;background:transparent;padding:22px 0;box-shadow:none}.so-guide .workflow-list>article:first-child{border-top:2px solid #cbdcf4}
+#invoice-studio .iv-section-heading{gap:48px;margin-bottom:30px}#invoice-studio .iv-section-heading>p{line-height:1.75}
+@media(max-width:760px){#invoice-studio .iv-section-heading{gap:22px}}
+/* Pair the tall format demo with the explanation and format image on desktop. */
+@media(min-width:701px){
+ #invoice-studio .iv-output-layout{grid-template-columns:.9fr 1.1fr;gap:28px 48px;align-items:start}
+ #invoice-studio .iv-output-layout>div:first-child{grid-column:1;grid-row:1}
+ #invoice-studio .iv-output-layout>.iv-output-visual{grid-column:1;grid-row:2}
+ #invoice-studio .iv-output-layout>.iv-document-demo{grid-column:2;grid-row:1/span 2}
+}

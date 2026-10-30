@@ -12,7 +12,7 @@
   "/css/marketing-consistency.css": "/css/marketing-consistency.a1858c539b2f.css",
   "/assets/js/demo-calendar.js": "/assets/js/demo-calendar.f0ef3e2724d0.js",
   "/components/site-header.js": "/components/site-header.5dfc638e2022.js",
-  "/components/site-footer.js": "/components/site-footer.3e78d8831b72.js",
+  "/components/site-footer.js": "/components/site-footer.0b8f87900a94.js",
   "/components/whatsapp-float.js": "/components/whatsapp-float.9ce3804a0508.js",
   "/assets/js/site-repairs.js": "/assets/js/site-repairs.4d45242fc5e1.js",
   "/css/guide-pages.css": "/css/guide-pages.94d545452829.css",
@@ -65,7 +65,7 @@
   "/css/help-page.css": "/css/help-page.33b093491443.css",
   "/assets/js/help-page.js": "/assets/js/help-page.4b815766153c.js",
   "/css/pricing-page.css": "/css/pricing-page.e5e6b78f3a07.css",
-  "/assets/js/pricing-page.js": "/assets/js/pricing-page.5bc2ceaf2e38.js",
+  "/assets/js/pricing-page.js": "/assets/js/pricing-page.c2d4c4b061f8.js",
   "/css/not-found-page.css": "/css/not-found-page.d45d92c43ebf.css",
   "/css/order-taking-page.css": "/css/order-taking-page.1fbc7b739cad.css",
   "/css/order-taking-refinement.css": "/css/order-taking-refinement.aa4d6697d348.css",
@@ -141,5 +141,6 @@
   "/assets/js/tools/outstanding-payment-tracker-2.js": "/assets/js/tools/outstanding-payment-tracker-2.70680ca5fce5.js",
   "/assets/js/tools/outstanding-payment-tracker-3.js": "/assets/js/tools/outstanding-payment-tracker-3.e6069fa525f4.js",
   "/css/guided-workflows.css": "/css/guided-workflows.72e6183f4933.css",
-  "/assets/js/guided-workflows.js": "/assets/js/guided-workflows.faddee3cab53.js"
+  "/assets/js/guided-workflows.js": "/assets/js/guided-workflows.faddee3cab53.js",
+  "/css/marketing-refinements.css": "/css/marketing-refinements.db40124eb202.css"
 }

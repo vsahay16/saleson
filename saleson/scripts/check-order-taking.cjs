@@ -17,6 +17,6 @@ assert.ok(s.includes('content="index, follow"'));assert.ok(!s.toLowerCase().incl
 assert.equal(12*155+6*178,2928);assert.equal(12*165+6*178-120,2928);
 assert.ok((s.match(/₹2,928/g)||[]).length>=2);
 for(const wrong of ['₹4,338','₹4,063','0.8s · 247','100%\n','30-Second Digital Order','Live in 1–2 Days','Setup\n                        in 10 Minutes'])assert.ok(!s.includes(wrong),wrong);
-for(const name of ['catalogue-enhanced.webp','customer-context-enhanced.webp'])assert.ok(s.includes('/assets/img/order-taking/'+name));
+for(const name of ['catalogue-enhanced.webp','customer-overview-illustration.webp'])assert.ok(s.includes('/assets/img/order-taking/'+name));
 assert.ok(s.includes('data-media-src='));
 console.log('PASS: Order Taking title/H1, original anchor sequence, shared shell, FAQ/schema, online-only/free-trial clarity and consistent example arithmetic.');

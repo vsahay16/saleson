@@ -16,6 +16,7 @@ for name,value in [('PLAN_CARDS',''.join(cards)),('COMPARISON_ROWS',rows),('FAQ_
  s=re.sub('<!-- '+name+r':START -->[\s\S]*?<!-- '+name+':END -->',lambda m:'<!-- '+name+':START -->'+value+'<!-- '+name+':END -->',s)
 s=re.sub(r'(<span data-minimum-users>)[^<]*(</span>)',lambda m:m[1]+str(cfg['minimumUsers'])+m[2],s)
 s=re.sub(r'(<input[^>]*id="calc-users"[^>]*min=")[^"]*',lambda m:m[1]+str(cfg['minimumUsers']),s)
+s=re.sub(r'(<input[^>]*id="calc-users"[^>]*value=")[^"]*',lambda m:m[1]+str(cfg['minimumUsers']),s)
 s=re.sub(r'<title>.*?</title>','<title>SalesOn Pricing | Pro &amp; Enterprise Plans, No Setup Fee</title>',s)
 s=re.sub(r'<meta[^>]*name="description"[^>]*>', '<meta name="description" content="Compare regional SalesOn Pro and Enterprise plans in INR or USD. Paid subscriptions start with '+str(cfg['minimumUsers'])+' users. Calculate monthly or annual costs and check included workflows.">',s)
 s=re.sub(r'<meta[^>]*(?:property="og:description"|name="twitter:description")[^>]*>',lambda m:m[0].replace(re.search(r'content="([^"]*)"',m[0])[1],'Compare regional Pro and Enterprise plans in INR or USD. Minimum '+str(cfg['minimumUsers'])+' users, monthly or annual billing, and a '+str(cfg['trialDays'])+'-day Pro trial.'),s)

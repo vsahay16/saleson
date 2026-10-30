@@ -11,6 +11,10 @@ for folder in ['compare','industries','user']:
    name,desc=focus[p.stem]
    summary='<aside class="comparison-summary" aria-label="Comparison at a glance"><p class="so-kicker">At a glance</p><h2>'+name+' and SalesOn</h2><dl><div><dt>'+name+'</dt><dd>'+desc+' <a href="#source-1" aria-label="View comparison source">Source</a></dd></div><div><dt>SalesOn</dt><dd>Orders, stock, invoicing and collections for distribution teams. Inclusions vary by plan.</dd></div><div><dt>India starting cost</dt><dd>Pro: ₹500/month for 2 users. GST extra. <a href="/pricing">Compare plans</a>.</dd></div></dl><a href="#workflow-comparison">Review the detailed comparison ↓</a></aside>'
    s=re.sub(r'<figure class="so-hero-art">.*?</figure>',lambda _:summary,s,count=1,flags=re.S)
+  if p.stem=='software-for-retailers':
+   example='<figure class="so-hero-art"><img src="/assets/img/invoicing/invoice-formats-example.webp" width="1448" height="1086" alt="Illustrative A4 and thermal invoice formats with sample billing data" fetchpriority="high" decoding="async"/><figcaption>Illustrative invoice formats · Sample data</figcaption></figure>'
+   s=re.sub(r'<figure class="so-hero-art">.*?</figure>',lambda _:example,s,count=1,flags=re.S)
+   s=re.sub(r'<section class="so-product-example">.*?</section>','',s,count=1,flags=re.S)
   if p.stem in labels:
    s=re.sub(r'(<section[^>]*id="industry-workflow"[^>]*>.*?<h2[^>]*>).*?(</h2>)',lambda m:m[1]+html.escape(labels[p.stem])+m[2],s,count=1,flags=re.S)
    if folder=='industries' and i%2:s=s.replace('class="workflow-guide-grid"','class="workflow-guide-grid workflow-list"',1)

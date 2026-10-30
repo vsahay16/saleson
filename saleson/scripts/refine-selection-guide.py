@@ -1,0 +1,21 @@
+"""Keep the general comparison URL focused on software selection after generation."""
+from pathlib import Path
+import re
+
+R = Path(__file__).resolve().parents[1]
+p = R / 'saleson-vs-other-field-sales.html'
+rows = [
+ ('Business fit', 'Test your selling model, roles and office handover.', '<a href="/field-sales">Field sales</a> and <a href="/distribution-management-system">distribution operations</a>; not a replacement for every CRM.'),
+ ('Required workflows', 'Test a complete task, correction and required edition.', '<a href="/order-taking-app">Orders</a>, <a href="/invoicing">billing</a> and <a href="/payment-collection">collections</a>. DMS, van sales, delivery and production require Enterprise.'),
+ ('Devices and connectivity', 'Check phones, browser, permissions and offline requirements.', '<a href="/mobile-app">Android, iPhone and web</a>. Internet required; no offline use.'),
+ ('Integration requirements', 'Check versions, record direction, mappings, exceptions and duplicates.', '<a href="/tally-integration">Tally JSON export</a> included in both plans. Optional auto-sync: extra subscription and one-time setup fee.'),
+ ('Total cost and minimum users', 'Request seats, taxes, setup, integrations and services in one quote.', 'Minimum 2 users; ₹0 SalesOn account setup. <a href="/pricing">Pricing: amounts and full inclusions</a>.'),
+ ('Billing flexibility', 'Check payment due, renewals and cancellation terms.', 'Monthly or optional annual billing, paid upfront. <a href="/terms">Terms</a> · <a href="/refund">Refund conditions</a>.'),
+ ('Onboarding and support', 'Confirm setup, training, support and separately quoted work.', 'Both plans include onboarding, training and standard <a href="/help">support</a>. Dedicated account manager for 11+ paid users.'),
+]
+table = ''.join('<tr><th scope="row">'+a+'</th><td>'+b+'</td><td>'+c+'</td></tr>' for a,b,c in rows)
+links = [('bizom','Bizom'),('beatroute','BeatRoute'),('deltasales','Delta Sales App'),('freshsales','Freshsales'),('salesforce','Salesforce'),('zoho','Zoho CRM')]
+main = '''<main id="main-content" class="selection-guide"><header class="so-hero"><div class="so-container"><p class="so-kicker">Software selection guide</p><h1>Choose sales software around the work you need to run</h1><p class="so-lead">Choose between field execution, distribution operations and a sales pipeline. Test the same working example with each provider before comparing scope and commitment.</p></div></header><div class="so-container so-content"><section aria-labelledby="selection-heading"><h2 id="selection-heading">What to check before choosing</h2><div class="repair-table-scroll" role="region" aria-label="Software selection table; scroll for all columns" tabindex="0"><table><caption>Use the same requirements for every product on your shortlist.</caption><thead><tr><th scope="col">Buyer requirement</th><th scope="col">What to check in any shortlisted product</th><th scope="col">SalesOn’s verified scope or limitation</th></tr></thead><tbody>'''+table+'''</tbody></table></div></section><section aria-labelledby="demo-checklist"><h2 id="demo-checklist">Test these tasks during a demo</h2><ul><li>Build an order with your products, units, prices and scheme.</li><li>Correct a quantity and inspect the office handover.</li><li>Invoice the order, record a partial payment and check remaining dues.</li><li>If required, check godown stock and a Tally posting exception.</li><li>Test salesperson/manager access and request help with a failed task.</li></ul></section><section aria-labelledby="named-comparisons"><h2 id="named-comparisons">Compare a named product</h2><p>Read competitor-specific scope, editions and sources.</p><ul class="selection-comparisons">'''+''.join('<li><a href="/compare/'+slug+'-alternative">SalesOn vs '+name+' →</a></li>' for slug,name in links)+'''</ul></section></div><section class="so-close"><div class="so-container"><div><h2>Bring your buying brief to a demo.</h2><p>Test one typical order and its office handover.</p></div><a class="so-button" href="/request-demo">Book a workflow demo ↗</a></div></section></main>'''
+s = p.read_text()
+s = re.sub(r'<main\b[^>]*>.*?</main>',lambda _:main,s,count=1,flags=re.S)
+p.write_text(s)

@@ -15,9 +15,23 @@ for folder in ['compare','industries','user']:
    example='<figure class="so-hero-art"><img src="/assets/img/invoicing/invoice-formats-example.webp" width="1448" height="1086" alt="Illustrative A4 and thermal invoice formats with sample billing data" fetchpriority="high" decoding="async"/><figcaption>Illustrative invoice formats · Sample data</figcaption></figure>'
    s=re.sub(r'<figure class="so-hero-art">.*?</figure>',lambda _:example,s,count=1,flags=re.S)
    s=re.sub(r'<section class="so-product-example">.*?</section>','',s,count=1,flags=re.S)
+  if p.stem=='software-for-retailers':
+   s=re.sub(r'<section><h2>Share or print the invoice</h2>.*?</section>','',s,count=1,flags=re.S)
+   s=re.sub(r'<section><h2>Review customer dues and stock with the office</h2>.*?</section>','<section><h2>Finish the sale and review the account</h2><p>Share or print the bill through <a href="/invoicing">Invoicing</a>, then record a payment and check remaining dues through <a href="/payment-collection">Payment Collection</a>. Review <a href="/inventory-management">product availability</a> before the next sale.</p></section>',s,count=1,flags=re.S)
   if p.stem in labels:
    s=re.sub(r'(<section[^>]*id="industry-workflow"[^>]*>.*?<h2[^>]*>).*?(</h2>)',lambda m:m[1]+html.escape(labels[p.stem])+m[2],s,count=1,flags=re.S)
    if folder=='industries' and i%2:s=s.replace('class="workflow-guide-grid"','class="workflow-guide-grid workflow-list"',1)
   s=s.replace('₹0 setup','₹0 SalesOn account setup')
   if not re.search(r'href="/css/marketing-refinements(?:\.[a-f0-9]{12})?\.css"',s):s=s.replace('</head>','<link rel="stylesheet" href="/css/marketing-refinements.css"/></head>')
   p.write_text(s)
+
+# The general comparison is a buying guide, not another product landing page.
+import runpy
+runpy.run_path(str(R/"scripts/refine-selection-guide.py"))
+
+# Keep Inventory focused on stock records rather than repeating the DMS handover.
+p=R/'inventory-management.html'
+s=p.read_text()
+s=re.sub(r'<section><h2>Follow stock in its sales context</h2>.*?</section>','',s,count=1,flags=re.S)
+s=s.replace('Review the item, quantity and location your staff needs rather than treating a single total as sufficient.','Review the item, quantity and location. For the connected order-to-dispatch workflow, see <a href="/distribution-management-system">DMS</a>.')
+p.write_text(s)
